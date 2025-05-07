@@ -3,17 +3,17 @@
 #
 - type: vessel
   id: Corvax
-  name: NCSP Corvax
+  name: GSC Corvax
   description: A light missile corvette. Devastating at long range.
   price: 41000
   category: Small
   group: None
-  path: /Maps/_Crescent/Shuttles/NCSP/corvax.yml
+  path: /_Crescent/Maps/Ships/NCSP/corvax.yml
 
 - type: gameMap
   id: Corvax
-  mapName: 'NCSP Corvax'
-  mapPath: /Maps/_Crescent/Shuttles/NCSP/corvax.yml
+  mapName: 'GSC Corvax'
+  mapPath: /_Crescent/Maps/Ships/NCSP/corvax.yml
   minPlayers: 0
   stations:
     Corvax:
