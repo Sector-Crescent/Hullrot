@@ -96,9 +96,9 @@
     state: icon
   - type: Clothing
     sprite: Clothing/Shoes/Boots/magboots-advanced.rsi
-  - type: Magboots
-    activeWalkModifier: 1
-    activeSprintModifier: 1
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -122,6 +122,9 @@
   - type: Magboots
     activeWalkModifier: 1.10
     activeSprintModifier: 1.10
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
   - type: StaticPrice
     price: 3000
 
@@ -192,8 +195,9 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/magboots.rsi
   - type: Magboots
-    activeWalkModifier: 0.9
-    activeSprintModifier: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: Tag
     tags:
     - WhitelistChameleon
