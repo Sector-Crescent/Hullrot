@@ -1,0 +1,11 @@
+- type: loadout
+  id: LoadoutItemSyndicateESword
+  category: Items
+  cost: 4
+  items:
+    - EnergySword
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - IntelligenceOfficerNCSP
+        - RingleaderNCSP
