@@ -1,26 +1,26 @@
 # Author Info
-# Discord: fleshangel
+# Discord: @fleshangel
 #
 - type: vessel
-  id: Amadeus
-  name: SAW Amadeus
-  description: A shielded, lightly-armed defense corvette.
-  price: 85000
-  category: Medium
+  id: Herod
+  name: SAW Herod
+  description: An ad-hoc guns platform developed by the Shipbreakers for mining.
+  price: 33000
+  category: Small
   group: None
-  path: /Maps/_Crescent/Shuttles/NCSP/amadeus.yml
+  path: /Maps/_Crescent/Shuttles/NCSP/herod.yml
 
 - type: gameMap
-  id: Amadeus
-  mapName: 'SAW Amadeus'
-  mapPath: /Maps/_Crescent/Shuttles/NCSP/amadeus.yml
+  id: Herod
+  mapName: 'SAW Herod'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/herod.yml
   minPlayers: 0
   stations:
-    Amadeus:
-      stationProto: StandardCrescentExpeditionVessel
+    Herod:
+      stationProto: StandardCrescentCivilianVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'SAW Amadeus {1}'
+          mapNameTemplate: 'SAW Herod {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

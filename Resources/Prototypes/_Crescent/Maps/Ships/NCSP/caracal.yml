@@ -1,0 +1,31 @@
+# Author Info
+# Discord: @fleshangel
+#
+- type: vessel
+  id: Caracal
+  name: SAW Caracal
+  description: A salvaged Syndicate frigate.
+  price: 33000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/caracal.yml
+
+- type: gameMap
+  id: Caracal
+  mapName: 'SAW Caracal'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/caracal.yml
+  minPlayers: 0
+  stations:
+    Caracal:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'SAW Caracal {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: vessel-designation-fighter
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            ShipbreakerNCSP: [ 1, 1 ]
