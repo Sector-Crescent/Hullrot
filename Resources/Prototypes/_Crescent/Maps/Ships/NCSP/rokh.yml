@@ -1,0 +1,32 @@
+# Author Info
+# Discord: @fleshangel
+#
+- type: vessel
+  id: Rokh
+  name: SAW Rokh
+  description: Converted Arazu large-class salvage gantry
+  price: 81000
+  category: Large
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/rokh.yml
+
+- type: gameMap
+  id: Rokh
+  mapName: 'SAW Rokh'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/rokh.yml
+  minPlayers: 0
+  stations:
+    Rokh:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'SAW Rokh {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-flagship
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            ShipbreakerNCSP: [ 0, 0 ]
