@@ -1,0 +1,51 @@
+- type: job
+  id: ConscriptShotgunNCWL
+  name: job-name-conscript-ncwl-shotgun
+  description: job-description-conscript-ncwl-shotgun #change me later
+  playTimeTracker: ConscriptJobShotgunNCWL
+  weight: 10
+  startingGear: ConscriptShotgunNCWLGear
+  alwaysUseSpawner: true
+  icon: "JobIconKadet"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "NCWL"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-highcomm
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-soldat
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - NCWLGeneral
+  - NCWLJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+
+- type: startingGear
+  id: ConscriptShotgunNCWLGear
+  equipment:
+    head: ClothingHeadHelmetNCWLHeavy
+    mask: ClothingMaskPilot
+    jumpsuit: ClothingUniformJumpsuitNCWL
+    outerClothing: ClothingOuterArmorNCWLHeavyCarapace
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltNCWLPouchesFilledShotgun
+    back: WeaponShotgunDoubleBarreledNCWL
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: GrenadeFlashBang
+    ears: ClothingHeadsetNCWL
+    id: SanitarPDA
+    suitstorage: WeaponPistolComrade

@@ -1,0 +1,88 @@
+- type: job
+  id: ConscriptLeaderDSM
+  name: job-name-conscript-dsm-leader
+  description: job-description-conscript-dsm-leader
+  playTimeTracker: ConscriptJobLeaderDSM
+  requirements:
+    - !type:FactionRequirement
+      factionID: "DSM"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - ForeignerLight
+        - Muted
+        - Blindness
+        - Pacifist
+        - WheelchairBound
+  weight: 55
+  startingGear: ConscriptLeaderDSMGear
+  alwaysUseSpawner: true
+  icon: "JobIconImperialKnight"
+  requireAdminNotify: true
+  supervisors: job-supervisors-imperial
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-knight
+  access:
+  - EmergencyShuttleRepealAll
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Frontier # Frontier
+  - Command
+  - Cryogenics
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Mail # Frontier
+  - Medical
+  - Mercenary # Frontier
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - StationTrafficController # Frontier
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - Command
+  - Maintenance
+  - DSMGeneral
+  - Service
+  - DSMJail
+  - DSMArmory
+  - DSMCommand
+  - External
+  - Captain # Frontier
+
+- type: startingGear
+  id: ConscriptLeaderDSMGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitImperialGovernor
+    back: WeaponSniperDSMLegax
+    shoes: ClothingShoesBootsImperialLongboots
+    head: ClothingHeadHatImperialBeret
+    outerClothing: ClothingOuterHardsuitImperialCommand
+    id: KnightPDA
+    belt: ClothingBeltAssaultFilledAdjutant
+    pocket1: EmergencyOxygenTankFilled
+    ears: ClothingHeadsetEmpire
+    suitstorage: WeaponPistolNeoVolker

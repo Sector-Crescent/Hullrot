@@ -1,0 +1,52 @@
+- type: job
+  id: ConscriptSubmachinegunNCWL
+  name: job-name-conscript-ncwl-smg
+  description: job-description-conscript-ncwl-smg #change me later
+  playTimeTracker: ConscriptJobSubmachinegunNCWL
+  weight: 10
+  startingGear: ConscriptSubmachinegunNCWLGear
+  alwaysUseSpawner: true
+  icon: "JobIconKadet"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "NCWL"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-highcomm
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-soldat
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - NCWLGeneral
+  - NCWLJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+
+- type: startingGear
+  id: ConscriptSubmachinegunNCWLGear
+  equipment:
+    head: ClothingHeadHelmetNCWLBasic
+    mask: ClothingMaskPilot
+    jumpsuit: ClothingUniformJumpsuitNCWL
+    outerClothing: ClothingOuterArmorNCWLHeavyCarapace
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltNCWLPouchesFilledSubmachinegun
+    back: WeaponSubMachineGunNCWLPartisan
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: GrenadeFlashBang
+    ears: ClothingHeadsetNCWL
+    eyes: ClothingEyesGlassesNCWL
+    id: SanitarPDA
+    suitstorage: WeaponPistolComrade
