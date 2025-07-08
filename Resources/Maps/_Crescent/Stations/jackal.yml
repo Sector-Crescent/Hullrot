@@ -9857,6 +9857,8 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
+- proto: CartridgeShellHighExplosive
+  entities:
   - uid: 12
     components:
     - type: Transform
@@ -9938,144 +9940,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 32
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 33
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 35
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 36
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 37
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 38
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: CartridgeShellHighExplosive
-  entities:
   - uid: 23
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 24
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 25
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 26
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 27
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 28
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 29
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 30
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 31
-    components:
-    - type: Transform
-      parent: 6
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 34
     components:
     - type: Transform
       parent: 6
@@ -11486,13 +11351,10 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 7
-          - 8
           - 9
           - 10
           - 11
           - 12
-          - 13
           - 14
           - 15
           - 16
@@ -11501,21 +11363,9 @@ entities:
           - 21
           - 22
           - 23
-          - 24
-          - 25
-          - 26
-          - 27
-          - 28
-          - 29
-          - 30
-          - 31
-          - 32
-          - 33
-          - 34
-          - 35
-          - 36
-          - 37
-          - 38
+          - 7
+          - 8
+          - 13
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -11554,22 +11404,16 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 50
-          - 49
-          - 66
-          - 65
-          - 64
-          - 63
-          - 62
-          - 61
-          - 60
-          - 59
-          - 58
-          - 57
-          - 56
-          - 55
-          - 54
           - 53
+          - 54
+          - 55
+          - 56
+          - 57
+          - 58
+          - 59
+          - 60
+          - 49
+          - 50
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -11587,11 +11431,11 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 67
-          - 68
-          - 70
-          - 71
-          - 74
+          - 24
+          - 25
+          - 26
+          - 27
+          - 28
           - 80
           - 86
           - 87
@@ -11661,26 +11505,16 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 157
-          - 156
-          - 155
-          - 154
-          - 153
-          - 152
-          - 151
-          - 150
-          - 146
-          - 144
-          - 143
-          - 161
-          - 160
-          - 159
-          - 158
-          - 142
-          - 141
-          - 138
-          - 140
           - 139
+          - 140
+          - 138
+          - 141
+          - 142
+          - 143
+          - 144
+          - 146
+          - 150
+          - 151
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -11732,26 +11566,16 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 75
-          - 76
-          - 77
-          - 78
-          - 79
-          - 256
-          - 259
-          - 260
-          - 261
-          - 262
-          - 263
-          - 267
-          - 268
-          - 269
-          - 271
-          - 272
-          - 275
-          - 280
-          - 282
-          - 254
+          - 38
+          - 37
+          - 36
+          - 35
+          - 34
+          - 33
+          - 32
+          - 31
+          - 30
+          - 29
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -11769,18 +11593,18 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 290
-          - 291
-          - 292
-          - 293
-          - 294
-          - 295
-          - 303
-          - 304
-          - 305
-          - 306
-          - 288
           - 289
+          - 288
+          - 306
+          - 305
+          - 304
+          - 303
+          - 295
+          - 294
+          - 293
+          - 292
+          - 291
+          - 290
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -15697,7 +15521,7 @@ entities:
     - type: InsideEntityStorage
 - proto: GrenadeBlast
   entities:
-  - uid: 67
+  - uid: 24
     components:
     - type: Transform
       parent: 73
@@ -15706,7 +15530,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 68
+  - uid: 25
     components:
     - type: Transform
       parent: 73
@@ -15715,7 +15539,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 70
+  - uid: 26
     components:
     - type: Transform
       parent: 73
@@ -15724,7 +15548,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 71
+  - uid: 27
     components:
     - type: Transform
       parent: 73
@@ -15733,7 +15557,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 74
+  - uid: 28
     components:
     - type: Transform
       parent: 73
@@ -16231,96 +16055,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 152
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 153
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 154
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 155
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 156
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 157
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 158
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 159
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 160
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 161
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
   - uid: 823
     components:
     - type: Transform
@@ -16477,60 +16211,6 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 60
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 61
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 62
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 63
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 64
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 65
-    components:
-    - type: Transform
-      parent: 48
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 66
     components:
     - type: Transform
       parent: 48
@@ -16954,7 +16634,7 @@ entities:
     - type: InsideEntityStorage
 - proto: MagazineLightRifleBoxSlug
   entities:
-  - uid: 254
+  - uid: 35
     components:
     - type: Transform
       parent: 242
@@ -16963,7 +16643,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 256
+  - uid: 36
     components:
     - type: Transform
       parent: 242
@@ -16972,7 +16652,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 259
+  - uid: 37
     components:
     - type: Transform
       parent: 242
@@ -16981,106 +16661,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 260
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 261
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 262
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 263
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 267
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 268
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 269
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 271
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 272
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 275
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 280
-    components:
-    - type: Transform
-      parent: 242
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 282
+  - uid: 38
     components:
     - type: Transform
       parent: 242
@@ -17091,7 +16672,7 @@ entities:
     - type: InsideEntityStorage
 - proto: MagazineLightRifleBoxSlugHE
   entities:
-  - uid: 75
+  - uid: 29
     components:
     - type: Transform
       parent: 242
@@ -17100,7 +16681,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 76
+  - uid: 30
     components:
     - type: Transform
       parent: 242
@@ -17109,7 +16690,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 77
+  - uid: 31
     components:
     - type: Transform
       parent: 242
@@ -17118,7 +16699,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 78
+  - uid: 32
     components:
     - type: Transform
       parent: 242
@@ -17127,7 +16708,16 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 79
+  - uid: 33
+    components:
+    - type: Transform
+      parent: 242
+    - type: Physics
+      angularDamping: 0
+      linearDamping: 0
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 34
     components:
     - type: Transform
       parent: 242
