@@ -1,0 +1,62 @@
+- type: job
+  id: ConscriptGunnerNCWL
+  name: job-name-conscript-ncwl-lmg
+  description: job-description-conscript-ncwl-lmg #change me later
+  playTimeTracker: ConscriptJobGunnerNCWL
+  weight: 10
+  startingGear: ConscriptGunnerNCWLGear
+  alwaysUseSpawner: true
+  icon: "JobIconCommsOfficer"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "NCWL"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-highcomm
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-specialist
+      - type: HullrotFaction
+        faction: NCWL
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - NCWLGeneral
+  - NCWLJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - NCWLAdministrator
+  - NCWLFunds
+  - NCWLKommissar
+  - NCWLArmory
+  - NCWLCommand
+
+- type: startingGear
+  id: ConscriptGunnerNCWLGear
+  equipment:
+    head: ClothingHeadHelmetNCWLHeavy
+    neck: ClothingNeckIFFOrange
+    mask: ClothingMaskPilot
+    jumpsuit: ClothingUniformJumpsuitNCWL
+    outerClothing: ClothingOuterArmorNCWLHeavyCarapace
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltNCWLPouchesFilledGunner
+    back: ClothingBackpackNCWL
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: SmokeGrenade
+    ears: ClothingHeadsetNCWL
+    id: SanitarPDA
+    suitstorage: WeaponLightMachineGunNCWLSurplus
+  inhand:
+    - WeaponPistolComrade
+

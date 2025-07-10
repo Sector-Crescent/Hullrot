@@ -100,3 +100,29 @@ job-name-antiquarian = Izdari Antiquarian
 job-name-spacer = Spacer
 job-name-gliess-sheriff = Gliessian Sheriff
 job-name-gliess-dockmaster = Gliessian Dockmaster
+
+#conscript-ncwl#
+
+job-name-conscript-ncwl-ship-captain = Clementine Kapitan
+job-name-conscript-ncwl-ship-crew = Clementine Shipmate
+job-name-conscript-ncwl-leader = Kommissar
+job-name-conscript-ncwl-amr = Specialist (Sniper)
+job-name-conscript-ncwl-lmg = Specialist (LMG)
+job-name-conscript-ncwl-doctor = Doktor
+job-name-conscript-ncwl-smg = Soldat (SMG)
+job-name-conscript-ncwl-shotgun = Soldat (Shotgun)
+job-name-conscript-ncwl-rifleman = Soldat (Rifle)
+job-name-conscript-ncwl-cadet = Kadet
+
+#conscript-dsm#
+
+job-name-conscript-dsm-ship-captain = Nemesis Admiral
+job-name-conscript-dsm-ship-crew = Nemesis Crewman
+job-name-conscript-dsm-leader = Noble
+job-name-conscript-dsm-amr = Knight (Sniper)
+job-name-conscript-dsm-lmg = Knight (LMG)
+job-name-conscript-dsm-doctor = Combat Medic
+job-name-conscript-dsm-smg = Man-At-Arms (SMG)
+job-name-conscript-dsm-shotgun = Man-At-Arms (Shotgun)
+job-name-conscript-dsm-rifleman = Man-At-Arms (Rifle)
+job-name-conscript-dsm-cadet = Cadet

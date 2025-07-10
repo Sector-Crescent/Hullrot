@@ -769,14 +769,14 @@
     layers:
       - state: base-projectile
   - type: ExplodeOnTrigger
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
   - type: ProjectilePhasePrevent #do not remove
     mask:
     - BulletImpassable
     - Impassable
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
 
 - type: entity
   id: PDTBulletCase

@@ -1,0 +1,60 @@
+- type: job
+  id: ConscriptGunnerDSM
+  name: job-name-conscript-dsm-lmg
+  description: job-description-conscript-dsm-lmg #change me later
+  playTimeTracker: ConscriptJobGunnerDSM
+  weight: 10
+  startingGear: ConscriptGunnerDSMGear
+  alwaysUseSpawner: true
+  icon: "JobIconImperialKnight"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "DSM"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-highcomm
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-knight
+      - type: HullrotFaction
+        faction: DSM
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - DSMGeneral
+  - DSMJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - Empire
+  - DSMArmory
+  - DSMCommand
+
+- type: startingGear
+  id: ConscriptGunnerDSMGear
+  equipment:
+    head: ClothingHeadHelmetImperialKnightCommanderHelmet
+    neck: ClothingNeckIFFCyan
+    mask: ClothingMaskImperialCombatGasmask
+    jumpsuit: ClothingUniformJumpsuitImperialCombat
+    outerClothing: ClothingOuterArmorImperialArmorPrestige
+    shoes: ClothingShoesBootsImperialJackboots
+    belt: ClothingBeltAssaultFilledGunner
+    gloves: ClothingHandsGlovesImperialLonggloves
+    back: ClothingBackpackDSM
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: SmokeGrenade
+    ears: ClothingHeadsetEmpire
+    id: LevymanPDA
+    suitstorage: WeaponLightMachineDSMSurplus
+  inhand:
+    - WeaponPistolComplianceImperial
