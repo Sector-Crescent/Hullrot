@@ -1,0 +1,35 @@
+- type: loadout
+  id: LoadoutEyesDSMGigaGarGlasses
+  category: Eyes
+  cost: 0
+  canBeHeirloom: true
+  items:
+    - ClothingEyesGlassesGarGiga
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - GovernorDSM
+
+- type: loadout
+  id: LoadoutEyesDSMGarGlasses
+  category: Eyes
+  cost: 2
+  canBeHeirloom: true
+  items:
+    - ClothingEyesGlassesGar
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - AdjutantDSM
+        - AdvocatusDSM
+        - ArchmaesterDSM
+        - GovernorDSM
+        - KnightDSM
+        - LaborDSM
+        - CourtierDSM
+        - TemplarDSM
+        - WealthDSM
