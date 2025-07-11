@@ -15,10 +15,28 @@
 - type: loadout
   id: LoadoutEyesDSMGarGlasses
   category: Eyes
-  cost: 2
+  cost: 0
   canBeHeirloom: true
   items:
     - ClothingEyesGlassesGar
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - ForemanDSM
+        - FreeholderDSM
+        - LevymanDSM
+        - ScribeDSM
+        - SurgeonDSM
+
+- type: loadout
+  id: LoadoutEyesDSMGarGlassesOrange
+  category: Eyes
+  cost: 0
+  canBeHeirloom: true
+  items:
+    - ClothingEyesGlassesGarOrange
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutHead
