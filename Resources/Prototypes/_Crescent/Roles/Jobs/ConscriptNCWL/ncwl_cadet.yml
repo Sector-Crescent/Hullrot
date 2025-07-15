@@ -1,0 +1,61 @@
+- type: job
+  id: ConscriptCadetNCWL
+  name: job-name-conscript-ncwl-cadet
+  description: job-description-conscript-ncwl-cadet
+  playTimeTracker: ConscriptJobCadetNCWL
+  weight: 10
+  startingGear: ConscriptCadetNCWLGear
+  alwaysUseSpawner: true
+  icon: "JobIconKadet"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "NCWL"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-conscript-ncwl
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-ncwl-new
+      - type: HullrotFaction
+        faction: NCWL
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - NCWLGeneral
+  - NCWLJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - NCWLAdministrator
+  - NCWLFunds
+  - NCWLKommissar
+  - NCWLArmory
+  - NCWLCommand
+
+- type: startingGear
+  id: ConscriptCadetNCWLGear
+  equipment:
+    head: ClothingHeadHatNCWLCapsoft
+    neck: ClothingNeckIFFOrange
+    mask: ClothingMaskPilot
+    jumpsuit: ClothingUniformJumpsuitNCWL
+    outerClothing: ClothingOuterArmorNCWLHeavyCarapace
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltNCWLPouchesFilledRifleman
+    back: ClothingBackpackNCWL
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: GrenadeShrapnel
+    ears: ClothingHeadsetNCWL
+    id: KadetPDA
+    suitstorage: WeaponSniperNCWLNovomosin
+  inhand:
+    - WeaponPistolComrade

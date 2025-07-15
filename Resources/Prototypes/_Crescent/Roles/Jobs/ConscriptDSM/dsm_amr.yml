@@ -1,0 +1,60 @@
+- type: job
+  id: ConscriptSniperDSM
+  name: job-name-conscript-dsm-amr
+  description: job-description-conscript-dsm-amr #change me later
+  playTimeTracker: ConscriptJobSniperDSM
+  weight: 10
+  startingGear: ConscriptSniperDSMGear
+  alwaysUseSpawner: true
+  icon: "JobIconImperialKnight"
+  requirements:
+    - !type:FactionRequirement
+      factionID: "DSM"
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-conscript-dsm
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-dsm-specialist
+      - type: HullrotFaction
+        faction: DSM
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - DSMGeneral
+  - DSMJail
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - Empire
+  - DSMArmory
+  - DSMCommand
+
+- type: startingGear
+  id: ConscriptSniperDSMGear
+  equipment:
+    head: ClothingHeadHelmetImperialKnightCommanderHelmet
+    neck: ClothingNeckIFFCyan
+    mask: ClothingMaskImperialCombatGasmask
+    jumpsuit: ClothingUniformJumpsuitImperialCombat
+    outerClothing: ClothingOuterArmorImperialArmorPrestige
+    shoes: ClothingShoesBootsImperialJackboots
+    belt: ClothingBeltAssaultFilledSniper
+    gloves: ClothingHandsGlovesImperialLonggloves
+    back: ClothingBackpackDSM
+    pocket1: EmergencyOxygenTankFilled
+    pocket2: GrenadeShrapnel
+    ears: ClothingHeadsetEmpire
+    id: LevymanPDA
+    suitstorage: WeaponAntimaterielDSMLeveller
+  inhand:
+    - WeaponPistolNeoVolker
