@@ -50,6 +50,7 @@
     id: DoktorPDA
     ears: ClothingHeadsetNCWL
     belt: ClothingBeltNCWLPouchesFilledMedic
+    eyes: ClothingEyesHudMedSec
     gloves: ClothingHandsGlovesNitrile
     pocket1: EmergencyOxygenTankFilled
     pocket2: ParamedHypo
@@ -59,6 +60,9 @@
     back: ClothingBackpackSatchelMedical
   storage:
     back:
+    - VoidsuitKitDSM
+    - BoxMRE
+    - BoxFlare
     - DefibrillatorCompact
     - MedkitCombatFilled
     - OmnizineChemistryBottle
@@ -69,5 +73,5 @@
     - CartridgePuncturase
     - CartridgePuncturase
   inhand:
-    - MedkitCombatFilled
+    - BookUnionfallNCWLGuide
     - CartridgePuncturase
