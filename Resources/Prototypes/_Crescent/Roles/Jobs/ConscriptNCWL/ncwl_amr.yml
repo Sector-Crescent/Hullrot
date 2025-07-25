@@ -49,14 +49,22 @@
     mask: ClothingMaskSyndicateFacemask
     jumpsuit: ClothingUniformJumpsuitNCWL
     outerClothing: ClothingOuterArmorNCWLHeavyCarapace
-    shoes: ClothingShoesBootsJack
+    shoes: ClothingShoesBootsMagNCWL
     belt: ClothingBeltNCWLPouchesFilledSniper
     back: ClothingBackpackNCWL
-    pocket1: EmergencyOxygenTankFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: SmokeGrenade
     ears: ClothingHeadsetNCWL
-    eyes: ClothingEyesGlassesCheapSunglassesBig
+    eyes: ClothingEyesGlassesNCWL
     id: SanitarPDA
     suitstorage: WeaponAntimaterielNCWLHayha
+    gloves: ClothingHandsGlovesCombat
   inhand:
-    - WeaponPistolT91
+    - BookUnionfallNCWLGuide
+  storage:
+    back:
+      - VoidsuitKitNCWL
+      - BoxMRE
+      - BoxFlare
+      - WeaponPistolT91
+

@@ -82,12 +82,18 @@
     jumpsuit: ClothingUniformJumpsuitImperialFreeholder
     neck: ClothingNeckIFFCyan
     back: ClothingBackpackDSM
-    shoes: ClothingShoesBootsImperialJackboots
+    shoes: ClothingShoesBootsMagDSM
     head: ClothingHeadHelmetImperialWorkerHelmet
     gloves: ClothingHandsGlovesImperialWorkerGloves
     id: LevymanPDA
     belt: ClothingBeltAssaultFilledCrew
-    pocket1: EmergencyOxygenTankFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetEmpire
+    eyes: ClothingEyesHudSecurity
   inhand:
-    - WeaponPistolNeoVolker
+    - BookUnionfallDSMGuide
+  storage:
+    back:
+      - VoidsuitKitDSM
+      - BoxMRE
+      - WeaponPistolNeoVolker

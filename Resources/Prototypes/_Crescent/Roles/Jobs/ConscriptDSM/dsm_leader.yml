@@ -82,13 +82,19 @@
     jumpsuit: ClothingUniformJumpsuitImperialGovernor
     neck: ClothingNeckIFFCyan
     back: ClothingBackpackDSM
-    shoes: ClothingShoesBootsImperialLongboots
+    shoes: ClothingShoesBootsMagDSM
     head: ClothingHeadHatImperialBeret
     outerClothing: ClothingOuterHardsuitImperialCommand
     id: KnightPDA
     belt: ClothingBeltAssaultFilledAdjutant
-    pocket1: EmergencyOxygenTankFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: SyndicateWhistle
     ears: ClothingHeadsetEmpire
     suitstorage: WeaponSniperDSMLegax
-  inhand:
-    - WeaponPistolNeoVolker
+    eyes: ClothingEyesHudSecurity
+  storage:
+    back:
+      - VoidsuitKitDSM
+      - BoxMRE
+      - BoxFlare
+      - WeaponPistolNeoVolker
