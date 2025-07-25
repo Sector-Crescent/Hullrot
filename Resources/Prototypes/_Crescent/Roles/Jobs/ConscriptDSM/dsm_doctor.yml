@@ -45,18 +45,29 @@
   equipment:
     head: ClothingHeadHatImperialSurgeon
     neck: ClothingNeckIFFCyan
-    mask: ClothingMaskImperialCombatGasmask
+    mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitImperialSurgeon
     outerClothing: ClothingOuterArmorImperialTrooperArmor
     shoes: ClothingShoesBootsImperialLaceup
     belt: ClothingBeltAssaultFilledMedic
-    gloves: ClothingHandsGlovesImperialLonggloves
+    gloves: ClothingHandsGlovesNitrile
     pocket1: EmergencyOxygenTankFilled
-    pocket2: GrenadeShrapnel
+    pocket2: ParamedHypo
     ears: ClothingHeadsetEmpire
     id: SurgeonPDA
     suitstorage: WeaponPistolNeoVolker
     back: ClothingBackpackSatchelMedical
+  storage:
+    back:
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - OmnizineChemistryBottle
+    - Bloodpack
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
   inhand:
-    - Defibrillator
-    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - CartridgePuncturase

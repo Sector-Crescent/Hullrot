@@ -43,18 +43,31 @@
 - type: startingGear
   id: ConscriptDoctorNCWLGear
   equipment:
-    mask: ClothingMaskPilot
     neck: ClothingNeckIFFOrange
+    mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitNCWLMedic
     shoes: ClothingShoesColorBlack
     id: DoktorPDA
     ears: ClothingHeadsetNCWL
     belt: ClothingBeltNCWLPouchesFilledMedic
+    gloves: ClothingHandsGlovesNitrile
     pocket1: EmergencyOxygenTankFilled
+    pocket2: ParamedHypo
     outerClothing: ClothingOuterArmorNCWLCarapaceDoktor
     head: ClothingHeadHatNCWLCapsoftMedical
     suitstorage: WeaponPistolT91
     back: ClothingBackpackSatchelMedical
+  storage:
+    back:
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - OmnizineChemistryBottle
+    - Bloodpack
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
   inhand:
-    - Defibrillator
-    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - CartridgePuncturase
