@@ -43,6 +43,7 @@
 - type: startingGear
   id: ConscriptDoctorNCWLGear
   equipment:
+    mask: ClothingMaskSterile
     neck: ClothingNeckIFFOrange
     mask: ClothingMaskSterile
     jumpsuit: ClothingUniformJumpsuitNCWLMedic
@@ -52,7 +53,7 @@
     belt: ClothingBeltNCWLPouchesFilledMedic
     eyes: ClothingEyesHudMedSec
     gloves: ClothingHandsGlovesNitrile
-    pocket1: EmergencyOxygenTankFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: ParamedHypo
     outerClothing: ClothingOuterArmorNCWLCarapaceDoktor
     head: ClothingHeadHatNCWLCapsoftMedical
@@ -60,7 +61,7 @@
     back: ClothingBackpackSatchelMedical
   storage:
     back:
-    - VoidsuitKitDSM
+    - VoidsuitKitNCWL
     - BoxMRE
     - BoxFlare
     - DefibrillatorCompact
