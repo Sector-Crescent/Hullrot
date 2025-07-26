@@ -16,14 +16,35 @@ crescent-rank-archmaester = Archmaester
 crescent-rank-advocatus = Advocati
 crescent-rank-templar = Knight Templar
 
+#dsm-conscript
+crescent-rank-dsm-captain = Grand Steward
+crescent-rank-dsm-crew = Yeoman
+crescent-rank-dsm-leader = Marshal-Bannaret
+crescent-rank-dsm-specialist = Ward
+crescent-rank-dsm-cqc = Squire
+crescent-rank-dsm-grunt = Armsman
+crescent-rank-dsm-new = Fledgeling
+crescent-rank-dsm-doctor = Medicant
+
+#ncwl-conscript
+crescent-rank-ncwl-captain = Admiral
+crescent-rank-ncwl-crew = Artificer
+crescent-rank-ncwl-leader = Kommissar
+crescent-rank-ncwl-specialist = Operator
+crescent-rank-ncwl-cqc = Breacher
+crescent-rank-ncwl-grunt = Efréĭtor
+crescent-rank-ncwl-new = Cadet
+crescent-rank-ncwl-doctor = Doktor
+
 #ncwl
 crescent-rank-admin = Major
-crescent-rank-kommissar = Kmmsr.
-crescent-rank-artificer = Artfcr.
+crescent-rank-kommissar = Kommissar
+crescent-rank-artificer = Artificer
 crescent-rank-doktor = Dr.
-crescent-rank-partisan = Sldt.
+crescent-rank-specialist = Specialist
+crescent-rank-partisan = Soldat
 crescent-rank-soldat = Kadet
-crescent-rank-kapitan = Kptn.
+crescent-rank-kapitan = Kapitan
 
 #syn
 
