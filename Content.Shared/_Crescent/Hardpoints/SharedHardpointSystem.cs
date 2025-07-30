@@ -17,6 +17,7 @@ public class SharedHardpointSystem : EntitySystem
     [Dependency] public readonly EntityLookupSystem _lookupSystem = default!;
     [Dependency] public readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
 
     public override void Initialize()
     {
@@ -106,28 +107,18 @@ public class SharedHardpointSystem : EntitySystem
     {
         Logger.Info($"[HardpointDebug] CanInstallOnGrid called for grid {gridUid}");
 
-        try
+        // Try to get the server-side limiter system through dependency injection
+        if (_entitySystemManager.TryGetEntitySystem<GridHardpointLimiterSystem>(out var limiterSystem))
         {
-            // Try to get the server-side limiter system
-            var limiterSystem = EntityManager.System<GridHardpointLimiterSystem>();
-            if (limiterSystem == null)
-            {
-                Logger.Warning($"[HardpointDebug] Limiter system is null, using basic check");
-                return DoBasicLimitCheck(gridUid);
-            }
-
             Logger.Info($"[HardpointDebug] Got limiter system successfully");
-
             var result = limiterSystem.CanInstall(gridUid);
             Logger.Info($"[HardpointDebug] Limiter system CanInstall returned: {result}");
             return result;
         }
-        catch (Exception ex)
-        {
-            Logger.Info($"[HardpointDebug] Cannot access GridHardpointLimiterSystem (likely client-side): {ex.Message}");
-            // Fall back to basic check if the server system isn't available
-            return DoBasicLimitCheck(gridUid);
-        }
+
+        Logger.Info($"[HardpointDebug] Limiter system not available (likely client-side), using basic check");
+        // Fall back to basic check if the server system isn't available (client-side)
+        return DoBasicLimitCheck(gridUid);
     }
 
     /// <summary>
