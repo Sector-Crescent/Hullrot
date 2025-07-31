@@ -84,19 +84,19 @@ public class SharedHardpointSystem : EntitySystem
 
     public void OnAnchorTry(EntityUid uid, HardpointAnchorableOnlyComponent component, ref AnchorAttemptEvent args)
     {
-        Logger.Info($"[HardpointDebug] OnAnchorTry called for WEAPON entity {uid} (not checking hardpoint limits)");
+ //       Logger.Info($"[HardpointDebug] OnAnchorTry called for WEAPON entity {uid} (not checking hardpoint limits)");
 
         // This is for weapons/guns trying to anchor to hardpoints
         // We should NOT check grid hardpoint limits here - only check if there's an available hardpoint
 
-        Logger.Info($"[HardpointDebug] Attempting to anchor weapon {uid} to any available hardpoint...");
+        //       Logger.Info($"[HardpointDebug] Attempting to anchor weapon {uid} to any available hardpoint...");
         if (TryAnchorToAnyHardpoint(uid, component, args.User))
         {
-            Logger.Info($"[HardpointDebug] Successfully found hardpoint for weapon {uid}");
+            //            Logger.Info($"[HardpointDebug] Successfully found hardpoint for weapon {uid}");
             return;
         }
 
-        Logger.Info($"[HardpointDebug] No available hardpoint found for weapon {uid}, cancelling");
+        //        Logger.Info($"[HardpointDebug] No available hardpoint found for weapon {uid}, cancelling");
         args.Cancel();
     }
 
@@ -105,18 +105,18 @@ public class SharedHardpointSystem : EntitySystem
     /// </summary>
     private bool CanInstallOnGrid(EntityUid gridUid)
     {
-        Logger.Info($"[HardpointDebug] CanInstallOnGrid called for grid {gridUid}");
+        //        Logger.Info($"[HardpointDebug] CanInstallOnGrid called for grid {gridUid}");
 
         // Try to get the server-side limiter system through dependency injection
         if (_entitySystemManager.TryGetEntitySystem<GridHardpointLimiterSystem>(out var limiterSystem))
         {
-            Logger.Info($"[HardpointDebug] Got limiter system successfully");
+            //            Logger.Info($"[HardpointDebug] Got limiter system successfully");
             var result = limiterSystem.CanInstall(gridUid);
-            Logger.Info($"[HardpointDebug] Limiter system CanInstall returned: {result}");
+            //            Logger.Info($"[HardpointDebug] Limiter system CanInstall returned: {result}");
             return result;
         }
 
-        Logger.Info($"[HardpointDebug] Limiter system not available (likely client-side), using basic check");
+ //       Logger.Info($"[HardpointDebug] Limiter system not available (likely client-side), using basic check");
         // Fall back to basic check if the server system isn't available (client-side)
         return DoBasicLimitCheck(gridUid);
     }
@@ -133,7 +133,7 @@ public class SharedHardpointSystem : EntitySystem
         // Otherwise, allow original count + 2
         var maxAllowed = currentCount <= 1 ? 4 : currentCount + 2;
 
-        Logger.Info($"[HardpointDebug] Basic limit check - Current: {currentCount}, Max allowed: {maxAllowed}");
+ //        Logger.Info($"[HardpointDebug] Basic limit check - Current: {currentCount}, Max allowed: {maxAllowed}");
 
         return currentCount < maxAllowed;
     }
@@ -152,7 +152,7 @@ public class SharedHardpointSystem : EntitySystem
                 count++;
             }
         }
-        Logger.Info($"[HardpointDebug] GetCurrentHardpointCount for grid {gridUid}: {count}");
+ //        Logger.Info($"[HardpointDebug] GetCurrentHardpointCount for grid {gridUid}: {count}");
         return count;
     }
 
@@ -193,17 +193,17 @@ public class SharedHardpointSystem : EntitySystem
             var currentCount = GetCurrentHardpointCount(grid);
             var maxAllowed = currentCount <= 1 ? 4 : currentCount + 2;
 
-            Logger.Warning($"[HardpointDebug] BLOCKING anchor attempt - limit would be exceeded on grid {grid}");
+ //           Logger.Warning($"[HardpointDebug] BLOCKING anchor attempt - limit would be exceeded on grid {grid}");
 
             // Show popup to the user who tried to anchor, similar to anchorable system
             if (user != null)
             {
-                _popup.PopupClient($"Cannot exceed grid limit of {maxAllowed} hardpoints!", anchor, user.Value);
+                  _popup.PopupClient($"Cannot exceed grid limit of {maxAllowed} hardpoints!", anchor, user.Value);
             }
             return;
         }
 
-        Logger.Info($"[HardpointDebug] Anchoring entity {target} to hardpoint {anchor} on grid {grid}");
+//        Logger.Info($"[HardpointDebug] Anchoring entity {target} to hardpoint {anchor} on grid {grid}");
 
         hardpoint.anchoring = target;
         targetComp.anchoredTo = anchor;
