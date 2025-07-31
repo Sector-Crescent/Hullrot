@@ -39,62 +39,62 @@ public sealed class GridHardpointLimiterSystem : EntitySystem
 
     private void OnHardpointAnchorAttempt(EntityUid uid, HardpointComponent component, AnchorAttemptEvent args)
     {
-        Logger.Info($"[HardpointLimiter] OnHardpointAnchorAttempt called for hardpoint {uid}");
+ //       Logger.Info($"[HardpointLimiter] OnHardpointAnchorAttempt called for hardpoint {uid}");
 
         var gridUid = Transform(uid).GridUid;
         if (gridUid == null)
         {
-            Logger.Warning($"[HardpointLimiter] Hardpoint {uid} has no grid, allowing anchor");
+//            Logger.Warning($"[HardpointLimiter] Hardpoint {uid} has no grid, allowing anchor");
             return;
         }
 
-        Logger.Info($"[HardpointLimiter] Checking if hardpoint {uid} can be anchored to grid {gridUid}");
+ //       Logger.Info($"[HardpointLimiter] Checking if hardpoint {uid} can be anchored to grid {gridUid}");
 
         if (!CanInstall(gridUid.Value))
         {
-            Logger.Warning($"[HardpointLimiter] BLOCKING hardpoint {uid} anchor - limit exceeded on grid {gridUid}");
+//            Logger.Warning($"[HardpointLimiter] BLOCKING hardpoint {uid} anchor - limit exceeded on grid {gridUid}");
             args.Cancel();
             return;
         }
 
-        Logger.Info($"[HardpointLimiter] Allowing hardpoint {uid} to anchor to grid {gridUid}");
+ //       Logger.Info($"[HardpointLimiter] Allowing hardpoint {uid} to anchor to grid {gridUid}");
     }
 
     private void OnHardpointBeforeAnchored(EntityUid uid, HardpointComponent component, BeforeAnchoredEvent args)
     {
-        Logger.Info($"[HardpointLimiter] OnHardpointBeforeAnchored called for hardpoint {uid} (FINAL CHECK)");
+//        Logger.Info($"[HardpointLimiter] OnHardpointBeforeAnchored called for hardpoint {uid} (FINAL CHECK)");
 
         var gridUid = Transform(uid).GridUid;
         if (gridUid == null)
         {
-            Logger.Warning($"[HardpointLimiter] Hardpoint {uid} has no grid during final check, allowing anchor");
+//            Logger.Warning($"[HardpointLimiter] Hardpoint {uid} has no grid during final check, allowing anchor");
             return;
         }
 
-        Logger.Info($"[HardpointLimiter] FINAL CHECK: Can hardpoint {uid} be anchored to grid {gridUid}?");
+//        Logger.Info($"[HardpointLimiter] FINAL CHECK: Can hardpoint {uid} be anchored to grid {gridUid}?");
 
         if (!CanInstall(gridUid.Value))
         {
-            Logger.Warning($"[HardpointLimiter] FINAL CHECK FAILED: BLOCKING hardpoint {uid} anchor - limit exceeded on grid {gridUid}");
+//            Logger.Warning($"[HardpointLimiter] FINAL CHECK FAILED: BLOCKING hardpoint {uid} anchor - limit exceeded on grid {gridUid}");
 
             // We can't cancel BeforeAnchoredEvent, so we need to unanchor it immediately
             // This is a bit hacky but necessary since BeforeAnchoredEvent isn't cancellable
             Timer.Spawn(1, () => {
                 if (Exists(uid) && Transform(uid).Anchored)
                 {
-                    Logger.Warning($"[HardpointLimiter] Force-unanchoring hardpoint {uid} due to limit exceeded");
+ //                   Logger.Warning($"[HardpointLimiter] Force-unanchoring hardpoint {uid} due to limit exceeded");
                     _xform.Unanchor(uid);
                 }
             });
             return;
         }
 
-        Logger.Info($"[HardpointLimiter] FINAL CHECK PASSED: Allowing hardpoint {uid} to complete anchoring to grid {gridUid}");
+//        Logger.Info($"[HardpointLimiter] FINAL CHECK PASSED: Allowing hardpoint {uid} to complete anchoring to grid {gridUid}");
     }
 
     private void OnHardpointUnanchorAttempt(EntityUid uid, HardpointComponent component, UnanchorAttemptEvent args)
     {
-        Logger.Info($"[HardpointLimiter] OnHardpointUnanchorAttempt called for hardpoint {uid} - always allowing unanchor");
+ //       Logger.Info($"[HardpointLimiter] OnHardpointUnanchorAttempt called for hardpoint {uid} - always allowing unanchor");
         // Always allow unanchoring - we want to let people remove hardpoints
     }
 
@@ -124,16 +124,16 @@ public sealed class GridHardpointLimiterSystem : EntitySystem
         limiter.CurrentHardpoints = found;
 
         var gridName = TryComp<MetaDataComponent>(grid, out var meta) ? meta.EntityName : "Unknown";
-        Logger.Info($"[HardpointLimiter] Grid {grid} ({gridName}) initialized with {found} hardpoints (max = {limiter.MaxHardpoints})");
+//        Logger.Info($"[HardpointLimiter] Grid {grid} ({gridName}) initialized with {found} hardpoints (max = {limiter.MaxHardpoints})");
     }
 
     private void OnCannonAnchored(HardpointCannonAnchoredEvent ev)
     {
-        Logger.Info($"[HardpointLimiter] OnCannonAnchored called for cannon {ev.cannonUid} on grid {ev.gridUid}");
+ //       Logger.Info($"[HardpointLimiter] OnCannonAnchored called for cannon {ev.cannonUid} on grid {ev.gridUid}");
 
         if (!TryComp<ServerGridHardpointTrackerComponent>(ev.gridUid, out var comp))
         {
-            Logger.Warning($"[HardpointLimiter] No tracker component found for grid {ev.gridUid}!");
+ //           Logger.Warning($"[HardpointLimiter] No tracker component found for grid {ev.gridUid}!");
             return;
         }
 
@@ -141,21 +141,21 @@ public sealed class GridHardpointLimiterSystem : EntitySystem
         var actualCount = GetCurrentHardpointCount(ev.gridUid);
         comp.CurrentHardpoints = actualCount;
 
-        Logger.Info($"[HardpointLimiter] Grid {ev.gridUid} - Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
+//        Logger.Info($"[HardpointLimiter] Grid {ev.gridUid} - Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
 
         if (comp.CurrentHardpoints > comp.MaxHardpoints)
         {
-            Logger.Warning($"[HardpointLimiter] Hardpoint limit exceeded on grid {ev.gridUid}! Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
+ //           Logger.Warning($"[HardpointLimiter] Hardpoint limit exceeded on grid {ev.gridUid}! Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
         }
     }
 
     private void OnCannonDeanchored(HardpointCannonDeanchoredEvent ev)
     {
-        Logger.Info($"[HardpointLimiter] OnCannonDeanchored called for cannon {ev.CannonUid} on grid {ev.gridUid}");
+//        Logger.Info($"[HardpointLimiter] OnCannonDeanchored called for cannon {ev.CannonUid} on grid {ev.gridUid}");
 
         if (!TryComp<ServerGridHardpointTrackerComponent>(ev.gridUid, out var comp))
         {
-            Logger.Warning($"[HardpointLimiter] No tracker component found for grid {ev.gridUid}!");
+//            Logger.Warning($"[HardpointLimiter] No tracker component found for grid {ev.gridUid}!");
             return;
         }
 
@@ -163,27 +163,27 @@ public sealed class GridHardpointLimiterSystem : EntitySystem
         var actualCount = GetCurrentHardpointCount(ev.gridUid);
         comp.CurrentHardpoints = actualCount;
 
-        Logger.Info($"[HardpointLimiter] Grid {ev.gridUid} after deanchor - Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
+ //       Logger.Info($"[HardpointLimiter] Grid {ev.gridUid} after deanchor - Current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
     }
 
     public bool CanInstall(EntityUid gridUid)
     {
-        Logger.Info($"[HardpointLimiter] CanInstall called for grid {gridUid}");
+//        Logger.Info($"[HardpointLimiter] CanInstall called for grid {gridUid}");
 
         if (!TryComp<ServerGridHardpointTrackerComponent>(gridUid, out var comp))
         {
-            Logger.Warning($"[HardpointLimiter] No tracker component found for grid {gridUid}, allowing installation");
+//            Logger.Warning($"[HardpointLimiter] No tracker component found for grid {gridUid}, allowing installation");
             return true;
         }
 
         var currentCount = GetCurrentHardpointCount(gridUid);
-        Logger.Info($"[HardpointLimiter] Grid {gridUid} - Current count: {currentCount}, Component current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
+//        Logger.Info($"[HardpointLimiter] Grid {gridUid} - Current count: {currentCount}, Component current: {comp.CurrentHardpoints}, Max: {comp.MaxHardpoints}");
 
         // Update the component with actual count
         comp.CurrentHardpoints = currentCount;
 
         var canInstall = currentCount < comp.MaxHardpoints;
-        Logger.Info($"[HardpointLimiter] CanInstall result: {canInstall} (current: {currentCount} < max: {comp.MaxHardpoints})");
+//        Logger.Info($"[HardpointLimiter] CanInstall result: {canInstall} (current: {currentCount} < max: {comp.MaxHardpoints})");
 
         return canInstall;
     }
@@ -202,7 +202,7 @@ public sealed class GridHardpointLimiterSystem : EntitySystem
                 count++;
             }
         }
-        Logger.Info($"[HardpointLimiter] GetCurrentHardpointCount for grid {gridUid}: {count}");
+//        Logger.Info($"[HardpointLimiter] GetCurrentHardpointCount for grid {gridUid}: {count}");
         return count;
     }
 }
