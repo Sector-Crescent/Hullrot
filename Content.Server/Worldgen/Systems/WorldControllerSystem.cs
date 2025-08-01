@@ -169,7 +169,7 @@ public sealed class WorldControllerSystem : EntitySystem
         }
 
         if (chunksUnloaded > 0)
-            _sawmill.Debug($"Queued {chunksUnloaded} chunks for unload.");
+  //          _sawmill.Debug($"Queued {chunksUnloaded} chunks for unload.");
 
         if (chunksToLoad.All(x => x.Value.Count == 0))
             return;
@@ -199,7 +199,7 @@ public sealed class WorldControllerSystem : EntitySystem
         if (count > 0)
         {
             var timeSpan = _gameTiming.RealTime - startTime;
-            _sawmill.Debug($"Loaded {count} chunks in {timeSpan.TotalMilliseconds:N2}ms.");
+         //   _sawmill.Debug($"Loaded {count} chunks in {timeSpan.TotalMilliseconds:N2}ms.");
         }
     }
 
