@@ -85,6 +85,7 @@ research-technology-imperial-srmimitation = Sixth Fireteam Imitation
 research-technology-imperial-bomblauncher = M320 Launcher
 research-technology-imperial-triumphant = Imperial Cruiser
 research-technology-imperial-padparadscha = Imperial Siege Battlecruiser
+research-technology-imperial-basicmechguns = Basic Exoplate Weaponry
 
 #NCWL
 research-technology-communard-clothes = Communard Clothes
