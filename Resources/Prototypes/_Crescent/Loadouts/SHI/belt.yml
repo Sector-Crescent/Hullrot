@@ -1,0 +1,17 @@
+- type: loadout
+  id: LoadoutBeltSheathKatanaShionara
+  category: Belt
+  cost: 0
+  items:
+    - ClothingBeltSheathKatanaShionara
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoardSHI
+        - CorpsecSHI
+        - EmployeeSHI
+        - ExecutiveSHI
+        - HighsecSHI
+        - MedtechSHI
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt

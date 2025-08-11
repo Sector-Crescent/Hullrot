@@ -1,0 +1,15 @@
+- type: loadout
+  id: LoadoutItemSHIKatana
+  category: Items
+  cost: 4
+  items:
+    - SHIKatana
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoardSHI
+        - CorpsecSHI
+        - EmployeeSHI
+        - ExecutiveSHI
+        - HighsecSHI
+        - MedtechSHI

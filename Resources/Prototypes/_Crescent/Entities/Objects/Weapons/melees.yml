@@ -164,3 +164,36 @@
   - type: GuideHelp
     guides:
     - Security
+
+- type: entity
+  name: katana
+  parent: Katana
+  id: SHIKatana
+  description: A sharp looking blade. Made with high quality plasteel.
+  components:
+  - type: Tag
+    tags:
+    - Katana
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 30
+    wideAnimationRotation: -135
+    heavyRateModifier: 1.5
+    lightRangeModifier: 1.75
+    heavyStaminaCost: 7.5
+    maxTargets: 1
+    angle: 20
+  - type: DamageOtherOnHit
+    staminaCost: 5
+  - type: EmbeddableProjectile
+  - type: EmbedPassiveDamage
+  - type: ThrowingAngle
+    angle: 225
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/corpiekatana.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _Crescent/Objects/Weapons/corpiekatana.rsi
+  - type: DisarmMalus
