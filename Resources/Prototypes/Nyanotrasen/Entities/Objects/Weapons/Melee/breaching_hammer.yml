@@ -10,8 +10,8 @@
   - type: Item
     size: Huge
   - type: MeleeWeapon
-    attackRate: 0.75
-    range: 1.75
+    attackRate: 1.75
+    range: 1.50
     damage:
       types:
         Blunt: 25
@@ -23,12 +23,12 @@
 #    swing: 10
 #    wieldCoefficient: 0.5 #if wielded you will only consume 5
   - type: DamageOtherOnHit
-    staminaCost: 12
+    staminaCost: 14
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 45
+        Blunt: 35
         Structural: 100
   - type: Tool
     qualities:
