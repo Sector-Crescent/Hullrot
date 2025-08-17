@@ -58265,23 +58265,6 @@ entities:
     - type: Transform
       pos: -13.5,5.5
       parent: 1
-- proto: NCWLAdmiralVolginPhoto
-  entities:
-  - uid: 1375
-    components:
-    - type: Transform
-      pos: 23.589022,3.5922225
-      parent: 1
-  - uid: 2043
-    components:
-    - type: Transform
-      pos: -21.5,-5.5
-      parent: 1
-  - uid: 2075
-    components:
-    - type: Transform
-      pos: -21.460718,6.6145854
-      parent: 1
 - proto: NCWLCargoDispenser
   entities:
   - uid: 8610
@@ -58415,6 +58398,38 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
+- proto: NCWLVolginPhoto
+  entities:
+  - uid: 9966
+    components:
+    - type: Transform
+      pos: -14.241267,8.786026
+      parent: 1
+  - uid: 10044
+    components:
+    - type: Transform
+      pos: -7.7081223,4.426133
+      parent: 1
+  - uid: 10045
+    components:
+    - type: Transform
+      pos: -14.511787,-2.3612928
+      parent: 1
+  - uid: 10058
+    components:
+    - type: Transform
+      pos: 23.589022,3.5922225
+      parent: 1
+  - uid: 10059
+    components:
+    - type: Transform
+      pos: -21.5,-5.5
+      parent: 1
+  - uid: 10060
+    components:
+    - type: Transform
+      pos: -21.460718,6.6145854
+      parent: 1
 - proto: NitrousOxideTankFilled
   entities:
   - uid: 2937
