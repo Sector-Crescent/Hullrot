@@ -1,0 +1,29 @@
+- type: vessel
+  id: Colossus
+  name: SHI Colossus
+  description: A decently sized cargo vessel.
+  price: 80000
+  category: medium
+  group: None
+  path: /Maps/_Crescent/Shuttles/Civilian/colossus.yml
+
+- type: gameMap
+  id: Exhumer
+  mapName: 'ICM Exhumer'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/colossus.yml
+  minPlayers: 0
+  stations:
+    Exhumer:
+      stationProto: StandardCrescentCivilianVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Colossus {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
