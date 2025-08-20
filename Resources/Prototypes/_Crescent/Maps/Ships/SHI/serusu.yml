@@ -1,0 +1,29 @@
+- type: vessel
+  id: Serusu
+  name: SHI Serusu
+  description: The Salesman's best friend, often swapped around by indebted salarymen, when they fail to make payments. Perfect for small scale smuggling or running mundane company errands.
+  price: 15000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/SHI/serusu.yml
+
+- type: gameMap
+  id: Serusu
+  mapName: 'SHI Serusu'
+  mapPath: /Maps/_Crescent/Shuttles/SHI/Serusu.yml
+  minPlayers: 0
+  stations:
+    Serusu:
+      stationProto: StandardCrescentCivilianVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: frigate
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Serusu {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-Civilian
