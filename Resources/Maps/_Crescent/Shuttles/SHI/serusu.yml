@@ -116,6 +116,9 @@ entities:
             211: 5,4
             227: -2,5
             233: -1,1
+            254: 5,4
+            270: -2,5
+            276: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -135,6 +138,9 @@ entities:
             205: 4,1
             213: 5,4
             221: 6,4
+            248: 4,1
+            256: 5,4
+            264: 6,4
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -156,6 +162,10 @@ entities:
             216: 5,9
             230: -2,10
             236: -1,11
+            239: 0,12
+            259: 5,9
+            273: -2,10
+            279: -1,11
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -182,6 +192,11 @@ entities:
             208: 4,10
             218: 5,9
             224: 6,9
+            242: 2,12
+            245: 3,11
+            251: 4,10
+            261: 5,9
+            267: 6,9
         - node:
             id: LatticeEdgeE
           decals:
@@ -216,6 +231,13 @@ entities:
             229: -2,10
             231: -1,1
             235: -1,11
+            238: 0,12
+            252: 5,4
+            258: 5,9
+            268: -2,5
+            272: -2,10
+            274: -1,1
+            278: -1,11
         - node:
             id: LatticeEdgeN
           decals:
@@ -243,6 +265,11 @@ entities:
             219: 6,4
             226: -2,5
             232: -1,1
+            246: 4,1
+            253: 5,4
+            262: 6,4
+            269: -2,5
+            275: -1,1
         - node:
             id: LatticeEdgeS
           decals:
@@ -280,6 +307,14 @@ entities:
             222: 6,9
             228: -2,10
             234: -1,11
+            237: 0,12
+            240: 2,12
+            243: 3,11
+            249: 4,10
+            257: 5,9
+            265: 6,9
+            271: -2,10
+            277: -1,11
         - node:
             id: LatticeEdgeW
           decals:
@@ -320,6 +355,14 @@ entities:
             217: 5,9
             220: 6,4
             223: 6,9
+            241: 2,12
+            244: 3,11
+            247: 4,1
+            250: 4,10
+            255: 5,4
+            260: 5,9
+            263: 6,4
+            266: 6,9
         - node:
             cleanable: True
             color: '#FFFFFFFF'
@@ -539,7 +582,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -316.07166
+      secondsUntilStateChange: -364.9445
       state: Opening
 - proto: AirSensor
   entities:
@@ -850,6 +893,11 @@ entities:
     components:
     - type: Transform
       pos: 4.5,2.5
+      parent: 1
+  - uid: 151
+    components:
+    - type: Transform
+      pos: 1.5,1.5
       parent: 1
 - proto: CableHV
   entities:
