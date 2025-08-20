@@ -110,6 +110,12 @@ entities:
             125: 5,4
             141: -2,5
             147: -1,1
+            168: 5,4
+            184: -2,5
+            190: -1,1
+            211: 5,4
+            227: -2,5
+            233: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -123,6 +129,12 @@ entities:
             119: 4,1
             127: 5,4
             135: 6,4
+            162: 4,1
+            170: 5,4
+            178: 6,4
+            205: 4,1
+            213: 5,4
+            221: 6,4
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -136,6 +148,14 @@ entities:
             130: 5,9
             144: -2,10
             150: -1,11
+            153: 0,12
+            173: 5,9
+            187: -2,10
+            193: -1,11
+            196: 0,12
+            216: 5,9
+            230: -2,10
+            236: -1,11
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -152,6 +172,16 @@ entities:
             122: 4,10
             132: 5,9
             138: 6,9
+            156: 2,12
+            159: 3,11
+            165: 4,10
+            175: 5,9
+            181: 6,9
+            199: 2,12
+            202: 3,11
+            208: 4,10
+            218: 5,9
+            224: 6,9
         - node:
             id: LatticeEdgeE
           decals:
@@ -172,6 +202,20 @@ entities:
             143: -2,10
             145: -1,1
             149: -1,11
+            152: 0,12
+            166: 5,4
+            172: 5,9
+            182: -2,5
+            186: -2,10
+            188: -1,1
+            192: -1,11
+            195: 0,12
+            209: 5,4
+            215: 5,9
+            225: -2,5
+            229: -2,10
+            231: -1,1
+            235: -1,11
         - node:
             id: LatticeEdgeN
           decals:
@@ -189,6 +233,16 @@ entities:
             133: 6,4
             140: -2,5
             146: -1,1
+            160: 4,1
+            167: 5,4
+            176: 6,4
+            183: -2,5
+            189: -1,1
+            203: 4,1
+            210: 5,4
+            219: 6,4
+            226: -2,5
+            232: -1,1
         - node:
             id: LatticeEdgeS
           decals:
@@ -210,6 +264,22 @@ entities:
             136: 6,9
             142: -2,10
             148: -1,11
+            151: 0,12
+            154: 2,12
+            157: 3,11
+            163: 4,10
+            171: 5,9
+            179: 6,9
+            185: -2,10
+            191: -1,11
+            194: 0,12
+            197: 2,12
+            200: 3,11
+            206: 4,10
+            214: 5,9
+            222: 6,9
+            228: -2,10
+            234: -1,11
         - node:
             id: LatticeEdgeW
           decals:
@@ -234,6 +304,22 @@ entities:
             131: 5,9
             134: 6,4
             137: 6,9
+            155: 2,12
+            158: 3,11
+            161: 4,1
+            164: 4,10
+            169: 5,4
+            174: 5,9
+            177: 6,4
+            180: 6,9
+            198: 2,12
+            201: 3,11
+            204: 4,1
+            207: 4,10
+            212: 5,4
+            217: 5,9
+            220: 6,4
+            223: 6,9
         - node:
             cleanable: True
             color: '#FFFFFFFF'
@@ -427,7 +513,7 @@ entities:
       bodyType: Static
 - proto: AirlockCommandLockedShinoharaHorizontal
   entities:
-  - uid: 46
+  - uid: 150
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -438,6 +524,7 @@ entities:
   - uid: 68
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 1.5,4.5
       parent: 1
 - proto: AirlockExternalShuttleLocked
@@ -448,6 +535,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,7.5
       parent: 1
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+    - type: Door
+      secondsUntilStateChange: -316.07166
+      state: Opening
 - proto: AirSensor
   entities:
   - uid: 129
@@ -473,6 +566,46 @@ entities:
       hasAccess: True
       lastExternalState: Good
       lastChargeState: Full
+- proto: AtmosDeviceFanDirectional
+  entities:
+  - uid: 46
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,7.5
+      parent: 1
+- proto: AtmosFixBlockerMarker
+  entities:
+  - uid: 144
+    components:
+    - type: Transform
+      pos: 6.5,9.5
+      parent: 1
+  - uid: 145
+    components:
+    - type: Transform
+      pos: 5.5,9.5
+      parent: 1
+  - uid: 146
+    components:
+    - type: Transform
+      pos: 6.5,4.5
+      parent: 1
+  - uid: 147
+    components:
+    - type: Transform
+      pos: 5.5,4.5
+      parent: 1
+  - uid: 148
+    components:
+    - type: Transform
+      pos: 4.5,1.5
+      parent: 1
+  - uid: 149
+    components:
+    - type: Transform
+      pos: -0.5,1.5
+      parent: 1
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 58
@@ -919,8 +1052,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,3.5
       parent: 1
-    - type: GasPressurePump
-      enabled: True
 - proto: GasVentPump
   entities:
   - uid: 67
