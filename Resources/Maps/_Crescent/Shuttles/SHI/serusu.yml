@@ -105,8 +105,11 @@ entities:
             34: 5,4
             45: -1,1
             70: 5,4
-            86: -1,1
-            128: -2,5
+            81: -1,1
+            90: -2,5
+            125: 5,4
+            141: -2,5
+            147: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -116,27 +119,39 @@ entities:
             42: 4,1
             67: 4,1
             72: 5,4
-            80: 6,4
+            75: 6,4
+            119: 4,1
+            127: 5,4
+            135: 6,4
         - node:
             zIndex: 1
             id: LatticeCornerSE
           decals:
             29: 5,9
-            122: 0,12
-            140: -2,10
-            143: -1,11
-            168: 5,9
+            87: 0,12
+            93: -2,10
+            96: -1,11
+            102: 5,9
+            110: 0,12
+            130: 5,9
+            144: -2,10
+            150: -1,11
         - node:
             zIndex: 1
             id: LatticeCornerSW
           decals:
             26: 6,9
             31: 5,9
-            83: 6,9
-            101: 2,12
-            165: 4,10
-            170: 5,9
-            173: 3,11
+            78: 6,9
+            84: 2,12
+            99: 4,10
+            104: 5,9
+            107: 3,11
+            113: 2,12
+            116: 3,11
+            122: 4,10
+            132: 5,9
+            138: 6,9
         - node:
             id: LatticeEdgeE
           decals:
@@ -144,12 +159,19 @@ entities:
             32: 5,4
             43: -1,1
             68: 5,4
-            84: -1,1
-            121: 0,12
-            126: -2,5
-            139: -2,10
-            142: -1,11
-            167: 5,9
+            79: -1,1
+            86: 0,12
+            88: -2,5
+            92: -2,10
+            95: -1,11
+            101: 5,9
+            109: 0,12
+            123: 5,4
+            129: 5,9
+            139: -2,5
+            143: -2,10
+            145: -1,1
+            149: -1,11
         - node:
             id: LatticeEdgeN
           decals:
@@ -159,22 +181,35 @@ entities:
             44: -1,1
             65: 4,1
             69: 5,4
-            78: 6,4
-            85: -1,1
-            127: -2,5
+            73: 6,4
+            80: -1,1
+            89: -2,5
+            117: 4,1
+            124: 5,4
+            133: 6,4
+            140: -2,5
+            146: -1,1
         - node:
             id: LatticeEdgeS
           decals:
             24: 6,9
             27: 5,9
-            81: 6,9
-            99: 2,12
-            120: 0,12
-            138: -2,10
-            141: -1,11
-            163: 4,10
-            166: 5,9
-            171: 3,11
+            76: 6,9
+            82: 2,12
+            85: 0,12
+            91: -2,10
+            94: -1,11
+            97: 4,10
+            100: 5,9
+            105: 3,11
+            108: 0,12
+            111: 2,12
+            114: 3,11
+            120: 4,10
+            128: 5,9
+            136: 6,9
+            142: -2,10
+            148: -1,11
         - node:
             id: LatticeEdgeW
           decals:
@@ -185,12 +220,20 @@ entities:
             41: 4,1
             66: 4,1
             71: 5,4
-            79: 6,4
-            82: 6,9
-            100: 2,12
-            164: 4,10
-            169: 5,9
-            172: 3,11
+            74: 6,4
+            77: 6,9
+            83: 2,12
+            98: 4,10
+            103: 5,9
+            106: 3,11
+            112: 2,12
+            115: 3,11
+            118: 4,1
+            121: 4,10
+            126: 5,4
+            131: 5,9
+            134: 6,4
+            137: 6,9
         - node:
             cleanable: True
             color: '#FFFFFFFF'
@@ -428,11 +471,8 @@ entities:
       parent: 1
     - type: Apc
       hasAccess: True
-      enabled: False
       lastExternalState: Good
       lastChargeState: Full
-    - type: PowerNetworkBattery
-      canDischarge: False
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 58
@@ -453,6 +493,11 @@ entities:
       parent: 1
 - proto: CableApcExtension
   entities:
+  - uid: 70
+    components:
+    - type: Transform
+      pos: 0.5,4.5
+      parent: 1
   - uid: 80
     components:
     - type: Transform
@@ -576,22 +621,22 @@ entities:
   - uid: 104
     components:
     - type: Transform
-      pos: -0.5,2.5
+      pos: -0.5,4.5
       parent: 1
   - uid: 105
     components:
     - type: Transform
-      pos: 0.5,2.5
+      pos: -0.5,2.5
       parent: 1
   - uid: 106
     components:
     - type: Transform
-      pos: 0.5,1.5
+      pos: 0.5,2.5
       parent: 1
   - uid: 107
     components:
     - type: Transform
-      pos: 1.5,1.5
+      pos: 0.5,1.5
       parent: 1
   - uid: 108
     components:
@@ -662,6 +707,16 @@ entities:
     components:
     - type: Transform
       pos: 2.5,5.5
+      parent: 1
+  - uid: 141
+    components:
+    - type: Transform
+      pos: 3.5,2.5
+      parent: 1
+  - uid: 143
+    components:
+    - type: Transform
+      pos: 4.5,2.5
       parent: 1
 - proto: CableHV
   entities:
@@ -745,15 +800,13 @@ entities:
       parent: 1
 - proto: FireAlarm
   entities:
-  - uid: 70
+  - uid: 47
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,10.5
+      pos: -0.5,5.5
       parent: 1
     - type: DeviceList
       devices:
-      - 47
       - 49
       - 69
 - proto: FireAxeCabinetFilled
@@ -779,15 +832,6 @@ entities:
       canCollide: False
 - proto: FirelockGlass
   entities:
-  - uid: 47
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,7.5
-      parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 70
   - uid: 49
     components:
     - type: Transform
@@ -795,16 +839,20 @@ entities:
       pos: 4.5,6.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
-      - 70
+      - 47
   - uid: 69
     components:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
-      - 70
+      - 47
 - proto: FoodCornTrash
   entities:
   - uid: 132
@@ -925,17 +973,18 @@ entities:
     - type: Transform
       pos: 1.5,11.5
       parent: 1
+    - type: PointLight
+      softness: 2
+      radius: 2
   - uid: 140
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 5.5,6.5
       parent: 1
-  - uid: 141
-    components:
-    - type: Transform
-      pos: 2.5,3.5
-      parent: 1
+    - type: PointLight
+      softness: 2
+      radius: 2
 - proto: RandomSpawner
   entities:
   - uid: 135
