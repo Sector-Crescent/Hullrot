@@ -8,12 +8,12 @@
   path: /Maps/_Crescent/Shuttles/SHI/colossus.yml
 
 - type: gameMap
-  id: Exhumer
+  id: Colossus
   mapName: 'SHI Colossus'
   mapPath: /Maps/_Crescent/Shuttles/SHI/colossus.yml
   minPlayers: 0
   stations:
-    Exhumer:
+    Colossus:
       stationProto: StandardCrescentCivilianVessel
       components:
         - type: VesselIcon
@@ -26,4 +26,4 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: VesselDesignation
-          designation: vessel-designation-mining
+          designation: vessel-designation-civilian
