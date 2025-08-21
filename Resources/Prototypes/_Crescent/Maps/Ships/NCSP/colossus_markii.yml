@@ -1,0 +1,31 @@
+# Author Info
+# Discord: Marabout
+#
+- type: vessel
+  id: Colossus_MarkII
+  name: SAW Colossus MarkII
+  description: A retrofitted SHI cargo haul into a combat freighter.
+  price: 90000
+  category: Medium
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/colossus_markii.yml
+
+- type: gameMap
+  id: Colossus_MarkII
+  mapName: 'SAW Colossus MarkII'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/colossus_markii.yml
+  minPlayers: 0
+  stations:
+    Colossus_MarkII:
+      stationProto: StandardCrescentCivilianVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: cruiser
+        - type: StationNameSetup
+          mapNameTemplate: 'SAW Colossus MarkII {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
