@@ -185,3 +185,35 @@
           Quantity: 10
   - type: Tag
     tags: []
+
+- type: entity
+  name: shapezine autoinjector
+  parent: ChangelingInfectionImplanter
+  id: RotweltInterdyneShapezineAutoinjector
+  description: A volatile one-use mixture of illicit chemicals, meat that won't stop moving and an acrid smell that permeates even through airsealed hardsuits, all of which promises insistently that just one pull will let you change your life over and over again. The Interdyne Pharmaceuticals logo is bleeding.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Autoinjectors/shapezine.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 10
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 10
+        reagents:
+        - ReagentId: Mechanites
+          Quantity: 5
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+  - type: Implanter
+    implant: ChangelingInfectionImplant

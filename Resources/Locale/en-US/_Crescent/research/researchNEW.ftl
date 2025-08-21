@@ -49,6 +49,7 @@ research-technology-interdyne-paineditor = TT-46 Pain Editor
 research-technology-interdyne-adrenalaccelerator = TT-86 Adrenal Accelerator
 research-technology-interdyne-bloodpump = TT-92 Bloodpump
 research-technology-interdyne-pryarms = TT-42 Pryarms
+research-technology-interdyne-shapezine = Experimental Rotwelt Symbiosis
 
 # CYBERDAWN
 research-technology-cyberdawn-clothing = Cyberdawn Clothing

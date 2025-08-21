@@ -135,3 +135,15 @@
   recipeUnlocks:
   - CrowbarLeftArmInterdyne
   - CrowbarRightArmInterdyne
+
+- type: technology
+  id: RotweltInterdyneShapezineAutoinjector
+  name: research-technology-interdyne-shapezine
+  icon:
+    sprite: _Crescent/Objects/Autoinjectors/shapezine.rsi
+    state: medipen
+  discipline: Interdyne
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - RotweltInterdyneShapezineAutoinjector
