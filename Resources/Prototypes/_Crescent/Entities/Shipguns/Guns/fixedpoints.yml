@@ -4,6 +4,7 @@
   id: ShuttleGunPlasmaRepeater
   parent: BaseFixedShipgun
   name: SHI 400c plasma bolt repeater
+  suffix: Fixed + Energy
   description: A fixedpoint self-defense tool based on recovered NT technology, subpar in terms of power use to firepower ratio - mostly seen on civilian models.
   components:
   - type: ApcPowerReceiver
@@ -67,6 +68,7 @@
   id: ShuttleGunExhumer
   parent: BaseFixedShipgun
   name: SHI 250c "Exhumer" kinetic pulser
+  suffix: Fixed + Mining
   description: A fixedpoint mining tool that accelerates sound waves to kinetically slice through rock - mostly seen on civilian miner models.
   components:
   - type: ApcPowerReceiver
@@ -126,6 +128,7 @@
   id: ShuttleGunBizmuth
   parent: BaseFixedShipgun
   name: 500i "Bizmuth" ion gatling
+  suffix: Fixed + Energy
   description: An interceptor's bread and butter, the Bizmuth fires supercharged balls of electricty to pelt the powergrids of unsuspecting targets. Most often seen on interceptor vessels.
   components:
   - type: ApcPowerReceiver
@@ -185,6 +188,7 @@
   id: ShuttleGunTorpedo
   parent: BaseFixedShipgun
   name: SHI 180mm "Idna" small torpedo pod
+  suffix: Fixed + Missile
   description: A small fixedpoint rocketpod with basic heatseeking function.
   components:
   - type: ApcPowerReceiver
@@ -248,6 +252,7 @@
   id: ShuttleGunKurosawa
   parent: BaseFixedShipgun
   name: NCWL-3 48mm "Kurosawa" rocket pod
+  suffix: Fixed + Missile
   description: A small fixedpoint rocketpod with a capacity of two rockets. Must be reloaded by hand.
   components:
   - type: ApcPowerReceiver
@@ -308,6 +313,7 @@
   id: ShuttleGunMissileRack
   parent: BaseFixedShipgun
   name: NT-6 48mm "Sumitomo" missile rack
+  suffix: Fixed + Energy
   description: A massive, ship-mounted missile rack with a unique feeding mechanism. Requires a rocket magazine to operate.
   components:
   - type: ApcPowerReceiver
@@ -373,6 +379,7 @@
 - type: entity
   id: SlugthrowerCannon
   name: SHI 43mm "Dasher" ballistic slugthrower
+  suffix: Fixed + Energy
   parent: BaseFixedShipgun
   description: An outdated, gas-operated slugthrower. Usually found mounted on older civilian models. Ballistic-fed.
   components:
@@ -440,6 +447,7 @@
 - type: entity
   id: HardlineBeamPulser
   name: NT-9 3100c 'Hardliner' plasma lance turret
+  suffix: Fixed + Energy
   parent: BaseFixedShipgun
   description: A ship-mounted, fixed-point artillery turret using military laser technology as a base - an outdated model from the now-defunct NanoTrasen, although tried and tested in many battles. Requires upkeep in the form of liquid coolant to stay operational.
   components:
@@ -499,6 +507,7 @@
 - type: entity
   id: Type99Artillery
   name: SHI Type 99 120mm artillery
+  suffix: Fixed + Ballistic
   parent: BaseFixedShipgun
   description: A heavier, bulkier version of the slugthrower. An antiquated SHI design. Requires manual reloading after its two chambers.
   components:
@@ -551,6 +560,7 @@
 - type: entity
   id: AcceleratorCannon
   name: 320mm Imperial high-frequency accelerator cannon
+  suffix: Fixed + Ballistic
   parent: BaseFixedShipgun
   description: A product of the Imperial war machine. Produced as an experimental solution to various insurgencies in the Crescent Sector - and later stolen by the insurgents themselves. Still a rare sight aboard most vessels.
   components:
@@ -620,6 +630,7 @@
 - type: entity
   id: NTVulcanTurret
   name: NT 20mm "Vulcan" machineturret
+  suffix: Fixed + Ballistic
   parent: BaseFixedShipgun
   description: An antiquated NanoTrasen model, commonly fitted on mid-tech fighters.
   components:
@@ -687,6 +698,7 @@
 - type: entity
   id: SAWCleanser
   name: SAW 20mm "Cleanser" gatlingun
+  suffix: Fixed + Ballistic
   parent: BaseFixedShipgun
   description: A retrofit of the 20mm vulcan made by TSFC SAW Engineers. All safety considerations seem to be missing on this..
   components:
@@ -756,6 +768,7 @@
 - type: entity
   id: WaspSwarmPlatform
   name: ATH 70mm 'Wasp' swarmrocket platform
+  suffix: Fixed + Missile
   parent: BaseFixedShipgun
   description: A light, stationary rocket platform intended to apply pressure to a target with its guided projectiles.
   components:
