@@ -230,6 +230,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: BallisticAmmoProvider
+    proto: IdnaTorpedo
     whitelist:
       tags:
         - Torpedo
@@ -296,9 +297,10 @@
     class: Missile
     size: Small
   - type: BallisticAmmoProvider
+    proto: CartridgeRocketLowYield
     whitelist:
       tags:
-        - Grenade
+        - Rocket48mm
     capacity: 2
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
@@ -363,9 +365,10 @@
       gun_magazine:
         name: Magazine
         priority: 2
+        startingItem: MagazineRocketLowYield
         whitelist:
           tags:
-          - MagazineGrenade
+          - MagazineRocket48mm
         insertSound:
           path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
           params:
