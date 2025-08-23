@@ -65,6 +65,7 @@ research-technology-cyberdawn-zhongyao = Zhongyao Tacsuit
 research-technology-cyberdawn-egui = Egui Stealth Tacsuit
 research-technology-cyberdawn-psybreaker = Anti-Psionic Armaments
 research-technology-cyberdawn-thermals = Thermal Vision Goggles
+research-technology-cyberdawn-advancedlaunchers = Advanced Launchers
 
 # DSM
 research-technology-imperial-basicclothes = Basic Tailoring
@@ -103,6 +104,7 @@ research-technology-communard-ivarod = Communard Assault Frigate
 research-technology-communard-stern = Communard Siege Battlecruiser
 research-technology-communard-bogatyr = Communard Battle Mech
 research-technology-communard-commienaut = Communard Juggernaut Suit
+research-technology-communard-vibrokukri = Communard Chengridz Vibrokukri
 
 # SHI
 research-technology-shinohara-clothes = Corporate Uniforms
