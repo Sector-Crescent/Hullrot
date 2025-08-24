@@ -3,11 +3,18 @@
   name: job-name-ripperdoc
   description: job-description-ripperdoc
   playTimeTracker: JobRipperdocNCSP
+  weight: 6
+  startingGear: RipperdocGear
+  alwaysUseSpawner: true
+  requireAdminNotify: false
+  icon: "JobIconSyndieRipperdoc"
+  supervisors: You answer to the interests of Interdyne Pharmaceuticals company, whatever they be decided by you or your colleagues
+  canBeAntag: false
   requirements:
-    - !type:CharacterOverallTimeRequirement
-      min: 6000
     - !type:FactionRequirement
       factionID: "TFSC"
+    - !type:CharacterOverallTimeRequirement
+      min: 6000
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -27,13 +34,6 @@
           - Freespeak
         addUnderstood:
           - Freespeak
-  weight: 16
-  startingGear: RipperdocGear
-  alwaysUseSpawner: true
-  icon: "JobIconSyndieRipperdoc"
-  requireAdminNotify: false
-  supervisors: You answer to the interests of Interdyne Pharmaceuticals company, whatever they be decided by you or your colleagues
-  canBeAntag: false
   access:
   - Command
   - Maintenance
