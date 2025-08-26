@@ -3,17 +3,16 @@
   result: BasicElectronics1
   completetime: 0.5
   materials:
-    Steel: 100
-    Copper: 50
+    Copper: 200
 
 - type: latheRecipe
   id: WeakLaserLocus1Electronics
   result: WeakLaserLocus1
   completetime: 0.5
   materials:
-    Glass: 250
+    Glass: 100
     Steel: 100
-    BasicElectronics: 100
+    BasicElectronics: 500
 
 
 - type: latheRecipe
@@ -21,9 +20,8 @@
   result: HardsuitElectronics1
   completetime: 0.5
   materials:
-    Silver: 50
     Steel: 100
-    BasicElectronics: 250
+    BasicElectronics: 500
 
 - type: latheRecipe
   id: EMPGrenadeElectronics
