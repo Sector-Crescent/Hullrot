@@ -28,6 +28,11 @@
   name: Mech & Mech Weapons
   priority: 16
 
+- type: storeCategory
+  id: StoreCategoryGSCRedeemables
+  name: Redeemables
+  priority: 16
+
 - type: listing
   id: StoreListingGSCMechBlade
   name: SHI LvR-200 exosuit-mounted plasteel blade.
@@ -348,3 +353,13 @@
   categories:
   - StoreCategoryGSCWeapons
 
+- type: listing
+  id: StoreListingGSCCredits
+  name: 5000 Credits
+  description: Your earned loot, in credits.
+  icon: { sprite: _NF/Objects/Economy/cash.rsi, state: cash_5000 }
+  productEntity: SpaceCash5000
+  cost:
+    PlunderGSC: 2
+  categories:
+  - StoreCategoryGSCRedeemables
