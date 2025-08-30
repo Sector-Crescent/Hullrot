@@ -1,4 +1,9 @@
 - type: storeCategory
+  id: StoreCategoryGSCRedeemables
+  name: Redeemables
+  priority: 1
+
+- type: storeCategory
   id: StoreCategoryGSCWeapons
   name: Weapons
   priority: 4
@@ -26,11 +31,6 @@
 - type: storeCategory
   id: StoreCategoryGSCMech
   name: Mech & Mech Weapons
-  priority: 16
-
-- type: storeCategory
-  id: StoreCategoryGSCRedeemables
-  name: Redeemables
   priority: 16
 
 - type: listing
