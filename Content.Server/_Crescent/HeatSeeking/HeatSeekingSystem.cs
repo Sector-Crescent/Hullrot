@@ -4,6 +4,7 @@ using Content.Server.Shuttles.Components;
 using Content.Shared.Projectiles;
 using Robust.Server.GameObjects;
 using Content.Shared.Weapons.Ranged.Components;
+using Content.Shared._Crescent.HeatSeeking;
 
 namespace Content.Server._Crescent.HeatSeeking;
 

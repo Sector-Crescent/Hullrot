@@ -260,7 +260,7 @@
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: BallisticAmmoProvider
     proto: BulletRocketSmart
-    capacity: 3
+    capacity: 999
     cycleable: false
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
@@ -279,15 +279,55 @@
   components:
   - type: ProjectileIFF
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    sprite: /_Crescent/Objects/ShuttleWeapons/torpedop.rsi
     layers:
-      - state: frag
+      - state: base
+        map: ["enum.RCSVisualState.BaseLayer"]
+        visible: true
+      - state: idna-forward
+        map: ["enum.RCSVisualState.Forward"]
+        visible: false
+      - state: idna-backward
+        map: ["enum.RCSVisualState.Backward"]
+        visible: false
+      - state: idna-left
+        map: ["enum.RCSVisualState.Left"]
+        visible: false
+      - state: idna-right
+        map: ["enum.RCSVisualState.Right"]
+        visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.RCSVisualState.Forward:
+        enum.RCSVisualState.Forward:
+          True:
+            visible: true
+          False:
+            visible: false
+      enum.RCSVisualState.Backward:
+        enum.RCSVisualState.Backward:
+          True:
+            visible: true
+          False:
+            visible: false
+      enum.RCSVisualState.Left:
+        enum.RCSVisualState.Left:
+          True:
+            visible: true
+          False:
+            visible: false
+      enum.RCSVisualState.Right:
+        enum.RCSVisualState.Right:
+          True:
+            visible: true
+          False:
+            visible: false
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 65
-    intensitySlope: 5
-    totalIntensity: 200
+    maxIntensity: 25
+    intensitySlope: 15
+    totalIntensity: 800
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -295,11 +335,15 @@
     energy: 0.5
   - type: HeatSeeking
     rotationSpeed: 40
-    acceleration: 25
-    topSpeed: 125
-
-    defaultSeekingRange: 400
+    boostAcceleration: 4
+    cruiseAcceleration: 2
+    topSpeed: 10
+    defaultSeekingRange: 30
     guidanceAlgorithm: PredictiveGuidance
+    fuel: 99999
+    proportionalGain: 7.5
+    integralGain: 0
+    derivativeGain: 2.5
 
 # @Tomahawk101 (Tomahawk101) donor gun
 - type: entity
