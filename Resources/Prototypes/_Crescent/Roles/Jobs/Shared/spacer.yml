@@ -8,6 +8,9 @@
   supervisors: job-supervisors-hire
   accessGroups:
   - GeneralAccess
+  requirements:
+  - !type:CharacterOverallTimeRequirement
+    min: 30
   special:
   - !type:AddComponentSpecial
     components:
