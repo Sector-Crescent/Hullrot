@@ -87,7 +87,7 @@ public sealed partial class NavScreen : BoxContainer
         var displayRot = -worldRot.Reduced();
 
         GridPosition.Text = $"{worldPos.X:0.0}, {worldPos.Y:0.0}";
-        GridOrientation.Text = $"{displayRot.Degrees:0.0}";
+        GridOrientation.Text = $"{displayRot.Degrees:0.000}";
 
         var gridVelocity = gridBody.LinearVelocity;
         gridVelocity = displayRot.RotateVec(gridVelocity);
