@@ -252,7 +252,6 @@
   - type: RandomSpawner
     prototypes:
     - Autolathe
-    - Protolathe
     - Autolathe
     - Autolathe
     - Autolathe
@@ -262,10 +261,6 @@
     - SpawnDungeonMachineFrame
     chance: 1
     offset: 0.0
-    rarePrototypes:
-    - AutolatheHyperConvection
-    - ProtolatheHyperConvection
-    rareChance: 0.01
 
 - type: entity
   name: random vendomats

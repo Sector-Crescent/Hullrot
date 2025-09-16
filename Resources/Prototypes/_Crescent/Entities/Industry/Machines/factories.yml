@@ -1,0 +1,213 @@
+ #shell fabricators
+ 
+- type: entity
+  id: FactoryShellFab
+  parent: BaseFactory
+  name: shell fabricator
+  description: Shapes metal for use by ship munitions.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    snapCardinals: true
+    layers:
+    - state: pooper
+  - type: Factory
+    sound:
+      collection: Welder
+      params:
+        variation: 0.125
+    recipes:
+      - VulcanBoxCasing
+      - SlugthrowerBoxCasing
+      - NeedlerMagCasing
+      - MortarBoxCasing
+      - 320mmCasing
+      - 230mmCasing #hephaestus
+      - 120mmDUCasing
+      - 120mmHECasing
+      - SwarmerClipCasing #jeong/osiris
+      - SwarmerMagCasing #swarmer
+      - FlakMagCasing
+      - 48mmRocketHEMagCasing
+      - 48mmRocketLYMagCasing
+      - IdnaTorpedoCasing
+
+- type: entity      
+  id: FactoryShellWeld
+  parent: BaseFactory
+  name: cartridge welding arm
+  description: Welds shell casings for priming.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    snapCardinals: false
+    layers:
+    - state: welder
+  - type: Factory
+    sound:
+      collection: Welder
+      params:
+        variation: 0.125
+    recipes:
+      - VulcanBoxWeld
+      - SlugthrowerBoxWeld
+      - NeedlerMagWeld
+      - MortarBoxWeld
+      - 320mmWeld
+      - 230mmWeld #hephaestus
+      - 120mmDUWeld
+      - 120mmHEWeld
+      - SwarmerClipWeld #jeong/osiris
+      - SwarmerMagWeld #swarmer
+      - FlakMagWeld
+      - 48mmRocketHEMagWeld
+      - 48mmRocketLYMagWeld
+      - IdnaTorpedoWeld
+
+- type: entity
+  id: FactoryShellAssembler
+  parent: BaseFactory
+  name: assembling arm
+  description: Packs explosive armaments into munitions.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    snapCardinals: false
+    layers:
+    - state: assembler
+  - type: Factory
+    sound:
+      collection: Screwdriver
+      params:
+        variation: 0.125
+    recipes:
+      - VulcanBoxAssemble
+      - SlugthrowerBoxAssemble
+      - NeedlerMagAssemble
+      - MortarBoxAssemble
+      - 320mmAssemble
+      - 230mmAssemble #hephaestus
+      - 120mmDUAssemble
+      - 120mmHEAssemble
+      - SwarmerClipAssemble #jeong/osiris
+      - SwarmerMagAssemble #swarmer
+      - FlakMagAssemble
+      - 48mmRocketHEMagAssemble
+      - 48mmRocketLYMagAssemble
+      - IdnaTorpedoAssemble
+      
+#shell fabricators end
+
+#misc
+
+- type: entity
+  id: FactoryPlasteelFamilies
+  parent: BaseFactory
+  name: plasteel blast furnace
+  description: Uses advanced metallurgy patterns to smelt plasma and steel alloy into durable plasteel and plastitanium.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/furnacefactory.rsi
+    snapCardinals: true
+    layers:
+    - state: furnace
+  - type: Factory
+    sound:
+      collection: Welder
+      params:
+        variation: 0.125
+    recipes:
+      - FourFamiliesPlasteel
+
+- type: entity
+  parent: BaseFactory
+  id: BiomassFoodMulcher
+  name: biomass mulcher
+  description: A miniature vat that accepts grown produce and mulches it into usable biomass.
+  components:
+  - type: Factory
+    recipes:
+      - BiomassFromWheat
+      - BiomassFromSugarcane
+  - type: Sprite
+    sprite: _Crescent/Structures/mulcher.rsi
+    layers:
+    - state: "icon"
+
+- type: entity
+  parent: BaseFactory
+  id: AutoloomFactory
+  name: SHI portable autoloom fablathe
+  description: A common fabricator intended for the texiles industry. Weaves fabrics without user input.
+  components:
+  - type: Factory
+    recipes:
+      - FabricateClothRollCotton
+      - FabricateClothRollSilk
+      - FabricateDurathread
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    layers:
+    - state: "autoloom"
+
+#misc end
+
+#components
+
+- type: entity
+  parent: BaseFactory
+  id: VariableCommodityFablathe
+  name: SHI CF-22 variable commodity fabricator
+  description: A common fabricator machine found in industrial stations of all operational scale and size - primarily used for fabricating basic production components, although fabrication patterns for commonly used items and gear can also be found in some models.
+  components:
+  - type: Factory
+    recipes:
+      - FabricateSimpleElectronics
+      - FabricateBasicMechatronics
+      - FabricateWeakLaserLocus
+      - FabricateHardsuitElectronics
+      - FabricateMunitions
+      - FabricateGunparts
+      - FabricatePlasmas
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    layers:
+    - state: "makina"
+
+- type: entity
+  parent: BaseFactory
+  id: AdvancedVariableCommodityFablathe
+  name: SHI CF-84 advanced variable commodity assembler
+  description: A common fabricator machine found in industrial stations of all operational scale and size - primarily used for fabricating advanced production components, although fabrication patterns for various items and gear can also be found in some models.
+  components:
+  - type: Factory
+    recipes:
+      - FabricateSimpleElectronics
+      - FabricateBasicMechatronics
+      - FabricateWeakLaserLocus
+      - FabricateAdvancedElectronics
+      - FabricateHardsuitElectronics
+      - FabricateAdvancedMechatronics
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    layers:
+    - state: "advancedfab"
+
+- type: entity
+  parent: BaseFactory
+  id: BallisticFablathe
+  name: SHI TF-22 armaments foundry
+  description: A specialized fabricator used for fabricating small-caliber munitions for both infantry and shuttle weapons, as well as construction components pertaining to weaponry.
+  components:
+  - type: Factory
+    recipes:
+      - FabricateMissileTube
+      - FabricateBallisticCycler
+      - FabricateWeakLaserLocus
+      - FabricateLaserLocus
+  - type: Sprite
+    sprite: _Crescent/Structures/factorystructures.rsi
+    layers:
+    - state: "ballisticfab"
+    
+#components end

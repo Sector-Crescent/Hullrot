@@ -161,15 +161,6 @@
 
 - type: entity
   parent: ExosuitFabricatorFlatpack
-  id: ProtolatheFlatpack
-  name: protolathe flatpack
-  description: A flatpack used for constructing a protolathe.
-  components:
-  - type: Flatpack
-    entity: Protolathe
-
-- type: entity
-  parent: ExosuitFabricatorFlatpack
   id: MachineArtifactAnalyzerFlatpack
   name: artifact analyzer flatpack
   description: A flatpack used for constructing an artifact analyzer.
@@ -554,15 +545,3 @@
     entity: DawInstrument
   - type: StaticPrice
     price: 2000
-
-- type: entity
-  parent: UniformPrinterFlatpack
-  id: NfsdTechFabFlatpack
-  name: nfsd tech fab flatpack
-  description: A flatpack used for constructing a nfsd tech fab.
-  components:
-  - type: Flatpack
-    entity: NfsdTechFab
-  - type: StaticPrice
-    price: 250
-

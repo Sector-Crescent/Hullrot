@@ -1,0 +1,691 @@
+#autolathe
+
+- type: entity
+  id: Autolathe
+  parent: BaseLatheLube
+  name: autolathe
+  description: It produces basic items using metal and glass.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/autolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: AutolatheMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - JetpackBlack
+      - JetpackMini
+      - ShockCollar
+      - ClothingEyesHudMedical
+      - ClothingOuterHardsuitBasic
+      - RadioHandheld
+      - Floodlight
+      - GlowstickYellow
+      - ClothingBeltSalvageWebbing
+      - OreBag
+      - ConstructionBag
+      - ClothingNeckIFFNeutral
+      - GrenadeFlashBang
+      - AACTablet
+      - HydroponicsToolMiniHoe
+      - HydroponicsToolScythe
+      - HydroponicsToolHatchet
+      - HydroponicsToolSpade
+      - HydroponicsToolClippers
+      - PlantAnalyzer
+      - AppraisalTool
+      - Beaker
+      - LargeBeaker
+      - CryostasisBeaker
+      - SyringeCryostasis
+      - Dropper
+      - Syringe
+      - DisposableSyringe
+      - PillCanister
+      - ChemistryEmptyBottle01
+      - ButchCleaver
+      - KitchenKnife
+      - DrinkMug
+      - DrinkMugMetal
+      - DrinkGlass
+      - DrinkShotGlass
+      - DrinkGlassCoupeShaped
+      - CustomDrinkJug
+      - FoodPlate
+      - FoodPlateSmall
+      - FoodPlatePlastic
+      - FoodPlateSmallPlastic
+      - FoodBowlBig
+      - FoodPlateTin
+      - FoodKebabSkewer
+      - TimerTrigger
+      - SignalTrigger
+      - VoiceTrigger
+      - Igniter
+      - ChemicalPayload
+      - FlashPayload
+      - ExplosivePayload
+      - RemoteSignallerAdvanced
+      - AnomalyLocatorEmpty
+      - AnomalyLocatorWideEmpty
+      - AnomalyScanner
+      - WeaponPistolCHIMP
+      - MopItem
+      - MopBucket
+      - Bucket
+      - WetFloorSign
+      - MegaSprayBottle
+      - SprayBottle
+      - TrashBag
+      - LightReplacerEmpty
+      - Mousetrap
+      - HoloprojectorEmpty
+      - AdvMopItem
+      - Plunger
+      - HandheldCrewMonitorEmpty
+      - HandheldHealthAnalyzerEmpty
+      - DiseaseSwab
+      - HandLabeler
+      - LightTube
+      - SodiumLightTube
+      - ExteriorLightTube
+      - LightBulb
+      - LedLightBulb
+      - Flare
+      - EmptyFlashlightLantern
+      - FireExtinguisher
+      - Matchbox
+      - SynthesizerInstrument
+      - NodeScanner
+      - AirTank
+      - ClothingShoesBootsMag
+      - HandheldStationMapEmpty
+      - ClothingHeadHatWelding
+      - CapacitorStockPart
+      - MatterBinStockPart
+      - MicroManipulatorStockPart
+      - PowerCellSmallPrinted
+      - PowerCellMediumPrinted
+      - PowerCageSmall
+      - PowerCageMedium
+      - MiningDrill
+      - Handcuffs
+      - Zipties
+      - CombatKnife
+      - ForensicPad
+      - HoloprojectorSecurityEmpty
+      - RiotShield
+      - TelescopicShield
+      - Flash
+      - Wirecutter
+      - Screwdriver
+      - Welder
+      - Wrench
+      - CableApcStack
+      - CableMVStack
+      - CableHVStack
+      - Crowbar
+      - Shovel
+      - Multitool
+      - NetworkConfigurator
+      - PowerDrill
+      - RCDEmpty
+      - RPDEmpty
+      - RCDAmmo
+      - HandHeldMassScannerEE
+      - HandheldGPSBasic
+      - trayScanner
+      - GasAnalyzer
+      - SprayPainter
+      - ClothingBeltUtility
+      - HolofanProjectorEmpty
+      - RPED
+      - JawsOfLife
+      - AccessConfigurator
+      - ModularReceiver
+      - ProximitySensor
+      - ConveyorBeltAssembly
+      - VehicleWheelchairFolded
+      - PairedChopsticks
+      - TargetHuman
+      - Fork
+      - Spoon
+      - RollingPin
+      - Jug
+      - RollerBedSpawnFolded
+      - WhiteCane
+      - Scalpel
+      - Retractor
+      - Cautery
+      - Drill
+      - Saw
+      - Hemostat
+      - BodyBagFolded
+      - Implanter
+      - DefibrillatorEmpty
+      - BoneGel
+
+#circuits
+
+- type: entity
+  id: CircuitImprinter
+  parent: BaseLatheLube
+  name: circuit imprinter
+  description: Prints circuit boards for machines.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/circuit_imprinter.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CircuitImprinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    idleState: icon
+    runningState: building
+  - type: RequireProjectileTarget
+
+#mechs
+
+- type: entity
+  id: ExosuitFabricator
+  parent: BaseLatheLube
+  name: exosuit fabricator
+  description: Creates parts for robotics and other mechanical needs
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/exosuit_fabricator.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: fab-load
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: fab-o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ExosuitFabricatorMachineCircuitboard
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: GuideHelp
+    guides:
+    - Robotics
+
+#biological
+
+- type: entity
+  id: Biofabricator
+  parent: BaseLatheLube
+  name: biofabricator
+  description: Produces animal cubes using biomass.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/biofabricator.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+      color: "#ffaa99"
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      color: "#ffaaaa"
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      color: "#ffaaaa"
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: BiofabricatorMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+
+#ammo
+
+- type: entity
+  id: AmmoTechFab
+  parent: BaseLatheLube
+  name: ammo techfab
+  description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
+  components:
+    - type: Sprite
+      sprite: Structures/Machines/techfab.rsi
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: ammo
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: AmmoTechFabCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+
+#medical
+
+- type: entity
+  id: MedicalTechFab
+  parent: BaseLatheLube
+  name: medical techfab
+  description: Prints equipment for use by the medbay.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: med
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+  - type: Machine
+    board: MedicalTechFabCircuitboard
+  - type: StealTarget
+    stealGroup: MedicalTechFabCircuitboard
+
+#uniform
+
+- type: entity
+  parent: BaseLatheLube
+  id: UniformPrinter
+  name: uniform printer
+  description: Prints new or replacement uniforms.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Structures/Machines/uniform_printer.rsi
+    snapCardinals: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: Machine
+    board: UniformPrinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/uniformprinter.ogg
+    idleState: icon
+    runningState: building
+
+#ore
+
+- type: entity
+  parent: BaseLatheLube
+  id: OreProcessor
+  name: ore processor
+  description: It produces sheets and ingots using ores.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/ore_processor.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: OreProcessorMachineCircuitboard
+  - type: MaterialStorage
+    ignoreColor: true
+    whitelist:
+      tags:
+      - Ore
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    defaultProductionAmount: 10
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
+    range: 0.5
+
+- type: entity
+  parent: OreProcessor
+  id: OreProcessorIndustrial
+  name: industrial ore processor
+  description: An ore processor specifically designed for mass-producing metals in industrial applications.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/ore_processor_industrial.rsi
+  - type: Machine
+    board: OreProcessorIndustrialMachineCircuitboard
+  - type: Lathe
+    materialUseMultiplier: 0.75
+    timeMultiplier: 0.5
+
+#scrap
+
+- type: entity
+  parent: BaseLatheLube
+  id: ScrapRefiner
+  name: SHI scrap upcycler
+  description: An automated refinery with scrap metal refinement patterns.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/sheetifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - RawMaterial
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+  - type: Machine
+    board: ScrapRefinerCircuitboard
+
+- type: entity
+  parent: ScrapRefiner
+  id: IndustrialScrapRefiner
+  name: Industrial SHI scrap upcycler
+  description: An automated refinery with scrap metal refinement patterns. Now employing factory protocols! Throw scrap at it!
+  components:
+  - type: Machine
+    board: IndustrialScrapRefinerCircuitboard
+  - type: Lathe
+    materialUseMultiplier: 0.75
+    timeMultiplier: 0.5
+
+#drugs
+
+- type: entity
+  parent: BaseLatheLube
+  id: DrugLathe
+  name: interdyne pharmaceutic fablathe
+  description: An automated fablathe with preloaded pharmaceutic patterns. Bears the Interdyne logo.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/drugifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - DrugComponent
+      - Sheet
+      - CraftMaterials
+      - Ingot
+      - RawMaterial
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: DrugLatheCircuitboard
+
+#microforge
+
+- type: entity
+  id: PristineMicroforge
+  parent: BaseLatheLube
+  name: pristine microforge
+  description: Used to print equipment discovered through techdisks, or researched.
+  components:
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - CraftMaterials
+      - Ingot
+      - ShipParts
+      - RawMaterial
+      - ShipParts
+  - type: Sprite
+    sprite: _Crescent/Structures/nanoforge.rsi
+    layers:
+    - state: fab-active
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: fab-idle
+    - state: fab-idle
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: fab-load
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: fab-o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: Machine
+    board: MicroforgeCircuitboard
+
+#boriatic fuel thing
+
+- type: entity
+  parent: BaseLatheLube
+  id: BoriaticRefiner
+  name: SHI boriatic composter
+  description: An automated refinery and fabricator that purifies various minerals into usable boriatic fuels.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/purifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+    staticRecipes:
+    - JugBoriaticFuelCraft
+  - type: Machine
+    board: BoriaticRefinerCircuitboard
+
+#ship parts
+
+- type: entity
+  parent: BaseLatheLube
+  id: ShipyardManufactorum
+  name: SHI shipyard manufactorum
+  description: An automated assembler, constructing vessel components out of minerals.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/shipfab.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Ingot
+      - Sheet
+      - Metal
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+    staticRecipes:
+    - ShipHull
+    - ShipElectronics
+    - ShipEngine
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: ShipyardManufactorumCircuitboard
+
+#organs
+
+- type: entity
+  parent: BaseLatheLube
+  id: OrganPrinter
+  name: IPM organic bioprinter
+  description: An automated fablathe with preloaded organic patterns. Bears the Interdyne logo.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/organfab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - OrganMaterial
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - OrganCrate
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: OrganPrinterCircuitboard
+
+#crates
+
+#imperial
+
+- type: entity
+  parent: BaseLatheLube
+  id: ImperialTradeGoodPrinter
+  name: kal surezai commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+      - RawMaterial
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - FabricsCrate
+    - WineCrate
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: ImperialTradeGoodPrinterCircuitboard
+
+#shi
+
+- type: entity
+  parent: BaseLatheLube
+  id: CorporateTradeGoodPrinter
+  name: shinohara commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: CorporateTradeGoodPrinterCircuitboard
+
+#saws
+
+- type: entity
+  parent: BaseLatheLube
+  id: SawsTradeGoodPrinter
+  name: shipfitters commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - Metal
+      - RawMaterial
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: SawsTradeGoodPrinterCircuitboard
+
+#crates end
+ 

@@ -150,7 +150,6 @@
     # Lathes
     - CircuitImprinterMachineCircuitboard
     - ExosuitFabricatorMachineCircuitboard
-    - ProtolatheMachineCircuitboard
     - AutolatheMachineCircuitboard
     - FlatpackerMachineCircuitboard
     # Machines
@@ -164,7 +163,5 @@
     chance: 0.9
     offset: 0.0
     rarePrototypes:
-    - AutolatheHyperConvectionMachineCircuitboard
-    - ProtolatheHyperConvectionMachineCircuitboard
     - ComputerIFFCircuitboard
     rareChance: 0.05

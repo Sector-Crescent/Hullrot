@@ -729,8 +729,6 @@
         - !type:MappingTemplatePrototype
           id: ComputerResearchAndDevelopment
         - !type:MappingTemplatePrototype
-          id: Protolathe
-        - !type:MappingTemplatePrototype
           id: Autolathe
         - !type:MappingTemplatePrototype
           id: CircuitImprinter
@@ -1064,8 +1062,6 @@
     - !type:MappingTemplatePrototype
       id: Armory
       children:
-        - !type:MappingTemplatePrototype
-          id: SecurityTechFab
         - !type:MappingTemplatePrototype
           id: SuitStorageSec
         - !type:MappingTemplatePrototype

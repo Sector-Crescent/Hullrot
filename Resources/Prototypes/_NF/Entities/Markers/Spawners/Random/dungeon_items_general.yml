@@ -253,7 +253,6 @@
   - type: RandomSpawner
     prototypes:
     - Autolathe
-    - Protolathe
     - CircuitImprinter
     - ExosuitFabricator
     - Biofabricator
@@ -265,8 +264,6 @@
     offset: 0.0
     rarePrototypes:
     - OreProcessorIndustrial
-    - AutolatheHyperConvection
-    - ProtolatheHyperConvection
     rareChance: 0.03
 
 - type: entity
@@ -449,7 +446,6 @@
     - SpawnDungeonLootCircuitBoardScience
     - SpawnDungeonLootCircuitBoardMed
     - AutolatheMachineCircuitboard
-    - ProtolatheMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
     - ArtifactAnalyzerMachineCircuitboard
     - ThermomachineFreezerMachineCircuitBoard

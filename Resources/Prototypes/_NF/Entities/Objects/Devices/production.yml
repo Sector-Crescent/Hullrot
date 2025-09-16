@@ -32,18 +32,6 @@
           DefaultPrototype: Beaker
           ExamineName: Glass Beaker
 
-# TechFab
-- type: entity
-  id: NfsdTechFabCircuitboard
-  parent: SecurityTechFabCircuitboard
-  name: nfsd techfab machine board
-  description: A machine printed circuit board for an nfsd techfab.
-  components:
-    - type: Sprite
-      state: supply
-    - type: MachineBoard
-      prototype: NfsdTechFab
-
 # Thrusters
 - type: entity
   id: ThrusterSecurityMachineCircuitboard
