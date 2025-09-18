@@ -82,6 +82,8 @@
       - AnomalyLocatorWideEmpty
       - AnomalyScanner
       - WeaponPistolCHIMP
+      - WeaponDisabler
+      - WeaponDisablerSMG
       - MopItem
       - MopBucket
       - Bucket
@@ -226,6 +228,8 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
+    staticRecipes:
+      - Zipties
   - type: GuideHelp
     guides:
     - Robotics
@@ -236,7 +240,7 @@
   id: Biofabricator
   parent: BaseLatheLube
   name: biofabricator
-  description: Produces animal cubes using biomass.
+  description: Produces various objects out of biomass.
   components:
   - type: Sprite
     sprite: Structures/Machines/biofabricator.rsi
@@ -259,6 +263,31 @@
   - type: Lathe
     idleState: icon
     runningState: building
+    staticRecipes:
+      - MonkeyCube
+      - KoboldCube
+      - CowCube
+      - GoatCube
+      - MothroachCube
+      - MouseCube
+      - CockroachCube
+      - SpaceCarpCube
+      - SpaceTickCube
+      - AbominationCube
+      - BioSynthHeart
+      - BioSynthLungs
+      - BioSynthLiver
+      - BioSynthEyes
+      - BioSynthLeftArm
+      - BioSynthLeftHand
+      - BioSynthRightArm
+      - BioSynthRightHand
+      - BioSynthLeftLeg
+      - BioSynthLeftFoot
+      - BioSynthRightLeg
+      - BioSynthRightFoot
+      - BioSynthHead
+      - MobSynthHuman
 
 #ammo
 
@@ -286,6 +315,53 @@
     - type: Lathe
       idleState: icon
       runningState: icon
+      staticRecipes:
+      - MagazineRifleDrum
+      - MagazineRifleDrumEmpty
+      - MagazineBoxRifle
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazineBoxPistol
+      - MagazineShotgun
+      - BoxLethalshot
+      - BoxLethalshot4g
+      - MagazineLightRifleBox
+      - MagazineBoxLightRifle
+      - MagazineRiflePan
+      - MagazineRiflePanEmpty
+      - MagazineBoxRifle
+      - MagazineMagnumSub
+      - MagazineMagnumSubMachineGunEmpty
+      - MagazineBoxMagnum
+      - MagazinePistolSubMachineGunHeavy
+      - MagazineCaselessRifle
+      - MagazineBoxCaselessRifle
+      - MagazinePistol6mmSmg
+      - MagazinePistol6mmSmgEmpty
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazineBoxLightRifle
+      - MagazinePistol
+      - MagazinePistolEmpty
+      - MagazineBoxPistol
+      - MagazineMagnumEmpty
+      - MagazineMagnum
+      - MagazineBoxMagnum
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineBoxRifle
+      - MagazineHeavyRifle
+      - MagazineBoxHeavyRifle
+      - MagazineAntiMateriel
+      - MagazineBoxAntiMateriel
+      - MagazinePistol6mm
+      - MagazinePistolCaselessRifle
+      - MagazinePistolSmartgun
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
+      - MagazineGrenadeEmpty
+      - CartridgeRocket
+      - GrenadeFrag
 
 #medical
 
@@ -361,11 +437,6 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
     board: OreProcessorMachineCircuitboard
-  - type: MaterialStorage
-    ignoreColor: true
-    whitelist:
-      tags:
-      - Ore
   - type: Lathe
     idleState: icon
     runningState: building
@@ -404,10 +475,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - RawMaterial
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing

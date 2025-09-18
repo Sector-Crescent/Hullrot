@@ -281,6 +281,13 @@
     Steel: 50
     
 - type: latheRecipe
+  id: ClothingEyesGlassesChemical
+  result: ClothingEyesGlassesChemical
+  materials:
+    Steel: 200
+    Plastic: 200
+    
+- type: latheRecipe
   id: TimerTrigger
   result: TimerTrigger
   materials:
@@ -358,6 +365,19 @@
   materials:
     Steel: 400
     Plastic: 400
+    
+- type: latheRecipe
+  id: WeaponDisabler
+  result: WeaponDisabler
+  materials:
+    Steel: 500
+ 
+- type: latheRecipe
+  id: WeaponDisablerSMG
+  result: WeaponDisablerSMG
+  materials:
+    Steel: 1500
+    Plastic: 500
     
 - type: latheRecipe
   id: MopItem
