@@ -384,13 +384,34 @@
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Lathe
-    idleState: icon
-    runningState: icon
-  - type: Machine
-    board: MedicalTechFabCircuitboard
-  - type: StealTarget
-    stealGroup: MedicalTechFabCircuitboard
+    - type: Machine
+      board: MedicalTechFabCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+      staticRecipes:
+        - Brutepack1
+        - Ointment1
+        - Gauze1
+        - Implanter
+        - Medkit
+        - MedkitBurn
+        - MedkitToxin
+        - MedkitO2
+        - MedkitBrute
+        - MedkitAdvanced
+        - MedkitRadiation
+        - MedkitCombat
+        - SyringeCase
+        - ParamedHypo
+        - CartridgeSaline
+        - CartridgeDermaline
+        - CartridgeEpinephrine
+        - CartridgeAtropine
+        - CartridgeBicaridine
+        - CartridgeEphedrine
+        - CartridgePuncturase
+        - CartridgeTirizene
 
 #uniform
 
