@@ -44,14 +44,6 @@ public sealed partial class HeatSeekingComponent : Component
     [DataField]
     public float Acceleration = 50f;
 
-
-
-    /// <summary>
-    /// What is the missiles initial speed in m/s?
-    /// </summary>
-    [DataField]
-    public float InitialSpeed = 30f;
-
     /// <summary>
     /// What is the missiles current speed in m/s?
     /// </summary>
@@ -83,46 +75,12 @@ public sealed partial class HeatSeekingComponent : Component
     public float TopSpeed = 50f;
 
     [DataField]
-    public float BoostAcceleration = 50f;
-
-    [DataField]
-    public float CruiseAcceleration = 10f;
-
-    [DataField]
-    public float RCSMultiplier = 0.5f; // Reaction Control System multiplier for x axis thrust
-
-    [DataField]
-    public SeekerState SeekerState = SeekerState.Idle; // Current state of the seeker
-
-    [DataField]
     public List<SeekerTargets> TargetList = new List<SeekerTargets>();
 
     [DataField]
-    public float RefreshRate = 0.25f; // How often the seeker updates its target in seconds
+    public float RefreshRate = 0.5f; // How often the seeker updates its target in seconds
 
     public float RefreshTicker;
-
-    public bool Thrusting;
-
-    [DataField]
-    public float ProportionalGain = 5f; // Proportional gain for the guidance algorithm
-
-    [DataField]
-    public float IntegralGain = 0f; // Integral gain for the guidance algorithm - Integral gain isn't needed since steady state error doesn't exist in our use case
-
-    [DataField]
-    public float DerivativeGain = 1f; // Derivative gain for the guidance algorithm
-
-    public Vector2 LastError; // Previous error for the guidance algorithm
-
-    public Vector2 Integral; // Previous integral for the guidance algorithm
-
-    public bool DerivativeInit = false; // Whether the derivative term has been initialized
-
-    [DataField]
-    public Vector2? TargetPos = null;
-
-    public bool PositionTracking = true; // Whether the seeker is currently tracking a target position
 }
 
 [Serializable, NetSerializable]
@@ -130,24 +88,6 @@ public enum GuidanceType
 {
     PredictiveGuidance = 1,
     PurePursuit = 2
-}
-
-[Serializable, NetSerializable]
-public enum SeekerState
-{
-    Idle = 1,
-    Boosting = 2,
-    Cruising = 3
-}
-
-[Serializable, NetSerializable]
-public enum RCSVisualState
-{
-    BaseLayer,
-    Forward,
-    Backward,
-    Left,
-    Right
 }
 
 [Serializable]
