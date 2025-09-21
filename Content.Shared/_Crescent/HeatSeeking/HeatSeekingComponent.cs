@@ -60,11 +60,15 @@ public sealed partial class HeatSeekingComponent : Component
 
     public Vector2 oldPosition;
 
-    // rework
-
+    /// <summary>
+    /// The delay before the missile starts seeking from launch in seconds.
+    /// </summary>
     [DataField]
-    public float StartDelay = 0.5f; // How long before the missile starts moving after being fired
+    public float StartDelay = 0.5f;
 
+    /// <summary>
+    /// The amount of time in seconds that the missile will seek for
+    /// </summary>
     [DataField]
     public float Fuel = 50f;
 
@@ -74,6 +78,9 @@ public sealed partial class HeatSeekingComponent : Component
     [DataField]
     public float TopSpeed = 50f;
 
+    /// <summary>
+    /// The list of targets visible to this missile sorted by their value as a target
+    /// </summary>
     [DataField]
     public List<SeekerTargets> TargetList = new List<SeekerTargets>();
 
