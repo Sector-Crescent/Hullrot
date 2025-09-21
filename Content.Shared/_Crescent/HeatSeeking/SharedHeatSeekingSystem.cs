@@ -34,15 +34,11 @@ public sealed class HeatSeekingSystem : EntitySystem
             else if (comp.Fuel > 0f)
             {
                 if (comp.Speed < comp.TopSpeed)
-                    comp.Speed = physics.LinearVelocity.Length() + comp.Acceleration * frameTime; 
+                    comp.Speed = physics.LinearVelocity.Length() + comp.Acceleration * frameTime;
                 _physics.SetLinearVelocity(uid, _transform.GetWorldRotation(xform).ToWorldVec().Normalized() * comp.Speed);
                 comp.Fuel -= frameTime;
             }
-            if (comp.RefreshTicker <= comp.RefreshRate)
-            {
-                comp.RefreshTicker += frameTime;
-                QuickRefresh(uid, comp, xform);
-            }
+            if (comp.RefreshTicker < comp.RefreshRate) { comp.RefreshTicker += frameTime; }
             else
             {
                 RefreshTargetList(uid, comp, xform);
@@ -105,45 +101,6 @@ public sealed class HeatSeekingSystem : EntitySystem
         }
         comp.TargetList = comp.TargetList.OrderByDescending(t => t.Weight).ToList(); // sort targets by weight
         comp.TargetEntity = comp.TargetList.FirstOrDefault()?.Target; // pick the highest weighted target
-    }
-
-    public void QuickRefresh(EntityUid uid, HeatSeekingComponent component, TransformComponent transform)
-    {
-        foreach (SeekerTargets target in component.TargetList)
-        {
-            var tXform = Transform(target.Target);
-
-            var angle = (
-                _transform.ToMapCoordinates(tXform.Coordinates).Position -
-                _transform.ToMapCoordinates(transform.Coordinates).Position
-            ).ToWorldAngle(); // current angle towards target
-            var distance = Vector2.Distance(
-                _transform.ToMapCoordinates(transform.Coordinates).Position,
-                _transform.ToMapCoordinates(tXform.Coordinates).Position
-            ); // current distance from target
-            if (angle > _transform.GetWorldRotation(transform) + component.FOV / 2 * Math.PI / 180f
-            || angle < _transform.GetWorldRotation(transform) - component.FOV / 2 * Math.PI / 180f) // if target is out of FOV, skip it.
-            {
-                component.TargetList.Remove(target);
-            }
-            if (distance > component.DefaultSeekingRange) // if target is out of range, skip it.
-            {
-                component.TargetList.Remove(target);
-            }
-            float dif = (float) Math.Abs(MathHelper.RadiansToDegrees((float) angle) - MathHelper.RadiansToDegrees((float) _transform.GetWorldRotation(transform)) % 360);
-            if (dif > 180)
-                dif = 360 - dif;
-            dif = MathHelper.DegreesToRadians(dif);
-            Angle angleOffset = angle - _transform.GetWorldRotation(transform);
-            float weight = distance / component.DefaultSeekingRange - dif; // higher weight the better
-            if (component.TargetEntity == target.Target)
-                weight += 5f;
-            if (TryComp<CanBeHeatTrackedComponent>(target.Target, out var tComp))
-                weight += tComp.HeatSignature;
-            target.Weight = weight;
-        }
-        component.TargetList = component.TargetList.OrderByDescending(t => t.Weight).ToList(); // sort targets by weight
-        component.TargetEntity = component.TargetList.FirstOrDefault()?.Target; // pick the highest weighted target
     }
 
 
