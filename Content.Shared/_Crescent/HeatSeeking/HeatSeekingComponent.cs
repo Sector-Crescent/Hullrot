@@ -54,23 +54,19 @@ public sealed partial class HeatSeekingComponent : Component
     /// What is the missiles field of view in degrees?
     /// </summary>
     [DataField]
-    public float FOV = 90f;
-
-    public float oldDistance;
-
-    public Vector2 oldPosition;
+    public float FieldOfView = 90f;
 
     /// <summary>
     /// The delay before the missile starts seeking from launch in seconds.
     /// </summary>
     [DataField]
-    public float StartDelay = 0.5f;
+    public float StartDelay = 0.15f;
 
     /// <summary>
     /// The amount of time in seconds that the missile will seek for
     /// </summary>
     [DataField]
-    public float Fuel = 50f;
+    public float Fuel = 120f;
 
     /// <summary>
     /// What is the missiles top speed in m/s?
