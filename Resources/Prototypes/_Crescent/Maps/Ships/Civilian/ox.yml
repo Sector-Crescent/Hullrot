@@ -1,0 +1,36 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Ox
+  name: Ox
+  description: |
+    An old pre-collapse Tugboat, capable of tugging ships larger than it is at relatively fast speeds.
+    MINIMUM CREW: 1x Pilot
+  price: 31000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/ox.yml
+
+- type: gameMap
+  id: Ox
+  mapName: 'Ox'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/ox.yml
+  minPlayers: 0
+  stations:
+    Ox:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'Ox {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-utility
+        - type: VesselDescription
+          description: The Ox is the dockhand's working ship.

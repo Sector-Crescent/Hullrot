@@ -1357,3 +1357,20 @@
     price: 18000
   - type: ShipVoucher
     ship: Scabrak
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherOx
+  name: 'Ox' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with the Ox, an ancient pre-collapse tugboat design.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1000
+  - type: ShipVoucher
+    ship: Ox
