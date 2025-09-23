@@ -1,0 +1,106 @@
+- type: latheRecipe
+  abstract: true
+  id: BaseClothingRecipe
+  result: 
+  materials:
+    Cloth: 200
+    
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleCap
+  result: ClothingNeckMantleCap
+
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleCE
+  result: ClothingNeckMantleCE
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleCMO
+  result: ClothingNeckMantleCMO
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleHOP
+  result: ClothingNeckMantleHOP
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleHOS
+  result: ClothingNeckMantleHOS
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleRD
+  result: ClothingNeckMantleRD
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckMantleQM
+  result: ClothingNeckMantleQM
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckTieRed
+  result: ClothingNeckTieRed
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckTieDet
+  result: ClothingNeckTieDet
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedGreen
+  result: ClothingNeckScarfStripedGreen
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedBlue
+  result: ClothingNeckScarfStripedBlue
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedRed
+  result: ClothingNeckScarfStripedRed
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedBrown
+  result: ClothingNeckScarfStripedBrown
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedLightBlue
+  result: ClothingNeckScarfStripedLightBlue
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedOrange
+  result: ClothingNeckScarfStripedOrange
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedBlack
+  result: ClothingNeckScarfStripedBlack
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingNeckScarfStripedPurple
+  result: ClothingNeckScarfStripedPurple
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingHandsGlovesLatex
+  result: ClothingHandsGlovesLatex
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingHandsGlovesNitrile
+  result: ClothingHandsGlovesNitrile
+  
+- type: latheRecipe
+  parent: BaseClothingRecipe
+  id: ClothingMaskSterile
+  result: ClothingMaskSterile

@@ -204,6 +204,76 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: building
+    staticRecipes:
+      - FirelockElectronics  
+      - DoorElectronics  
+      - AirAlarmElectronics  
+      - FireAlarmElectronics  
+      - SignalTimerElectronics  
+      - APCElectronics  
+      - SubstationMachineCircuitboard  
+      - WallmountSubstationElectronics  
+      - SMESMachineCircuitboard  
+      - WallmountGeneratorElectronics  
+      - SolarTrackerElectronics  
+      - SolarControlComputerCircuitboard  
+      - PowerComputerCircuitboard  
+      - AlertsComputerCircuitboard  
+      - MicrowaveMachineCircuitboard  
+      - SurveillanceCameraRouterCircuitboard  
+      - SurveillanceCameraWirelessRouterCircuitboard  
+      - SurveillanceWirelessCameraAnchoredCircuitboard  
+      - SurveillanceWirelessCameraMovableCircuitboard  
+      - SurveillanceCameraMonitorCircuitboard  
+      - SurveillanceWirelessCameraMonitorCircuitboard  
+      - ComputerTelevisionCircuitboard  
+      - TelecomServerCircuitboard  
+      - JukeboxCircuitBoard  
+      - DeepFryerMachineCircuitboard  
+      - CrewMonitoringComputerCircuitboard  
+      - ReverseEngineeringMachineCircuitboard  
+      - CellRechargerCircuitboard  
+      - BorgChargerCircuitboard  
+      - WeaponCapacitorRechargerCircuitboard  
+      - TurboItemRechargerCircuitboard  
+      - CloningPodMachineCircuitboard  
+      - ThermomachineFreezerMachineCircuitBoard  
+      - CondenserMachineCircuitBoard  
+      - PortableScrubberMachineCircuitBoard  
+      - SpaceHeaterMachineCircuitBoard  
+      - MedicalScannerMachineCircuitboard  
+      - CryoPodMachineCircuitboard  
+      - ChemMasterMachineCircuitboard  
+      - ChemDispenserMachineCircuitboard  
+      - BiomassReclaimerMachineCircuitboard  
+      - BiofabricatorMachineCircuitboard  
+      - HydroponicsTrayMachineCircuitboard  
+      - AutolatheMachineCircuitboard  
+      - CircuitImprinterMachineCircuitboard  
+      - ExosuitFabricatorMachineCircuitboard  
+      - UniformPrinterMachineCircuitboard  
+      - ArtifactAnalyzerMachineCircuitboard  
+      - ArtifactCrusherMachineCircuitboard  
+      - AnomalyVesselCircuitboard  
+      - AnomalySynchronizerCircuitboard  
+      - APECircuitboard  
+      - ReagentGrinderMachineCircuitboard  
+      - HotplateMachineCircuitboard  
+      - AnalysisComputerCircuitboard  
+      - TechDiskComputerCircuitboard  
+      - ShuttleConsoleCircuitboard  
+      - RadarConsoleCircuitboard  
+      - StasisBedMachineCircuitboard  
+      - ElectrolysisUnitMachineCircuitboard  
+      - CentrifugeMachineCircuitboard  
+      - OreProcessorMachineCircuitboard  
+      - CloningConsoleComputerCircuitboard  
+      - FlatpackerMachineCircuitboard  
+      - EmitterCircuitboard  
+      - GasRecyclerMachineCircuitboard  
+      - SeedExtractorMachineCircuitboard  
+      - MiniGravityGeneratorCircuitboard  
+      - PowerCageRechargerCircuitboard  
   - type: RequireProjectileTarget
 
 #mechs
@@ -229,7 +299,31 @@
     idleState: fab-idle
     runningState: fab-active
     staticRecipes:
-      - Zipties
+      - MMI
+      - ReverseMMI
+      - TorsoIPC
+      - LeftArmIPC
+      - RightArmIPC
+      - LeftHandIPC
+      - RightHandIPC
+      - LeftLegIPC
+      - RightLegIPC
+      - LeftFootIPC
+      - RightFootIPC
+      - HeadIPC
+      - OrganIPCEyes
+      - OrganIPCPump
+      - BasicCyberneticEyes
+      - MedicalCyberneticEyes
+      - SecurityCyberneticEyes
+      - RipleyHarness
+      - RipleyLArm
+      - RipleyRArm
+      - RipleyLLeg
+      - RipleyRLeg
+      - RipleyCentralElectronics
+      - RipleyPeripheralsElectronics  
+      - MechEquipmentGrabber
   - type: GuideHelp
     guides:
     - Robotics
@@ -435,6 +529,27 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
+    staticRecipes:
+      - ClothingNeckMantleCap
+      - ClothingNeckMantleCE
+      - ClothingNeckMantleCMO
+      - ClothingNeckMantleHOP
+      - ClothingNeckMantleHOS
+      - ClothingNeckMantleRD
+      - ClothingNeckMantleQM
+      - ClothingNeckTieRed
+      - ClothingNeckTieDet
+      - ClothingNeckScarfStripedGreen
+      - ClothingNeckScarfStripedBlue
+      - ClothingNeckScarfStripedRed
+      - ClothingNeckScarfStripedBrown
+      - ClothingNeckScarfStripedLightBlue
+      - ClothingNeckScarfStripedOrange
+      - ClothingNeckScarfStripedBlack
+      - ClothingNeckScarfStripedPurple
+      - ClothingHandsGlovesLatex
+      - ClothingHandsGlovesNitrile
+      - ClothingMaskSterile
 
 #ore
 
