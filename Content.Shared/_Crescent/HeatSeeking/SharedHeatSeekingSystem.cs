@@ -71,16 +71,16 @@ public sealed class HeatSeekingSystem : EntitySystem
                 dif = 360 - dif;
             dif = MathHelper.DegreesToRadians(dif);
 
-            if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView)) // if target is out of FOV, skip it.
+            if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView))
             {
                 continue;
             }
-            if (distance > comp.DefaultSeekingRange) // if target is out of range, skip it.
+            if (distance > comp.DefaultSeekingRange)
             {
                 continue;
             }
 
-            if (TryComp<ProjectileComponent>(uid, out var projectile) && TryComp<TransformComponent>(projectile.Shooter, out var shooterTransform) && shooterTransform.GridUid.HasValue) // if target is on same grid as shooter, skip it.
+            if (TryComp<ProjectileComponent>(uid, out var projectile) && TryComp<TransformComponent>(projectile.Shooter, out var shooterTransform) && shooterTransform.GridUid.HasValue)
             {
                 if (Transform(tUid).GridUid == shooterTransform.GridUid)
                 {
@@ -88,13 +88,13 @@ public sealed class HeatSeekingSystem : EntitySystem
                 }
             }
             Angle angleOffset = angle - _transform.GetWorldRotation(xform);
-            float weight = distance / comp.DefaultSeekingRange - dif; // higher weight the better
+            float weight = distance / comp.DefaultSeekingRange - dif / 3;
             if (comp.TargetEntity == tUid)
                 weight += 5f;
             weight += tComp.HeatSignature;
-            comp.TargetList.Add(new SeekerTargets() { Target = tUid, Weight = weight }); // add target to list with weight
+            comp.TargetList.Add(new SeekerTargets() { Target = tUid, Weight = weight });
         }
-        comp.TargetList = comp.TargetList.OrderByDescending(t => t.Weight).ToList(); // sort targets by weight
+        comp.TargetList = comp.TargetList.OrderByDescending(t => t.Weight).ToList();
         comp.TargetEntity = comp.TargetList.FirstOrDefault()?.Target; // pick the highest weighted target
     }
 
@@ -102,64 +102,64 @@ public sealed class HeatSeekingSystem : EntitySystem
     {
         if (!comp.TargetEntity.HasValue)
             return;
+        if (!TryComp<PhysicsComponent>(uid, out var physics))
+            return;
         if (!TryComp<PhysicsComponent>(comp.TargetEntity.Value, out var targetPhysics)) // if target has no physics, skip it.
         {
             comp.TargetEntity = null;
             return;
         }
-
-        var entXform = Transform(comp.TargetEntity.Value); // get target transform
+        var entXform = Transform(comp.TargetEntity.Value);
         var distance = Vector2.Distance(
             _transform.ToMapCoordinates(xform.Coordinates).Position,
             _transform.ToMapCoordinates(entXform.Coordinates).Position
-        ); // current distance from target
+        );
         var angle = (
             _transform.ToMapCoordinates(entXform.Coordinates).Position -
             _transform.ToMapCoordinates(xform.Coordinates).Position
-        ).ToWorldAngle(); // current angle towards target
+        ).ToWorldAngle();
 
         float dif = (float) Math.Abs(MathHelper.RadiansToDegrees((float) angle) - MathHelper.RadiansToDegrees((float) _transform.GetWorldRotation(xform)) % 360);
         if (dif > 180)
             dif = 360 - dif;
         dif = MathHelper.DegreesToRadians(dif);
 
-        if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView)) // if target is out of FOV, skip it.
+        if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView))
         {
             comp.TargetEntity = null;
             return;
         }
-        Vector2 targetVelocity = targetPhysics.LinearVelocity; // get target velocity
-        float timeToImpact = distance / comp.Speed; // time it will take for the missile to reach the target
-        if (timeToImpact < 0.1) { timeToImpact = 0.1f; } // prevent negative time to impact, that messes up guidance
-        Vector2 predictedPosition = _transform.ToMapCoordinates(entXform.Coordinates).Position + targetVelocity * timeToImpact; // predict target position at impact time
+        float timeToImpact = distance / (targetPhysics.LinearVelocity - physics.LinearVelocity).Length(); // if target is moving away this will still be positive but ngl its a complete nothingburger
+        if (timeToImpact < 0.1f) { timeToImpact = 0.1f; } // if this goes negative it can make the missile point backwards
+        Vector2 predictedPosition = _transform.ToMapCoordinates(entXform.Coordinates).Position + targetPhysics.LinearVelocity * timeToImpact;
 
-        Angle targetAngle = (predictedPosition - _transform.ToMapCoordinates(xform.Coordinates).Position).ToWorldAngle(); // the angle the missile will try to face
-        _rotate.TryRotateTo(uid, targetAngle, frameTime, comp.WeaponArc, comp.RotationSpeed?.Theta ?? double.MaxValue, xform); // rotate towards target angle
+        Angle targetAngle = (predictedPosition - _transform.ToMapCoordinates(xform.Coordinates).Position).ToWorldAngle();
+        _rotate.TryRotateTo(uid, targetAngle, frameTime, comp.WeaponArc, comp.RotationSpeed?.Theta ?? double.MaxValue, xform);
     }
 
     public void PurePursuit(EntityUid uid, HeatSeekingComponent comp, TransformComponent xform, float frameTime) // Pure Pursuit, points directly at target.
     {
         if (comp.TargetEntity.HasValue)
         {
-            var entXform = Transform(comp.TargetEntity.Value); // get target transform
+            var entXform = Transform(comp.TargetEntity.Value);
 
             var angle = (
                 _transform.ToMapCoordinates(entXform.Coordinates).Position -
                 _transform.ToMapCoordinates(xform.Coordinates).Position
-            ).ToWorldAngle(); // current angle towards target
+            ).ToWorldAngle();
 
             float dif = (float) Math.Abs(MathHelper.RadiansToDegrees((float) angle) - MathHelper.RadiansToDegrees((float) _transform.GetWorldRotation(xform)) % 360);
             if (dif > 180)
                 dif = 360 - dif;
             dif = MathHelper.DegreesToRadians(dif);
 
-            if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView)) // if target is out of FOV, skip it.
+            if (dif >= MathHelper.DegreesToRadians(comp.FieldOfView))
             {
                 comp.TargetEntity = null;
                 return;
             }
 
-            _rotate.TryRotateTo(uid, angle, frameTime, comp.WeaponArc, comp.RotationSpeed?.Theta ?? double.MaxValue, xform); // rotate towards target angle
+            _rotate.TryRotateTo(uid, angle, frameTime, comp.WeaponArc, comp.RotationSpeed?.Theta ?? double.MaxValue, xform);
         }
     }
 }
