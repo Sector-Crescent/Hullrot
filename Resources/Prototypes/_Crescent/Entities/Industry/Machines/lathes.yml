@@ -480,32 +480,32 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - type: Machine
       board: MedicalTechFabCircuitboard
-    - type: Lathe
-      idleState: icon
-      runningState: icon
-      staticRecipes:
-        - Brutepack1
-        - Ointment1
-        - Gauze1
-        - Implanter
-        - Medkit
-        - MedkitBurn
-        - MedkitToxin
-        - MedkitO2
-        - MedkitBrute
-        - MedkitAdvanced
-        - MedkitRadiation
-        - MedkitCombat
-        - SyringeCase
-        - ParamedHypo
-        - CartridgeSaline
-        - CartridgeDermaline
-        - CartridgeEpinephrine
-        - CartridgeAtropine
-        - CartridgeBicaridine
-        - CartridgeEphedrine
-        - CartridgePuncturase
-        - CartridgeTirizene
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - Brutepack1
+      - Ointment1
+      - Gauze1
+      - Implanter
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
+      - SyringeCase
+      - ParamedHypo
+      - CartridgeSaline
+      - CartridgeDermaline
+      - CartridgeEpinephrine
+      - CartridgeAtropine
+      - CartridgeBicaridine
+      - CartridgeEphedrine
+      - CartridgePuncturase
+      - CartridgeTirizene
 
 #uniform
 
@@ -577,6 +577,15 @@
     idleState: icon
     runningState: building
     defaultProductionAmount: 10
+    staticRecipes:
+      - SheetSteel1
+      - IngotCopper1
+      - SheetGlass1
+      - SheetPlasma1
+      - SheetUranium1
+      - IngotGold1
+      - IngotSilver1
+      - IngotTungsten1
   - type: MaterialStorageMagnetPickup
     magnetEnabled: True
     range: 0.5
@@ -656,6 +665,57 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
+    staticRecipes:
+    #MEDICAL TECHFAB COPYPASTE, KEEP SYNCED
+      - Brutepack1
+      - Ointment1
+      - Gauze1
+      - Implanter
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
+      - SyringeCase
+      - ParamedHypo
+      - CartridgeSaline
+      - CartridgeDermaline
+      - CartridgeEpinephrine
+      - CartridgeAtropine
+      - CartridgeBicaridine
+      - CartridgeEphedrine
+      - CartridgePuncturase
+      - CartridgeTirizene
+     #MEDICAL TECHFAB COPYPASTE END
+     #BIOFABRICATOR COPYPASTE, KEEP SYNCED
+      - MonkeyCube
+      - KoboldCube
+      - CowCube
+      - GoatCube
+      - MothroachCube
+      - MouseCube
+      - CockroachCube
+      - SpaceCarpCube
+      - SpaceTickCube
+      - AbominationCube
+      - BioSynthHeart
+      - BioSynthLungs
+      - BioSynthLiver
+      - BioSynthEyes
+      - BioSynthLeftArm
+      - BioSynthLeftHand
+      - BioSynthRightArm
+      - BioSynthRightHand
+      - BioSynthLeftLeg
+      - BioSynthLeftFoot
+      - BioSynthRightLeg
+      - BioSynthRightFoot
+      - BioSynthHead
+      - MobSynthHuman
+      #BIOFABRICATOR COPYPASTE END
   - type: Anchorable
     flags:
     - Anchorable
