@@ -550,6 +550,15 @@
       - ClothingHandsGlovesLatex
       - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
+      - FloorCarpetItemRed
+      - FloorCarpetItemBlack
+      - FloorCarpetItemPink
+      - FloorCarpetItemBlue
+      - FloorCarpetItemGreen
+      - FloorCarpetItemOrange
+      - FloorCarpetItemPurple
+      - FloorCarpetItemCyan
+      - FloorCarpetItemWhite
 
 #ore
 
@@ -654,14 +663,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - DrugComponent
-      - Sheet
-      - CraftMaterials
-      - Ingot
-      - RawMaterial
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
@@ -716,6 +717,12 @@
       - BioSynthHead
       - MobSynthHuman
       #BIOFABRICATOR COPYPASTE END
+      - CrashAutoinjector
+      - ExileAutoinjector
+      - KaiserAutoinjector
+      - MechaniteAutoinjector
+      - BloodeyeAutoinjector
+      - TradeGoodDrugs
   - type: Anchorable
     flags:
     - Anchorable
@@ -730,15 +737,6 @@
   name: pristine microforge
   description: Used to print equipment discovered through techdisks, or researched.
   components:
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - CraftMaterials
-      - Ingot
-      - ShipParts
-      - RawMaterial
-      - ShipParts
   - type: Sprite
     sprite: _Crescent/Structures/nanoforge.rsi
     layers:
@@ -755,6 +753,8 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
+    dynamicRecipes:
+      - Zipties
   - type: Machine
     board: MicroforgeCircuitboard
 
@@ -774,11 +774,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - Metal
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
@@ -803,12 +798,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Ingot
-      - Sheet
-      - Metal
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
@@ -838,10 +827,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - OrganMaterial
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
@@ -871,12 +856,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - Metal
-      - RawMaterial
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
@@ -905,11 +884,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - Metal
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
@@ -935,12 +909,6 @@
     - state: buttons_on
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - Metal
-      - RawMaterial
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active

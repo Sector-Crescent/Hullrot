@@ -20,7 +20,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      ExoticProteins: 500
+      ExoticProteins: 100
   - type: Contraband
     value: 1
 
@@ -43,7 +43,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Garbage: 500
+      Garbage: 100
 
 - type: entity
   parent: OreBase
@@ -64,7 +64,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      RefinedGarbage: 500
+      RefinedGarbage: 100
 
 - type: entity
   parent: OreBase
@@ -84,7 +84,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      PlasmaIsotope: 500
+      PlasmaIsotope: 100
 
 - type: entity
   parent: OreBase
@@ -104,7 +104,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Mechanites: 500
+      Mechanites: 100
 
 - type: entity
   parent: OreBase
@@ -124,7 +124,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Galine: 500
+      Galine: 100
 
 - type: entity
   parent: OreBase
@@ -144,4 +144,4 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      DeactivatedPhoron: 500
+      DeactivatedPhoron: 100

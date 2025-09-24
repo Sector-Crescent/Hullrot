@@ -20,7 +20,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      ScrapLowGrade: 500
+      ScrapLowGrade: 100
 
 - type: entity
   parent: OreBase
@@ -66,7 +66,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      ScrapCircuit: 500
+      ScrapCircuit: 100
 
 - type: entity
   parent: OreBase
@@ -86,7 +86,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      ScrapPlasma: 500
+      ScrapPlasma: 100
   - type: Currency
     price:
       ScrapSAW: 0.5
@@ -109,7 +109,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      ScrapUranium: 500
+      ScrapUranium: 100
   - type: Currency
     price:
       ScrapSAW: 0.5
@@ -225,7 +225,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      RefinedScrapSteel: 500
+      RefinedScrapSteel: 100
 
 - type: entity
   parent: OreBase
@@ -245,4 +245,4 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      RefinedScrapTitanium: 500
+      RefinedScrapTitanium: 100
