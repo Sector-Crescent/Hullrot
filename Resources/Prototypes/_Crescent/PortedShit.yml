@@ -222,6 +222,23 @@
 
 
 - type: entity
+  id: MagazinePistolHeavy
+  name: pistol magazine (11mm PSTF auto)
+  parent: BaseMagazinePistol
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 15
+    proto: CartridgeHeavyPistol
+    whitelist:
+      tags:
+        - CartridgeHeavyPistol
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Tag
+    tags:
+      - MagazineHeavyPistol
+
+- type: entity
   id: MagazinePistolSubMachineGunHeavy
   name: SMG magazine (11mm PSTF auto)
   parent: BaseMagazinePistolSubMachineGun
