@@ -1,0 +1,36 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Ladybug
+  name: ICM Ladybug
+  description: |
+    The ICM Ladybug is the combined Mining/Salvage module of the ICM Kuto. It's equipped with hand-mining tools, two void bays, and plenty of cargo space for your harvested haul. 
+    MINIMUM CREW: 1x Miner/Salvager
+  price: 16000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/ladybug.yml
+
+- type: gameMap
+  id: Ladybug
+  mapName: 'ICM Ladybug'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/ladybug.yml
+  minPlayers: 0
+  stations:
+    Ladybug:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'ICM Ladybug {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
+        - type: VesselDescription
+          description: The Ladybug is a quaint little mining module. Hope you remember to pack extra oxygen.

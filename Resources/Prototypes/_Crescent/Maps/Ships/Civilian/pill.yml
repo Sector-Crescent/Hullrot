@@ -1,0 +1,36 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Pill
+  name: ICM Pill
+  description: |
+    The ICM Pill is the ICM Kuto's medical module, it's equipped with various different medicines, plus a surgery bay. It also includes a small paramedic rescue point for any medical extractions. 
+    MINIMUM CREW: 1x Medical Personel
+  price: 28000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/pill.yml
+
+- type: gameMap
+  id: Pill
+  mapName: 'ICM Pill'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/pill.yml
+  minPlayers: 0
+  stations:
+    Pill:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'ICM Pill {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-medical
+        - type: VesselDescription
+          description: The Pill is an extremely cheap medical suite. Should cover most injuries.

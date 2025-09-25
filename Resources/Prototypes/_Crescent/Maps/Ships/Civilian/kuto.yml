@@ -1,0 +1,37 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Kuto
+  name: ICM Kuto
+  description: |
+    An ICM design, salvaged from the depths of the hadal fog, the Kuto is a modular tugship, capable of manufacturing various modules from it's corrupted shipforge. It is essentially a tugboat for these immobile modules. 
+    MODULES: Cargo, Medical, Salvage/Mining
+    MINIMUM CREW: 1x Captain, 1x Crew
+  price: 25000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/kuto.yml
+
+- type: gameMap
+  id: Kuto
+  mapName: 'ICM Kuto'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/kuto.yml
+  minPlayers: 0
+  stations:
+    Kuto:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'ICM Kuto {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-utility
+        - type: VesselDescription
+          description: Essentially a modified tugboat, the kuto is a extremely versatile vessel to fit any job.

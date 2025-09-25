@@ -1,0 +1,36 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Mule
+  name: ICM Mule
+  description: |
+    The ICM Mule is the ICM Kuto's cargo module, capable of holding an immense amount of cargo in it's hold. It is immobile and require the ICM Kuto to haul it to it's destination. 
+    MINIMUM CREW: 1x Cargo Worker
+  price: 22000
+  category: Medium
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/mule.yml
+
+- type: gameMap
+  id: Mule
+  mapName: 'ICM Mule'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/mule.yml
+  minPlayers: 0
+  stations:
+    Mule:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'ICM Mule {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-civilian
+        - type: VesselDescription
+          description: It is just a cargo container that you can lug around. Careful not to get it stolen by pirates.

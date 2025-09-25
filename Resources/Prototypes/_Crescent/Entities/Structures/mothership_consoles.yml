@@ -240,3 +240,14 @@
   - type: ShipyardListing
     shuttles:
     - Wasp
+
+- type: entity
+  id: Kuto MothershipComputer
+  parent: BaseMothershipComputer
+  name: kuto internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Ladybug
+    - Mule
+    - Pill
