@@ -1,5 +1,6 @@
 
 # RIFLE AMMUNITIONS
+
 - type: latheRecipe
   id: MagazineBoxAntiMateriel
   result: MagazineBoxAntiMateriel
@@ -124,6 +125,15 @@
     Steel: 400
 
 # SMALL ARMS AMMUNITIONS
+- type: latheRecipe
+  id: SpeedLoader27mmAutocannonHE
+  result: SpeedLoader27mmAutocannonHE
+  completetime: 1
+  materials:
+    Steel: 2500
+    Uranium: 1000
+    Plastic: 1000
+
 - type: latheRecipe
   id: SpeedLoader127x99
   result: SpeedLoader127x99
