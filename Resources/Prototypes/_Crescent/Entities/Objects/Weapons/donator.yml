@@ -209,11 +209,11 @@
   name: CDT C-8X Kingpin 27mmR
   parent: BaseItem
   id: WeaponSpecialKingpin
-  description: A large, unwieldly and too heavy to hold with 1 hand 27mmmR autocannon what more could you ask not to have. has a toggle lock just like the P05 Brenner, Reloaded using 27mmR stripper clips or loose rounds.
+  description: A heavy, unwieldly and too big to put in a bag what more could you ask not to have. has a toggle lock just like the P05 Brenner, Reloaded using 27mmR stripper clips or loose rounds.
   components:
   - type: Item
     sprite: _Crescent/Objects/Weapons/Guns/kingpin.rsi
-    size: Massive
+    size: Ginormous
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/kingpin.rsi
     layers:
@@ -242,7 +242,6 @@
     whitelist:
       tags:
       - 27mmAutocannon
-      - SpeedLoader27mmAutocannon
   - type: AmmoCounter
   - type: MagazineVisuals
     magState: mag
@@ -253,6 +252,64 @@
   - type: StaticPrice
     price: 5000
   - type: Appearance
+  - type: Construction
+    graph: C8XAutocannonGraph
+    node: C8XAutocannon
+
+- type: construction
+  name: C-8X 27mmR autocannon
+  id: C8XAutocannonCraft
+  graph: C8XAutocannonGraph
+  startNode: start
+  targetNode: C8XAutocannon
+  category: construction-category-tools
+  description: "A handcrafted 27mm autocannon."
+  icon: { sprite: _Crescent/Objects/Weapons/Guns/kingpin.rsi, state: icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: C8XAutocannonGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+      - to: C8XAutocannon
+        steps:
+        - tag: C8XAutocannonPartBarrel
+          icon:
+            sprite: _Crescent/Objects/Misc/gun_parts/barrel.rsi
+            state: icon
+          name: C-8X barrel
+          doAfter: 2
+        - tag: C8XAutocannonPartMisc
+          icon:
+            sprite: _Crescent/Objects/Misc/gun_parts/misc.rsi
+            state: icon
+          name: C-8X miscellaneous parts
+          doAfter: 2
+        - tag: C8XAutocannonPartReceiver
+          icon:
+            sprite: _Crescent/Objects/Misc/gun_parts/reicever.rsi
+            state: icon
+          name: C-8X receiver
+          doAfter: 2
+        - tag: C8XAutocannonPartBlueprint
+          icon:
+            sprite: _Crescent/Objects/Misc/gun_parts/blueprint.rsi
+            state: icon
+          name: C-8X blueprint
+          doAfter: 2
+        - material: AdvancedMechatronics
+          amount: 15
+          doAfter: 2
+        - material: Plastic
+          amount: 5
+          doAfter: 2
+        - material: Steel
+          amount: 10
+          doAfter: 2
+    - node: C8XAutocannon
+      entity: WeaponSpecialKingpin
 
 - type: entity
   id: CaseKingpin

@@ -1,4 +1,54 @@
 - type: entity
+  name: CDT C-54 Compakt 5.56x45mm
+  id: WeaponLightMachineGunCompakt
+  parent: BaseWeaponLightMachineGun
+  description: A compact LMG designed sacraficing damage for size. Made by Cyberdawn for Cyberdawn.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/compakt.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleBox
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBox
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: Item
+    shape:
+    - 0,0,4,2
+  - type: Gun
+    damageModifier: 0.85
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    fireRate: 7.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/lmg_2/lmg_gunshot_1.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
   name: BaseWeaponLightMachineGunConscript
   parent: BaseItem
   id: BaseWeaponLightMachineGunConscript

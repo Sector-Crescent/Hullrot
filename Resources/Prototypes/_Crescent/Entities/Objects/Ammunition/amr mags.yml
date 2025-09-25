@@ -1,7 +1,7 @@
 #---------- 15mm Railgun (empty) ----------
 - type: entity
   id: BaseMagazineAntiMateriel
-  name: "magazine (15.2x169mm)"
+  name: "6-round magazine (15.2x169mm)"
   parent: BaseItem
   abstract: true
   components:
@@ -32,11 +32,10 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-
-#---------- 15mm Railgun (APFSDS) ----------  
+ 
 - type: entity
   id: MagazineAntiMateriel
-  name: "magazine (15.2x169mm)"
+  name: "6-round magazine (15.2x169mm)"
   parent: BaseMagazineAntiMateriel
   components:
   - type: BallisticAmmoProvider

@@ -1,4 +1,52 @@
 - type: entity
+  name: CDT C-35S Ansem 11mm
+  parent: BaseWeaponPistol
+  id: WeaponPistolAnsem
+  description: A fancy 11mm auto pistol with elongated iron sights and a supressor. Made by Cyberdawn for Cyberdawn.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/ansem.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    shape:
+    - 0,0,2,0
+    - 0,1,0,1
+  - type: Gun
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_2.ogg
+      params:
+        volume: -10
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolHeavy
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyPistol
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: StaticPrice
+    price: 250
+
+- type: entity
   name: SHI M038s Liquidator 12g
   parent: BaseItem
   id: WeaponPistolLiquidator

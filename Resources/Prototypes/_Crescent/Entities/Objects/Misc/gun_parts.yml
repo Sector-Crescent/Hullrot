@@ -16,12 +16,13 @@
   - type: Tag
     tags:
     - GunParts
+    - C8XAutocannonPartBarrel
 
 - type: entity
   id: C8XAutocannonPartMisc
   parent: BaseItem
   name: C-8X miscellaneous parts
-  description: Miscellaneous parts for a 27mm autocannon.
+  description: Miscellaneous parts such as grips, charging handle, stock padding and the magazine for a 27mm autocannon.
   suffix: DO NOT MAP OR SPAWN
   components:
   - type: Item
@@ -35,6 +36,7 @@
   - type: Tag
     tags:
     - GunParts
+    - C8XAutocannonPartMisc
 
 - type: entity
   id: C8XAutocannonPartReceiver
@@ -54,6 +56,7 @@
   - type: Tag
     tags:
     - GunParts
+    - C8XAutocannonPartReceiver
 
 - type: entity
   id: C8XAutocannonPartBlueprint
@@ -73,3 +76,4 @@
   - type: Tag
     tags:
     - GunParts
+    - C8XAutocannonPartBlueprint

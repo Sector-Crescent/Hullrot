@@ -1,7 +1,7 @@
 #---------- 15mm Railgun (empty) ----------
 - type: entity
   id: BaseMagazineRailgun15mm
-  name: "magazine (15mm)"
+  name: "4-round magazine (15mm)"
   parent: BaseItem
   abstract: true
   components:
@@ -36,7 +36,7 @@
 #---------- 15mm Railgun (APFSDS) ----------  
 - type: entity
   id: MagazineRailgun15mmAP
-  name: "box magazine (15mm APFSDS)"
+  name: "4-round magazine (15mm APFSDS)"
   parent: BaseMagazineRailgun15mm
   components:
   - type: BallisticAmmoProvider
@@ -45,7 +45,7 @@
 #---------- 15mm Railgun (APFSDS-DU) ----------  
 - type: entity
   id: MagazineRailgun15mmDU
-  name: "box magazine (15mm APFSDS-DU)"
+  name: "4-round magazine (15mm APFSDS-DU)"
   parent: BaseMagazineRailgun15mm
   components:
   - type: BallisticAmmoProvider

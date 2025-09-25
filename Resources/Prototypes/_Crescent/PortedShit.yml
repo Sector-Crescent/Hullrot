@@ -223,7 +223,7 @@
 
 - type: entity
   id: MagazinePistolHeavy
-  name: pistol magazine (11mm PSTF auto)
+  name: 15-round pistol magazine (11mm PSTF auto)
   parent: BaseMagazinePistol
   components:
   - type: BallisticAmmoProvider
@@ -240,7 +240,7 @@
 
 - type: entity
   id: MagazinePistolSubMachineGunHeavy
-  name: SMG magazine (11mm PSTF auto)
+  name: 25-round SMG magazine (11mm PSTF auto)
   parent: BaseMagazinePistolSubMachineGun
   components:
   - type: BallisticAmmoProvider
@@ -265,7 +265,7 @@
 - type: entity
   id: MagazineMagnumSub
   suffix: Submachinegun
-  name: extended pistol magazine (.327 Imperial magnum)
+  name: 25-round extended pistol magazine (.327 Imperial magnum)
   parent: BaseMagazineMagnumSubMachineGun
   components:
   - type: BallisticAmmoProvider
@@ -281,7 +281,7 @@
 
 - type: entity
   id: MagazineHeavyRifle
-  name: heavy magazine (12.7×99mm USM)
+  name: 16-round heavy magazine (12.7×99mm USM)
   parent: BaseMagazineHeavyRifle
   components:
   - type: BallisticAmmoProvider
