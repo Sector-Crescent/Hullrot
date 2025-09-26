@@ -180,6 +180,29 @@
     price: 1250
 
 - type: entity
+  parent: WeaponPistolDeagle
+  id: WeaponPistolDeagleAP
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMagnumUranium
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMagnum
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnumUranium
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMagnum
+
+- type: entity
   name: NCWL T-91 Quasar .327
   parent: BaseWeaponPistol
   id: WeaponPistolT91
