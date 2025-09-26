@@ -126,6 +126,20 @@
 
 # SMALL ARMS AMMUNITIONS
 - type: latheRecipe
+  id: MagazinePistolHeavy
+  result: MagazinePistolHeavy
+  completetime: 1
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  id: MagazineBoxHeavyPistol
+  result: MagazineBoxHeavyPistol
+  completetime: 1
+  materials:
+    Steel: 800
+
+- type: latheRecipe
   id: SpeedLoader27mmAutocannonHE
   result: SpeedLoader27mmAutocannonHE
   completetime: 1
