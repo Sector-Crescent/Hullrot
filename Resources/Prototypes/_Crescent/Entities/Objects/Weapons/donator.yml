@@ -226,6 +226,10 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
   - type: Gun
     minAngle: 1
     maxAngle: 75
