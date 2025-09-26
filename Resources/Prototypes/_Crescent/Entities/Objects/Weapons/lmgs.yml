@@ -47,6 +47,12 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
+  - type: ExtendDescription
+    descriptionList:
+      - description: This lmg comes with a shorter barrel. It deals 15% lower damage per shot.
+        fontSize: 12
+        color: "#ff4f00"
+        requireDetailRange: false
 
 - type: entity
   name: BaseWeaponLightMachineGunConscript

@@ -69,7 +69,7 @@
   - type: Item
     size: Small
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/caseless_pistol_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -77,7 +77,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 6
+    steps: 10
     zeroVisible: false
   - type: Appearance
 
@@ -99,17 +99,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifle
-  - type: Sprite
-    slayers:
-    - state: red
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
 
 - type: entity
   id: MagazinePistolCaselessRiflePractice
@@ -118,17 +107,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRiflePractice
-  - type: Sprite
-    layers:
-    - state: practice
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
 
 - type: entity
   id: MagazinePistolCaselessRifleRubber
@@ -137,17 +115,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifleRubber
-  - type: Sprite
-    layers:
-    - state: rubber
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
 
 - type: entity
   id: MagazinePistolCaselessRifleIncendiary
