@@ -7,6 +7,41 @@
     proto: BulletHeavyRifle
 
 - type: entity
+  id: MagazineHeavyRifleBoxmag
+  name: "50-round box magazine (12.7x99mm USM)"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineHeavyRifleBox
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeHeavyRifle
+    proto: CartridgeHeavyRifle
+    capacity: 50
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/heavy_box.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
   abstract: true
   parent: BaseMagazineBox
   id: BaseMagazineBoxHeavyRifle
