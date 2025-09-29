@@ -156,8 +156,6 @@
       languagesUnderstood:
         - American
 
-
-
 # example prototypes for round start cybernetics. name and description are set in /Resources/Locale/en-US/_Crescent/traits/traits.ftl
 - type: trait
   id: IPMBionicPryarm
@@ -170,13 +168,13 @@
     - !type:TraitCyberneticLimbReplacement # use for limbs
       removeBodyPart: Arm # body part to remove
       partSymmetry: Left # for arms/hands/legs/feet set the left or right side, for single body parts set to None
-      protoId: CrowbarLeftArm # the prototype ID of the cybernetic limb to add
       slotId: "left arm" # the slot in which the limb should be added
+      protoId: CrowbarLeftArm # the prototype ID of the cybernetic limb to add
     - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Arm
       partSymmetry: Right
-      protoId: CrowbarRightArm
       slotId: "right arm"
+      protoId: CrowbarRightArm
 
 - type: trait
   id: SHIBionicEye
