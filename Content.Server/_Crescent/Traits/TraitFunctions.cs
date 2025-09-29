@@ -136,9 +136,9 @@ public sealed partial class TraitCyberneticOrganReplacement : TraitFunction
             {
                 transformSystem.AttachToGridOrMap(organ.Id);
                 entityManager.QueueDeleteEntity(organ.Id);
-                bodySystem.InsertOrgan(part.FirstOrDefault().Id, newOrgan, slotId: SlotId, part.FirstOrDefault().Component, newOrganComp);
                 break;
             }
         }
+        bodySystem.InsertOrgan(part.FirstOrDefault().Id, newOrgan, slotId: SlotId, part.FirstOrDefault().Component, newOrganComp);
     }
 }
