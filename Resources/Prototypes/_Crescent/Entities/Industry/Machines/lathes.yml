@@ -178,6 +178,15 @@
       - Implanter
       - DefibrillatorEmpty
       - BoneGel
+      - FloorCarpetItemRed
+      - FloorCarpetItemBlack
+      - FloorCarpetItemPink
+      - FloorCarpetItemBlue
+      - FloorCarpetItemGreen
+      - FloorCarpetItemOrange
+      - FloorCarpetItemPurple
+      - FloorCarpetItemCyan
+      - FloorCarpetItemWhite
 
 #circuits
 
@@ -530,35 +539,175 @@
     idleState: icon
     runningState: building
     staticRecipes:
-      - ClothingNeckMantleCap
-      - ClothingNeckMantleCE
-      - ClothingNeckMantleCMO
-      - ClothingNeckMantleHOP
-      - ClothingNeckMantleHOS
-      - ClothingNeckMantleRD
-      - ClothingNeckMantleQM
       - ClothingNeckTieRed
       - ClothingNeckTieDet
-      - ClothingNeckScarfStripedGreen
-      - ClothingNeckScarfStripedBlue
-      - ClothingNeckScarfStripedRed
-      - ClothingNeckScarfStripedBrown
-      - ClothingNeckScarfStripedLightBlue
-      - ClothingNeckScarfStripedOrange
-      - ClothingNeckScarfStripedBlack
-      - ClothingNeckScarfStripedPurple
       - ClothingHandsGlovesLatex
-      - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
-      - FloorCarpetItemRed
-      - FloorCarpetItemBlack
-      - FloorCarpetItemPink
-      - FloorCarpetItemBlue
-      - FloorCarpetItemGreen
-      - FloorCarpetItemOrange
-      - FloorCarpetItemPurple
-      - FloorCarpetItemCyan
-      - FloorCarpetItemWhite
+      - PlushiePearCat
+      - ClothingUniformMNKDressBlack
+      - ClothingOuterCoatMNKBlackJacket
+      - ClothingUniformMNKBlackOveralls
+      - ClothingOuterCoatMNKBlackTopCoat
+      - ClothingUniformMNKTracksuitBlack
+      - ClothingUniformMNKBlackShoulder
+      - ClothingUniformMNKGymBra
+      - ClothingUniformMNKOfficeSkirt
+      - ClothingUniformMNKUnderGarment
+      - ClothingOuterCoatMNKWhiteHoodie
+      - ClothingOuterDenimJacket
+      - ClothingHeadHatBeretFrench
+      - ClothingHeadHatBeret
+      - ClothingHeadHatBeretWhite
+      - ClothingHeadHatBlacksoft
+      - ClothingUniformJumpskirtSecurityEOC
+      - ClothingUniformJumpsuitSecurityEOC
+      - ClothingUniformJumpsuitSuitAmish
+      - ClothingUniformJumpsuitSuitAristocratic
+      - ClothingUniformJumpsuitSuitAristocraticTuxedo
+      - ClothingHandsGlovesCombat
+      - ClothingMaskSyndicateFacemask
+      - ClothingShoesBootsCombat
+      - ClothingOuterCoatAcidRaincoat
+      - ClothingUniformJumpskirtAdminAssistant
+      - ClothingUniformJumpsuitAdminAssistant
+      - ClothingUniformJumpsuitBartender
+      - ClothingUniformJumpskirtBartender
+      - ClothingOuterCoatJacketBiker
+      - ClothingMaskBandBlack
+      - ClothingOuterHoodieBlack
+      - ClothingUniformJumpsuitColorBlack
+      - ClothingUniformJumpsuitLawyerBlack
+      - ClothingUniformJumpskirtLawyerBlack
+      - ClothingBackpackMessengerColorBlack
+      - ClothingNeckTieBlack
+      - ClothingUniformJumpsuitBlackTurtleneck
+      - ClothingOuterCoatBomber
+      - ClothingOuterHoodieChaplain
+      - ClothingUniformJumpskirtChaplain
+      - ClothingUniformJumpsuitChaplain
+      - ClothingUniformJumpsuitSuitBlackAlt
+      - ClothingUniformJumpsuitDesertUniform
+      - ClothingUniformJumpsuitSuitBrownAlt
+      - ClothingBackpackDuffel
+      - ClothingShoesEnclosedChem
+      - ClothingHandsGlovesEvening
+      - ClothingMaskGasExplorer
+      - ClothingUniformJumpsuitExplorer
+      - ClothingUniformSchoolGakuranBlack
+      - ClothingOuterCoatGentle
+      - ClothingOuterCoatGreatcoat
+      - ClothingHeadHatBeanieGreen
+      - ClothingUniformJumpsuitTurtleneckGrey
+      - ClothingUniformJumpsuitBH
+      - ClothingUniformJumpskirtBH
+      - ClothingShoesBootsJack
+      - ClothingOuterCoatJacketJamrock
+      - ClothingOuterCoatJensen
+      - ClothingShoesBootsLaceup
+      - ClothingOuterCoatJacketLeather
+      - ClothingBackpackSatchelLeather
+      - ClothingBackpackMessenger
+      - ClothingHandsGlovesNitrile
+      - ClothingUniformJumpsuitBHGrey
+      - ClothingUniformJumpskirtBHGrey
+      - ClothingUniformJumpsuitOperative
+      - ClothingUniformJumpskirtOperative
+      - ClothingOuterCoatOvercoat
+      - ClothingUniformJumpsuitChaplainPilgrimVest
+      - ClothingBackpackPilot
+      - ClothingHandsGlovesPilot
+      - ClothingUniformJumpsuitMilitaryPilot
+      - ClothingBackpackMessengerPilot
+      - ClothingBackpackSatchelPilot
+      - ClothingBeltPilot
+      - ClothingUniformJumpsuitSuitRolledSleeves
+      - ClothingUniformSpacer
+      - ClothingNeckScarfStripedBlue
+      - ClothingNeckScarfStripedBrown
+      - ClothingNeckScarfStripedRed
+      - ClothingOuterCoatTrench
+      - ClothingUniformJumpsuitSuitVictorianVest
+    dynamicRecipes:
+      #NCWL START
+      - ClothingNeckAdminCapelet
+      - ClothingHeadHatNCWLBeretAdmiral
+      - ClothingUniformJumpsuitNCWLCommunications
+      - ClothingUniformJumpsuitNCWLTelnikSleeved
+      - ClothingUniformJumpsuitNCWLTelnikSleeveless
+      - ClothingHeadHatNCWLKommissarHat
+      - ClothingShoesBootsNCWLAdmiralParade
+      - ClothingHandsGlovesNCWLAdmiralParade
+      - ClothingOuterArmorNCWLOpremeCarapace
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingHeadHatNCWLBeretMedi
+      - ClothingOuterArmorNCWLLogi
+      - ClothingOuterArmorNCWLCarapaceDoktor
+      - ClothingOuterArmorNCWLCarapaceKapitan
+      - ClothingUniformJumpsuitNCWLArtificer
+      - ClothingBackpackNCWL
+      - ClothingEyesGlassesNCWL
+      - ClothingHeadHelmetNCWLBasic
+      - ClothingHeadHatNCWLCapsoft
+      - ClothingUniformJumpsuitNCWLMedic
+      - ClothingHeadHatNCWLCapsoftMedical
+      - ClothingBeltNCWLPouches
+      - ClothingUniformJumpsuitNCWL
+      - ClothingMaskNCWLGasmask
+      - ClothingHeadHelmetNCWLHeavy
+      - ClothingHeadHatNCWLBeret
+      - ClothingBeltNCWLWebbing
+      - ClothingMaskNCWLBalaclava
+      - ClothingOuterArmorNCWLEngi
+      - ClothingBackpackSatchelNCWL
+      - ClothingBackpackDuffelNCWL
+      - ClothingOuterArmorNCWLMedi
+      - ClothingUniformJumpsuitNCWLSkirt
+      #NCWL END
+      #DSM START
+      - ClothingOuterCoatImperialAdjutant
+      - ClothingUniformJumpsuitImperialAdjutantFormal
+      - ClothingNeckCloakImperialAdjutant
+      - ClothingHandsGlovesImperialAdjutantGloves
+      - ClothingHeadHatAdvocatus
+      - ClothingNeckCloakInspector
+      - ClothingOuterCoatImperialAdvocatus
+      - ClothingOuterCoatArchmaester
+      - ClothingUniformJumpsuitImperialArchmaester
+      - ClothingHandsGlovesImperialGovernorGloves
+      - ClothingShoesBootsImperialJackboots
+      - ClothingHandsGlovesImperialWorkerGloves
+      - ClothingHandsGlovesImperialLonggloves
+      - ClothingHeadHelmetImperialWorkerHelmet
+      - ClothingUniformJumpsuitImperialSoldierFormal
+      - ClothingUniformJumpsuitImperialFreeholder
+      - ClothingOuterCoatImperialGovernor
+      - ClothingShoesBootsImperialGovernorBoots
+      - ClothingMaskImperialGovernorMask
+      - ClothingNeckCloakImperialGovernor
+      - ClothingHeadHatImperialBicorne
+      - ClothingHeadHatDSMCapsoft
+      - ClothingBackpackDSMSatchel
+      - ClothingUniformJumpsuitImperialCombat
+      - ClothingHeadHatImperialHat
+      - ClothingUniformJumpsuitImperialGovernor
+      - ClothingHeadHatImperialBeret
+      - ClothingHeadHatImperialPeakedCap
+      - ClothingMaskImperialCombatGasmask
+      - ClothingUniformJumpsuitImperialSurgeon
+      - ClothingShoesBootsImperialLaceup
+      - ClothingHeadHatImperialHeadwrap
+      - ClothingOuterCoatImperialMerchant
+      - ClothingHeadHelmetImperialRitter
+      - ClothingOuterCoatImperialRitter
+      - ClothingUniformJumpsuitImperialNobleFemale
+      - ClothingUniformJumpsuitImperialNobleMale
+      - ClothingNeckImperialBow
+      - ClothingNeckImperialBowJeweled
+      - ClothingNeckCloakImperialCapelet
+      - ClothingMaskImperialAdjutantMask
+      - ClothingHeadHatImperialSurgeon
+      #DSM END
+
 
 #ore
 
@@ -919,4 +1068,3 @@
     board: SawsTradeGoodPrinterCircuitboard
 
 #crates end
- 

@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Prototypes;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Research.Prototypes;
@@ -69,6 +69,13 @@ public sealed partial class TechnologyPrototype : IPrototype
     /// </summary>
     [DataField]
     public IReadOnlyList<GenericUnlock> GenericUnlocks = new List<GenericUnlock>();
+
+    /// <summary>
+    /// Goobstation R&D console rework field
+    /// Position of this tech in console menu
+    /// </summary>
+    [DataField(required: true)]
+    public Vector2i Position { get; private set; }
 
     [DataField]
     public float SoftCapContribution = 1;

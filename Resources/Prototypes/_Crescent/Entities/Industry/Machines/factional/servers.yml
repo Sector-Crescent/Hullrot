@@ -35,10 +35,6 @@
   - type: TechnologyDatabase
     supportedDisciplines:
     - Imperial
-    - Mechatronics
-    - Electronics
-    - Astronautics
-    - Biochemical
 
 - type: entity
   id: ResearchAndDevelopmentServerCommunard
@@ -49,12 +45,12 @@
   - type: TechnologyDatabase
     supportedDisciplines:
     - Communard
-    - Mechatronics
-    - Electronics
-    - Astronautics
-    - Biochemical
-    UnlockedTechnologies:
-    - CommunardClothes
+  #  - Mechatronics
+  #  - Electronics
+  #  - Astronautics
+  #  - Biochemical
+  # UnlockedTechnologies:
+  #  - CommunardClothes
 
 - type: entity
   id: ResearchAndDevelopmentServerCorporate
