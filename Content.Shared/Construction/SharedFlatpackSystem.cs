@@ -72,9 +72,13 @@ public abstract class SharedFlatpackSystem : EntitySystem
 
         // todo make this logic smarter.
         // This should eventually allow for shit like building microwaves on tables and such.
+        // avoid these components: fixture, powered, rotatable might be a bit much.
         foreach (var intersect in intersecting)
         {
             if (!TryComp<AirtightComponent>(intersect, out var intersectBody))
+                continue;
+
+            if (!TryComp<HardpointAnchorableOnlyComponent>(intersect, out var intersectBody))
                 continue;
 
             // this popup is on the server because the mispredicts on the intersection is crazy
