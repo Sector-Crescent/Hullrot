@@ -14,11 +14,79 @@
     price: 350
 
 - type: entity
+  name: Troll
+  parent: GrenadeBase
+  description: Dont you fucking dare!
+  suffix: UNSTOPABLE CHAOS!
+  id: TrollNade
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Plushies/troll.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: ClusterGrenade
+    fillPrototype: TrollNadeProjectile
+    velocity: 15
+    maxGrenadesCount: 30
+    grenadeTriggerIntervalMax: 0.25
+    grenadeTriggerIntervalMin: 0.0
+    baseTriggerDelay: 0.25
+    randomSpread: true
+  - type: OnUseTimerTrigger
+    delay: 1.5
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+
+- type: entity
+  name: The concequences of your actions
+  parent: GrenadeBase
+  description: WHAT THE FUCK HAVE YOU DONE?????
+  categories: [ HideSpawnMenu ]
+  id: TrollNadeProjectile
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Plushies/troll.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5000
+  - type: ClusterGrenade
+    fillPrototype: TrollNadeProjectile
+    velocity: 15
+    maxGrenadesCount: 30
+    grenadeTriggerIntervalMax: 0.25
+    grenadeTriggerIntervalMin: 0.0
+    baseTriggerDelay: 0.25
+    randomSpread: true
+  - type: OnUseTimerTrigger
+    delay: 0.5
+  - type: SoundOnTrigger
+    sound: 
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+
+- type: entity
   name: Chudjak
   description: Billions must die!
   parent: GrenadeBase
   suffix: DO NOT FUCKING MAP
-  id: Chudjak
+  id: ChudjakNade
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Fun/Plushies/chudjak.rsi
