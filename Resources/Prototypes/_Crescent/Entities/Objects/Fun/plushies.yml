@@ -65,3 +65,39 @@
     state: icon
   - type: Item
     sprite: _Crescent/Objects/Fun/Plushies/orange.rsi
+  - type: EmitSoundOnActivate
+    sound:
+      collection: AnnoyingOrange
+      params:
+        variation: 0.25
+  - type: EmitSoundOnUse
+    sound:
+      collection: AnnoyingOrange
+      params:
+        variation: 0.25
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: AnnoyingOrange
+      params:
+        variation: 0.25
+  - type: MeleeWeapon
+    soundHit:
+      collection: AnnoyingOrange
+      params:
+        variation: 0.25
+  - type: SpamEmitSound
+    minInterval: 20
+    maxInterval: 60
+    sound:
+      collection: AnnoyingOrange
+      params:
+        variation: 0.25
+
+- type: soundCollection
+  id: AnnoyingOrange
+  files:
+  - "/Audio/_Crescent/Fun/OrangePlushCollection/orange1.ogg"
+  - "/Audio/_Crescent/Fun/OrangePlushCollection/orange2.ogg"
+  - "/Audio/_Crescent/Fun/OrangePlushCollection/orange3.ogg"
+  - "/Audio/_Crescent/Fun/OrangePlushCollection/orange4.ogg"
+  - "/Audio/_Crescent/Fun/OrangePlushCollection/orange5.ogg"

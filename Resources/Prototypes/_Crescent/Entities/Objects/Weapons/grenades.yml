@@ -14,10 +14,10 @@
     price: 350
 
 - type: entity
-  name: Troll
-  parent: GrenadeBase
-  description: Dont you fucking dare!
-  suffix: UNSTOPABLE CHAOS!
+  name: troll plushie
+  parent: BasePlushie
+  description: Feels mischevious.
+  suffix: FAKE PLUSH FAKE!!!
   id: TrollNade
   components:
   - type: Sprite
@@ -27,19 +27,29 @@
       map: ["enum.TriggerVisualLayers.Base"]
   - type: Item
     size: Normal
-  - type: ClusterGrenade
-    fillPrototype: TrollNadeProjectile
-    velocity: 15
-    maxGrenadesCount: 30
-    grenadeTriggerIntervalMax: 0.25
-    grenadeTriggerIntervalMin: 0.0
-    baseTriggerDelay: 0.25
-    randomSpread: true
-  - type: OnUseTimerTrigger
-    delay: 1.5
-  - type: TimerTriggerVisuals
-    primingSound:
+  - type: EmitSoundOnActivate
+    sound:
       path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: SpawnItemsOnUse
+    items:
+      - id: TrollNadeProjectile
 
 - type: entity
   name: The concequences of your actions
@@ -48,6 +58,7 @@
   categories: [ HideSpawnMenu ]
   id: TrollNadeProjectile
   components:
+  - type: TriggerOnSpawn
   - type: Sprite
     sprite: _Crescent/Objects/Fun/Plushies/troll.rsi
     scale: 0.5, 0.5
@@ -62,7 +73,7 @@
         Blunt: 5000
   - type: ClusterGrenade
     fillPrototype: TrollNadeProjectile
-    velocity: 15
+    velocity: 30
     maxGrenadesCount: 30
     grenadeTriggerIntervalMax: 0.25
     grenadeTriggerIntervalMin: 0.0
@@ -107,7 +118,7 @@
   - type: AnimationPlayer
   - type: TimerTriggerVisuals
     primingSound:
-      path: /Audio/_Crescent/Weapons/Grenades/the_horror.ogg
+      path: /Audio/_Crescent/Weapons/Grenades/chud_nade/trigger.ogg
   - type: GenericVisualizer
     visuals:
       enum.Trigger.TriggerVisuals.VisualState:
