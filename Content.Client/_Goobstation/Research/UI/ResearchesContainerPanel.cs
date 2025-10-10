@@ -48,7 +48,7 @@ public sealed partial class ResearchesContainerPanel : LayoutContainer
                 }
                 else
                 {
-                    handle.DrawLine(startCoords, endCoords, Color.White);
+                    handle.DrawLine(startCoords, endCoords, Color.SlateGray);
                 }
             }
         }

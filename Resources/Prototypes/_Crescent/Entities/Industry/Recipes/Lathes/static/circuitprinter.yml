@@ -1,368 +1,239 @@
 - type: latheRecipe
-  abstract: true
-  id: BaseBasicCircuitboard
-  materials:
-    Steel: 200
-    Plastic: 200
-    
-- type: latheRecipe
-  abstract: true
-  id: BaseAdvancedCircuitboard
-  materials:
-    Steel: 400
-    Plastic: 400
-    Gold: 400
-    
-#basic
-    
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: FirelockElectronics
-  result: FirelockElectronics
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: DoorElectronics
-  result: DoorElectronics
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
   id: AirAlarmElectronics
   result: AirAlarmElectronics
+  materials:
+    Steel: 200
   
 - type: latheRecipe
-  parent: BaseBasicCircuitboard
   id: FireAlarmElectronics
   result: FireAlarmElectronics
+  materials:
+    Steel: 200
   
 - type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SignalTimerElectronics
-  result: SignalTimerElectronics
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
   id: APCElectronics
   result: APCElectronics
+  materials:
+    Steel: 200
   
 - type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SubstationMachineCircuitboard
-  result: SubstationMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
   id: WallmountSubstationElectronics
   result: WallmountSubstationElectronics
+  materials:
+    Steel: 200
   
 - type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SMESMachineCircuitboard
-  result: SMESMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
   id: WallmountGeneratorElectronics
   result: WallmountGeneratorElectronics
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SolarTrackerElectronics
-  result: SolarTrackerElectronics
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SolarControlComputerCircuitboard
-  result: SolarControlComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: PowerComputerCircuitboard
-  result: PowerComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: AlertsComputerCircuitboard
-  result: AlertsComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: MicrowaveMachineCircuitboard
-  result: MicrowaveMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceCameraRouterCircuitboard
-  result: SurveillanceCameraRouterCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceCameraWirelessRouterCircuitboard
-  result: SurveillanceCameraWirelessRouterCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceWirelessCameraAnchoredCircuitboard
-  result: SurveillanceWirelessCameraAnchoredCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceWirelessCameraMovableCircuitboard
-  result: SurveillanceWirelessCameraMovableCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceCameraMonitorCircuitboard
-  result: SurveillanceCameraMonitorCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: SurveillanceWirelessCameraMonitorCircuitboard
-  result: SurveillanceWirelessCameraMonitorCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: ComputerTelevisionCircuitboard
-  result: ComputerTelevisionCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: TelecomServerCircuitboard
-  result: TelecomServerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: JukeboxCircuitBoard
-  result: JukeboxCircuitBoard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: DeepFryerMachineCircuitboard
-  result: DeepFryerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseBasicCircuitboard
-  id: CrewMonitoringComputerCircuitboard
-  result: CrewMonitoringComputerCircuitboard
-  
-#basic end
-  
-
-#advanced
+  materials:
+    Steel: 200
 
 - type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ReverseEngineeringMachineCircuitboard
-  result: ReverseEngineeringMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CellRechargerCircuitboard
-  result: CellRechargerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: BorgChargerCircuitboard
-  result: BorgChargerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: WeaponCapacitorRechargerCircuitboard
-  result: WeaponCapacitorRechargerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: TurboItemRechargerCircuitboard
-  result: TurboItemRechargerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CloningPodMachineCircuitboard
-  result: CloningPodMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ThermomachineFreezerMachineCircuitBoard
-  result: ThermomachineFreezerMachineCircuitBoard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CondenserMachineCircuitBoard
-  result: CondenserMachineCircuitBoard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: PortableScrubberMachineCircuitBoard
-  result: PortableScrubberMachineCircuitBoard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: SpaceHeaterMachineCircuitBoard
-  result: SpaceHeaterMachineCircuitBoard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: MedicalScannerMachineCircuitboard
-  result: MedicalScannerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CryoPodMachineCircuitboard
-  result: CryoPodMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ChemMasterMachineCircuitboard
-  result: ChemMasterMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ChemDispenserMachineCircuitboard
-  result: ChemDispenserMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: BiomassReclaimerMachineCircuitboard
-  result: BiomassReclaimerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: BiofabricatorMachineCircuitboard
-  result: BiofabricatorMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: HydroponicsTrayMachineCircuitboard
-  result: HydroponicsTrayMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: AutolatheMachineCircuitboard
-  result: AutolatheMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CircuitImprinterMachineCircuitboard
-  result: CircuitImprinterMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ExosuitFabricatorMachineCircuitboard
-  result: ExosuitFabricatorMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: UniformPrinterMachineCircuitboard
-  result: UniformPrinterMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ArtifactAnalyzerMachineCircuitboard
-  result: ArtifactAnalyzerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ArtifactCrusherMachineCircuitboard
-  result: ArtifactCrusherMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: AnomalyVesselCircuitboard
-  result: AnomalyVesselCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: AnomalySynchronizerCircuitboard
-  result: AnomalySynchronizerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: APECircuitboard
-  result: APECircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ReagentGrinderMachineCircuitboard
-  result: ReagentGrinderMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: HotplateMachineCircuitboard
-  result: HotplateMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: AnalysisComputerCircuitboard
-  result: AnalysisComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: TechDiskComputerCircuitboard
-  result: TechDiskComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ShuttleConsoleCircuitboard
-  result: ShuttleConsoleCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: RadarConsoleCircuitboard
-  result: RadarConsoleCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: StasisBedMachineCircuitboard
-  result: StasisBedMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: ElectrolysisUnitMachineCircuitboard
-  result: ElectrolysisUnitMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CentrifugeMachineCircuitboard
-  result: CentrifugeMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: OreProcessorMachineCircuitboard
-  result: OreProcessorMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: CloningConsoleComputerCircuitboard
-  result: CloningConsoleComputerCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: FlatpackerMachineCircuitboard
-  result: FlatpackerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: EmitterCircuitboard
-  result: EmitterCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: GasRecyclerMachineCircuitboard
-  result: GasRecyclerMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: SeedExtractorMachineCircuitboard
-  result: SeedExtractorMachineCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: MiniGravityGeneratorCircuitboard
-  result: MiniGravityGeneratorCircuitboard
-  
-- type: latheRecipe
-  parent: BaseAdvancedCircuitboard
-  id: PowerCageRechargerCircuitboard
-  result: PowerCageRechargerCircuitboard
+  id: TelecomServerFlatpack
+  result: TelecomServerFlatpack
+  materials:
+    Steel: 200
 
-#advanced end
+- type: latheRecipe
+  id: ThrusterFlatpack
+  result: ThrusterFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: PowerComputerFlatpack
+  result: PowerComputerFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: RadarConsoleFlatpack
+  result: RadarConsoleFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MicrowaveMachineFlatpack
+  result: MicrowaveMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MedicalTechFabFlatpack
+  result: MedicalTechFabFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: HotplateMachineFlatpack
+  result: HotplateMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ComputerCrewMonitoringFlatpack
+  result: ComputerCrewMonitoringFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: CrewMonitoringServerMachineFlatpack
+  result: CrewMonitoringServerMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: PowerCellRechargerFlatpack
+  result: PowerCellRechargerFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: CircuitImprinterFlatpack
+  result: CircuitImprinterFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: BlastDoorFlatpack
+  result: BlastDoorFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ComputerAnalysisConsoleFlatpack
+  result: ComputerAnalysisConsoleFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MachineAnomalyVesselFlatpack
+  result: MachineAnomalyVesselFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MachineArtifactAnalyzerFlatpack
+  result: MachineArtifactAnalyzerFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: AirlockFlatpack
+  result: AirlockFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: AmmoTechFabFlatpack
+  result: AmmoTechFabFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ArtifactCrusherMachineFlatpack
+  result: ArtifactCrusherMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: AtmosMonitoringComputerFlatpack
+  result: AtmosMonitoringComputerFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: AutolatheFlatpack
+  result: AutolatheFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: BiofabricatorMachineFlatpack
+  result: BiofabricatorMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ExosuitFabricatorFlatpack
+  result: ExosuitFabricatorFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ReagentGrinderMachineFlatpack
+  result: ReagentGrinderMachineFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: WeaponCapacitorRechargerFlatpack
+  result: WeaponCapacitorRechargerFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ComputerResearchAndDevelopmentFlatpack
+  result: ComputerResearchAndDevelopmentFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: UniformPrinterFlatpack
+  result: UniformPrinterFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: GyroscopeFlatpack
+  result: GyroscopeFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: AirlockShuttleFlatpack
+  result: AirlockShuttleFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ComputerShuttleFlatpack
+  result: ComputerShuttleFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: SMESBasicFlatpack
+  result: SMESBasicFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: SubstationFlatpack
+  result: SubstationFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: IDComputerCircuitboardFlatpack
+  result: IDComputerCircuitboardFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: BoriaticGeneratorHerculesFlatpack
+  result: BoriaticGeneratorHerculesFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MiniGravFlatpack
+  result: MiniGravFlatpack
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ComputerTargetingFlatpack
+  result: ComputerTargetingFlatpack
+  materials:
+    Steel: 200

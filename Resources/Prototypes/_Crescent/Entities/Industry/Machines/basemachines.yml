@@ -166,6 +166,12 @@
   - type: WiresPanel
   - type: WiresVisuals
   - type: Machine
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Mechatronics
+    - Electronics
+    - Astronautics
+    - Biochemical
     board: ResearchAndDevelopmentServerMachineCircuitboard
   - type: Destructible
     thresholds:
