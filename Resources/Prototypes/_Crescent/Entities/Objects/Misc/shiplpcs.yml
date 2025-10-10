@@ -238,6 +238,22 @@
   - type: ShipVoucher
     ship: Tyche
 
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherTorturerII
+  name: DSM 'Torturer II' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Torturer II stealth bomber. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 13000
+  - type: ShipVoucher
+    ship: Torturersb
 #ncwl
 
 #T0

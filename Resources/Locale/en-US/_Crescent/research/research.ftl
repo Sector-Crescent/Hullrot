@@ -120,6 +120,8 @@ research-technology-laelaps = Imperial Cruiser
 
 research-technology-anathema = Imperial Light Battlecarrier
 
+research-technology-torturerII = Imperial Stealth Bomber
+
 # shi
 
 research-technology-corpavionics = Corporate Aviation
