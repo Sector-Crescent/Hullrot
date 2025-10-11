@@ -1,0 +1,37 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: MercurymkII
+  name: Mercury MKII
+  description: | 
+    A rare instance of a scrapyard retrofit not formerly being a derelict, the Mercury MKII is made to be a brawler/fighter ship, capable of holding it's own against it's weightclass and above. 
+    LOADOUT: 2x 43mm Slugthrowers, 2x Fixed Universal hardpoints
+    MINIMUM CREW: 1x Pilot 
+  price: 42000
+  category: Small
+  group: Scrap
+  path: /Maps/_Crescent/Shuttles/Civilian/mercurymkII.yml
+
+- type: gameMap
+  id: MercurymkII
+  mapName: 'Mercury MKII'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/mercurymkII.yml
+  minPlayers: 0
+  stations:
+    MercurymkII:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'Mercury MKII {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-gunship
+        - type: VesselDescription
+          description: Having "armor", the Mercury MKII should be more survivable than average.
