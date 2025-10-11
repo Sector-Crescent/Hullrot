@@ -1,0 +1,37 @@
+# Author Info
+# Discord: @Rubeebee
+
+- type: vessel
+  id: Hermes
+  name: ICM Hermes
+  description: |
+    The Hermes is a stop-gap measure for ICM, attempting to corner the low-budget mining ship market with thie hermes. Built on the hull of the Mercury, the Hermes is a reliable and solid first-time miner vessel. Comes with an ore magnet.
+    LOADOUT: 1x Exhumer Miner Gun
+    MINIMUM CREW: 1x Pilot
+  price: 35000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/Civilian/hermes.yml
+
+- type: gameMap
+  id: Hermes
+  mapName: 'ICM Hermes'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/hermes.yml
+  minPlayers: 0
+  stations:
+    Hermes:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'ICM Hermes {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
+        - type: VesselDescription
+          description: The Hermes is a mining shuttle for the newbloods of the sector.
