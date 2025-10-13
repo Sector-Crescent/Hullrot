@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/13/2025 05:09:03
+  time: 10/13/2025 11:29:06
   entityCount: 181
 maps: []
 grids:
@@ -99,6 +99,10 @@ entities:
             102: 0,-5
             107: 0,-1
             110: 2,-7
+            126: 0,1
+            152: 0,-5
+            157: 0,-1
+            160: 2,-7
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -111,6 +115,10 @@ entities:
             113: 4,-7
             116: 6,-5
             121: 6,-1
+            148: 6,1
+            163: 4,-7
+            166: 6,-5
+            171: 6,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -125,6 +133,11 @@ entities:
             85: 2,2
             91: 5,1
             105: 0,-1
+            124: 0,1
+            130: 1,1
+            135: 2,2
+            141: 5,1
+            155: 0,-1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -139,6 +152,11 @@ entities:
             93: 5,1
             97: 6,1
             120: 6,-1
+            132: 1,1
+            138: 4,2
+            143: 5,1
+            147: 6,1
+            170: 6,-1
         - node:
             id: LatticeEdgeE
           decals:
@@ -156,6 +174,13 @@ entities:
             100: 0,-5
             104: 0,-1
             108: 2,-7
+            123: 0,1
+            129: 1,1
+            134: 2,2
+            140: 5,1
+            150: 0,-5
+            154: 0,-1
+            158: 2,-7
         - node:
             id: LatticeEdgeN
           decals:
@@ -175,6 +200,14 @@ entities:
             111: 4,-7
             114: 6,-5
             118: 6,-1
+            125: 0,1
+            145: 6,1
+            151: 0,-5
+            156: 0,-1
+            159: 2,-7
+            161: 4,-7
+            164: 6,-5
+            168: 6,-1
         - node:
             id: LatticeEdgeS
           decals:
@@ -198,6 +231,16 @@ entities:
             99: 6,2
             103: 0,-1
             117: 6,-1
+            122: 0,1
+            127: 0,2
+            128: 1,1
+            133: 2,2
+            136: 4,2
+            139: 5,1
+            144: 6,1
+            149: 6,2
+            153: 0,-1
+            167: 6,-1
         - node:
             id: LatticeEdgeW
           decals:
@@ -215,6 +258,13 @@ entities:
             112: 4,-7
             115: 6,-5
             119: 6,-1
+            131: 1,1
+            137: 4,2
+            142: 5,1
+            146: 6,1
+            162: 4,-7
+            165: 6,-5
+            169: 6,-1
         - node:
             angle: 3.141592653589793 rad
             color: '#DE3A3A96'
@@ -1160,7 +1210,7 @@ entities:
           occludes: True
           ent: null
     - type: Battery
-      startingCharge: 11461.251
+      startingCharge: 11345.358
     - type: ApcPowerReceiverBattery
       enabled: True
 - proto: PlasmaReinforcedWindowDirectional
@@ -1384,7 +1434,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 0.5,-3.5
+      pos: 1.5,-5.5
       parent: 1
   - uid: 147
     components:
@@ -1402,19 +1452,17 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 6.5,-3.5
+      pos: 5.5,-5.5
       parent: 1
   - uid: 150
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,-5.5
+      pos: 0.5,-3.5
       parent: 1
   - uid: 151
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,-5.5
+      pos: 6.5,-3.5
       parent: 1
 - proto: ToolboxMechanicalFilled
   entities:
