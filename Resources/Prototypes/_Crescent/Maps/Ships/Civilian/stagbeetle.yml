@@ -2,24 +2,24 @@
 # Discord: rubeebee
 
 - type: vessel
-  id: Dungbeetle
-  name: TS Dungbeetle
+  id: Stagbeetle
+  name: TS Stagbeetle
   description: |
-    A derelict mining drone, recycled to be a mobile salvage platform. Has a trash cart for handy storage of your scrap.
-    LOADOUT: N/A
-    MINIMUM CREW: 1x Salvager.
+    Equipped with 2 underpowered machineguns, this vessel is a cheap escort vessel for the cockroach's mining crew. Comes with stale air atmosphere to save oxygen.
+    LOADOUT: 2x SHI 20x135mm PDT
+    MINIMUM CREW: 1x Brave Soul
   price: 9000
   category: Small
   group: Scrap
-  path: /Maps/_Crescent/Shuttles/Civilian/dungbeetle.yml
+  path: /Maps/_Crescent/Shuttles/Civilian/stagbeetle.yml
 
 - type: gameMap
-  id: Dungbeetle
-  mapName: 'Dungbeetle'
-  mapPath: /Maps/_Crescent/Shuttles/Civilian/dungbeetle.yml
+  id: Stagbeetle
+  mapName: 'Stagbeetle'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/stagbeetle.yml
   minPlayers: 0
   stations:
-    Dungbeetle:
+    Stagbeetle:
       stationProto: StandardCrescentExpeditionVessel
       components:
         - type: VesselIcon
@@ -27,11 +27,11 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: fighter
         - type: StationNameSetup
-          mapNameTemplate: 'Dungbeetle {1}'
+          mapNameTemplate: 'Stagbeetle {1}'
           nameGenerator:
            !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: VesselDesignation
           designation: vessel-designation-fighter
         - type: VesselDescription
-          description: The dungbeetle is lovingly nicknamed that because it can often be seen gathering scrap and garbage.
+          description: The Stagbeetle is often seen in last-ditch efforts by miners to defend it's mothership.
