@@ -1,0 +1,37 @@
+# Author Info
+# Discord: rubeebee
+
+- type: vessel
+  id: Pill
+  name: IPM Pill
+  description: |
+    The IPM Pill is a cheap, readily available light combat ship, able to do escort work for other IPM ships, protecting them from harrasment, and harrasing their enemies in turn.
+    LOADOUT: 1x 20mm Vulcan Autocannon, 2x SHI 20x135mm PDT
+    MINIMUM CREW: 1x Pilot
+  price: 25000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/pill.yml
+
+- type: gameMap
+  id: Pill
+  mapName: 'IPM Pill'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/pill.yml
+  minPlayers: 0
+  stations:
+    Pill:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'IPM IPM {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-gunship
+        - type: VesselDescription
+          description: The Pill is a cheap, readily available ship, perfect for any lone traumasec agent.
