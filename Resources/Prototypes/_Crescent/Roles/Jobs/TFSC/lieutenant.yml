@@ -15,6 +15,8 @@
       min: 30000
     - !type:FactionRequirement
       factionID: "TFSC"
+    - !type:SexRequirement
+      sex: Male
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
