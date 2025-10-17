@@ -179,7 +179,7 @@
     sprite: _Crescent/Clothing/Corpo/OuterClothing/carapace.rsi
   - type: DegradeableArmor
     armorMaxHealth: 2000
-    armorType: Ceramic  
+    armorType: Ceramic
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
@@ -226,7 +226,7 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitHighsecIndependent
   name: SHI SVBT-2 combat hardsuit
   description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere.

@@ -87,7 +87,7 @@
 - type: entity
   name: SHI L6SAW Stratos 5.56x45mm
   id: WeaponLightMachineGunL6
-  parent: BaseWeaponLightMachineGun
+  parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: A light machinegun developed by a Shinohara subsidiary. Chambered in 5.56x45mm Imperial.
   components:
   - type: Sprite
@@ -148,7 +148,7 @@
 - type: entity
   name: IRM L5 5.56x45mm
   id: WeaponLightMachineDSMSurplus
-  parent: [BaseWeaponSniper, BaseGunWieldable]
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
   description: A light machinegun common among Imperial levy forces. Built to be serviceable by even the most poorly equipped domains.
   components:
   - type: Sprite
@@ -189,7 +189,7 @@
 - type: entity
   name: NCWL DP-29 7.62x51mm
   id: WeaponLightMachineGunNCWLSurplus
-  parent: BaseWeaponLightMachineGun
+  parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: A bulky, belt-fed 7.62mm LMG  cheap to produce and somewhat reliable. HomeGuard rear battalions keep them mounted on transport decks to maintain control over detainees during long ferry runs from Taypan to Malpais. Its simple feed mechanism accepts specialty pan-drum boxes for cost-effective, high-capacity firing. Not efficient, but serviceable.
   components:
   - type: Item

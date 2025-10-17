@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitIndependentsEVA
   name: spacionaut softsuit
   description: A basic softsuit made by independents for spacers. Easily torn.
@@ -33,7 +33,7 @@
     price: 750
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitFishbed
   name: NMS-21 'FISHBED' combat hardsuit
   description: Designed by Northrop-Martin for mercenary use and heavily modified by Taypani owners.

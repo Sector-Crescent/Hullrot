@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
+  parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic, StreeCredRedeemable]
   id: ClothingOuterArmorCMMCarapace
   name: marshal's overcoat
   description: A decorated officer's coat, belonging to the Marshal of the Minutemen.
@@ -27,7 +27,7 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
+  parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic, StreeCredRedeemable]
   id: ClothingOuterArmorCMMDeputyCarapace
   name: deputy marshal's overcoat
   description: A decorated officer's coat, belonging to the Deputy Marshal of the Minutemen.

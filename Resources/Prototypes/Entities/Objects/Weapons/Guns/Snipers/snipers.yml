@@ -282,7 +282,7 @@
 
 - type: entity
   name: NCWL Novo-mosin 7.62x51mm
-  parent: [BaseWeaponSniper, BaseGunWieldable]
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSniperNCWLNovomosin
   description: A resurrected bolt-action rifle cobbled from ancient blueprints. Crude and unreliable, but still deadly in trained hands.
   components:
@@ -315,7 +315,7 @@
 
 - type: entity
   name: IRM Legax 5.56x45mm
-  parent: [BaseWeaponSniper, BaseGunWieldable]
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSniperDSMLegax
   description: A mass-produced Imperial rifle made of stamped metal and bakelite. Standard issue for reservists and planetary police forces.
   components:
@@ -349,7 +349,7 @@
 
 - type: entity
   name: NCWL Häyhä 15.2x169mm Anti-materiel rifle
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemable]
   id: WeaponAntimaterielNCWLHayha
   description: A ramshackle anti-materiel rifle built from scavenged parts. Chambered in massive 15×169mm, it punches through light armor despite its crude construction.
   components:
@@ -404,7 +404,7 @@
 
 - type: entity
   name: IRM Leveller 15.2x169mm Anti-materiel rifle
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemable]
   id: WeaponAntimaterielDSMLeveller
   description: An old but effective anti-materiel rifle. While controversial among Imperial nobility for its armor-piercing capabilities, it remains a standard issue weapon for planetary defense forces.
   components:

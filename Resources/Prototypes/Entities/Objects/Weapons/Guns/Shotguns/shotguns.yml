@@ -69,7 +69,7 @@
 - type: entity
   name: PTA MOD-2 Pozhar 12g
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable]
+  parent: [BaseItem, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponShotgunBulldog
   description: It's a magazine-fed shotgun designed for close quarters combat. Uses 12 gauge shotgun shells.
   components:
@@ -217,7 +217,7 @@
 
 - type: entity
   name: SHI 00-2 Enforcer 12g
-  parent: [BaseWeaponShotgun, BaseGunWieldable]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponShotgunEnforcer
   description: A premium, carbon-finish combat shotgun based on the NanoTrasen Kammerer design, featuring an upgraded clip capacity. Takes 12g shotgun shells.
   components:
@@ -249,7 +249,7 @@
 
 - type: entity
   name: NT 00-1 Kammerer 12g
-  parent: [BaseWeaponShotgun, BaseGunWieldable]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponShotgunKammerer
   description: A simple 12-gauge pump-action shotgun, equipped with a choke to improve accuracy. This is the gun you imagine when someone says shotgun.
   components:

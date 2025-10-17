@@ -298,7 +298,7 @@
 ## hardsuits ncwl revamp
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitNCWLMedi
   name: NCWL Mk.0 "SANITAR" medical hardsuit
   description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
@@ -335,7 +335,7 @@
     faction: NCWL
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitNCWLEngi
   name: NCWL Mk.0 "EVERYMAN" civilian hardsuit
   description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
@@ -488,7 +488,7 @@
 ##softsuits
 
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: [ClothingOuterEVASuitBase, StreeCredRedeemable]
   id: ClothingOuterNCWLEVA
   name: union EVA suit
   description: A spaceworthy suit for the working man. Comes in communard colors.

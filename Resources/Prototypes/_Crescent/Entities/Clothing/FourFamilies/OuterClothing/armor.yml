@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitDraugr
   name: DRAUGR mk.I pressurized combat exosuit
   description: A combat hardsuit of antiquated make. Tribal fetishes adorn the dented breastplate. Used by many Pacters belonging to the Al'Seik family.
@@ -35,7 +35,7 @@
     price: 1000
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase,StreeCredRedeemable]
   id: ClothingOuterHardsuitArabet
   name: prophet's pressurized hardsuit
   description: An unusual hardsuit constructed of sleek plasteel, gilded with tribal patterns. The shoulderplates bear the mark of the Arabet family of the Pact.
@@ -69,7 +69,7 @@
     price: 1000
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitIzdari
   name: izdari beltrunner's armored hardsuit
   description: A modified version of an antiquated atmospheric techinican's hardsuit. Around three generations out of date. Attributed commonly to the Izdari family.
@@ -103,7 +103,7 @@
     price: 1000
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitThukker
   name: thukker combat engineer's hardsuit
   description: A modified mining hardsuit adorned with the livery of the Thukker family of the Pact. Features bulky lead shielding against radiation.
@@ -137,7 +137,7 @@
     price: 1000
 
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: [ClothingOuterEVASuitBase, StreeCredRedeemable]
   id: ClothingOuterBeltrunnerEVA
   name: pact beltrunner's voidsuit
   description: A spaceworthy softsuit belonging to the Izdari family of the Atyrian Pact. Repaired many times over.

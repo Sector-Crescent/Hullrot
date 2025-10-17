@@ -123,7 +123,7 @@
 
 - type: entity
   name: NT M-90gl Hercules 7.62x51mm
-  parent: BaseWeaponRifle
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
   id: WeaponRifleM90GrenadeLauncher
   description: An simple battle carbine battle model, with an attached underbarrel grenade launcher. Uses 7.62x51mm ammo.
   components:
@@ -169,7 +169,7 @@
 
 - type: entity
   name: SHI M931c Lecter 7.62x51mm
-  parent: BaseWeaponRifle
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
   id: WeaponRifleLecter
   description: A fancy SHI-brand rifle sold to corporations and security forces everywhere.
   components:
