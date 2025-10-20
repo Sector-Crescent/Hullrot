@@ -173,9 +173,9 @@
 
 - type: entity
   parent: BaseItem
-  id: ShipVoucherRollingReverie
-  name: DSM 'Rolling Reverie' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with an Imperial Rolling Reverie-class stealth fighter. Has to be redeemed at a shipyard console.
+  id: ShipVoucherReverie
+  name: DSM 'Reverie' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Reverie-class stealth fighter. Has to be redeemed at a shipyard console.
   components:
   - type: Item
     size: Small
@@ -186,7 +186,7 @@
   - type: StaticPrice
     price: 8000
   - type: ShipVoucher
-    ship: RollingReverie
+    ship: Reverie
 
 - type: entity
   parent: BaseItem

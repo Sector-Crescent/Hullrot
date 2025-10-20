@@ -1,0 +1,29 @@
+- type: vessel
+  id: Reverie
+  name: DSM Reverie
+  description: An iff-cloaked fighter designed for harassment missions.
+  price: 8000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/reverie.yml
+
+- type: gameMap
+  id: Reverie
+  mapName: 'DSM Reverie'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/reverie.yml
+  minPlayers: 0
+  stations:
+    Reverie:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Reverie {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-interceptor
