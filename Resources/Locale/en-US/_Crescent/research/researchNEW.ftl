@@ -91,6 +91,8 @@ research-technology-imperial-bomblauncher = M320 Launcher
 research-technology-imperial-triumphant = Imperial Cruiser
 research-technology-imperial-suzerain = Imperial Siege Battlecruiser
 research-technology-imperial-torturer = Imperial Stealth Bomber
+research-technology-imperial-reverie = Imperial Stealth Fighter
+research-technology-imperial-tyche = Imperial Stealth Boarder
 
 # NCWL
 research-technology-communard-clothes = Communard Clothes

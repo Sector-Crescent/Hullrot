@@ -200,6 +200,30 @@
   - LaelapsLPC
 
 - type: technology
+  id: ImperialReverie
+  name: research-technology-imperial-reverie
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Imperial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ReverieLPC
+
+- type: technology
+  id: ImperialTyche
+  name: research-technology-imperial-tyche
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Imperial
+  tier: 2
+  cost: 9000
+  recipeUnlocks:
+  - TycheLPC
+
+- type: technology
   id: ImperialPaladinMech
   name: research-technology-imperial-paladin
   icon:
