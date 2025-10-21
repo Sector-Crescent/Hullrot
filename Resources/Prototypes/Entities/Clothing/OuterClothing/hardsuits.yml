@@ -14,9 +14,12 @@
     sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.9
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -53,9 +56,12 @@
     reduction: 1
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -109,9 +115,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -147,9 +156,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.7
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -180,9 +192,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.5
@@ -213,9 +228,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Heat: 0.90
         Radiation: 0.75
         Caustic: 0.5
@@ -247,9 +265,12 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.5
@@ -282,9 +303,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
@@ -318,9 +342,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.7
@@ -350,9 +377,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.5
         Slash: 0.6
         Piercing: 0.6
@@ -383,9 +413,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.6
@@ -424,9 +457,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.2
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
@@ -465,9 +501,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Caustic: 0.1
   - type: ClothingSpeedModifier
     walkModifier: 0.9
@@ -492,9 +531,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.8
         Piercing: 0.9
@@ -542,9 +584,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.5
         Piercing: 0.5
@@ -576,9 +621,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.8
@@ -635,7 +683,7 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: DegradeableArmor # this hardsuit will probably never be used anyways
+  - type: DegradeableArmor #HULLROT EDIT # this hardsuit will probably never be used anyways
     armorMaxHealth: 750
     armorType: Metallic
     armorRepair: SteelPlate
@@ -669,7 +717,7 @@
   components:
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  - type: DegradeableArmor
+  - type: DegradeableArmor #HULLROT EDIT
     armorMaxHealth: 700
     armorType: Metallic
     armorRepair: SteelPlate
@@ -741,9 +789,12 @@
     damageCoefficient: 0.2
   - type: FireProtection
     reduction: 1 # perfect protection like atmos firesuit for pyro tf2 ops
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
@@ -782,9 +833,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.4
         Slash: 0.4
         Piercing: 0.3
@@ -871,9 +925,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.4
@@ -905,9 +962,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.2
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.95
         Slash: 0.95
         Piercing: 1
@@ -934,9 +994,12 @@
     sprite: Clothing/OuterClothing/Hardsuits/pirateeva.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.7
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.9
@@ -967,9 +1030,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.7
         Slash: 0.8
         Piercing: 0.85
@@ -1109,9 +1175,12 @@
     coefficient: 0.001
   - type: ExplosionResistance
     damageCoefficient: 0.2
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.1 #best armor in the game
         Slash: 0.1
         Piercing: 0.1
@@ -1145,9 +1214,12 @@
     coefficient: 0.001
   - type: ExplosionResistance
     damageCoefficient: 0.7
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.6
@@ -1180,9 +1252,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.9
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -1230,9 +1305,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.85
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.85
         Slash: 0.9
         Piercing: 0.85

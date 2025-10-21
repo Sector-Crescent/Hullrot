@@ -14,9 +14,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6 # Removed 10%
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.75
         Slash: 0.75
         Piercing: 0.75
@@ -29,7 +32,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMercenary
-    
+
 - type: entity
   parent: ClothingOuterHardsuitMercenary
   id: ClothingOuterHardsuitPrivateSecurity # stats are of merc hardsuit
@@ -57,9 +60,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
@@ -101,9 +107,12 @@
     sprite: _NF/Clothing/OuterClothing/Hardsuits/maxim_prototype.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.5
@@ -159,9 +168,12 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdBronze
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.65
         Slash: 0.65
         Piercing: 0.65
@@ -241,9 +253,12 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.2
         Slash: 0.2
         Piercing: 0.2
@@ -269,9 +284,12 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCombat
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.5
         Slash: 0.6
         Piercing: 0.6
@@ -297,9 +315,12 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdCommand
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: Armor
-    modifiers:
-      coefficients:
+  - type: DegradeableArmor #HULLROT EDIT
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
         Blunt: 0.5
         Slash: 0.5
         Piercing: 0.5
