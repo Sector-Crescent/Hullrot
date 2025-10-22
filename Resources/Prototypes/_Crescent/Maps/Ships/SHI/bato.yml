@@ -1,0 +1,37 @@
+# Author Info
+# Discord: @Rubeebee
+
+- type: vessel
+  id: Bato
+  name: SHI Bato
+  description: |
+    One of SHI's Budget Shipline, the Bato is a well performing, high price-to-profit ratio, and consistent combat miner, capable of defending itself while mining, making it a favorite among small or lone mining fleets. 
+    LOADOUT: 2x 20mm Vulcan Machineguns, 2x Exhumer Mining Guns
+    MINIMUM CREW: 1x Pilot
+  price: 45000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/SHI/bato.yml
+
+- type: gameMap
+  id: Bato
+  mapName: 'SHI Bato'
+  mapPath: /Maps/_Crescent/Shuttles/SHI/bato.yml
+  minPlayers: 0
+  stations:
+    Bato:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Bato {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
+        - type: VesselDescription
+          description: A mainstay of lone miners, the Bato promises to not let you die without a fight.
