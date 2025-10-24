@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/22/2025 22:03:31
+  time: 10/24/2025 08:54:00
   entityCount: 375
 maps: []
 grids:
@@ -272,6 +272,13 @@ entities:
             1327: -8,-1
             1330: -6,-2
             1333: -2,-3
+            1369: -12,5
+            1372: -11,2
+            1378: -10,1
+            1384: -9,0
+            1393: -8,-1
+            1396: -6,-2
+            1399: -2,-3
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -424,6 +431,13 @@ entities:
             1336: 2,-3
             1339: 6,-2
             1342: 8,-1
+            1351: 9,0
+            1354: 10,1
+            1360: 11,2
+            1366: 12,5
+            1402: 2,-3
+            1405: 6,-2
+            1408: 8,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -491,6 +505,10 @@ entities:
             1282: 8,6
             1291: 10,7
             1297: 11,8
+            1345: 6,5
+            1348: 8,6
+            1357: 10,7
+            1363: 11,8
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -561,6 +579,10 @@ entities:
             1315: -10,7
             1321: -8,6
             1324: -6,5
+            1375: -11,8
+            1381: -10,7
+            1387: -8,6
+            1390: -6,5
         - node:
             id: LatticeEdgeE
           decals:
@@ -775,6 +797,17 @@ entities:
             1325: -8,-1
             1328: -6,-2
             1331: -2,-3
+            1344: 6,5
+            1347: 8,6
+            1356: 10,7
+            1362: 11,8
+            1367: -12,5
+            1370: -11,2
+            1376: -10,1
+            1382: -9,0
+            1391: -8,-1
+            1394: -6,-2
+            1397: -2,-3
         - node:
             id: LatticeEdgeN
           decals:
@@ -1074,6 +1107,20 @@ entities:
             1334: 2,-3
             1337: 6,-2
             1340: 8,-1
+            1349: 9,0
+            1352: 10,1
+            1358: 11,2
+            1364: 12,5
+            1368: -12,5
+            1371: -11,2
+            1377: -10,1
+            1383: -9,0
+            1392: -8,-1
+            1395: -6,-2
+            1398: -2,-3
+            1400: 2,-3
+            1403: 6,-2
+            1406: 8,-1
         - node:
             id: LatticeEdgeS
           decals:
@@ -1206,6 +1253,14 @@ entities:
             1313: -10,7
             1319: -8,6
             1322: -6,5
+            1343: 6,5
+            1346: 8,6
+            1355: 10,7
+            1361: 11,8
+            1373: -11,8
+            1379: -10,7
+            1385: -8,6
+            1388: -6,5
         - node:
             id: LatticeEdgeW
           decals:
@@ -1423,6 +1478,17 @@ entities:
             1335: 2,-3
             1338: 6,-2
             1341: 8,-1
+            1350: 9,0
+            1353: 10,1
+            1359: 11,2
+            1365: 12,5
+            1374: -11,8
+            1380: -10,7
+            1386: -8,6
+            1389: -6,5
+            1401: 2,-3
+            1404: 6,-2
+            1407: 8,-1
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -1531,58 +1597,58 @@ entities:
             0: 5503
           0,-1:
             0: 29472
-            1: 64
+            2: 64
           -1,0:
             0: 5583
           0,1:
-            2: 12
+            1: 12
           1,0:
             0: 32559
           1,1:
-            1: 64
-            2: 128
+            2: 64
+            1: 128
           2,0:
             0: 13056
-            1: 2114
-            2: 32768
+            2: 2114
+            1: 32768
           2,-1:
-            1: 4096
+            2: 4096
           2,1:
             0: 2
-            1: 16640
-            2: 520
+            2: 16640
+            1: 520
           3,1:
-            1: 16
-            2: 4352
+            2: 16
+            1: 4352
           2,2:
-            1: 8
+            2: 8
           -3,1:
-            1: 16400
-            2: 6402
+            2: 16400
+            1: 6402
             0: 8
           -3,2:
-            1: 2
+            2: 2
           -3,0:
-            1: 584
-            2: 8192
+            2: 584
+            1: 8192
             0: 34816
           -2,0:
             0: 57230
           -2,1:
-            1: 320
-            2: 32
+            2: 320
+            1: 32
           -2,-1:
-            1: 5120
-            2: 2048
+            2: 5120
+            1: 2048
           -1,1:
-            2: 6
+            1: 6
           -1,-1:
             0: 51328
-            2: 256
-            1: 64
+            1: 256
+            2: 64
           1,-1:
-            2: 768
-            1: 1024
+            1: 768
+            2: 1024
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -1600,7 +1666,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -1615,7 +1681,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -1754,7 +1820,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -5878.6064
+      secondsUntilStateChange: -5985.173
       state: Opening
 - proto: APCHighCapacity
   entities:
@@ -2054,48 +2120,6 @@ entities:
           ents: []
     - type: PointCannon
       linkedConsoleId: invalid
-- proto: BaseWeaponTurretHeavyPlasmaRimward
-  entities:
-  - uid: 65
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,4.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 66
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,4.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: BlastDoor
   entities:
   - uid: 67
@@ -2783,7 +2807,7 @@ entities:
       buttonNames:
       - Toggle All
       - Toggle Compakt Gatlings
-      - Toggle Rimward Blasters
+      - Toggle Torch Blasters
       - Module D
       - Module E
 - proto: ComputerTabletopIFF
@@ -2798,14 +2822,14 @@ entities:
   - uid: 186
     components:
     - type: Transform
-      pos: 4.5,1.5
+      pos: -3.5,1.5
       parent: 1
     - type: Physics
       canCollide: False
   - uid: 187
     components:
     - type: Transform
-      pos: -3.5,1.5
+      pos: 4.5,1.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -3955,4 +3979,46 @@ entities:
     - type: Transform
       pos: 0.5,0.5
       parent: 1
+- proto: WeaponTurretLaser
+  entities:
+  - uid: 65
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,4.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+  - uid: 66
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,4.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        machine_parts: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
 ...
