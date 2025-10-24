@@ -453,7 +453,9 @@
   parent: BaseBullet
   components:
   - type: ExpendableHeatTracked
-    toggleDelay: 20
+    toggleDelay: 40
+  - type: CanBeHeatTracked
+    heatSignature: 30
   - type: Projectile
   - type: PointLight
     enabled: false
