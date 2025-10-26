@@ -1,26 +1,53 @@
-# HypoBrigmedic #t1
-# SawAdvanced #1
+- type: technology
+  id: BiochemicalSuture
+  name: Medicated suture
+  icon:
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: medicated-suture
+  discipline: Biochemical
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - MedicatedSuture
+  position: 6, 0
+
+- type: technology
+  id: BiochemicalMesh
+  name: Regenerative mesh
+  icon:
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: regenerative-mesh
+  discipline: Biochemical
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - RegenerativeMesh
+  position: 6, 1
+
 # AdvMopItem #t1
-# ScalpelAdvanced #t1
-
-# ScalpelLaser #t1
-# EnergyCautery #t1
 # Portafib #t1
-# AdvancedRetractor #t1
 
-# BluespaceBeaker #t2
-# MedicatedSuture #t1
-# RegenerativeMesh #t1
+# SawAdvanced #1
+# ScalpelAdvanced #t1
+# ScalpelLaser #t1
+    # EnergyCautery #t2
+    # AdvancedRetractor #t2
+
+
+
 
 # CryostasisBeaker              #t1
 # SyringeCryostasis             #t1
+    # BluespaceBeaker #t2
+
 # CartridgeAtropine             #t1
 # CartridgeEpinephrine          #t1
 # CartridgeBicaridine           #t1
 # CartridgeDermaline            #t1
 # CartridgeSaline               #t1
 # ParamedHypo                   #t1
-# Hypospray #t2
+    # HypoBrigmedic #t1
+    # Hypospray #t3
 
 # BiomassReclaimerMachineFlatpack               #t1
 # CloningConsoleComputerFlatpack                #t1

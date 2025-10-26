@@ -295,46 +295,48 @@
   technologyPrerequisites:
     - ElectronicsEinstein
 
-# TechDiskComputerFlatpack                      #t1
-# ComputerAdvancedRadarFlatpack                 #t1-2
-# EwarDeviceFlatpack                            #t1
-
 - type: technology
-  id: ElectronicsBasicElectronics
-  name: Basic electronics
+  id: ElectronicsTechDiskComputer
+  name: Tech disk computer
   icon:
-    sprite: _Crescent/Objects/Materials/materials.rsi
-    state: basicelectronics
+    sprite: Structures/Machines/tech_disk_printer.rsi
+    state: icon
   discipline: Electronics
   tier: 1
   cost: 750
   recipeUnlocks:
-    - BasicElectronics1
-  position: -3, 0
+    - TechDiskComputerFlatpack 
+  position: -9, 1
+  technologyPrerequisites:
+    - ElectronicsBasicElectronics
 
 - type: technology
-  id: ElectronicsBasicElectronics
-  name: Basic electronics
+  id: ElectronicsAdvancedRadar
+  name: Advanced radar
   icon:
-    sprite: _Crescent/Objects/Materials/materials.rsi
-    state: basicelectronics
+    sprite: Structures/Machines/computers.rsi
+    state: eris_control
   discipline: Electronics
   tier: 1
   cost: 750
   recipeUnlocks:
-    - BasicElectronics1
-  position: -3, 0
+    - ComputerAdvancedRadarFlatpack 
+  position: -9, 0
+  technologyPrerequisites:
+    - ElectronicsBasicElectronics
 
 - type: technology
-  id: ElectronicsBasicElectronics
-  name: Basic electronics
+  id: ElectronicsEwar
+  name: Ewar
   icon:
-    sprite: _Crescent/Objects/Materials/materials.rsi
-    state: basicelectronics
+    sprite: _Crescent/Objects/Devices/jammerewar.rsi
+    state: jammer
   discipline: Electronics
   tier: 1
   cost: 750
   recipeUnlocks:
-    - BasicElectronics1
-  position: -3, 0
+    - EwarDeviceFlatpack    
+  position: -9, -1
+  technologyPrerequisites:
+    - ElectronicsBasicElectronics
 
