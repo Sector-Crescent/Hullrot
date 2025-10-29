@@ -1,7 +1,7 @@
 # Empty mags
 - type: entity
   id: BaseMagazineRifle
-  name: "magazine (7.62x51mm USM rifle)"
+  name: "25-round magazine (7.62x51mm USM rifle)"
   parent: BaseItem
   abstract: true
   components:
@@ -20,7 +20,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/7.62mm_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -28,41 +28,31 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 2
+    steps: 3
     zeroVisible: false
   - type: Appearance
 
 # Magazines
 - type: entity
   id: MagazineRifle
-  name: "magazine (7.62x51mm USM rifle)"
+  name: "25-round magazine (7.62x51mm USM rifle)"
   parent: BaseMagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifle
-  - type: Sprite
-    layers:
-    - state: red
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineRifleEmpty
-  name: "magazine (7.62x51mm USM any)"
+  name: "25-round magazine (7.62x51mm USM any)"
   suffix: empty
   parent: MagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: null
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
 
 - type: entity
   id: MagazineRifleIncendiary
-  name: "magazine (.7.62x51mm USM incendiary)"
+  name: "25-round magazine (.7.62x51mm USM incendiary)"
   parent: MagazineRifle
   components:
   - type: BallisticAmmoProvider
@@ -70,56 +60,32 @@
 
 - type: entity
   id: MagazineRiflePractice
-  name: "magazine (7.62x51mm USM practice)"
+  name: "25-round magazine (7.62x51mm USM practice)"
   parent: BaseMagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRiflePractice
-  - type: Sprite
-    layers:
-    - state: practice
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineRifleRubber
-  name: "magazine (7.62x51mm USM rubber)"
+  name: "25-round magazine (7.62x51mm USM rubber)"
   parent: BaseMagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleRubber
-  - type: Sprite
-    layers:
-    - state: rubber
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineRifleUranium
-  name: "magazine (7.62x51mm USM black-tip)"
+  name: "25-round magazine (7.62x51mm USM black-tip)"
   parent: BaseMagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleUranium
-  - type: Sprite
-    layers:
-    - state: uranium
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineRifleShrapnel
-  name: "magazine (7.62x51mm USM shrapnel)"
+  name: "25-round magazine (7.62x51mm USM shrapnel)"
   parent: BaseMagazineRifle
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleShrapnel
-  - type: Sprite
-    layers:
-    - state: red
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]

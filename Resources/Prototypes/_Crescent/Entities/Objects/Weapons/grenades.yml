@@ -14,6 +14,120 @@
     price: 350
 
 - type: entity
+  name: troll plushie
+  parent: BasePlushie
+  description: Feels mischevious.
+  suffix: FAKE PLUSH FAKE!!!
+  id: TrollNade
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Plushies/troll.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: SpawnItemsOnUse
+    items:
+      - id: TrollNadeProjectile
+
+- type: entity
+  name: The concequences of your actions
+  parent: GrenadeBase
+  description: WHAT THE FUCK HAVE YOU DONE?????
+  categories: [ HideSpawnMenu ]
+  id: TrollNadeProjectile
+  components:
+  - type: TriggerOnSpawn
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Plushies/troll.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5000
+  - type: ClusterGrenade
+    fillPrototype: TrollNadeProjectile
+    velocity: 30
+    maxGrenadesCount: 30
+    grenadeTriggerIntervalMax: 0.25
+    grenadeTriggerIntervalMin: 0.0
+    baseTriggerDelay: 0.25
+    randomSpread: true
+  - type: OnUseTimerTrigger
+    delay: 0.5
+  - type: SoundOnTrigger
+    sound: 
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/_Crescent/Weapons/Grenades/troll_nade/trigger.ogg
+      params:
+        variation: 0.25
+
+- type: entity
+  name: Chudjak
+  description: Billions must die!
+  parent: GrenadeBase
+  suffix: DO NOT FUCKING MAP
+  id: ChudjakNade
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Plushies/chudjak.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: OnUseTimerTrigger
+    delay: 13
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Minibomb
+    totalIntensity: 50000
+    intensitySlope: 50
+    maxIntensity: 250
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/_Crescent/Weapons/Grenades/chud_nade/trigger.ogg
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        enum.ConstructionVisuals.Layer:
+          Primed: { state: primed }
+          Unprimed: { state: icon }
+  - type: DeleteOnTrigger
+
+- type: entity
   name: M14 Incendiary grenade
   description: A simple incendiary grenade with a TH-3 Thermalite composition, capable of burning at temperatures up to 2,500 degrees Celsius.
   parent: GrenadeBase
@@ -83,10 +197,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/f1.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 750
-    intensitySlope: 200
-    totalIntensity: 1800
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 170
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -111,10 +225,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/ncsp_rgd5.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 1000
-    intensitySlope: 200
-    totalIntensity: 1800
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 6
+    totalIntensity: 125
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -166,10 +280,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/ncwl_rgd55.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 600
-    intensitySlope: 400
-    totalIntensity: 2100
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 200
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -214,7 +328,7 @@
       collection: FlashGrenadeSFX
 
 - type: entity
-  name: DSM G-8 Neurotoxin grenade
+  name: IRM G-8 Neurotoxin grenade
   description: A smoke grenade filled with a neurotoxin, that creates a small poisonous cloud.
   parent: GrenadeBase
   id: DSMG8PoisonHandgrenade
@@ -257,7 +371,7 @@
       collection: SmokeGrenadeSFX
 
 - type: entity
-  name: DSM G-4 Twist-cap grenade
+  name: IRM G-4 Twist-cap grenade
   description: A grenade with a large explosive payload and a unique twist-cap fuse.
   parent: GrenadeBase
   id: DSMG4TwistcapHandgrenade
@@ -268,10 +382,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/dsm_twist.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 700
-    intensitySlope: 500
-    totalIntensity: 2700
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 6
+    totalIntensity: 300
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -285,7 +399,7 @@
       collection: FragGrenadeSFX
 
 - type: entity
-  name: DSM G-3 Stick grenade
+  name: IRM G-3 Stick grenade
   description: A grenade with large stick attached to improve the throwing distance. It can be used as a last-resort mace.
   parent: GrenadeBase
   id: DSMG3StickHandgrenade
@@ -296,10 +410,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/dsm_stick.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 500
-    intensitySlope: 600
-    totalIntensity: 1800
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 200
     canCreateVacuum: false
   - type: DamageOnHit
     damage:
@@ -378,10 +492,10 @@
           Blunt: 50
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 400
-    intensitySlope: 450
-    totalIntensity: 900
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 100
     canCreateVacuum: false
   - type: EmitSoundOnPickup
     sound: /Audio/_Crescent/Weapons/Grenades/grab1.ogg
@@ -440,10 +554,10 @@
     sprite: _Crescent/Objects/Weapons/Grenades/shi_mini.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 300
-    intensitySlope: 300
-    totalIntensity: 900
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 100
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -468,6 +582,12 @@
     delay: 3.5
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Grenades/shi_emp.rsi
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Electric
+    maxIntensity: 100
+    intensitySlope: 1
+    totalIntensity: 30
   - type: EmpOnTrigger
     range: 2
     energyConsumption: 2700000
@@ -490,15 +610,16 @@
   id: SHIHG17SmartHandgrenade
   components:
   - type: OnUseTimerTrigger
-    delay: 2.5
+    delay: 1.5
+    delayOptions: [1, 1.5, 2.5, 3.5, 5]
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Grenades/shi_smart.rsi
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 750
-    intensitySlope: 600
-    totalIntensity: 1800
+    explosionType: Fragmentation
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 200
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:

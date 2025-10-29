@@ -1,6 +1,6 @@
 - type: entity
   name: SHI PLCR-3M2 Hristov 15.2x169mm
-  parent: [BaseWeaponRifle, BaseGunWieldable]
+  parent: [BaseWeaponRifle, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSniperHristov
   description: A portable anti-materiel rifle, equipped with a long range scope. Fires the large 15.2×169mm round.
   components:
@@ -53,11 +53,11 @@
     zeroVisible: true
   - type: Appearance
   - type: StaticPrice
-    price: 2000
+    price: 3000
 
 - type: entity
   name: IRM AVR-H Imperator 15.2x169mm
-  parent: [BaseWeaponRifle, BaseGunWieldable]
+  parent: [BaseWeaponRifle, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSniperImperator
   description: A imperial anti-materiel rifle. Fires the large 15.2×169mm round.
   components:
@@ -113,7 +113,7 @@
 
 - type: entity
   name: NCWL PTRD-94 Molot 15.2x169mm
-  parent: [BaseWeaponRifle, BaseGunWieldable]
+  parent: [BaseWeaponRifle, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSniperMolot
   description: A cheap communard anti-materiel. Fires the large 15.2×169mm round.
   components:
@@ -166,3 +166,121 @@
   - type: Appearance
   - type: StaticPrice
     price: 2000
+
+- type: entity
+  name: NCSP AK-60 15.2x169mm
+  parent: [BaseWeaponRifle, BaseGunWieldable]
+  id: WeaponSniperAK60
+  description: A unlicensed .60 version of a AK. Its a less simple than a AK-74 but pack a massive 15.2x169mm Pounch.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/ak60.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/ak60.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,5,2
+  - type: Gun
+    fireRate: 0.75
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAntiMateriel
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineAntiMateriel
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMateriel
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 2000
+
+- type: entity
+  name: PTA AC-8 Spear 15.2x169mm
+  parent: [BaseWeaponRifle, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponSniperSpear
+  description: A high-end AMR by Pang Tai Arms, capable of firing significantly faster than its competitors.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/spear.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/spear.rsi
+  - type: GunRequiresWield
+  - type: HeldSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: UseDelay
+    delay: 0.75 #No Quickscoping
+  - type: UseDelayBlockShoot
+  - type: Item
+    shape:
+    - 0,0,5,2
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAntiMateriel
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineAntiMateriel
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMateriel
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 5000

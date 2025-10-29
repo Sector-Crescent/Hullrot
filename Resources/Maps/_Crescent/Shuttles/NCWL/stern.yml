@@ -62,7 +62,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      baseMaxLinearVelocity: 10
+      baseMaxLinearVelocity: 15
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -13668,7 +13668,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: WeaponTurretPDTNCSP
+- proto: WeaponTurretPDTAdvanced
   entities:
   - uid: 108
     components:

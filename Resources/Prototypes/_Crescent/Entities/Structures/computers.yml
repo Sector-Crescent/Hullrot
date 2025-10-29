@@ -70,7 +70,7 @@
     guides:
     - Cargo
 
-# surezai
+# suzerai
 
 - type: entity
   id: ComputerCargoOrdersSurezai
@@ -105,7 +105,9 @@
       state: tech_key
   - type: CargoOrderConsole
     allowedGroups:
-    - surezai
+    - suzerai
+    - generic
+    - genericAmmo
   - type: ActiveRadio
     channels:
     - Imperial
@@ -177,6 +179,8 @@
   - type: CargoOrderConsole
     allowedGroups:
     - commie
+    - generic
+    - genericAmmo
   - type: ActiveRadio
     channels:
     - NCWL
@@ -353,7 +357,7 @@
     guides:
     - Cargo
 
-# shinohara
+# shinohara Station
 #
 - type: entity
   id: ComputerCargoOrdersShinoharaStation
@@ -388,7 +392,8 @@
       state: tech_key
   - type: CargoOrderConsole
     allowedGroups:
-    - shinohara
+    - shinoharastation
+    - generic
   - type: ActiveRadio
     channels:
     - Traffic
@@ -512,6 +517,8 @@
   - type: CargoOrderConsole
     allowedGroups:
     - freeport
+    - generic
+    - genericAmmo
   - type: ActiveRadio
     channels:
     - Syndicate
@@ -580,6 +587,8 @@
   - type: CargoOrderConsole
     allowedGroups:
     - hayes
+    - generic
+    - genericAmmo
   - type: ActiveRadio
     channels:
     - Syndicate
@@ -648,6 +657,8 @@
   - type: CargoOrderConsole
     allowedGroups:
     - gliess
+    - generic
+    - genericAmmo
   - type: ActiveRadio
     channels:
     - Common

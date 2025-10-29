@@ -1,13 +1,18 @@
+# nanotrasen
+job-description-nt-melee-borg = Engage threats in close combat. Crush skulls with your fists. Coordinate with fellow NT assets.
+job-description-nt-ranged-borg = Engage threats in ranged combat. Pulverize corpses with a drill. Coordinate with fellow NT assets.
+job-description-nt-utility-ipc = Load ammunition and upkeep nanotrasen ships. Coordinate with fellow NT assets.
+
 # ncwl
 
 job-description-ncwl-faction-leader = Lead the League from the external end. Maintain relations or war plans with other factions. Don't die.
 job-description-ncwl-kommissar = Lead the League from the internal end. Make sure the Homeguard and Union does their job. Execute traitors.
 job-description-ncwl-fleetkapitan = Command the mass of Partisans. Listen to the Kommissar. Maintain battlefield cohesion.
 job-description-ncwl-partisan = Defend the League. Listen to your Fleetkapitan. Do what you're told.
-job-description-ncwl-industry-taskmaster = Ensure materials are being refined into trade goods and ammo. Organize trade routes. Work with the Overseer.
+job-description-ncwl-artificer = Ensure materials are being refined into trade goods and ammo. Conduct research.
 job-description-ncwl-medical-doctor = Keep the Workers and the Homeguard alive. Run with the Homeguard on missions. Make drugs, save those lost in space.
-job-description-ncwl-worker-overboss = Organize salvage and mining. Make sure workers are working. Keep resources flowing to the Coordinator.
-job-description-ncwl-newbie = Do what work needs doing. Serve the League. Listen to the Overseer and Coordinator.
+job-description-ncwl-coordinator = Organize salvage and mining. Make sure workers are working. Keep resources flowing to the league.
+job-description-ncwl-newbie = Do what work needs doing. Serve the League. Listen to your superiors.
 
 # syndicate
 
@@ -40,7 +45,7 @@ job-description-foremanimp = Coordinate the workers of your liege, the Lord Admi
 job-description-scribe = Explore, discover new technologies, and recover derelicts.
 job-description-archmaester = Coordinate the Scribes Guild, discover new technologies for the Lord Admiral.
 job-description-surgeon = Tend to the bodily ails of your comrades.
-job-description-advocatus = Scrutinise the loyalty of your liege, the Lord Admiral's subjects. Question violators of His will. Ensure compliance to the Mandate.
+job-description-advocatus = Scrutinise the loyalty of your liege, the Kaiser's subjects. Question violators of His will. Ensure compliance to the Mandate.
 job-description-advocatustemplar = Protect the Advocatus and carry out their will. Ensure compliance to the Mandate.
 
 # srm#
@@ -59,6 +64,8 @@ job-description-corpsec = Secure assets of the Corporation. Detain unruly custom
 job-description-highsec = Secure the military interests of the Corporation. Respond to high-risk missions.
 job-description-employee = Serve in various departments of the Corporation.
 job-description-medtech = Research and develop new technologies, tend to the ailments of employees.
+job-description-boardhr = Ensure the compliance of corporate law is being respected.
+job-description-hos-shi = Organize the security force of the corporation.
 
 # cmm
 
@@ -105,6 +112,7 @@ job-description-spacer = Be an independent citizen of Taypan.
 job-description-gliess-sheriff = Keep the law in Gliess Santo.
 job-description-gliess-deputy = Assist the Sheriff in keeping the law in Gliess Santo.
 job-description-gliess-dockmaster = Make sure nobody blows up your station.
+job-description-dockhand = Assist the Dockmaster in upkeeping Gliess Santo.
 
 # conscript-ncwl - for PLANETFALL
 job-description-conscript-ncwl-ship-captain = Pilot the Clementine. Ensure it's safety and use its armaments well. Go down with the ship.
