@@ -242,20 +242,6 @@
   completetime: 2
   materials:
     Steel: 400
-# SMALL ARMS AMMUNITIONS 
-- type: latheRecipe
-  id: MagazinePistolCaselessRifle
-  result: MagazinePistolCaselessRifle
-  completetime: 1
-  materials:
-    Steel: 200
-
-- type: latheRecipe
-  id: MagazineBoxPistol6mm
-  result: MagazineBoxPistol6mm
-  completetime: 1
-  materials:
-    Steel: 500
 
 # 40MM NADES
 - type: latheRecipe
@@ -301,8 +287,22 @@
   materials:
     Steel: 350
     Gold: 100
-    
-# SMALL ARMS AMMUNITIONS
+
+# SMALL ARMS AMMUNITIONS 
+- type: latheRecipe
+  id: MagazinePistolCaselessRifle
+  result: MagazinePistolCaselessRifle
+  completetime: 1
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: MagazineBoxPistol6mm
+  result: MagazineBoxPistol6mm
+  completetime: 1
+  materials:
+    Steel: 500
+
 - type: latheRecipe
   id: MagazinePistolHeavy
   result: MagazinePistolHeavy
