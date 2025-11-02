@@ -1182,115 +1182,6 @@
       - Gauze
       - Metal
 
-- type: entity
-  id: AmmoTechFab
-  parent: [BaseLatheLube, BaseMaterialSiloUtilizer]
-  name: ammo techfab
-  description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
-  components:
-    - type: Sprite
-      sprite: Structures/Machines/techfab.rsi
-      layers:
-        - state: icon
-          map: ["enum.LatheVisualLayers.IsRunning"]
-        - state: ammo
-        - state: unlit
-          shader: unshaded
-          map: ["enum.PowerDeviceVisualLayers.Powered"]
-        - state: inserting
-          map: ["enum.MaterialStorageVisualLayers.Inserting"]
-        - state: panel
-          map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: Machine
-      board: AmmoTechFabCircuitboard
-    - type: Lathe
-      idleState: icon
-      runningState: icon
-      staticRecipes:
-        - SluggieHE
-        - SluggieAP
-        - IdnaTorpedoRecipe
-        - Automortar90
-        - GrenadeBlast
-        - GrenadeBatonCraft
-        - GrenadeEMP
-        - MagazineGrenadeEmpty
-        - Needler60
-        - MagazineVulcan
-        - MagazineFlak
-        - 48mmEMPRocket
-        - 48mmHighYieldRocket
-        - 48mmLowYieldRocket
-        - RocketMagazineEmpty
-        #Hullrot edit start
-        - CartridgeRailgun15mmAP
-        - CartridgeRailgun15mmDU
-        - DrumMagazineShotgunSlug
-        - DrumMagazineShotgunEmpty
-        - DrumMagazineShotgunBuck
-        - MagazineSmgSmartgun
-        - MagazineHeavyRifleBoxmag
-        - MagazinePistolHeavy
-        - MagazinePistolCaselessRifle
-        - MagazineBoxHeavyPistol
-        - MagazineBoxLightSmart12mm
-        - SpeedLoader27mmAutocannonHE
-        - MagazineBoxAntiMateriel
-        - MagazineBoxHeavyRifle
-        - MagazineBoxPistol6mm
-        - MagazineBoxRifle
-        - MagazineBoxLightRifle
-        - MagazineBoxCaselessRifle
-        - MagazineBoxCaselessRifleBig
-        - MagazineRailgun15mmAP
-        - MagazineRailgun15mmDU
-        - BoxShotgunFlash4g
-        - BoxShotgunSlug4g
-        - BoxLethalshot4g
-        - BoxBeanbag4g
-        - BoxLethalshot
-        - BoxShotgunSlug
-        - BoxShotgunLumen
-        - BoxShotgunFlare
-        - Magazine6x24mmShock
-        - Magazine6x24mmIncendiary
-        - Magazine6x24mmIon
-        - Magazine6x24mmConcentrated
-        - Magazine6x24mmCharge
-        - MagazineBoxMagnum
-        - MagazineBoxPistol
-        - MagazineAntiMateriel
-        - MagazineCaselessRifle
-        - MagazineCaselessRifleShort
-        - MagazineHeavyRifle
-        - MagazineRifleDrum
-        - MagazineRifle
-        - MagazineLightRifle
-        - MagazineShotgunSlug
-        - MagazineShotgun
-        - SpeedLoader127x99
-        - SpeedLoaderMagnum
-        - MagazineMagnumSub
-        - MagazineMagnum
-        - MagazinePistolSubMachineGunHeavy
-        - MagazinePistolSubMachineGun
-        - MagazinePistol6mmSmg
-        - MagazinePistolSmartgun
-        - MagazinePistol
-        - MagazinePistol6mm
-        - MagazinePistolSubMachineGunTopMounted
-        #Hullrot edit end
-    - type: MaterialStorage
-      whitelist:
-        tags:
-          - Sheet
-          - RawMaterial
-          - Ingot
-          - Wooden
-          - ClothMade
-          - Gauze
-          - Metal
-
       
 - type: entity
   id: MedicalTechFab
@@ -1859,6 +1750,7 @@
     whitelist:
       tags:
         - PrizeTicket
+
 #AMMO
 - type: entity
   id: AmmoTechFab
@@ -1889,6 +1781,9 @@
         - SluggieAP
         - IdnaTorpedoRecipe
         - Automortar90
+        - GrenadeBlast
+        - GrenadeBatonCraft
+        - GrenadeEMP
         - MagazineGrenadeEmpty
         - Needler60
         - MagazineVulcan
@@ -1904,20 +1799,27 @@
         - Cartridge40mmSmoke
         - Cartridge40mmThermobaric
         #Hullrot edit start
+        - CartridgeRailgun15mmAP
+        - CartridgeRailgun15mmDU
         - DrumMagazineShotgunSlug
         - DrumMagazineShotgunEmpty
         - DrumMagazineShotgunBuck
         - MagazineSmgSmartgun
         - MagazineHeavyRifleBoxmag
         - MagazinePistolHeavy
+        - MagazinePistolCaselessRifle
         - MagazineBoxHeavyPistol
+        - MagazineBoxLightSmart12mm
         - SpeedLoader27mmAutocannonHE
         - MagazineBoxAntiMateriel
         - MagazineBoxHeavyRifle
+        - MagazineBoxPistol6mm
         - MagazineBoxRifle
         - MagazineBoxLightRifle
         - MagazineBoxCaselessRifle
         - MagazineBoxCaselessRifleBig
+        - MagazineRailgun15mmAP
+        - MagazineRailgun15mmDU
         - BoxShotgunFlash4g
         - BoxShotgunSlug4g
         - BoxLethalshot4g
@@ -1926,6 +1828,11 @@
         - BoxShotgunSlug
         - BoxShotgunLumen
         - BoxShotgunFlare
+        - Magazine6x24mmShock
+        - Magazine6x24mmIncendiary
+        - Magazine6x24mmIon
+        - Magazine6x24mmConcentrated
+        - Magazine6x24mmCharge
         - MagazineBoxMagnum
         - MagazineBoxPistol
         - MagazineAntiMateriel
