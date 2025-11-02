@@ -122,9 +122,43 @@
 
 - type: entity
   parent: BaseItem
+  id: ShipVoucherImparator
+  name: DSM 'Imparator' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Imparator-class fighter pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 15000
+  - type: ShipVoucher
+    ship: Imparator
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherImpel
+  name: DSM 'Impel' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Covetor-class freighter pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 15000
+  - type: ShipVoucher
+    ship: Impel
+
+- type: entity
+  parent: BaseItem
   id: ShipVoucherCovetor
   name: DSM 'Covetor' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with an Imperial Covetor-classs miner-freighter pattern. Has to be redeemed at a shipyard console.
+  description: An LPC fabprint disk loaded with an Imperial Covetor-class miner-freighter pattern. Has to be redeemed at a shipyard console.
   components:
   - type: Item
     size: Small
@@ -141,7 +175,7 @@
   parent: BaseItem
   id: ShipVoucherRedemptor
   name: DSM 'Redemptor' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with an Imperial Redemptor-classs fighter pattern. Has to be redeemed at a shipyard console.
+  description: An LPC fabprint disk loaded with an Imperial Redemptor-class fighter pattern. Has to be redeemed at a shipyard console.
   components:
   - type: Item
     size: Small
