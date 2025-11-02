@@ -145,7 +145,7 @@
 - type: cargoProduct
   id: ShuttleNeedlerAmmoGeneric
   icon:
-    sprite: _Crescent/Ammunition/mortar.rsi
+    sprite: _Crescent/Ammunition/needler.rsi
     state: base
   product: CrateAutogunAmmo
   cost: 15000
@@ -221,3 +221,24 @@
   cost: 25000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
+
+- type: cargoProduct
+  id: ShuttleJeongAmmoGeneric
+  icon:
+    sprite: _Crescent/Ammunition/flak.rsi
+    state: base
+  product: CrateJeongAmmo
+  cost: 15000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: ShuttleHardlinerAmmoGeneric
+  icon:
+    sprite: _Crescent/Objects/Specific/hardlinebattery.rsi
+    state: battery
+  product: PowerCageHardliner
+  cost: 10000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+

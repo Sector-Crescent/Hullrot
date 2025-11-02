@@ -32,11 +32,11 @@
   - type: ShipyardListing
     shuttles:
     - Redemptor
-    - Torturer
     - Ibis
     - Impel
     - Gnosis
     - Praxis
+    - Imparator
 
 - type: entity
   id: NemesisMothershipComputer
@@ -46,7 +46,7 @@
   - type: ShipyardListing
     shuttles:
     - Praxis
-    - Torturer
+    - Imparator
 
 - type: entity
   id: UnionfallNemesisMothershipComputer
@@ -70,6 +70,7 @@
     - Meatwagon
     - Harpy
     - Matabele
+    - Fridge
 
 - type: entity
   id: SawsMothershipComputer
@@ -84,7 +85,7 @@
     - Scabrak
     - Geode
     - Thanapod
-    - Rattler
+    - Mercurymk2
 
 - type: entity
   id: TatsumotoMothershipComputer
@@ -100,6 +101,7 @@
     - Flea
     - Bison
     - Nazaar
+    - colossus
 
 - type: entity
   id: RamziMothershipComputer
@@ -112,6 +114,7 @@
     - Taipan
     - Wreck
     - Spriggan
+    - Lungspot
 
 - type: entity
   id: ZhipovMothershipComputer
@@ -147,7 +150,7 @@
 - type: entity
   id: CMMMothershipComputer
   parent: BaseMothershipComputer
-  name: TSP internal shipyard
+  name: Gliessian internal shipyard
   components:
   - type: ShipyardListing
     shuttles:
@@ -223,6 +226,8 @@
     shuttles:
     - Tick
     - Gnat
+    - Piranha
+    - Scuttlefish
 
 - type: entity
   id: NAPMothershipComputer
