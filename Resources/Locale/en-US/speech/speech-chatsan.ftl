@@ -28,6 +28,9 @@ chatsan-replacement-9 = i know, right
 chatsan-word-10 = idc
 chatsan-replacement-10 = i don't care
 
+chatsan-word-11 = tbf
+chatsan-replacement-11 = to be fair
+
 chatsan-word-12 = tbh
 chatsan-replacement-12 = to be honest
 
@@ -118,5 +121,3 @@ chatsan-replacement-42 = of course
 chatsan-word-43 = ig
 chatsan-replacement-43 = i guess
 
-chatsan-word-44 = tbf
-chatsan-replacement-44 = to be fair
