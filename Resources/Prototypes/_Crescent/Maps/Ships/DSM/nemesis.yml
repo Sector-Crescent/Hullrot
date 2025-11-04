@@ -1,22 +1,22 @@
 # Author Info
-# Discord: originally @fleshangel, later remade by @ninruB
+# Discord: fungus2589
 
 - type: vessel
-  id: Stern
-  name: NCWL Stern
-  description: A communard heavy battlecruiser.
-  price: 125000
-  category: Small
+  id: Nemesis
+  name: DSM Nemesis
+  description: A heavy destroyer carrier, the starboard flakgun gunbattery & cargo area has been salvaged and converted into a docking-port.
+  price: 226750
+  category: Large
   group: None
-  path: /Maps/_Crescent/Shuttles/NCWL/stern.yml
+  path: /Maps/_Crescent/Shuttles/DSM/nemesis.yml
 
 - type: gameMap
-  id: Stern
-  mapName: 'NCWL Stern'
-  mapPath: /Maps/_Crescent/Shuttles/NCWL/stern.yml
+  id: Nemesis
+  mapName: 'DSM Nemesis'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/nemesis.yml
   minPlayers: 0
   stations:
-    Stern:
+    Nemesis:
       stationProto: StandardCrescentVessel
       components:
         - type: VesselIcon
@@ -24,9 +24,9 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: battleship
         - type: StationNameSetup
-          mapNameTemplate: 'NCWL Stern {1}'
+          mapNameTemplate: 'DSM Nemesis {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: VesselDesignation
-          designation: vessel-designation-heavybattlecruiser
+        
