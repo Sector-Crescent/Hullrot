@@ -84,6 +84,7 @@
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/rezerv.rsi
   - type: Item
+    size: Large # This weapon should be large. But parent keep overriding the size.
     shape:
     - 0,0,5,1
   - type: Gun

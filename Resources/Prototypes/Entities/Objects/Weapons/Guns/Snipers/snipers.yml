@@ -284,7 +284,7 @@
   name: NCWL Novo-mosin 7.62x51mm
   parent: [BaseWeaponSniper, BaseGunWieldable]
   id: WeaponSniperNCWLNovomosin
-  description: A resurrected bolt-action rifle cobbled from ancient blueprints. Crude and unreliable, but still deadly in trained hands.
+  description: A resurrected bolt-action rifle cobbled from ancient blueprints. Old bulky but reliable design, very deadly in the right hands. 
   components:
   - type: Item
     size: Ginormous
@@ -293,8 +293,9 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_rifle.rsi
   - type: Gun
-    fireRate: 0.75
-    damageModifier: 2
+    fireRate: 1.7 # if the guns proofs to be too strong, lower this please. (1.6 is close to real fire rate of mosin-nagant)  - also I wanted to have this at 2 and damage at 80 because then it would feel more on par with shotguns but it shouldnt kill riffles.
+    damageModifier: 3 # guns is supposed to be sniper - now is under performing shotgun by stats
+    projectileSpeed: 50
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -304,6 +305,12 @@
   - type: EmbeddableProjectile
     removalTime: 3.5
   - type: EmbedPassiveDamage
+  - type: ExtendDescription
+    descriptionList:
+      - description: Long barrel provides increased accuracy and damage over distance.
+        fontSize: 12
+        color: "#ff4f00"
+        requireDetailRange: false
   - type: BallisticAmmoProvider
     soundRack: /Audio/Weapons/Guns/UnionfallWeapons/bolt_cycle.ogg
     capacity: 5

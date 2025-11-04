@@ -54,11 +54,11 @@
         color: "#ff4f00"
         requireDetailRange: false
 
-- type: entity
-  name: NCWL MK-13 Conscript 12.7x99mm
+- type: entity 
+  name: NCWL MK-13 Conscript 12.7x99mm #it still might need a buff considering this is high end weapon.
   id: WeaponLightMachineGunConscript
   parent: [BaseItem, StreeCredRedeemable]
-  description: A ripped out .50 cal PDT gun adapted to be fired from the hip. Heavy as shit and innacurate as shit but it turns people into a fine red mist.
+  description: Designed after PDT but in more compact design, Chambered in 12.7x99mm. Heavy as shit and innacurate as shit but it turns people into a fine red mist.
   components:
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/conscript.rsi
@@ -99,12 +99,11 @@
     walkModifier: 0.9
     sprintModifier: 0.80
   - type: HeldSpeedModifier
-  - type: Gun
-    minAngle: 2
+  - type: Gun 
+    minAngle: 1
     maxAngle: 25
     angleIncrease: 10
     angleDecay: 2
-    damageModifier: 0.70
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -127,7 +126,7 @@
   - type: Appearance
   - type: ExtendDescription
     descriptionList:
-      - description: This lmg has loose tolerances. It deals 30% lower damage per shot.
+      - description: This heavy machinegun that is heavy so it slows you down by 20% when carried.
         fontSize: 12
         color: "#ff4f00"
         requireDetailRange: false
