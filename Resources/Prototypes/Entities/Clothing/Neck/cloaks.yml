@@ -188,6 +188,9 @@
       toggleable-clothing: !type:Container {}
   - type: TypingIndicatorClothing
     proto: moth
+  - type: Construction
+    graph: MothCloak
+    node: mothCloak
 
 - type: entity
   parent: ClothingNeckBase

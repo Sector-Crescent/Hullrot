@@ -118,3 +118,14 @@
   description: Can hold up to 15 arrows, and fits snug around your waist.
   icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
   objectType: Item
+
+- type: construction
+  name: moth cloak
+  id: MothCloak
+  graph: MothCloak
+  startNode: start
+  targetNode: mothCloak
+  category: construction-category-clothing
+  description: A cloak that looks like moth wings.
+  icon: { sprite: Clothing/Neck/Cloaks/moth.rsi, state: icon }
+  objectType: Item

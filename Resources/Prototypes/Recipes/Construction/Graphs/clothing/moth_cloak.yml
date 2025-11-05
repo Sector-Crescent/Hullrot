@@ -1,0 +1,22 @@
+﻿- type: constructionGraph
+  id: MothCloak
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: mothCloak
+          steps:
+            - tag: MothroachHide
+              name: a hide from a mothroach.
+              icon:
+                sprite: Nyanotrasen/Objects/Materials/mothroach.rsi
+                state: mothroachhide
+              doAfter: 1
+            - tag: MothroachHide
+              name: a hide from a mothroach.
+              icon:
+                sprite: Nyanotrasen/Objects/Materials/mothroach.rsi
+                state: mothroachhide
+              doAfter: 1
+    - node: mothCloak
+      entity: ClothingNeckCloakMoth
