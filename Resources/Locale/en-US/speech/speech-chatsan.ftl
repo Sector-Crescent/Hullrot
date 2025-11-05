@@ -90,8 +90,8 @@ chatsan-replacement-31 = shut the fuck up
 chatsan-word-32 = gtg
 chatsan-replacement-32 = got to go
 
-chatsan-word-33 = gl
-chatsan-replacement-33 = good luck
+chatsan-word-33 = ig
+chatsan-replacement-33 = i guess
 
 chatsan-word-34 = hbu
 chatsan-replacement-34 = how about you
@@ -116,8 +116,4 @@ chatsan-word-41 = wyd
 chatsan-replacement-41 = what are you doing
 
 chatsan-word-42 = ofc
-chatsan-replacement-42 = of course
-
-chatsan-word-43 = ig
-chatsan-replacement-43 = i guess
-
+chatsan-replacement-42 = of course 
