@@ -13,6 +13,8 @@
           mapNameTemplate: 'GSC Jackal'
         - type: VesselDesignation
           designation: vessel-designation-headquarters
+        - type: VesselDescription
+          description: A ramshackle mercenary mothership, the wandering home of Gorlex Security Consulting.
         - type: VesselMusic
           ambientMusicPrototype: JackalMusic
         - type: Grammar
@@ -20,8 +22,8 @@
             proper: true
         - type: StationJobs
           overflowJobs: []
-          availableJobs: #12 total
+          availableJobs: #12 + 4 newbloods
             RingleaderNCSP: [ 1, 1 ]
-            LieutenantNCSP: [ 1, 1 ]
-            InfanteerNCSP: [ 8, 8 ]
-            TechnicianNCSP: [ 2, 2 ]
+            LieutenantNCSP: [ 2, 2 ]
+            InfanteerNCSP: [ 9, 9 ]
+            TechnicianNCSP: [ 4, 4 ]

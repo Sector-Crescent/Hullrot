@@ -13,6 +13,8 @@
           mapNameTemplate: 'CDT Dawnbreaker'
         - type: VesselDesignation
           designation: vessel-designation-headquarters
+        - type: VesselDescription
+          description: A well-equipped scientific hubship housing Cyberdawn Technologys main laboratory.
         - type: VesselMusic
           ambientMusicPrototype: JackalMusic
         - type: Grammar
@@ -20,7 +22,7 @@
             proper: true
         - type: StationJobs
           overflowJobs: []
-          availableJobs:
+          availableJobs: #10 total
             IntelligenceOfficerNCSP: [ 1, 1 ]
-            OperativeNCSP: [ 4, 4 ]
-            CyberdawnTechNCSP: [ 3, 3 ]
+            OperativeNCSP: [ 5, 5 ]
+            CyberdawnTechNCSP: [ 4, 4 ]

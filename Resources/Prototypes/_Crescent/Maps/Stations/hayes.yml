@@ -9,11 +9,13 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'IPM Hayes Medical Waystation'
+        - type: VesselDescription
+          description: A modest clinic hosting Interdyne Pharmaceuticals operations. Hold on to your kidneys.
         - type: VesselDesignation
           designation: vessel-designation-outpost
         - type: StationJobs
           overflowJobs: []
-          availableJobs:
+          availableJobs: #10 total
             CoordinatorNCSP: [ 1, 1 ]
-            RipperdocNCSP: [ 2, 2 ]
+            RipperdocNCSP: [ 3, 3 ]
             TraumasecNCSP: [ 6, 6 ]

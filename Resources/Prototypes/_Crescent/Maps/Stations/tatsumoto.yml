@@ -16,6 +16,8 @@
             state: outpost
         - type: StationNameSetup
           mapNameTemplate: 'Tatsumoto Trading Outpost'
+        - type: VesselDescription
+          description: A corporate hub positioned at the crossroads of Taypan's tradelanes.
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: VesselMusic
@@ -28,9 +30,9 @@
           availableJobs:
             ExecutiveSHI: [ 1, 1 ]
             BoardHRSHI: [ 1, 1 ]
-            BoardSHI: [ 2, 2 ]
+            BoardSHI: [ 3, 3 ]
             HosSHI: [ 1, 1 ]
             HighsecSHI: [ 2, 2 ]
-            CorpsecSHI: [ 5, 5 ]
-            MedtechSHI: [ 4, 4 ]
-            EmployeeSHI: [ 8, 8 ]
+            CorpsecSHI: [ 6, 6 ]
+            MedtechSHI: [ 5, 5 ]
+            EmployeeSHI: [ 10, 10 ]
