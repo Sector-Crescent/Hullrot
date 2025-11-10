@@ -37,7 +37,7 @@
   icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
   productEntity: WeaponMechSword
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 8
   categories:
   - StoreCategoryGSCMech
 
@@ -48,7 +48,7 @@
   icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
   productEntity: WeaponMechCombatLightRifle
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 8
   categories:
   - StoreCategoryGSCMech
 
@@ -74,7 +74,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherEradicator
   cost:
-    PlunderGSC: 40
+    PlunderGSC: 34
   categories:
   - StoreCategoryGSCLPC
 
@@ -85,7 +85,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherWolf
   cost:
-    PlunderGSC: 40
+    PlunderGSC: 43
   categories:
   - StoreCategoryGSCLPC
 
@@ -96,7 +96,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherCleaver
   cost:
-    PlunderGSC: 20
+    PlunderGSC: 17
   categories:
   - StoreCategoryGSCLPC
 
@@ -107,7 +107,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherBodybag
   cost:
-    PlunderGSC: 20
+    PlunderGSC: 23
   categories:
   - StoreCategoryGSCLPC
 
@@ -122,7 +122,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Casings/rpg2_rocket.rsi, state: heat }
   productEntity: CartridgeRPG2Heat
   cost:
-    PlunderGSC: 1.5
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCExplosives
 
@@ -144,7 +144,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/rpg2.rsi, state: icon }
   productEntity: WeaponLauncherSmallRocket
   cost:
-    PlunderGSC: 8
+    PlunderGSC: 5
   categories:
   - StoreCategoryGSCExplosives
 
@@ -155,7 +155,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Casings/rpg7_rocket.rsi, state: heat }
   productEntity: CartridgeRPG7Heat
   cost:
-    PlunderGSC: 2
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCExplosives
 
@@ -166,7 +166,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Casings/rpg7_rocket.rsi, state: tandem }
   productEntity: CartridgeRPG7Tandem
   cost:
-    PlunderGSC: 4
+    PlunderGSC: 2
   categories:
   - StoreCategoryGSCExplosives
 
@@ -177,14 +177,14 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Casings/rpg7_rocket.rsi, state: frag }
   productEntity: CartridgeRPG7Frag
   cost:
-    PlunderGSC: 1.5
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCExplosives
 
 - type: listing
   id: StoreListingGSCRPG7ThermoAmmo
   name: GTB-7S Rocket.
-  description: Ammunition for the NCSP RPG-7 rocket launcher, this one has a HE-Frag warhead.
+  description: Ammunition for the NCSP RPG-7 rocket launcher, this one has a thermobaric warhead.
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Casings/rpg7_rocket.rsi, state: thermo }
   productEntity: CartridgeRPG7Thermobaric
   cost:
@@ -199,7 +199,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/rpg7.rsi, state: icon }
   productEntity: WeaponLauncherRocket
   cost:
-    PlunderGSC: 12
+    PlunderGSC: 8
   categories:
   - StoreCategoryGSCExplosives
 
@@ -210,7 +210,7 @@
   icon: { sprite: /Textures/Clothing/Back/Duffels/syndicate.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateC4tBundle
   cost:
-    PlunderGSC: 4
+    PlunderGSC: 3
   categories:
   - StoreCategoryGSCExplosives
 
@@ -236,7 +236,7 @@
   icon: { sprite: /Textures/_Crescent/Clothing/Syndicate/OuterClothing/cybersunstealth.rsi, state: icon }
   productEntity: ClothingOuterHardsuitCybersunStealth
   cost:
-    PlunderGSC: 50
+    PlunderGSC: 38
   categories:
   - StoreCategoryGSCSuits
 
@@ -247,7 +247,7 @@
   icon: { sprite: /Textures/_Impstation/Clothing/OuterClothing/Hardsuits/syndicate_agent.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndieMedic
   cost:
-    PlunderGSC: 20
+    PlunderGSC: 17
   categories:
   - StoreCategoryGSCSuits
 
@@ -258,7 +258,7 @@
   icon: { sprite: /Textures/_Crescent/Clothing/Syndicate/OuterClothing/syndicatesbg.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndicateBG
   cost:
-    PlunderGSC: 5
+    PlunderGSC: 2
   categories:
   - StoreCategoryGSCSuits
 
@@ -273,7 +273,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Magazine/15.2mm_mag.rsi, state: icon }
   productEntity: MagazineAntiMateriel
   cost:
-    PlunderGSC: 3
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCAmmo
 
@@ -284,7 +284,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Magazine/12.7mm_mag.rsi, state: icon }
   productEntity: MagazineHeavyRifle
   cost:
-    PlunderGSC: 2
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCAmmo
 
@@ -306,7 +306,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Magazine/shotgun_drum.rsi, state: icon }
   productEntity: DrumMagazineShotgunBuck
   cost:
-    PlunderGSC: 3
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCAmmo
 
@@ -317,7 +317,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Ammunition/Magazine/7.62mm_drum.rsi, state: icon }
   productEntity: MagazineRifleDrum
   cost:
-    PlunderGSC: 2
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCAmmo
 
@@ -375,7 +375,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/atreides.rsi, state: icon }
   productEntity: WeaponSubMachineGunAtreides
   cost:
-    PlunderGSC: 2
+    PlunderGSC: 1
   categories:
   - StoreCategoryGSCWeapons
 
@@ -386,7 +386,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/akms.rsi, state: icon }
   productEntity: WeaponRifleAk
   cost:
-    PlunderGSC: 5
+    PlunderGSC: 3
   categories:
   - StoreCategoryGSCWeapons
 
@@ -397,7 +397,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/mayflower.rsi, state: icon }
   productEntity: WeaponRifleMayflower
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 3
   categories:
   - StoreCategoryGSCWeapons
 
@@ -408,7 +408,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/ak60.rsi, state: icon }
   productEntity: WeaponSniperAK60
   cost:
-    PlunderGSC: 20
+    PlunderGSC: 14
   categories:
   - StoreCategoryGSCWeapons
 
@@ -419,7 +419,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/saiga12.rsi, state: icon }
   productEntity: WeaponShotgunNCSPSaiga12
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 16
   categories:
   - StoreCategoryGSCWeapons
 
@@ -430,7 +430,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/svds.rsi, state: icon }
   productEntity: WeaponRifleSVDMarksman
   cost:
-    PlunderGSC: 15
+    PlunderGSC: 12
   categories:
   - StoreCategoryGSCWeapons
 
@@ -441,7 +441,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/rpd.rsi, state: icon }
   productEntity: WeaponLightMachineGunNCSPRPD
   cost:
-    PlunderGSC: 20
+    PlunderGSC: 14
   categories:
   - StoreCategoryGSCWeapons
 
@@ -452,7 +452,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
   productEntity: EnergySword
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 2
   categories:
   - StoreCategoryGSCWeapons
 
