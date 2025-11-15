@@ -4,7 +4,11 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
+<<<<<<< HEAD
   time: 11/15/2025 21:07:19
+=======
+  time: 11/08/2025 15:08:21
+>>>>>>> master
   entityCount: 8551
 maps: []
 grids:
@@ -55712,7 +55716,11 @@ entities:
           occludes: True
           ents: []
     - type: Battery
+<<<<<<< HEAD
       startingCharge: 59076.305
+=======
+      startingCharge: 59119.137
+>>>>>>> master
     - type: ApcPowerReceiverBattery
       enabled: True
     - type: DeviceLinkSource
@@ -55754,7 +55762,11 @@ entities:
           occludes: True
           ents: []
     - type: Battery
+<<<<<<< HEAD
       startingCharge: 59076.305
+=======
+      startingCharge: 59119.137
+>>>>>>> master
     - type: ApcPowerReceiverBattery
       enabled: True
     - type: DeviceLinkSource
@@ -56176,7 +56188,11 @@ entities:
       pos: -1.5,-51.5
       parent: 1
     - type: Door
+<<<<<<< HEAD
       secondsUntilStateChange: -55035.88
+=======
+      secondsUntilStateChange: -55027.363
+>>>>>>> master
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -79788,49 +79804,49 @@ entities:
         2:
         - - Group3
           - SpaceArtilleryFire
-        8471:
-        - - Group5
-          - Toggle
-        8479:
-        - - Group5
-          - Toggle
-        8481:
-        - - Group5
-          - Toggle
-        8472:
-        - - Group5
-          - Toggle
-        8475:
-        - - Group5
-          - Toggle
-        8476:
-        - - Group5
-          - Toggle
-        8483:
-        - - Group5
-          - Toggle
-        8482:
+        8470:
         - - Group5
           - Toggle
         8478:
         - - Group5
           - Toggle
-        8477:
+        8480:
+        - - Group5
+          - Toggle
+        8471:
         - - Group5
           - Toggle
         8474:
         - - Group5
           - Toggle
-        8480:
+        8475:
         - - Group5
           - Toggle
-        8470:
+        8482:
         - - Group5
           - Toggle
-        8468:
+        8481:
+        - - Group5
+          - Toggle
+        8477:
+        - - Group5
+          - Toggle
+        8476:
+        - - Group5
+          - Toggle
+        8473:
+        - - Group5
+          - Toggle
+        8479:
         - - Group5
           - Toggle
         8469:
+        - - Group5
+          - Toggle
+        8467:
+        - - Group5
+          - Toggle
+        8468:
         - - Group5
           - Toggle
         6474:
@@ -79839,25 +79855,25 @@ entities:
         6473:
         - - Group5
           - Toggle
-        8473:
-        - - Group5
-          - Toggle
-        8486:
-        - - Group5
-          - Toggle
-        8484:
+        8472:
         - - Group5
           - Toggle
         8485:
         - - Group5
           - Toggle
-        8487:
+        8483:
+        - - Group5
+          - Toggle
+        8484:
+        - - Group5
+          - Toggle
+        8486:
+        - - Group5
+          - Toggle
+        8465:
         - - Group5
           - Toggle
         8466:
-        - - Group5
-          - Toggle
-        8467:
         - - Group5
           - Toggle
   - uid: 4542
@@ -79914,52 +79930,52 @@ entities:
         2:
         - - Group3
           - SpaceArtilleryFire
-        8469:
-        - - Group5
-          - Toggle
         8468:
         - - Group5
           - Toggle
-        8471:
+        8467:
         - - Group5
           - Toggle
-        8479:
-        - - Group5
-          - Toggle
-        8481:
-        - - Group5
-          - Toggle
-        8472:
-        - - Group5
-          - Toggle
-        8475:
-        - - Group5
-          - Toggle
-        8476:
-        - - Group5
-          - Toggle
-        8483:
-        - - Group5
-          - Toggle
-        8482:
+        8470:
         - - Group5
           - Toggle
         8478:
         - - Group5
           - Toggle
-        8477:
+        8480:
         - - Group5
           - Toggle
-        8473:
+        8471:
         - - Group5
           - Toggle
         8474:
         - - Group5
           - Toggle
-        8480:
+        8475:
         - - Group5
           - Toggle
-        8470:
+        8482:
+        - - Group5
+          - Toggle
+        8481:
+        - - Group5
+          - Toggle
+        8477:
+        - - Group5
+          - Toggle
+        8476:
+        - - Group5
+          - Toggle
+        8472:
+        - - Group5
+          - Toggle
+        8473:
+        - - Group5
+          - Toggle
+        8479:
+        - - Group5
+          - Toggle
+        8469:
         - - Group5
           - Toggle
         6474:
@@ -79968,22 +79984,22 @@ entities:
         6473:
         - - Group5
           - Toggle
-        8487:
-        - - Group5
-          - Toggle
-        8485:
+        8486:
         - - Group5
           - Toggle
         8484:
         - - Group5
           - Toggle
-        8486:
+        8483:
+        - - Group5
+          - Toggle
+        8485:
+        - - Group5
+          - Toggle
+        8465:
         - - Group5
           - Toggle
         8466:
-        - - Group5
-          - Toggle
-        8467:
         - - Group5
           - Toggle
 - proto: ComputerSurveillanceWirelessCameraMonitor
@@ -97284,64 +97300,64 @@ entities:
     - type: DeviceLinkSource
       range: 200
       linkedPorts:
-        8471:
-        - - Pressed
-          - Toggle
-        8486:
-        - - Pressed
-          - Toggle
-        8487:
-        - - Pressed
-          - Toggle
-        8479:
-        - - Pressed
-          - Toggle
-        8481:
-        - - Pressed
-          - Toggle
-        8472:
-        - - Pressed
-          - Toggle
-        8475:
-        - - Pressed
-          - Toggle
-        8476:
-        - - Pressed
-          - Toggle
-        8483:
-        - - Pressed
-          - Toggle
-        8482:
-        - - Pressed
-          - Toggle
-        8478:
-        - - Pressed
-          - Toggle
-        8477:
-        - - Pressed
-          - Toggle
-        8473:
-        - - Pressed
-          - Toggle
-        8474:
-        - - Pressed
-          - Toggle
-        8480:
-        - - Pressed
-          - Toggle
-        8484:
+        8470:
         - - Pressed
           - Toggle
         8485:
         - - Pressed
           - Toggle
-        8470:
+        8486:
         - - Pressed
           - Toggle
-        8468:
+        8478:
+        - - Pressed
+          - Toggle
+        8480:
+        - - Pressed
+          - Toggle
+        8471:
+        - - Pressed
+          - Toggle
+        8474:
+        - - Pressed
+          - Toggle
+        8475:
+        - - Pressed
+          - Toggle
+        8482:
+        - - Pressed
+          - Toggle
+        8481:
+        - - Pressed
+          - Toggle
+        8477:
+        - - Pressed
+          - Toggle
+        8476:
+        - - Pressed
+          - Toggle
+        8472:
+        - - Pressed
+          - Toggle
+        8473:
+        - - Pressed
+          - Toggle
+        8479:
+        - - Pressed
+          - Toggle
+        8483:
+        - - Pressed
+          - Toggle
+        8484:
         - - Pressed
           - Toggle
         8469:
+        - - Pressed
+          - Toggle
+        8467:
+        - - Pressed
+          - Toggle
+        8468:
         - - Pressed
           - Toggle
         6473:
@@ -97350,10 +97366,10 @@ entities:
         6474:
         - - Pressed
           - Toggle
-        8466:
+        8465:
         - - Pressed
           - Toggle
-        8467:
+        8466:
         - - Pressed
           - Toggle
   - uid: 6985
@@ -97367,61 +97383,61 @@ entities:
     - type: DeviceLinkSource
       range: 200
       linkedPorts:
+        8467:
+        - - Pressed
+          - Toggle
         8468:
         - - Pressed
           - Toggle
-        8469:
-        - - Pressed
-          - Toggle
-        8471:
-        - - Pressed
-          - Toggle
-        8486:
-        - - Pressed
-          - Toggle
-        8487:
-        - - Pressed
-          - Toggle
-        8481:
-        - - Pressed
-          - Toggle
-        8472:
-        - - Pressed
-          - Toggle
-        8475:
-        - - Pressed
-          - Toggle
-        8476:
-        - - Pressed
-          - Toggle
-        8483:
-        - - Pressed
-          - Toggle
-        8482:
-        - - Pressed
-          - Toggle
-        8478:
-        - - Pressed
-          - Toggle
-        8477:
-        - - Pressed
-          - Toggle
-        8473:
-        - - Pressed
-          - Toggle
-        8474:
-        - - Pressed
-          - Toggle
-        8480:
-        - - Pressed
-          - Toggle
-        8484:
+        8470:
         - - Pressed
           - Toggle
         8485:
         - - Pressed
           - Toggle
-        8470:
+        8486:
+        - - Pressed
+          - Toggle
+        8480:
+        - - Pressed
+          - Toggle
+        8471:
+        - - Pressed
+          - Toggle
+        8474:
+        - - Pressed
+          - Toggle
+        8475:
+        - - Pressed
+          - Toggle
+        8482:
+        - - Pressed
+          - Toggle
+        8481:
+        - - Pressed
+          - Toggle
+        8477:
+        - - Pressed
+          - Toggle
+        8476:
+        - - Pressed
+          - Toggle
+        8472:
+        - - Pressed
+          - Toggle
+        8473:
+        - - Pressed
+          - Toggle
+        8479:
+        - - Pressed
+          - Toggle
+        8483:
+        - - Pressed
+          - Toggle
+        8484:
+        - - Pressed
+          - Toggle
+        8469:
         - - Pressed
           - Toggle
         6473:
@@ -97430,13 +97446,13 @@ entities:
         6474:
         - - Pressed
           - Toggle
-        8467:
-        - - Pressed
-          - Toggle
         8466:
         - - Pressed
           - Toggle
-        8479:
+        8465:
+        - - Pressed
+          - Toggle
+        8478:
         - - Pressed
           - Toggle
 - proto: ResearchAndDevelopmentServerImperial
@@ -107029,16 +107045,16 @@ entities:
   - uid: 8452
     components:
     - type: Transform
-      pos: -12.5,10.5
+      pos: 13.4649315,10.475384
       parent: 1
-  - uid: 8453
+  - uid: 8551
     components:
     - type: Transform
-      pos: 13.5,10.5
+      pos: -12.561244,10.451946
       parent: 1
 - proto: WeaponPistolCHIMPUpgraded
   entities:
-  - uid: 8454
+  - uid: 8453
     components:
     - type: Transform
       pos: 26.790598,-28.283342
@@ -107059,19 +107075,19 @@ entities:
     - type: InsideEntityStorage
 - proto: WeaponPistolNeoVolker
   entities:
-  - uid: 8455
+  - uid: 8454
     components:
     - type: Transform
       pos: 2.515625,1.0193563
       parent: 1
-  - uid: 8456
+  - uid: 8455
     components:
     - type: Transform
       pos: 2.3463502,-42.493717
       parent: 1
 - proto: WeaponRevolverArgentiSecurity
   entities:
-  - uid: 8457
+  - uid: 8456
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107090,25 +107106,25 @@ entities:
     - type: InsideEntityStorage
 - proto: WeaponRifleMiller
   entities:
-  - uid: 8458
+  - uid: 8457
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4614525,-41.747112
       parent: 1
-  - uid: 8459
+  - uid: 8458
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4755316,-41.878807
       parent: 1
-  - uid: 8460
+  - uid: 8459
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4755316,-42.034904
       parent: 1
-  - uid: 8461
+  - uid: 8460
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107116,25 +107132,25 @@ entities:
       parent: 1
 - proto: WeaponSubMachineGunC20r
   entities:
-  - uid: 8462
+  - uid: 8461
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4467368,-41.151325
       parent: 1
-  - uid: 8463
+  - uid: 8462
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4467368,-41.307575
       parent: 1
-  - uid: 8464
+  - uid: 8463
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.4311118,-41.588825
       parent: 1
-  - uid: 8465
+  - uid: 8464
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107142,7 +107158,7 @@ entities:
       parent: 1
 - proto: WeaponTurretAutoPDDSM
   entities:
-  - uid: 8466
+  - uid: 8465
     components:
     - type: Transform
       pos: -19.5,36.5
@@ -107153,7 +107169,7 @@ entities:
       - 4542
       - 6985
       - 6984
-  - uid: 8467
+  - uid: 8466
     components:
     - type: Transform
       pos: 20.5,36.5
@@ -107164,7 +107180,7 @@ entities:
       - 4542
       - 6985
       - 6984
-  - uid: 8468
+  - uid: 8467
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107176,7 +107192,7 @@ entities:
       - 4542
       - 6984
       - 6985
-  - uid: 8469
+  - uid: 8468
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107188,7 +107204,7 @@ entities:
       - 4542
       - 6984
       - 6985
-  - uid: 8470
+  - uid: 8469
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107202,7 +107218,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8471
+  - uid: 8470
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107216,7 +107232,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8472
+  - uid: 8471
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107230,7 +107246,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8473
+  - uid: 8472
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107244,7 +107260,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8474
+  - uid: 8473
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107258,7 +107274,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8475
+  - uid: 8474
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107272,7 +107288,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8476
+  - uid: 8475
     components:
     - type: Transform
       pos: 12.5,-52.5
@@ -107285,7 +107301,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8477
+  - uid: 8476
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107299,7 +107315,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8478
+  - uid: 8477
     components:
     - type: Transform
       pos: -11.5,-52.5
@@ -107312,7 +107328,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8479
+  - uid: 8478
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107326,7 +107342,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8480
+  - uid: 8479
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107340,7 +107356,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8481
+  - uid: 8480
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107354,7 +107370,7 @@ entities:
       - 6985
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8482
+  - uid: 8481
     components:
     - type: Transform
       pos: -5.5,-56.5
@@ -107365,7 +107381,7 @@ entities:
       - 4542
       - 6984
       - 6985
-  - uid: 8483
+  - uid: 8482
     components:
     - type: Transform
       pos: 6.5,-56.5
@@ -107376,7 +107392,7 @@ entities:
       - 4542
       - 6984
       - 6985
-  - uid: 8484
+  - uid: 8483
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107388,7 +107404,7 @@ entities:
       - 4541
       - 6984
       - 6985
-  - uid: 8485
+  - uid: 8484
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107400,7 +107416,7 @@ entities:
       - 4541
       - 6984
       - 6985
-  - uid: 8486
+  - uid: 8485
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107412,7 +107428,7 @@ entities:
       - 4542
       - 6984
       - 6985
-  - uid: 8487
+  - uid: 8486
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107426,7 +107442,7 @@ entities:
       - 6985
 - proto: WeaponTurretPDTAdvanced
   entities:
-  - uid: 8488
+  - uid: 8487
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107448,7 +107464,7 @@ entities:
           ents: []
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8489
+  - uid: 8488
     components:
     - type: Transform
       pos: -21.5,-40.5
@@ -107469,7 +107485,7 @@ entities:
           ents: []
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8490
+  - uid: 8489
     components:
     - type: Transform
       pos: 22.5,-40.5
@@ -107490,7 +107506,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8491
+  - uid: 8490
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107512,7 +107528,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8492
+  - uid: 8491
     components:
     - type: Transform
       pos: -21.5,36.5
@@ -107533,7 +107549,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8493
+  - uid: 8492
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107555,7 +107571,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8494
+  - uid: 8493
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107577,7 +107593,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8495
+  - uid: 8494
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107599,7 +107615,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8496
+  - uid: 8495
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107621,7 +107637,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8497
+  - uid: 8496
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107643,7 +107659,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8498
+  - uid: 8497
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107665,7 +107681,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8499
+  - uid: 8498
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107687,7 +107703,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8500
+  - uid: 8499
     components:
     - type: Transform
       pos: 22.5,36.5
@@ -107708,7 +107724,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8501
+  - uid: 8500
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107730,7 +107746,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8502
+  - uid: 8501
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107752,7 +107768,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8503
+  - uid: 8502
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -107774,7 +107790,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8504
+  - uid: 8503
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107796,7 +107812,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8505
+  - uid: 8504
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107818,7 +107834,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8506
+  - uid: 8505
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107840,7 +107856,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8507
+  - uid: 8506
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107862,7 +107878,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8508
+  - uid: 8507
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107884,7 +107900,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8509
+  - uid: 8508
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107906,7 +107922,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8510
+  - uid: 8509
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107928,7 +107944,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8511
+  - uid: 8510
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107950,7 +107966,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8512
+  - uid: 8511
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -107972,7 +107988,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8513
+  - uid: 8512
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -107994,7 +108010,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8514
+  - uid: 8513
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -108016,7 +108032,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8515
+  - uid: 8514
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -108038,7 +108054,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8516
+  - uid: 8515
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -108060,7 +108076,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-  - uid: 8517
+  - uid: 8516
     components:
     - type: Transform
       pos: 0.5,-57.5
@@ -108081,7 +108097,7 @@ entities:
           ents: []
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8518
+  - uid: 8517
     components:
     - type: Transform
       pos: -3.5,-57.5
@@ -108102,7 +108118,7 @@ entities:
           ents: []
     - type: PointCannon
       linkedConsoleId: 4552
-  - uid: 8519
+  - uid: 8518
     components:
     - type: Transform
       pos: 4.5,-57.5
@@ -108125,37 +108141,37 @@ entities:
       linkedConsoleId: 4552
 - proto: WelderIndustrial
   entities:
-  - uid: 8520
+  - uid: 8519
     components:
     - type: Transform
       pos: -13.5,7.5
       parent: 1
-  - uid: 8521
+  - uid: 8520
     components:
     - type: Transform
       pos: 14.5,7.5
       parent: 1
 - proto: WeldingFuelTankFull
   entities:
-  - uid: 8522
+  - uid: 8521
     components:
     - type: Transform
       pos: -14.5,22.5
       parent: 1
-  - uid: 8523
+  - uid: 8522
     components:
     - type: Transform
       pos: 15.5,22.5
       parent: 1
 - proto: Windoor
   entities:
-  - uid: 8524
+  - uid: 8523
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,-53.5
       parent: 1
-  - uid: 8525
+  - uid: 8524
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -108163,66 +108179,66 @@ entities:
       parent: 1
 - proto: WindoorSecure
   entities:
-  - uid: 8526
+  - uid: 8525
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -9.5,-27.5
       parent: 1
-  - uid: 8527
+  - uid: 8526
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -9.5,-26.5
       parent: 1
-  - uid: 8528
+  - uid: 8527
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 26.5,-31.5
       parent: 1
-  - uid: 8529
+  - uid: 8528
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.5,-36.5
       parent: 1
-  - uid: 8530
+  - uid: 8529
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-36.5
       parent: 1
-  - uid: 8531
+  - uid: 8530
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-36.5
       parent: 1
-  - uid: 8532
+  - uid: 8531
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,-36.5
       parent: 1
-  - uid: 8533
+  - uid: 8532
     components:
     - type: Transform
       rot: 3.141592653589793 rad
+      pos: 24.5,-19.5
+      parent: 1
+  - uid: 8533
+    components:
+    - type: Transform
       pos: 24.5,-19.5
       parent: 1
   - uid: 8534
     components:
     - type: Transform
-      pos: 24.5,-19.5
-      parent: 1
-  - uid: 8535
-    components:
-    - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-54.5
       parent: 1
-  - uid: 8536
+  - uid: 8535
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -108230,23 +108246,23 @@ entities:
       parent: 1
 - proto: WindowReinforcedDirectional
   entities:
-  - uid: 8537
+  - uid: 8536
     components:
     - type: Transform
       pos: 12.5,-21.5
       parent: 1
-  - uid: 8538
+  - uid: 8537
     components:
     - type: Transform
       pos: 14.5,-21.5
       parent: 1
-  - uid: 8539
+  - uid: 8538
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,-53.5
       parent: 1
-  - uid: 8540
+  - uid: 8539
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -108254,49 +108270,49 @@ entities:
       parent: 1
 - proto: WindowTintedDirectional
   entities:
-  - uid: 8541
+  - uid: 8540
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 23.5,-39.5
       parent: 1
-  - uid: 8542
+  - uid: 8541
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 17.5,41.5
       parent: 1
-  - uid: 8543
+  - uid: 8542
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -16.5,41.5
       parent: 1
-  - uid: 8544
+  - uid: 8543
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 12.5,-52.5
       parent: 1
-  - uid: 8545
+  - uid: 8544
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 16.5,-48.5
       parent: 1
-  - uid: 8546
+  - uid: 8545
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -15.5,-48.5
       parent: 1
-  - uid: 8547
+  - uid: 8546
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -11.5,-52.5
       parent: 1
-  - uid: 8548
+  - uid: 8547
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -108304,7 +108320,7 @@ entities:
       parent: 1
 - proto: Wirecutter
   entities:
-  - uid: 8549
+  - uid: 8548
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -108312,7 +108328,7 @@ entities:
       parent: 1
 - proto: WorkbenchHeavy
   entities:
-  - uid: 8550
+  - uid: 8549
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -108320,7 +108336,7 @@ entities:
       parent: 1
 - proto: Wrench
   entities:
-  - uid: 8551
+  - uid: 8550
     components:
     - type: Transform
       pos: -21.759302,-13.40596
