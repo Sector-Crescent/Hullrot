@@ -48,7 +48,7 @@ job-description-surgeon = Tend to the bodily ails of your comrades.
 job-description-advocatus = Scrutinise the loyalty of your liege, the Kaiser's subjects. Question violators of His will. Ensure compliance to the Mandate.
 job-description-advocatustemplar = Protect the Advocatus and carry out their will. Ensure compliance to the Mandate.
 
-# srm#
+# srm
 
 job-description-tender = Tend to the wounds of your comrades. Tend to the vessels of the Saint. Carry out menial chores.
 job-description-apprenticehunter = Learn the Hunt from your assigned Master Hunter.
@@ -64,7 +64,7 @@ job-description-corpsec = Secure assets of the Corporation. Detain unruly custom
 job-description-highsec = Secure the military interests of the Corporation. Respond to high-risk missions.
 job-description-employee = Serve in various departments of the Corporation.
 job-description-medtech = Research and develop new technologies, tend to the ailments of employees.
-job-description-boardhr = Ensure the compliance of corporate law is being respected.
+job-description-boardhr = Ensure Corporate Standards are being met alongside with handling public relations.
 job-description-hos-shi = Organize the security force of the corporation.
 
 # cmm
@@ -109,8 +109,8 @@ job-description-arbeiter = The industrial life blood of the Authoritat. Follow t
 # misc
 
 job-description-spacer = Be an independent citizen of Taypan.
-job-description-gliess-sheriff = Keep the law in Gliess Santo.
-job-description-gliess-deputy = Assist the Sheriff in keeping the law in Gliess Santo.
+job-description-gliess-sheriff = Maintain law and order on Gliess Santo. Organize your militia, and protect the independent civilians of Taypan.
+job-description-gliess-deputy = Assist the Sheriff in keeping the law. Defend independent spacers and maintain peace with much bigger fish.
 job-description-gliess-dockmaster = Make sure nobody blows up your station.
 job-description-dockhand = Assist the Dockmaster in upkeeping Gliess Santo.
 
