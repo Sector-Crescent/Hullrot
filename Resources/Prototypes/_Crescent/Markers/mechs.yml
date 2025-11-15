@@ -1,0 +1,105 @@
+# Imperial
+
+- type: entity
+  name: IEE mV-400 Wanderer scout mechsuit Spawner
+  id: CrescentSpawnMechDSMWanderer
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: wanderer
+  - type: ConditionalSpawner
+    prototypes:
+      - MechDSMWandererBattery
+
+- type: entity
+  name: IEE mV-500 Paladin combat mechsuit Spawner
+  id: CrescentSpawnMechDSMPaladin
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: paladin
+  - type: ConditionalSpawner
+    prototypes:
+      - MechDSMPaladinBattery
+
+- type: entity
+  name: IEE m-V30 Carrion utility mechsuit Spawner
+  id: CrescentSpawnMechDSMCarrion
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: carrion
+  - type: ConditionalSpawner
+    prototypes:
+      - MechDSMCarrionBattery
+
+# NCWL
+
+- type: entity
+  name: HNF mk.I Lancer hybrid mechsuit Spawner
+  id: CrescentSpawnMechNCWLLancer
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: lancer
+  - type: ConditionalSpawner
+    prototypes:
+      - MechNCWLLancerBattery
+
+- type: entity
+  name: HNF mk.II Bogatyr combat mechsuit Spawner
+  id: CrescentSpawnMechNCWLBogatyr
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: bogatyr
+  - type: ConditionalSpawner
+    prototypes:
+      - MechNCWLBogatyrBattery
+
+# TFSC
+
+- type: entity
+  name: GSC T-97 Marauder light combat mechsuit Spawner
+  id: CrescentSpawnMechGSCMarauder
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: marauder
+  - type: ConditionalSpawner
+    prototypes:
+      - MechGSCMarauderBattery
+
+#SHI
+
+- type: entity
+  name: SHI mR-815 Gilgamesh siege mechsuit Spawner
+  id: CrescentSpawnMechSHIGilgamesh
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Crescent/Objects/Specific/mecha.rsi
+        state: gilgamesh
+  - type: ConditionalSpawner
+    prototypes:
+      - MechSHIGilgameshBattery
