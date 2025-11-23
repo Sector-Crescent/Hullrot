@@ -19,6 +19,26 @@
         - WorkerNCWL
 
 - type: loadout
+  id: LoadoutOuterArmorNCWLLightCarapace
+  category: Outer
+  cost: 1
+  items:
+    - ClothingOuterArmorNCWLLightBodyarmor
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - CommandantNCWL
+        - KommissarNCWL
+        - FleetkapitanNCWL
+        - PartisanNCWL
+        - DoctorNCWL
+        - CoordinatorNCWL
+        - ArtificerNCWL
+        - WorkerNCWL
+
+- type: loadout
   id: LoadoutOuterArmorNCWLCarapaceDoktor
   category: Outer
   cost: 2
