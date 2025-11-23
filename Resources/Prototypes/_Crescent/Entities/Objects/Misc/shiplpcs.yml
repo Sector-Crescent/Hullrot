@@ -327,40 +327,6 @@
   - type: ShipVoucher
     ship: Lodka
 
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherCherenzikov
-  name: NCWL 'Cherenzikov' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Cherenzikov-class light gunship pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 36000
-  - type: ShipVoucher
-    ship: Cherenzikov
-
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherShakh
-  name: NCWL 'Shakh' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Shakh-class mining corvette pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 18500
-  - type: ShipVoucher
-    ship: Shakh
-
 #T0 END
 
 
