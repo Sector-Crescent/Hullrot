@@ -2,7 +2,7 @@
   parent: SimpleMobBase
   id: MobPibble
   name: pitbull
-  description: Nanny dog. Or a lab mix depending on who is asking.
+  description: Nanny dog. Or a lab mix depending on who is asking. Will probably maul a felinid.
   components:
   - type: MeleeWeapon
     hidden: true
@@ -12,10 +12,13 @@
     animation: WeaponArcBite
     damage:
       types:
-        Slash: 4
-        Piercing: 8
-        Blunt: 1
-        Structural: 4
+        Slash: 16
+        Piercing: 16
+        Blunt: 4
+        Structural: 16
+  - type: GhostTakeoverAvailable
+  - type: InteractionPopup
+    successChance: 1
   - type: MobState
   - type: Sprite
     drawdepth: Mobs
