@@ -280,7 +280,9 @@
   - type: Clothing
     sprite: DeltaV/Objects/Weapons/Guns/Shotguns/sawn.rsi # Delta-V
   - type: Item
-    size: Small
+    size: Normal
+    shape:
+    - 0,0,2,0
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
     fireRate: 4
@@ -312,7 +314,7 @@
     proto: ShellShotgunLumen
 
 - type: entity
-  name: sawn-off shogun
+  name: sawn-off shotgun
   parent: WeaponShotgunSawn
   id: WeaponShotgunSawnEmpty
   description: Groovy! Uses .50 shotgun shells.
