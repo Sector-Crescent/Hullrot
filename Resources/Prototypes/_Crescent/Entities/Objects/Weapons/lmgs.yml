@@ -432,16 +432,6 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
-  - type: Gun
-    minAngle: 12
-    maxAngle: 32
-    angleIncrease: 4
-    angleDecay: 16
-    fireRate: 9
-    damageModifier: 1.20
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -460,3 +450,23 @@
         whitelist:
           tags:
             - CartridgeRifle
+  - type: Gun
+    minAngle: 12
+    maxAngle: 28
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 9
+    damageModifier: 1.20
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/gunshot.ogg
+  - type: StaticPrice
+    price: 4800
+  - type: ExtendDescription
+    descriptionList:
+      - description: This LMG comes with a longer barrel. It deals 20% higher damage per shot.
+        fontSize: 12
+        color: "#ff4f00"
+        requireDetailRange: false
