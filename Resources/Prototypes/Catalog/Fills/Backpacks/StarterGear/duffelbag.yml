@@ -22,7 +22,6 @@
       - id: EmergencyRollerBedSpawnFolded
       - id: BodyBagFolded
       - id: Portafib
-    #  - id: Flash
       - id: BruteAutoInjector
         amount: 2
       - id: BurnAutoInjector
@@ -68,7 +67,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- name: StationCharter
       #- name: TelescopicBaton
 
@@ -79,7 +77,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- id: TelescopicBaton
 
 - type: entity
@@ -89,7 +86,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- id: TelescopicBaton
 
 - type: entity
@@ -99,7 +95,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- id: TelescopicBaton
 
 - type: entity
@@ -109,7 +104,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- id: TelescopicBaton
 
 - type: entity
@@ -119,7 +113,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       #- id: TelescopicBaton
 
 - type: entity
@@ -129,7 +122,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: Flash
       - id: MagazinePistol
 
 - type: entity
