@@ -12,6 +12,15 @@
     - Cherenzikov
 
 - type: entity
+  id: NCWLCivMothershipComputer
+  parent: BaseMothershipComputer
+  name: NCWL worker shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Shakh
+
+- type: entity
   id: JackalMothershipComputer
   parent: BaseMothershipComputer
   name: GSC shipyard

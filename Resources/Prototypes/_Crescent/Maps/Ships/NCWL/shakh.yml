@@ -1,0 +1,32 @@
+# Author Info
+# Discord: @fullofautism_
+
+- type: vessel
+  id: Shakh
+  name: NCWL Shakh
+  description: An antiquated mining corvette design, dating back to the pre-collapse era. Taken from captured Imperial archives and manufactured for the Taypani Logistics Union.
+  price: 22000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/shakh.yml
+
+- type: gameMap
+  id: Shakh
+  mapName: 'NCWL Shakh'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/shakh.yml
+  minPlayers: 0
+  stations:
+    Shakh:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Shakh {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
