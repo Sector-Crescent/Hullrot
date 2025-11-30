@@ -143541,13 +143541,15 @@ entities:
     - type: Transform
       pos: -18.5,-17.5
       parent: 1
-- proto: ComputerShipyardCrescent
+- proto: NCWLCivMothershipComputer
   entities:
   - uid: 3616
     components:
     - type: Transform
       pos: 0.5,-6.5
       parent: 1
+- proto: ComputerShipyardCrescent
+  entities:
   - uid: 3617
     components:
     - type: Transform
