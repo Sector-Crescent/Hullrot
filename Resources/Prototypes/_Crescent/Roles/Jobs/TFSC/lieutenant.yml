@@ -11,6 +11,10 @@
   supervisors: You answer to the Ringleader.
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterOverallTimeRequirement
       min: 30000
     - !type:FactionRequirement
@@ -26,6 +30,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-boss
+      - type: HullrotFaction
+        faction: GSC
       - type: LanguageAdder
         addSpoken:
           - Freespeak
@@ -83,3 +89,4 @@
     id: LieutenantPDA
     ears: ClothingHeadsetNCSP
     belt: WeaponPistolViperWood
+    pocket2: ClothingMaskGasSyndicate

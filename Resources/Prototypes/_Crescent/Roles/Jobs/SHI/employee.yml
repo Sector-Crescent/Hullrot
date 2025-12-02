@@ -11,18 +11,26 @@
   supervisors: job-supervisors-shi
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
+    - !type:CharacterOverallTimeRequirement
+      min: 0
     - !type:FactionRequirement
-        factionID: "SHI"
+      factionID: "SHI"
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
-        - Muted
+        - Blindness
         - WheelchairBound
   special:
   - !type:AddComponentSpecial
     components:
       - type: ChatRank
         rank: crescent-rank-shi-employee
+      - type: HullrotFaction
+        faction: SHI
       - type: LanguageAdder
         addSpoken:
           - Kaishago

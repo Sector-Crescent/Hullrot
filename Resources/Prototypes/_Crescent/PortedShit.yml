@@ -222,30 +222,6 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
-
-
-- type: entity
-  id: MagazineHeavyRifle
-  name: 16-round heavy magazine (12.7×99mm USM)
-  parent: BaseMagazineHeavyRifle
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeHeavyRifle
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/heavy_mag.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false
-  - type: MagazineVisuals
-    magState: mag
-    steps: 3
-    zeroVisible: false
-  - type: Appearance
-
-
 - type: entity
   id: SpeedLoaderRifleHeavy
   name: "speed loader (5.56x45mm)"
@@ -423,6 +399,11 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Storage
+    whitelist:
+      tags:
+        - ArtifactFragment
+        - Ore
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -502,8 +483,8 @@
     - 0.4, 0.6
   clippedValue: 1.658 # magic number for chunk size.
   inputMultiplier: 10 # Makes density hopefully low noise in the local area while still being interesting at scale.
-  outputMultiplier: 50.0 # We scale density up significantly for more human-friendly numbers.
-  minimum: 45.0
+  outputMultiplier: 75.0 # Increased from 50.0 to 75.0 for more debris
+  minimum: 60.0 # Increased from 45.0 to 60.0 for higher base density
 
 - type: noiseChannel
   id: WreckGraveyard

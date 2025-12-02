@@ -1,6 +1,6 @@
 - type: entity
   name: hunter's vibrokhopesh
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableHigh]
   id: SRMKhopesh
   description: A ceremonial weapon belonging to the Hunters.
   components:
@@ -49,14 +49,16 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -45
-    attackRate: 0.85
+    autoAttack: true
+    attackRate: 0.3 #You are a fucking psycho with blades for arms, same speed as a drill.
+    range: 1.25 #Longer reach than with fists, but not longer than an actual sword
     damage:
       types:
-        Slash: 28
+        Slash: 45
         Structural: 20
-    heavyDamageBaseModifier: 1
-    heavyStaminaCost: 10
-    heavyRateModifier: 1.3
+    heavyDamageBaseModifier: 1.25
+    heavyStaminaCost: 5
+    heavyRateModifier: 1
     clickPartDamageMultiplier: 2
     heavyPartDamageMultiplier: 1.3
     lightRangeModifier: 1.4
@@ -82,7 +84,7 @@
 
 - type: entity
   name: noble's rapier
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableLow]
   id: DSMRapier
   description: A ceremonial dueling weapon belonging to the nobles of the mandate.
   components:
@@ -120,7 +122,7 @@
 
 - type: entity
   name: noble's sabre
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableLow]
   id: DSMSabre
   description: A ceremonial weapon belonging to the nobles of the mandate.
   components:
@@ -158,8 +160,23 @@
   - type: DisarmMalus
 
 - type: entity
+  parent: [NCWLLugBaton, StreeCredRedeemableLow]
+  id: DSMBaton
+  name: noble's baton
+  description: An Imperial weapon used to make sure the lowerclasses stay in-line.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Melee/noble_baton.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Melee/noble_baton.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: entity
   name: homeguard lug baton
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableLow]
   id: NCWLLugBaton
   description: Disdaining the fragile electrotaser or shock batons of more "advanced" polities, the League opts for a hard wearing steel core rod with two lug nuts fixed at the head. More mace than baton, few lumpenproles risk being struck twice.
   components:
@@ -207,7 +224,7 @@
 
 - type: entity
   name: shinohara corporate katana
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableLow]
   id: SHIKatana
   description: The result of corporate think-tank focus groups, the Shinohara Industrial Handheld Cutting Device is legally considered a kitchen implement, not a weapon. It is marketed as the cost-effective choice for a thrifty consumer intending to keep a tight budget and still appeal to style - and when a corpsec agent finds themselves unable to afford more ammunition renewals, there is the option of falling on this standard issue kitchen implement rather than void their contract by willingly refusing to engage a noncompliant customer.
   components:
@@ -246,7 +263,7 @@
 
 - type: entity
   name: SHI-RIP9 cherenzikov shiver blade
-  parent: SHIKatana
+  parent: [SHIKatana, StreeCredRedeemable]
   id: SHIKatanaShiverBlade
   description: Combining cutting-edge contained plasma field technology with elegant neomilitarism, the RIP9 Cherenzikov is a favourite of SHI Liquidation agents and penthouse PMCs across known space. Don't just kill your enemy - make a statement. Shinohara Industrial™.
   components:
@@ -255,20 +272,21 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -90
-    attackRate: 0.85
+    attackRate: 0.75
     damage:
       types:
-        Slash: 38
-    heavyRateModifier: 1
+        Slash: 42 #Direct counter to vibro and has same damage as the double esword
+    heavyRateModifier: 1.25 #Lighter weapon, makes up lower reflect chance with high speed
   - type: Item
     size: Normal
     sprite: _Crescent/Objects/Weapons/Melee/shiverblade.rsi
   - type: DashAbility
+    allowDashToUnseen: true
   - type: LimitedCharges
-    maxCharges: 1
+    maxCharges: 3
     charges: 1
   - type: AutoRecharge
-    rechargeDuration: 180
+    rechargeDuration: 30
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Melee/shiverblade.rsi
     slots:
@@ -285,7 +303,7 @@
 
 - type: entity
   name: dueling khopesh
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableLow]
   id: DSMDuelingKhopesh
   description: Typically relegated to a ceremonial weapon, the steel dueling khopesh saw widespread revival among Saintsworn aristocrats after the death of Romaine. The curved design allows a canny swordsman to work their way past an enemy's guard and deliver heavy chopping blows.
   components:
@@ -320,7 +338,7 @@
 
 - type: entity
   name: chengridz jaeger's vibrokukri
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemableHigh]
   id: NCWLKukri
   description: Taking the shape of a worker's tool, this vibro-alloy kukri is Chengridz's attempt at replicating the Sixth Subjugation Fireteam's signature weapon, following stolen Imperial blueprints.
   components:
@@ -363,3 +381,70 @@
     tags:
     - Kukri
   - type: DisarmMalus
+
+- type: entity
+  name: zweihander
+  parent: [ BaseItem , StreeCredRedeemable ]
+  id: ZweihanderDSM
+  description: An ancient Terran weapon, its use in the Mandate persists more out of tradition than practicality; too long for the tight corridors of a ship. But it’s no simple blade, forged with precise machinery out of the strongest alloys; it’s sharp enough to cut through even the thickest hardsuit. In the hands of a skilled swordsman, it’s a deadly weapon.
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Melee/zweihander.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 200
+    swingLeft: true
+    attackRate: 1.5
+    range: 2
+    damage:
+      types:
+        Slash: 15 # es heist das ZWEI hander, hanz # LARP
+    heavyDamageBaseModifier: 0.8
+    heavyStaminaCost: 20
+    heavyRateModifier: 1.167 # 1.75 attack rate with 1.5 base
+    clickPartDamageMultiplier: 1.2 # Any higher and it oblitorates limbs
+    maxTargets: 3
+    angle: 100
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 55
+        Piercing: 20
+    staminaCost: 50
+  - type: ThrowingAngle
+    angle: 225
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+  - type: EmbedPassiveDamage
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 75
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Melee/zweihander.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+  - type: Tool
+    qualities:
+      - Prying
+  - type: ToolTileCompatible
+  - type: Prying
+  - type: UseDelay
+    delay: 1
+  - type: Scalpel
+    speed: 0.3
+  - type: BoneSaw
+    speed: 0.5
+  - type: SurgeryTool
+    startSound:
+      path: /Audio/Weapons/bladeslice.ogg

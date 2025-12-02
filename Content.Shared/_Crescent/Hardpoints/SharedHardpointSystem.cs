@@ -2,6 +2,7 @@ using System.Reflection.Metadata.Ecma335;
 using Content.Shared.Construction;
 using Content.Shared.Construction.Components;
 using Content.Shared.Construction.EntitySystems;
+using Content.Shared.Destructible;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map.Components;
@@ -28,6 +29,8 @@ public class SharedHardpointSystem : EntitySystem
         SubscribeLocalEvent<HardpointAnchorableOnlyComponent, AnchorStateChangedEvent>(OnAnchorChange);
         SubscribeLocalEvent<HardpointAnchorableOnlyComponent, MapInitEvent>(OnMapLoad);
         SubscribeLocalEvent<HardpointComponent, AnchorStateChangedEvent>(OnHardpointAnchor);
+        SubscribeLocalEvent<HardpointAnchorableOnlyComponent, ComponentRemove>(OnShipgunRemove);
+        // TODO: ACCOUNT FOR REMOVING IT IN ADMIN MODE
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("crescent.hardpoints");
     }
 
@@ -46,7 +49,7 @@ public class SharedHardpointSystem : EntitySystem
         //otherwise, targeting computers do not see turrets. only sometimes.
         if (_entMan.GetComponent<MetaDataComponent>(uid).EntityLifeStage != EntityLifeStage.MapInitialized)
             return;
-        _sawmill.Debug("ON ANCHOR CHANGE RAN" + args.Anchored.ToString());
+        //_sawmill.Debug("ON ANCHOR CHANGE RAN" + args.Anchored.ToString());
         //LOGIC:
         /*
         "im a shipgun"
@@ -98,10 +101,10 @@ public class SharedHardpointSystem : EntitySystem
 
     public void Deanchor(EntityUid target, EntityUid anchor, EntityUid grid, HardpointAnchorableOnlyComponent component)
     {
-        _sawmill.Debug("DEANCHOR RAN");
+        //_sawmill.Debug("DEANCHOR RAN");
         if (component.anchoredTo is null)
         {
-            _sawmill.Debug($"SharedHardpointSystem had a anchored entity that wasn't attached to a hardpoint!");
+            //_sawmill.Debug($"SharedHardpointSystem had a anchored entity that wasn't attached to a hardpoint!");
             return;
         }
         var hardpointComp = Comp<HardpointComponent>(component.anchoredTo.Value);
@@ -118,6 +121,35 @@ public class SharedHardpointSystem : EntitySystem
     }
 
     /// <summary>
+    /// this is used for when shipguns are destroyed, but this ALSO runs when the grid is deleted. 
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
+    public void OnShipgunRemove(EntityUid uid, HardpointAnchorableOnlyComponent component, ComponentRemove args)
+    {
+        if (component.anchoredTo is null)
+        {
+            return;
+        }
+        var gridUid = Transform(component.anchoredTo.Value).GridUid;
+        if (gridUid is null)
+            return;
+        var hardpointComp = Comp<HardpointComponent>(component.anchoredTo.Value);
+        var hardpointUid = component.anchoredTo.Value;
+        hardpointComp.anchoring = null;
+        HardpointCannonDeanchoredEvent arg = new();
+        arg.CannonUid = uid;
+        arg.gridUid = gridUid.Value;
+        RaiseLocalEvent(hardpointUid, arg);
+        component.anchoredTo = null;
+        DirtyEntity(uid);
+        DirtyEntity(hardpointUid);
+        //Dirty(arg.CannonUid, component);
+    }
+
+
+    /// <summary>
     /// Returns true/false based on if we are able to anchor something here or not.
     /// TRUE: we're good to anchor here, hardpoint fits/exists.
     /// FALSE: there is no hardpoint/it's of the wrong type
@@ -127,7 +159,7 @@ public class SharedHardpointSystem : EntitySystem
     /// <returns></returns>
     public bool TryAnchorToHardpoint(EntityUid uid, HardpointAnchorableOnlyComponent component)
     {
-        _sawmill.Debug("TRY ANCHOR TO HARDPOINT RAN");
+        //_sawmill.Debug("TRY ANCHOR TO HARDPOINT RAN");
         var gridUid = Transform(uid).GridUid;
         if (gridUid is null)
             return false;
@@ -157,7 +189,7 @@ public class SharedHardpointSystem : EntitySystem
 
     public void AnchorEntityToHardpoint(EntityUid target, EntityUid anchor, HardpointAnchorableOnlyComponent targetComp, HardpointComponent hardpoint, EntityUid grid)
     {
-        _sawmill.Debug("ANCHOR ENTITY TO HARDPOINT RAN");
+        //_sawmill.Debug("ANCHOR ENTITY TO HARDPOINT RAN");
         hardpoint.anchoring = target;
         targetComp.anchoredTo = anchor;
         _transformSystem.SetLocalRotation(target, Transform(anchor).LocalRotation);

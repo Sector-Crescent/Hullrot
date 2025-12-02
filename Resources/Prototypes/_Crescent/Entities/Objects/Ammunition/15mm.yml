@@ -13,6 +13,8 @@
       - CartridgeRailgun15mm
   - type: CartridgeAmmo
     deleteOnSpawn: true
+  - type: Item
+    size: Small
   - type: Sprite
     noRot: false
     sprite: _Crescent/Objects/Weapons/Ammunition/Casings/railgun_slug.rsi
@@ -23,6 +25,12 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 10
+  - type: EmitSoundOnLand
+    sound:
+      collection: HeavyBulletBounce
+  - type: EmitSoundOnCollide
+    sound:
+      collection: HeavyBulletBounce
 #---------- Basic bullet ----------
 - type: entity
   id: CartridgeRailgun15mmAP
@@ -89,12 +97,12 @@
     proto: null
     capacity: 4
   - type: Item
-    size: Small
+    size: Normal
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/railgun_mag.rsi
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/15mm_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -105,6 +113,10 @@
     steps: 5
     zeroVisible: false
   - type: Appearance
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
 
 #---------- 15mm Railgun (APFSDS) ----------  
 - type: entity

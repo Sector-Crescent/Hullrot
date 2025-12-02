@@ -11,6 +11,9 @@
   supervisors: job-supervisors-tap
   canBeAntag: false
   requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: TAP
+      min: 36000
     - !type:FactionRequirement
       factionID: "TAP"
     - !type:CharacterSpeciesRequirement
@@ -26,8 +29,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-antiquarian
-  - !type:AddComponentSpecial
-    components:
+      - type: HullrotFaction
+        faction: TAP
       - type: Telepathic
       - type: LanguageAdder
         addSpoken:

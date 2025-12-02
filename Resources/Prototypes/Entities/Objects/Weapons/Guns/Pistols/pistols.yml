@@ -80,6 +80,10 @@
       collection: MetalThud
   - type: DamageOtherOnHit
     staminaCost: 5
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 - type: entity
   name: PTA BA-9 Viper 9x19mm
@@ -210,7 +214,6 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: ChamberMagazineAmmoProvider
-    boltClosed: null
   - type: Gun
     damageModifier: 1.25 # "Extra Robust" despite having an underpowered cartridge.
     fireRate: 4

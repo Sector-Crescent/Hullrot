@@ -8,7 +8,7 @@
     whitelist:
       tags:
         - BulletHeavyPistol
-    proto: BulletHeavyPistol
+    proto: CartridgeHeavyPistol
     capacity: 60
   - type: Item
     size: Small
@@ -39,6 +39,12 @@
       - Cartridge
   - type: CartridgeAmmo
     proto: BulletHeavyPistol
+  - type: EmitSoundOnLand
+    sound:
+      collection: LightBulletBounce
+  - type: EmitSoundOnCollide
+    sound:
+      collection: LightBulletBounce
 
 - type: entity
   id: BulletHeavyPistol
@@ -69,6 +75,22 @@
   - type: Tag
     tags:
       - MagazineHeavyPistol
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/11mm_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
 
 - type: entity
   id: MagazinePistolSubMachineGunHeavy
@@ -87,8 +109,18 @@
     tags:
       - MagazineHeavySMG
   - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/11mm_mag.rsi
     layers:
-    - state: red
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg

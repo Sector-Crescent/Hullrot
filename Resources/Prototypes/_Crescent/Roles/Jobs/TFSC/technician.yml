@@ -8,12 +8,15 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconSyndieNewblood"
-  supervisors: You answer to the Ringleader of the New Crescent Syndicate Privateers.
+  supervisors: You answer to the Ringleader of the Gorlex Security Consulting.
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterOverallTimeRequirement
-      min: 21600 # 6 hours
-      inverted: true # Leave slots open for newer, less confident players.
+      min: 0
     - !type:FactionRequirement
       factionID: "TFSC"
     - !type:CharacterTraitRequirement
@@ -26,7 +29,9 @@
   - !type:AddComponentSpecial
     components:
       - type: ChatRank
-        rank: crescent-rank-op
+        rank: crescent-rank-pfc
+      - type: HullrotFaction
+        faction: GSC
       - type: LanguageAdder
         addSpoken:
           - Freespeak
@@ -52,3 +57,4 @@
     back: ClothingBackpackNCSPSatchelFilledInfanteer
     ears: ClothingHeadsetNCSP
     pocket1: WeaponPistolViperWood
+    pocket2: ClothingMaskGasSyndicate

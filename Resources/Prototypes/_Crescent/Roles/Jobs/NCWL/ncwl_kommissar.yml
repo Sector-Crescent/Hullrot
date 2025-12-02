@@ -3,7 +3,7 @@
   name: job-name-ncwl-kommissar
   description: job-description-ncwl-kommissar
   playTimeTracker: JobHomeguardLeaderNCWL
-  weight: 7
+  weight: 101
   startingGear: OverseerNCWLGear
   alwaysUseSpawner: true
   requireAdminNotify: false
@@ -32,6 +32,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-ncwl-home-leader
+      - type: HullrotFaction
+        faction: NCWL
       - type: LanguageAdder
         addSpoken:
           - Dockta
@@ -89,7 +91,7 @@
     id: NCWLHomeguardLeaderPDA
     outerClothing: ClothingOuterArmorNCWLCarapace
     belt: ClothingBeltNCWLPouches
-    pocket1: WeaponRevolverPython
+    suitstorage: WeaponShotgunDoubleBarreledNCWL
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHatNCWLKommissarHat

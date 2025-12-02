@@ -9,15 +9,17 @@
       gridComponents:
         - type: BlockShipWeaponProjectileGrid
         - type: PreventPilot
-      components:
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: outpost
+      components:
         - type: StationNameSetup
           mapNameTemplate: 'Tatsumoto Trading Outpost'
         - type: VesselDesignation
           designation: vessel-designation-headquarters
+        - type: VesselDescription
+          description: The last bastion for war profiteering in a starch pressed suit 
         - type: VesselMusic
           ambientMusicPrototype: TatsumotoMusic
         - type: Grammar
@@ -27,8 +29,10 @@
           overflowJobs: []
           availableJobs:
             ExecutiveSHI: [ 1, 1 ]
-            BoardSHI: [ 3, 3 ]
+            BoardHRSHI: [ 1, 1 ]
+            BoardSHI: [ 1, 1 ] 
+            HosSHI: [ 1, 1 ]
             HighsecSHI: [ 2, 2 ]
-            CorpsecSHI: [ 6, 6 ]
+            CorpsecSHI: [ 5, 5 ]
             MedtechSHI: [ 4, 4 ]
-            EmployeeSHI: [ 15, 15 ]
+            EmployeeSHI: [ 8, 8 ]

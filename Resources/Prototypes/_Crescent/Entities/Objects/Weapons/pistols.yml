@@ -48,7 +48,7 @@
 
 - type: entity
   name: SHI M038s Liquidator 11mm
-  parent: BaseItem
+  parent: [BaseItem, StreeCredRedeemable]
   id: WeaponPistolLiquidator
   description: An integrally suppressed 11mm pistol, commonly used in ethical contract termination procedures. Incredibly quiet, the only sound anyone might hear is the manual cycling of the action.
   components:
@@ -87,10 +87,14 @@
         color: "#ff4f00"
         requireDetailRange: false
   - type: AmmoCounter
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 - type: entity
   name: NCWL T-18 Comrade 9x19mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolComrade
   description: A cheap, mass-produced pistol produced for the common communard. Chambered in 9x19mm PSTF.
   components:
@@ -113,7 +117,7 @@
 
 - type: entity
   name: NT MX-32 Lockwell 9x19mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolHKUSP
   description: A cheap, mass-produced pistol originally produced from antiquated NanoTrasen designs.
   components:
@@ -135,9 +139,9 @@
     price: 750
 
 - type: entity
-  name: NCSP DE-7 Deagle .327
   parent: BaseWeaponPistol
   id: WeaponPistolDeagle
+  name: NCSP DE-7 Deagle .327
   description: A Desert eagle milled out of pure gold, as if a steel one wasnt heavy enough. A true sidearm of a warlord. Chambered in .327 Imperial.
   components:
   - type: Sprite
@@ -178,10 +182,19 @@
             - CartridgeMagnum
   - type: StaticPrice
     price: 1250
+  - type: Tag
+    tags:
+    - DualWield
+  - type: Multishot
+    spreadMultiplier: 1
+  - type: RequiresDualWield
+    whitelist:
+      tags:
+      - DualWield
 
 - type: entity
   parent: WeaponPistolDeagle
-  id: WeaponPistolDeagleAP
+  id: WeaponPistolDeagleUranium
   components:
   - type: ItemSlots
     slots:
@@ -204,7 +217,7 @@
 
 - type: entity
   name: NCWL T-91 Quasar .327
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemable]
   id: WeaponPistolT91
   description: A semi-automatic communard solution to self-defense issues amidst officers and heavyhitters. Ironically chambered in .327 Imperial.
   components:
@@ -249,7 +262,7 @@
 
 - type: entity
   name: SHI M002 Himehabu 9x19mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolHimehabu
   description: A domestic firearm produced for the Shinoahara internal market. Often seen in the hands of CSEC operatives - and sometimes independent mercenaries. Chambered in 9x19mm PSTF.
   components:
@@ -295,7 +308,7 @@
 
 - type: entity
   name: SHI-25T Shinobi 12mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemable]
   id: WeaponPistolSmartpistol
   description: A robust little thing from the SHI development team. Chambered in custom-made 12mm depleted uranium-tip rounds - packs a punch and is capable of full auto. Chambered in heavy 12mm.
   components:
@@ -312,10 +325,10 @@
     zeroVisible: true
   - type: Gun
     minAngle: 1
-    maxAngle: 19
-    angleIncrease: 6
+    maxAngle: 10
+    angleIncrease: 2
     angleDecay: 7
-    fireRate: 3
+    fireRate: 6 #on par with smgs of T2 tech. See Liberator.
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -335,11 +348,11 @@
             - MagazinePistolSmartgun
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistol12mm
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - CartridgePistolSmart
   - type: StaticPrice
     price: 3500
 
@@ -391,6 +404,10 @@
     proto: CartridgePistol6mm
     capacity: 20
     cycleable: false
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 #single use pistols actual
 
@@ -492,7 +509,7 @@
 
 - type: entity
   name: IRM M-8 NeoVolker Tribune .327
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemable]
   id: WeaponPistolNeoVolker
   description: An antiquated, outdated Imperial sidearm, attributed to ancient Terran designs. Fires .327 rounds.
   components:
@@ -587,7 +604,7 @@
 
 - type: entity
   name: HGS P05 Brenner 9x19mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolLuger
   description: A small firearm of foreign origin produced for select militias. Chambered in 9x19mm PSTF.
   components:
@@ -610,7 +627,7 @@
 
 - type: entity
   name: HGS VAP-3P Sivuase .327
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolSivuase
   description: The Vihainen Aseperhe 3P. The choice sidearm for subjugators. Fires .327 rounds.
   components:
@@ -655,7 +672,7 @@
 
 - type: entity
   name: K&K K25 Snake 9x19mm
-  parent: BaseWeaponPistol
+  parent: [BaseWeaponPistol, StreeCredRedeemableLow]
   id: WeaponPistolSnake
   description: A bulky weapon system produced by Kane & Knox. Fielded with a suppressor and hefty laser aiming module. Chambered in 9x19mm PSTF.
   components:

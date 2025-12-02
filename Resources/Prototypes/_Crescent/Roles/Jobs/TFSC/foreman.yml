@@ -11,6 +11,10 @@
   supervisors: You're the leader of the SAW. You answer to your own interests
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterOverallTimeRequirement
       min: 20000
     - !type:FactionRequirement
@@ -26,6 +30,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-foreman
+      - type: HullrotFaction
+        faction: SAW
       - type: LanguageAdder
         addSpoken:
           - Freespeak

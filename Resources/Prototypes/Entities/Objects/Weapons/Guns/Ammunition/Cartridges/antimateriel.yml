@@ -9,6 +9,8 @@
     - CartridgeAntiMateriel
   - type: CartridgeAmmo
     proto: BulletAntiMateriel
+  - type: Item
+    size: Small
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/Casings/large_rifle.rsi
     layers:
@@ -18,6 +20,12 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 20
+  - type: EmitSoundOnLand
+    sound:
+      collection: HeavyBulletBounce
+  - type: EmitSoundOnCollide
+    sound:
+      collection: HeavyBulletBounce
 
 - type: entity
   parent: CartridgeAntiMateriel

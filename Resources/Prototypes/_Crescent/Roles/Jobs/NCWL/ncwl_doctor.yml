@@ -3,12 +3,12 @@
   name: job-name-ncwl-medical-doctor
   description: job-description-ncwl-medical-doctor
   playTimeTracker: JobMedicalWorkerNCWL
-  weight: 3
+  weight: 95
   startingGear: DoctorNCWLGear
   alwaysUseSpawner: true
   requireAdminNotify: false
-  icon: "JobIconNCWLSanitar"
-  supervisors: job-supervisors-ncwl-partisan
+  icon: "JobIconNCWLMedicalWorker"
+  supervisors: job-supervisors-ncwl-unionized
   canBeAntag: false
   requirements:
     - !type:CharacterOverallTimeRequirement
@@ -31,6 +31,11 @@
     components:
       - type: ChatRank
         rank: crescent-rank-ncwl-medi-worker
+      - type: HullrotFaction
+        faction: NCWL
+      - type: CPRTraining
+      - type: SurgerySpeedModifier
+        speedModifier: 1.75
       - type: LanguageAdder
         addSpoken:
           - Dockta

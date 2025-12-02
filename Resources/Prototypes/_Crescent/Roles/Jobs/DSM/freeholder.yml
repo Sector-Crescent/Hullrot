@@ -22,6 +22,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-freeholder
+      - type: HullrotFaction
+        faction: DSM
       - type: LanguageAdder
         addSpoken:
           - LowImperial
@@ -41,5 +43,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitImperialFreeholder
     id: FreeholderPDA
+    belt: ClothingBeltSalvageWebbingFilledNF
     ears: ClothingHeadsetEmpireCiv
     shoes: ClothingShoesBootsImperialLongboots
+    back: ClothingBackpackDSM

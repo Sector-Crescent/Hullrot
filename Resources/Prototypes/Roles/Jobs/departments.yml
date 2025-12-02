@@ -89,10 +89,14 @@
   roles:
   - CommandantNCWL
   - KommissarNCWL
+  - MVDGruntNCWL
   - FleetkapitanNCWL
   - PartisanNCWL
+  - DirectorNCWL
   - DoctorNCWL
-  - CoordinatorNCWL
+  - WorkerOverbossNCWL
+  - DockhandNCWL
+  - IndustryTaskmasterNCWL
   - ArtificerNCWL
   - WorkerNCWL
   editorHidden: false
@@ -165,6 +169,8 @@
   - CorpsecSHI
   - EmployeeSHI
   - MedtechSHI
+  - BoardHRSHI
+  - HosSHI
   editorHidden: false
 
 - type: department
@@ -188,11 +194,11 @@
   color: "#50c878"
   weight: 55
   roles:
-  - ProphetTAP
-  - AcolyteTAP
-  - TinkererTAP
-  - TechminerTAP
-  - HangarTechTAP
+  # - ProphetTAP #commented the rest until TAP comes back .2 | 2025
+  # - AcolyteTAP
+  # - TinkererTAP
+  # - TechminerTAP
+  # - HangarTechTAP
   - Antiquarian
   - BeltrunnerTAP
   - DraugrTAP

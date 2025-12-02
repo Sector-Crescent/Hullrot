@@ -5,8 +5,12 @@
   playTimeTracker: JobDockhand
   weight: 20
   requirements:
+  - !type:CharacterSpeciesRequirement
+    inverted: true
+    species:
+      - Voidborn
   - !type:CharacterOverallTimeRequirement
-    min: 3600
+    min: 10800
   startingGear: DockhandGear
   icon: "JobIconDockhand"
   supervisors: job-supervisors-gliess
@@ -20,6 +24,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-ind-dockhand
+      - type: HullrotFaction
+        faction: GS
       - type: LanguageAdder
         addSpoken:
           - Tradeband
@@ -35,9 +41,7 @@
     jumpsuit: ClothingUniformJumpsuitCMMMachinist
     belt: ClothingBeltSalvageWebbingFilledNF
     back: ClothingBackpackFilled
-    gloves: ClothingHandsGlovesFingerlessInsulated
+    gloves: ClothingHandsGlovesColorYellow
     shoes: ClothingShoesBootsSalvage
-    eyes: ClothingEyesGlassesCheapSunglassesBig
+    eyes: ClothingEyesGlassesSunglassesBig
     pocket1: WeaponPistolHKUSP
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

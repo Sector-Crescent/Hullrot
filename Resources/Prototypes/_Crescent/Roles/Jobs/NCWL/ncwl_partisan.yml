@@ -3,7 +3,7 @@
   name: job-name-ncwl-partisan
   description: job-description-ncwl-partisan
   playTimeTracker: JobHomeguardSoldatNCWL
-  weight: 5
+  weight: 97
   startingGear: SoldatNCWLGear
   alwaysUseSpawner: true
   requireAdminNotify: false
@@ -13,6 +13,8 @@
   requirements:
     - !type:FactionRequirement
       factionID: "NCWL"
+    - !type:CharacterOverallTimeRequirement
+      min: 1000
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
@@ -29,6 +31,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-ncwl-home-soldat
+      - type: HullrotFaction
+        faction: NCWL
       - type: LanguageAdder
         addSpoken:
           - Dockta
@@ -53,9 +57,16 @@
     id: NCWLHomeguardSoldatPDA
     outerClothing: ClothingOuterArmorNCWLHeavyCarapace
     belt: ClothingBeltNCWLPouches
-    pocket1: WeaponPistolHKUSP
+    pocket1: WeaponPistolComrade
+    pocket2: MagazinePistol
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHelmetNCWLBasic
     mask: ClothingMaskNCWLGasmask
     ears: ClothingHeadsetNCWL
+  storage:
+    back:
+      - Flash
+      - Tourniquet
+      - Zipties
+      - CombatKnife

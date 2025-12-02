@@ -11,6 +11,12 @@
   supervisors: You answer to the Shipfitters Aerodynamic & Worker's union interests and its foreman's.
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
+    - !type:CharacterOverallTimeRequirement
+      min: 0
     - !type:FactionRequirement
       factionID: "TFSC"
     - !type:CharacterTraitRequirement
@@ -23,6 +29,8 @@
     components:
       - type: ChatRank
         rank: crescent-rank-saw
+      - type: HullrotFaction
+        faction: SAW
       - type: LanguageAdder
         addSpoken:
           - Freespeak

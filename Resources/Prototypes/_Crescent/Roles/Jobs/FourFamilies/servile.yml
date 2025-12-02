@@ -11,6 +11,8 @@
   supervisors: job-supervisors-tap
   canBeAntag: false
   requirements:
+    - !type:CharacterOverallTimeRequirement
+      min: 10800
     - !type:FactionRequirement
       factionID: "TAP"
     - !type:CharacterSpeciesRequirement
@@ -22,20 +24,19 @@
       traits:
         - Blindness
         - WheelchairBound
+        - Pacifist
   special:
   - !type:AddComponentSpecial
     components:
       - type: ChatRank
         rank: crescent-rank-servile
-  - !type:AddComponentSpecial
-    components:
+      - type: HullrotFaction
+        faction: TAP
       - type: Telepathic
       - type: LanguageAdder
         addSpoken:
-          - Tradeband
           - OldTaypani
         addUnderstood:
-          - Tradeband
           - OldTaypani
   access:
   - EmergencyShuttleRepealAll
