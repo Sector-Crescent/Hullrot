@@ -112,6 +112,7 @@ research-technology-communard-molot = Communard Missile Corvette
 research-technology-communard-krechet = Communard Light Fighter
 research-technology-communard-rudimentary-ships = Communard Rudimentary Ships
 research-technology-communard-carrier = Communard Carrier
+research-technology-communard-sasha = Communard Retrofitted Cruiser
 research-technology-communard-bogatyrship = Communard Heavy Fighter
 research-technology-communard-corvette = Communard Heavy Corvette
 research-technology-communard-ivarod = Communard Assault Frigate

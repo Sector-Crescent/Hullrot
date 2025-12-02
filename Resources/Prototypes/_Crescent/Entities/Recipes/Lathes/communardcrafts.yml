@@ -338,6 +338,15 @@
     ShipHull: 12000
 
 - type: latheRecipe
+  id: SashaLPC
+  result: ShipVoucherSasha
+  completeTime: 1
+  materials:
+    StarshipEngineComponents: 6000
+    ShipComponents: 8000
+    ShipHull: 9000
+
+- type: latheRecipe
   id: SternLPC
   result: ShipVoucherStern
   completetime: 1
@@ -404,12 +413,12 @@
   completetime: 2
   materials:
     Cloth: 750
-#- type: latheRecipe
-#  id: NCWLRGD55M13
-#  result: RGD55M13Hendgrenade
-#  completetime: 2
-# materials:
-#   Plasma: 500
-#    Steel: 100
-    
+
+- type: latheRecipe
+  id: GrenadeNCWLRGD55M13
+  result: RGD55M13Handgrenade
+  completetime: 2
+  materials:
+    Plasma: 500
+    Steel: 100
 
