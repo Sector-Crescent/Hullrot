@@ -65,7 +65,7 @@
   # recipeUnlocks:
      # - PDTFlatpack
   # position: 1, -5
-  
+
 # - type: technology
   # id: MechatronicsPDTMk2
   # name: Mark two point defense turrets
@@ -80,7 +80,7 @@
   # position: 2, -5
   # technologyPrerequisites:
     # - MechatronicsPDT
-    
+
 # - type: technology
   # id: MechatronicsSlugthrower
   # name: Slugthrowers
@@ -108,7 +108,7 @@
      # - OperatorFlatpack
      # - VulcanFlatpack
   # position: -1, -5
-  
+
 # - type: technology
   # id: MechatronicsArtillery
   # name: Artillery
@@ -147,7 +147,7 @@
   # recipeUnlocks:
      # - NeedlerFlatpack
   # position: -0, -6
-  
+
 # - type: technology
   # id: MechatronicsCycler
   # name: Ballistic gas cyclers
@@ -160,7 +160,7 @@
   # recipeUnlocks:
      # - BallisticCycler
   # position: -2, -3
-  
+
 # - type: technology
   # id: MechatronicsBasicMechatronics
   # name: Basic mechatronics
@@ -173,7 +173,7 @@
   # recipeUnlocks:
      # - BasicMechatronics1
   # position: -3, -3
-  
+
 # - type: technology
   # id: MechatronicsTubeLoader
   # name: Tube loader
@@ -188,7 +188,7 @@
   # position: -2, -4
   # technologyPrerequisites:
     # - MechatronicsCycler
-  
+
 # - type: technology
   # id: MechatronicsAdvancedMechatronics
   # name: Advanced mechatronics
@@ -203,34 +203,6 @@
   # position: -3, -4
   # technologyPrerequisites:
     # - MechatronicsBasicMechatronics
-
-# - type: technology
-  # id: MechatronicsCommodityFabricator
-  # name: Variable commodity fabricator
-  # icon:
-    # sprite: _Crescent/Structures/factorystructures.rsi
-    # state: makina
-  # discipline: Mechatronics
-  # tier: 1
-  # cost: 750
-  # recipeUnlocks:
-     # - VariableCommodityFabricatorFlatpack
-  # position: -4, -4
-    
-# - type: technology
-  # id: MechatronicsAdvancedCommodityFabricator
-  # name: Advanced variable commodity fabricator
-  # icon:
-    # sprite: _Crescent/Structures/factorystructures.rsi
-    # state: advancedfab
-  # discipline: Mechatronics
-  # tier: 1
-  # cost: 750
-  # recipeUnlocks:
-     # - AdvancedVariableCommodityFablatheFlatpack
-  # position: -4, -5
-  # technologyPrerequisites:
-    # - MechatronicsCommodityFabricator
 
 # - type: technology
   # id: MechatronicsMicroforge
@@ -333,12 +305,12 @@
   # tier: 1
   # cost: 750
   # recipeUnlocks:
-     # - RiotBulletShield 
+     # - RiotBulletShield
      # - RiotShield
      # - RiotLaserShield
      # - TelescopicBaton
   # position: 6, -3
-  
+
 # - type: technology
   # id: MechatronicsAdvancedMelee
   # name: Advanced hurting techniques
