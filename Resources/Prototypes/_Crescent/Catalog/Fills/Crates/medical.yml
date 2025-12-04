@@ -77,6 +77,17 @@
         amount: 6
 
 - type: entity
+  id: CrateVitalsTrackingSpacer
+  parent: CrateMedical
+  name: spacers vitals tracking crate
+  description: A crate containing six vitals tracking implanters.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedicalTrackingImplanterSpacer
+        amount: 6
+
+- type: entity
   id: CrateVitalsTrackingShinohara
   parent: CrateMedical
   name: shinohara vitals tracking crate

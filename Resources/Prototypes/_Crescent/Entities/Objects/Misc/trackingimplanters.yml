@@ -19,6 +19,33 @@
           range: 1
 
 # Hullrot vital tracking implants
+#Spacer CMM
+- type: entity
+  parent: TrackingImplant
+  id: MedicalTrackingImplantSpacer
+  name: vitals tracker (SPACER)
+  description: This implant has a vitals tracking device for the CMM frequency.
+  components:
+    - type: Rattle
+      radioChannel: "Nfsd"
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Dead
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/_Crescent/Items/Medical/death.ogg
+        params:
+          variation: 0.15
+          volume: -8
+          range: 1
+          
+- type: entity
+  parent: BaseImplantOnlyImplanter
+  id: MedicalTrackingImplanterSpacer
+  name: spacer vitals tracking implanter
+  components:
+    - type: Implanter
+      implant: MedicalTrackingImplantSpacer
 # IPM
 - type: entity
   parent: TrackingImplant
