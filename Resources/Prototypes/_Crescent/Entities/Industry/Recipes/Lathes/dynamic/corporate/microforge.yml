@@ -1,6 +1,14 @@
 # MARK: Weapons
 
 - type: latheRecipe
+  id: WeaponShotgunBlaster
+  result: WeaponShotgunBlaster
+  completetime: 2
+  materials:
+    Plastic: 500
+    Steel: 300
+
+- type: latheRecipe
   id: WeaponPistolBlastpopRed
   result: WeaponPistolBlastpopRed
   completetime: 2
@@ -255,6 +263,17 @@
     Plastic: 500
     Silver: 500
     BallisticCycler: 500
+
+- type: latheRecipe
+  id: WeaponSpecialPulseRifle
+  result: WeaponSpecialPulseRifle
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plastic: 500
+    BallisticCycler: 500
+    AdvancedElectronics: 1000
+    AdvancedMechatronics: 500
 
 #MARK: Melee
 

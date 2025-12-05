@@ -172,24 +172,7 @@
   position: 2,-5
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - ShinoharaWeaponComponents
-
-- type: technology
-  id: ShinoharaWeaponComponents
-  name: research-technology-shinohara-weaponcomponents
-  icon:
-    sprite: _Crescent/Objects/Materials/materials.rsi
-    state: tubeloaderrobotics
-  discipline: Corporate
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - BallisticCycler1
-  - TubeLoader1
-  - LaserLocus1
-  position: 3,-4
-  technologyPrerequisites:
-  - CorporateClothes
+  - ShinoharaBasicArms
 
 - type: technology
   id: ShinoharaBasicArms
@@ -206,9 +189,12 @@
   - WeaponPistolMk58SHI
   - WeaponSubMachineGunMP49
   - SHIKatana
-  position: 3,-5
+  - WeaponSubMachineGunMP49
+  - WeaponShotgunSHIDoubleBarreled4g
+  - WeaponShotgunBlaster
+  position: 3,-4
   technologyPrerequisites:
-  - ShinoharaWeaponComponents
+  - CorporateClothes
 
 - type: technology
   id: ShinoharaBasicMechGuns
@@ -218,12 +204,12 @@
     state: rifle
   discipline: Corporate
   tier: 1
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
   - WeaponMechCombatAutoshotgun
   - WeaponMechCombatLightRifle
   - WeaponMechSword
-  position: 3,-6
+  position: 3,-5
   technologyPrerequisites:
   - ShinoharaBasicArms
 
@@ -246,13 +232,30 @@
   position: 4,-5
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - ShinoharaWeaponComponents
+  - ShinoharaBasicArms
 
 #MARK: Tier 2
 
 - type: technology
-  id: ShinoharaAdvancedBallistics
-  name: research-technology-shinohara-advancedballistics
+  id: ShinoharaWTIArmaments
+  name: Shinohara Wu-Tian Industries Armaments
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/ar2.rsi
+    state: icon
+  discipline: Corporate
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - WeaponSpecialPulseRifle
+  - MagazinePulse350fmj
+  position: 4,-6
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+  - ShinoharaBasicMechGuns
+
+- type: technology
+  id: ShinoharaUABallistics
+  name: Shinohara United Arsenals Ballistics
   icon:
     sprite: _Crescent/Objects/Weapons/Guns/lecter.rsi
     state: icon
@@ -264,28 +267,27 @@
   - WeaponRifleLecterSHI
   - WeaponRevolverMateba
   - WeaponSubMachineGunSabre
-  - WeaponLightMachineGunL6
-  - WeaponSniperHristov
-  - WeaponRifleBarghest
-  position: 3,-7
+  position: 2,-6
+  prerequisiteLineType: Spread
   technologyPrerequisites:
   - ShinoharaBasicMechGuns
 
 - type: technology
-  id: ShinoharaGrenadeLauncher
-  name: research-technology-shinohara-grenadelauncher
+  id: ShinoharaUAAdvancedBallistics
+  name: Advanced United Arsenal Ballistics
   icon:
-    sprite: _Crescent/Objects/Weapons/Guns/milkor.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/hristov.rsi
     state: icon
   discipline: Corporate
   tier: 2
   cost: 8000
   recipeUnlocks:
-  - WeaponLauncherMilkor
-  position: 2,-8
-  prerequisiteLineType: Diagonal
+  - WeaponLightMachineGunL6
+  - WeaponSniperHristov
+  - WeaponRifleBarghest
+  position: 2,-7
   technologyPrerequisites:
-  - ShinoharaAdvancedBallistics
+  - ShinoharaUABallistics
 
 - type: technology
   id: ShinoharaNTBallistics
@@ -300,10 +302,10 @@
   - WeaponShotgunSpas
   - WeaponRifleM90GrenadeLauncher
   - WeaponSubMachineGunWt550
-  position: 4,-8
+  position: 2,-8
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - ShinoharaAdvancedBallistics
+  - ShinoharaUAAdvancedBallistics
 
 - type: technology
   id: ShinoharaAdvancedMechWeapons
@@ -320,7 +322,7 @@
   - WeaponMechCombatTaikotyo
   position: 3,-8
   technologyPrerequisites:
-  - ShinoharaAdvancedBallistics
+  - ShinoharaBasicMechGuns
 
  # MARK: Tier 3
 
@@ -412,6 +414,8 @@
   - AdvancedMechatronics1
   - PlastitaniumFibreAlloySHI
   - HardlightGenerator1
+  - TubeLoader1
+  - LaserLocus1
   position: 1,-4
   technologyPrerequisites:
   - ShinoharaManufactorum
