@@ -8,6 +8,10 @@
   icon: "JobIconCaptain"
   supervisors: job-supervisors-lols
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterWhitelistRequirement
     - !type:CharacterOverallTimeRequirement
       min: 25000
@@ -38,4 +42,4 @@
     head: ClothingHeadHatCapcap
     belt: ClothingBeltSheathFilled
     id: GliessDockmasterPDA
-    back: ClothingBackpackSatchelLeatherFilledDSM
+    back: ClothingBackpackSatchelLeather

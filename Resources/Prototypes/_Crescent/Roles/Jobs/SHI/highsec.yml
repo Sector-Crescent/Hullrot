@@ -11,6 +11,10 @@
   supervisors: job-supervisors-shi
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterWhitelistRequirement
     - !type:CharacterOverallTimeRequirement
       min: 35000
@@ -27,7 +31,7 @@
   - !type:AddComponentSpecial
     components:
       - type: ChatRank
-        rank: crescent-rank-shi-highsec
+        rank: crescent-rank-shi-corpsec
       - type: HullrotFaction
         faction: SHI
       - type: LanguageAdder
@@ -60,13 +64,11 @@
     pocket1: WeaponPistolLiquidator
     pocket2: TradePassport
     back: ClothingBackpackSHISatchel
-    belt: ClothingBeltAssault
+    belt: ClothingBeltSecurityFilled
   storage:
-    back:
-    - Flash
-    - Tourniquet
-    - Handcuffs
-    - CombatKnife
+    belt:
+      - Flash
+      - Tourniquet
 
 - type: job
   id: HosSHI
@@ -81,6 +83,10 @@
   supervisors: job-supervisors-shi
   canBeAntag: false
   requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
     - !type:CharacterWhitelistRequirement
     - !type:CharacterOverallTimeRequirement
       min: 35000
@@ -125,10 +131,14 @@
     id: HighsecPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetShinohara
-    pocket1: Handcuffs
+    pocket1: WeaponPistolLiquidator
     pocket2: TradePassport
     back: ClothingBackpackSHISatchel
     head: ClothingHeadHatShinoharaBeretHOS
     mask: ClothingMaskSHIHOSMask
     outerClothing: ClothingOuterArmorShinoharaHOSVest
-    belt: WeaponPistolLiquidator
+    belt: ClothingBeltSecurityFilled
+  storage:
+    belt:
+      - Flash
+      - Tourniquet
