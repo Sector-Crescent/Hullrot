@@ -103,11 +103,6 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
             ("name", disciplineText), ("color", disciplineColor)));
         MainDisciplineLabel.SetMessage(msg);
 
-        var softcapMsg = new FormattedMessage();
-        softcapMsg.AddMarkup(Loc.GetString("research-console-menu-softcap-amount-text",
-            ("softcap", state.SoftCapMultiplier.ToString("#.##"))));
-        SoftcapAmountLabel.SetMessage(softcapMsg);
-
         TierDisplayContainer.Children.Clear();
         foreach (var disciplineId in database.SupportedDisciplines)
         {

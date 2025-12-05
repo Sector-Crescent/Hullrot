@@ -1,6 +1,19 @@
 # This file holds all of the temporary migrations to get AdventureRule to actually load.
 # This is bad. Please port these properly or replace them in the map.
-SpawnPointKommissar: null
+
+ResearchAndDevelopmentServerInterdyne: null
+Factory320Fab: null
+Factory320Assembler: null
+Factory120Assembler: FactoryShellAssembler
+Factory120Weld: FactoryShellWeld
+Factory120Fab: FactoryShellFab
+Protolathe: Autolathe
+NfsdTechFab: AmmoTechFab
+SalvageTechfabNF: Autolathe
+SecurityTechFab: AmmoTechFab
+PrizeCounter: null
+Sheetifier: null
+
 ThrusterUnwelded: Thruster
 
 ActionToggleMagbootsSyndie: null

@@ -1,0 +1,152 @@
+- type: factoryRecipe
+  id: FabricateSimpleElectronics
+  name: fabricate simple electronics
+  inputs:
+    Steel: 2
+    Silver: 5
+  outputs:
+    BasicElectronics1: 1
+
+- type: factoryRecipe
+  id: FabricateAdvancedElectronics
+  name: fabricate advanced electronics
+  inputs:
+    Silver: 5
+    BasicElectronics: 3
+  outputs:
+    AdvancedElectronics1: 1
+
+- type: factoryRecipe
+  id: FabricateAdvancedMechatronics
+  name: fabricate advanced mechatronics
+  inputs:
+    Gold: 5
+    BasicMechatronics: 3
+  outputs:
+    AdvancedMechatronics1: 1
+
+- type: factoryRecipe
+  id: FabricateBasicMechatronics
+  name: fabricate basic mechatronics
+  inputs:
+    Steel: 5
+    Silver: 2
+  outputs:
+    BasicMechatronics1: 1
+
+- type: factoryRecipe
+  id: FabricateWeakLaserLocus
+  name: fabricate weak laser locus
+  inputs:
+    BasicElectronics: 1
+    Plasma: 10
+  outputs:
+    WeakLaserLocus1: 1
+
+- type: factoryRecipe
+  id: FabricateMissileTube
+  name: fabricate missile tube loader
+  inputs:
+    BasicMechatronics: 3
+    Silver: 10
+    Steel: 5
+  outputs:
+    TubeLoader1: 1
+
+- type: factoryRecipe
+  id: FabricateBallisticCycler
+  name: fabricate ballistic cycler
+  inputs:
+    BasicMechatronics: 2
+    Steel: 5
+  outputs:
+    BallisticCycler1: 1
+
+- type: factoryRecipe
+  id: FabricateLaserLocus
+  name: fabricate focused laser locus
+  inputs:
+    AdvancedElectronics: 2
+    Gold: 5
+    Glass: 5
+  outputs:
+    LaserLocus1: 1
+
+- type: factoryRecipe
+  id: FabricateHardsuitElectronics
+  name: fabricate hardsuit electronics
+  inputs:
+    BasicElectronics: 2
+    Gold: 5
+  outputs:
+    HardsuitElectronics1: 1
+
+- type: factoryRecipe
+  id: FabricatePlastitaniumPlate
+  name: press plastitanium plate
+  inputs:
+    Plasteel: 5
+    Gold: 5
+  outputs:
+    PlastitaniumFibreAlloy1: 1
+
+- type: factoryRecipe
+  id: FabricateHardlightGenerator
+  name: fabricate hardlight generator
+  inputs:
+    AdvancedElectronics: 2
+    BasicMechatronics: 3
+    Gold: 5
+    Silver: 5
+  outputs:
+    HardlightGenerator1: 1
+
+- type: factoryRecipe
+  id: FabricateClothRollCotton
+  name: roll cloth from cotton
+  inputs:
+    Cotton: 10
+  outputs:
+    MaterialCloth1: 10
+
+- type: factoryRecipe
+  id: FabricateClothRollSilk
+  name: roll cloth from silk
+  inputs:
+    Silk: 10
+  outputs:
+    MaterialCloth1: 10
+
+- type: factoryRecipe
+  id: FabricateDurathread
+  name: weave durathread from cloth
+  inputs:
+    Cloth: 10
+    Plastic: 10
+  outputs:
+    MaterialDurathread1: 10
+
+- type: factoryRecipe
+  id: BiomassFromWheat
+  name: Wheat to Biomass
+  inputs:
+    WheatBushel: 1
+  outputs:
+    MaterialBiomass: 25
+
+- type: factoryRecipe
+  id: BiomassFromSugarcane
+  name: Sugarcane to Biomass
+  inputs:
+    Sugarcane: 1
+  outputs:
+    MaterialBiomass: 40
+
+- type: factoryRecipe
+  id: FourFamiliesPlasteel
+  name: Fourfamilies Plasteel
+  inputs:
+    Plasma: 10
+    Steel: 20
+  outputs:
+    SheetPlasteel1: 5

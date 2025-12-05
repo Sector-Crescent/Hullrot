@@ -1,0 +1,512 @@
+- type: technology
+  id: CommunardClothes
+  name: research-technology-communard-clothes
+  icon:
+    sprite: _Crescent/Clothing/NCWL/Uniform/ncwlbase.rsi
+    state: icon
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ClothingNeckAdminCapelet
+    - ClothingHeadHatNCWLBeretAdmiral
+    - ClothingUniformJumpsuitNCWLCommunications
+    - ClothingUniformJumpsuitNCWLTelnikSleeved
+    - ClothingUniformJumpsuitNCWLTelnikSleeveless
+    - ClothingHeadHatNCWLKommissarHat
+    - ClothingShoesBootsNCWLAdmiralParade
+    - ClothingHandsGlovesNCWLAdmiralParade
+    - ClothingOuterArmorNCWLOpremeCarapace
+    - ClothingOuterArmorNCWLCarapaceVrachev
+    - ClothingHeadHatNCWLBeretMedi
+    - ClothingOuterArmorNCWLLogi
+    - ClothingOuterArmorNCWLCarapaceDoktor
+    - ClothingOuterArmorNCWLCarapaceKapitan
+    - ClothingUniformJumpsuitNCWLArtificer
+    - ClothingBackpackNCWL
+    - ClothingEyesGlassesNCWL
+    - ClothingHeadHelmetNCWLBasic
+    - ClothingHeadHatNCWLCapsoft
+    - ClothingUniformJumpsuitNCWLMedic
+    - ClothingHeadHatNCWLCapsoftMedical
+    - ClothingBeltNCWLPouches
+    - ClothingUniformJumpsuitNCWL
+    - ClothingMaskNCWLGasmask
+    - ClothingHeadHelmetNCWLHeavy
+    - ClothingHeadHatNCWLBeret
+    - ClothingBeltNCWLWebbing
+    - ClothingMaskNCWLBalaclava
+    - ClothingOuterArmorNCWLEngi
+    - ClothingBackpackSatchelNCWL
+    - ClothingBackpackDuffelNCWL
+    - ClothingOuterArmorNCWLMedi
+    - ClothingUniformJumpsuitNCWL
+    - ClothingUniformJumpsuitNCWLSkirt
+    - ClothingOuterArmorNCWLHeavyCarapace
+    - ClothingOuterArmorNCWLCarapaceKapitan
+    - ClothingOuterArmorNCWLCarapace
+    - ClothingUniformJumpsuitNCWLKommissar
+  position: -2, 0
+
+##WEAPONS
+# Tier 0
+
+- type: technology
+  id: CommunardRudimentaryWeaponry
+  name: Rudimentary Communard weaponry
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/rezerv.rsi
+    state: icon
+  discipline: Communard
+  tier: 1 #0
+  cost: 750
+  recipeUnlocks:
+    - WeaponPistolComrade
+    - WeaponRevolverPythonSecurity
+    - WeaponPistolT91
+    - NCWLLugBaton
+    - NCWLRiotShield
+    - WeaponShotgunProletar
+    - WeaponSubMachineGunNCWLWatchdog
+    - WeaponRifleNCWLRezerv
+  position: -4, 0
+  technologyPrerequisites:
+    - CommunardClothes
+  
+# Tier 1
+  
+- type: technology
+  id: CommunardFalin
+  name: Falin
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/fal.rsi
+    state: icon
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - WeaponRifleFAL
+  position: -6, 0
+  technologyPrerequisites:
+    - CommunardRudimentaryWeaponry
+    
+- type: technology
+  id: CommunardToz123
+  name: Toz-123
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/maul.rsi
+    state: icon
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - WeaponShotgunToz123
+  position: -7, -1
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+    - CommunardFalin
+    
+- type: technology
+  id: CommunardBloodhound
+  name: Bloodhound
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi
+    state: icon
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - WeaponSubMachineGunBloodhound
+  position: -7, 1
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+    - CommunardFalin
+    
+# Tier 2
+    
+- type: technology
+  id: CommunardBatanya
+  name: Communard weaponry
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/batanya.rsi
+    state: icon
+  discipline: Communard
+  tier: 2
+  cost: 750
+  recipeUnlocks:
+    - WeaponRifleNCWLBatanya
+  position: -8, 0
+  technologyPrerequisites:
+    - CommunardFalin
+    
+- type: technology
+  id: CommunardGM94
+  name: GM94
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/gm94.rsi
+    state: icon
+  discipline: Communard
+  tier: 2
+  cost: 750
+  recipeUnlocks:
+    - WeaponLauncherGM94
+  position: -9, 1
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardBatanya
+    
+- type: technology
+  id: CommunardMilitant
+  name: Militant
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/militant.rsi
+    state: icon
+  discipline: Communard
+  tier: 2
+  cost: 750
+  recipeUnlocks:
+    - WeaponSubMachineGunMilitant
+  position: -9, -1
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardBatanya
+    
+# Tier 3
+    
+- type: technology
+  id: CommunardVibrokukri
+  name: Vibrokukri
+  icon:
+    sprite: _Crescent/Objects/Weapons/Melee/ncwlkukri.rsi
+    state: icon
+  discipline: Communard
+  tier: 3
+  cost: 750
+  recipeUnlocks:
+    - NCWLKukri
+    - ClothingBeltSheathNCWLKukri
+  position: -11, 1
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+    - CommunardBatanya
+    
+- type: technology
+  id: CommunardConscript
+  name: Conscript
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/conscript.rsi
+    state: icon
+  discipline: Communard
+  tier: 3
+  cost: 750
+  recipeUnlocks:
+    - WeaponLightMachineGunConscript
+  position: -11, -1
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+    - CommunardBatanya
+    
+- type: technology
+  id: CommunardMolotGun
+  name: Molot
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/molot.rsi
+    state: icon
+  discipline: Communard
+  tier: 3
+  cost: 750
+  recipeUnlocks:
+    - WeaponSniperMolot
+  position: -12, 0
+  prerequisiteLineType: Spread
+  technologyPrerequisites:
+    - CommunardBatanya
+##ARMOR/MECHS/MISC
+# Tier 0
+
+- type: technology
+  id: CommunardRudimentarySuits
+  name: Rudimentary Communard vacsuits
+  icon:
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/salvagehardsuit.rsi
+    state: icon
+  discipline: Communard
+  tier: 1 #0
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterHardsuitNCWLEngi
+    - ClothingOuterHardsuitNCWLMedi
+    - ClothingShoesBootsMagNCWL
+    - ClothingHeadHelmetNCWLEVA
+    - ClothingOuterNCWLEVA
+  position: -3, -3
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardClothes
+
+# Tier 1
+
+- type: technology
+  id: CommunardInfanteer
+  name: Infanteer
+  icon:
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/infantryhardsuit.rsi
+    state: icon
+  discipline: Communard
+  tier: 1 
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterHardsuitNCWLInfantry
+  position: -5, -3
+  technologyPrerequisites:
+    - CommunardRudimentarySuits
+  
+- type: technology
+  id: CommunardExplosives
+  name: Infanteer
+  icon:
+    sprite: _Crescent/Objects/Weapons/Grenades/ncwl_rgd55.rsi
+    state: icon
+  discipline: Communard
+  tier: 1 
+  cost: 750
+  recipeUnlocks:
+    - ZariyaFlashbangHandgrenade
+    - RGD55M13Handgrenade
+  position: -6, -2
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardInfanteer
+  
+# Tier 2
+  
+- type: technology
+  id: CommunardPetya
+  name: Petya
+  icon:
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/commieheavy.rsi
+    state: icon
+  discipline: Communard
+  tier: 2
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterHardsuitNCWLPetya
+  position: -7, -3
+  technologyPrerequisites:
+    - CommunardInfanteer
+  
+- type: technology
+  id: CommunardLancerMech
+  name: Lancer
+  icon:
+    sprite: _Crescent/Objects/Specific/mecha.rsi
+    state: lancer
+  discipline: Communard
+  tier: 2
+  cost: 750
+  recipeUnlocks:
+    - MechNCWLLancerFlatpack
+  position: -8, -4
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardPetya
+  
+# Tier 3
+  
+- type: technology
+  id: CommunardHades
+  name: Hades
+  icon:
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/commienaut.rsi
+    state: icon
+  discipline: Communard
+  tier: 3
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterHardsuitNCWLJuggernaut
+  position: -9, -3
+  technologyPrerequisites:
+    - CommunardPetya
+
+- type: technology
+  id: CommunardBogatyrMech
+  name: Hades
+  icon:
+    sprite: _Crescent/Objects/Specific/mecha.rsi
+    state: bogatyr
+  discipline: Communard
+  tier: 3
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterHardsuitNCWLJuggernaut
+  position: -10, -4
+  technologyPrerequisites:
+    - CommunardLancerMech
+
+##SHIP RELATED
+# Tier 0
+
+- type: technology
+  id: CommunardRudimentaryShips
+  name: Rudimentary ships
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: corvette
+  discipline: Communard
+  tier: 1 #0
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherLodka
+    - ShipVoucherVanguard
+    - ShipVoucherZorniy
+  position: -3, 3
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - CommunardClothes
+
+# Tier 1
+
+- type: technology
+  id: CommunardIvarod
+  name: Rudimentary ships
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: battleship
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherIvarod
+  position: -5, 3
+  technologyPrerequisites:
+    - CommunardRudimentaryShips
+    
+- type: technology
+  id: CommunardKrechet
+  name: Rudimentary ships
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: fighter
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherKrechet
+  position: -6, 2
+  technologyPrerequisites:
+    - CommunardIvarod
+  prerequisiteLineType: Spread
+    
+- type: technology
+  id: CommunardMolot
+  name: Rudimentary ships
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: frigate
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherMolot
+  position: -6, 4
+  technologyPrerequisites:
+    - CommunardIvarod
+  prerequisiteLineType: Spread
+  
+# Tier 2 
+
+- type: technology
+  id: CommunardVanguardMarkTwo
+  name: Vanguard Mk.II
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: frigate
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherVanguardMarkTwo
+  position: -7, 3
+  technologyPrerequisites:
+    - CommunardIvarod
+    
+- type: technology
+  id: CommunardGargut
+  name: Gargut
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: dreadnought
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherGargut
+  position: -8, 2
+  technologyPrerequisites:
+    - CommunardVanguardMarkTwo
+  prerequisiteLineType: Diagonal
+    
+- type: technology
+  id: CommunardHind
+  name: Hind
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: battleship
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherHind
+  position: -8, 4
+  technologyPrerequisites:
+    - CommunardVanguardMarkTwo
+  prerequisiteLineType: Diagonal
+  
+# Tier 3
+
+- type: technology
+  id: CommunardBogatyr
+  name: Bogatyr
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: industrial
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherBogatyr
+  position: -11, 3
+  technologyPrerequisites:
+    - CommunardVanguardMarkTwo
+    
+- type: technology
+  id: CommunardStern
+  name: Stern
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: bigindustrial
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherStern
+  position: -10, 4
+  technologyPrerequisites:
+    - CommunardVanguardMarkTwo
+  prerequisiteLineType: Spread
+    
+- type: technology
+  id: CommunardSunder
+  name: Sunder
+  icon:
+    sprite: _Crescent/ShipIcons/ifficons.rsi
+    state: battleship
+  discipline: Communard
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ShipVoucherSunder
+  position: -10, 2
+  technologyPrerequisites:
+    - CommunardVanguardMarkTwo
+  prerequisiteLineType: Spread

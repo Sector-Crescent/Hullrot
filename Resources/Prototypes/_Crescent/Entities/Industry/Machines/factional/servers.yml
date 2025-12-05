@@ -1,0 +1,57 @@
+﻿- type: entity
+  id: ResearchAndDevelopmentServerCyberdawn
+  parent: ResearchAndDevelopmentServer
+  name: cyberdawn technologies research server
+  description: Contains the collective knowledge of the station's scientists. Destroying it would send them back to the stone age. You don't want that do you?
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Coalition
+    - Mechatronics
+    - Electronics
+    - Astronautics
+    - Biochemical
+
+- type: entity
+  id: ResearchAndDevelopmentServerImperial
+  parent: ResearchAndDevelopmentServer
+  name: imperial research server
+  description: Contains the collective knowledge of the station's scientists. Destroying it would send them back to the stone age. You don't want that do you?
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Imperial
+    - Mechatronics
+    - Electronics
+    - Astronautics
+    - Biochemical
+
+- type: entity
+  id: ResearchAndDevelopmentServerCommunard
+  parent: ResearchAndDevelopmentServer
+  name: communard research server
+  description: Contains the collective knowledge of the station's scientists. Destroying it would send them back to the stone age. You don't want that do you?
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Communard
+    - Mechatronics
+    - Electronics
+    - Astronautics
+    - Biochemical
+    UnlockedTechnologies:
+    - CommunardClothes
+
+- type: entity
+  id: ResearchAndDevelopmentServerCorporate
+  parent: ResearchAndDevelopmentServer
+  name: shinohara research server
+  description: Contains the collective knowledge of the station's scientists. Destroying it would send them back to the stone age. You don't want that do you?
+  components:
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Corporate
+    - Mechatronics
+    - Electronics
+    - Astronautics
+    - Biochemical

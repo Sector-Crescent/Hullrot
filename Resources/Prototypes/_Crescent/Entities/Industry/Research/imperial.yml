@@ -1,0 +1,115 @@
+# Tier 1
+- type: technology
+  id: ImperialClothes
+  name: Imperial clothes
+  icon:
+    sprite: _Crescent/Clothing/Empire/Uniform/mandategovernor.rsi
+    state: icon
+  discipline: Imperial
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - ClothingOuterCoatImperialAdjutant
+    - ClothingUniformJumpsuitImperialAdjutantFormal
+    - ClothingNeckCloakImperialAdjutant
+    - ClothingHandsGlovesImperialAdjutantGloves
+    - ClothingHeadHatAdvocatus
+    - ClothingNeckCloakInspector
+    - ClothingOuterCoatImperialAdvocatus
+    - ClothingOuterCoatArchmaester
+    - ClothingUniformJumpsuitImperialArchmaester
+    - ClothingHandsGlovesImperialGovernorGloves
+    - ClothingShoesBootsImperialJackboots
+    - ClothingHandsGlovesImperialWorkerGloves
+    - ClothingHandsGlovesImperialLonggloves
+    - ClothingHeadHelmetImperialWorkerHelmet
+    - ClothingUniformJumpsuitImperialSoldierFormal
+    - ClothingUniformJumpsuitImperialFreeholder
+    - ClothingOuterCoatImperialGovernor
+    - ClothingShoesBootsImperialGovernorBoots
+    - ClothingMaskImperialGovernorMask
+    - ClothingNeckCloakImperialGovernor
+    - ClothingHeadHatImperialBicorne
+    - ClothingHeadHatDSMCapsoft
+    - ClothingBackpackDSMSatchel
+    - ClothingUniformJumpsuitImperialCombat
+    - ClothingHeadHatImperialHat
+    - ClothingUniformJumpsuitImperialGovernor
+    - ClothingHeadHatImperialBeret
+    - ClothingHeadHatImperialPeakedCap
+    - ClothingMaskImperialCombatGasmask
+    - ClothingUniformJumpsuitImperialSurgeon
+    - ClothingShoesBootsImperialLaceup
+    - ClothingHeadHatImperialHeadwrap
+    - ClothingOuterCoatImperialMerchant
+    - ClothingHeadHelmetImperialRitter
+    - ClothingOuterCoatImperialRitter
+    - ClothingUniformJumpsuitImperialNobleFemale
+    - ClothingUniformJumpsuitImperialNobleMale
+    - ClothingNeckImperialBow
+    - ClothingNeckImperialBowJeweled
+    - ClothingNeckCloakImperialCapelet
+    - ClothingMaskImperialAdjutantMask
+    - ClothingHeadHatImperialSurgeon
+    - ClothingNeckImperialGreatcoat
+  position: 1,0
+
+- type: technology
+  id: ImperialRudimentaryWeaponry
+  name: Rudimentary Imperial weaponry
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/surplus_dsm_smg.rsi
+    state: icon
+  discipline: Imperial
+  tier: 1
+  cost: 750
+  recipeUnlocks:
+    - WeaponSubMachineGunDSMArbiter
+    - WeaponRifleDSMMuster
+    - WeaponPistolNeoVolker
+    - WeaponShotgunDSMMatusa
+    - WeaponPistolComplianceImperial
+    - DSMDuelingKhopesh
+  position: 2,0
+  
+# Tier 2
+- type: technology
+  id: ImperialWeaponry
+  name: Imperial weaponry
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/miller.rsi
+    state: icon
+  discipline: Imperial
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+    - WeaponRifleMiller
+    - WeaponLauncherM320
+    - WeaponSubMachineGunC20r
+    - DSMSabre
+    - ClothingBeltSheathDSMSabre
+    - DSMRapier
+    - ClothingBeltSheathDSMRapier
+  position: 3,0
+  technologyPrerequisites:
+    - ImperialRudimentaryWeaponry
+
+# Tier 3
+- type: technology
+  id: ImperialAdvancedWeaponry
+  name: Advanced Imperial weaponry
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/legionnaire.rsi
+    state: icon
+  discipline: Imperial
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+    - SRMKhopesh
+    - ClothingBeltSheathKhopesh
+    - WeaponSniperImperator
+    - WeaponLightMachineGunDSMDominion
+    - WeaponRifleDSMLegionnaire
+  position: 4,0
+  technologyPrerequisites:
+    - ImperialWeaponry

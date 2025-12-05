@@ -1,0 +1,1340 @@
+- type: entity
+  parent: BaseItem
+  id: BaseFlatpack
+  name: base flatpack
+  description: A flatpack used for constructing something.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Item
+    size: Large
+  - type: Sprite
+    sprite: Objects/Devices/flatpack.rsi
+    layers:
+    - state: base
+    - state: overlay
+      color: "#cec8ac"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Appearance
+  - type: Flatpack
+    boardColors:
+      command: "#334E6D"
+      medical: "#52B4E9"
+      service: "#9FED58"
+      engineering: "#EFB341"
+      security: "#DE3A3A"
+      science: "#D381C9"
+      supply: "#A46106"
+      cpu_command: "#334E6D"
+      cpu_medical: "#52B4E9"
+      cpu_service: "#9FED58"
+      cpu_engineering: "#EFB341"
+      cpu_security: "#DE3A3A"
+      cpu_science: "#D381C9"
+      cpu_supply: "#A46106"
+  - type: StaticPrice
+    price: 250
+
+#guns
+- type: entity
+  parent: BaseFlatpack
+  id: VulcanFlatpack
+  name: vulcan parts
+  description: Parts used to build a Vulcan-class machinegun.
+  components:
+  - type: Flatpack
+    entity: NTVulcanTurret
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: HephaestusFlatpack
+  name: hephaestus parts
+  description: Parts used to build a Hephaestus-class mortar.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretBattlemortar
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: CompaktFlatpack
+  name: 350c compakt parts
+  description: Parts used to build a 350c Compakt-class laser gatling.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretHeavyPlasma
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BizmuthFlatpack
+  name: bizmuth parts
+  description: Parts used to build a Bizmuth-class emp gatling.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunBizmuth
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: NeedlerFlatpack
+  name: needler parts
+  description: Parts used to build a Needler-class autogun.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretNeedler
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: JeongFlatpack
+  name: jeong parts
+  description: Parts used to build a Jeong-class turret.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretJeong
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: RimwardFlatpack
+  name: rimward parts
+  description: Parts used to build a Rimward-class plasma thrower.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretHeavyPlasmaRimward
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: PrinceFlatpack
+  name: prince parts
+  description: Parts used to build a Prince-class flak artillery.
+  components:
+  - type: Flatpack
+    entity: FlakCannonTurret
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SolarisFlatpack
+  name: solaris parts
+  description: Parts used to build a Solaris-class exotic particle launcher.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretSolaris
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: MortarFlatpack
+  name: heavy automortar parts
+  description: Parts used to build a heavy automortar.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretMortar
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SmartbombFlatpack
+  name: smartbomb parts
+  description: Parts used to build a smartbomb delivery turret.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretSmartbomb
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: KurosawaFlatpack
+  name: kurosawa parts
+  description: Parts used to build a Kurosawa-class missile launcher.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunKurosawa
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: OperatorFlatpack
+  name: operator parts
+  description: Parts used to build an Operator-class machinegun.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretVulcan
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SumitomoFlatpack
+  name: sumitomo parts
+  description: Parts used to build a Sumitomo-class missile launcher.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunMissileRack
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: CleanserFlatpack
+  name: cleanser parts
+  description: Parts used to build a Cleanser-class overclocked machinegun.
+  components:
+  - type: Flatpack
+    entity: SAWCleanser
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: IdnaFlatpack
+  name: idna parts
+  description: Parts used to build an Idna-class fixed torpedo dispenser.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunTorpedo
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: MagwellFlatpack
+  name: magwell parts
+  description: Parts used to build a Magwell-class torpedo launcher.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretMagwell
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: TorchFlatpack
+  name: torch parts
+  description: Parts used to build a Torch-class point defense laser gatling.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretLaser
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: ExhumerFlatpack
+  name: exhumer parts
+  description: Parts used to build an Exhumer-class ore extraction cannon.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunExhumer
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: PlasmaRepeaterFlatpack
+  name: 400c plasma repeater parts
+  description: Parts used to build a 400c plasma repeater.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunPlasmaRepeater
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SlugthrowerFlatpack
+  name: slugthrower parts
+  description: Parts used to build a Dasher-class slugthrower.
+  components:
+  - type: Flatpack
+    entity: SlugthrowerCannon
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SlugspitterFlatpack
+  name: slugspitter parts
+  description: Parts used to build a Slugspitter-class slugthrower turret.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretSlugspitter
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: PDTFlatpack
+  name: SHI MG-213 turret parts
+  description: Parts used to build a SHI MG-213 light dual machinegun.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretPDT
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: PDTMk2Flatpack
+  name: SHI MG-213 Mk.II turret parts
+  description: Parts used to build an improved SHI MG-213 dual machinegun.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretPDTNCSP
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: 120mmFlatpack
+  name: type-99 artillery parts
+  description: Parts used to build a SHI Type-99 artillery cannon.
+  components:
+  - type: Flatpack
+    entity: Type99Artillery
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: GargoyleFlatpack
+  name: gargoyle parts
+  description: Parts used to build a Gargoyle-class LRM launcher.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretGargoyle
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: LancerFlatpack
+  name: lancer parts
+  description: Parts used to build a Lancer-class MRM launcher.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretLancer
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SwarmerFlatpack
+  name: swarmer parts
+  description: Parts used to build a Swarmer-class SRM launcher.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretSwarmer
+  - type: StaticPrice
+    price: 5000
+#guns end
+#electronics begin
+
+- type: entity
+  parent: BaseFlatpack
+  id: TelecomServerFlatpack
+  name: telecom server parts
+  description: Parts used to build a telecommunications server.
+  components:
+  - type: Flatpack
+    entity: TelecomServer
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterFlatpack
+  name: thruster parts
+  description: Parts used to build a thruster.
+  components:
+  - type: Flatpack
+    entity: Thruster
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: PowerComputerFlatpack
+  name: power monitoring computer parts
+  description: Parts used to build a power monitoring computer.
+  components:
+  - type: Flatpack
+    entity: ComputerPowerMonitoring
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: RadarConsoleFlatpack
+  name: mass scanner parts
+  description: Parts used to build a mass scanner console.
+  components:
+  - type: Flatpack
+    entity: ComputerRadar
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MicrowaveMachineFlatpack
+  name: microwave parts
+  description: Parts used to build a microwave.
+  components:
+  - type: Flatpack
+    entity: KitchenMicrowave
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MedicalTechFabFlatpack
+  name: medical techfab parts
+  description: Parts used to build a medical tech fabricator.
+  components:
+  - type: Flatpack
+    entity: MedicalTechFab
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: HotplateMachineFlatpack
+  name: hotplate parts
+  description: Parts used to build a hotplate.
+  components:
+  - type: Flatpack
+    entity: ChemistryHotplate
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerCrewMonitoringFlatpack
+  name: crew monitoring computer parts
+  description: Parts used to build a crew monitoring computer.
+  components:
+  - type: Flatpack
+    entity: ComputerCrewMonitoring
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: CrewMonitoringServerMachineFlatpack
+  name: crew monitoring server parts
+  description: Parts used to build a crew monitoring server.
+  components:
+  - type: Flatpack
+    entity: ComputerCrewMonitoring
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: PowerCellRechargerFlatpack
+  name: power cell recharger parts
+  description: Parts used to build a power cell recharger.
+  components:
+  - type: Flatpack
+    entity: PowerCellRecharger
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: CircuitImprinterFlatpack
+  name: circuit imprinter parts
+  description: Parts used to build a circuit imprinter.
+  components:
+  - type: Flatpack
+    entity: CircuitImprinter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BlastDoorFlatpack
+  name: blast door parts
+  description: Parts used to build a blast door.
+  components:
+  - type: Flatpack
+    entity: BlastDoor
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: JukeboxFlatpack
+  name: jukebox parts
+  description: Parts used to build a jukebox.
+  components:
+  - type: Flatpack
+    entity: Jukebox
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerAnalysisConsoleFlatpack
+  name: analysis console parts
+  description: Parts used to build an analysis console.
+  components:
+  - type: Flatpack
+    entity: ComputerAnalysisConsole
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MachineAnomalyVesselFlatpack
+  name: anomaly vessel parts
+  description: Parts used to build an anomaly vessel.
+  components:
+  - type: Flatpack
+    entity: MachineAnomalyVessel
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MachineArtifactAnalyzerFlatpack
+  name: artifact analyzer parts
+  description: Parts used to build an artifact analyzer.
+  components:
+  - type: Flatpack
+    entity: MachineArtifactAnalyzer
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AirlockFlatpack
+  name: airlock parts
+  description: Parts used to build an airlock.
+  components:
+  - type: Flatpack
+    entity: Airlock
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AmmoTechFabFlatpack
+  name: ammo tech fabricator parts
+  description: Parts used to build an ammunition fabricator.
+  components:
+  - type: Flatpack
+    entity: AmmoTechFab
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ArtifactCrusherMachineFlatpack
+  name: artifact crusher machine parts
+  description: Parts used to build an artifact crusher machine.
+  components:
+  - type: Flatpack
+    entity: MachineArtifactCrusher
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AtmosMonitoringComputerFlatpack
+  name: atmos monitoring computer parts
+  description: Parts used to build an atmospheric monitoring computer.
+  components:
+  - type: Flatpack
+    entity: ComputerAtmosMonitoring
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AutolatheFlatpack
+  name: autolathe parts
+  description: Parts used to build an autolathe.
+  components:
+  - type: Flatpack
+    entity: Autolathe
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BiofabricatorMachineFlatpack
+  name: biofabricator machine parts
+  description: Parts used to build a biofabricator.
+  components:
+  - type: Flatpack
+    entity: Biofabricator
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ExosuitFabricatorFlatpack
+  name: exosuit fabricator parts
+  description: Parts used to build an exosuit fabricator.
+  components:
+  - type: Flatpack
+    entity: ExosuitFabricator
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ReagentGrinderMachineFlatpack
+  name: reagent grinder machine parts
+  description: Parts used to build a reagent grinder.
+  components:
+  - type: Flatpack
+    entity: KitchenReagentGrinder
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponCapacitorRechargerFlatpack
+  name: weapon capacitor recharger parts
+  description: Parts used to build a weapon capacitor recharger.
+  components:
+  - type: Flatpack
+    entity: WeaponCapacitorRecharger
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerResearchAndDevelopmentFlatpack
+  name: research and development computer parts
+  description: Parts used to build a research and development computer.
+  components:
+  - type: Flatpack
+    entity: ComputerResearchAndDevelopment
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: UniformPrinterFlatpack
+  name: uniform printer parts
+  description: Parts used to build a uniform printer.
+  components:
+  - type: Flatpack
+    entity: UniformPrinter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: GyroscopeFlatpack
+  name: gyroscope parts
+  description: Parts used to build a gyroscope.
+  components:
+  - type: Flatpack
+    entity: Gyroscope
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AirlockShuttleFlatpack
+  name: docking airlock parts
+  description: Parts used to build a docking airlock.
+  components:
+  - type: Flatpack
+    entity: AirlockShuttle
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerShuttleFlatpack
+  name: shuttle computer parts
+  description: Parts used to build a shuttle computer.
+  components:
+  - type: Flatpack
+    entity: ComputerShuttle
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SMESBasicFlatpack
+  name: smes basic parts
+  description: Parts used to build a basic SMES unit.
+  components:
+  - type: Flatpack
+    entity: SMESBasic
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SubstationFlatpack
+  name: substation parts
+  description: Parts used to build a substation.
+  components:
+  - type: Flatpack
+    entity: SubstationBasic
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: IDComputerCircuitboardFlatpack
+  name: id computer parts
+  description: Parts used to build an ID computer.
+  components:
+  - type: Flatpack
+    entity: ComputerId
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BoriaticGeneratorHerculesFlatpack
+  name: hercules boriatic generator parts
+  description: Parts used to build a boriatic Hercules generator.
+  components:
+  - type: Flatpack
+    entity: BoriaticGeneratorHercules
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ScrapRefinerFlatpack
+  name: scrap refiner parts
+  description: Parts used to build a Shinohara scrap refiner.
+  components:
+  - type: Flatpack
+    entity: ScrapRefiner
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ShipyardManufactorumFlatpack
+  name: shipyard manufactorum parts
+  description: Parts used to build a SHI shipyard manufactorum.
+  components:
+  - type: Flatpack
+    entity: ShipyardManufactorum
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AutoloomFablatheFlatpack
+  name: autoloom fablathe parts
+  description: Parts used to build a SHI portable autoloom fablathe.
+  components:
+  - type: Flatpack
+    entity: AutoloomFactory
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: FactoryShellAssemblerFlatpack
+  name: factory shell assembler parts
+  description: Parts used to build a factory shell assembler.
+  components:
+  - type: Flatpack
+    entity: FactoryShellAssembler
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: FactoryShellWeldFlatpack
+  name: factory shell welder parts
+  description: Parts used to build a factory shell welder.
+  components:
+  - type: Flatpack
+    entity: FactoryShellWeld
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: VariableCommodityFabricatorFlatpack
+  name: variable commodity fabricator parts
+  description: Parts used to build a SHI variable commodity fabricator.
+  components:
+  - type: Flatpack
+    entity: VariableCommodityFablathe
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AdvancedVariableCommodityFablatheFlatpack
+  name: advanced variable commodity fablathe parts
+  description: Parts used to build an advanced SHI variable commodity fablathe.
+  components:
+  - type: Flatpack
+    entity: AdvancedVariableCommodityFablathe
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MicroforgeFlatpack
+  name: microforge parts
+  description: Parts used to build a pristine microforge.
+  components:
+  - type: Flatpack
+    entity: PristineMicroforge
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: TurboItemRechargerFlatpack
+  name: turbo item recharger parts
+  description: Parts used to build a turbo item recharger.
+  components:
+  - type: Flatpack
+    entity: TurboItemRecharger
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: OreMagnetFlatpack
+  name: baromagnetic ore array parts
+  description: Parts used to build a SHI baromagnetic ore array.
+  components:
+  - type: Flatpack
+    entity: OreMagnet
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ScrapMagnetFlatpack
+  name: baromagnetic scrap array parts
+  description: Parts used to build a SHI baromagnetic scrap array.
+  components:
+  - type: Flatpack
+    entity: ScrapMagnet
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BoriaticComposterFlatpack
+  name: boriatic composter parts
+  description: Parts used to build a SHI boriatic composter.
+  components:
+  - type: Flatpack
+    entity: BoriaticRefiner
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: OreProcessorFlatpack
+  name: industrial ore processor parts
+  description: Parts used to build an ore processor.
+  components:
+  - type: Flatpack
+    entity: OreProcessor
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: OreProcessorIndustrialFlatpack
+  name: industrial ore processor parts
+  description: Parts used to build an industrial ore processor.
+  components:
+  - type: Flatpack
+    entity: OreProcessorIndustrial
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: IndustrialScrapRefinerFlatpack
+  name: industrial scrap upcycler parts
+  description: Parts used to build an industrial SHI scrap upcycler.
+  components:
+  - type: Flatpack
+    entity: IndustrialScrapRefiner
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BallisticFablatheFlatpack
+  name: armaments foundry parts
+  description: Parts used to build a SHI armaments foundry.
+  components:
+  - type: Flatpack
+    entity: BallisticFablathe
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BiomassReclaimerMachineFlatpack
+  name: biomass reclaimer parts
+  description: Parts used to build a biomass reclaimer.
+  components:
+  - type: Flatpack
+    entity: BiomassReclaimer
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: CloningConsoleComputerFlatpack
+  name: cloning console computer parts
+  description: Parts used to build a cloning console computer.
+  components:
+  - type: Flatpack
+    entity: ComputerCloningConsole
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: CloningPodFlatpack
+  name: cloning pod machine parts
+  description: Parts used to build a cloning pod.
+  components:
+  - type: Flatpack
+    entity: CloningPod
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: CryoPodFlatpak
+  name: cryo pod machine parts
+  description: Parts used to build a cryo pod.
+  components:
+  - type: Flatpack
+    entity: CryoPod
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: HydroponicsTrayFlatpack
+  name: hydroponics tray parts
+  description: Parts used to build a hydroponics tray.
+  components:
+  - type: Flatpack
+    entity: HydroponicsTrayEmpty
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MedicalScannerFlatpack
+  name: medical scanner parts
+  description: Parts used to build a medical scanner.
+  components:
+  - type: Flatpack
+    entity: MedicalScanner
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: StatisBedFlatpack
+  name: statis bed parts
+  description: Parts used to build a stasis bed.
+  components:
+  - type: Flatpack
+    entity: StasisBed
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ShieldEmitterSmallFlatpack
+  name: small deflector emitter parts
+  description: Parts used to build a NT-280 Errant-class deflector emitter.
+  components:
+  - type: Flatpack
+    entity: ShieldEmitterSmall
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ShieldEmitterMediumFlatpack
+  name: medium deflector emitter parts
+  description: Parts used to build a NT-630 Bulwark-class deflector emitter.
+  components:
+  - type: Flatpack
+    entity: ShieldEmitterMedium
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AmeControllerFlatpack
+  name: ame controller parts
+  description: Parts used to build an AME controller.
+  components:
+  - type: Flatpack
+    entity: AmeController
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: AmePartFlatpack
+  name: ame shielding parts
+  description: Parts used to build an AME shielding section.
+  components:
+  - type: Flatpack
+    entity: AmeShielding
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: BoriaticGeneratorEinsteinFlatpack
+  name: einstein boriatic generator parts
+  description: Parts used to build an Einstein-class boriatic generator.
+  components:
+  - type: Flatpack
+    entity: BoriaticGeneratorEinstein
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: TechDiskComputerFlatpack
+  name: tech disk terminal parts
+  description: Parts used to build a tech disk terminal.
+  components:
+  - type: Flatpack
+    entity: ComputerTechnologyDiskTerminal
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerTargetingFlatpack
+  name: targeting computer parts
+  description: Parts used to build a targeting computer.
+  components:
+  - type: Flatpack
+    entity: ComputerTargeting
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ComputerAdvancedRadarFlatpack
+  name: radar computer parts
+  description: Parts used to build a radar computer.
+  components:
+  - type: Flatpack
+    entity: ComputerAdvancedRadar
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SMESAdvancedFlatpack
+  name: advanced SMES parts
+  description: Parts used to build an advanced SMES.
+  components:
+  - type: Flatpack
+    entity: SMESAdvanced
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: EwarDeviceFlatpack
+  name: NT-21 Church Organ parts
+  description: Parts used to build an NT-21 Church Organ electronic warfare muffler.
+  components:
+  - type: Flatpack
+    entity: EwarDevice
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SmallBallisticHardpointFlatpack
+  name: small ballistic hardpoint parts
+  description: Parts used to build a small ballistic hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallBallistic
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SmallEnergyHardpointFlatpack
+  name: small energy hardpoint parts
+  description: Parts used to build a small energy hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallEnergy
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: SmallMissileHardpointFlatpack
+  name: small missile hardpoint parts
+  description: Parts used to build a small missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallMissile
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MediumBallisticHardpointFlatpack
+  name: medium ballistic hardpoint parts
+  description: Parts used to build a medium ballistic hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointMediumBallistic
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MediumEnergyHardpointFlatpack
+  name: medium energy hardpoint parts
+  description: Parts used to build a medium energy hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointMediumEnergy
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MediumMissileHardpointFlatpack
+  name: medium missile hardpoint parts
+  description: Parts used to build a medium missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAardpointMediumMissile
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: LargeBallisticHardpointFlatpack
+  name: large ballistic hardpoint parts
+  description: Parts used to build a large ballistic hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointLargeBallistic
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: LargeEnergyHardpointFlatpack
+  name: large energy hardpoint parts
+  description: Parts used to build a large energy hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointLargeEnergy
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: LargeMissileHardpointFlatpack
+  name: large missile hardpoint parts
+  description: Parts used to build a large missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointLargeMissile
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: FixedHardpointFlatpack
+  name: fixed hardpoint parts
+  description: Parts used to build a fixed universal hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointFixed
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MiniGravFlatpack
+  name: mini gravity generator parts
+  description: Parts used to build a miniature gravity generator.
+  components:
+  - type: Flatpack
+    entity: GravityGeneratorMini
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterDSMFighterFlatpack
+  name: DSM fighter thruster parts
+  description: Parts used to build a DSM fighter thruster.
+  components:
+  - type: Flatpack
+    entity: ThrusterDSMFighter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterSHIFighterFlatpack
+  name: SHI fighter thruster parts
+  description: Parts used to build a SHI fighter thruster.
+  components:
+  - type: Flatpack
+    entity: ThrusterSHIFighter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterNCWLFighterFlatpack
+  name: NCWL fighter thruster parts
+  description: Parts used to build an NCWL fighter thruster.
+  components:
+  - type: Flatpack
+    entity: ThrusterNCWLFighter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterNCSPFighterFlatpack
+  name: NCSP fighter thruster parts
+  description: Parts used to build an NCSP fighter thruster.
+  components:
+  - type: Flatpack
+    entity: ThrusterNCSPFighter
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechNCWLLancerFlatpack
+  name: NCWL Lancer mech parts
+  description: Parts used to build an NCWL Lancer-class mech.
+  components:
+  - type: Flatpack
+    entity: MechNCWLLancer
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechNCWLBogatyrFlatpack
+  name: NCWL Bogatyr mech parts
+  description: Parts used to build an NCWL Bogatyr-class mech.
+  components:
+  - type: Flatpack
+    entity: MechNCWLBogatyr
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechDSMCarrionFlatpack
+  name: DSM Carrion mech parts
+  description: Parts used to build a DSM Carrion-class mech.
+  components:
+  - type: Flatpack
+    entity: MechDSMCarrion
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechDSMWandererFlatpack
+  name: DSM Wanderer mech parts
+  description: Parts used to build a DSM Wanderer-class mech.
+  components:
+  - type: Flatpack
+    entity: MechDSMWanderer
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechDSMPaladinFlatpack
+  name: DSM Paladin mech parts
+  description: Parts used to build a DSM Paladin-class mech.
+  components:
+  - type: Flatpack
+    entity: MechDSMPaladin
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechRipleyFlatpack
+  name: Ripley mech parts
+  description: Parts used to build a Ripley-class mech.
+  components:
+  - type: Flatpack
+    entity: MechRipley
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: MechSHIGilgameshFlatpack
+  name: SHI Gilgamesh mech parts
+  description: Parts used to build a SHI Gilgamesh-class mech.
+  components:
+  - type: Flatpack
+    entity: MechSHIGilgamesh
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  parent: BaseFlatpack
+  id: HardlinerFlatpack
+  name: NT 3100c Hardliner plasma lance Flatpack
+  description: A flatpack used for constructing a rare, expensive energy artillery piece.
+  components:
+  - type: Flatpack
+    entity: HardlineBeamPulser
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000

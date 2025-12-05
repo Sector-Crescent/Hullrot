@@ -13,69 +13,6 @@
         Glass: 1
 
 - type: entity
-  parent: BaseMachineCircuitboard
-  id: AutolatheHyperConvectionMachineCircuitboard
-  name: hyper convection autolathe machine board
-  description: A machine printed circuit board for a hyper convection autolathe
-  components:
-  - type: MachineBoard
-    prototype: AutolatheHyperConvection
-    requirements:
-      MatterBin: 3
-    materialRequirements:
-      Glass: 1
-    tagRequirements:
-      Igniter:
-        Amount: 1
-        DefaultPrototype: Igniter
-        ExamineName: Igniter
-  - type: ReverseEngineering # Delta
-    difficulty: 2
-    recipes:
-      - AutolatheHyperConvectionMachineCircuitboard
-
-- type: entity
-  id: ProtolatheMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: protolathe machine board
-  description: A machine printed circuit board for a protolathe.
-  components:
-    - type: MachineBoard
-      prototype: Protolathe
-      requirements:
-        MatterBin: 2
-        Manipulator: 2
-      tagRequirements:
-        GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: ProtolatheHyperConvectionMachineCircuitboard
-  name: hyper convection protolathe machine board
-  description: A machine printed circuit board for a hyper convection protolathe.
-  components:
-  - type: MachineBoard
-    prototype: ProtolatheHyperConvection
-    requirements:
-      MatterBin: 2
-    tagRequirements:
-      GlassBeaker:
-        Amount: 2
-        DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
-      Igniter:
-        Amount: 1
-        DefaultPrototype: Igniter
-        ExamineName: Igniter
-  - type: ReverseEngineering # Delta
-    difficulty: 2
-    recipes:
-      - ProtolatheHyperConvectionMachineCircuitboard
-
-- type: entity
   id: BiofabricatorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: biofabricator machine board
@@ -91,25 +28,6 @@
       difficulty: 2
       recipes:
         - BiofabricatorMachineCircuitboard
-
-- type: entity
-  id: SecurityTechFabCircuitboard
-  parent: BaseMachineCircuitboard
-  name: security techfab machine board
-  description: A machine printed circuit board for a security techfab.
-  components:
-    - type: Sprite
-      state: security
-    - type: MachineBoard
-      prototype: SecurityTechFab
-      requirements:
-        MatterBin: 2
-        Manipulator: 2
-      tagRequirements:
-        GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
 
 - type: entity
   id: AmmoTechFabCircuitboard
@@ -163,28 +81,6 @@
         Amount: 2
         DefaultPrototype: Beaker
         ExamineName: Glass Beaker
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: CircuitImprinterHyperConvectionMachineCircuitboard
-  name: hyper convection circuit imprinter machine board
-  description: A machine printed circuit board for a hyper convection circuit imprinter.
-  components:
-  - type: Sprite
-    state: science
-  - type: MachineBoard
-    prototype: CircuitImprinterHyperConvection
-    requirements:
-      MatterBin: 2
-    tagRequirements:
-      GlassBeaker:
-        Amount: 2
-        DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
-      Igniter:
-        Amount: 1
-        DefaultPrototype: Igniter
-        ExamineName: Igniter
 
 - type: entity
   id: ExosuitFabricatorMachineCircuitboard
@@ -1239,17 +1135,6 @@
       - OreProcessorIndustrialMachineCircuitboard
 
 - type: entity
-  id: SheetifierMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: sheet-meister 2000 machine board
-  components:
-  - type: MachineBoard
-    prototype: Sheetifier
-    requirements:
-      MatterBin: 1
-      Manipulator: 1
-
-- type: entity
   id: MicrowaveMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: microwave machine board
@@ -1722,14 +1607,146 @@
         Gold: 5
         Bluespace: 5
 
+#hullrot boards
+
 - type: entity
-  id: BookPressMachineCircuitboard
+  id: MicroforgeCircuitboard
   parent: BaseMachineCircuitboard
-  name: book press machine board
-  description: A machine printed circuit board for a book press
+  name: microforge circuit
+  description: A machine printed circuit board for a microforge.
   components:
-    - type: MachineBoard
-      prototype: BookPress
-      requirements:
-        MatterBin: 1
-        Manipulator: 2
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: PristineMicroforge
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: ScrapRefinerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: scrap refiner circuit
+  description: A machine printed circuit board for a scrap refiner.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ScrapRefiner
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: IndustrialScrapRefinerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: industrial scrap refiner circuit
+  description: A machine printed circuit board for an industrial scrap refiner.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: IndustrialScrapRefiner
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: DrugLatheCircuitboard
+  parent: BaseMachineCircuitboard
+  name: drug lathe circuit
+  description: A machine printed circuit board for a drug lathe.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: DrugLathe
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: BoriaticRefinerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: boriatic refiner circuit
+  description: A machine printed circuit board for a boriatic refiner.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: BoriaticRefiner
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: ShipyardManufactorumCircuitboard
+  parent: BaseMachineCircuitboard
+  name: shipyard manufactorum circuit
+  description: A machine printed circuit board for a shipyard manufactorum.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShipyardManufactorum
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: OrganPrinterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: organ printer circuit
+  description: A machine printed circuit board for a organ printer.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: OrganPrinter
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: ImperialTradeGoodPrinterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: imperial tradegood printer circuit
+  description: A machine printed circuit board for an imperial tradegood printer.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ImperialTradeGoodPrinter
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: CorporateTradeGoodPrinterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: corporate tradegood printer circuit
+  description: A machine printed circuit board for a corporate tradegood printer.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: CorporateTradeGoodPrinter
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+- type: entity
+  id: SawsTradeGoodPrinterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: SAW tradegood printer circuit
+  description: A machine printed circuit board for a SAW tradegood printer.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: SawsTradeGoodPrinter
+    requirements:
+      MatterBin: 2
+      Manipulator: 2
+
+#hullrot boards end

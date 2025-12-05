@@ -1,0 +1,1145 @@
+#autolathe
+
+- type: entity
+  id: Autolathe
+  parent: BaseLatheLube
+  name: autolathe
+  description: It produces basic items using metal and glass.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/autolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: AutolatheMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - AACTablet
+      - AccessConfigurator
+      - AirTank
+      - AnomalyLocator
+      - AnomalyLocatorWide
+      - AnomalyScanner
+      - AppraisalTool
+      - Beaker
+      - Bloodpack
+      - BodyBag
+      - BodyBagFolded
+      - BoneGel
+      - Brutepack
+      - Bucket
+      - ButchCleaver
+      - CableApcStack
+      - CableHVStack
+      - CableMVStack
+      - CapacitorStockPart
+      - Cautery
+      - ClothingBeltSalvageWebbing
+      - ClothingBeltUtility
+      - ClothingEyesGlassesMeson
+      - ClothingEyesGlassesSunglasses
+      - ClothingEyesHudMedical
+      - ClothingHandsGlovesNitrile
+      - ClothingHeadHatWelding
+      - ClothingMaskSterile
+      - ClothingNeckIFFNeutral
+      - CombatKnife
+      - ConstructionBag
+      - ConveyorBeltAssembly
+      - Crowbar
+      - Defibrillator
+      - DiseaseSwab
+      - Drill
+      - Dropper
+      - ExteriorLightTube
+      - FireExtinguisher
+      - Flash
+      - FlashlightLantern
+      - FlashlightSeclite
+      - FloorCarpetItemBlack
+      - FloorCarpetItemBlue
+      - FloorCarpetItemCyan
+      - FloorCarpetItemGreen
+      - FloorCarpetItemOrange
+      - FloorCarpetItemPink
+      - FloorCarpetItemPurple
+      - FloorCarpetItemRed
+      - FloorCarpetItemWhite
+      - Floodlight
+      - ForensicPad
+      - GasAnalyzer
+      - Gauze
+      - GeigerCounter
+      - GlowstickYellow
+      - Handcuffs
+      - HandHeldMassScannerEE
+      - HandheldCrewMonitor
+      - HandheldGPSBasic
+      - HandheldHealthAnalyzer
+      - HandheldStationMapEmpty
+      - HandLabeler
+      - Hemostat
+      - HoloprojectorEmpty
+      - HydroponicsToolClippers
+      - HydroponicsToolHatchet
+      - HydroponicsToolMiniHoe
+      - HydroponicsToolScythe
+      - HydroponicsToolSpade
+      - Implanter
+      - Jug
+      - LargeBeaker
+      - LedLightBulb
+      - LightBulb
+      - LightReplacer
+      - LightReplacerEmpty
+      - LightTube
+      - MatterBinStockPart
+      - MegaSprayBottle
+      - MicroManipulatorStockPart
+      - MiningDrill
+      - MopBucket
+      - MopItem
+      - Mousetrap
+      - Multitool
+      - NodeScanner
+      - Ointment
+      - OreBag
+      - PinpointerUniversal
+      - PillCanister
+      - PlantAnalyzer
+      - Plunger
+      - PowerCellMedium
+      - PowerCellSmall
+      - RadioHandheld
+      - RemoteSignallerAdvanced
+      - Retractor
+      - RollerBedSpawnFolded
+      - Saw
+      - SawElectric
+      - Scalpel
+      - Screwdriver
+      - SodiumLightTube
+      - SynthesizerInstrument
+      - Syringe
+      - SyringeCase
+      - TargetHuman
+      - TrashBag
+      - trayScanner
+      - Truncheon
+      - VehicleWheelchairFolded
+      - WeaponCrusherGlaive
+      - WeaponDisabler
+      - WeaponGrapplingGun
+      - WeaponPistolCHIMP
+      - WelderIndustrialAdvanced
+      - WhiteCane
+      - Wirecutter
+      - Wrench
+      - Zipties
+
+#circuits
+
+- type: entity
+  id: CircuitImprinter
+  parent: BaseLatheLube
+  name: circuit imprinter
+  description: Prints circuit boards for machines.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/circuit_imprinter.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CircuitImprinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - AirAlarmElectronics
+      - FireAlarmElectronics
+      - APCElectronics
+      - WallmountSubstationElectronics
+      - WallmountGeneratorElectronics
+      - TelecomServerFlatpack
+      - ThrusterFlatpack
+      - PowerComputerFlatpack
+      - RadarConsoleFlatpack
+      - MicrowaveMachineFlatpack
+      - MedicalTechFabFlatpack
+      - HotplateMachineFlatpack
+      - ComputerCrewMonitoringFlatpack
+      - CrewMonitoringServerMachineFlatpack
+      - PowerCellRechargerFlatpack
+      - CircuitImprinterFlatpack
+      - BlastDoorFlatpack
+      - ComputerAnalysisConsoleFlatpack
+      - MachineAnomalyVesselFlatpack
+      - MachineArtifactAnalyzerFlatpack
+      - AirlockFlatpack
+      - AmmoTechFabFlatpack
+      - ArtifactCrusherMachineFlatpack
+      - AtmosMonitoringComputerFlatpack
+      - AutolatheFlatpack
+      - BiofabricatorMachineFlatpack
+      - ExosuitFabricatorFlatpack
+      - ReagentGrinderMachineFlatpack
+      - WeaponCapacitorRechargerFlatpack
+      - ComputerResearchAndDevelopmentFlatpack
+      - UniformPrinterFlatpack
+      - GyroscopeFlatpack
+      - AirlockShuttleFlatpack
+      - ComputerShuttleFlatpack
+      - SMESBasicFlatpack
+      - SubstationFlatpack
+      - IDComputerCircuitboardFlatpack
+      - BoriaticGeneratorHerculesFlatpack
+      - MiniGravFlatpack
+      - ComputerTargetingFlatpack
+
+#mechs
+
+- type: entity
+  id: ExosuitFabricator
+  parent: BaseLatheLube
+  name: exosuit fabricator
+  description: Creates parts for robotics and other mechanical needs
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/exosuit_fabricator.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: fab-load
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: fab-o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ExosuitFabricatorMachineCircuitboard
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+      - MMI
+      - ReverseMMI
+      - TorsoIPC
+      - LeftArmIPC
+      - RightArmIPC
+      - LeftHandIPC
+      - RightHandIPC
+      - LeftLegIPC
+      - RightLegIPC
+      - LeftFootIPC
+      - RightFootIPC
+      - HeadIPC
+      - OrganIPCEyes
+      - OrganIPCPump
+      - BasicCyberneticEyes
+      - MedicalCyberneticEyes
+      - SecurityCyberneticEyes
+      - RipleyHarness
+      - RipleyLArm
+      - RipleyRArm
+      - RipleyLLeg
+      - RipleyRLeg
+      - RipleyCentralElectronics
+      - RipleyPeripheralsElectronics  
+      - MechEquipmentGrabber
+  - type: GuideHelp
+    guides:
+    - Robotics
+
+#biological
+
+- type: entity
+  id: Biofabricator
+  parent: BaseLatheLube
+  name: biofabricator
+  description: Produces various objects out of biomass.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/biofabricator.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+      color: "#ffaa99"
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      color: "#ffaaaa"
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      color: "#ffaaaa"
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: BiofabricatorMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MonkeyCube
+      - KoboldCube
+      - CowCube
+      - GoatCube
+      - MothroachCube
+      - MouseCube
+      - CockroachCube
+      - SpaceCarpCube
+      - SpaceTickCube
+      - AbominationCube
+      - BioSynthHeart
+      - BioSynthLungs
+      - BioSynthLiver
+      - BioSynthEyes
+      - BioSynthLeftArm
+      - BioSynthLeftHand
+      - BioSynthRightArm
+      - BioSynthRightHand
+      - BioSynthLeftLeg
+      - BioSynthLeftFoot
+      - BioSynthRightLeg
+      - BioSynthRightFoot
+      - BioSynthHead
+      - MobSynthHuman
+
+#ammo
+
+- type: entity
+  id: AmmoTechFab
+  parent: BaseLatheLube
+  name: ammo techfab
+  description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
+  components:
+    - type: Sprite
+      sprite: Structures/Machines/techfab.rsi
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: ammo
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: AmmoTechFabCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+      staticRecipes:
+      - MagazineRifleDrum
+      - MagazineRifleDrumEmpty
+      - MagazineBoxRifle
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazineBoxPistol
+      - MagazineShotgun
+      - BoxLethalshot
+      - BoxLethalshot4g
+      - MagazineLightRifleBox
+      - MagazineBoxLightRifle
+      - MagazineRiflePan
+      - MagazineRiflePanEmpty
+      - MagazineBoxRifle
+      - MagazineMagnumSub
+      - MagazineMagnumSubMachineGunEmpty
+      - MagazineBoxMagnum
+      - MagazinePistolSubMachineGunHeavy
+      - MagazineCaselessRifle
+      - MagazineBoxCaselessRifle
+      - MagazinePistol6mmSmg
+      - MagazinePistol6mmSmgEmpty
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazineBoxLightRifle
+      - MagazinePistol
+      - MagazinePistolEmpty
+      - MagazineBoxPistol
+      - MagazineMagnumEmpty
+      - MagazineMagnum
+      - MagazineBoxMagnum
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineBoxRifle
+      - MagazineHeavyRifle
+      - MagazineBoxHeavyRifle
+      - MagazineAntiMateriel
+      - MagazineBoxAntiMateriel
+      - MagazinePistol6mm
+      - MagazinePistolCaselessRifle
+      - MagazinePistolSmartgun
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
+      - MagazineGrenadeEmpty
+      - CartridgeRocket
+      - GrenadeFrag
+
+#medical
+
+- type: entity
+  id: MedicalTechFab
+  parent: BaseLatheLube
+  name: medical techfab
+  description: Prints equipment for use by the medbay.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: med
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: MedicalTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - Brutepack1
+      - Ointment1
+      - Gauze1
+      - Implanter
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
+      - SyringeCase
+      - ParamedHypo
+      - CartridgeSaline
+      - CartridgeDermaline
+      - CartridgeEpinephrine
+      - CartridgeAtropine
+      - CartridgeBicaridine
+      - CartridgeEphedrine
+      - CartridgePuncturase
+      - CartridgeTirizene
+
+#uniform
+
+- type: entity
+  parent: BaseLatheLube
+  id: UniformPrinter
+  name: uniform printer
+  description: Prints new or replacement uniforms.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Structures/Machines/uniform_printer.rsi
+    snapCardinals: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: Machine
+    board: UniformPrinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/uniformprinter.ogg
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - ClothingNeckTieRed
+      - ClothingNeckTieDet
+      - ClothingHandsGlovesLatex
+      - ClothingMaskSterile
+      - PlushiePearCat
+      - ClothingUniformMNKDressBlack
+      - ClothingOuterCoatMNKBlackJacket
+      - ClothingUniformMNKBlackOveralls
+      - ClothingOuterCoatMNKBlackTopCoat
+      - ClothingUniformMNKTracksuitBlack
+      - ClothingUniformMNKBlackShoulder
+      - ClothingUniformMNKGymBra
+      - ClothingUniformMNKOfficeSkirt
+      - ClothingUniformMNKUnderGarment
+      - ClothingOuterCoatMNKWhiteHoodie
+      - ClothingOuterDenimJacket
+      - ClothingHeadHatBeretFrench
+      - ClothingHeadHatBeret
+      - ClothingHeadHatBeretWhite
+      - ClothingHeadHatBlacksoft
+      - ClothingUniformJumpskirtSecurityEOC
+      - ClothingUniformJumpsuitSecurityEOC
+      - ClothingUniformJumpsuitSuitAmish
+      - ClothingUniformJumpsuitSuitAristocratic
+      - ClothingUniformJumpsuitSuitAristocraticTuxedo
+      - ClothingHandsGlovesCombat
+      - ClothingMaskSyndicateFacemask
+      - ClothingShoesBootsCombat
+      - ClothingOuterCoatAcidRaincoat
+      - ClothingUniformJumpskirtAdminAssistant
+      - ClothingUniformJumpsuitAdminAssistant
+      - ClothingUniformJumpsuitBartender
+      - ClothingUniformJumpskirtBartender
+      - ClothingOuterCoatJacketBiker
+      - ClothingMaskBandBlack
+      - ClothingOuterHoodieBlack
+      - ClothingUniformJumpsuitColorBlack
+      - ClothingUniformJumpsuitLawyerBlack
+      - ClothingUniformJumpskirtLawyerBlack
+      - ClothingBackpackMessengerColorBlack
+      - ClothingNeckTieBlack
+      - ClothingUniformJumpsuitBlackTurtleneck
+      - ClothingOuterCoatBomber
+      - ClothingOuterHoodieChaplain
+      - ClothingUniformJumpskirtChaplain
+      - ClothingUniformJumpsuitChaplain
+      - ClothingUniformJumpsuitSuitBlackAlt
+      - ClothingUniformJumpsuitDesertUniform
+      - ClothingUniformJumpsuitSuitBrownAlt
+      - ClothingBackpackDuffel
+      - ClothingShoesEnclosedChem
+      - ClothingHandsGlovesEvening
+      - ClothingMaskGasExplorer
+      - ClothingUniformJumpsuitExplorer
+      - ClothingUniformSchoolGakuranBlack
+      - ClothingOuterCoatGentle
+      - ClothingOuterCoatGreatcoat
+      - ClothingHeadHatBeanieGreen
+      - ClothingUniformJumpsuitTurtleneckGrey
+      - ClothingUniformJumpsuitBH
+      - ClothingUniformJumpskirtBH
+      - ClothingShoesBootsJack
+      - ClothingOuterCoatJacketJamrock
+      - ClothingOuterCoatJensen
+      - ClothingShoesBootsLaceup
+      - ClothingOuterCoatJacketLeather
+      - ClothingBackpackSatchelLeather
+      - ClothingBackpackMessenger
+      - ClothingHandsGlovesNitrile
+      - ClothingUniformJumpsuitBHGrey
+      - ClothingUniformJumpskirtBHGrey
+      - ClothingUniformJumpsuitOperative
+      - ClothingUniformJumpskirtOperative
+      - ClothingOuterCoatOvercoat
+      - ClothingUniformJumpsuitChaplainPilgrimVest
+      - ClothingBackpackPilot
+      - ClothingHandsGlovesPilot
+      - ClothingUniformJumpsuitMilitaryPilot
+      - ClothingBackpackMessengerPilot
+      - ClothingBackpackSatchelPilot
+      - ClothingBeltPilot
+      - ClothingUniformJumpsuitSuitRolledSleeves
+      - ClothingUniformSpacer
+      - ClothingNeckScarfStripedBlue
+      - ClothingNeckScarfStripedBrown
+      - ClothingNeckScarfStripedRed
+      - ClothingOuterCoatTrench
+      - ClothingUniformJumpsuitSuitVictorianVest
+    dynamicRecipes:
+      #NCWL START
+      - ClothingNeckAdminCapelet
+      - ClothingHeadHatNCWLBeretAdmiral
+      - ClothingUniformJumpsuitNCWLCommunications
+      - ClothingUniformJumpsuitNCWLTelnikSleeved
+      - ClothingUniformJumpsuitNCWLTelnikSleeveless
+      - ClothingHeadHatNCWLKommissarHat
+      - ClothingShoesBootsNCWLAdmiralParade
+      - ClothingHandsGlovesNCWLAdmiralParade
+      - ClothingOuterArmorNCWLOpremeCarapace
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingHeadHatNCWLBeretMedi
+      - ClothingOuterArmorNCWLLogi
+      - ClothingOuterArmorNCWLCarapaceDoktor
+      - ClothingOuterArmorNCWLCarapaceKapitan
+      - ClothingUniformJumpsuitNCWLArtificer
+      - ClothingBackpackNCWL
+      - ClothingEyesGlassesNCWL
+      - ClothingHeadHelmetNCWLBasic
+      - ClothingHeadHatNCWLCapsoft
+      - ClothingUniformJumpsuitNCWLMedic
+      - ClothingHeadHatNCWLCapsoftMedical
+      - ClothingBeltNCWLPouches
+      - ClothingUniformJumpsuitNCWL
+      - ClothingMaskNCWLGasmask
+      - ClothingHeadHelmetNCWLHeavy
+      - ClothingHeadHatNCWLBeret
+      - ClothingBeltNCWLWebbing
+      - ClothingMaskNCWLBalaclava
+      - ClothingOuterArmorNCWLEngi
+      - ClothingBackpackSatchelNCWL
+      - ClothingBackpackDuffelNCWL
+      - ClothingOuterArmorNCWLMedi
+      - ClothingUniformJumpsuitNCWLSkirt
+      #NCWL END
+      #DSM START
+      - ClothingOuterCoatImperialAdjutant
+      - ClothingUniformJumpsuitImperialAdjutantFormal
+      - ClothingNeckCloakImperialAdjutant
+      - ClothingHandsGlovesImperialAdjutantGloves
+      - ClothingHeadHatAdvocatus
+      - ClothingNeckCloakInspector
+      - ClothingOuterCoatImperialAdvocatus
+      - ClothingOuterCoatArchmaester
+      - ClothingUniformJumpsuitImperialArchmaester
+      - ClothingHandsGlovesImperialGovernorGloveS
+      - ClothingShoesBootsImperialJackboots
+      - ClothingHandsGlovesImperialWorkerGloves
+      - ClothingHandsGlovesImperialLonggloves
+      - ClothingHeadHelmetImperialWorkerHelmet
+      - ClothingUniformJumpsuitImperialSoldierFormal
+      - ClothingUniformJumpsuitImperialFreeholder
+      - ClothingOuterCoatImperialGovernor
+      - ClothingShoesBootsImperialGovernorBoots
+      - ClothingMaskImperialGovernorMask
+      - ClothingNeckCloakImperialGovernor
+      - ClothingHeadHatImperialBicorne
+      - ClothingHeadHatDSMCapsoft
+      - ClothingBackpackDSMSatchel
+      - ClothingUniformJumpsuitImperialCombat
+      - ClothingHeadHatImperialHat
+      - ClothingUniformJumpsuitImperialGovernor
+      - ClothingHeadHatImperialBeret
+      - ClothingHeadHatImperialPeakedCap
+      - ClothingMaskImperialCombatGasmask
+      - ClothingUniformJumpsuitImperialSurgeon
+      - ClothingShoesBootsImperialLaceup
+      - ClothingHeadHatImperialHeadwrap
+      - ClothingOuterCoatImperialMerchant
+      - ClothingHeadHelmetImperialRitter
+      - ClothingOuterCoatImperialRitter
+      - ClothingUniformJumpsuitImperialNobleFemale
+      - ClothingUniformJumpsuitImperialNobleMale
+      - ClothingNeckImperialBow
+      - ClothingNeckImperialBowJeweled
+      - ClothingNeckCloakImperialCapelet
+      - ClothingMaskImperialAdjutantMask
+      - ClothingHeadHatImperialSurgeon
+      #DSM END
+      #NCSP START
+      - ClothingHeadHatSyndicateArmaments
+      - ClothingHeadHatSyndicateInterdyneBeret
+      - ClothingOuterArmorSyndicateCoordinator
+      - ClothingUniformJumpsuitSyndicateSoldierCyberdawn
+      - ClothingUniformJumpsuitSyndicateLabCyberdawn
+      - ClothingHeadHatSyndicatePilot
+      - ClothingHeadHatHardhatSyndicateForeman
+      - ClothingOuterArmorSyndicateForeman
+      - ClothingHeadHelmetSyndicateBasic
+      - ClothingOuterArmorSyndicateArmorvest
+      - ClothingBackpackNCSP
+      - ClothingBackpackNCSPDuffelbag
+      - ClothingBackpackNCSPSatchel
+      - ClothingBeltSyndicateWebbing
+      - ClothingUniformJumpsuitSyndicateEnviro
+      - ClothingUniformJumpsuitSyndicate
+      - ClothingUniformJumpsuitSyndicateOfficer
+      - ClothingUniformJumpsuitSyndicateSuit
+      - ClothingHeadHatSyndicateInterdyneCap
+      - ClothingUniformJumpsuitSyndicateInterdyneScrubs
+      - ClothingOuterArmorSyndicateLieutenant
+      - ClothingHeadHatSyndicateOfficer
+      - ClothingOuterArmorCyberdawnPatriarch
+      - ClothingHeadHatPatriarch
+      - ClothingUniformJumpsuitSyndicateSuitCyberdawn
+      - ClothingOuterArmorSyndicateRingmaster
+      - ClothingOuterArmorSyndicateApron
+      - ClothingHeadHatSyndicateInterdyne
+      - ClothingOuterArmorSyndicateLabcoat
+      - ClothingHeadHatHardhatSyndicate
+      - ClothingUniformJumpsuitSyndicateSaws
+      - ClothingOuterArmorSyndicateWorker
+      - ClothingMaskGasSyndicate
+      - ClothingNeckCloakRingleader
+      - ClothingUniformJumpsuitSyndicateInterdyne
+      - ClothingHeadHelmetSyndicateBasicInterdyne
+      - ClothingOuterArmorSyndicateArmorvestInterdyne
+      - ClothingUniformJumpsuitShinoharaTraumasec
+      - ClothingBeltSyndicateWebbingInterdyne
+      #NCSP END
+
+
+#ore
+
+- type: entity
+  parent: BaseLatheLube
+  id: OreProcessor
+  name: ore processor
+  description: It produces sheets and ingots using ores.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/ore_processor.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: OreProcessorMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    defaultProductionAmount: 10
+    staticRecipes:
+      - SheetSteel1
+      - IngotCopper1
+      - SheetGlass1
+      - SheetPlasma1
+      - SheetUranium1
+      - IngotGold1
+      - IngotSilver1
+      - IngotTungsten1
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
+    range: 0.5
+
+- type: entity
+  parent: OreProcessor
+  id: OreProcessorIndustrial
+  name: industrial ore processor
+  description: An ore processor specifically designed for mass-producing metals in industrial applications.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/ore_processor_industrial.rsi
+  - type: Machine
+    board: OreProcessorIndustrialMachineCircuitboard
+  - type: Lathe
+    materialUseMultiplier: 0.75
+    timeMultiplier: 0.5
+
+#scrap
+
+- type: entity
+  parent: BaseLatheLube
+  id: ScrapRefiner
+  name: SHI scrap upcycler
+  description: An automated refinery with scrap metal refinement patterns.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/sheetifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+  - type: Machine
+    board: ScrapRefinerCircuitboard
+
+- type: entity
+  parent: ScrapRefiner
+  id: IndustrialScrapRefiner
+  name: Industrial SHI scrap upcycler
+  description: An automated refinery with scrap metal refinement patterns. Now employing factory protocols! Throw scrap at it!
+  components:
+  - type: Machine
+    board: IndustrialScrapRefinerCircuitboard
+  - type: Lathe
+    materialUseMultiplier: 0.75
+    timeMultiplier: 0.5
+
+#drugs
+
+- type: entity
+  parent: BaseLatheLube
+  id: DrugLathe
+  name: interdyne pharmaceutic fablathe
+  description: An automated fablathe with preloaded pharmaceutic patterns. Bears the Interdyne logo.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/drugifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+    staticRecipes:
+    #MEDICAL TECHFAB COPYPASTE, KEEP SYNCED
+      - Brutepack1
+      - Ointment1
+      - Gauze1
+      - Implanter
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
+      - SyringeCase
+      - ParamedHypo
+      - CartridgeSaline
+      - CartridgeDermaline
+      - CartridgeEpinephrine
+      - CartridgeAtropine
+      - CartridgeBicaridine
+      - CartridgeEphedrine
+      - CartridgePuncturase
+      - CartridgeTirizene
+     #MEDICAL TECHFAB COPYPASTE END
+     #BIOFABRICATOR COPYPASTE, KEEP SYNCED
+      - MonkeyCube
+      - KoboldCube
+      - CowCube
+      - GoatCube
+      - MothroachCube
+      - MouseCube
+      - CockroachCube
+      - SpaceCarpCube
+      - SpaceTickCube
+      - AbominationCube
+      - BioSynthHeart
+      - BioSynthLungs
+      - BioSynthLiver
+      - BioSynthEyes
+      - BioSynthLeftArm
+      - BioSynthLeftHand
+      - BioSynthRightArm
+      - BioSynthRightHand
+      - BioSynthLeftLeg
+      - BioSynthLeftFoot
+      - BioSynthRightLeg
+      - BioSynthRightFoot
+      - BioSynthHead
+      - MobSynthHuman
+      #BIOFABRICATOR COPYPASTE END
+      - CrashAutoinjector
+      - ExileAutoinjector
+      - KaiserAutoinjector
+      - MechaniteAutoinjector
+      - BloodeyeAutoinjector
+      - TradeGoodDrugs
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: DrugLatheCircuitboard
+
+#microforge
+
+- type: entity
+  id: PristineMicroforge
+  parent: BaseLatheLube
+  name: pristine microforge
+  description: Used to print equipment discovered through techdisks, or researched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/nanoforge.rsi
+    layers:
+    - state: fab-active
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: fab-idle
+    - state: fab-idle
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: fab-load
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: fab-o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    dynamicRecipes:
+    #DSM
+        #WEAPONS
+      - WeaponSniperImperator
+      - WeaponSubMachineGunDSMArbiter
+      - WeaponSubMachineGunC20r
+      - WeaponRifleDSMLegionnaire
+      - WeaponLightMachineGunDSMDominion
+      - WeaponRifleDSMMuster
+      - WeaponRifleMiller
+      - WeaponPistolNeoVolker
+      - WeaponLauncherM320
+      - WeaponShotgunDSMMatusa
+      - WeaponPistolComplianceImperial
+      - SRMKhopesh
+      - ClothingBeltSheathKhopesh
+      - DSMSabre
+      - ClothingBeltSheathDSMSabre
+      - DSMRapier
+      - ClothingBeltSheathDSMRapier
+      - DSMDuelingKhopesh
+    #DSM END
+    #NCSP
+        #WEAPONS
+      - WeaponRifleMayflower
+      - WeaponRifleKrinkov
+      - WeaponPistolViperWood
+      - WeaponLightMachineGunNCSPRPD
+      - WeaponLauncherSmallRocket
+      - WeaponSubMachineGunAtreides
+      - WeaponRifleSVDMarksman
+      - WeaponShotgunNCSPSaiga12
+      - WeaponLauncherRocket
+      - EnergySwordDouble
+      - EnergyShield
+      - EnergySword
+      - ClothingHandsGlovesNorthStar
+    #NCSP END
+    #NCWL
+        #WEAPONS
+      - WeaponLightMachineGunConscript
+      - WeaponSubMachineGunNCWLWatchdog
+      - WeaponSubMachineGunBloodhound
+      - WeaponLauncherGM94
+      - WeaponRifleFAL
+      - WeaponRifleNCWLBatanya
+      - WeaponSniperMolot
+      - WeaponPistolComrade
+      - WeaponRevolverPythonSecurity
+      - WeaponPistolT91
+      - PorodschokDonator
+      - NCWLKukri
+      - ClothingBeltSheathNCWLKukri
+      - NCWLLugBaton
+      - NCWLRiotShield
+    #NCWL END
+    #GENERAL
+        #WEAPONS
+      - WeaponShotgunKammerer
+      - WeaponRifleM90GrenadeLauncher
+      - WeaponSubMachineGunMP5
+      - WeaponPistolHKUSP
+      - WeaponEmpEmitter
+      - CombatKnife
+      - WeaponCrusherGlaive
+      - WeaponDisabler
+      - WeaponDisablerSMG
+      - SecBreachingHammer
+      - TelescopicBaton
+      - ThrowingKnife
+      - Truncheon
+      - RiotBulletShield
+      - RiotShield
+      - RiotLaserShield
+    #GENERAL END
+    #SHI
+        #WEAPONS
+      - WeaponShotgunEnforcer
+      - WeaponLauncherHammerhead
+      - WeaponLightMachineGunL6
+      - WeaponLauncherDisposableRocket
+      - WeaponPistolHimehabu
+      - WeaponRevolverInspectorSecurity
+      - WeaponRevolverMateba
+      - WeaponPistolMk58
+      - WeaponPistolLiquidator
+      - WeaponShotgunSHIDoubleBarreled4g
+      - WeaponRifleHoundMarksman
+      - WeaponSubMachineGunSabre
+      - WeaponRifleBarghest
+      - WeaponRifleGoro
+      - WeaponRifleLecter
+      - WeaponLauncherMilkor
+      - WeaponSubMachineGunMP49
+      - WeaponRifleLecter
+      - WeaponSniperHristov
+      - WeaponPistolSmartpistol
+      - WeaponPistolBlastpopRed
+      - WeaponPistolBlastpopPurple
+      - WeaponPistolBlastpopGray
+      - WeaponPistolBlastpopGreen
+      - WeaponPistolBlastpopGold
+      - WeaponPistolBlastpopBlue
+      - SHIKatanaShiverBlade
+      - SHIKatana
+    #SHI END
+  - type: Machine
+    board: MicroforgeCircuitboard
+
+#boriatic fuel thing
+
+- type: entity
+  parent: BaseLatheLube
+  id: BoriaticRefiner
+  name: SHI boriatic composter
+  description: An automated refinery and fabricator that purifies various minerals into usable boriatic fuels.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/purifier.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+    staticRecipes:
+    - JugBoriaticFuelCraft
+  - type: Machine
+    board: BoriaticRefinerCircuitboard
+
+#ship parts
+
+- type: entity
+  parent: BaseLatheLube
+  id: ShipyardManufactorum
+  name: SHI shipyard manufactorum
+  description: An automated assembler, constructing vessel components out of minerals.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/shipfab.rsi
+    layers:
+    - state: base_machine
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: base_machine
+    runningState: base_machine_processing
+    staticRecipes:
+    - ShipHull
+    - ShipElectronics
+    - ShipEngine
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: ShipyardManufactorumCircuitboard
+
+#organs
+
+- type: entity
+  parent: BaseLatheLube
+  id: OrganPrinter
+  name: IPM organic bioprinter
+  description: An automated fablathe with preloaded organic patterns. Bears the Interdyne logo.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/organfab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - OrganCrate
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: OrganPrinterCircuitboard
+
+#crates
+
+#imperial
+
+- type: entity
+  parent: BaseLatheLube
+  id: ImperialTradeGoodPrinter
+  name: kal surezai commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticRecipes:
+    - FabricsCrate
+    - WineCrate
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: ImperialTradeGoodPrinterCircuitboard
+
+#shi
+
+- type: entity
+  parent: BaseLatheLube
+  id: CorporateTradeGoodPrinter
+  name: shinohara commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: CorporateTradeGoodPrinterCircuitboard
+
+#saws
+
+- type: entity
+  parent: BaseLatheLube
+  id: SawsTradeGoodPrinter
+  name: shipfitters commodity fablathe
+  description: An automated fablathe preloaded with many commodity patterns. A merchant's best friend.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: buttons_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Machine
+    board: SawsTradeGoodPrinterCircuitboard
+
+#crates end

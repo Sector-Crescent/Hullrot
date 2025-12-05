@@ -1,0 +1,119 @@
+#casings start
+
+- type: factoryRecipe
+  id: 120mmCasingDU
+  name: 120mm DU casing
+  inputs:
+    Steel: 3
+  outputs:
+    Casing120: 1
+
+- type: factoryRecipe
+  id: 120mmCasingHE
+  name: 120mm HE casing
+  inputs:
+    Plasma: 5
+  outputs:
+    Casing120HE: 1
+
+- type: factoryRecipe
+  id: GargoyleCasing
+  name: Gargoyle Cruise Missile
+  inputs:
+    Plasteel: 10
+  outputs:
+    TorpGarg: 1
+
+- type: factoryRecipe
+  id: LancerCasing
+  name: Lancer 100mm Missile
+  inputs:
+    Plastic: 3
+  outputs:
+    LanceRocketCartridge: 1
+
+#casings end
+
+#welding start
+
+- type: factoryRecipe
+  id: 120mmWeldDU
+  name: weld 120mm DU casing
+  inputs:
+    Casing120: 1
+  outputs:
+    Casing120Welded: 1
+
+- type: factoryRecipe
+  id: 120mmWeldHE
+  name: weld 120mm HE casing
+  inputs:
+    Casing120HE: 1
+  outputs:
+    Casing120WeldedHE: 1
+    
+#welding end
+
+#assembly start
+
+- type: factoryRecipe
+  id: 120mmAssembleDU
+  name: assemble 120mm DU casing
+  inputs:
+    Casing120Welded: 1
+  outputs:
+    CartridgeShellArmorPiercing: 1
+
+- type: factoryRecipe
+  id: 120mmAssembleHE
+  name: assemble 120mm HE casing
+  inputs:
+    Casing120WeldedHE: 1
+  outputs:
+    CartridgeShellHighExplosive: 1
+    
+#assembly end
+- type: factoryRecipe
+  id: IdnaTorpedoManufacturing
+  name: Manufacture IDNA Torpedo
+  inputs:
+    Plasma: 5
+    Steel: 5
+  outputs:
+    IdnaTorpedo: 1
+
+- type: factoryRecipe
+  id: 230mmCasing
+  name: Manufacture 230mm Heavy Mortar Shell
+  inputs:
+    Tungsten: 5
+  outputs:
+    HeavyMortarCartridge: 1
+
+- type: factoryRecipe
+  id: FabricateMagazineMortar
+  name: fabricate 90mm mortar shellbox
+  inputs:
+    Steel: 10
+    Plasma: 2
+  outputs:
+    MagazineMortar: 1
+
+- type: factoryRecipe
+  id: FabricateMagazineNeedler
+  name: fabricate needler magazine
+  inputs:
+    Steel: 5
+    Plasma: 4
+  outputs:
+    MagazineNeedler: 1
+
+- type: factoryRecipe
+  id: FabricateMagazineFlak
+  name: fabricate flak cannon box
+  inputs:
+    Steel: 5
+    Plasma: 4
+  outputs:
+    MagazineFlak: 1
+

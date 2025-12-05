@@ -130,15 +130,6 @@
   # Machines
 # Engineering
 - type: entity
-  parent: BaseNFFlatpack
-  id: AutolatheFlatpack
-  name: autolathe flatpack
-  description: A flatpack used for constructing an autolathe.
-  components:
-  - type: Flatpack
-    entity: Autolathe
-
-- type: entity
   id: GrapplingHook
   name: grappling hook
   categories: [ HideSpawnMenu ]

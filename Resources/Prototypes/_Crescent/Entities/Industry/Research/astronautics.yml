@@ -1,0 +1,283 @@
+# - type: technology
+  # id: AstronauticsFishbed
+  # name: Fishbed
+  # icon:
+    # sprite: _Crescent/Clothing/Independents/OuterClothing/fishbed.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingOuterHardsuitFishbed
+    # - ClothingOuterHardsuitFishbedSilver
+    # - ClothingOuterHardsuitFishbedGold
+    # - ClothingOuterHardsuitFishbedColonial
+    # - ClothingOuterHardsuitFishbedNLF
+  # position: 0, 3
+ 
+# - type: technology
+  # id: AstronauticsCenobite
+  # name: Cenobite
+  # icon:
+    # sprite: _Crescent/Clothing/Independents/OuterClothing/cenobite.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingOuterHardsuitCenobite
+    # - ClothingOuterHardsuitCenobiteVerdant
+    # - ClothingOuterHardsuitCenobiteRed
+  # position: 0, 4
+  # technologyPrerequisites:
+    # - AstronauticsFishbed
+ 
+# - type: technology
+  # id: AstronauticsRockets
+  # name: Rockets
+  # icon:
+    # sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    # state: blast
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - CartridgeRocketEMP
+    # - CartridgeRocketHighYield
+  # position: -1, 3
+
+# - type: technology
+  # id: AstronauticsIdna
+  # name: Idna
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/torpedo.rsi
+    # state: base
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - IdnaFlatpack 
+  # position: 1, 3
+
+# - type: technology
+  # id: AstronauticsKurosawa
+  # name: Kurosawa
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/cheapmissile.rsi
+    # state: rocket
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - KurosawaFlatpack
+  # position: 2, 3
+  
+# - type: technology
+  # id: AstronauticsSwarmer
+  # name: Swarmer
+  # icon:
+    # sprite: _Crescent/Objects/Autoturrets/swarmermissile.rsi
+    # state: swarmer
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - SwarmerFlatpack
+  # position: 3, 3
+  
+# - type: technology
+  # id: Astronautics
+  # name: Lancer
+  # icon: 
+    # sprite: _Crescent/Objects/Autoturrets/lancemissile.rsi
+    # state: syndie_off
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - LancerFlatpack
+  # position: 3, 4
+  # technologyPrerequisites:
+    # - AstronauticsSwarmer
+  
+# - type: technology
+  # id: AstronauticsSmallMissileHardpoint
+  # name: Small missile hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Small
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - SmallMissileHardpointFlatpack
+  # position: 4, 3
+  
+# - type: technology
+  # id: AstronauticsMediumMissileHardpoint
+  # name: Medium missile hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Medium
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - MediumMissileHardpointFlatpack
+  # position: 4, 5
+  # technologyPrerequisites:
+    # - AstronauticsSmallMissileHardpoint
+  
+# - type: technology
+  # id: AstronauticsFixedHardpoint
+  # name: Fixed hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/fixedHardpoint.rsi
+    # state: large
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - FixedHardpointFlatpack
+  # position: 5, 4
+  # technologyPrerequisites:
+    # - AstronauticsSmallMissileHardpoint
+
+# - type: technology
+  # id: AstronauticsMechRipley
+  # name: Ripley
+  # icon:
+    # sprite: Objects/Specific/Mech/mecha.rsi
+    # state: ripley
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - MechRipleyFlatpack
+  # position: -2, 3
+    
+# - type: technology
+  # id: AstronauticsHardsuitElectronics
+  # name: Hardsuit electronics
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: hardsuitelectronics
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - HardsuitElectronics1
+  # position: -3, 3
+    
+# - type: technology
+  # id: AstronauticsFibreAlloy
+  # name: Plastitanium fibre alloy
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: plastitaniumfibrealloy
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - PlastitaniumFibreAlloy1
+  # position: -3, 4
+  # technologyPrerequisites:
+    # - AstronauticsHardsuitElectronics
+  
+# - type: technology
+  # id: AstronauticsCombatMagboots
+  # name: Combat magboots
+  # icon:
+    # sprite: _NF/Clothing/Shoes/Boots/magboots-combat.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingShoesBootsMagCombat
+  # position: -4, 3
+    
+# - type: technology
+  # id: AstronauticsAdvancedMagboots
+  # name: Advanced magboots
+  # icon:
+    # sprite: Clothing/Shoes/Boots/magboots-advanced.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingShoesBootsMagAdv
+  # position: -4, 4
+  # technologyPrerequisites:
+    # - AstronauticsCombatMagboots
+
+# - type: technology
+  # id: AstronauticsFieldManipulation
+  # name: Field manipulation
+  # icon:
+    # sprite: Objects/Devices/Holoprojectors/field.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ConstructionBagOfHolding
+    # - HoloprojectorField
+    # - OreBagOfHolding
+  # position: -5, 3
+
+# - type: technology
+  # id: AstronauticsAdvancedConstruction
+  # name: Advanced construction
+  # icon:
+    # sprite: Objects/Tools/rcd.rsi
+    # state: icon
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - HolofanProjector
+    # - RPED
+    # - RCD
+    # - RPD
+    # - RPED
+    # - RCDAmmo
+  # position: -6, 3
+  
+# - type: technology
+  # id: AstronauticsModularBombs
+  # name: Modular bombs
+  # icon:
+    # sprite: Objects/Devices/payload.rsi
+    # state: payload-explosive-armed
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - GrenadeFlashBang
+    # - ChemicalPayload
+    # - FlashPayload
+    # - ExplosivePayload
+    # - TimerTrigger
+    # - SignalTrigger
+    # - VoiceTrigger
+    # - Igniter
+    # - ModularReceiver
+    # - ProximitySensor
+  # position: -7, 3
+
+# - type: technology
+  # id: AstronauticsAdvancedFieldManipulation
+  # name: Advanced field manipulation
+  # icon:
+    # sprite: Clothing/Back/Backpacks/holding.rsi
+    # state: holding
+  # discipline: Astronautics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingBackpackDuffelHolding
+    # - ClothingBackpackMessengerHolding
+    # - ClothingBackpackHolding
+  # position: 0, 5

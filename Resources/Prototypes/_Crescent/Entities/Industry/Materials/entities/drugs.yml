@@ -1,0 +1,147 @@
+- type: Tag
+  id: DrugComponent
+
+- type: entity
+  parent: OreBase
+  id: ProteinCan
+  name: exotic proteins canister
+  description: A canister of freshly-harvested exotic proteins.
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: ProteinCan
+  - type: Tag
+    tags:
+    - OrganMaterial
+    - DrugComponent
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/proteins.rsi
+    state: icon
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ExoticProteins: 100
+  - type: Contraband
+    value: 1
+
+- type: entity
+  parent: OreBase
+  id: GarbageOre
+  name: industrial garbage
+  description: Loosely compacted industrial trash.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - RawMaterial
+    - DrugComponent
+  - type: Stack
+    stackType: GarbageOre
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: garbage
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Garbage: 100
+
+- type: entity
+  parent: OreBase
+  id: RefinedGarbageOre
+  name: compacted industrial trash
+  description: Compacted, cleaned industrial residue.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - RawMaterial
+    - DrugComponent
+  - type: Stack
+    stackType: RefinedGarbageOre
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: refinedgarbage
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RefinedGarbage: 100
+
+- type: entity
+  parent: OreBase
+  id: PlasmaIsotope
+  name: plasma-9 isotope canister
+  description: A canister of a volatile chemical precursor.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - DrugComponent
+  - type: Stack
+    stackType: PlasmaIsotope
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: plasmaisotope
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      PlasmaIsotope: 100
+
+- type: entity
+  parent: OreBase
+  id: MechaniteCanister
+  name: inert mechanite canister
+  description: A canister of a inert medical mechanites.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - DrugComponent
+  - type: Stack
+    stackType: MechaniteCanister
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: mechanites
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Mechanites: 100
+
+- type: entity
+  parent: OreBase
+  id: GalineCanister
+  name: pressurized galine-5 canister
+  description: A canister of volatile, pressurized gases, most commonly used in unregulated narcotics.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - DrugComponent
+  - type: Stack
+    stackType: GalineCanister
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: galine5
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Galine: 100
+
+- type: entity
+  parent: OreBase
+  id: DeactivatedPhoronBottle
+  name: bottle of liquid deactivated phoron
+  description: A glass bottle of deactivated phoron with medicinal uses.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - DrugComponent
+  - type: Stack
+    stackType: PhoronBottle
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ore.rsi
+    state: deactivatedphoron
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      DeactivatedPhoron: 100

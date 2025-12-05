@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Prototypes;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Research.Prototypes;
@@ -70,6 +70,20 @@ public sealed partial class TechnologyPrototype : IPrototype
     [DataField]
     public IReadOnlyList<GenericUnlock> GenericUnlocks = new List<GenericUnlock>();
 
+    /// <summary>
+    /// Goobstation R&D console rework field
+    /// Position of this tech in console menu
+    /// </summary>
+    [DataField(required: true)]
+    public Vector2i Position { get; private set; }
+
+    /// <summary>
+    /// Defines the visual style of prerequisite connection lines leading TO this technology.
+    /// This controls how the lines from prerequisite techs to this tech are drawn.
+    /// </summary>
+    [DataField]
+    public PrerequisiteLineType PrerequisiteLineType { get; private set; } = PrerequisiteLineType.LShape;
+
     [DataField]
     public float SoftCapContribution = 1;
 }
@@ -91,3 +105,31 @@ public partial record struct GenericUnlock()
     [DataField]
     public string UnlockDescription = string.Empty;
 }
+
+// Frontier: This is used to define how the prerequisite lines are drawn in the R&D console UI.
+/// <summary>
+/// Defines the visual style of prerequisite connection lines
+/// </summary>
+public enum PrerequisiteLineType : byte
+{
+    /// <summary>
+    /// Clean L-shaped connections (default)
+    /// </summary>
+    LShape = 0,
+
+    /// <summary>
+    /// Direct diagonal lines
+    /// </summary>
+    Diagonal = 1,
+
+    /// <summary>
+    /// Tree-like branching connections with structured hierarchy
+    /// </summary>
+    Tree = 2,
+
+    /// <summary>
+    /// Spread connections that avoid overlaps by using offset routing paths
+    /// </summary>
+    Spread = 3
+}
+// End Frontier

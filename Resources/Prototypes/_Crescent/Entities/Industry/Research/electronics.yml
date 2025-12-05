@@ -1,0 +1,342 @@
+# - type: technology
+  # id: ElectronicsBasicElectronics
+  # name: Basic electronics
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: basicelectronics
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - BasicElectronics1
+  # position: -3, 0
+
+# - type: technology
+  # id: ElectronicsAdvancedElectronics
+  # name: Advanced electronics
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: advancedelectronics
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - BasicElectronics1
+  # position: -4, 0
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsWeakLaserLocus
+  # name: Weak laser locus
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: weaklaserlocus
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - WeakLaserLocus1
+  # position: -4, 1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsHardlightGenerator
+  # name: Hardlight generator
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: hardlightgenerator
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - HardlightGenerator1
+  # position: -4, -1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsLaserLocus
+  # name: Focused laser locus
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: laserlocus
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - LaserLocus1
+  # position: -5, 1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+  
+# - type: technology
+  # id: ElectronicsAdvancedComponents
+  # name: Advanced components
+  # icon:
+    # sprite: Objects/Misc/stock_parts.rsi
+    # state: nano_mani
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - AdvancedCapacitorStockPart
+    # - NanoManipulatorStockPart
+    # - AdvancedMatterBinStockPart
+  # position: -5, -1
+  # technologyPrerequisites:
+    # - ElectronicsAdvancedElectronics
+
+# - type: technology
+  # id: ElectronicsAdvancedComponents
+  # name: Advanced components
+  # icon:
+    # sprite: Objects/Misc/stock_parts.rsi
+    # state: nano_mani
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - AdvancedCapacitorStockPart
+    # - NanoManipulatorStockPart
+    # - AdvancedMatterBinStockPart
+  # position: -5, -1
+  # technologyPrerequisites:
+    # - ElectronicsAdvancedElectronics
+
+# - type: technology
+  # id: ElectronicsTranslators
+  # name: Translators
+  # icon:
+    # sprite: Objects/Devices/translator.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - CreoleTranslator
+    # - FreespeakTranslator
+    # - KaishagoTranslator
+    # - LowImperialTranslator
+    # - TradebandTranslator
+  # position: -5, 0
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsAdvancedPowerStorage
+  # name: High capacity power cells
+  # icon:
+    # sprite: Objects/Power/power_cells.rsi
+    # state: high
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - PowerCellHigh
+    # - SMESAdvancedFlatpack
+    # - TurboItemRechargerFlatpack
+  # position: -6, 0
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsPowerCellHigh
+  # name: High capacity power cells
+  # icon:
+    # sprite: _NF/Objects/Weapons/EMP-Gun.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - WeaponEmpEmitter
+  # position: -7, 0
+  # technologyPrerequisites:
+    # - ElectronicsAdvancedPowerStorage
+
+# - type: technology
+  # id: ElectronicsIntegratedVision
+  # name: Integrated vision
+  # icon:
+    # sprite: Clothing/Eyes/Goggles/nightvision.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingEyesNightVisionGoggles
+    # - ClothingEyesGlassesSecurity
+  # position: -6, -1
+  # technologyPrerequisites:
+    # - ElectronicsAdvancedPowerStorage
+
+# - type: technology
+  # id: ElectronicsThermalVision
+  # name: Thermal vision
+  # icon:
+    # sprite: Clothing/Eyes/Goggles/thermal.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingEyesThermalVision
+  # position: -6, 1
+  # technologyPrerequisites:
+    # - ElectronicsAdvancedPowerStorage
+
+# - type: technology
+  # id: ElectronicsAdvancedIntegratedVision
+  # name: Advanced integrated vision
+  # icon:
+    # sprite: Clothing/Eyes/Goggles/medical_nightvision.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ClothingEyesNightVisionDiagnosticGoggles
+    # - ClothingEyesNightVisionMedicalGoggles
+    # - ClothingEyesNightVisionSecurityGoggles
+  # position: -6, -2
+  # technologyPrerequisites:
+    # - ElectronicsIntegratedVision
+
+# - type: technology
+  # id: ElectronicsPlasmaCaster
+  # name: Basic electronics
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/lasersmall.rsi
+    # state: lse-400c
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - PlasmaRepeaterFlatpack
+  # position: -7, -1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsSmallEnergyHardpoint
+  # name: Small energy hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Small
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - SmallEnergyHardpointFlatpack
+  # position: -7, -2
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsMediumEnergyHardpoint
+  # name: Medium energy hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Medium
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - MediumEnergyHardpointFlatpack
+  # position: -7, -3
+  # technologyPrerequisites:
+    # - ElectronicsSmallEnergyHardpoint
+
+# - type: technology
+  # id: ElectronicsSmallShieldEmitter
+  # name: Small shield emitter
+  # icon:
+    # sprite: _Crescent/Structures/shieldemittersmall.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ShieldEmitterSmallFlatpack 
+  # position: -8, 0
+  # technologyPrerequisites:
+    # - ElectronicsHardlightGenerator
+
+# - type: technology
+  # id: ElectronicsEinstein
+  # name: Advanced boriatic power generation
+  # icon:
+    # sprite: _Crescent/Structures/boriatic_reactor.rsi
+    # state: portgen0
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - BoriaticGeneratorEinsteinFlatpack 
+  # position: -8, 1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsAME
+  # name: Advanced boriatic power generation
+  # icon:
+    # sprite: Structures/Power/Generation/ame.rsi
+    # state: control
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - AmePartFlatpack
+    # - AmeControllerFlatpack
+  # position: -8, 2
+  # technologyPrerequisites:
+    # - ElectronicsEinstein
+
+# - type: technology
+  # id: ElectronicsTechDiskComputer
+  # name: Tech disk computer
+  # icon:
+    # sprite: Structures/Machines/tech_disk_printer.rsi
+    # state: icon
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - TechDiskComputerFlatpack 
+  # position: -9, 1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsAdvancedRadar
+  # name: Advanced radar
+  # icon:
+    # sprite: Structures/Machines/computers.rsi
+    # state: eris_control
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ComputerAdvancedRadarFlatpack 
+  # position: -9, 0
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+
+# - type: technology
+  # id: ElectronicsEwar
+  # name: Ewar
+  # icon:
+    # sprite: _Crescent/Objects/Devices/jammerewar.rsi
+    # state: jammer
+  # discipline: Electronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - EwarDeviceFlatpack    
+  # position: -9, -1
+  # technologyPrerequisites:
+    # - ElectronicsBasicElectronics
+

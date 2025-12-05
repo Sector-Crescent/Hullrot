@@ -1,0 +1,180 @@
+# - type: technology
+  # id: BiochemicalSuture
+  # name: Medicated suture
+  # icon:
+    # sprite: Objects/Specific/Medical/medical.rsi
+    # state: medicated-suture
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - MedicatedSuture
+  # position: 6, 0
+
+# - type: technology
+  # id: BiochemicalMesh
+  # name: Regenerative mesh
+  # icon:
+    # sprite: Objects/Specific/Medical/medical.rsi
+    # state: regenerative-mesh
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - RegenerativeMesh
+  # position: 6, 1
+
+# - type: technology
+  # id: BiochemicalAdvMop
+  # name: Advanced mop
+  # icon:
+    # sprite: Objects/Specific/Janitorial/advmop.rsi
+    # state: advmop
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - AdvMopItem
+  # position: 6, -1
+
+# - type: technology
+  # id: BiochemicalPortafib
+  # name: Portafib
+  # icon:
+    # sprite: DeltaV/Objects/Medical/portafib.rsi
+    # state: icon
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - Portafib
+  # position: 6, 2
+
+# - type: technology
+  # id: BiochemicalIntermediateSurgery
+  # name: Intermediate surgery tools
+  # icon:
+    # sprite: _Shitmed/Objects/Specific/Medical/Surgery/circular-saw.rsi
+    # state: circular-saw
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - SawElectric
+    # - ScalpelAdvanced
+  # position: 7, 0
+
+# - type: technology
+  # id: BiochemicalAdvancedSurgery
+  # name: Advanced surgery tools
+  # icon:
+    # sprite: _Shitmed/Objects/Specific/Medical/Surgery/e-cautery.rsi
+    # state: e-cautery
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - EnergyCautery
+    # - AdvancedRetractor
+    # - EnergyScalpel
+  # position: 8, 0
+  # technologyPrerequisites:
+    # - BiochemicalIntermediateSurgery
+
+# - type: technology
+  # id: BiochemicalCryostasis
+  # name: Cryostasis
+  # icon:
+    # sprite: Objects/Specific/Chemistry/syringe.rsi
+    # state: cryo_base0
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - CryostasisBeaker
+    # - SyringeCryostasis
+    # - CryoPodFlatpak
+    # - StatisBedFlatpack
+  # position: 7, 1
+
+# - type: technology
+  # id: BiochemicalBluespace
+  # name: Small-scale bluespace
+  # icon:
+    # sprite: Objects/Specific/Chemistry/beaker_bluespace.rsi
+    # state: beakerbluespace
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - BluespaceBeaker
+    # - SyringeBluespace
+  # position: 8, 1
+  # technologyPrerequisites:
+    # - BiochemicalCryostasis
+
+# - type: technology
+  # id: BiochemicalInjection
+  # name: Injection
+  # icon:
+    # sprite: _Goobstation/Objects/Specific/Medical/autoinjector.rsi
+    # state: medical-base
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - CartridgeAtropine
+    # - CartridgeEpinephrine
+    # - CartridgeBicaridine
+    # - CartridgeDermaline
+    # - CartridgeSaline
+    # - ParamedHypo
+    # - HypoBrigmedic
+  # position: 7, -1
+
+# - type: technology
+  # id: BiochemicalAdvancedInjection
+  # name: Advanced injection
+  # icon:
+    # sprite: Objects/Specific/Medical/hypospray.rsi
+    # state: hypo
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - Hypospray
+  # position: 8, -1
+  # technologyPrerequisites:
+    # - BiochemicalInjection
+
+# - type: technology
+  # id: BiochemicalHydroponics
+  # name: Cloning
+  # icon:
+    # sprite: Structures/Hydroponics/containers.rsi
+    # state: hydrotray2
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - HydroponicsTrayFlatpack
+  # position: 7, 2
+
+# - type: technology
+  # id: BiochemicalCloning
+  # name: Cloning
+  # icon:
+    # sprite: Structures/Machines/cloning.rsi
+    # state: pod_1
+  # discipline: Biochemical
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - BiomassReclaimerMachineFlatpack
+    # - CloningConsoleComputerFlatpack
+    # - CloningPodFlatpack
+    # - MedicalScannerFlatpack 
+  # position: 8, 2
+  # technologyPrerequisites:
+    # - BiochemicalHydroponics
+  

@@ -1,0 +1,329 @@
+# - type: technology
+  # id: MechatronicsShells
+  # name: Shell assembly
+  # icon:
+    # sprite: _Crescent/Structures/factorystructures.rsi
+    # state: assembler
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - FactoryShellAssemblerFlatpack
+    # - FactoryShellWeldFlatpack
+  # position: -1, -3
+
+# - type: technology
+  # id: MechatronicsAssembly
+  # name: Composite materials
+  # icon:
+    # sprite: Structures/Machines/ore_processor.rsi
+    # state: icon
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+    # - ShipyardManufactorumFlatpack
+    # - AutoloomFablatheFlatpack
+  # position: 0, -3
+
+# - type: technology
+  # id: MechatronicsRefinery
+  # name: Refineries
+  # icon:
+    # sprite: Structures/Machines/sheetifier.rsi
+    # state: base_machine
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - OreProcessorFlatpack
+     # - ScrapRefinerFlatpack
+  # position: 1, -3
+
+# - type: technology
+  # id: MechatronicsExhumer
+  # name: Exhumer turrets
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/mininglaser.rsi
+    # state: states
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - ExhumerFlatpack
+  # position: 1, -4
+
+# - type: technology
+  # id: MechatronicsPDT
+  # name: Point defense turrets
+  # icon:
+    # sprite: _Crescent/Objects/Autoturrets/lightautoturret.rsi
+    # state: syndie_off
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - PDTFlatpack
+  # position: 1, -5
+
+# - type: technology
+  # id: MechatronicsPDTMk2
+  # name: Mark two point defense turrets
+  # icon:
+    # sprite: _Crescent/Objects/Autoturrets/lightautoturret.rsi
+    # state: syndie_off
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - PDTMk2Flatpack
+  # position: 2, -5
+  # technologyPrerequisites:
+    # - MechatronicsPDT
+
+# - type: technology
+  # id: MechatronicsSlugthrower
+  # name: Slugthrowers
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/50cal.rsi
+    # state: space_artillery
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - SlugthrowerFlatpack
+     # - SlugspitterFlatpack
+  # position: 0, -5
+
+# - type: technology
+  # id: MechatronicsMachinegun
+  # name: Machineguns
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/vulcan.rsi
+    # state: space_artillery
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - OperatorFlatpack
+     # - VulcanFlatpack
+  # position: -1, -5
+
+# - type: technology
+  # id: MechatronicsArtillery
+  # name: Artillery
+  # icon:
+    # sprite: _Crescent/Objects/ShuttleWeapons/artillery.rsi
+    # state: artillery
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - 120mmFlatpack
+  # position: 0, -4
+
+# - type: technology
+  # id: MechatronicsFlak
+  # name: Flak
+  # icon:
+    # sprite: _Crescent/Objects/Autoturrets/flak.rsi
+    # state: syndie_off
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - PrinceFlatpack
+  # position: -1, -4
+
+# - type: technology
+  # id: MechatronicsNeedler
+  # name: Heavy autoturrets
+  # icon:
+    # sprite: _Crescent/Objects/Autoturrets/needler.rsi
+    # state: syndie_off
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - NeedlerFlatpack
+  # position: -0, -6
+
+# - type: technology
+  # id: MechatronicsCycler
+  # name: Ballistic gas cyclers
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: gascycler
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - BallisticCycler
+  # position: -2, -3
+
+# - type: technology
+  # id: MechatronicsBasicMechatronics
+  # name: Basic mechatronics
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: basicmechanic
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - BasicMechatronics1
+  # position: -3, -3
+
+# - type: technology
+  # id: MechatronicsTubeLoader
+  # name: Tube loader
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: tubeloaderrobotics
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - TubeLoader1
+  # position: -2, -4
+  # technologyPrerequisites:
+    # - MechatronicsCycler
+
+# - type: technology
+  # id: MechatronicsAdvancedMechatronics
+  # name: Advanced mechatronics
+  # icon:
+    # sprite: _Crescent/Objects/Materials/materials.rsi
+    # state: advancedmechanic
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - AdvancedMechatronics1
+  # position: -3, -4
+  # technologyPrerequisites:
+    # - MechatronicsBasicMechatronics
+
+# - type: technology
+  # id: MechatronicsMicroforge
+  # name: Microforge replication
+  # icon:
+    # sprite: _Crescent/Structures/nanoforge.rsi
+    # state: fab-idle
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - MicroforgeFlatpack
+  # position: -4, -6
+  # technologyPrerequisites:
+    # - MechatronicsAdvancedCommodityFabricator
+
+# - type: technology
+  # id: MechatronicsSmallBallisticHardpoint
+  # name: Small ballistic hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Small
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - SmallBallisticHardpointFlatpack
+  # position: 3, -3
+
+# - type: technology
+  # id: MechatronicsMediumBallisticHardpoint
+  # name: Medium ballistic hardpoint
+  # icon:
+    # sprite: _Crescent/Structures/hardpoints.rsi
+    # state: Medium
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - MediumBallisticHardpointFlatpack
+  # position: 3, -4
+  # technologyPrerequisites:
+    # - MechatronicsSmallBallisticHardpoint
+
+# - type: technology
+  # id: MechatronicsAdvancedTools
+  # name: Advanced tools
+  # icon:
+    # sprite: Objects/Tools/jaws_of_life.rsi
+    # state: jaws_pry
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - ClothingBeltChiefEngineer
+     # - JawsOfLife
+     # - WelderExperimental
+     # - PowerDrill
+     # - ClothingMaskWeldingGas
+  # position: 4, -3
+
+# - type: technology
+  # id: MechatronicsRudimentaryGuns
+  # name: Rudimentary guns
+  # icon:
+    # sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
+    # state: icon
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - WeaponSubMachineGunMP5
+     # - WeaponPistolHKUSP
+     # - WeaponDisablerSMG
+  # position: 5, -3
+
+# - type: technology
+  # id: MechatronicsAdvancedGuns
+  # name: Rudimentary guns
+  # icon:
+    # sprite: _Crescent/Objects/Weapons/Guns/carbine.rsi
+    # state: icon
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - WeaponShotgunKammerer
+     # - WeaponRifleM90GrenadeLauncher
+  # position: 5, -4
+  # technologyPrerequisites:
+    # - MechatronicsRudimentaryGuns
+
+# - type: technology
+  # id: MechatronicsRudimentaryMelee
+  # name: Rudimentary force application
+  # icon:
+    # sprite: Objects/Weapons/Melee/shields.rsi
+    # state: riot-icon
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - RiotBulletShield
+     # - RiotShield
+     # - RiotLaserShield
+     # - TelescopicBaton
+  # position: 6, -3
+
+# - type: technology
+  # id: MechatronicsAdvancedMelee
+  # name: Advanced hurting techniques
+  # icon:
+    # sprite: Nyanotrasen/Objects/Weapons/Melee/breaching_hammer.rsi
+    # state: icon
+  # discipline: Mechatronics
+  # tier: 1
+  # cost: 750
+  # recipeUnlocks:
+     # - SecBreachingHammer
+     # - ThrowingKnife
+     # - TelescopicShield
+  # position: 6, -4
+  # technologyPrerequisites:
+    # - MechatronicsRudimentaryMelee

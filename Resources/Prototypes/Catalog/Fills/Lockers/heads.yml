@@ -25,7 +25,6 @@
       - id: AstroNavCartridge
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerCaptainFilledHardsuit
@@ -48,7 +47,6 @@
       - id: JetpackCaptainFilled
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerCaptainFilled
@@ -70,7 +68,6 @@
       - id: JetpackCaptainFilled
       - id: LunchboxCommandFilledRandom
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerCaptainFilledNoLaser
@@ -92,7 +89,6 @@
       - id: JetpackCaptainFilled
       - id: LunchboxCommandFilledRandom
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -115,7 +111,6 @@
       - id: BoxEncryptionKeyService
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerChiefEngineerFilledHardsuit
@@ -146,7 +141,6 @@
       - id: CEIDCard # Delta-V
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerChiefEngineerFilled
@@ -174,7 +168,6 @@
       - id: RCDAmmo # Extra Compressed matter for the RPD
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerChiefMedicalOfficerFilledHardsuit
@@ -205,7 +198,6 @@
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
       - id: MedicalBiofabMachineBoard # Shitmed Change
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerChiefMedicalOfficerFilled
@@ -233,7 +225,6 @@
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
       - id: MedicalBiofabMachineBoard # Shitmed Change
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerResearchDirectorFilledHardsuit
@@ -243,7 +234,6 @@
   - type: StorageFill
     contents:
       - id: ResearchComputerCircuitboard
-      - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
       - id: ClothingOuterHardsuitRd
       - id: HandTeleporter
@@ -263,7 +253,6 @@
       - id: AugustineCircuitBoard
       - id: CrewsimovCircuitBoard
       - id: AntimovCircuitBoard
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerResearchDirectorFilled
@@ -273,7 +262,6 @@
   - type: StorageFill
     contents:
       - id: ResearchComputerCircuitboard
-      - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
       - id: HandTeleporter
       - id: DoorRemoteResearch
@@ -291,7 +279,6 @@
       - id: AugustineCircuitBoard
       - id: CrewsimovCircuitBoard
       - id: AntimovCircuitBoard
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerHeadOfSecurityFilledHardsuit
@@ -313,7 +300,6 @@
         prob: 0.50
       - id: DoorRemoteSecurity
       - id: RubberStampHos
-      - id: SecurityTechFabCircuitboard
       - id: JetpackSecurityFilled
       - id: BoxEncryptionKeySecurity
       - id: HoloprojectorSecurity
@@ -321,7 +307,6 @@
       - id: HoSIDCard # Delta-V
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerHeadOfSecurityFilled
@@ -342,14 +327,12 @@
         prob: 0.50
       - id: DoorRemoteSecurity
       - id: RubberStampHos
-      - id: SecurityTechFabCircuitboard
       - id: BoxEncryptionKeySecurity
       - id: HoloprojectorSecurity
       - id: BoxPDASecurity # Delta-V
       - id: HoSIDCard # Delta-V
       - id: LunchboxCommandFilledRandom # Delta-V Lunchboxes!
         prob: 0.3
-      - id: PrinterDocFlatpack  # Corvax-Printer
 
 - type: entity
   id: LockerFreezerVaultFilled

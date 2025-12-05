@@ -96,23 +96,6 @@
 #   - type: Transform
 #     anchored: false
 
-# - type: entity
-#   parent: BaseItem
-#   id: StationBeaconPart
-#   name: station beacon flatpack
-#   description: A flatpack used for constructing a station beacon.
-#   components:
-#   - type: Item
-#     size: Small
-#     sprite: Objects/Devices/station_beacon.rsi
-#   - type: Sprite
-#     sprite: Objects/Devices/station_beacon.rsi
-#     state: assembly
-#   - type: Construction
-#     graph: StationBeaconPart
-#     node: start
-#     defaultTarget: complete
-
 # # Prototypes for various default beacon configurations.
 # - type: entity
 #   parent: DefaultStationBeacon
