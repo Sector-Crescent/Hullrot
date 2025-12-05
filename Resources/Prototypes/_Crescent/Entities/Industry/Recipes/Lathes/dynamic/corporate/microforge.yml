@@ -447,16 +447,6 @@
     AdvancedElectronics: 1000
 
 - type: latheRecipe
-  id: HardlinerFlatpack
-  result: HardlinerFlatpack
-  completetime: 2
-  materials:
-    Steel: 3000
-    AdvancedMechatronics: 2000
-    BasicMechatronics: 6000
-    AdvancedElectronics: 1000
-
-- type: latheRecipe
   id: ShipyardManufactorumFlatpack
   result: ShipyardManufactorumFlatpack
   completetime: 2
@@ -514,8 +504,8 @@
     Steel: 3000
 
 - type: latheRecipe
-  id: GilgameshFlatpack
-  result: GilgameshFlatpack
+  id: MechSHIGilgameshFlatpack
+  result: MechSHIGilgameshFlatpack
   completetime: 2
   materials:
     AdvancedMechatronics: 3500
@@ -620,7 +610,7 @@
     ShipHull: 1500
 
 - type: latheRecipe
-  id: FujinLPC
+  id: ShipVoucherFujin
   result: ShipVoucherFujin
   completetime: 1
   materials:
