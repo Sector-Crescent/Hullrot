@@ -215,23 +215,8 @@
     Medicine:
       metabolismRate: 0.5
       effects:
-<<<<<<< Updated upstream
-      # While ≥ 5u: It sets chem contribution
       - !type:ChemApplyCritModifier
         value: 99
-        conditions:
-        - !type:ReagentThreshold
-          min: 1
-      # While < 5u: It sets chem contribution to 0 
-      - !type:ChemApplyCritModifier
-        value: 0
-        conditions:
-        - !type:ReagentThreshold
-          max: 0.99
-=======
-      - !type:ChemApplyCritModifier
-        value: 99
->>>>>>> Stashed changes
       - !type:MovespeedModifier
           walkSpeedModifier: 1.3
           sprintSpeedModifier: 1.3
