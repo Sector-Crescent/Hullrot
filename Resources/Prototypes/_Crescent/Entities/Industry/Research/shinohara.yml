@@ -247,7 +247,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponSpecialPulseRifle
-  - MagazinePulse350fmj
+  - MagazinePulse350Fmj
   position: 4,-6
   prerequisiteLineType: Spread
   technologyPrerequisites:
@@ -261,7 +261,7 @@
     state: icon
   discipline: Corporate
   tier: 2
-  cost: 12500
+  cost: 6500
   recipeUnlocks:
   - WeaponRifleGoro
   - WeaponRifleLecterSHI
@@ -271,6 +271,22 @@
   prerequisiteLineType: Spread
   technologyPrerequisites:
   - ShinoharaBasicMechGuns
+
+- type: technology
+  id: ShinoharaWTIAdvancedArmaments
+  name: Shinohara Wu-Tian Industries Armaments
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/sr3.rsi
+    state: icon
+  discipline: Corporate
+  tier: 2
+  cost: 12000
+  recipeUnlocks:
+  - WeaponSpecialPulseAMR
+  - MagazinePulse450Fmj
+  position: 4,-7
+  technologyPrerequisites:
+  - ShinoharaWTIArmaments
 
 - type: technology
   id: ShinoharaUAAdvancedBallistics
@@ -290,6 +306,21 @@
   - ShinoharaUABallistics
 
 - type: technology
+  id: ShinoharaPlasmaRepeater
+  name: SHI 400c plasma bolt repeater
+  icon:
+    sprite: _Crescent/Objects/ShuttleWeapons/lasersmall.rsi
+    state: lse-400c
+  discipline: Corporate
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - PlasmaRepeaterFlatpack
+  position: 4,-8
+  technologyPrerequisites:
+  - ShinoharaWTIAdvancedArmaments
+
+- type: technology
   id: ShinoharaNTBallistics
   name: research-technology-shinohara-oldntballistics
   icon:
@@ -303,7 +334,6 @@
   - WeaponRifleM90GrenadeLauncher
   - WeaponSubMachineGunWt550
   position: 2,-8
-  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - ShinoharaUAAdvancedBallistics
 
@@ -315,7 +345,7 @@
     state: autopuntgun
   discipline: Corporate
   tier: 2
-  cost: 12500
+  cost: 10000
   recipeUnlocks:
   - WeaponMechPlasmaSword
   - WeaponMechCombatAutopuntgun

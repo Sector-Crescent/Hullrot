@@ -275,6 +275,39 @@
     AdvancedElectronics: 1000
     AdvancedMechatronics: 500
 
+- type: latheRecipe
+  id: WeaponSpecialPulseAMR
+  result: WeaponSpecialPulseAMR
+  completetime: 2
+  materials:
+    Plastic: 500
+    BallisticCycler: 1000
+    AdvancedElectronics: 2000
+    AdvancedMechatronics: 1500
+    Tungsten: 1000
+    Plasteel: 2000
+
+#Mark: Ammo
+
+- type: latheRecipe
+  id: MagazinePulse350Fmj
+  result: MagazinePulse350Fmj
+  completetime: 2
+  materials:
+    Steel: 2500
+    Uranium: 1000
+    Plamsa: 1000
+
+- type: latheRecipe
+  id: MagazinePulse450Fmj
+  result: MagazinePulse450Fmj
+  completetime: 2
+  materials:
+    Steel: 4000
+    Uranium: 2000
+    Plamsa: 2000
+
+
 #MARK: Melee
 
 - type: latheRecipe
