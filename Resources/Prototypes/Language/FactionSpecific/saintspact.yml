@@ -6,20 +6,11 @@
     color: "#be3cc5"
     fontId: Lymphatic
     empathySpeech: true
+    speechVerbOverrides:
+    - chat-speech-verb-saintspact
   obfuscation:
     !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 5
     replacement:
-    - ebanî
-    - lûmin
-    - rath
-    - sârin
-    - vorn
-    - thal
-    - mori
-    - dûn
-    - galad
-    - nîd
-    - sil
-    - thôr
+    - "*incomprehensible*"
