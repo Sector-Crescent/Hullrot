@@ -99,26 +99,6 @@
   group: market
 
 - type: cargoProduct
-  id: MedicalBiosuit
-  icon:
-    sprite: Clothing/Head/Hoods/Bio/bio.rsi
-    state: icon
-  product: CrateVirologyBiosuit
-  cost: 800
-  category: cargoproduct-category-name-medical
-  group: market
-
-- type: cargoProduct
-  id: MedicalMindShieldImplants
-  icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  product: CrateMindShieldImplants
-  cost: 3000
-  category: cargoproduct-category-name-medical
-  group: market
-
-- type: cargoProduct
   id: ChemistryP
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
