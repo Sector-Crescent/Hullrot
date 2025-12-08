@@ -93,9 +93,11 @@
   cost: 5000
   recipeUnlocks:
   - WeaponRifleMiller
-  - WeaponRevolverArgenti
+  - WeaponSubMachineGunC20rImperial
+  - WeaponSniperDSMLegax
   - WeaponPistolComplianceImperial
   - GrenadeDSMG3Stick
+  - WeaponRevolverArgenti
 
 - type: technology
   id: ImperialCarrion
@@ -265,12 +267,12 @@
   cost: 9000
   recipeUnlocks:
   - WeaponRifleDSMLegionnaire
-  - WeaponSubMachineGunC20rImperial
   - WeaponPistolNeoVolker
   - WeaponLightMachineGunDSMDominion
   - WeaponShotgunReno
   - WeaponSniperDSMLegax
   - GrenadeDSMG4Twistcap
+
 
 - type: technology
   id: ImperialPlasmaMechGuns
@@ -286,21 +288,16 @@
   - WeaponMechCombatPlasmaCannon
 
 - type: technology
-  id: ImperialSRM
-  name: research-technology-imperial-srmimitation
+  id: ImperialPlasmaGuns
+  name: research-technology-imperial-plasmaguns
   icon:
-    sprite: _Crescent/Structures/flagssrm.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/seethe.rsi
     state: icon
   discipline: Imperial
-  tier: 3
-  cost: 18000
+  tier: 2
+  cost: 9000
   recipeUnlocks:
-  - ClothingBeltSheathKhopesh
-  - SRMKhopesh
-  - WeaponSubMachineGunBeetle
-  - WeaponRifleHunter
-  - ClothingOuterHardsuitHunterElite
-  - MetempsychoticMachineCircuitboard
+  - WeaponPlasmaRifleSeethe
 
 - type: technology
   id: ImperialBomb
