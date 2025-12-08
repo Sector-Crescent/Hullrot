@@ -12,6 +12,8 @@
   canBeAntag: false
   requirements:
     - !type:CharacterWhitelistRequirement
+    - !type:CharacterOverallTimeRequirement
+      min: 40000
     - !type:FactionRequirement
       factionID: "SRM"
     - !type:CharacterSpeciesRequirement
