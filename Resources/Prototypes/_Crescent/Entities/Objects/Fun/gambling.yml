@@ -1,0 +1,325 @@
+- type: entity
+  parent: BaseItem
+  suffix: Lost
+  id: GrandStarTicketlost
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have lost, better luck next time. This ticket can still be sold for 5 yen, how generous!
+        fontSize: 15
+        color: "#ff0015"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 5
+
+- type: entity
+  parent: BaseItem
+  suffix: 50
+  id: GrandStarTicket50
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 50 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  parent: BaseItem
+  suffix: 250
+  id: GrandStarTicket250
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 250 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: BaseItem
+  suffix: 500
+  id: GrandStarTicket500
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 500 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseItem
+  suffix: 1k
+  id: GrandStarTicket1k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 1,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseItem
+  suffix: 5k
+  id: GrandStarTicket5k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 5,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseItem
+  suffix: 10k
+  id: GrandStarTicket10k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 10,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  parent: BaseItem
+  suffix: 50k
+  id: GrandStarTicket50k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 50,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 50000
+
+- type: entity
+  parent: BaseItem
+  suffix: 100k
+  id: GrandStarTicket100k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 100,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 100000
+
+- type: entity
+  parent: BaseItem
+  suffix: 250k
+  id: GrandStarTicket250k
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won 250,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 250000
+
+- type: entity
+  parent: BaseItem
+  suffix: 1 mil
+  id: GrandStarTicket1mil
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen. This one has already ben scratched.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: used
+  - type: ExtendDescription
+    descriptionList:
+      - description: You have won the grand prize of 1,000,000 Taypani Yen!
+        fontSize: 15
+        color: "#4fff2b"
+        requireDetailRange: false
+  - type: StaticPrice
+    price: 1000000
+
+- type: entity
+  id: GrandStarTicket
+  parent: BaseItem
+  suffix: unused
+  name: Grand star scratch off ticket
+  description: A grand star scratch off ticket, it says on the backside that the grand prize is 1,000,000 Taypani Yen.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: base
+  - type: ExtendDescription
+    descriptionList:
+      - description: Use to scratch off.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+  - type: SpawnItemsOnUse
+    items:
+      - id: GrandStarTicketlost # its gambling you are ment to lose
+        prob: 1000000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket50
+        prob: 500000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket250
+        prob: 500000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket500
+        prob: 500000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket1k
+        prob: 250000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket5k
+        prob: 100000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket10k
+        prob: 25000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket50k
+        prob: 5000
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket100k
+        prob: 500
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket250k
+        prob: 100
+        orGroup: GrandTicketPool
+      - id: GrandStarTicket1mil # pretty sure this is 1 in 100000 odds
+        prob: 1
+        orGroup: GrandTicketPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: StaticPrice
+    price: 1000 # you will NOT win, you WILL lose money
+
+- type: entity
+  id: GrandStarTicketPack
+  parent: BaseItem
+  suffix: unused
+  name: Grand star scratch off ticket 10-pack
+  description: A grand star scratch off ticket 10-pack. Pay less win more!
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: pack
+  - type: ExtendDescription
+    descriptionList:
+      - description: Use to open.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+  - type: SpawnItemsOnUse
+    items:
+      - id: GrandStarTicketPackUsed
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+      - id: GrandStarTicket
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: StaticPrice # 10 in the price of 8 how nice!
+    price: 8000
+
+- type: entity
+  id: GrandStarTicketPackUsed
+  parent: BaseItem
+  suffix: used
+  name: Grand star scratch off ticket 10-pack
+  description: A grand star scratch off ticket 10-pack. Pay less win more! This one has already ben opened.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    layers:
+    - state: pack_used
+  - type: StaticPrice # 10 in the price of 8 how nice!
+    price: 1

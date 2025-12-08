@@ -1,4 +1,24 @@
 - type: cargoProduct
+  id: GrandStarTicketPackCargo
+  icon:
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    state: yen
+  product: GrandStarTicketPack
+  cost: 8000
+  category: cargoproduct-category-name-service
+  group: generic
+
+- type: cargoProduct
+  id: GrandStarTicketCargo
+  icon:
+    sprite: _Crescent/Objects/Fun/Gambling/grand_star.rsi
+    state: yen
+  product: GrandStarTicket
+  cost: 1000
+  category: cargoproduct-category-name-service
+  group: generic
+
+- type: cargoProduct
   id: ServiceJanitorialGeneric
   icon:
     sprite: Objects/Specific/Janitorial/janitorial.rsi
