@@ -449,6 +449,10 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: SelfDeleteGrid
+    - type: IFF
+      relations: {}
+      color: '#F6CE9C9C'
+      flags: HideLabel
 - proto: AAAHardpointFixed
   entities:
   - uid: 2

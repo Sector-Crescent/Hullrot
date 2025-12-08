@@ -525,6 +525,10 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Spider
+    - type: IFF
+      relations: {}
+      color: '#F6CE9C9C'
+      flags: HideLabel
     - type: SelfDeleteGrid
 - proto: AAAHardpointFixed
   entities:
