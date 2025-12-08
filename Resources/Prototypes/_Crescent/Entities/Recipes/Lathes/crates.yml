@@ -166,4 +166,19 @@
     Biomass: 50
     Glass: 1000
 
+- type: latheRecipe
+  id: HideSilkCrate
+  result: TradeGoodSilks
+  completetime: 2
+  materials:
+    HideMothroach: 500
+    Biomass: 10
+
+- type: latheRecipe
+  id: ThreadSilkCrate
+  result: TradeGoodSilks
+  completetime: 2
+  materials:
+    SilkFilament: 7500
+
 

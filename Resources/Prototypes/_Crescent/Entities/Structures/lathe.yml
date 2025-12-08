@@ -1656,10 +1656,11 @@
     idleState: fab-idle
     runningState: fab-active
     staticRecipes:
-    - GoodSilkCrate
     - AlcoholCrate
     - BadscrapCrate
     - Ammocrate
+    - HideSilkCrate
+    - ThreadSilkCrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1737,6 +1738,7 @@
     - AntibioticCrate
     - AlcoholCrate
     - DrugCrate
+    - PartyDrugs
   - type: Anchorable
     flags:
     - Anchorable
