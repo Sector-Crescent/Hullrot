@@ -47,12 +47,21 @@
     CartridgeShellHighExplosive: 1
 
 - type: factoryRecipe
-  id: GargoyleCasing
-  name: Gargoyle Cruise Missile
+  id: GargoyleCasingHE
+  name: Gargoyle HE Cruise Missile
   inputs:
     Plasteel: 10
   outputs:
     TorpGarg: 1
+
+- type: factoryRecipe
+  id: GargoyleCasingEMP
+  name: Gargoyle EMP Cruise Missile
+  inputs:
+    Plasteel: 5
+    Uranium: 5
+  outputs:
+    TorpGargEMP: 1
 
 - type: factoryRecipe
   id: LancerCasing
