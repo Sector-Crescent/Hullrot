@@ -122,5 +122,19 @@
   outputs:
     HeavyMortarCartridge: 1
 
+- type: factoryRecipe
+  id: 320mmPackedCasing
+  name: Manufacture Pre-Packed 320mm Artillery Shell
+  inputs:
+    Plasma: 5
+    Tungsten: 5
+  outputs:
+    CartridgeRailIncomplete: 1
 
-
+- type: factoryRecipe
+  id: 320mmAssemble
+  name: Manufacture Pre-Packed 320mm Artillery Shell
+  inputs:
+    CartridgeRailIncomplete: 1
+  outputs:
+    CartridgeRailHighExplosive: 1

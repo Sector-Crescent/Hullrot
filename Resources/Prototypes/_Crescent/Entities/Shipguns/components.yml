@@ -33,3 +33,21 @@
     - state: base
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
+
+- type: entity
+  id: CartridgeRailIncomplete
+  name: prepacked 320mm artillery shell
+  parent: BaseItem
+  description: A 320mm railgun cartridge produced out of a volatile plasma-cored tungsten shell. It's payload is deactivated for the moment.
+  components:
+  - type: Stack
+    stackType: CartridgeRailIncomplete
+  - type: Item
+    size: Huge
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/1000_armorpiercing_rail_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
