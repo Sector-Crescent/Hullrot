@@ -295,6 +295,20 @@
 
 - type: entity
   parent: BaseFlatpack
+  id: HullpiercerFlatpack
+  name: hullpiercer turret flatpack
+  description: A flatpack used for constructing swarmer turret with a universal commercial IFF.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretSlugspitter
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
   id: OperatorFlatpack
   name: operator turret flatpack
   description: A flatpack used for constructing operator turret with a universal commercial IFF.
@@ -449,6 +463,20 @@
 
 - type: entity
   parent: BaseFlatpack
+  id: LargeMissileHardpointFlatpack
+  name: large ballistic hardpoint flatpack
+  description:  Parts used to build a large missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointLargeMissile
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseFlatpack
   id: SmallBallisticHardpointFlatpack
   name: small ballistic hardpoint flatpack
   description:  Parts used to build a small ballistic hardpoint.
@@ -463,12 +491,40 @@
 
 - type: entity
   parent: BaseFlatpack
+  id: SmallMissileHardpointFlatpack
+  name: small missile hardpoint flatpack
+  description:  Parts used to build a small missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallMissile
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseFlatpack
   id: MediumBallisticHardpointFlatpack
   name: medium ballistic hardpoint flatpack
   description:  Parts used to build a medium ballistic hardpoint.
   components:
   - type: Flatpack
     entity: AAAHardpointMediumBallistic
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: BaseFlatpack
+  id: MediumMissileHardpointFlatpack
+  name: medium missile hardpoint flatpack
+  description:  Parts used to build a medium Missile hardpoint.
+  components:
+  - type: Flatpack
+    entity: AAAardpointMediumMissile
   - type: Sprite
     layers:
     - state: ame-part
@@ -825,3 +881,73 @@
     - state: ame-part
   - type: StaticPrice
     price: 15000
+
+- type: entity
+  parent: BaseFlatpack
+  id: TinyFanFlatpack
+  name: Atmospheric Fan Flatpack
+  description: Parts used to build a tiny fan, allowing to trap air in a single tile. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AtmosDeviceFanTiny
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: HerculesFlatpack
+  name: Boriatic Generator Hercules Flatpack
+  description: Parts used to build a boriatic generator. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BoriaticGeneratorHerculesShuttle
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: EinsteinFlatpack
+  name: Boriatic Generator Einstein Flatpack
+  description: Parts used to build a boriatic generator. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BoriaticGeneratorEinsteinShuttle
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SubstationFlatpack
+  name: Power Substation Flatpack
+  description: Parts used to build a substation. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: SubstationBasicEmpty
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: SMESFlatpack
+  name: SMES Flatpack
+  description: Parts used to build a SMES. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: SMESBasicEmpty
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000

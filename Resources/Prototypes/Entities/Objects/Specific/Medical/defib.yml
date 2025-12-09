@@ -82,8 +82,11 @@
 
 - type: entity
   id: DefibrillatorOneHandedUnpowered
-  parent: BaseDefibrillator
+  parent: [ BaseDefibrillator ]
   suffix: One-Handed, Unpowered
+  components: #Why have all things does this work
+  - type: PowerCellDraw
+    useRate: 0
 
 - type: entity
   id: DefibrillatorCompact # This should be a research item at some point
@@ -102,6 +105,11 @@
       - state: ready
         map: ["enum.PowerDeviceVisualLayers.Powered"]
         shader: unshaded
+  - type: Clothing
+    sprite: Objects/Specific/Medical/defibsmall.rsi
+    quickEquip: true
+    slots:
+    - belt
   - type: Item
     size: Normal
   - type: ToggleCellDraw
