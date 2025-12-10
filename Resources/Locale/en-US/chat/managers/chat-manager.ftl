@@ -171,7 +171,7 @@ chat-speech-verb-electricity-3 = screeches
 
 chat-speech-verb-marish = Mars
 
-chat-speech-verb-saintspact = forebodingly
+chat-speech-verb-saintspact = communes
 
 chat-speech-verb-name-supermatter = Supermatter
 chat-speech-verb-supermatter = states
