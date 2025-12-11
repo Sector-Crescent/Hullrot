@@ -23,11 +23,11 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<VendingMachineComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<VendingMachineComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<VendingMachineRestockComponent, AfterInteractEvent>(OnAfterInteract);
     }
 
-    protected virtual void OnComponentInit(EntityUid uid, VendingMachineComponent component, ComponentInit args)
+    protected virtual void OnMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
     {
         RestockInventoryFromPrototype(uid, component, component.InitialStockQuality);
     }

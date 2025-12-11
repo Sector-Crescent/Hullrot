@@ -5,40 +5,100 @@
 
 - type: department
   id: Logistics
+  name: department-Logistics
   description: department-Cargo-description
   color: "#A46106"
-  weight: -90
-  primary: false
-  editorHidden: true
+  roles:
+  - CargoTechnician
+  - Quartermaster
+  - SalvageSpecialist
+  - MailCarrier
 
 - type: department
   id: Civilian
+  name: department-Civilian
   description: department-Civilian-description
   color: "#9FED58"
   weight: 5
   roles:
-  - GliessianDockmaster
-  - GliessianSheriff
-  - GliessianDeputy
-  - Spacer
-  - GliessianDockhand
-  editorHidden: false
+  - Bartender
+  - Botanist
+  - Boxer
+  - Chef
+  - Clown
+  - HeadOfPersonnel
+  - Janitor
+  - Mime
+  - Musician
+  - Passenger
+  - Reporter
+  - Visitor
+  - Zookeeper
+  - ServiceWorker
+  - MartialArtist
+  - Prisoner
+  - Gladiator
+
+- type: department
+  id: CentralCommand
+  name: department-CentralCommand
+  description: department-CentralCommand-description
+  color: "#0c344d"
+  roles:
+  - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
+  editorHidden: true
+  weight: 120
 
 - type: department
   id: Command
+  name: department-Command
   description: department-Command-description
   color: "#334E6D"
   roles:
+  - Captain
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Quartermaster
+  - ChiefJustice
+  - AdministrativeAssistant
   - CentralCommandOfficial
-  - HeadOfPersonnel # Not shown but needed here for playtime
-  - HeadOfSecurity # Not shown but needed here for playtime
-#  - ChiefMedicalOfficer
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
   primary: false
   weight: 100
-  editorHidden: true
+
+- type: department
+  id: Dignitary
+  name: department-Dignitary
+  description: department-Dignitary-description
+  color: "#33FE6D"
+  roles:
+  - BlueshieldOfficer
+  - NanotrasenRepresentative
+  - Magistrate
+  primary: false
+  weight: 101
 
 - type: department
   id: Engineering
+  name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
   weight: -94
@@ -47,13 +107,22 @@
 
 - type: department
   id: Medical
+  name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
-  weight: -93
-  editorHidden: true
+  roles:
+  - Chemist
+  - ChiefMedicalOfficer
+  - MedicalDoctor
+  - MedicalIntern
+  - Psychologist
+  - Paramedic
+  - SeniorPhysician
+  - MedicalBorg
 
 - type: department
   id: Security
+  name: department-Security
   description: department-Security-description
   color: "#DE3A3A"
   weight: 20
@@ -63,18 +132,36 @@
   - SecurityCadet
   - SecurityOfficer
   - Warden
-  editorHidden: true
+  - PrisonGuard
+  - Brigmedic
 
 - type: department
   id: Epistemics
-  description: department-Epistemics-description
+  name: department-Epistemics
+  description: department-Science-description
   color: "#D381C9"
-  weight: -92
-  primary: false
-  editorHidden: true
+  roles:
+  - ResearchDirector
+  - SeniorResearcher
+  - Scientist
+  - ResearchAssistant
+  - Chaplain
+  - ForensicMantis
+  - Librarian
+  - Roboticist
+
+- type: department
+  id: Silicon
+  name: department-Silicon
+  description: department-Silicon-description
+  color: "#D381C9"
+  roles:
+  - Borg
+  - StationAi
 
 - type: department
   id: Specific
+  name: department-Specific
   description: department-Specific-description
   color: "#9FED58"
   weight: -91
@@ -253,15 +340,12 @@
   color: "#684871"
   weight: 10
   roles:
-  - ConscriptLeaderDSM
-  - ConscriptOfficerDSM
-  - ConscriptSniperDSM
-  - ConscriptGunnerDSM
-  - ConscriptDoctorDSM
-  - ConscriptShotgunDSM
-  - ConscriptSubmachinegunDSM
-  - ConscriptRiflemanDSM
-  - ConscriptCadetDSM
-  - ConscriptShipCaptainDSM
-  - ConscriptShipCrewDSM
-  editorHidden: true
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  - MartialArtist
+  - Gladiator
+  - Prisoner
+  - Brigmedic
+  primary: false
