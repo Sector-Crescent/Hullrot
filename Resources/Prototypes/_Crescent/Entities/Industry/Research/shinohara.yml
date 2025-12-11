@@ -249,7 +249,7 @@
   - WeaponSpecialPulseRifle
   - MagazinePulse350Fmj
   position: 4,-6
-  prerequisiteLineType: Spread
+  prerequisiteLineType: Tree
   technologyPrerequisites:
   - ShinoharaBasicMechGuns
 
@@ -268,7 +268,7 @@
   - WeaponRevolverMateba
   - WeaponSubMachineGunSabre
   position: 2,-6
-  prerequisiteLineType: Spread
+  prerequisiteLineType: Tree
   technologyPrerequisites:
   - ShinoharaBasicMechGuns
 
@@ -283,7 +283,7 @@
   cost: 12000
   recipeUnlocks:
   - WeaponSpecialPulseAMR
-  - MagazinePulse450Fmj
+  - MagazinePulse470Fmj
   position: 4,-7
   technologyPrerequisites:
   - ShinoharaWTIArmaments
@@ -367,6 +367,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLauncherHammerhead
+  - WeaponLauncherMilkor
   position: 2,-9
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
@@ -385,6 +386,22 @@
   - SHIShiverBlade
   position: 4,-9
   prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ShinoharaAdvancedMechWeapons
+
+- type: technology
+  id: ShinoharaNTEnergyArtillery
+  name: NT "Hardliner" plasma artillery
+  icon:
+    sprite: _Crescent/Objects/ShuttleWeapons/bigfuckinglaser.rsi
+    state: space_artillery
+  discipline: Corporate
+  tier: 3
+  cost: 12500
+  recipeUnlocks:
+  - HardlinerFlatpack
+  - PowerCageHardliner
+  position: 3,-9
   technologyPrerequisites:
   - ShinoharaAdvancedMechWeapons
 
@@ -422,7 +439,6 @@
   recipeUnlocks:
   - FixedHardpointFlatpack
   - ExhumerFlatpack
-  - PlasmaRepeaterFlatpack
   - SlugthrowerFlatpack
   position: 0,-4
   prerequisiteLineType: Diagonal
@@ -498,19 +514,3 @@
   position: 0,-6
   technologyPrerequisites:
   - ShinoharaShieldEmitter
-
-- type: technology
-  id: ShinoharaNTEnergyArtillery
-  name: NT "Hardliner" plasma artillery
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/bigfuckinglaser.rsi
-    state: space_artillery
-  discipline: Corporate
-  tier: 3
-  cost: 12500
-  recipeUnlocks:
-  - HardlinerFlatpack
-  - PowerCageHardliner
-  position: 1,-6
-  technologyPrerequisites:
-  - ShinoharaBoriaticComposting
