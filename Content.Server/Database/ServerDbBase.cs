@@ -45,13 +45,13 @@ namespace Content.Server.Database
             await using var db = await GetDb(cancel);
 
             var prefs = await db.DbContext
-                .Preference
-                .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
-                .Include(p => p.Profiles).ThenInclude(h => h.Antags)
-                .Include(p => p.Profiles).ThenInclude(h => h.Traits)
-                .Include(p => p.Profiles).ThenInclude(h => h.Loadouts)
-                .AsSingleQuery()
-                .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
+                    .Preference
+                    .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
+                    .Include(p => p.Profiles).ThenInclude(h => h.Antags)
+                    .Include(p => p.Profiles).ThenInclude(h => h.Traits)
+                    .Include(p => p.Profiles).ThenInclude(h => h.Loadouts)
+                    .AsSingleQuery()
+                    .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
 
             if (prefs is null)
                 return null;
@@ -505,7 +505,7 @@ namespace Content.Server.Database
                 .ExecuteUpdateAsync(setters => setters
                     .SetProperty(b => b.Severity, severity)
                     .SetProperty(b => b.Reason, reason)
-                    .SetProperty(b => b.ExpirationTime, expiration.HasValue ? expiration.Value.UtcDateTime : (DateTime?)null)
+                    .SetProperty(b => b.ExpirationTime, expiration.HasValue ? expiration.Value.UtcDateTime : (DateTime?) null)
                     .SetProperty(b => b.LastEditedById, editedBy)
                     .SetProperty(b => b.LastEditedAt, editedAt.UtcDateTime)
                 );
@@ -1308,7 +1308,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 ban.LastEditedAt,
                 ban.ExpirationTime,
                 ban.Hidden,
-                new [] { ban.RoleId.Replace(BanManager.JobPrefix, null) },
+                new[] { ban.RoleId.Replace(BanManager.JobPrefix, null) },
                 MakePlayerRecord(unbanningAdmin),
                 ban.Unban?.UnbanTime);
         }
@@ -1472,10 +1472,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         protected async Task<List<AdminWatchlistRecord>> GetActiveWatchlistsImpl(DbGuard db, Guid player)
         {
             var entities = await (from watchlist in db.DbContext.AdminWatchlists
-                          where watchlist.PlayerUserId == player &&
-                                !watchlist.Deleted &&
-                                (watchlist.ExpirationTime == null || DateTime.UtcNow < watchlist.ExpirationTime)
-                          select watchlist)
+                                  where watchlist.PlayerUserId == player &&
+                                        !watchlist.Deleted &&
+                                        (watchlist.ExpirationTime == null || DateTime.UtcNow < watchlist.ExpirationTime)
+                                  select watchlist)
                 .Include(note => note.Round)
                 .ThenInclude(r => r!.Server)
                 .Include(note => note.CreatedBy)
@@ -1500,9 +1500,9 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         protected async Task<List<AdminMessageRecord>> GetMessagesImpl(DbGuard db, Guid player)
         {
             var entities = await (from message in db.DbContext.AdminMessages
-                        where message.PlayerUserId == player && !message.Deleted &&
-                              (message.ExpirationTime == null || DateTime.UtcNow < message.ExpirationTime)
-                        select message).Include(note => note.Round)
+                                  where message.PlayerUserId == player && !message.Deleted &&
+                                        (message.ExpirationTime == null || DateTime.UtcNow < message.ExpirationTime)
+                                  select message).Include(note => note.Round)
                     .ThenInclude(r => r!.Server)
                     .Include(note => note.CreatedBy)
                     .Include(note => note.LastEditedBy)
