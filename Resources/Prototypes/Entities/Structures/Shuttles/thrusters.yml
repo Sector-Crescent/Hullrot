@@ -69,6 +69,10 @@
   components:
   - type: Machine
     board: ThrusterMachineCircuitboard
+  - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - ThrusterScrapItemOutputs
   - type: Destructible
     thresholds:
     - trigger:
@@ -150,6 +154,10 @@
     baseThrust: 2000
     thrust: 2000
     machinePartThrust: Manipulator
+  - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - ThrusterScrapItemOutputs
   - type: Sprite
     # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
     sprite: Structures/Shuttles/gyroscope.rsi
@@ -243,3 +251,9 @@
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
+
+- type: weightedRandomEntity
+  id: ThrusterScrapItemOutputs
+  weights:
+    ScrapPlasma10: 1
+    ScrapUranium10: 1

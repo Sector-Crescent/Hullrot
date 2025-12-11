@@ -79,6 +79,10 @@
     sprite: Structures/Machines/computers.rsi
     drawdepth: Objects
     state: broken
+  - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - ComputerBrokenScrapItemOutputs
   - type: Destructible
     thresholds:
     - trigger:
@@ -103,3 +107,10 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+- type: weightedRandomEntity
+  id: ComputerBrokenScrapItemOutputs
+  weights:
+    ScrapCircuit10: 3
+    ScrapCircuit20: 1
+    ScrapCircuit5: 1

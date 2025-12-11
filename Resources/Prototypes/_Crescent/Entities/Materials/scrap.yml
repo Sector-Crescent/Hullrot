@@ -251,6 +251,14 @@
     - type: Stack
       count: 5
 
+- type: entity
+  id: ScrapPlasma10
+  parent: ScrapPlasma
+  suffix: Ten
+  components:
+    - type: Stack
+      count: 10
+
 #uranium
 
 - type: entity
@@ -299,6 +307,14 @@
   components:
     - type: Stack
       count: 5
+
+- type: entity
+  id: ScrapUranium10
+  parent: ScrapUranium
+  suffix: Ten
+  components:
+    - type: Stack
+      count: 10
 
 #single-use scrap
 
