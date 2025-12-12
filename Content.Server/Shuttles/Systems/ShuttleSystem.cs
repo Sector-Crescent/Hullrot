@@ -126,12 +126,19 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
                     UpdateIFFInterface(uid, comp);
                     continue;
                 }
-
-                comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration, 0f, comp.HeatCapacity);
+                // Hullrot edit: Making patch for Custom cloak proportional to speed. If has component, will calculate right, if not, ignore.
+                var grid = Transform(uid).GridUid;
+                if (grid != null && TryComp<IFFCloakSpeedComponent>(uid, out var speedCloakComp) && EntityManager.TryGetComponent(grid, out PhysicsComponent? physicsComponent))
+                {
+                    comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration * speedCloakComp.SpeedMultiplier * physicsComponent.LinearVelocity.Length(), 0f, comp.HeatCapacity);
+                }
+                else
+                {
+                    comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration, 0f, comp.HeatCapacity);
+                }
                 UpdateIFFInterface(uid, comp);
                 if (comp.CurrentHeat != comp.HeatCapacity)
                     continue;
-                var grid = Transform(uid).GridUid;
                 if (grid is null)
                     continue;
                 RemoveIFFFlag(grid.Value, IFFFlags.Hide);

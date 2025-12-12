@@ -692,3 +692,48 @@
   - type: GuideHelp
     guides:
     - Cargo
+
+- type: entity
+  parent: ComputerIFF
+  id: ComputerIFFSpeedVaried
+  name: IFF computer
+  suffix: Parking cloak
+  description: Allows you to control the IFF and stealth characteristics of this vessel. There is a speedometer on the side.
+  components:
+  - type: IFFConsole
+    allowedFlags:
+      - Hide
+      - HideLabel
+  - type: IFFCloakSpeed
+    speedMultiplier: 0.15
+  - type: ActivatableUI
+    key: enum.IFFConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.IFFConsoleUiKey.Key:
+          type: IFFConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: Computer
+    board: ComputerTelevisionCircuitboard
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerIFFSpeedVaried, BaseStructureDisableToolUse]
+  id: ComputerTabletopIFFSpeedVaried
+  suffix: Parking cloak, Tabletop
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Shuttles/iff.rsi
+      state: helm
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
