@@ -141,6 +141,10 @@
     price: 500
   - type: BatteryDrinkerSource # Parkstation IPCs
     maxAmount: 10000
+  - type: GuideHelp
+    guides:
+    - VoltageNetworks
+    - Power
   - type: RCDDeconstructable
     rcdScrappable: true
     scrapResults:
