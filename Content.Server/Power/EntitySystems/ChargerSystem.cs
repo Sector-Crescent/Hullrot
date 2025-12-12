@@ -8,11 +8,10 @@ using Content.Shared.Emp;
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.Inventory;
 using Content.Shared.Storage.Components;
 using Robust.Server.Containers;
 using Content.Shared.Whitelist;
-using Content.Shared.Inventory;
-using Content.Shared._Goobstation.Clothing.Systems;
 
 namespace Content.Server.Power.EntitySystems;
 
@@ -81,8 +80,8 @@ internal sealed class ChargerSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<ActiveChargerComponent, ChargerComponent, ContainerManagerComponent>();
-        while (query.MoveNext(out var uid, out _, out var charger, out var containerComp))
+        var query = EntityQueryEnumerator<ActiveChargerComponent, ChargerComponent, ApcPowerReceiverComponent, ContainerManagerComponent>();
+        while (query.MoveNext(out var uid, out _, out var charger, out var apcReceiver, out var containerComp))
         {
             if (!_container.TryGetContainer(uid, charger.SlotId, out var container, containerComp))
                 continue;
@@ -92,7 +91,7 @@ internal sealed class ChargerSystem : EntitySystem
 
             foreach (var contained in container.ContainedEntities)
             {
-                TransferPower(uid, contained, charger, frameTime);
+                TransferPower(uid, contained, charger, apcReceiver.SideLoadFraction, frameTime);
             }
         }
     }
@@ -177,19 +176,19 @@ internal sealed class ChargerSystem : EntitySystem
         switch (component.Status)
         {
             case CellChargerStatus.Off:
-                receiver.Load = 0;
+                receiver.SideLoad = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Off, appearance);
                 break;
             case CellChargerStatus.Empty:
-                receiver.Load = 0;
+                receiver.SideLoad = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Empty, appearance);
                 break;
             case CellChargerStatus.Charging:
-                receiver.Load = component.ChargeRate;
+                receiver.SideLoad = component.ChargeRate * component.ChargeEfficiency;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Charging, appearance);
                 break;
             case CellChargerStatus.Charged:
-                receiver.Load = 0;
+                receiver.SideLoad = 0;
                 _appearance.SetData(uid, CellVisual.Light, CellChargerStatus.Charged, appearance);
                 break;
             default:
@@ -226,16 +225,16 @@ internal sealed class ChargerSystem : EntitySystem
         if (container.ContainedEntities.Count == 0)
             return CellChargerStatus.Empty;
 
-        if (!SearchForBattery(container.ContainedEntities[0], out _, out var heldBattery))
+        if (!SearchForBattery(container.ContainedEntities[0], out var heldEnt, out var heldBattery))
             return CellChargerStatus.Off;
 
-        if (Math.Abs(heldBattery.MaxCharge - heldBattery.CurrentCharge) < 0.01)
+        if (_battery.IsFull(heldEnt.Value, heldBattery))
             return CellChargerStatus.Charged;
 
         return CellChargerStatus.Charging;
     }
 
-    private void TransferPower(EntityUid uid, EntityUid targetEntity, ChargerComponent component, float frameTime)
+    private void TransferPower(EntityUid uid, EntityUid targetEntity, ChargerComponent component, float powerDemandFraction, float frameTime)
     {
         if (!TryComp(uid, out ApcPowerReceiverComponent? receiverComponent))
             return;
@@ -250,12 +249,6 @@ internal sealed class ChargerSystem : EntitySystem
             return;
 
         _battery.SetCharge(batteryUid.Value, heldBattery.CurrentCharge + component.ChargeRate * frameTime, heldBattery);
-        // Just so the sprite won't be set to 99.99999% visibility
-        if (heldBattery.MaxCharge - heldBattery.CurrentCharge < 0.01)
-        {
-            _battery.SetCharge(batteryUid.Value, heldBattery.MaxCharge, heldBattery);
-        }
-
         UpdateStatus(uid, component);
     }
 

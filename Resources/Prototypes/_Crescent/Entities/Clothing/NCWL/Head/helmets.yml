@@ -54,7 +54,7 @@
 ## hardsuit helmets ncwl revamp
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitNCWLMedi
   categories: [ HideSpawnMenu ]
   name: homeguard "SANITAR" hardsuit helmet
@@ -82,7 +82,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitNCWLEngi
   categories: [ HideSpawnMenu ]
   name: worker's league "EVERYMAN" hardsuit helmet
@@ -113,7 +113,7 @@
 ## hardsuit helmets
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitNCWLInfantry
   categories: [ HideSpawnMenu ]
   name: homeguard infanteer's hardsuit helmet
@@ -141,7 +141,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitNCWLPetya
   categories: [ HideSpawnMenu ]
   name: homeguard heavy hardsuit helmet
@@ -160,7 +160,7 @@
     lowPressureMultiplier: 1000
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitNCWLJuggernaut
   categories: [ HideSpawnMenu ]
   name: homeguard juggernaut's hardsuit helmet

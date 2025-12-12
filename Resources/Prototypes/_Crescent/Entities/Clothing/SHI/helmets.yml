@@ -1,7 +1,7 @@
 ## hardsuit helmets
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitHEV
   categories: [ HideSpawnMenu ]
   name: shinohara hazardous environment suit helmet
@@ -29,7 +29,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitCorpsec
   categories: [ HideSpawnMenu ]
   name: shinohara SVBT-2 combat hardsuit helmet

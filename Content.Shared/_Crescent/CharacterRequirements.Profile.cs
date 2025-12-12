@@ -23,7 +23,7 @@ public sealed partial class FactionRequirement : CharacterRequirement
     public override bool IsValid(
         JobPrototype job,
         HumanoidCharacterProfile profile,
-        Dictionary<string, TimeSpan> playTimes,
+        IReadOnlyDictionary<string, TimeSpan> playTimes,
         bool whitelisted,
         IPrototype prototype,
         IEntityManager entityManager,
@@ -58,7 +58,7 @@ public sealed partial class WealthRequirement : CharacterRequirement
 
     public override bool IsValid(JobPrototype job,
         HumanoidCharacterProfile profile,
-        Dictionary<string, TimeSpan> playTimes,
+        IReadOnlyDictionary<string, TimeSpan> playTimes,
         bool whitelisted,
         IPrototype prototype,
         IEntityManager entityManager,

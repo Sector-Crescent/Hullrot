@@ -73,7 +73,7 @@ public sealed class UnionfallCapturePointSystem : EntitySystem
 
             if (capturepoint.CurrentCaptureProgress <= 0) //capturing complete. TODO: NEED TO END THE ROUND SOMEHOW
             {
-                _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"), Filter.Broadcast(),
+                _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"),
             capturepoint.CapturingFaction + " has secured the control point! The round is over.");
                 _gameTicker.EndRound(capturepoint.CapturingFaction + " WON. RESTARTING ROUND IN 1 MINUTE");
                 capturepoint.CurrentCaptureProgress = 999999;
@@ -123,7 +123,7 @@ public sealed class UnionfallCapturePointSystem : EntitySystem
         if (component.CapturingFaction == null) //faction now controls da point
         {
             component.CapturingFaction = faction;
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"),
                 faction + " has activated the control point! It will finish in " + float.Round(component.CurrentCaptureProgress).ToString() + " seconds.");
         }
         else if (component.CapturingFaction != faction) //opposing faction touched control point
@@ -132,30 +132,30 @@ public sealed class UnionfallCapturePointSystem : EntitySystem
             component.CurrentCaptureProgress += component.CaptureTimeBonus; //takes longer since it switched sides
             if (component.CurrentCaptureProgress > component.TimeToEnd) //cant go longer than this amount
                 component.CurrentCaptureProgress = component.TimeToEnd;
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"),
                 faction + " seized control of the control point! The time left is " + float.Round(component.CurrentCaptureProgress).ToString() + " seconds.");
         }
     }
 
     private void AnnouncementWarStart(TimeSpan time)
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallBegin"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallBegin"),
                 "HADAL STORM DETECTED - Emergency repulsion field deployed, estimated storm dispersion time: <" + time + ">...  Dispersion pattern confirms presence of a hostile fleet in the operating area.");
     }
     private void AnnouncementWarPeriodic(TimeSpan time)
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPeriodic"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPeriodic"),
                 "<" + time + "> until the Hadal storm disperses.");
     }
 
     private void AnnouncementWarAlmost()
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallAlmost"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallAlmost"),
                 "<00:01:00> LEFT UNTIL FULL HADAL STORM DISPERSION.");
     }
     private void AnnouncementWarGraceOver()
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallGraceOver"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallGraceOver"),
                 "HADAL STORM HAS DISPERSED. Emergency dispersion field has been disabled. Long-Range radar readings confirm presence of hostile fleet, with interception course set to NanoTransen Vladzena Extraction Station");
     }
 }
