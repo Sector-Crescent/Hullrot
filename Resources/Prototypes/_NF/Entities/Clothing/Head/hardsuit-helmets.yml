@@ -5,7 +5,7 @@
 
 #Mercenary Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHardsuitWithLightBaseNF
   id: ClothingHeadHelmetHardsuitMercenary
   categories: [ HideSpawnMenu ]
   name: mercenary hardsuit helmet
@@ -28,7 +28,7 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
-        
+
 - type: entity
   parent: ClothingHeadHelmetHardsuitMercenary
   id: ClothingHeadHelmetHardsuitPrivateSecurity
@@ -44,7 +44,7 @@
 
 #Pilot Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHardsuitWithLightBaseNF
   id: ClothingHeadHelmetHardsuitPilot
   categories: [ HideSpawnMenu ]
   name: pilot hardsuit helmet
@@ -78,7 +78,7 @@
 
 # MAXIM helmet, but with light
 - type: entity
-  parent: [ ClothingHeadHelmetHardsuitMaxim, ClothingHeadHardsuitWithLightBase ]
+  parent: [ ClothingHeadHelmetHardsuitMaxim, ClothingHeadHardsuitWithLightBaseNF ]
   id: ClothingHeadHelmetHardsuitMaximPrototype
   categories: [ HideSpawnMenu ]
   name: experimental salvager helmet
@@ -181,7 +181,7 @@
 
 #Security Combat Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBaseNfsd
+  parent: ClothingHeadHardsuitWithLightBaseNF
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
   name: nfsd combat hardsuit helmet
@@ -231,7 +231,7 @@
 
 #SCAF Helmet
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHardsuitWithLightBaseNF
   id: ClothingHeadHelmetHardsuitScaf
   name: scaf hardsuit helmet
   description: A robust, strong helmet. On the inside smells of pent up anger.

@@ -1,9 +1,5 @@
-- type: messagePack
+- type: localizedDataset
   id: OnionGoodbyes
-  messages:
-  - vending-machine-thanks
-  - thankyou-onion-1
-  - thankyou-onion-2
-  - thankyou-onion-3
-  - thankyou-onion-4
-  - thankyou-onion-5
+  values:
+    prefix: thankyou-onion-
+    count: 5

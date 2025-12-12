@@ -46,14 +46,13 @@ public sealed partial class CharacterPickerButton : ContainerButton
         else
         {
             _previewDummy = UserInterfaceManager.GetUIController<LobbyUIController>()
-                .LoadProfileEntity(humanoid, true, true);
-            var hum = (HumanoidCharacterProfile) profile;
+                .LoadProfileEntity(humanoid, null, true, true);
 
             var highPriorityJob = humanoid.JobPriorities.SingleOrDefault(p => p.Value == JobPriority.High).Key;
-            if (highPriorityJob != null)
+            if (highPriorityJob != default)
             {
                 var jobName = prototypeManager.Index<JobPrototype>(highPriorityJob).LocalizedName;
-                description = $"{description}\n{jobName}\nFaction: {hum!.Faction}\n${hum.BankBalance}";
+                description = $"{description}\n{jobName}\nFaction: {humanoid!.Faction}\n${humanoid.BankBalance}";
             }
         }
 

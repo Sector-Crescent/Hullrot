@@ -311,6 +311,14 @@
 
 - type: jobIcon
   parent: JobIcon
+  id: JobIconResearchDirector
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: ResearchDirector
+  jobName: job-name-rd
+
+- type: jobIcon
+  parent: JobIcon
   id: JobIconMime
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
@@ -436,3 +444,11 @@
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Visitor
   jobName: job-name-visitor
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconAdmin
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Admin
+  allowSelection: false
