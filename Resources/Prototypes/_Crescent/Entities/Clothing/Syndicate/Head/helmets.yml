@@ -28,7 +28,7 @@
 ## hardsuit helmets
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetSyndieDonator
   categories: [ HideSpawnMenu ]
   name: combat technician's hardsuit helmet
@@ -57,7 +57,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitRamzi
   categories: [ HideSpawnMenu ]
   name: operative's combat hardsuit helmet
@@ -86,7 +86,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitSyndicateBattlegroup
   categories: [ HideSpawnMenu ]
   name: frontliner's combat hardsuit helmet
@@ -114,7 +114,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitCybersunSuit
   categories: [ HideSpawnMenu ]
   name: cybersun hardsuit helmet
@@ -140,7 +140,7 @@
         Heat: 0.9
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitTraumasec
   categories: [ HideSpawnMenu ]
   name: interdyne traumasec hardsuit helmet
@@ -168,7 +168,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitCoordinator
   categories: [ HideSpawnMenu ]
   name: interdyne coordinator hardsuit helmet

@@ -1,13 +1,14 @@
 # Empty mags
 - type: entity
   id: BaseMagazineRifle
-  name: "25-round magazine (7.62x51mm USM rifle)"
-  parent: BaseItem
+  name: "magazine (.20 rifle)"
+  parent: [ BaseItem, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Tag
     tags:
       - MagazineRifle
+      - Magazine
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
@@ -69,14 +70,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRiflePractice
-
-- type: entity
-  id: MagazineRifleRubber
-  name: "25-round magazine (7.62x51mm USM rubber)"
-  parent: BaseMagazineRifle
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
 
 - type: entity
   id: MagazineRifleUranium

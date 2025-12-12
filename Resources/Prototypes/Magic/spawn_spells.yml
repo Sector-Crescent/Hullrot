@@ -1,8 +1,7 @@
 ﻿- type: entity
   id: ActionSpawnMagicarpSpell
-  name: Summon Flesh
-  description: This spell summons an uncomfortable ammount of flesh monsters to your aid! they WILL turn on the user.
-  categories: [ HideSpawnMenu ]
+  name: Summon Magicarp
+  description: This spell summons three Magi-Carp to your aid! May or may not turn on user.
   components:
   - type: WorldTargetAction
     useDelay: 60
