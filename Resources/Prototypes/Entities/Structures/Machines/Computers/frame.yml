@@ -83,6 +83,10 @@
     rcdScrappable: true
     scrapResults:
       - ComputerBrokenScrapItemOutputs
+    deconstructable: false
+    cost: 6
+    delay: 4
+    fx: EffectRCDDeconstruct8
   - type: Destructible
     thresholds:
     - trigger:

@@ -83,6 +83,14 @@
       color: "#c9c042"
       castShadows: false
     - type: WiresPanel
+    - type: RCDDeconstructable
+      rcdScrappable: true
+      scrapResults:
+       - SubstationScrapItemOutputs
+      deconstructable: false
+      cost: 6
+      delay: 4
+      fx: EffectRCDDeconstruct8
     - type: Machine
       board: SMESMachineCircuitboard
     - type: StationInfiniteBatteryTarget

@@ -73,6 +73,10 @@
     rcdScrappable: true
     scrapResults:
       - ThrusterScrapItemOutputs
+    deconstructable: false
+    cost: 6
+    delay: 4
+    fx: EffectRCDDeconstruct8
   - type: Destructible
     thresholds:
     - trigger:
@@ -155,6 +159,7 @@
     thrust: 2000
     machinePartThrust: Manipulator
   - type: RCDDeconstructable
+    deconstructable: false
     rcdScrappable: true
     scrapResults:
       - ThrusterScrapItemOutputs
@@ -255,5 +260,5 @@
 - type: weightedRandomEntity
   id: ThrusterScrapItemOutputs
   weights:
-    ScrapPlasma10: 1
+    ScrapPlasma10: 2
     ScrapUranium10: 1

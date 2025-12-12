@@ -31,6 +31,14 @@
     energy: 1.6
     color: "#3db83b"
     castShadows: false
+  - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - SubstationScrapItemOutputs
+    deconstructable: false
+    cost: 6
+    delay: 4
+    fx: EffectRCDDeconstruct8
   - type: NodeContainer
     examinable: true
     nodes:
@@ -158,6 +166,14 @@
   - type: Clickable
   - type: AccessReader
     access: [["Engineering"]]
+  - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - SubstationScrapItemOutputs
+    deconstructable: false
+    cost: 6
+    delay: 6
+    fx: EffectRCDDeconstruct8
   - type: ContainerFill
     containers:
       board: [ WallmountSubstationElectronics ]
@@ -303,3 +319,10 @@
     graph: WallmountSubstation
     node: frame
   - type: WallMount
+
+- type: weightedRandomEntity
+  id: SubstationScrapItemOutputs
+  weights:
+    ScrapCircuit10: 3
+    ScrapPlasma10: 2
+    ScrapCircuit20: 1

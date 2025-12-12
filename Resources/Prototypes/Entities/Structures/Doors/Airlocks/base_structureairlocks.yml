@@ -124,6 +124,10 @@
     damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
   - type: RCDDeconstructable
+    rcdScrappable: true
+    scrapResults:
+      - AirlockScrapItemOutputs
+    deconstructable: false
     cost: 6
     delay: 8
     fx: EffectRCDDeconstruct8
@@ -170,6 +174,12 @@
     mode: NoSprite
   placement:
     mode: SnapgridCenter
+
+- type: weightedRandomEntity
+  id: AirlockScrapItemOutputs
+  weights:
+    SteelScrap5: 4
+    ScrapCircuit5: 1
 
 - type: entity
   id: AirlockRCDResistant
