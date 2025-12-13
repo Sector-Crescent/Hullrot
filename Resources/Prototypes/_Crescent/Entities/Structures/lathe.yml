@@ -1,5 +1,108 @@
 - type: entity
-  parent: BaseLathe
+  id: BaseCrescentLathe
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  abstract: true
+  name: lathe
+  components:
+  - type: Appearance
+  - type: WiresVisuals
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Lathe
+  - type: MaterialStorage
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: WiresPanel
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: StaticPrice
+    price: 800
+  - type: ResearchClient
+  - type: TechnologyDatabase
+  - type: Speech
+    speechSounds: Lathe
+
+- type: entity
+  id: crescentammolathe
+  parent: [BaseCrescentLathe, BaseMaterialSiloUtilizer]
+  name: munition lathe
+  description: Converts raw materials into precious ammo for the sector.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/protolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ProtolatheMachineCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+      - Wooden
+      - ClothMade
+      - Gauze
+      - Metal
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - ChemistryStatic
+    - SurgeryStatic
+    dynamicPacks:
+    - CresentAmmo
+  - type: EmagLatheRecipes
+    emagDynamicPacks:
+    - SecurityAmmo
+    - SecurityExplosives
+    - SecurityEquipment
+    - SecurityWeapons
+
+
+- type: entity
+  parent: BaseCrescentLathe
   id: ScrapRefiner
   name: SHI scrap upcycler
   description: An automated refinery with scrap metal refinement patterns.
@@ -109,7 +212,7 @@
 #drugs
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: DrugLathe
   name: interdyne pharmaceutic fablathe
   description: An automated fablathe with preloaded pharmaceutic patterns. Bears the Interdyne logo.
@@ -219,7 +322,7 @@
 
 - type: entity
   id: PristineMicroforge
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   name: pristine microforge
   description: Used to print equipment discovered through techdisks, or researched.
   components:
@@ -1405,7 +1508,7 @@
 #boriatic fuel thing
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: BoriaticRefiner
   name: SHI boriatic composter
   description: An automated refinery and fabricator that purifies various minerals into usable boriatic fuels.
@@ -1437,7 +1540,7 @@
 #ship parts
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: ShipyardManufactorum
   name: SHI shipyard manufactorum
   description: An automated assembler, constructing vessel components out of minerals.
@@ -1473,7 +1576,7 @@
 #organs
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: OrganPrinter
   name: IPM organic bioprinter
   description: An automated fablathe with preloaded organic patterns. Bears the Interdyne logo.
@@ -1507,7 +1610,7 @@
 #imperial
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: ImperialTradeGoodPrinter
   name: Imperial commodity fablathe
   description: An automated fablathe preloaded with many commodity patterns. An imperial merchant's best friend.
@@ -1547,7 +1650,7 @@
 #shi
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: CorporateTradeGoodPrinter
   name: Shinohara commodity fablathe
   description: An automated fablathe preloaded with many commodity patterns. A corporate merchant's best friend.
@@ -1587,7 +1690,7 @@
 #saws
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: SawsTradeGoodPrinter
   name: Shipfitters commodity fablathe
   description: An hacked fablathe preloaded with many commodity patterns. A salvager merchant's best friend.
@@ -1628,7 +1731,7 @@
 #indie
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: GliessTradeGoodPrinter
   name: Gliess Santo commodity fablathe
   description: A hacked fablathe preloaded with many commodity patterns. A independent merchant's best friend.
@@ -1667,7 +1770,7 @@
 #ncwl
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: UnionTradeGoodPrinter
   name: Nova Balereska commodity fablathe
   description: A union fablathe preloaded with many commodity patterns. A communard merchant's best friend.
@@ -1706,7 +1809,7 @@
 #ipm
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseCrescentLathe
   id: InterdyneTradeGoodPrinter
   name: Interdyne commodity fablathe
   description: A hacked fablathe preloaded with many commodity patterns. An organlugging merchant's best friend.
