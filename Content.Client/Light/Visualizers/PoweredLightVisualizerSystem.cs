@@ -32,10 +32,16 @@ public sealed class PoweredLightVisualizerSystem : VisualizerSystem<PoweredLight
 
         if (args.Sprite.LayerExists(PoweredLightLayers.Glow))
         {
+            Color glowColor = Color.White;
             if (TryComp<PointLightComponent>(uid, out var light))
             {
-                args.Sprite.LayerSetColor(PoweredLightLayers.Glow, light.Color);
+                glowColor = light.Color;
             }
+
+            if (AppearanceSystem.TryGetData<float>(uid, PoweredLightVisuals.GlowAlpha, out var alpha, args.Component))
+                glowColor = glowColor.WithAlpha(alpha);
+
+            args.Sprite.LayerSetColor(PoweredLightLayers.Glow, glowColor);
 
             args.Sprite.LayerSetVisible(PoweredLightLayers.Glow, state == PoweredLightState.On);
         }
@@ -122,7 +128,7 @@ public sealed class PoweredLightVisualizerSystem : VisualizerSystem<PoweredLight
 
         if (comp.BlinkingSound != null)
         {
-            var sound = _audio.GetSound(comp.BlinkingSound);
+            var sound = _audio.ResolveSound(comp.BlinkingSound);
             blinkingAnim.AnimationTracks.Add(new AnimationTrackPlaySound()
             {
                 KeyFrames =

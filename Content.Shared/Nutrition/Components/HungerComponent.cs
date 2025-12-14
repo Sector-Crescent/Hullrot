@@ -14,41 +14,58 @@ namespace Content.Shared.Nutrition.Components;
 public sealed partial class HungerComponent : Component
 {
     /// <summary>
-    /// The current hunger amount of the entity
+    /// The hunger value as authoritatively set by the server as of <see cref="LastAuthoritativeHungerChangeTime"/>.
+    /// This value should be updated relatively infrequently. To get the current hunger, which changes with each update,
+    /// use <see cref="HungerSystem.GetHunger"/>.
     /// </summary>
-    [DataField, AutoNetworkedField]
-    public float CurrentHunger;
+    [DataField, ViewVariables(VVAccess.ReadOnly)]
+    [AutoNetworkedField]
+    public float LastAuthoritativeHungerValue;
 
     /// <summary>
-    /// The base amount at which <see cref="CurrentHunger"/> decays.
+    /// The time at which <see cref="LastAuthoritativeHungerValue"/> was last updated.
     /// </summary>
-    [DataField]
-    public float BaseDecayRate = 0.033f;
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
+    public TimeSpan LastAuthoritativeHungerChangeTime;
 
     /// <summary>
-    /// The actual amount at which <see cref="CurrentHunger"/> decays.
+    /// The base amount at which <see cref="LastAuthoritativeHungerValue"/> decays.
+    /// </summary>
+    /// <remarks>Any time this is modified, <see cref="HungerSystem.SetAuthoritativeHungerValue"/> should be called.</remarks>
+    [DataField("baseDecayRate"), ViewVariables(VVAccess.ReadWrite)]
+    public float BaseDecayRate = 0.01666666666f;
+
+    /// <summary>
+    /// The actual amount at which <see cref="LastAuthoritativeHungerValue"/> decays.
     /// Affected by <seealso cref="CurrentThreshold"/>
     /// </summary>
-    [DataField, AutoNetworkedField]
+    /// <remarks>Any time this is modified, <see cref="HungerSystem.SetAuthoritativeHungerValue"/> should be called.</remarks>
+    [DataField("actualDecayRate"), ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public float ActualDecayRate;
 
     /// <summary>
     /// The last threshold this entity was at.
     /// Stored in order to prevent recalculating
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField("lastThreshold"), ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public HungerThreshold LastThreshold;
 
     /// <summary>
     /// The current hunger threshold the entity is at
     /// </summary>
-    [DataField, AutoNetworkedField]
+    /// <remarks>Any time this is modified, <see cref="HungerSystem.SetAuthoritativeHungerValue"/> should be called.</remarks>
+    [DataField("currentThreshold"), ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public HungerThreshold CurrentThreshold;
 
     /// <summary>
-    /// A dictionary relating HungerThreshold to the amount of <see cref="CurrentHunger"/> needed for each one
+    /// A dictionary relating HungerThreshold to the amount of <see cref="HungerSystem.GetHunger">current hunger</see> needed for each one
     /// </summary>
-    [DataField(customTypeSerializer: typeof(DictionarySerializer<HungerThreshold, float>)), AutoNetworkedField]
+    [DataField("thresholds", customTypeSerializer: typeof(DictionarySerializer<HungerThreshold, float>))]
+    [AutoNetworkedField]
     public Dictionary<HungerThreshold, float> Thresholds = new()
     {
         { HungerThreshold.Overfed, 300.0f },
@@ -61,7 +78,8 @@ public sealed partial class HungerComponent : Component
     /// <summary>
     /// A dictionary relating hunger thresholds to corresponding alerts.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField("hungerThresholdAlerts")]
+    [AutoNetworkedField]
     public Dictionary<HungerThreshold, ProtoId<AlertPrototype>> HungerThresholdAlerts = new()
     {
         { HungerThreshold.Peckish, "Peckish" },
@@ -75,7 +93,8 @@ public sealed partial class HungerComponent : Component
     /// <summary>
     /// A dictionary relating HungerThreshold to how much they modify <see cref="BaseDecayRate"/>.
     /// </summary>
-    [DataField(customTypeSerializer: typeof(DictionarySerializer<HungerThreshold, float>)), AutoNetworkedField]
+    [DataField("hungerThresholdDecayModifiers", customTypeSerializer: typeof(DictionarySerializer<HungerThreshold, float>))]
+    [AutoNetworkedField]
     public Dictionary<HungerThreshold, float> HungerThresholdDecayModifiers = new()
     {
         { HungerThreshold.Overfed, 1.2f },
@@ -94,23 +113,23 @@ public sealed partial class HungerComponent : Component
     /// <summary>
     /// Damage dealt when your current threshold is at HungerThreshold.Dead
     /// </summary>
-    [DataField]
+    [DataField("starvationDamage")]
     public DamageSpecifier? StarvationDamage;
 
     /// <summary>
-    /// The time when the hunger will update next.
+    /// The time when the hunger threshold will update next.
     /// </summary>
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
+    [DataField("nextUpdateTime", customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
     [AutoPausedField]
-    public TimeSpan NextUpdateTime;
+    public TimeSpan NextThresholdUpdateTime;
 
     /// <summary>
-    /// The time between each update.
+    /// The time between each hunger threshold update.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
-    public TimeSpan UpdateRate = TimeSpan.FromSeconds(1);
+    public TimeSpan ThresholdUpdateRate = TimeSpan.FromSeconds(1);
 }
 
 [Serializable, NetSerializable]

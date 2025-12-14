@@ -11,12 +11,12 @@
     state: windowfull
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: RGlass
+    damageModifierSet: Glass
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 150
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -25,7 +25,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 75
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -44,13 +44,13 @@
     node: plasmaWindow
   - type: Appearance
   - type: DamageVisuals
-    thresholds: [4, 8, 12]
-    damageDivisor: 3.333
+    thresholds: [5, 10, 20]
+    damageDivisor: 3
     trackAllDamage: true
     damageOverlay:
       sprite: Structures/Windows/cracks.rsi
   - type: StaticPrice
-    price: 60
+    price: 100
   - type: RadiationBlocker
     resistance: 4
   - type: ExplosionResistance
@@ -77,8 +77,8 @@
     node: plasmaWindowDirectional
   - type: Appearance
   - type: DamageVisuals
-    thresholds: [4, 8, 12]
-    damageDivisor: 3.333
+    thresholds: [5, 10, 20]
+    damageDivisor: 1.5
     trackAllDamage: true
     damageOverlay:
       sprite: Structures/Windows/cracks_directional.rsi
@@ -86,7 +86,16 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+    - trigger:
+        !type:DamageTrigger
+        damage: 37
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -99,7 +108,9 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: StaticPrice
-    price: 30
+    price: 50
+  - type: RadiationBlocker
+    resistance: 1
 
 - type: entity
   parent: PlasmaWindow
@@ -114,6 +125,9 @@
     drawdepth: WallTops
     sprite: Structures/Windows/plasma_diagonal.rsi
     state: state0
+  - type: Tag
+    tags:
+    - Diagonal
   - type: IconSmooth
     mode: Diagonal
     key: walls
