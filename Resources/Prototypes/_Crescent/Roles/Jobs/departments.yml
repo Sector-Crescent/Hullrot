@@ -1,0 +1,189 @@
+- type: department
+  id: NCWL
+  name: NCWL
+  description: department-NCWL-description
+  color: "#FFD580"
+  weight: 100
+  roles:
+  - CommandantNCWL
+  - KommissarNCWL
+  - MVDGruntNCWL
+  - FleetkapitanNCWL
+  - PartisanNCWL
+  - DirectorNCWL
+  - DoctorNCWL
+  - WorkerOverbossNCWL
+  - DockhandNCWL
+  - IndustryTaskmasterNCWL
+  - ArtificerNCWL
+  - WorkerNCWL
+  editorHidden: false
+
+- type: department
+  id: NCSP
+  name: NCSP
+  description: department-NCSP-description
+  color: "#DC143C"
+  weight: 90
+  roles:
+  - RingleaderNCSP
+  - LieutenantNCSP
+  - InfanteerNCSP
+  - TechnicianNCSP
+  - CoordinatorNCSP
+  - RipperdocNCSP
+  - TraumasecNCSP
+  - OperativeNCSP
+  - IntelligenceOfficerNCSP
+  - CyberdawnTechNCSP
+  - ForemanNCSP
+  - ShipbreakerNCSP
+  editorHidden: false
+
+- type: department
+  id: DSM
+  name: DSM
+  description: department-DSM-description
+  color: "#684871"
+  weight: 85
+  roles:
+  - FreeholderDSM
+  - LevymanDSM
+  - KnightDSM
+  - RitterDSM
+  - WealthDSM
+  - ForemanDSM
+  - ScribeDSM
+  - TemplarDSM
+  - SurgeonDSM
+  - LaborDSM
+  - CourtierDSM
+  - AdjutantDSM
+  - GovernorDSM
+  - AdvocatusDSM
+  - ArchmaesterDSM
+  editorHidden: false
+
+- type: department
+  id: SRM
+  name: SRM
+  description: department-SRM-description
+  color: "#4a6741"
+  weight: 80
+  roles:
+  - TenderSRM
+  - AcolyteSRM
+  - HunterSRM
+  - MontagneSRM
+  - OverseerSRM
+  editorHidden: false # i just like to see them for the numbers , SPCR 2025
+
+- type: department
+  id: SHI
+  name: SHI
+  description: department-SHI-description
+  color: "#4a6741"
+  weight: 75
+  roles:
+  - ExecutiveSHI
+  - BoardSHI
+  - HighsecSHI
+  - CorpsecSHI
+  - EmployeeSHI
+  - MedtechSHI
+  - BoardHRSHI
+  - HosSHI
+  editorHidden: false
+
+- type: department
+  id: CMM
+  name: CMM
+  description: department-CMM-description
+  color: "#5191e0"
+  weight: 70
+  roles:
+  - OrdnancemanCMM
+  - MachinistCMM
+  - PhysicianCMM
+  - MinutemanCMM
+  - WatchmasterCMM
+  - DeputyMarshalCMM
+  - MarshalCMM
+  editorHidden: true
+
+- type: department
+  id: TAP
+  name: TAP
+  description: department-TAP-description
+  color: "#50c878"
+  weight: 55
+  roles:
+  # - ProphetTAP #commented the rest until TAP comes back .2 | 2025
+  # - AcolyteTAP
+  # - TinkererTAP
+  # - TechminerTAP
+  # - HangarTechTAP
+  - Antiquarian
+  - BeltrunnerTAP
+  - DraugrTAP
+  - ServileTAP
+  editorHidden: false
+
+- type: department
+  id: ATH
+  name: ATH
+  description: department-ATH-description
+  color: "#ffffed"
+  weight: 40
+  roles:
+  - KommandantATH
+  - LeutnantATH
+  - KanoneerATH
+  - SoldatATH
+  - SanitatATH
+  - StewardATH
+  - OberartzATH
+  - LogistatATH
+  - HandelsATH
+  - ForscherATH
+  - ChirurgeonATH
+  - VorarbeiterATH
+  - ArbeiterATH
+  editorHidden: true # i just like to see them for the numbers , SPCR 2025
+
+  # CONSCRIPT
+
+- type: department
+  id: NCWL-W
+  description: department-NCWL-description
+  color: "#FFD580"
+  weight: 11
+  roles:
+  - ConscriptLeaderNCWL
+  - ConscriptOfficerNCWL
+  - ConscriptSniperNCWL
+  - ConscriptGunnerNCWL
+  - ConscriptDoctorNCWL
+  - ConscriptShotgunNCWL
+  - ConscriptSubmachinegunNCWL
+  - ConscriptRiflemanNCWL
+  - ConscriptCadetNCWL
+  - ConscriptShipCaptainNCWL
+  - ConscriptShipCrewNCWL
+  editorHidden: true
+
+- type: department
+  id: DSM-W
+  description: department-DSM-description
+  color: "#684871"
+  weight: 10
+  roles:
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  - MartialArtist
+  - Gladiator
+  - Prisoner
+  - Brigmedic
+  primary: false
