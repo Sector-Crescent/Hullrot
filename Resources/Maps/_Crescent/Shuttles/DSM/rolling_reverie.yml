@@ -5368,26 +5368,6 @@ entities:
     - type: Transform
       pos: -6.5,0.5
       parent: 1
-- proto: HandHeldMassScannerEE
-  entities:
-  - uid: 186
-    components:
-    - type: Transform
-      parent: 181
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 193
-    components:
-    - type: Transform
-      parent: 188
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: Holopad
   entities:
   - uid: 256

@@ -188,17 +188,6 @@
   - StoreCategorySRMSupport
 
 - type: listing
-  id: StoreListingSRMMassScanner
-  name: Mass Scanner
-  description: A handheld device handy for spaceborne operations. A few come packaged.
-  icon: { sprite: Objects/Tools/handheld_mass_scanner.rsi, state: icon }
-  productEntity: CrateSRMMassScanner
-  cost:
-    PietySRM: 1
-  categories:
-  - StoreCategorySRMSupport
-
-- type: listing
   id: StoreListingSRMMedScanner
   name: Medical Scanner
   description: A scanner used for medical purposes, useful for tenders in the field.

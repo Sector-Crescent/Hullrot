@@ -2244,15 +2244,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: HandHeldMassScannerEE
-  entities:
-  - uid: 13
-    components:
-    - type: Transform
-      parent: 8
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: JetpackBlackFilled
   entities:
   - uid: 14

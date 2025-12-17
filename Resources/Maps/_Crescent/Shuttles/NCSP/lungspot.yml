@@ -2088,15 +2088,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: HandHeldMassScannerEE
-  entities:
-  - uid: 205
-    components:
-    - type: Transform
-      parent: 200
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: JetpackBlackFilled
   entities:
   - uid: 206

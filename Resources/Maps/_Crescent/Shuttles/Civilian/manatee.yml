@@ -3284,22 +3284,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: HandHeldMassScanner
-  entities:
-  - uid: 433
-    components:
-    - type: Transform
-      parent: 429
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 436
-    components:
-    - type: Transform
-      parent: 435
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: InflatableDoor
   entities:
   - uid: 395

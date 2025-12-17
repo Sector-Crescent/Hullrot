@@ -4627,29 +4627,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: HandHeldMassScannerEE
-  entities:
-  - uid: 276
-    components:
-    - type: Transform
-      parent: 272
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 282
-    components:
-    - type: Transform
-      parent: 278
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 287
-    components:
-    - type: Transform
-      parent: 284
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: HoloFan
   entities:
   - uid: 303

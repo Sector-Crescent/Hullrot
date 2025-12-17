@@ -191,17 +191,6 @@
         amount: 3
 
 - type: entity
-  id: CrateSRMMassScanner
-  parent: CrateGenericSteel
-  name: Mass Scanner Shipment
-  description: A shipment of handheld mass scanners, relatively easy to come by.
-  components:
-  - type: StorageFill
-    contents:
-      - id: HandHeldMassScannerEE
-        amount: 3
-
-- type: entity
   id: CrateSRMDefibrillator
   parent: CrateGenericSteel
   name: Compact Defibrillator Shipment

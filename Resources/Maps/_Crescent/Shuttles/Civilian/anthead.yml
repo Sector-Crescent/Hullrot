@@ -1543,15 +1543,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: HandHeldMassScannerEE
-  entities:
-  - uid: 141
-    components:
-    - type: Transform
-      parent: 137
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: JetpackBlueFilled
   entities:
   - uid: 138
