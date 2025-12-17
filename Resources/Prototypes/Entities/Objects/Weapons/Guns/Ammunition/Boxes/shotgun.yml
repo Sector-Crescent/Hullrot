@@ -18,6 +18,8 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+  - type: Item
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
