@@ -135,7 +135,7 @@ public sealed class UnionfallShipNodeSystem : EntitySystem
         if (component.OwningFaction != comp.Faction) // opposing faction rigged to blow
         {
             component.IsBeingCaptured = true;
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"),
                 "A " + component.OwningFaction + " cloner database has been rigged to explode! It will detonate in " + float.Round(component.CurrentCaptureProgress).ToString() + " seconds.");
         }
         else if (component.OwningFaction == faction) // same faction interacted to defuse
@@ -143,7 +143,7 @@ public sealed class UnionfallShipNodeSystem : EntitySystem
             component.IsBeingCaptured = false;
             component.CurrentCaptureProgress = component.TimeToCapture;
 
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPointCapture"),
                 "The " + component.OwningFaction + " cloner database has been defused.");
         }
     }
@@ -163,15 +163,15 @@ public sealed class UnionfallShipNodeSystem : EntitySystem
             isRoundEnding = true;
             nodesLeftDSM = 0; //prep for next round
             nodesLeftNCWL = 0;
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"),
             capturepoint.OwningFaction + " has lost all of their warships and cloner databases. They are doomed to a slow death in Taypan.");
             _gameTicker.EndRound("All of " + capturepoint.OwningFaction + "'s cloner databases have been destroyed. ROUND OVER");
             capturepoint.CurrentCaptureProgress = 999999;
             Timer.Spawn(TimeSpan.FromMinutes(1), _gameTicker.RestartRound);
         }
-        else 
+        else
         {
-            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"), Filter.Broadcast(),
+            _announcer.SendAnnouncement(_announcer.GetAnnouncementId("Fallback"),
             "A " + capturepoint.OwningFaction + " cloner database has been destroyed! | REMAINING FOR DSM: " + nodesLeftDSM + " | REMAINING FOR NCWL: " + nodesLeftNCWL);
         }
     }

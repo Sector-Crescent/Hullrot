@@ -7,11 +7,18 @@
     tags:
       - MagazineLightRifleSubsonic
       - MagazineLightRifle
+      - Magazine
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleSubsonic
     mayTransfer: true
     whitelist:
       tags:
         - CartridgeLightRifleSubsonic
-    capacity: 30
-
+    capacity: 35
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
+    layers:
+    - state: practice
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

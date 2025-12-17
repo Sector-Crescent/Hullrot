@@ -309,7 +309,7 @@
 - type: entity
   name: NSCP RPG-7
   parent: [BaseWeaponLauncher, BaseGunWieldable]
-  id: WeaponLauncherRocket
+  id: C_WeaponLauncherRocket
   description: An iconic weapon of war. A rocket launcher often seen in the hands of terrorists and informal militias.
   components:
   - type: Sprite
@@ -347,7 +347,7 @@
 - type: entity
   name: PTA 10AX Chinalake 40mm #Lower mag capacity and fire rate than SHI MGL. Its more portable.
   parent: [BaseWeaponLauncher, BaseGunWieldable, StreeCredRedeemable]
-  id: WeaponLauncherChinaLake
+  id: C_WeaponLauncherChinaLake
   description: A pump action grenade launcher manufactured by Pang Tai Arms.
   components:
   - type: Sprite

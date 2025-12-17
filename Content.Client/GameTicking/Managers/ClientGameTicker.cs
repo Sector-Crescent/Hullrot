@@ -5,10 +5,13 @@ using Content.Client.RoundEnd;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Prototypes;
 using Content.Shared.GameWindow;
+using Content.Shared.Roles;
 using JetBrains.Annotations;
 using Robust.Client.Graphics;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Audio;
 
 namespace Content.Client.GameTicking.Managers
 {
@@ -19,31 +22,31 @@ namespace Content.Client.GameTicking.Managers
         [Dependency] private readonly IClientAdminManager _admin = default!;
         [Dependency] private readonly IClyde _clyde = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-#if !DEBUG
-        [Dependency] private readonly SharedMapSystem _map = default!;
-#endif
-        private Dictionary<NetEntity, Dictionary<string, uint?>>  _jobsAvailable = new();
+
+        private Dictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>>  _jobsAvailable = new();
         private Dictionary<NetEntity, string> _stationNames = new();
 
         [ViewVariables] public bool AreWeReady { get; private set; }
         [ViewVariables] public bool IsGameStarted { get; private set; }
-        [ViewVariables] public string? RestartSound { get; private set; }
+        [ViewVariables] public ResolvedSoundSpecifier? RestartSound { get; private set; }
         [ViewVariables] public LobbyBackgroundPrototype? LobbyBackground { get; private set; }
         [ViewVariables] public bool DisallowedLateJoin { get; private set; }
         [ViewVariables] public string? ServerInfoBlob { get; private set; }
         [ViewVariables] public TimeSpan StartTime { get; private set; }
         [ViewVariables] public new bool Paused { get; private set; }
 
-        [ViewVariables] public IReadOnlyDictionary<NetEntity, Dictionary<string, uint?>> JobsAvailable => _jobsAvailable;
+        [ViewVariables] public IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> JobsAvailable => _jobsAvailable;
         [ViewVariables] public IReadOnlyDictionary<NetEntity, string> StationNames => _stationNames;
 
         public event Action? InfoBlobUpdated;
         public event Action? LobbyStatusUpdated;
         public event Action? LobbyLateJoinStatusUpdated;
-        public event Action<IReadOnlyDictionary<NetEntity, Dictionary<string, uint?>>>? LobbyJobsAvailableUpdated;
+        public event Action<IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>>>? LobbyJobsAvailableUpdated;
 
         public override void Initialize()
         {
+            base.Initialize();
+
             SubscribeNetworkEvent<TickerJoinLobbyEvent>(JoinLobby);
             SubscribeNetworkEvent<TickerJoinGameEvent>(JoinGame);
             SubscribeNetworkEvent<TickerConnectionStatusEvent>(ConnectionStatus);
@@ -71,7 +74,7 @@ namespace Content.Client.GameTicking.Managers
             // reading the console. E.g., logs like this one could leak the nuke station/grid:
             // > Grid NT-Arrivals 1101 (122/n25896) changed parent. Old parent: map 10 (121/n25895). New parent: FTL (123/n26470)
 #if !DEBUG
-            _map.Log.Level = _admin.IsAdmin() ? LogLevel.Info : LogLevel.Warning;
+            EntityManager.System<SharedMapSystem>().Log.Level = _admin.IsAdmin() ? LogLevel.Info : LogLevel.Warning;
 #endif
         }
 
