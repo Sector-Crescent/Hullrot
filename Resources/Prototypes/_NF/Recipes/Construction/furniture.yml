@@ -443,41 +443,6 @@
   conditions:
     - !type:TileNotBlocked
 
-# Decorations (bonfire, fireplace)
-- type: construction
-  id: Bonfire
-  name: bonefire
-  description: What can be better then late evening under the sky with guitar and friends.
-  graph: FiresGraph
-  startNode: start
-  targetNode: BonfireNode
-  category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/bonfire.rsi
-    state: bonfire
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: Fireplace
-  name: fireplace
-  description: A place that has fire. Cozy!
-  graph: FiresGraph
-  startNode: start
-  targetNode: FireplaceNode
-  category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/fireplace.rsi
-    state: fireplace
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
 # Banners
 - type: construction
   id: BannerNanotrasen
