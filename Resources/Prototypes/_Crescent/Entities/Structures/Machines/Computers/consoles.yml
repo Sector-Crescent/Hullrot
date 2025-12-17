@@ -16,3 +16,343 @@
   components:
     - type: CommunicationsConsole
       title: ship-comm-console
+
+# faction consoles in preperation for the wargames
+
+- type: entity
+  parent: BaseComputerShuttle
+  id: C_ComputerShuttle
+  name: standard shuttle console
+  description: Used to pilot a shuttle.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ApcPowerReceiver
+    powerLoad: 0
+  - type: DeviceLinkSink
+  - type: DeviceLinkSource
+    ports:
+      - Group1
+      - Group2
+      - Group3
+      - Group4
+      - Group5
+  - type: NamedModules
+    buttonNames:
+      - "Module A"
+      - "Module B"
+      - "Module C"
+      - "Module D"
+      - "Module E"
+  - type: Computer
+    board: C_ShuttleConsoleCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxCivDamaged:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, C_ComputerShuttle]
+  id: C_ComputerTabletopShuttle
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxCivDamaged:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+# DSM consoles
+
+- type: entity
+  parent: C_ComputerShuttle
+  id: ComputerShuttleDSMCivilian
+  name: imperial shuttle console
+  description: Used to pilot a shuttle, and assembled from acceptably dated hardware sourced from the Scribe's Guild.
+  components:
+  - type: Computer
+    board: ShuttleConsoleDSMCivilianCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxDSMCivilian:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerShuttleDSMCivilian]
+  id: ComputerTabletopShuttleDSMCivilian
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxDSMCivilian:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: C_ComputerShuttle
+  id: ComputerShuttleDSMMilitary
+  name: levyman shuttle console
+  description: Used to pilot a shuttle, and assembled from finely made hardware sourced from Domain.
+  components:
+  - type: Computer
+    board: ShuttleConsoleDSMMilitaryCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxDSMMilitary:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerShuttleDSMMilitary]
+  id: ComputerTabletopShuttleDSMMilitary
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxDSMMilitary:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+# NCWL Consoles
+
+- type: entity
+  parent: C_ComputerShuttle
+  id: ComputerShuttleNCWLCivilian
+  name: league shuttle console
+  description: Used to pilot a shuttle, and assembled from local materials by the Artificers for their quotas.
+  components:
+  - type: Computer
+    board: ShuttleConsoleNCWLCivilianCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxNCWLCivilian:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerShuttleNCWLCivilian]
+  id: ComputerTabletopShuttleNCWLCivilian
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxNCWLCivilian:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: C_ComputerShuttle
+  id: ComputerShuttleNCWLMilitary
+  name: homeguard shuttle console
+  description: Used to pilot a shuttle, and imported directly from Chengridz manufacturers.
+  components:
+  - type: Computer
+    board: ShuttleConsoleNCWLMilitaryCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxNCWLMilitary:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerShuttleNCWLMilitary]
+  id: ComputerTabletopShuttleNCWLMilitary
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              BlackboxNCWLMilitary:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
