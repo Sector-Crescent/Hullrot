@@ -39,7 +39,9 @@
   - type: Eye
   - type: ContentEye
   - type: CameraRecoil
-  - type: Telescope
+  - type: EyeCursorOffset
+    maxOffset: 2
+    pvsIncrease: 0.3
   - type: MindContainer
   - type: MovementSpeedModifier
   - type: Polymorphable

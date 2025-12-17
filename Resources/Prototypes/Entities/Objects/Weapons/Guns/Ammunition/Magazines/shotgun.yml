@@ -5,13 +5,14 @@
 
 - type: entity
   id: BaseMagazineShotgun
-  name: 10-round magazine (12g shells)
-  parent: BaseItem
+  name: ammo drum (.50 shells)
+  parent: [ BaseItem, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Tag
     tags:
     - MagazineShotgun
+    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:

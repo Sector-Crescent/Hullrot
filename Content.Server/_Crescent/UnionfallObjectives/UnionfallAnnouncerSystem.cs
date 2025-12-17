@@ -52,23 +52,23 @@ public sealed class UnionfallAnnouncerSystem : EntitySystem
 
     private void AnnouncementWarStart(TimeSpan time)
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallBegin"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallBegin"),
                 "HADAL STORM DETECTED - Emergency repulsion field deployed, estimated storm dispersion time: <" + time + ">...  Dispersion pattern confirms presence of a hostile fleet in the operating area.");
     }
     private void AnnouncementWarPeriodic(TimeSpan time)
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPeriodic"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallPeriodic"),
                 "<" + time + "> until the Hadal storm disperses.");
     }
 
     private void AnnouncementWarAlmost()
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallAlmost"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallAlmost"),
                 "<00:01:00> LEFT UNTIL FULL HADAL STORM DISPERSION.");
     }
     private void AnnouncementWarGraceOver()
     {
-        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallGraceOver"), Filter.Broadcast(),
+        _announcer.SendAnnouncement(_announcer.GetAnnouncementId("unionfallGraceOver"),
                 "HADAL STORM HAS DISPERSED. Emergency dispersion field has been disabled. Long-Range radar readings confirm presence of hostile fleet.");
     }
 }
