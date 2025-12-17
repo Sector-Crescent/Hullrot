@@ -72,7 +72,7 @@
   components:
   - type: Machine
     board: ThrusterMachineCircuitboard
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable # Hullrot - Plasma cutter
     rcdScrappable: true
     scrapResults:
       - ThrusterScrapItemOutputs
@@ -161,7 +161,7 @@
     baseThrust: 2000
     thrust: 2000
     machinePartThrust: Manipulator
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable # Hullrot - Plasma cutter
     deconstructable: false
     rcdScrappable: true
     scrapResults:
@@ -260,6 +260,7 @@
       shader: unshaded
       visible: false
 
+# Hullrot - Plasma cutter
 - type: weightedRandomEntity
   id: ThrusterScrapItemOutputs
   weights:

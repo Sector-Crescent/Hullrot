@@ -79,7 +79,7 @@
     sprite: Structures/Machines/computers.rsi
     drawdepth: Objects
     state: broken
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable # Hullrot - Plasma cutter
     rcdScrappable: true
     scrapResults:
       - ComputerBrokenScrapItemOutputs
@@ -112,6 +112,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
+# Hullrot - Plasma cutter
 - type: weightedRandomEntity
   id: ComputerBrokenScrapItemOutputs
   weights:

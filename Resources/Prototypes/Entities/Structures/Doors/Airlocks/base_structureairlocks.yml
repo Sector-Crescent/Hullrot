@@ -137,6 +137,7 @@
     damageModifierSet: StrongMetallic
   - type: RCDDeconstructable
     rcdScrappable: true
+    # Hullrot - Plasma cutter
     scrapResults:
       - AirlockScrapItemOutputs
     deconstructable: false
@@ -192,6 +193,7 @@
   placement:
     mode: SnapgridCenter
 
+# Hullrot - Plasma cutter
 - type: weightedRandomEntity
   id: AirlockScrapItemOutputs
   weights:

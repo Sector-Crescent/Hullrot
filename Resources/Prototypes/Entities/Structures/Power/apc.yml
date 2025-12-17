@@ -144,7 +144,7 @@
     guides:
     - VoltageNetworks
     - Power
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable # Hullrot - Plasma cutter
     rcdScrappable: true
     scrapResults:
       - APCScrapItemOutputs
@@ -254,6 +254,7 @@
   - type: BatteryDrinkerSource # Parkstation IPCs # Parkstation IPCs
     maxAmount: 26000
 
+# Hullrot - Plasma cutter
 - type: weightedRandomEntity
   id: APCScrapItemOutputs
   weights:

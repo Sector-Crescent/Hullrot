@@ -31,7 +31,7 @@
     energy: 1.6
     color: "#3db83b"
     castShadows: false
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable # Hullrot - Plasma cutter
     rcdScrappable: true
     scrapResults:
       - SubstationScrapItemOutputs
@@ -328,6 +328,7 @@
     node: frame
   - type: WallMount
 
+# Hullrot - Plasma cutter
 - type: weightedRandomEntity
   id: SubstationScrapItemOutputs
   weights:
