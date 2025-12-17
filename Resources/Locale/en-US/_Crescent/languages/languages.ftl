@@ -13,6 +13,7 @@ chat-language-LowImperial-name = Low Imperial
 language-Saintspact-name = Saintspact
 language-Saintspact-description = A language spoken by the hunters of Saint Romaine's Militia, a language crafted while they drifted through the Taypani Abyss.
 chat-language-Saintspact-name = Saintspact
+chat-speech-verb-saintspact = communes
 
 language-SolBasic-name = Solarian
 language-SolBasic-description = A derived form of High Imperial and Tau Ceti Basic, distilled down to it's base components to make the language easier to understand for foreign merchants and immigrants. Solarian Basic was used by the lower caste of Imperial society long before the Authority's coup d'etat, but it was declared the official mother tongue of the fledgling nation during their declaration of sovereignty.
