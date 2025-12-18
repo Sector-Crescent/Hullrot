@@ -10,3 +10,58 @@
     prototype: ComputerAdvancedRadar
   - type: ComputerTabletopBoard # Frontier
     prototype: ComputerTabletopAdvancedRadar # Frontier
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: C_ShuttleConsoleCircuitboard
+  name: standard shuttle console board
+  description: A computer printed circuit board for a civilian shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: C_ComputerShuttle
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: ShuttleConsoleDSMCivilianCircuitboard
+  name: imperial shuttle console board
+  description: A computer printed circuit board for an imperial shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerShuttleDSMCivilian
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: ShuttleConsoleDSMMilitaryCircuitboard
+  name: levyman shuttle console board
+  description: A computer printed circuit board for an imperial shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerShuttleDSMMilitary
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: ShuttleConsoleNCWLCivilianCircuitboard
+  name: league shuttle console board
+  description: A computer printed circuit board for a worker's league shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerShuttleNCWLCivilian
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: ShuttleConsoleNCWLMilitaryCircuitboard
+  name: homeguard shuttle console board
+  description: A computer printed circuit board for a worker's league shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerShuttleNCWLMilitary
