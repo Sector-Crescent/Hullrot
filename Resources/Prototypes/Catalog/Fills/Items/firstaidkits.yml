@@ -10,7 +10,7 @@
       - id: Ointment
       - id: Gauze
       - id: PillCanisterTricordrazine
-      - id: PillCanisterIron
+      - id: PillCanisterIron # Hullrot edit
       # see https://github.com/tgstation/blob/master/code/game/objects/items/storage/firstaid.dm for example contents
 
 - type: entity
@@ -36,10 +36,10 @@
       - id: Brutepack
         amount: 2
       - id: Gauze
-      - id: Bloodpack
-      - id: BruteAutoInjector
+      - id: Bloodpack # Hullrot edit
+      - id: BruteAutoInjector # Hullrot edit
       - id: PillCanisterIron
-      - id: PillCanisterBicaridine
+      - id: PillCanisterBicaridine # Hullrot edit
 
 - type: entity
   id: MedkitToxinFilled
@@ -66,7 +66,7 @@
       - id: EmergencyMedipen
       - id: SyringeInaprovaline
       - id: PillCanisterDexalin
-      - id: PillCanisterIron
+      - id: PillCanisterIron # Hullrot edit
 
 - type: entity
   id: MedkitRadiationFilled
@@ -91,9 +91,9 @@
       - id: RegenerativeMesh
       - id: Bloodpack
         amount: 2
-      - id: PillCanisterTramadol
-      - id: PillCanisterBicaridine
-      - id: PillCanisterDermaline
+      - id: PillCanisterTramadol # Hullrot edit
+      - id: PillCanisterBicaridine # Hullrot edit
+      - id: PillCanisterDermaline # Hullrot edit
 
 - type: entity
   id: MedkitCombatFilled
@@ -105,12 +105,12 @@
       - id: MedicatedSuture
       - id: RegenerativeMesh
       - id: BurnAutoInjector
-      - id: SyringeTramadol
+      - id: SyringeTramadol # Hullrot edit
       - id: BruteAutoInjector
       - id: SyringeSaline
       - id: EmergencyMedipen
-      - id: PainMedipen # Morphine
-      - id: PillCanisterTricordrazine
+      - id: PainMedipen # Morphine, from EE
+      - id: PillCanisterTricordrazine # Hullrot edit
 
 - type: entity
   id: StimkitFilled

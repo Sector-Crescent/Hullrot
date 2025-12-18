@@ -807,7 +807,7 @@
       - !type:HealthChange
         conditions:
         - !type:TotalDamage
-          max: 100
+          max: 100 # Hullrot edit
         damage:
           groups:
             Brute: -1

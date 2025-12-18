@@ -210,21 +210,21 @@
     emptySpriteName: bicpen_empty
   - type: Hypospray
     solutionName: pen
-    transferAmount: 25
+    transferAmount: 25 # Hullrot edit
     onlyAffectsMobs: false
     injectOnly: true
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 25
+        maxVol: 25 # Hullrot edit
         reagents:
         - ReagentId: Bicaridine
           Quantity: 10
-        - ReagentId: SalicylicAcid
+        - ReagentId: SalicylicAcid # Hullrot edit
           Quantity: 5
         - ReagentId: TranexamicAcid
           Quantity: 5
-        - ReagentId: Tramadol
+        - ReagentId: Tramadol # Hullrot edit
           Quantity: 5
   - type: Tag
     tags: []
@@ -310,20 +310,20 @@
     emptySpriteName: punctpen_empty
   - type: Hypospray
     solutionName: pen
-    transferAmount: 20
+    transferAmount: 20 # Hullrot edit
     onlyAffectsMobs: false
     injectOnly: true
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 20
+        maxVol: 20 # Hullrot edit
         reagents:
         - ReagentId: Puncturase
           Quantity: 10
         - ReagentId: TranexamicAcid
           Quantity: 5
         - ReagentId: Tramadol
-          Quantity: 5
+          Quantity: 5 # Hullrot edit
   - type: Tag
     tags: []
 
