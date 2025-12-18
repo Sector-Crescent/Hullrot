@@ -870,11 +870,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("integer")
                         .HasColumnName("age");
 
-                    b.Property<string>("Backpack")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("backpack");
-
                     b.Property<long>("BankBalance")
                         .HasColumnType("bigint")
                         .HasColumnName("bank_balance");
