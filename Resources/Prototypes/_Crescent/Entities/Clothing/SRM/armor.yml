@@ -1,5 +1,3 @@
-
-
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitHunter
@@ -31,6 +29,9 @@
     sprintModifier: 0.9
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHunter
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: SRM
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -63,7 +64,10 @@
     sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHunterElite
-
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: SRM
+    
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorHunterDuster

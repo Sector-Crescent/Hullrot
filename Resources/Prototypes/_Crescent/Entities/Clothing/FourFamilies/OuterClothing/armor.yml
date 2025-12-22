@@ -33,6 +33,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitDraugr
   - type: StaticPrice
     price: 1000
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: TAP
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -67,6 +70,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitArabet
   - type: StaticPrice
     price: 1000
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: TAP
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -101,6 +107,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitIzdari
   - type: StaticPrice
     price: 1000
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: TAP
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -135,6 +144,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitThukker
   - type: StaticPrice
     price: 1000
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: TAP
 
 - type: entity
   parent: ClothingOuterEVASuitBase
@@ -151,6 +163,9 @@
     - SuitEVA
   - type: StaticPrice
     price: 1000
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: TAP
 
 - type: entity
   parent: ClothingOuterArmorBasic
