@@ -6,7 +6,7 @@ using Content.Server.Shuttles.Systems;
 using Content.Shared._Crescent.DroneControl;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
-using Content.Shared.DeviceNetwork.Events;
+using Content.Shared.DeviceNetwork.Systems;
 using Robust.Shared.Map;
 
 namespace Content.Server._Crescent.DroneControl;
@@ -23,23 +23,24 @@ public sealed class DroneControlSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<DroneControlConsoleComponent, DeviceListUpdateEvent>(OnListUpdate);
-        SubscribeLocalEvent<DroneControlConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
         SubscribeLocalEvent<DroneControlConsoleComponent, DroneConsoleMoveMessage>(OnMoveMsg);
         SubscribeLocalEvent<DroneControlConsoleComponent, DroneConsoleTargetMessage>(OnTargetMsg);
 
         SubscribeLocalEvent<DroneControlComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
     }
 
-    private void OnListUpdate(Entity<DroneControlConsoleComponent> ent, ref DeviceListUpdateEvent args)
+    public override void Update(float frameTime)
     {
-        UpdateState(ent);
-    }
+        base.Update(frameTime);
 
-    private void OnUIOpened(Entity<DroneControlConsoleComponent> ent, ref BoundUIOpenedEvent args)
-    {
-        if (args.UiKey is DroneConsoleUiKey)
-            UpdateState(ent);
+        var query = EntityQueryEnumerator<DroneControlConsoleComponent, DeviceListComponent>();
+        while (query.MoveNext(out var uid, out var comp, out var devList))
+        {
+             if (_ui.IsUiOpen(uid, DroneConsoleUiKey.Key))
+             {
+                 UpdateState(uid);
+             }
+        }
     }
 
     private void UpdateState(EntityUid console)
@@ -77,7 +78,7 @@ public sealed class DroneControlSystem : EntitySystem
             _deviceList.UpdateDeviceList(console, newList);
         }
 
-        _ui.SetUiState(console, DroneConsoleUiKey.Key, new DroneConsoleBoundUserInterfaceState(nav, drones, iffState));
+        _ui.SetUiState(console, DroneConsoleUiKey.Key, new DroneConsoleBoundUserInterfaceState(nav, iffState, drones));
     }
 
     // TODO: some more generic way of handling orders if we get more possible types

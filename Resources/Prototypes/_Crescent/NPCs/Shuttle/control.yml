@@ -89,7 +89,7 @@
       enum.DroneConsoleUiKey.Key:
         type: DroneConsoleBoundUserInterface
   - type: RadarConsole
-    maxRange: 1024
+    maxRange: 512
   - type: WorldLoader
     radius: 256
   - type: DeviceNetwork
@@ -152,10 +152,11 @@
         shutdownState: PlanFinished
         removeKeyOnFinish: false
         alwaysFaceTarget: true
-        inRangeMaxSpeed: 1
+        inRangeMaxSpeed: null # orbit as fast as we can
         range: 250
         rangeTolerance: 50
         targetKey: ShootTarget
+        mode: Orbit
     - !type:HTNPrimitiveTask
       operator: !type:ShipFireGunsOperator
         shutdownState: TaskFinished

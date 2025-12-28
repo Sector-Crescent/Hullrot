@@ -99,11 +99,6 @@ public sealed partial class DroneConsoleWindow : FancyWindow
         }
     }
 
-    public void SetConsole(EntityUid consoleEntity)
-    {
-        NavRadar.SetConsole(consoleEntity);
-    }
-
     private void RefreshButtonVisuals()
     {
         foreach (var (netEnt, btn) in _droneButtons)

@@ -23,7 +23,6 @@ public sealed class DroneConsoleBoundUserInterface : BoundUserInterface
 
         _window.OnMoveOrder += OnMoveOrder;
         _window.OnAttackOrder += OnAttackOrder;
-        _window.SetConsole(Owner);
     }
 
     private void OnMoveOrder(EntityCoordinates coord)

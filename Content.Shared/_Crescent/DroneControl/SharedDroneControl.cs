@@ -22,7 +22,7 @@ public sealed class DroneConsoleBoundUserInterfaceState : BoundUserInterfaceStat
 
     public DroneConsoleBoundUserInterfaceState(
         NavInterfaceState navState,
-        IFFInterfaceState iffState;
+        IFFInterfaceState iffState,
         List<(NetEntity, NetEntity)> linkedDrones)
     {
         NavState = navState;
