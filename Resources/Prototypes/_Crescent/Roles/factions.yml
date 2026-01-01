@@ -136,26 +136,26 @@
     sprite: /Textures/_Crescent/faction_icons.rsi
     state: fourfamilies
 
-- type: faction
-  name: "Saint Romaine's Militia"
-  id: SRM
-  descriptionPrefix: |
-    MINIMUM PLAYTIME: 10 HOURS / 3 ROUNDS
-    This faction is only very rarely present in the Taypan system.
-    Restricted to Special Midround Spawns
-  buttonColor: Black
-  description: |
-    Formerly several fireteams of the Imperial Compliance Corps united under a single wing, the SRM have
-    found their new identity in the reclamation of escaped Imperial 'assets', as well as the 'conscription'
-    of new ones. Essentially a slaver's guild with a self-appointed divine edge, they operate out of the
-    Domain system under their Imperial overlords, but often stray into Taypan to capture victims for
-    the rebuilding effort.
-  color: "#9FED58"
-  weight: 3
-  enabled: true
-  icon:
-    sprite: /Textures/_Crescent/faction_icons.rsi
-    state: srm
+# - type: faction
+#  name: "Saint Romaine's Militia"
+#  id: SRM
+#  descriptionPrefix: |
+#    MINIMUM PLAYTIME: 10 HOURS / 3 ROUNDS
+#    This faction is only very rarely present in the Taypan system.
+#    Restricted to Special Midround Spawns
+#  buttonColor: Black
+#  description: |
+#    Formerly several fireteams of the Imperial Compliance Corps united under a single wing, the SRM have
+#    found their new identity in the reclamation of escaped Imperial 'assets', as well as the 'conscription'
+#    of new ones. Essentially a slaver's guild with a self-appointed divine edge, they operate out of the
+#    Domain system under their Imperial overlords, but often stray into Taypan to capture victims for
+#    the rebuilding effort.
+#  color: "#9FED58"
+#  weight: 3
+#  enabled: false
+#  icon:
+#    sprite: /Textures/_Crescent/faction_icons.rsi
+#    state: srm
 
 - type: faction
   name: "Central Sol Authority"
