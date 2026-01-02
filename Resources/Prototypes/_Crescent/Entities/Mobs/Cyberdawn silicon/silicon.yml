@@ -126,3 +126,79 @@
   - CS Ritian
   - CS Yu Yi
   - CS Zhulong
+
+- type: entity
+  id: C_PlayerBorgSyndicateAssaultBattery
+  parent: BorgChassisSyndicateAssault
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module:
+      - C_BorgModuleOperative
+      - BorgModuleC54
+      - C_BorgModuleEsword
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+
+- type: entity
+  id: C_PlayerBorgSyndicateAssaultGhostRole
+  parent: PlayerBorgSyndicateAssaultBattery
+  suffix: Ghost role
+  components:
+  - type: GhostRole
+    name: ghost-role-information-syndicate-cyborg-assault-name
+    description: ghost-role-information-syndicate-cyborg-description
+    rules: ghost-role-information-silicon-rules
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+
+- type: entity
+  id: C_PlayerBorgSyndicateSaboteurBattery
+  parent: BorgChassisSyndicateSaboteur
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module:
+      - C_BorgModuleOperative
+      - C_BorgModuleSyndicateWeapon
+      - BorgModuleMartyr
+      - BorgModuleRCD
+      - BorgModuleAdvancedTool
+      - BorgModuleConstruction
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+
+- type: entity
+  id: C_PlayerBorgSyndicateMedicalBattery
+  parent: BorgChassisSyndicateMedical
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module:
+      - C_BorgModuleOperative
+      - C_BorgModuleAdvancedSurgery
+      - C_BorgModuleSyndicateWeapon
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper

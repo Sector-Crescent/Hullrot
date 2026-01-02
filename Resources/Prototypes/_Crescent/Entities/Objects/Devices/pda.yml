@@ -1,3 +1,12 @@
+- type: entity
+  abstract: true
+  id: MedPDA
+  components:
+  - type: HealthAnalyzer
+    scanDelay: 1
+    scanningEndSound:
+     path: "/Audio/Items/Medical/healthscanner.ogg"
+
 #ncwl
 
 - type: entity
@@ -25,8 +34,6 @@
     borderColor: "#3d251e"
     accentHColor: "#d4d4d4"
     accentVColor: "#d4d4d4"
-  - type: Icon
-    state: pda-militiaman
 
 - type: entity
   parent: [NCWLBasePDA, StreeCredRedeemable]
@@ -78,28 +85,20 @@
     id: NCWLIDCardHomeguardSoldat
 
 - type: entity
-  parent: [NCWLBasePDA, StreeCredRedeemableLow]
+  parent: [NCWLBasePDA, MedPDA, StreeCredRedeemableLow]
   id: NCWLMedicalLeaderPDA
   name: director's PDA
   components:
   - type: Pda
     id: NCWLIDCardMedicalLeader
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [NCWLBasePDA, StreeCredRedeemableLow]
+  parent: [NCWLBasePDA, MedPDA, StreeCredRedeemableLow]
   id: NCWLMedicalWorkerPDA
   name: sanitar's PDA
   components:
   - type: Pda
     id: NCWLIDCardMedicalWorker
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
   parent: [NCWLBasePDA, StreeCredRedeemableLow]
@@ -144,201 +143,156 @@
 #syndicate#
 
 - type: entity
-  parent: BasePDA
+  abstract: true
+  parent: [BasePDA]
+  id: SyndicateBasePDA
+  name: syndicate PDA
+  description: Red for Syndicate.
+  components:
+  - type: Pda
+    state: pda-syndi
+  - type: PdaBorderColor
+    borderColor: "#DC143C"
+  - type: Icon
+    state: pda-syndi
+
+- type: entity
+  abstract: true
+  parent: [SyndicateBasePDA]
+  id: SyndicateOfficerPDA
+  components:
+  - type: Pda
+    state: pda-syndiofficer
+  - type: PdaBorderColor
+    borderColor: "#DC143C"
+    accentHColor: "#d4d4d4"
+
+- type: entity
+  abstract: true
+  parent: [SyndicateBasePDA, MedPDA]
+  id: SyndicateMedPDA
+  description: Red for Syndicate. Has the Interdyne Pharmaceutics logo stamped at the back.
+  components:
+  - type: Pda
+    state: pda-syndimedic
+  - type: PdaBorderColor
+    borderColor: "#DC143C"
+    accentHColor: "#d4d4d4"
+    accentVColor: "#d4d4d4"
+
+- type: entity
+  parent: [SyndicateOfficerPDA]
   id: RingleaderPDA
   name: ringleader's PDA
-  description: Red for Syndicate.
   components:
   - type: Pda
     id: NCSPIDCardRingleader
-    state: pda-syndiofficer
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndiofficer
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateOfficerPDA]
   id: LieutenantPDA
   name: lieutenant's PDA
-  description: Red for Syndicate.
   components:
   - type: Pda
     id: NCSPIDCardLieutenant
-    state: pda-syndiofficer
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndiofficer
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateBasePDA]
   id: InfanteerPDA
   name: infanteer's PDA
   description: Red for Syndicate. Has the Gorlex logo stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardInfanteer
-    state: pda-syndi
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-  - type: Icon
-    state: pda-syndi
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateBasePDA]
   id: TechnicianPDA
   name: artillery technician's PDA
   description: Red for Syndicate. Has the Gorlex logo stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardInfanteer
-    state: pda-syndi
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-  - type: Icon
-    state: pda-syndi
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateMedPDA]
   id: CoordinatorPDA
   name: coordinator's PDA
   description: Red for Syndicate. Has the Interdyne Pharmaceutics logo stamped at the back. Has a thumbdrive version of a health analyzer wired crudely at one end.
   components:
   - type: Pda
     id: NCSPIDCardCoordinator
-    state: pda-syndimedic
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-    accentVColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndimedic
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateMedPDA]
   id: RipperdocPDA
   name: ripperdoc's PDA
   description: Red for Syndicate. Has the Interdyne Pharmaceutics logo stamped at the back. Has a thumbdrive version of a health analyzer wired crudely at one end.
   components:
   - type: Pda
     id: NCSPIDCardRipperdoc
-    state: pda-syndimedic
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-    accentVColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndimedic
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateMedPDA]
   id: TraumasecPDA
   name: traumasec's PDA
   description: Red for Syndicate. Has the Interdyne Pharmaceutics logo stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardTraumasec
-    state: pda-syndimedic
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-    accentVColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndimedic
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateBasePDA]
   id: OperativePDA
   name: asset security's PDA
   description: Red for Syndicate. Has the name 'Cyberdawn' stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardOperative
-    state: pda-syndi
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-  - type: Icon
-    state: pda-syndi
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateBasePDA]
   id: CyberdawnTechPDA
   name: researcher's PDA
   description: Red for Syndicate. Has the name 'Cyberdawn' stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardCyberdawnTech
-    state: pda-syndi
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-  - type: Icon
-    state: pda-syndi
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateOfficerPDA]
   id: IntelligenceOfficerPDA
   name: patriarch's PDA
   description: Red for Syndicate. Has the name 'Cyberdawn' stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardIntelligenceOfficer
-    state: pda-syndiofficer
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndiofficer
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateOfficerPDA]
   id: ForemanPDA
   name: foreman's PDA
   description: Red for Syndicate. Has the name 'SAWS' stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardForeman
-    state: pda-syndiofficer
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-    accentHColor: "#d4d4d4"
-  - type: Icon
-    state: pda-syndiofficer
 
 - type: entity
-  parent: BasePDA
+  parent: [SyndicateBasePDA]
   id: ShipbreakerPDA
   name: shipbreaker's PDA
   description: Red for Syndicate. Has the name 'SAWS' stamped at the back.
   components:
   - type: Pda
     id: NCSPIDCardShipbreaker
-    state: pda-syndi
-  - type: PdaBorderColor
-    borderColor: "#DC143C"
-  - type: Icon
-    state: pda-syndi
 
 #empire
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
-  id: FreeholderPDA
-  name: freeholder's PDA
+  abstract: true
+  parent: [BasePDA]
+  id: DSMBasePDA
+  name: imperial PDA
   description: Purple for Imperial.
   components:
   - type: Pda
@@ -346,11 +300,25 @@
     state: basic
   - type: PdaBorderColor
     borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  abstract: true
+  parent: [DSMBasePDA]
+  id: DSMNoblePDA
+  components:
+  - type: Pda
+    state: noble
+
+- type: entity
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
+  id: FreeholderPDA
+  name: freeholder's PDA
+  components:
+  - type: Pda
+    id: DSMIDCardFreeholder
+
+- type: entity
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: TemplarPDA
   name: knight templar's PDA
   description: Purple for Imperial.
@@ -360,188 +328,114 @@
     state: basic
   - type: PdaBorderColor
     borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: AdvocatusPDA
   name: advocati's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardAdvocatus
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
-
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: ArchmaesterPDA
   name: archmaester's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardArchmaester
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
   - type: Icon
     state: pda-rd
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, MedPDA, StreeCredRedeemableLow]
   id: SurgeonPDA
   name: surgeon's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardSurgeon
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: ForemanImpPDA
   name: foreman's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardForeman
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: ScribePDA
   name: scribe's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardScribe
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
   - type: Icon
     state: pda-science
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: WealthPDA
   name: minister's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardWealth
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMBasePDA, StreeCredRedeemableLow]
   id: LevymanPDA
   name: levyman's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardLevyman
-    state: basic
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: basic
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMNoblePDA, StreeCredRedeemableLow]
   id: KnightPDA
   name: knight's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardKnight
-    state: noble
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: noble
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMNoblePDA, StreeCredRedeemableLow]
   id: RitterPDA
   name: ritter's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardRitter
-    state: noble
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: noble
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMNoblePDA, StreeCredRedeemableLow]
   id: CourtierPDA
   name: courtier's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardCourtier
-    state: noble
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: noble
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [DSMNoblePDA, StreeCredRedeemableLow]
   id: AdjutantPDA
   name: adjutant's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardAdjutant
-    state: noble
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: noble
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  parent: [DSMNoblePDA, StreeCredRedeemable]
   id: GovernorPDA
   name: governor's PDA
-  description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardGovernor
-    state: noble
-  - type: PdaBorderColor
-    borderColor: "#6d5f8a"
-  - type: Icon
-    state: noble
 
 #srm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
-  id: TenderPDA
-  name: tender's PDA
+  abstract: true
+  parent: [BasePDA]
+  id: SRMBasePDA
+  name: hunter's PDA
   description: Decorated for the Hunt.
   components:
   - type: Pda
@@ -549,262 +443,180 @@
     state: hunter
   - type: PdaBorderColor
     borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SRMBasePDA, MedPDA, StreeCredRedeemableLow]
+  id: TenderPDA
+  name: tender's PDA
+  components:
+  - type: Pda
+    id: SRMIDCardTender
+
+- type: entity
+  parent: [SRMBasePDA, StreeCredRedeemableLow]
   id: AcolytePDA
   name: acolyte's PDA
-  description: Decorated for the Hunt.
   components:
   - type: Pda
     id: SRMIDCardAcolyte
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SRMBasePDA, StreeCredRedeemableLow]
   id: HunterPDA
   name: hunter's PDA
-  description: Decorated for the Hunt.
   components:
   - type: Pda
     id: SRMIDCardHunter
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SRMBasePDA, StreeCredRedeemableLow]
   id: MontagnePDA
   name: hunter montagne's PDA
-  description: Decorated for the Hunt.
   components:
   - type: Pda
     id: SRMIDCardMontagne
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  parent: [SRMBasePDA, StreeCredRedeemable]
   id: OverseerPDA
   name: overseer's PDA
-  description: Decorated for the Hunt.
   components:
   - type: Pda
     id: SRMIDCardOverseer
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 #shi
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  abstract: true
+  parent: [BasePDA]
+  id: SHIBasePDA
+  name: corporate PDA
+  description: Gunmetal gray.
+  components:
+  - type: Pda
+    state: pda-bartender
+  - type: PdaBorderColor
+    borderColor: "#535961"
+  - type: Icon
+    state: pda-bartender
+
+- type: entity
+  parent: [SHIBasePDA, StreeCredRedeemable]
   id: ExecutivePDA
   name: executive's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardExecutive
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SHIBasePDA, StreeCredRedeemableLow]
   id: BoardPDA
   name: board member's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardBoard
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SHIBasePDA, StreeCredRedeemableLow]
   id: CorpsecPDA
   name: security agent's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardCorpSec
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SHIBasePDA, StreeCredRedeemableLow]
   id: HighsecPDA
   name: liquidation officer's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardHighSec
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SHIBasePDA, StreeCredRedeemableLow]
   id: EmployeePDA
   name: corporate employee's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardEmployee
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SHIBasePDA, MedPDA, StreeCredRedeemableLow]
   id: MedtechPDA
   name: medtech's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: SHIIDCardMedtech
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 #cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  abstract: true
+  parent: [BasePDA]
+  id: CMMBasePDA
+  name: marshal PDA
+  description: Blue for cops.
+  components:
+  - type: Pda
+    state: cmm
+  - type: PdaBorderColor
+    borderColor: "#5191e0"
+
+- type: entity
+  parent: [CMMBasePDA, StreeCredRedeemableLow]
   id: OrdnancemanPDA
   name: ordnanceman's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardOrdnanceman
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [CMMBasePDA, StreeCredRedeemableLow]
   id: MachinistPDA
   name: machinist's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardMachinist
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [CMMBasePDA, MedPDA, StreeCredRedeemableLow]
   id: PhysicianPDA
   name: physician's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardPhysician
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [CMMBasePDA, StreeCredRedeemableLow]
   id: MinutemanPDA
   name: minuteman's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardMinuteman
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [CMMBasePDA, StreeCredRedeemableLow]
   id: WatchmasterPDA
   name: watchmaster's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardWatchmaster
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [CMMBasePDA, StreeCredRedeemableLow]
   id: DeputyMarshalPDA
   name: deputy marshal's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardDeputyMarshal
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  parent: [CMMBasePDA, StreeCredRedeemable]
   id: MarshalPDA
   name: marshal's PDA
-  description: Blue for cops.
   components:
   - type: Pda
     id: CMMIDCardMarshal
-    state: cmm
-  - type: PdaBorderColor
-    borderColor: "#5191e0"
-  - type: Icon
-    state: cmm
 
 #misc
 
@@ -881,426 +693,310 @@
 #fourfamilies
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  abstract: true
+  parent: [BasePDA]
+  id: TAPBasePDA
+  name: family PDA
+  description: How clerical.
+  components:
+  - type: Pda
+    state: hunter
+  - type: PdaBorderColor
+    borderColor: "#ffffff"
+
+- type: entity
+  parent: [TAPBasePDA, StreeCredRedeemable]
   id: ProphetPDA
   name: prophet's PDA
-  description: How clerical.
   components:
   - type: Pda
     id: TAPIDCardProphet
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: AcolyteTAPPDA
   name: devoted's PDA
-  description: How clerical.
   components:
   - type: Pda
     id: TAPIDCardAcolyte
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: TinkererPDA
   name: tinkerer's PDA
   description: How tinker-y.
   components:
   - type: Pda
     id: TAPIDCardTinkerer
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: TechminerPDA
   name: techminer's PDA
   description: Green for family.
   components:
   - type: Pda
     id: TAPIDCardTechminer
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: HangarTechPDA
   name: hangar technician's PDA
   description: Green for family.
   components:
   - type: Pda
     id: TAPIDCardHangarTech
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: BeltrunnerPDA
   name: beltrunner's PDA
   description: Green for family.
   components:
   - type: Pda
     id: TAPIDCardBeltrunner
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: DraugrPDA
   name: draugr's PDA
   description: Green for family.
   components:
   - type: Pda
     id: TAPIDCardDraugr
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [TAPBasePDA, StreeCredRedeemableLow]
   id: ServilePDA
   name: servile's PDA
   description: Green for family.
   components:
   - type: Pda
     id: TAPIDCardServile
-    state: hunter
-  - type: PdaBorderColor
-    borderColor: "#ffffff"
-  - type: Icon
-    state: hunter
 
 #ath
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemable]
+  abstract: true
+  parent: [BasePDA]
+  id: ATHBasePDA
+  name: athena PDA
+  description: Gunmetal gray.
+  components:
+  - type: Pda
+    state: pda-bartender
+  - type: PdaBorderColor
+    borderColor: "#535961"
+  - type: Icon
+    state: pda-bartender
+
+- type: entity
+  parent: [ATHBasePDA, StreeCredRedeemable]
   id: KommandantPDA
   name: kommandant's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardKommandant
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: LeutnantPDA
   name: leutnant's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardLeutnant
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: SoldatPDA
   name: jaeger's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardSoldat
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: KanoneerPDA
   name: kanoneer's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardKanoneer
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, MedPDA, StreeCredRedeemableLow]
   id: SanitatPDA
   name: sanitat's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardSanitat
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: StewardPDA
   name: first steward's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardSteward
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: OberartzPDA
   name: oberartz's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardOberartz
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: LogistatPDA
   name: logistat marshallie's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardLogistat
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: HandelsPDA
   name: handels's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardHandels
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: ForscherPDA
   name: forscher's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardForscher
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, MedPDA, StreeCredRedeemableLow]
   id: ChirurgeonPDA
   name: chirurgeon's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardChirurgeon
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: VorarbeiterPDA
   name: vorarbeiter's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardVorarbeiter
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [ATHBasePDA, StreeCredRedeemableLow]
   id: ArbeiterPDA
   name: arbeiter's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: ATHIDCardArbeiter
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 #anti psionic response team
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  abstract: true
+  parent: [BasePDA]
+  id: APRTBasePDA
+  name: APRT PDA
+  description: Gunmetal gray.
+  components:
+  - type: Pda
+    state: pda-bartender
+  - type: PdaBorderColor
+    borderColor: "#535961"
+  - type: Icon
+    state: pda-bartender
+
+- type: entity
+  parent: [APRTBasePDA, StreeCredRedeemableLow]
   id: APRTKanoneerPDA
   name: panzerfeldwebel's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: APRTIDCardKanoneer
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [APRTBasePDA, MedPDA, StreeCredRedeemableLow]
   id: APRTSanitatPDA
   name: panzersanitat's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: APRTIDCardSanitat
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
-  - type: HealthAnalyzer
-    scanDelay: 1
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [APRTBasePDA, StreeCredRedeemableLow]
   id: APRTSoldatPDA
   name: panzergrenadier's PDA
-  description: Gunmetal gray.
   components:
   - type: Pda
     id: APRTIDCardSoldat
-    state: pda-bartender
-  - type: PdaBorderColor
-    borderColor: "#535961"
-  - type: Icon
-    state: pda-bartender
 
 
 #misc
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  abstract: true
+  parent: [BasePDA]
+  id: GliessBasePDA
+  name: gliess PDA
+  description: You are the law.
+  components:
+  - type: Pda
+    state: pda-corpsec
+  - type: PdaBorderColor
+    borderColor: "#808080"
+
+- type: entity
+  parent: [GliessBasePDA, StreeCredRedeemableLow]
   id: GliessSheriffPDA
   name: sheriff's PDA
-  description: You are the law.
   components:
   - type: Pda
     id: GliessIDCardSheriff
-    state: pda-corpsec
-  - type: PdaBorderColor
-    borderColor: "#808080"
-  - type: Icon
-    state: pda-corpsec
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [GliessBasePDA, StreeCredRedeemableLow]
   id: GliessDeputyPDA
   name: deputy's PDA
-  description: You are the law.
   components:
   - type: Pda
     id: GliessIDCardDeputy
-    state: pda-corpsec
-  - type: PdaBorderColor
-    borderColor: "#808080"
-  - type: Icon
-    state: pda-corpsec
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [GliessBasePDA, StreeCredRedeemableLow]
   id: GliessDockmasterPDA
   name: dockmaster's PDA
-  description: You are the law.
   components:
   - type: Pda
     id: GliessIDCardDockmaster
+
+- type: entity
+  abstract: true
+  parent: [BasePDA]
+  id: SpacerBasePDA
+  name: spacer PDA
+  description: You aren't the law.
+  components:
+  - type: Pda
     state: pda-corpsec
   - type: PdaBorderColor
     borderColor: "#808080"
-  - type: Icon
-    state: pda-corpsec
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SpacerBasePDA, StreeCredRedeemableLow]
   id: SpacerPDA
   name: Spacer's PDA
-  description: You aren't the law.
   components:
   - type: Pda
     id: SpacerIDCard
-    state: pda-corpsec
-  - type: PdaBorderColor
-    borderColor: "#808080"
-  - type: Icon
-    state: pda-corpsec
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [SpacerBasePDA, StreeCredRedeemableLow]
   id: DockhandPDA
   name: Dockhand's PDA
-  description: You aren't the law.
   components:
   - type: Pda
     id: DockhandIDCard
-    state: pda-corpsec
-  - type: PdaBorderColor
-    borderColor: "#808080"
-  - type: Icon
-    state: pda-corpsec

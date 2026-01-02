@@ -1,6 +1,6 @@
 - type: department
   id: NCWL
-  name: NCWL
+  name: department-NCWL
   description: department-NCWL-description
   color: "#FFD580"
   weight: 100
@@ -21,7 +21,7 @@
 
 - type: department
   id: NCSP
-  name: NCSP
+  name: department-NCSP
   description: department-NCSP-description
   color: "#DC143C"
   weight: 90
@@ -42,7 +42,7 @@
 
 - type: department
   id: DSM
-  name: DSM
+  name: department-DSM
   description: department-DSM-description
   color: "#684871"
   weight: 85
@@ -66,7 +66,7 @@
 
 - type: department
   id: SRM
-  name: SRM
+  name: department-SRM
   description: department-SRM-description
   color: "#4a6741"
   weight: 80
@@ -80,7 +80,7 @@
 
 - type: department
   id: SHI
-  name: SHI
+  name: department-SHI
   description: department-SHI-description
   color: "#4a6741"
   weight: 75
@@ -97,7 +97,7 @@
 
 - type: department
   id: CMM
-  name: CMM
+  name: department-CMM
   description: department-CMM-description
   color: "#5191e0"
   weight: 70
@@ -113,7 +113,7 @@
 
 - type: department
   id: TAP
-  name: TAP
+  name: department-TAP
   description: department-TAP-description
   color: "#50c878"
   weight: 55
@@ -131,7 +131,7 @@
 
 - type: department
   id: ATH
-  name: ATH
+  name: department-ATH
   description: department-ATH-description
   color: "#ffffed"
   weight: 40
@@ -150,42 +150,3 @@
   - VorarbeiterATH
   - ArbeiterATH
   editorHidden: true # i just like to see them for the numbers , SPCR 2025
-
-  # CONSCRIPT
-
-- type: department
-  id: NCWL-W
-  name: NCWL-W
-  description: department-NCWL-description
-  color: "#FFD580"
-  weight: 11
-  roles:
-  - ConscriptLeaderNCWL
-  - ConscriptOfficerNCWL
-  - ConscriptSniperNCWL
-  - ConscriptGunnerNCWL
-  - ConscriptDoctorNCWL
-  - ConscriptShotgunNCWL
-  - ConscriptSubmachinegunNCWL
-  - ConscriptRiflemanNCWL
-  - ConscriptCadetNCWL
-  - ConscriptShipCaptainNCWL
-  - ConscriptShipCrewNCWL
-  editorHidden: true
-
-- type: department
-  id: DSM-W
-  name: DSM-W
-  description: department-DSM-description
-  color: "#684871"
-  weight: 10
-  roles:
-  - Boxer
-  - Reporter
-  - Zookeeper
-  - Psychologist
-  - MartialArtist
-  - Gladiator
-  - Prisoner
-  - Brigmedic
-  primary: false

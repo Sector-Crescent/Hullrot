@@ -1,0 +1,115 @@
+- type: entity
+  id: BulletPlasmaGatling
+  name: unstable focused plasma bolt
+  description: Uh oh.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Purple
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 100
+        Radiation: 90
+  - type: PointLight
+    radius: 3.5
+    color: purple
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 1
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
+        hard: false
+      fly-by:
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: infernoshot
+  - type: ShipWeaponProjectile
+  - type: ProjectilePhasePrevent #do not remove
+    mask:
+    - BulletImpassable
+    - Impassable
+
+- type: entity
+  id: BulletPlasmaBall
+  name: unstable plasmaball
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Purple
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 150
+        Radiation: 110
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 150
+    intensitySlope: 15
+    totalIntensity: 150
+    maxTileBreak: 6
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: magicm_yellow
+
+- type: entity
+  id: BulletPlasmaArc
+  name: large unstable plasma arc
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Purple
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 500
+        Radiation: 120
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 400
+    intensitySlope: 30
+    totalIntensity: 400
+    maxTileBreak: 7
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: blastwave
