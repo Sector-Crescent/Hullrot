@@ -21,6 +21,7 @@ chat-manager-whisper-headset-on-message = You can't whisper on the radio!
 chat-manager-language-prefix = ({ $language }){" "}
 
 chat-manager-server-wrap-message = [bold]{$message}[/bold]
+chat-manager-sender-announcement = Central Command
 chat-manager-sender-announcement-wrap-message = [font size=14][bold]{$sender} Announcement:[/font][font size=12]
                                                 {$message}[/bold][/font]
 
@@ -34,8 +35,8 @@ chat-manager-entity-whisper-unknown-wrap-message = [BubbleHeader][font size=10][
 
 # THE() is not used here because the entity and its name can technically be disconnected if a nameOverride is passed...
 chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
-    *[false] the {$entityName} {$message}[/italic]
-     [true] {$entityName} {$message}[/italic]
+    *[false] The {$entityName} {$message}[/italic]
+     [true] {CAPITALIZE($entityName)} {$message}[/italic]
     }
 
 chat-manager-entity-looc-wrap-message = LOOC: {$entityName}: {$message}
@@ -135,6 +136,11 @@ chat-speech-verb-canine-1 = barks
 chat-speech-verb-canine-2 = woofs
 chat-speech-verb-canine-3 = howls
 
+chat-speech-verb-name-goat = Goat
+chat-speech-verb-goat-1 = bleats
+chat-speech-verb-goat-2 = grunts
+chat-speech-verb-goat-3 = cries
+
 chat-speech-verb-name-small-mob = Mouse
 chat-speech-verb-small-mob-1 = squeaks
 chat-speech-verb-small-mob-2 = pieps
@@ -170,6 +176,8 @@ chat-speech-verb-electricity-2 = buzzes
 chat-speech-verb-electricity-3 = screeches
 
 chat-speech-verb-marish = Mars
+
+chat-speech-verb-saintspact = forebodingly
 
 chat-speech-verb-name-supermatter = Supermatter
 chat-speech-verb-supermatter = states

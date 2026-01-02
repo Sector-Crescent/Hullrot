@@ -25,6 +25,21 @@
         loop: true
 
 - type: entity
+  parent: BlackboxCiv
+  id: BlackboxCivDamaged
+  name: Damaged flight recorder
+  description: A partially damaged black box device containing the final moments of a ship and her crew. Spacers consider it bad luck to handle with anything other than reverence.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: ExtendDescription
+    descriptionList:
+      - description: Most Jurisdictions subsidize the return of flight recorders for both the bereaved and intelligence agencies. Turn in for a tolerable bounty.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+
+- type: entity
   parent: BaseItem
   id: BlackboxDSM
   name: DSM flight recorder
@@ -51,6 +66,36 @@
         loop: true
 
 - type: entity
+  parent: BlackboxDSM
+  id: BlackboxDSMCivilian
+  name: DSM civilian flight recorder
+  description: A reinforced black box device containing the final moments of a ship and her crew. Spacers consider it bad luck to handle with anything other than reverence.
+  components:
+  - type: StaticPrice
+    price: 2000
+  - type: ExtendDescription
+    descriptionList:
+      - description: Most Jurisdictions subsidize the return of flight recorders, but there will be more questions on how this was so recently acquired.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+
+- type: entity
+  parent: BlackboxDSM
+  id: BlackboxDSMMilitary
+  name: DSM military flight recorder
+  description: A reinforced black box device containing the final moments of a ship and her crew. Spacers consider it bad luck to handle with anything other than reverence.
+  components:
+  - type: StaticPrice
+    price: 2000
+  - type: ExtendDescription
+    descriptionList:
+      - description: Most Jurisdictions subsidize the return of flight recorders, but there will be more questions on how this was so recently acquired.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+
+- type: entity
   parent: BaseItem
   id: BlackboxNCWL
   name: Worker's league flight recorder
@@ -75,6 +120,36 @@
       path: /Audio/_Crescent/Items/blackboxwail.ogg
       params:
         loop: true
+
+- type: entity
+  parent: BlackboxNCWL
+  id: BlackboxNCWLCivilian
+  name: Worker's league civilian flight recorder
+  description: A reinforced black box device containing the final moments of a ship and her crew. Spacers consider it bad luck to handle with anything other than reverence.
+  components:
+  - type: StaticPrice
+    price: 2000
+  - type: ExtendDescription
+    descriptionList:
+      - description: Most Jurisdictions subsidize the return of flight recorders, but there will be more questions on how this was so recently acquired.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
+
+- type: entity
+  parent: BlackboxNCWL
+  id: BlackboxNCWLMilitary
+  name: Worker's league military flight recorder
+  description: A reinforced black box device containing the final moments of a ship and her crew. Spacers consider it bad luck to handle with anything other than reverence.
+  components:
+  - type: StaticPrice
+    price: 2000
+  - type: ExtendDescription
+    descriptionList:
+      - description: Most Jurisdictions subsidize the return of flight recorders, but there will be more questions on how this was so recently acquired.
+        fontSize: 15
+        color: "#ff4f00"
+        requireDetailRange: false
 
 - type: entity
   parent: BaseItem

@@ -141,7 +141,7 @@
   category: Physical
   points: 3
   functions:
-    - !type:TraitReplaceComponent
+    - !type:TraitModifyComponent
       components:
         - type: Silicon
           entityType: enum.SiliconType.Player
@@ -157,9 +157,14 @@
             1: 0.45
             0: 0.00
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - Shell
 
 - type: trait
   id: IPCBrittleBoneDisease
@@ -175,9 +180,14 @@
         - type: DeadModifier
           deadThresholdModifier: -60
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - Shell
 
 - type: trait
   id: IPCFragileCircuits
@@ -188,9 +198,14 @@
       components:
         - type: KillOnDamage
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - Shell
 
 - type: trait
   id: IPCFaultyWaterproofing
@@ -223,6 +238,15 @@
                   messages: [ "faultyWaterproofing-damage-popup" ]
                   probability: 1
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - Shell
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - HardenedCircuits

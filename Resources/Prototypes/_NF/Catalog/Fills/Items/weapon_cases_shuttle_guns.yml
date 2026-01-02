@@ -45,17 +45,6 @@
       - id: WeaponRevolverArgenti
       - id: MagazineBoxRifle
 
-# WeaponRevolverArgentiNonlethal
-- type: entity
-  parent: WeaponCaseShortShuttle
-  id: ShuttleWeaponRevolverArgentiNonlethal
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponRevolverArgentiNonlethal
-      - id: MagazineBoxRifleRubber
-
 # WeaponSniperMosin
 - type: entity
   parent: WeaponCaseLongShuttle
@@ -66,17 +55,6 @@
     contents:
       - id: WeaponSniperMosin
       - id: MagazineBoxLightRifle
-
-# Kardashev-MosinNonlethal
-- type: entity
-  parent: WeaponCaseLongShuttle
-  id: ShuttleKardashev-MosinNonlethal
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-      - id: Kardashev-MosinNonlethal
-      - id: MagazineBoxLightRifleRubber
 
 # T2:
 # WeaponPistolMk58lethal
@@ -90,17 +68,6 @@
       - id: WeaponPistolMk58
       - id: MagazinePistol
 
-# WeaponPistolMk58Nonlethal
-- type: entity
-  parent: WeaponCaseShortShuttle
-  id: ShuttleWeaponPistolMk58Nonlethal
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponPistolMk58Nonlethal
-      - id: MagazinePistolRubber
-
 # WeaponRevolverDeckard
 - type: entity
   parent: WeaponCaseShortShuttle
@@ -112,17 +79,6 @@
       - id: WeaponRevolverDeckard
       - id: SpeedLoaderMagnum
 
-# WeaponRevolverDeckardNonlethal
-- type: entity
-  parent: WeaponCaseShortShuttle
-  id: ShuttleWeaponRevolverDeckardNonlethal
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponRevolverDeckardNonlethal
-      - id: SpeedLoaderMagnumRubber
-
 # WeaponShotgunDoubleBarreled
 - type: entity
   parent: WeaponCaseLongShuttle
@@ -133,17 +89,6 @@
     contents:
       - id: WeaponShotgunDoubleBarreled
       - id: BoxLethalshot
-
-# WeaponShotgunDoubleBarreledRubber
-- type: entity
-  parent: WeaponCaseLongShuttle
-  id: ShuttleWeaponShotgunDoubleBarreledRubber
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponShotgunDoubleBarreledRubber
-      - id: BoxBeanbag
 
 # WeaponShotgunSawn
 - type: entity

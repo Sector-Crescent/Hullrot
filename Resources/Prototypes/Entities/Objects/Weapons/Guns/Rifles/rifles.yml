@@ -74,21 +74,88 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 - type: entity
-  name: NCSP AKMS Kalash 7.62x51mm
-  parent: BaseWeaponRifle
+  name: BaseWeaponRifleDMR
+  parent: [BaseItem, BaseGunWieldableDMR]
+  id: BaseWeaponRifleDMR
+  description: A rooty tooty point and shooty, but more accurate.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/akms.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+  - type: Execution
+  - type: MeleeWeapon
+    attackRate: 1.3333
+    damage:
+      types:
+        Blunt: 8.5
+    bluntStaminaDamageFactor: 1.25
+    swapKeys: true
+    disableHeavy: true
+    animation: WeaponArcThrust
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MetalThud
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 2.5
+  - type: DamageOtherOnHit
+    staminaCost: 7.5
+
+- type: entity
+  name: AKMS
+  parent: [BaseWeaponRifle, BaseMajorContraband]
   id: WeaponRifleAk
   description: An iconic weapon of war. this one has ben rechambered to 7.62x51mm, commonly attributed to terrorist groups. Cheap and easily made.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/akms.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Item
-    shape:
-    - 0,0,5,1
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
     fireRate: 5
     soundGunshot:
@@ -108,14 +175,15 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+          - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeRifle
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+          - CartridgeLightRifle
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -127,8 +195,8 @@
   - type: Appearance
 
 - type: entity
-  name: NT M-90gl Hercules 7.62x51mm
-  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  name: M-90gl
+  parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleM90GrenadeLauncher
   description: An simple battle carbine battle model, with an attached underbarrel grenade launcher. Uses 7.62x51mm ammo.
   components:
@@ -138,10 +206,10 @@
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/carbine.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/carbine.rsi
   - type: ItemSlots
@@ -154,14 +222,15 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+          - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeRifle
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+          - CartridgeRifle
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -173,8 +242,8 @@
   - type: Appearance
 
 - type: entity
-  name: SHI M931c Lecter 7.62x51mm
-  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  name: Lecter
+  parent: [BaseWeaponRifle, BaseRestrictedContraband]
   id: WeaponRifleLecter
   description: A fancy SHI-brand rifle sold to corporations and security forces everywhere.
   components:
@@ -184,10 +253,10 @@
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/lecter.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/lecter.rsi
   - type: Gun
@@ -205,14 +274,15 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+          - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeRifle
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+          - CartridgeRifle
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -222,31 +292,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-
-- type: entity
-  name: SHI PAA-2 Lecter 7.62x51mm
-  parent: WeaponRifleLecter
-  id: WeaponRifleLecterRubber
-  suffix: Non-lethal
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineRifleRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineRifle
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgeRifleRubber
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgeRifle
 
 - type: entity
   name: Foam Force Astro Ace
@@ -277,6 +322,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
     clumsyProof: true
+  - type: PacifismAllowedGun
   - type: MeleeWeapon
     damage:
       types:

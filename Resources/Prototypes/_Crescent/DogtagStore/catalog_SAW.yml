@@ -1,4 +1,10 @@
 # SAWs catalog for the id/dogtag console, using Scrap as currency
+
+- type: storeCategory
+  id: StoreCategorySAWPointExchange
+  name: Point Exchange
+  priority: 13
+
 - type: storeCategory
   id: StoreCategorySAW
   name: SAWs
@@ -31,6 +37,17 @@
   - StoreCategorySAWGuns
 
 - type: listing
+  id: StoreListingSAWNeedler
+  name: 60mm PTA 'Needler' flatpack
+  description: An artillery for medium ballistic hardpoint.
+  icon: { sprite: _Crescent/Objects/Autoturrets/needler.rsi, state: syndie_lethal }
+  productEntity: NeedlerFlatpack
+  cost:
+    ScrapSAW: 25
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
   id: StoreListingSAWMortar
   name: 90mm heavy mortar-pounder flatpack
   description: An artillery for medium ballistic hardpoint.
@@ -42,6 +59,17 @@
   - StoreCategorySAWGuns
 
 - type: listing
+  id: StoreListingSAWHullpiercer
+  name: 43mm hullpiercer turret flatpack
+  description: A turret for medium small ballistic hardpoint.
+  icon: { sprite: _Crescent/Objects/Autoturrets/slugspitter.rsi, state: slugspitter }
+  productEntity: HullpiercerFlatpack
+  cost:
+    ScrapSAW: 18
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
   id: StoreListingSAWOperator
   name: 20mm vulcan turret flatpack
   description: A turret for small ballistic hardpoint.
@@ -49,6 +77,39 @@
   productEntity: OperatorFlatpack
   cost:
     ScrapSAW: 15
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingSAWGargoyle
+  name: Gargoyle missile launcher flatpack
+  description: A missile launcher for large hardpoints.
+  icon: { sprite: _Crescent/Objects/Autoturrets/gargoylemissile.rsi, state: syndie_lethal }
+  productEntity: BaseWeaponTurretGargoyleFlatpack
+  cost:
+    ScrapSAW: 55
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingSAWIdna
+  name: Idna missile launcher flatpack
+  description: A missile launcher for medium hardpoints.
+  icon: { sprite: _Crescent/Objects/Autoturrets/magwell.rsi, state: base }
+  productEntity: MagwellFlatpack
+  cost:
+    ScrapSAW: 22
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingSAWSwarmer
+  name: Swarmer missile launcher flatpack
+  description: A missile launcher for small hardpoints.
+  icon: { sprite: _Crescent/Objects/Autoturrets/swarmermissile.rsi, state: swarmer }
+  productEntity: SwarmerFlatpack
+  cost:
+    ScrapSAW: 20
   categories:
   - StoreCategorySAWGuns
 
@@ -92,7 +153,7 @@
   icon: { sprite: /Textures/_Crescent/Clothing/Syndicate/Head/syndicateramzi.rsi, state: icon }
   productEntity: ClothingOuterHardsuitRamzi
   cost:
-    ScrapSAW: 10 #SAWs start only with 3 suits + they are kinda bad
+    ScrapSAW: 10 #SAWs start only with 5 suits + they are kinda bad
   categories:
   - StoreCategorySAW
 
@@ -125,9 +186,31 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/plasmacutter.rsi, state: icon }
   productEntity: WeaponDonorPlasmaCutter
   cost:
-    ScrapSAW: 65
+    ScrapSAW: 30
   categories:
   - StoreCategorySAW
+
+- type: listing
+  id: StoreListingSAWShieldMedium
+  name: NT-630 Bullwark
+  description: A medium energy shield.
+  icon: { sprite: _Crescent/Structures/shieldemittermedium.rsi, state: icon }
+  productEntity: ShieldEmitterMediumFlatpack
+  cost:
+    ScrapSAW: 210
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWShieldSmall
+  name: NT-280 Errant
+  description: A small energy shield.
+  icon: { sprite: _Crescent/Structures/shieldemittersmall.rsi, state: icon}
+  productEntity: ShieldEmitterSmallFlatpack
+  cost:
+    ScrapSAW: 140
+  categories:
+  - StoreCategorySAWshipmods
 
 - type: listing
   id: StoreListingSAWScrapMagnet
@@ -137,6 +220,17 @@
   productEntity: ScrapMagnetFlatpack
   cost:
     ScrapSAW: 10
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWHardpointMissileLarge
+  name: Salvaged large missile hardpoint
+  description: A large missile hardpoint fit for turrets.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Large }
+  productEntity: LargeMissileHardpointFlatpack
+  cost:
+    ScrapSAW: 44
   categories:
   - StoreCategorySAWshipmods
 
@@ -152,6 +246,17 @@
   - StoreCategorySAWshipmods
 
 - type: listing
+  id: StoreListingSAWHardpointMissileMedium
+  name: Salvaged medium missile hardpoint
+  description: A medium missile hardpoint fit for turrets.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Medium }
+  productEntity: MediumMissileHardpointFlatpack
+  cost:
+    ScrapSAW: 21
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
   id: StoreListingSAWHardpointBallisticMedium
   name: Salvaged medium ballistic hardpoint
   description: A medium ballistic hardpoint fit for turrets.
@@ -163,6 +268,17 @@
   - StoreCategorySAWshipmods
 
 - type: listing
+  id: StoreListingSAWHardpointMissileSmall
+  name: Salvaged small missile hardpoint
+  description: A small missile hardpoint fit for lower-caliber ship weapons.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
+  productEntity: SmallMissileHardpointFlatpack
+  cost:
+    ScrapSAW: 12
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
   id: StoreListingSAWHardpointBallisticSmall
   name: Salvaged small ballistic hardpoint
   description: A small ballistic hardpoint fit for low-caliber ship weapons such as point-defenses.
@@ -170,6 +286,61 @@
   productEntity: SmallBallisticHardpointFlatpack
   cost:
     ScrapSAW: 12
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWSubstation
+  name: Substation Flatpack
+  description: A substation for supplying power to APC's.
+  icon: { sprite: Structures/Power/substation.rsi, state: substation_static }
+  productEntity: SubstationFlatpack
+  cost:
+    ScrapSAW: 10
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWSMES
+  name: SMES Flatpack
+  description: A SMES for supplying power to substations.
+  icon: { sprite: Structures/Power/smes.rsi, state: static }
+  productEntity: SMESFlatpack
+  cost:
+    ScrapSAW: 25
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWEinstein
+  name: Einstein generator Flatpack
+  description: A boriatic generator 'einstein' provied 95kW of power.
+  icon: { sprite: _Crescent/Structures/boriatic_reactor.rsi, state: portgen0 }
+  productEntity: EinsteinFlatpack
+  cost:
+    ScrapSAW: 30
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWHercules
+  name: Hercules generator Flatpack
+  description: A boriatic generator 'hercules' provied 50kW of power.
+  icon: { sprite: Structures/Power/Generation/portable_generator.rsi, state: portgen0 }
+  productEntity: HerculesFlatpack
+  cost:
+    ScrapSAW: 15
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWTinyFan
+  name: Salvaged Fan Flatpack
+  description: A tiny fan made for traping air flows within itself.
+  icon: { sprite: Structures/Piping/Atmospherics/tinyfan.rsi, state: icon }
+  productEntity: TinyFanFlatpack
+  cost:
+    ScrapSAW: 40
   categories:
   - StoreCategorySAWshipmods
 
@@ -213,7 +384,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherCaracal
   cost:
-    ScrapSAW: 75
+    ScrapSAW: 175
   categories:
   - StoreCategorySAWships
 
@@ -224,7 +395,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherRokh
   cost:
-    ScrapSAW: 205
+    ScrapSAW: 370
   categories:
   - StoreCategorySAWships
 
@@ -235,6 +406,58 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherAmadeus
   cost:
-    ScrapSAW: 140
+    ScrapSAW: 420
   categories:
   - StoreCategorySAWships
+
+- type: listing
+  id: StoreListingSAWPointsLow
+  name: 10 SAWs Autopeddler points deed
+  description: A deed equivelent to 10 autopeddler points.
+  icon: { sprite: _Crescent/Objects/TradeGoods/deed.rsi, state: icon }
+  productEntity: SAWDeedLow
+  cost:
+    ScrapSAW: 10
+  categories:
+  - StoreCategorySAWPointExchange
+
+- type: listing
+  id: StoreListingSAWPointsHigh
+  name: 50 SAWs Autopeddler points deed
+  description: A deed equivelent to 50 autopeddler points.
+  icon: { sprite: _Crescent/Objects/TradeGoods/deed.rsi, state: icon }
+  productEntity: SAWDeedHigh
+  cost:
+    ScrapSAW: 50
+  categories:
+  - StoreCategorySAWPointExchange
+
+# points-deed
+
+- type: entity
+  parent: BaseItem
+  id: SAWDeedLow
+  name: deed of delivery
+  description: A printed deed of SAWs labour. It provides equivelent of 10 points in SAWs requisitions autopeddler.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+  - type: Currency
+    price:
+      ScrapSAW: 10
+
+- type: entity
+  parent: BaseItem
+  id: SAWDeedHigh
+  name: deed of delivery
+  description: A printed deed of SAWs labour. It provides equivelent of 50 points in SAWs requisitions autopeddler.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+  - type: Currency
+    price:
+      ScrapSAW: 50

@@ -25,6 +25,7 @@
   - WeaponDisabler
   - WeaponCivilianDisabler
   - WeaponMechCombatDisabler # Goobstation
+  - WeaponMechCombatFlashbangLauncher # Goobstation
   #- WeaponPistolMk58 #todo: Add a bunch of basic ballistic guns to the list and make lathe recipes for them.
   - MechEquipmentKineticAccelerator # Goobstation
   - WeaponPistolMk58
@@ -55,7 +56,6 @@
   - MagazineBoxLightRifleIncendiary
   - MagazineBoxRifleIncendiary
   - MagazineBoxCaselessRifleIncendiary
-  - CartridgeSpecialIncendiary
   - MagazineBoxSpecialIncendiary
   - MagazineUniversalMagnumIncendiary
 
@@ -83,9 +83,39 @@
   - MagazineBoxRifleUranium
   - MagazineBoxCaselessRifleUranium
   - BoxShotgunUranium
-  - CartridgeSpecialUranium
   - MagazineBoxSpecialUranium
   - MagazineUniversalMagnumUranium
+
+- type: technology
+  id: ExplosiveTechnology
+  name: research-technology-explosive-technology
+  icon:
+    sprite: Objects/Devices/payload.rsi
+    state: payload-explosive-armed
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - SignallerAdvanced
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ExplosivePayload
+  - ChemicalPayload
+  # TODO: Add "Explosive Ammunition" to this tech to make it waaaay more interesting.
+
+- type: technology
+  id: SpecialMeans
+  name: research-technology-special-means
+  icon:
+    sprite: Clothing/Back/Backpacks/electropack.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingBackpackElectropack
 
 # Tier 2
 
@@ -102,25 +132,6 @@
   - ClothingOuterHardsuitCombatStandard
   - ClothingOuterHardsuitCombatMedical
   - ClothingOuterHardsuitCombatRiot
-
-- type: technology
-  id: ExplosiveTechnology
-  name: research-technology-explosive-technology
-  icon:
-    sprite: Objects/Devices/payload.rsi
-    state: payload-explosive-armed
-  discipline: Arsenal
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-  - SignallerAdvanced
-  - SignalTrigger
-  - VoiceTrigger
-  - TimerTrigger
-  - FlashPayload
-  - ExplosivePayload
-  - ChemicalPayload
-  # TODO: Add "Explosive Ammunition" to this tech to make it waaaay more interesting.
 
 - type: technology
   id: ShrapnelMunitions

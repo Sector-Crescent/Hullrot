@@ -5,40 +5,104 @@
 
 - type: department
   id: Logistics
+  name: department-Logistics
   description: department-Cargo-description
   color: "#A46106"
-  weight: -90
-  primary: false
+  roles:
+  - CargoTechnician
+  - Quartermaster
+  - SalvageSpecialist
+  - MailCarrier
   editorHidden: true
 
 - type: department
   id: Civilian
+  name: department-Civilian
   description: department-Civilian-description
   color: "#9FED58"
   weight: 5
   roles:
-  - GliessianDockmaster
-  - GliessianSheriff
-  - GliessianDeputy
-  - Spacer
-  - GliessianDockhand
-  editorHidden: false
+  - Bartender
+  - Botanist
+  - Boxer
+  - Chef
+  - Clown
+  - HeadOfPersonnel
+  - Janitor
+  - Mime
+  - Musician
+  - Passenger
+  - Reporter
+  - Visitor
+  - Zookeeper
+  - ServiceWorker
+  - MartialArtist
+  - Prisoner
+  - Gladiator
+  editorHidden: true
+
+- type: department
+  id: CentralCommand
+  name: department-CentralCommand
+  description: department-CentralCommand-description
+  color: "#0c344d"
+  roles:
+  - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
+  editorHidden: true
+  weight: 120
 
 - type: department
   id: Command
+  name: department-Command
   description: department-Command-description
   color: "#334E6D"
   roles:
+  - Captain
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Quartermaster
+  - ChiefJustice
+  - AdministrativeAssistant
   - CentralCommandOfficial
-  - HeadOfPersonnel # Not shown but needed here for playtime
-  - HeadOfSecurity # Not shown but needed here for playtime
-#  - ChiefMedicalOfficer
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
   primary: false
   weight: 100
   editorHidden: true
 
 - type: department
+  id: Dignitary
+  name: department-Dignitary
+  description: department-Dignitary-description
+  color: "#33FE6D"
+  roles:
+  - BlueshieldOfficer
+  - NanotrasenRepresentative
+  - Magistrate
+  primary: false
+  weight: 101
+  editorHidden: true
+
+- type: department
   id: Engineering
+  name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
   weight: -94
@@ -47,13 +111,23 @@
 
 - type: department
   id: Medical
+  name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
-  weight: -93
+  roles:
+  - Chemist
+  - ChiefMedicalOfficer
+  - MedicalDoctor
+  - MedicalIntern
+  - Psychologist
+  - Paramedic
+  - SeniorPhysician
+  - MedicalBorg
   editorHidden: true
 
 - type: department
   id: Security
+  name: department-Security
   description: department-Security-description
   color: "#DE3A3A"
   weight: 20
@@ -63,205 +137,41 @@
   - SecurityCadet
   - SecurityOfficer
   - Warden
+  - PrisonGuard
+  - Brigmedic
   editorHidden: true
 
 - type: department
   id: Epistemics
-  description: department-Epistemics-description
+  name: department-Epistemics
+  description: department-Science-description
   color: "#D381C9"
-  weight: -92
-  primary: false
+  roles:
+  - ResearchDirector
+  - SeniorResearcher
+  - Scientist
+  - ResearchAssistant
+  - Chaplain
+  - ForensicMantis
+  - Librarian
+  - Roboticist
+  editorHidden: true
+
+- type: department
+  id: Silicon
+  name: department-Silicon
+  description: department-Silicon-description
+  color: "#D381C9"
+  roles:
+  - Borg
+  - StationAi
   editorHidden: true
 
 - type: department
   id: Specific
+  name: department-Specific
   description: department-Specific-description
   color: "#9FED58"
   weight: -91
   primary: false
-  editorHidden: true
-
-- type: department
-  id: NCWL
-  description: department-NCWL-description
-  color: "#FFD580"
-  weight: 100
-  roles:
-  - CommandantNCWL
-  - KommissarNCWL
-  - MVDGruntNCWL
-  - FleetkapitanNCWL
-  - PartisanNCWL
-  - DirectorNCWL
-  - DoctorNCWL
-  - WorkerOverbossNCWL
-  - DockhandNCWL
-  - IndustryTaskmasterNCWL
-  - ArtificerNCWL
-  - WorkerNCWL
-  editorHidden: false
-
-- type: department
-  id: NCSP
-  description: department-NCSP-description
-  color: "#DC143C"
-  weight: 90
-  roles:
-  - RingleaderNCSP
-  - LieutenantNCSP
-  - InfanteerNCSP
-  - TechnicianNCSP
-  - CoordinatorNCSP
-  - RipperdocNCSP
-  - TraumasecNCSP
-  - OperativeNCSP
-  - IntelligenceOfficerNCSP
-  - CyberdawnTechNCSP
-  - ForemanNCSP
-  - ShipbreakerNCSP
-  editorHidden: false
-
-- type: department
-  id: DSM
-  description: department-DSM-description
-  color: "#684871"
-  weight: 85
-  roles:
-  - FreeholderDSM
-  - LevymanDSM
-  - KnightDSM
-  - RitterDSM
-  - WealthDSM
-  - ForemanDSM
-  - ScribeDSM
-  - TemplarDSM
-  - SurgeonDSM
-  - LaborDSM
-  - CourtierDSM
-  - AdjutantDSM
-  - GovernorDSM
-  - AdvocatusDSM
-  - ArchmaesterDSM
-  editorHidden: false
-
-- type: department
-  id: SRM
-  description: department-SRM-description
-  color: "#4a6741"
-  weight: 80
-  roles:
-  - TenderSRM
-  - AcolyteSRM
-  - HunterSRM
-  - MontagneSRM
-  - OverseerSRM
-  editorHidden: true # i just like to see them for the numbers , SPCR 2025
-
-- type: department
-  id: SHI
-  description: department-SHI-description
-  color: "#4a6741"
-  weight: 75
-  roles:
-  - ExecutiveSHI
-  - BoardSHI
-  - HighsecSHI
-  - CorpsecSHI
-  - EmployeeSHI
-  - MedtechSHI
-  - BoardHRSHI
-  - HosSHI
-  editorHidden: false
-
-- type: department
-  id: CMM
-  description: department-CMM-description
-  color: "#5191e0"
-  weight: 70
-  roles:
-  - OrdnancemanCMM
-  - MachinistCMM
-  - PhysicianCMM
-  - MinutemanCMM
-  - WatchmasterCMM
-  - DeputyMarshalCMM
-  - MarshalCMM
-  editorHidden: true
-
-- type: department
-  id: TAP
-  description: department-TAP-description
-  color: "#50c878"
-  weight: 55
-  roles:
-  # - ProphetTAP #commented the rest until TAP comes back .2 | 2025
-  # - AcolyteTAP
-  # - TinkererTAP
-  # - TechminerTAP
-  # - HangarTechTAP
-  - Antiquarian
-  - BeltrunnerTAP
-  - DraugrTAP
-  - ServileTAP
-  editorHidden: false
-
-- type: department
-  id: ATH
-  description: department-ATH-description
-  color: "#ffffed"
-  weight: 40
-  roles:
-  - KommandantATH
-  - LeutnantATH
-  - KanoneerATH
-  - SoldatATH
-  - SanitatATH
-  - StewardATH
-  - OberartzATH
-  - LogistatATH
-  - HandelsATH
-  - ForscherATH
-  - ChirurgeonATH
-  - VorarbeiterATH
-  - ArbeiterATH
-  editorHidden: true # i just like to see them for the numbers , SPCR 2025
-
-  # CONSCRIPT
-
-- type: department
-  id: NCWL-W
-  description: department-NCWL-description
-  color: "#FFD580"
-  weight: 11
-  roles:
-  - ConscriptLeaderNCWL
-  - ConscriptOfficerNCWL
-  - ConscriptSniperNCWL
-  - ConscriptGunnerNCWL
-  - ConscriptDoctorNCWL
-  - ConscriptShotgunNCWL
-  - ConscriptSubmachinegunNCWL
-  - ConscriptRiflemanNCWL
-  - ConscriptCadetNCWL
-  - ConscriptShipCaptainNCWL
-  - ConscriptShipCrewNCWL
-  editorHidden: true
-
-- type: department
-  id: DSM-W
-  description: department-DSM-description
-  color: "#684871"
-  weight: 10
-  roles:
-  - ConscriptLeaderDSM
-  - ConscriptOfficerDSM
-  - ConscriptSniperDSM
-  - ConscriptGunnerDSM
-  - ConscriptDoctorDSM
-  - ConscriptShotgunDSM
-  - ConscriptSubmachinegunDSM
-  - ConscriptRiflemanDSM
-  - ConscriptCadetDSM
-  - ConscriptShipCaptainDSM
-  - ConscriptShipCrewDSM
   editorHidden: true

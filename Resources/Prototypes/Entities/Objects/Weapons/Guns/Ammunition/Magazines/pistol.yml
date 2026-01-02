@@ -1,18 +1,19 @@
 - type: entity
   id: BaseMagazinePistol
-  name: 18-round pistol magazine (9x19mm PSTF auto)
-  parent: BaseItem
+  name: pistol magazine (.35 auto)
+  parent: [ BaseItem, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazinePistol
+    - MagazinePistol
+    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
-    capacity: 18
+      - CartridgePistol
+    capacity: 12
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -43,13 +44,14 @@
   components:
   - type: Tag
     tags:
-      - MagazinePistolHighCapacity
+    - MagazinePistolHighCapacity
+    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
-    capacity: 26
+      - CartridgePistol
+    capacity: 16
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -74,18 +76,19 @@
 
 - type: entity
   id: BaseMagazinePistolSubMachineGun  # Yeah it's weird but it's pistol caliber
-  name: 35-round SMG magazine (9x19mm PSTF auto)
-  parent: BaseItem
+  name: SMG magazine (.35 auto)
+  parent: [ BaseItem, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Tag
     tags:
-      - MagazinePistolSubMachineGun
+    - MagazinePistolSubMachineGun
+    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgePistol
+      - CartridgePistol
     capacity: 35
   - type: Item
     size: Small
@@ -111,12 +114,13 @@
 
 - type: entity
   id: MagazinePistolSubMachineGunTopMounted
-  name: 50-round top-mounted magazine (11mm PSTF auto)
-  parent: BaseItem
+  name: WT550 magazine (.35 auto top-mounted)
+  parent: [ BaseItem, BaseRestrictedContraband ]
   components:
   - type: Tag
     tags:
-      - MagazinePistolSubMachineGunTopMounted
+    - MagazinePistolSubMachineGunTopMounted
+    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     proto: CartridgeHeavyPistol
@@ -127,11 +131,11 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag_top_mounted.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-unshaded-1
-        map: ["enum.GunVisualLayers.MagUnshaded"]
-        shader: unshaded
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
   - type: MagazineVisuals
     magState: mag
     steps: 6
@@ -187,14 +191,6 @@
     proto: CartridgePistolPractice
 
 - type: entity
-  id: MagazinePistolRubber
-  name: 18-round pistol magazine (9x19mm PSTF auto rubber)
-  parent: BaseMagazinePistol
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistolRubber
-
-- type: entity
   id: MagazinePistolUranium
   name: 18-round pistol magazine (9x19mm PSTF auto uranium)
   parent: BaseMagazinePistol
@@ -236,14 +232,6 @@
     proto: CartridgePistol
 
 - type: entity
-  id: MagazinePistolHighCapacityRubber
-  name: 26-round extended pistol magazine (9x19mm PSTF auto rubber)
-  parent: BaseMagazinePistolHighCapacity
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistol
-
-- type: entity
   id: MagazinePistolHighCapacityShrapnel
   name: 26-round extended pistol magazine (9x19mm PSTF auto shrapnel)
   parent: BaseMagazinePistolHighCapacity
@@ -258,6 +246,18 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistol
+    whitelist:
+      tags:
+      - CartridgePistol
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazinePistolSubMachineGunEmpty
@@ -277,29 +277,20 @@
     proto: CartridgePistolPractice
 
 - type: entity
-  id: MagazinePistolSubMachineGunRubber
-
-  name: 35-round SMG magazine (9x19mm PSTF auto rubber)
-  parent: BaseMagazinePistolSubMachineGun
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistolRubber
-
-- type: entity
-  id: MagazinePistolSubMachineGunIncendiary
-  name: 35-round SMG magazine (9x19mm PSTF auto incendiary)
-  parent: BaseMagazinePistolSubMachineGun
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgePistolIncendiary
-
-- type: entity
   id: MagazinePistolSubMachineGunUranium
   name: 35-round SMG magazine (9x19mm PSTF auto black-tip)
   parent: BaseMagazinePistolSubMachineGun
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistolUranium
+
+- type: entity
+  parent: BaseMagazinePistolSubMachineGun
+  id: MagazinePistolSubMachineGunIncendiary
+  name: SMG magazine (.35 auto incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolIncendiary
 
 - type: entity
   id: MagazinePistolSubMachineGunShrapnel

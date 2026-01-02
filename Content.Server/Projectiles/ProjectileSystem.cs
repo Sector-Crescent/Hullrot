@@ -1,5 +1,178 @@
+using Content.Server.Administration.Logs;
+using Content.Server.Damage.Systems;
+using Content.Server.Destructible;
+using Content.Server.Effects;
+using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared._Crescent;
+using Content.Shared.Camera;
+using Content.Shared.Damage;
+using Content.Shared.Damage.Events;
+using Content.Shared.Database;
+using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
+using Robust.Shared.Network;
+using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Dynamics;
+using Robust.Shared.Physics.Events;
+using Robust.Shared.Player;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Projectiles;
 
-public sealed class ProjectileSystem : SharedProjectileSystem;
+public sealed class ProjectileSystem : SharedProjectileSystem
+{
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly ColorFlashEffectSystem _color = default!;
+    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
+    [Dependency] private readonly DestructibleSystem _destructibleSystem = default!;
+    [Dependency] private readonly GunSystem _guns = default!;
+    [Dependency] private readonly SharedCameraRecoilSystem _sharedCameraRecoil = default!;
+
+    [Dependency] private readonly INetManager _netManager = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        SubscribeLocalEvent<ProjectileComponent, StartCollideEvent>(OnStartCollide);
+        SubscribeLocalEvent<ProjectileComponent, HullrotBulletHitEvent>(OnBulletHit); // Hullrot - Phase Prevention
+        SubscribeLocalEvent<EmbeddableProjectileComponent, DamageExamineEvent>(OnDamageExamine, after: [typeof(DamageOtherOnHitSystem)]);
+    }
+
+    private void OnStartCollide(EntityUid uid, ProjectileComponent component, ref StartCollideEvent args)
+    {
+        // This is so entities that shouldn't get a collision are ignored.
+        if (args.OurFixtureId != ProjectileFixture || !args.OtherFixture.Hard
+            || component.ProjectileSpent || component is { Weapon: null, OnlyCollideWhenShot: true, })
+            return;
+
+        ProjectileCollide((uid, component, args.OurBody), args.OtherEntity, args.OtherFixture);
+    }
+
+    public void ProjectileCollide(Entity<ProjectileComponent, PhysicsComponent> projectile, EntityUid target, Fixture targetFixture, bool predicted = false)
+    {
+        var (uid, component, ourBody) = projectile;
+        if (projectile.Comp1.DamagedEntity)
+        {
+            if (component.DeleteOnCollide)
+                QueueDel(uid);
+
+            return;
+        }
+
+        // it's here so this check is only done once before possible hit
+        var attemptEv = new ProjectileReflectAttemptEvent(uid, component, false);
+        RaiseLocalEvent(target, ref attemptEv);
+        if (attemptEv.Cancelled)
+        {
+            SetShooter(uid, component, target);
+            return;
+        }
+
+        var ev = new ProjectileHitEvent(component.Damage * _damageableSystem.UniversalProjectileDamageModifier, target, component.Shooter);
+        RaiseLocalEvent(uid, ref ev);
+
+        var otherName = ToPrettyString(target);
+        var damageRequired = _destructibleSystem.DestroyedAt(target);
+        if (TryComp<DamageableComponent>(target, out var damageableComponent))
+        {
+            damageRequired -= damageableComponent.TotalDamage;
+            damageRequired = FixedPoint2.Max(damageRequired, FixedPoint2.Zero);
+        }
+        var modifiedDamage = _damageableSystem.TryChangeDamage(target, ev.Damage, component.IgnoreResistances, damageable: damageableComponent, origin: component.Shooter, armorPen: component.HullrotArmorPenetration, stopPower: component.stoppingPower);
+        var deleted = Deleted(target);
+
+        if (modifiedDamage is not null && EntityManager.EntityExists(component.Shooter))
+        {
+            if (modifiedDamage.AnyPositive() && !deleted)
+                _color.RaiseEffect(Color.Red, [ target, ], Filter.Pvs(target, entityManager: EntityManager));
+
+            _adminLogger.Add(
+                LogType.BulletHit,
+                HasComp<ActorComponent>(target) ? LogImpact.Extreme : LogImpact.High,
+                $"Projectile {ToPrettyString(uid):projectile} shot by {ToPrettyString(component.Shooter!.Value):user} hit {otherName:target} and dealt {modifiedDamage.GetTotal():damage} damage");
+        }
+
+        // If penetration is to be considered, we need to do some checks to see if the projectile should stop.
+        if (modifiedDamage is not null && component.PenetrationThreshold != 0)
+        {
+            // If a damage type is required, stop the bullet if the hit entity doesn't have that type.
+            if (component.PenetrationDamageTypeRequirement != null)
+            {
+                var stopPenetration = false;
+                foreach (var requiredDamageType in component.PenetrationDamageTypeRequirement)
+                {
+                    if (!modifiedDamage.DamageDict.Keys.Contains(requiredDamageType))
+                    {
+                        stopPenetration = true;
+                        break;
+                    }
+                }
+                if (stopPenetration)
+                    component.ProjectileSpent = true;
+            }
+
+            // If the object won't be destroyed, it "tanks" the penetration hit.
+            if (modifiedDamage.GetTotal() < damageRequired)
+            {
+                component.ProjectileSpent = true;
+            }
+
+            if (!component.ProjectileSpent)
+            {
+                component.PenetrationAmount += damageRequired;
+                // The projectile has dealt enough damage to be spent.
+                if (component.PenetrationAmount >= component.PenetrationThreshold)
+                {
+                    component.ProjectileSpent = true;
+                }
+            }
+        }
+        else
+        {
+            // Goobstation start
+            if (component.Penetrate)
+                component.IgnoredEntities.Add(target);
+            else
+                component.ProjectileSpent = true;
+            // Goobstation end
+        }
+
+        if (!deleted)
+        {
+            _guns.PlayImpactSound(target, modifiedDamage, component.SoundHit, component.ForceSound);
+
+            if (!ourBody.LinearVelocity.IsLengthZero())
+                _sharedCameraRecoil.KickCamera(target, ourBody.LinearVelocity.Normalized());
+        }
+
+        if (component.DeleteOnCollide && component.ProjectileSpent || (component.NoPenetrateMask & targetFixture.CollisionLayer) != 0) // Goobstation - Make x-ray arrows not penetrate blob
+            QueueDel(uid);
+
+        if (component.ImpactEffect != null && TryComp(uid, out TransformComponent? xform))
+            RaiseNetworkEvent(new ImpactEffectEvent(component.ImpactEffect, GetNetCoordinates(xform.Coordinates)), Filter.Pvs(xform.Coordinates, entityMan: EntityManager));
+    }
+    private void OnDamageExamine(EntityUid uid, EmbeddableProjectileComponent component, ref DamageExamineEvent args)
+    {
+        if (!component.EmbedOnThrow)
+            return;
+
+        if (!args.Message.IsEmpty)
+            args.Message.PushNewline();
+
+        var isHarmful = TryComp<EmbedPassiveDamageComponent>(uid, out var passiveDamage) && passiveDamage.Damage.AnyPositive();
+        var loc = isHarmful
+            ? "damage-examine-embeddable-harmful"
+            : "damage-examine-embeddable";
+
+        var staminaCostMarkup = FormattedMessage.FromMarkupOrThrow(Loc.GetString(loc));
+        args.Message.AddMessage(staminaCostMarkup);
+    }
+    private void OnBulletHit(EntityUid uid, ProjectileComponent component, ref HullrotBulletHitEvent args) // Hullrot - Phase Prevention
+    {
+        // This is so entities that shouldn't get a collision are ignored.
+        if (!args.targetFixture.Hard || component.DamagedEntity || component is { Weapon: null, OnlyCollideWhenShot: true })
+            return;
+
+        ProjectileCollide((uid, component, args.selfPhys), args.hitEntity, args.targetFixture);
+    }
+}
