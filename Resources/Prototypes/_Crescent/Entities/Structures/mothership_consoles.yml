@@ -55,16 +55,6 @@
     - Perigale
     - Voruna
 
-- type: entity
-  id: UnionfallNemesisMothershipComputer
-  parent: BaseMothershipComputer
-  name: nemesis internal shipyard
-  components:
-  - type: ShipyardListing
-    shuttles:
-    - UnionfallConquest
-    - UnionfallValor
-
 
 - type: entity
   id: InterdyneMothershipComputer
@@ -132,16 +122,6 @@
     shuttles:
     - Khopesh
     - Broadsword
-
-- type: entity
-  id: UnionfallClementineMothershipComputer
-  parent: BaseMothershipComputer
-  name: clementine internal shipyard
-  components:
-  - type: ShipyardListing
-    shuttles:
-    - UnionfallKhopesh
-    - UnionfallBroadsword
 
 - type: entity
   id: JackalCarrierMothershipComputer

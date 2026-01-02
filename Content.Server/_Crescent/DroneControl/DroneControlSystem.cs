@@ -6,8 +6,8 @@ using Content.Server.Shuttles.Systems;
 using Content.Shared._Crescent.DroneControl;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
+using Content.Shared.DeviceNetwork.Systems;
 using Robust.Shared.Map;
-using System.Numerics;
 
 namespace Content.Server._Crescent.DroneControl;
 
@@ -38,53 +38,72 @@ public sealed class DroneControlSystem : EntitySystem
         {
              if (_ui.IsUiOpen(uid, DroneConsoleUiKey.Key))
              {
-                 UpdateState(uid, comp, devList);
+                 UpdateState(uid);
              }
         }
     }
 
-    private void UpdateState(EntityUid uid, DroneControlConsoleComponent comp, DeviceListComponent devList)
+    private void UpdateState(EntityUid console)
     {
-        var nav = _shuttleConsole.GetNavState(uid, _shuttleConsole.GetAllDocks());
-        var iff = _shuttleConsole.GetIFFState(uid, null);
+        var nav = _shuttleConsole.GetNavState(console, _shuttleConsole.GetAllDocks());
+        var iffState = _shuttleConsole.GetIFFState(console, null);
 
-        var drones = new List<NetEntity>();
+        var drones = new List<(NetEntity, NetEntity)>();
+        var toRemove = new List<EntityUid>();
 
-        foreach (var (name, device) in _deviceList.GetDeviceList(uid, devList))
+        foreach (var (name, device) in _deviceList.GetDeviceList(console))
         {
-            if (TerminatingOrDeleted(device) || !HasComp<DroneControlComponent>(device))
+            var xform = Transform(device);
+            if (xform.GridUid == null)
                 continue;
 
-            drones.Add(GetNetEntity(device));
+            if (!HasComp<DroneControlComponent>(device))
+            {
+                toRemove.Add(device);
+                continue;
+            }
+
+            drones.Add((GetNetEntity(device), GetNetEntity(xform.GridUid.Value)));
         }
 
-        _ui.SetUiState(uid, DroneConsoleUiKey.Key, new DroneConsoleBoundUserInterfaceState(nav, iff, drones));
+        // we have non-drone devices, clean up
+        if (toRemove.Count != 0)
+        {
+            var newList = new List<EntityUid>();
+            foreach (var (name, device) in _deviceList.GetDeviceList(console))
+            {
+                if (!toRemove.Contains(device))
+                    newList.Add(device);
+            }
+            _deviceList.UpdateDeviceList(console, newList);
+        }
+
+        _ui.SetUiState(console, DroneConsoleUiKey.Key, new DroneConsoleBoundUserInterfaceState(nav, iffState, drones));
     }
 
-    private void OnMoveMsg(EntityUid uid, DroneControlConsoleComponent component, DroneConsoleMoveMessage args)
-    {
-        var mapId = Transform(uid).MapID;
+    // TODO: some more generic way of handling orders if we get more possible types
+    // for now a generic implementation would be counterproductive by trying to adapt to requirements we don't even have yet
 
+    private void OnMoveMsg(Entity<DroneControlConsoleComponent> ent, ref DroneConsoleMoveMessage args)
+    {
         var payload = new NetworkPayload
         {
             [DeviceNetworkConstants.Command] = DroneConsoleConstants.CommandMove,
-            [DroneConsoleConstants.KeyCoords] = new MapCoordinates(args.TargetCoordinates, mapId)
+            [DroneConsoleConstants.KeyCoords] = GetCoordinates(args.TargetCoordinates)
         };
 
-        SendToSelected(uid, args.SelectedDrones, payload);
+        SendToSelected(ent, args.SelectedDrones, payload);
     }
 
-    private void OnTargetMsg(EntityUid uid, DroneControlConsoleComponent component, DroneConsoleTargetMessage args)
+    private void OnTargetMsg(Entity<DroneControlConsoleComponent> ent, ref DroneConsoleTargetMessage args)
     {
-        var targetUid = GetEntity(args.TargetGrid);
-
         var payload = new NetworkPayload
         {
             [DeviceNetworkConstants.Command] = DroneConsoleConstants.CommandTarget,
-            [DroneConsoleConstants.KeyEntity] = targetUid
+            [DroneConsoleConstants.TargetCoords] = GetCoordinates(args.TargetCoordinates)
         };
 
-        SendToSelected(uid, args.SelectedDrones, payload);
+        SendToSelected(ent, args.SelectedDrones, payload);
     }
 
     private void SendToSelected(EntityUid source, HashSet<NetEntity> selected, NetworkPayload payload)
@@ -101,30 +120,31 @@ public sealed class DroneControlSystem : EntitySystem
         }
     }
 
-    private void OnPacketReceived(EntityUid uid, DroneControlComponent component, DeviceNetworkPacketEvent args)
+    private void OnPacketReceived(Entity<DroneControlComponent> ent, ref DeviceNetworkPacketEvent args)
     {
-        Log.Info($"{ToPrettyString(uid)} got packet {args.Data}");
         if (!args.Data.TryGetValue(DeviceNetworkConstants.Command, out var cmd)
-            || !TryComp<HTNComponent>(uid, out var htn)
+            || !TryComp<HTNComponent>(ent, out var htn)
         )
             return;
 
         var blackboard = htn.Blackboard;
 
+        // TODO: again, decide on a more generic implementation once we have more possible orders
+        // and also decide on how the blackboard keys should be unhardcoded
         if (cmd == DroneConsoleConstants.CommandMove)
         {
-            if (args.Data.TryGetValue(DroneConsoleConstants.KeyCoords, out MapCoordinates coords))
+            if (args.Data.TryGetValue(DroneConsoleConstants.KeyCoords, out EntityCoordinates coords))
             {
                 blackboard.Remove<EntityCoordinates>("ShootTarget");
-                blackboard.SetValue("MoveToTarget", _transform.ToCoordinates(coords));
+                blackboard.SetValue("MoveToTarget", coords);
             }
         }
         else if (cmd == DroneConsoleConstants.CommandTarget)
         {
-            if (args.Data.TryGetValue(DroneConsoleConstants.KeyEntity, out EntityUid target))
+            if (args.Data.TryGetValue(DroneConsoleConstants.TargetCoords, out EntityCoordinates target))
             {
                 blackboard.Remove<EntityCoordinates>("MoveToTarget");
-                blackboard.SetValue("ShootTarget", new EntityCoordinates(target, Vector2.Zero));
+                blackboard.SetValue("ShootTarget", target);
             }
         }
     }

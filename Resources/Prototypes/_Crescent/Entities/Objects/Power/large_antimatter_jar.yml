@@ -1,0 +1,11 @@
+- type: entity
+  parent: AmeJar
+  id: LargeAmeJar
+  name: Large AME fuel jar
+  description: A hermetically sealed jar containing antimatter for use in an antimatter reactor.
+  components:
+  - type: AmeFuelContainer
+    fuelAmount: 1000
+    fuelCapacity: 1000
+
+

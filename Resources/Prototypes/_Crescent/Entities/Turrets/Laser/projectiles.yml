@@ -1,0 +1,117 @@
+- type: entity
+  id: BulletCurse
+  name: ion ray
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Radiation: 25
+        Heat: 35
+        Structural: 30
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Blue
+  - type: EmpOnTrigger
+    range: 3
+    energyConsumption: 2500
+    disableDuration: 6
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 10
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: bluespace
+
+- type: entity
+  id: BulletRetribution
+  name: volatile hardlight bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Heat: 80
+        Structural: 100
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Red
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 10
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
+    layers:
+      - state: laserlight
+
+- type: entity
+  id: BulletAbsolution
+  name: focused hardlight bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Heat: 80
+        Structural: 150
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Red
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 20
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
+    layers:
+      - state: laser
+
+- type: entity
+  id: BulletDamnation
+  name: heavy hardlight bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Heat: 130
+        Structural: 300
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 150
+    intensitySlope: 15
+    totalIntensity: 150
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Red
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 20
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
+    layers:
+      - state: laserheavy

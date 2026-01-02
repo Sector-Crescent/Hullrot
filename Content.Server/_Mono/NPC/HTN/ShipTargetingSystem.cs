@@ -86,7 +86,6 @@ public sealed partial class ShipTargetingSystem : EntitySystem
             if (TerminatingOrDeleted(uid))
                 continue;
 
-            var targetPos = destMapPos.Position;
             if (!_gunQuery.TryComp(uid, out var gun))
                 continue;
 
@@ -105,9 +104,9 @@ public sealed partial class ShipTargetingSystem : EntitySystem
             var approachVel = (normTarget - normVel).Length();
             var hitTime = toDestVec.Length() / approachVel;
 
-            targetPos += leadBy * hitTime;
+            var targetMapPos = destMapPos.Offset(leadBy * hitTime);
 
-            _cannon.TryFireCannon(uid, targetPos, gun: gun);
+            _cannon.TryFireCannon(uid, targetMapPos.Position, gun: gun);
         }
     }
 

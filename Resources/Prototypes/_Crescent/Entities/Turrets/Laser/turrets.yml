@@ -1,0 +1,473 @@
+#curse
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretCurse
+  suffix: Medium Energy
+  name: 300w 'Curse' energized ion bolt cannon
+  description: A medium energy platform that shoots ionized hardlight that interferes with shuttle electronics.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/curse.rsi
+      drawdepth: Mobs
+      layers:
+        - state: curse
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 80
+      fireRate: 1.2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 45
+      minAngle: 5
+      maxAngle: 15
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 3
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletCurse
+      capacity: 10
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Medium
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretCurseNavy
+  suffix: Medium Energy, Navy
+  name: navy-issue 300w 'Curse' energized ion bolt cannon
+  description: A medium energy platform that shoots ionized hardlight that interferes with shuttle electronics. Seems to be issued by Merchant House Soga.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/curse.rsi
+      drawdepth: Mobs
+      layers:
+        - state: curse-dsm
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 85
+      fireRate: 2.2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 45
+      minAngle: 5
+      maxAngle: 15
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.75
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletCurse
+      capacity: 10
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Medium
+
+#retribution
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretRetribution
+  suffix: Small Laser
+  name: 200cc 'Retribution' small laser gatling
+  description: A light energy weapons platform that converts energy into hardlight and flings it at high speeds.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/retribution.rsi
+      drawdepth: Mobs
+      layers:
+        - state: retribution
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 90
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 45
+      minAngle: 5
+      maxAngle: 15
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 1
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletRetribution
+      capacity: 30
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Small
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretRetributionNavy
+  suffix: Small Laser, Navy
+  name: navy-issue 200cc 'Retribution' small laser gatling
+  description: A light energy weapons platform that converts energy into hardlight and flings it at high speeds. Seems to be issued by the Imperial Navy.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/retribution.rsi
+      drawdepth: Mobs
+      layers:
+        - state: retribution-dsm
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 90
+      fireRate: 5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 45
+      minAngle: 5
+      maxAngle: 15
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.8
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletRetribution
+      capacity: 40
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Small
+
+#absolution
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretAbsolution
+  suffix: Medium Laser
+  name: 350cc 'Absolution' hardlight cannon
+  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
+      drawdepth: Mobs
+      layers:
+        - state: absolution
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 85
+      fireRate: 3.2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 25
+      minAngle: 2
+      maxAngle: 8
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 2
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.5
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletAbsolution
+      capacity: 20
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 4000
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Medium
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretAbsolutionNavy
+  suffix: Medium Laser, Navy
+  name: navy-issue 350cc 'Absolution' hardlight cannon
+  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. This one seems to be issued by the Imperial Navy.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
+      drawdepth: Mobs
+      layers:
+        - state: absolution-dsm
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 90
+      fireRate: 3.5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 25
+      minAngle: 2
+      maxAngle: 8
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 1.5
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.5
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletAbsolution
+      capacity: 25
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 4000
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Medium
+
+#damnation
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretDamnation
+  suffix: Large Laser
+  name: 600cc 'Damnation' hardlight carronade
+  description: A large energy weapons platform that fires supercharged hardlight bolts that explode on impact.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/damnation.rsi
+      drawdepth: Mobs
+      layers:
+        - state: damnation
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 70
+      fireRate: 1.5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 3.5
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletDamnation
+      capacity: 20
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 6000
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Large
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretDamnationNavy
+  suffix: Large Energy, Navy
+  name: navy-issue 600cc 'Damnation' hardlight carronade
+  description: A large energy weapons platform that fires supercharged hardlight bolts that explode on impact. This one seems to be issued by the Imperial Navy.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/damnation.rsi
+      drawdepth: Mobs
+      layers:
+        - state: damnation-dsm
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 75
+      fireRate: 2.6
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 2
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletDamnation
+      capacity: 25
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 6000
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Large

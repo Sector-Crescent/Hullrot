@@ -38,7 +38,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: ApcPowerReceiver
-    powerLoad: 0
+    powerLoad: 100
   - type: DeviceLinkSink
   - type: DeviceLinkSource
     ports:
