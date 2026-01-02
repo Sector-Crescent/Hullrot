@@ -1,0 +1,181 @@
+#---------- 6x24mm ----------
+- type: entity
+  id: BaseCartridge6x24mm
+  name: cartridge (6x24mm)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Cartridge6x24mm
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmCharge
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/charge_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: EmitSoundOnLand
+    sound:
+      collection: LightBulletBounce
+  - type: EmitSoundOnCollide
+    sound:
+      collection: LightBulletBounce
+#---------- Basic bullet ----------
+- type: entity
+  id: Cartridge6x24mmCharge
+  name: cartridge (6x24mm charge)
+  parent: BaseCartridge6x24mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmCharge
+
+#---------- The uranium ammo of 6x24mm ----------
+- type: entity
+  id: Cartridge6x24mmConcentrated
+  name: cartridge (6x24mm concentrated)
+  parent: BaseCartridge6x24mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmConcentrated
+  - type: Sprite
+    layers:
+      - state: red
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: "red"
+
+#---------- Anti-mech/cyborg ammo ----------
+- type: entity
+  id: Cartridge6x24mmIon
+  name: cartridge (6x24mm ion)
+  parent: BaseCartridge6x24mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmIon
+  - type: Sprite
+    layers:
+      - state: blue
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: "blue"
+
+#---------- Incendiary ammo ----------
+- type: entity
+  id: Cartridge6x24mmIncendiary
+  name: cartridge (6x24mm incendiary)
+  parent: BaseCartridge6x24mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmIncendiary
+  - type: Sprite
+    layers:
+      - state: orange
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: "orange"
+
+#---------- Less-lethal ammo ----------
+- type: entity
+  id: Cartridge6x24mmShock
+  name: cartridge (6x24mm shock)
+  parent: BaseCartridge6x24mm
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet6x24mmShock
+  - type: Sprite
+    layers:
+      - state: green
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: "green"
+
+#---------- 6x24mm (empty) ----------
+- type: entity
+  id: BaseMagazine6x24mm
+  name: "25-round magazine (6x24mm)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Magazine6x24mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge6x24mm
+    proto: null
+    capacity: 25
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/6x24mm_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 17
+    zeroVisible: false
+  - type: Appearance
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
+
+#---------- 6x24mm Railgun (Charge) ----------
+- type: entity
+  id: Magazine6x24mmCharge
+  name: "25-round magazine (6x24mm Charge)"
+  parent: BaseMagazine6x24mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge6x24mmCharge
+
+#---------- 6x24mm Railgun (Concentrated) ----------
+- type: entity
+  id: Magazine6x24mmConcentrated
+  name: "25-round magazine (6x24mm Concentrated)"
+  parent: BaseMagazine6x24mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge6x24mmConcentrated
+
+#---------- 6x24mm Railgun (Ion) ----------
+- type: entity
+  id: Magazine6x24mmIon
+  name: "25-round magazine (6x24mm Ion)"
+  parent: BaseMagazine6x24mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge6x24mmIon
+
+#---------- 6x24mm Railgun (Incendiary) ----------
+- type: entity
+  id: Magazine6x24mmIncendiary
+  name: "25-round magazine (6x24mm Incendiary)"
+  parent: BaseMagazine6x24mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge6x24mmIncendiary
+
+#---------- 6x24mm Railgun (Shock) ----------
+- type: entity
+  id: Magazine6x24mmShock
+  name: "25-round magazine (6x24mm Shock)"
+  parent: BaseMagazine6x24mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge6x24mmShock

@@ -1,7 +1,7 @@
 - type: entity
   id: BaseMagazineMagnum
-  name: 7-round pistol magazine (.327 Imperial magnum)
-  parent: BaseMagazinePistol
+  name: pistol magazine (.45 magnum)
+  parent: [ BaseMagazinePistol, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Sprite
@@ -14,6 +14,7 @@
   - type: Tag
     tags:
       - MagazineMagnum
+      - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -35,6 +36,7 @@
   - type: Tag
     tags:
       - MagazineMagnumSubMachineGun
+      - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -83,14 +85,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeMagnumPractice
-
-- type: entity
-  id: MagazineMagnumRubber
-  name: 7-round pistol magazine (.327 Imperial magnum rubber)
-  parent: BaseMagazineMagnum
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeMagnumRubber
 
 - type: entity
   id: MagazineMagnumIncendiary
@@ -161,20 +155,6 @@
   - type: Sprite
     layers:
     - state: practice
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-- type: entity
-  id: MagazineMagnumSubMachineGunRubber
-  name: "25-round SMG magazine (.327 Imperial magnum rubber)"
-  parent: BaseMagazineMagnumSubMachineGun
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeMagnumRubber
-  - type: Sprite
-    layers:
-    - state: rubber
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

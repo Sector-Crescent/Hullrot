@@ -22,7 +22,7 @@
     sprite: Clothing/Shoes/Boots/workboots_color.rsi
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: [ClothingShoesMilitaryBase, BaseRestrictedContraband]
   id: ClothingShoesBootsJack
   name: jackboots
   description: Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time.
@@ -78,15 +78,17 @@
     sprite: Clothing/Shoes/Boots/performer.rsi
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: [ClothingShoesMilitaryBase, BaseRestrictedContraband]
   id: ClothingShoesBootsCombat
   name: combat boots
   description: Robust combat boots for combat scenarios or combat situations. All combat, all the time.
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/combatboots.rsi
+    state: icon
   - type: Clothing
     sprite: Clothing/Shoes/Boots/combatboots.rsi
+    state: icon
 
 - type: entity
   parent: ClothingShoesMilitaryBase
@@ -112,7 +114,7 @@
       collection: FootstepHighHeels
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: [ ClothingShoesMilitaryBase ]
   id: ClothingShoesBootsMerc
   name: mercenary boots
   description: Boots that have gone through many conflicts and that have proven their combat reliability.
@@ -184,7 +186,7 @@
     sprite: Clothing/Shoes/Boots/winterbootssci.rsi
 
 - type: entity
-  parent: ClothingShoesBaseWinterBoots
+  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseRestrictedContraband]
   id: ClothingShoesBootsWinterSec
   name: security winter boots
   components:
@@ -194,10 +196,10 @@
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
 
 - type: entity
-  parent: ClothingShoesBaseWinterBoots
+  parent: [ClothingShoesBaseWinterBoots, BaseSyndicateContraband]
   id: ClothingShoesBootsWinterSyndicate
   name: syndicate's winter boots
-  description: Durable heavy boots, looks like merch from "Syndieland"
+  description: Durable heavy boots, looks like merch from "Syndieland".
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/winterbootssyndicate.rsi
@@ -216,9 +218,9 @@
     sprite: Clothing/Shoes/Boots/winterbootsweb.rsi
   - type: FlavorProfile
     flavors:
-      - cobwebs
+    - cobwebs
     ignoreReagents:
-      - Fiber
+    - Fiber
   - type: SolutionContainerManager
     solutions: # 6 (3 (fiber count of web) * 2 (to craft)) + 4 (magical crafting bonus)
       food:
@@ -226,6 +228,10 @@
         reagents:
         - ReagentId: Fiber
           Quantity: 10
+  - type: Butcherable
+    spawned:
+    - id: MaterialWebSilk1
+      amount: 2
   - type: Construction
     graph: WebObjects
     node: boots
@@ -243,6 +249,8 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepSpurs
+      params:
+        variation: 0.09
 
 - type: entity
   parent: ClothingShoesBootsCowboyBrown

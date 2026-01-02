@@ -1,6 +1,6 @@
-using Content.Shared.Flash;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Flash.Components
 {
@@ -17,7 +17,7 @@ namespace Content.Shared.Flash.Components
         /// If null, melee flashes will not stun at all
         /// </summary>
         [DataField]
-        public TimeSpan? MeleeStunDuration = TimeSpan.FromSeconds(1.5);
+        public TimeSpan? MeleeStunDuration = null; // Hullrot - Flash nerf
 
         [DataField("range")]
         [ViewVariables(VVAccess.ReadWrite)]
@@ -42,5 +42,14 @@ namespace Content.Shared.Flash.Components
 
         [DataField]
         public float Probability = 1f;
+    }
+
+    [Serializable, NetSerializable]
+    public enum FlashVisuals : byte
+    {
+        BaseLayer,
+        LightLayer,
+        Burnt,
+        Flashing,
     }
 }

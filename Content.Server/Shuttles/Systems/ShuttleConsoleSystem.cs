@@ -46,7 +46,7 @@ namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 {
-    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly ActionBlockerSystem _blocker = default!;
     [Dependency] private readonly AlertsSystem _alertsSystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -110,6 +110,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         SubscribeLocalEvent<UndockEvent>(OnUndock);
 
         SubscribeLocalEvent<PilotComponent, ComponentGetState>(OnGetState);
+        SubscribeLocalEvent<PilotComponent, StopPilotingAlertEvent>(OnStopPilotingAlert);
 
         SubscribeLocalEvent<FTLDestinationComponent, ComponentStartup>(OnFtlDestStartup);
         SubscribeLocalEvent<FTLDestinationComponent, ComponentShutdown>(OnFtlDestShutdown);
@@ -372,13 +373,62 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         }
     }
 
+    // Hullrot - Auto Anchor
+    private void CheckAutoAnchor(float frameTime)
+    {
+        var query = EntityQueryEnumerator<ShuttleConsoleComponent>();
+        while (query.MoveNext(out var uid, out var comp))
+        {
+            comp.LastKnownGrid = Transform(uid).GridUid;
+
+            if (comp.AutoAnchorDelay <= 0f)
+            {
+                comp.UnpowerAccumulated = 0f;
+                continue;
+            }
+
+            if (this.IsPowered(uid, EntityManager))
+            {
+                comp.UnpowerAccumulated = 0f;
+                continue;
+            }
+
+            comp.UnpowerAccumulated += frameTime;
+            if (comp.UnpowerAccumulated >= comp.AutoAnchorDelay)
+            {
+                comp.UnpowerAccumulated = 0f;
+                TryAutoAnchorFromConsole(uid, comp);
+            }
+        }
+    }
+
+    private void TryAutoAnchorFromConsole(EntityUid uid, ShuttleConsoleComponent component)
+    {
+        var grid = Transform(uid).GridUid ?? component.LastKnownGrid;
+        if (grid is not { } gridUid)
+        {
+            return;
+        }
+
+        if (!TryComp<ShuttleComponent>(grid, out var shuttle))
+        {
+            return;
+        }
+
+        var ev = new SetInertiaDampeningRequest
+        {
+            ShuttleEntityUid = GetNetEntity(grid),
+            Mode = InertiaDampeningMode.Anchored,
+        };
+        RaiseLocalEvent(uid, ev);
+    }
 
     /// <summary>
     /// Stop piloting if the window is closed.
     /// </summary>
     private void OnConsoleUIClose(EntityUid uid, ShuttleConsoleComponent component, BoundUIClosedEvent args)
     {
-        if ((ShuttleConsoleUiKey) args.UiKey != ShuttleConsoleUiKey.Key)
+        if ((ShuttleConsoleUiKey)args.UiKey != ShuttleConsoleUiKey.Key)
         {
             return;
         }
@@ -493,6 +543,14 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     private void OnGetState(EntityUid uid, PilotComponent component, ref ComponentGetState args)
     {
         args.State = new PilotComponentState(GetNetEntity(component.Console));
+    }
+
+    private void OnStopPilotingAlert(Entity<PilotComponent> ent, ref StopPilotingAlertEvent args)
+    {
+        if (ent.Comp.Console != null)
+        {
+            RemovePilot(ent, ent);
+        }
     }
 
     /// <summary>
@@ -642,7 +700,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         RaiseLocalEvent(entity.Value, ref getShuttleEv);
         entity = getShuttleEv.Console;
 
-        TryComp<TransformComponent>(entity, out var consoleXform);
+        TryComp(entity, out TransformComponent? consoleXform);
         var shuttleGridUid = consoleXform?.GridUid;
 
         NavInterfaceState navState;
@@ -713,6 +771,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         var toRemove = new ValueList<(EntityUid, PilotComponent)>();
         var query = EntityQueryEnumerator<PilotComponent>();
         RefreshBulletStateForConsoles();
+        CheckAutoAnchor(frameTime); // Hullrot - Auto Anchor
 
         while (query.MoveNext(out var uid, out var comp))
         {
@@ -737,8 +796,9 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         RemovePilot(uid, component);
     }
 
-    private void OnConsoleShutdown(EntityUid uid, ShuttleConsoleComponent component, ComponentShutdown args)
+    private void OnConsoleShutdown(EntityUid uid, ShuttleConsoleComponent component, ref ComponentShutdown args)
     {
+        TryAutoAnchorFromConsole(uid, component); // Hullrot - Auto Anchor
         ClearPilots(component);
     }
 

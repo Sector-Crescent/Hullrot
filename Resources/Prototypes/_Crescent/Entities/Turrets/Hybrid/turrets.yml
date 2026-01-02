@@ -1,0 +1,179 @@
+#starburst
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretStarburst
+  suffix: Small Hybrid
+  name: 150cc 'Starburst' hybrid plasma gatling
+  description: A light hybrid weapons platform that superheats unstable units of plasma and flings them at high speeds at targets. The plasma projectiles dissipate rapidly, but pack a punch.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Hybrid/starburst.rsi
+      drawdepth: Mobs
+      layers:
+        - state: starburst
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 80
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 45
+      minAngle: 5
+      maxAngle: 15
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 2
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletPlasmaGatling
+      capacity: 60
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Small
+
+#bolter
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretBolter
+  suffix: Medium Hybrid
+  name: 300cc 'Bolter' hybrid plasma caster
+  description: A medium hybrid weapons platform that superheats unstable units of plasma and flings them at high speeds at targets. The plasma projectiles dissipate rapidly, but pack a punch.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Hybrid/bolter.rsi
+      drawdepth: Mobs
+      layers:
+        - state: bolter
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 75
+      fireRate: 1.2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 25
+      minAngle: 2
+      maxAngle: 8
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 3
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.5
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletPlasmaBall
+      capacity: 20
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 3500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Medium
+
+#mauler
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretMauler
+  suffix: Large Hybrid
+  name: 500cc 'Mauler' hybrid plasma gatling
+  description: A large hybrid weapons platform that superheats unstable units of plasma and flings them at high speeds at targets. The plasma projectiles dissipate rapidly, but pack a punch.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Hybrid/mauler.rsi
+      drawdepth: Mobs
+      layers:
+        - state: mauler
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 400
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 70
+      fireRate: 0.5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 7
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletPlasmaArc
+      capacity: 10
+      count: 10
+    - type: ApcPowerReceiver
+      powerLoad: 5000
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Large

@@ -8,6 +8,9 @@
   icon: "JobIconPassenger"
   supervisors: job-supervisors-hire
   requirements:
+    - !type:FactionRequirement
+      inverted: true
+      factionID: "SRM"
     - !type:CharacterOverallTimeRequirement
       min: 10800
     - !type:CharacterSpeciesRequirement
@@ -35,7 +38,5 @@
     ears: ClothingHeadsetGrey
     id: SpacerPDA
     jumpsuit: ClothingUniformSpacer
-    back: ClothingBackpackFilled
+    back: ClothingBackpack
     shoes: ClothingShoesColorBlack
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

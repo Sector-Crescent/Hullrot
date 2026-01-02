@@ -142,13 +142,13 @@
   - type: EmitSoundOnUIOpen
     sound:
       collection: Keyboard
-  - type: ContrabandPalletConsole
-  - type: ActivatableUI
-    key: enum.ContrabandPalletConsoleUiKey.Contraband
-  - type: UserInterface
-    interfaces:
-      enum.ContrabandPalletConsoleUiKey.Contraband:
-        type: ContrabandPalletConsoleBoundUserInterface
+#  - type: ContrabandPalletConsole
+#  - type: ActivatableUI
+#    key: enum.ContrabandPalletConsoleUiKey.Contraband
+#  - type: UserInterface
+#    interfaces:
+#      enum.ContrabandPalletConsoleUiKey.Contraband:
+#        type: ContrabandPalletConsoleBoundUserInterface
   - type: Computer
     board: Null
 

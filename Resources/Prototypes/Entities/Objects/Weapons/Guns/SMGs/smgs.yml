@@ -42,14 +42,15 @@
         priority: 2
         whitelist:
           tags:
-            - MagazinePistolSubMachineGun
+          - MagazinePistolSubMachineGun
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+          - CartridgePistol
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -81,8 +82,8 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 - type: entity
-  name: NCSP SR-2MP Atreides 9x19mm
-  parent: BaseWeaponSubMachineGun
+  name: Atreides
+  parent: [BaseWeaponSubMachineGun, BaseMajorContraband]
   id: WeaponSubMachineGunAtreides
   description: A rapid-fire submachinegun developed by the Shipfitters Union. Eats through ammo like a starving elephant.
   components:
@@ -94,7 +95,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
-    fireRate: 10
+    fireRate: 14
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
     fireOnDropChance: 0.3
@@ -105,8 +106,8 @@
   - type: Appearance
 
 - type: entity
-  name: IRM DA-20 Talon 11mm
-  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, StreeCredRedeemable]
+  name: C-20r submachine gun
+  parent: [BaseWeaponSubMachineGun, BaseSyndicateContraband]
   id: WeaponSubMachineGunC20r
   description: A slick submachinegun produced by Olywir Armaments for the Imperial Navy. Sees little use in the hands of actual troopers due to the cost of manufacturing.
   components:
@@ -124,7 +125,7 @@
     minAngle: -19
     maxAngle: -16
   - type: Gun
-    fireRate: 6 #Really good for something made so easily, and available roundstart.
+    fireRate: 14 #Really good for something made so easily, and available roundstart.
     minAngle: 21
     maxAngle: 32
     availableModes:
@@ -142,21 +143,15 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineHeavySMG
+          - MagazinePistolSubMachineGun
+        whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
         startingItem: CartridgeHeavyPistol
         priority: 1
         whitelist:
           tags:
-            - CartridgeHeavyPistol
-  - type: ChamberMagazineAmmoProvider
-    autoEject: true
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+          - CartridgePistol
 
 - type: entity
   name: antique IRM DA-20R 11mm
@@ -164,63 +159,63 @@
   id: WeaponSubMachineGunC20rHoS
   description: This heavily worn submachine gun is engraved with the words, "Remember Nova Balreska".
   components:
-    - type: StealTarget
-      stealGroup: HoSAntiqueWeapon
+  - type: StealTarget
+    stealGroup: HoSAntiqueWeapon
 
 - type: entity
-  name: PTA P-M85 Drozd .327
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  name: Drozd
+  parent: [BaseWeaponSubMachineGun, BaseRestrictedContraband]
   id: WeaponSubMachineGunDrozd
   description: A fast very firing bullpup submachine gun. Manufactured by Pang Tai Arms and outsourced to mercenary factors in the area. Suffers from immense recoil due to it's caliber.
   components:
-    - type: Sprite
-      sprite: _Crescent/Objects/Weapons/Guns/drozd.rsi
-      layers:
-        - state: base
-          map: ["enum.GunVisualLayers.Base"]
-        - state: mag-0
-          map: ["enum.GunVisualLayers.Mag"]
-    - type: Clothing
-      sprite: _Crescent/Objects/Weapons/Guns/drozd.rsi
-    - type: Wieldable
-      unwieldOnUse: false
-    - type: GunWieldBonus
-      minAngle: -10
-      maxAngle: -15
-    - type: Gun
-      minAngle: 21
-      maxAngle: 32
-      fireRate: 7 #holy fuck this thing rips. Direct upgrade to liberator.
-      burstFireRate: 12
-      selectedMode: FullAuto
-      soundGunshot:
-        path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
-      availableModes:
-        - FullAuto
-        - Burst
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          startingItem: MagazineMagnumSubMachineGun
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - MagazineMagnumSubMachineGun
-        gun_chamber:
-          name: Chamber
-          startingItem: CartridgePistol
-          priority: 1
-          whitelist:
-            tags:
-              - CartridgePistol
-    - type: MagazineVisuals
-      magState: mag
-      steps: 1
-      zeroVisible: true
-    - type: Appearance
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -16
+  - type: Gun
+    minAngle: 21
+    maxAngle: 32
+    fireRate: 12
+    burstFireRate: 12
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazinePistolSubMachineGun
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
 
 #Commented out the Vector, as it is deprecated.
 # - type: entity
@@ -265,25 +260,26 @@
 #        whitelist:
 #          tags:
 #            - CartridgeMagnum
+#        whitelistFailPopup: gun-magazine-whitelist-fail
 #  - type: MagazineVisuals
 #    magState: mag
-##    steps: 1
+#    steps: 1
 #    zeroVisible: true
 #  - type: Appearance
 
 - type: entity
-  name: NCWL Partisan 9x19mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
-  id: WeaponSubMachineGunNCWLPartisan
-  description: A rugged, deregulated SMG favoured by partisans and infiltrators simple, ruthless, and cheap to produce from scavenged parts.
+  name: WT550
+  parent: [ BaseWeaponSubMachineGun, BaseRestrictedContraband ]
+  id: WeaponSubMachineGunWt550
+  description: An excellent SMG, produced by NanoTrasen's Small Arms Division. Uses .35 auto ammo.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_smg.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_smg.rsi
     slots:
@@ -382,115 +378,10 @@
   - type: Appearance
 
 - type: entity
-  name: NT WT50 Sabre 11mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
-  id: WeaponSubMachineGunWt550
-  description: A light Terran-originating submachine gun with a top-mounted magazine. Chamberd in 11mm PSTF.
-  components:
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/wt550.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/wt550.rsi
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
-  - type: Gun
-    fireRate: 7
-    minAngle: 1
-    maxAngle: 6
-    angleIncrease: 1.5
-    angleDecay: 6
-    selectedMode: FullAuto
-    availableModes:
-    - SemiAuto
-    - FullAuto
-    fireOnDropChance: 0.1
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolSubMachineGunTopMounted
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazinePistolSubMachineGunTopMounted
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgeHeavyPistol
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgeHeavyPistol
-  - type: MagazineVisuals
-    magState: mag
-    steps: 11
-    zeroVisible: true
-  - type: Appearance
-
-- type: entity
   name: antique Wt550
   id: WeaponSubMachineGunWt550HoS
   parent: WeaponSubMachineGunWt550
   description: A prized possession of the station's Head of Security. The smell of dried blood lingers on this weapon's muzzle. A small torch with 24 stars surrounding it has been engraved on the grip.
   components:
-    - type: StealTarget
-      stealGroup: HoSAntiqueWeapon
-
-
-# Rubber
-- type: entity
-  name: Drozd
-  parent: WeaponSubMachineGunDrozd
-  id: WeaponSubMachineGunDrozdRubber
-  suffix: Non-Lethal
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          startingItem: MagazinePistolSubMachineGunRubber
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - MagazinePistolSubMachineGun
-        gun_chamber:
-          name: Chamber
-          startingItem: CartridgePistolRubber
-          priority: 1
-          whitelist:
-            tags:
-              - CartridgePistol
-
-#- type: entity
-#  name: Vector
-#  parent: WeaponSubMachineGunVector
-#  id: WeaponSubMachineGunVectorRubber
-#  description: An excellent fully automatic Heavy SMG. Uses 8.3×33mm ammo.
-#  suffix: Non-Lethal
-#  components:
-#  - type: ItemSlots
-#    slots:
-#      gun_magazine:
-#        name: Magazine
-#        startingItem: MagazineMagnumSubMachineGunRubber
-#        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-#        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-#        priority: 2
-#        whitelist:
-#          tags:
-#            - MagazineMagnumSubMachineGun
-#      gun_chamber:
-#        name: Chamber
-#        startingItem: CartridgeMagnumRubber
-#        priority: 1
-#        whitelist:
-#          tags:
-#            - CartridgeMagnum
+  - type: StealTarget
+    stealGroup: HoSAntiqueWeapon
