@@ -1,12 +1,4 @@
 # Upstream
-- type: entity
-  id: Kardashev-MosinNonlethal
-  parent: WeaponSniperMosin
-  suffix: Non-lethal
-  components:
-  - type: BallisticAmmoProvider # Inherit whitelist, capacity from parent
-    proto: CartridgeLightRifleRubber
-
 # Frontier
 - type: entity
   name: N2524 Pattern Repeater

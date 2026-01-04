@@ -745,8 +745,11 @@
     - state: icon-advanced-surgery
   - type: ItemBorgModule
     items:
-    - OmnimedToolSyndie
-    - DefibrillatorOneHandedUnpowered
+    - EnergyScalpel
+    - EnergyCautery
+    - AdvancedRetractor
+    - BoneGel
+    # Frontier: droppable borg items
     droppableItems:
     - id: OrganHumanHeart
       whitelist:

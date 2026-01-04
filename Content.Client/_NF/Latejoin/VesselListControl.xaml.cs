@@ -113,6 +113,9 @@ public sealed partial class VesselListControl : BoxContainer
 
         foreach (var (key, name) in _gameTicker.StationNames)
         {
+            if (string.IsNullOrEmpty(name))
+                continue; // bye
+
             if (VesselItemList.Any(x => ((NetEntity) x.Metadata!) == key))
                 continue;
 
