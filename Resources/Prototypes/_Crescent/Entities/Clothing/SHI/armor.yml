@@ -2,7 +2,7 @@
 
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitHEV
   name: shinohara hazardous environment hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for logistics officers.
@@ -37,7 +37,7 @@
     faction: SHI
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitHighsec
   name: shinohara SVBT-2 combat hardsuit
   description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere.
@@ -71,7 +71,7 @@
     faction: SHI
 
 - type: entity
-  parent: ClothingOuterHardsuitHighsec
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitHighsecUA
   name: SHI UA SVBT-2 combat hardsuit
   description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere. Customized by the subsidiary group United Arsenal.
@@ -86,7 +86,7 @@
     faction: SHI
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitSHIJuggernaut
   name: SVBT-XA "KAMADO" juggernaut hardsuit
   description: Experimental model of the SVBT-2 heavily reinforced with multi layer Kevlar ceramic plates meant for use by shinobi liquidators.
@@ -130,7 +130,7 @@
     faction: SHI
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, StreeCredRedeemable]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitSHISpeedsuit
   name: SVBT-XB "RAIKU" liquidator suit
   description: Experimental model of the SVBT-2 with most of the armor stripped off replaced with thick layers of durathread. Equipped with a Exo-Skeleton the suit sliences the users footsteps while also increasing movement capabilities.

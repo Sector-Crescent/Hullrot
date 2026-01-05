@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitDraugr
   name: DRAUGR mk.I pressurized combat exosuit
   description: A combat hardsuit of antiquated make. Tribal fetishes adorn the dented breastplate. Used by many Pacters belonging to the Al'Seik family.
@@ -33,9 +33,11 @@
     clothingPrototype: ClothingHeadHelmetHardsuitDraugr
   - type: StaticPrice
     price: 1000
-
+  - type: ClothingAddFaction
+    faction: TAP
+    
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitArabet
   name: prophet's pressurized hardsuit
   description: An unusual hardsuit constructed of sleek plasteel, gilded with tribal patterns. The shoulderplates bear the mark of the Arabet family of the Pact.
@@ -67,9 +69,11 @@
     clothingPrototype: ClothingHeadHelmetHardsuitArabet
   - type: StaticPrice
     price: 1000
-
+  - type: ClothingAddFaction
+    faction: TAP
+    
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitIzdari
   name: izdari beltrunner's armored hardsuit
   description: A modified version of an antiquated atmospheric techinican's hardsuit. Around three generations out of date. Attributed commonly to the Izdari family.
@@ -101,9 +105,11 @@
     clothingPrototype: ClothingHeadHelmetHardsuitIzdari
   - type: StaticPrice
     price: 1000
-
+  - type: ClothingAddFaction
+    faction: TAP
+    
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitThukker
   name: thukker combat engineer's hardsuit
   description: A modified mining hardsuit adorned with the livery of the Thukker family of the Pact. Features bulky lead shielding against radiation.
@@ -135,9 +141,11 @@
     clothingPrototype: ClothingHeadHelmetHardsuitThukker
   - type: StaticPrice
     price: 1000
-
+  - type: ClothingAddFaction
+    faction: TAP
+    
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: C_ClothingOuterEVASuitBase
   id: ClothingOuterBeltrunnerEVA
   name: pact beltrunner's voidsuit
   description: A spaceworthy softsuit belonging to the Izdari family of the Atyrian Pact. Repaired many times over.
@@ -151,7 +159,9 @@
     - SuitEVA
   - type: StaticPrice
     price: 1000
-
+  - type: ClothingAddFaction
+    faction: TAP
+    
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorServileAlseik

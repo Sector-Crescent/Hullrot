@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitNAPRangerMEPA
   name: american ranger Mk.V(B) 'MEPA' combat hardsuit
   description: a beaten and well worn combat hardsuit design, the Multiple Environment Personal Armour has been built up from its introduction at the founding of the New American Ranger corps and served its soldiers from foul smelling reservist suits in boot camp to the modern plated harness. The iterative design process has left it particularly weak to blunt impact however.
@@ -33,6 +33,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNAPRangerMEPA
   - type: StaticPrice
     price: 4000
+  - type: ClothingAddFaction
+    faction: NAP
 
 # armor
 

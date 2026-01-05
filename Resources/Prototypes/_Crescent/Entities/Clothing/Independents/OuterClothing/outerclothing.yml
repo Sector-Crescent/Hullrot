@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitIndependentsEVA
   name: spacionaut softsuit
   description: A basic softsuit made by independents for spacers. Easily torn.
@@ -31,9 +31,11 @@
     clothingPrototype: ClothingHeadHelmetHardsuitIndependentsEVA
   - type: StaticPrice
     price: 750
-
+  - type: ClothingAddFaction
+    faction: IND
+    
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitFishbed
   name: NMS-21 'FISHBED' combat hardsuit
   description: Designed by Northrop-Martin for mercenary use and heavily modified by Taypani owners.
@@ -65,9 +67,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitFishbed
   - type: StaticPrice
     price: 1500
-
+    
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCenobite
   name: NMS-19 'FRESCO' combat hardsuit
   description: The high-end predecessor of the NMS-21, this hardsuit features a more advanced servo system allowing it to support a greater amount of armor plating. Exceedingly rare in modern Taypan due to its age and the lack of Northrop-Martin imports  into the sector.
@@ -159,6 +161,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitFishbedNLF
   - type: StaticPrice
     price: 1750
+  - type: ClothingAddFaction
+    faction: UNKWN
 
 - type: entity
   parent: ClothingOuterHardsuitCenobite
