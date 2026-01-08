@@ -674,6 +674,13 @@
           32:
             sprite: Mobs/Animals/mothroach/displacement.rsi
             state: neck
+  - type: EggLayer
+    eggSpawn:
+    - id: SilkFilament1
+      amount: 3
+    - id: FoodEggMothroachFertilized
+      amount: 1
+      prob: 0.3
 
 - type: entity
   parent: MobMothroach
