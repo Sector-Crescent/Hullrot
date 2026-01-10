@@ -18,7 +18,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: PlayerBorgSyndicateAssaultBattery
+    prototype: C_PlayerBorgSyndicateAssaultBattery
 
 - type: entity
   parent: ReinforcementRadioSyndicate
@@ -40,7 +40,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: PlayerBorgSyndicateMedicalBattery
+    prototype: C_PlayerBorgSyndicateAssaultGhostRole
 
 - type: entity
   parent: ReinforcementRadioSyndicate
@@ -62,4 +62,4 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: PlayerBorgSyndicateSaboteurBattery
+    prototype: C_PlayerBorgSyndicateSaboteurBattery

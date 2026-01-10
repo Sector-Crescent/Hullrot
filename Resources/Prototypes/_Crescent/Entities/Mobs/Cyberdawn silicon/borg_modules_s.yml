@@ -1,0 +1,116 @@
+﻿- type: entity
+  id: C_BorgModuleAdvancedSurgery
+  parent: [ BaseBorgModuleMedical, BaseProviderBorgModule ]
+  name: advanced surgery cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: medical
+    - state: icon-advanced-surgery
+  - type: ItemBorgModule
+    items:
+    - OmnimedToolSyndie
+    - DefibrillatorOneHandedUnpowered
+    droppableItems:
+    - id: OrganHumanHeart
+      whitelist:
+        components:
+        - BodyPart
+        - Organ
+        tags:
+        - Organ
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-surgery-module }
+
+#syndicate modules
+- type: entity
+  id: C_BorgModuleSyndicateWeapon
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: Advanced weapon cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    items:
+    - WeaponSMGC20ROW
+    - EnergySword
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+
+- type: entity
+  id: C_BorgModuleOperative
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: Syndicate operative cyborg module
+  description: A module that comes with a SyndicateJawsOfLife, an Emag, an Access Breaker and a syndicate pinpointer.
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    items:
+    - SyndicateJawsOfLife
+    - Emag
+    - AccessBreaker
+    - PinpointerSyndicateNuclear
+    - WelderIndustrial
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
+
+- type: entity
+  id: C_BorgModuleOperativehand
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: Operator hand cyborg module
+  description: A module that comes with a crowbar, an Emag, an Access Breaker and a syndicate pinpointer.
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+    droppableItems:
+    - id: AgentIDCard
+      whitelist:
+        components:
+        - Access
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
+
+- type: entity
+  id: C_BorgModuleEsword
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: energy sword cyborg module
+  description: A module that comes with a double energy sword.
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    items:
+    - CyborgEnergySwordDouble
+    - PinpointerSyndicateNuclear
+    - MassScannerEEBorg
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
+
+- type: entity
+  id: BorgModuleC54
+  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: C54 ROW cyborg module
+  description: A module that comes with a C54.
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-syndicate
+  - type: ItemBorgModule
+    items:
+    - WeaponLightMachineGunC54ROW
+    - PinpointerSyndicateNuclear
+    - MassScannerEEBorg
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
