@@ -96,6 +96,20 @@
   editorHidden: false
 
 - type: department
+  id: GS
+  name: Civilian
+  description: department-GS-description
+  color: "#5191e0"
+  weight: 70
+  roles:
+  - GliessianDockmaster
+  - GliessianSheriff
+  - GliessianDeputy
+  - GliessianDockhand
+  - Spacer
+  editorHidden: false
+
+- type: department
   id: CMM
   name: department-CMM
   description: department-CMM-description
