@@ -3,6 +3,8 @@
   parent: Clothing
   id: ClothingEyesBase
   components:
+  - type: StaticPrice
+    price: 50
   - type: Sprite
     state: icon
   - type: Clothing
@@ -15,6 +17,8 @@
   abstract: true
   id: BallisticGlasses
   components:
+  - type: StaticPrice
+    price: 50
   - type: Reflect # Ballistic glasses are any glasses that have a small chance to deflect projectiles
     spread: 270
     reflectProb: 0.01

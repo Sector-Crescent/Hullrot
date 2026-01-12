@@ -3,6 +3,8 @@
   parent: Clothing
   id: ClothingHeadBase
   components:
+  - type: StaticPrice
+    price: 50
   - type: Clothing
     slots:
     - HEAD

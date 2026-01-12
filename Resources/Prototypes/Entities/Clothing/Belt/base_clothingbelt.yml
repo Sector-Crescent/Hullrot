@@ -3,6 +3,8 @@
   parent: Clothing
   id: ClothingBeltBase
   components:
+  - type: StaticPrice
+    price: 50
   - type: Sprite
     state: icon
   - type: Item
@@ -19,8 +21,6 @@
   - type: PhysicalComposition
     materialComposition:
       Cloth: 50
-  - type: StaticPrice
-    price: 20
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/SimpleStation14/Items/Handling/toolbelt_pickup.ogg
