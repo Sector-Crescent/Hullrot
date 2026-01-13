@@ -9,6 +9,8 @@
     snap:
     - Window
   components:
+  - type: PlacementReplacement
+    key: walls
   - type: RCDDeconstructable
     deconstructable: false
   - type: MeleeSound
@@ -42,13 +44,13 @@
   parent: PlastitaniumWindowBase
   components:
   - type: Sprite
-    drawdepth: WallTops
+    drawdepth: Walls
     sprite: Structures/Windows/plastitanium_window.rsi
   - type: Icon
     sprite: Structures/Windows/plastitanium_window.rsi
     state: full
   - type: IconSmooth
-    key: windows
+    key: walls
     base: ptwindow
   - type: Airtight
   - type: Fixtures
@@ -118,7 +120,7 @@
   suffix: diagonal
   components:
   - type: Sprite
-    drawdepth: WallTops
+    drawdepth: Walls
     sprite: Structures/Windows/plastitanium_window_diagonal.rsi
     state: state0
   - type: Tag
