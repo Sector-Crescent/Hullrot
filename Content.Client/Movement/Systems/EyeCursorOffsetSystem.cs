@@ -84,12 +84,15 @@ public partial class EyeCursorOffsetSystem : EntitySystem
             var eyeRotation = _eyeManager.CurrentEye.Rotation;
             var mouseActualRelativePos = Vector2.Transform(mouseNormalizedPos, System.Numerics.Quaternion.CreateFromAxisAngle(-System.Numerics.Vector3.UnitZ, (float)(eyeRotation.Opposite().Theta))); // I don't know, it just works.
 
+            var scaledMaxOffset = component.MaxOffset * 4f; // Scales how far you can look out
+
             // Caps the offset into a circle around the player.
-            mouseActualRelativePos *= component.MaxOffset;
-            if (mouseActualRelativePos.Length() > component.MaxOffset)
+            mouseActualRelativePos *= scaledMaxOffset;
+            if (mouseActualRelativePos.Length() > scaledMaxOffset)
             {
-                mouseActualRelativePos = mouseActualRelativePos.Normalized() * component.MaxOffset;
+                mouseActualRelativePos = mouseActualRelativePos.Normalized() * scaledMaxOffset;
             }
+
 
             component.TargetPosition = mouseActualRelativePos;
 

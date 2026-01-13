@@ -712,3 +712,73 @@
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
   - type: IgnoresHullrotShields
+
+#pila
+
+
+- type: entity
+  id: PilaRocketProjectile
+  name: 30mm high-explosive minirocket
+  description: Shit.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 125
+        Blunt: 40
+  - type: TimedDespawn
+    lifetime: 5
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
+    layers:
+      - state: base-projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 300
+    intensitySlope: 500
+    totalIntensity: 300
+    maxTileBreak: 1
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: ProjectileIFF
+    visualType: SquareReticle
+    color: Red
+  - type: HeatSeeking
+    rotationSpeed: 35 # slow rotation so it isnt aimbot, still fairly accurate though
+    acceleration: 30
+    topSpeed: 80
+    fieldOfView: 30
+    defaultSeekingRange: 400
+    guidanceAlgorithm: PredictiveGuidance
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
+        layer:
+        - BulletImpassable
+        mask:
+        - Impassable
+        - BulletImpassable
+        hard: true
+        density: 100
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
