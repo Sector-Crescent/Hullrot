@@ -1,5 +1,168 @@
 - type: entity
   abstract: true
+  parent: [ BaseItem, StorePresetUplink ] #PDA's have uplinks so they have to inherit the data.
+  id: BaseHULLROTPDA
+  name: PDA
+  description: Personal Data Assistant.
+  components:
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda_civblack"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-civblack
+  - type: Pda
+    manual3Slot:
+      priority: -7
+      whitelist:
+        components:
+          - Paper
+    manual2Slot:
+      priority: -6
+      whitelist:
+        components:
+          - Paper
+    manual1Slot:
+      priority: -5
+      whitelist:
+        components:
+          - Paper
+    shipDeedSlot:
+      priority: -4
+      whitelist:
+        tags:
+          - ShipDeed
+    passportSlot:
+      priority: -3
+      whitelist:
+        components:
+          - Passport
+    paiSlot:
+      priority: -2
+      whitelist:
+        components:
+          - PAI
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+          - Write
+    idSlot:
+      name: access-id-card-component-default
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+          - IdCard
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      PDA-id: !type:ContainerSlot {}
+      PDA-pen: !type:ContainerSlot {}
+      PDA-pai: !type:ContainerSlot {}
+      PDA-passport: !type:ContainerSlot {}
+      PDA-shipdeed: !type:ContainerSlot {}
+      PDA-manual1: !type:ContainerSlot {}
+      PDA-manual2: !type:ContainerSlot {}
+      PDA-manual3: !type:ContainerSlot {}
+      Cartridge-Slot: !type:ContainerSlot {}
+      program-container: !type:Container
+  - type: ItemSlots
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - idcard
+    - Belt
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    softness: 5
+    autoRot: true
+  - type: Ringer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: PDA
+    prefix: device-address-prefix-console
+    savableAddress: false
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - NanoChatCartridge # DeltaV
+    cartridgeSlot:
+      priority: -1
+      name: device-pda-slot-component-slot-name-cartridge
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - Cartridge
+  - type: ActivatableUI
+    key: enum.PdaUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.PdaUiKey.Key:
+        type: PdaBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+      enum.RingerUiKey.Key:
+        type: RingerBoundUserInterface
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+      enum.HealthAnalyzerUiKey.Key:
+        type: HealthAnalyzerBoundUserInterface
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonPDA
+  - type: Input
+    context: "human"
+  - type: LanguageSpeaker
+  - type: LanguageKnowledge
+    speaks: [TauCetiBasic, RobotTalk]
+    understands: [TauCetiBasic, RobotTalk]
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: SentienceTarget # sentient PDA = pAI lite
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
+  - type: BlockMovement
+    blockInteraction: false # lets the PDA toggle its own flashlight
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+
+
+- type: entity
+  abstract: true
   id: MedPDA
   components:
   - type: HealthAnalyzer
@@ -11,13 +174,13 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: NCWLBasePDA
   name: NCWL pda
   description: Brown for communard.
   components:
   - type: Pda
-    state: pda-militiaman
+    state: pda-ncwl
     manual1Slot:
       startingItem: BookNCWLManual1
       priority: -5
@@ -34,6 +197,22 @@
     borderColor: "#3d251e"
     accentHColor: "#d4d4d4"
     accentVColor: "#d4d4d4"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-ncwl"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-ncwl
 
 - type: entity
   parent: [NCWLBasePDA, StreeCredRedeemable]
@@ -58,7 +237,6 @@
   components:
   - type: Pda
     id: NCWLIDCardMVDLeader
-    state: pda-militiaman
 
 - type: entity
   parent: [NCWLBasePDA, StreeCredRedeemableLow]
@@ -144,17 +322,31 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: SyndicateBasePDA
   name: syndicate PDA
   description: Red for Syndicate.
   components:
   - type: Pda
-    state: pda-syndi
+    state: pda-syndiofficer
   - type: PdaBorderColor
     borderColor: "#DC143C"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-syndiofficer"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
-    state: pda-syndi
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-syndiofficer
 
 - type: entity
   abstract: true
@@ -290,16 +482,32 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: DSMBasePDA
   name: imperial PDA
   description: Purple for Imperial.
   components:
   - type: Pda
     id: DSMIDCardFreeholder
-    state: basic
+    state: pda-imperial
   - type: PdaBorderColor
     borderColor: "#6d5f8a"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-imperial"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-imperial
 
 - type: entity
   abstract: true
@@ -307,7 +515,23 @@
   id: DSMNoblePDA
   components:
   - type: Pda
-    state: noble
+    state: pda-noble
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-noble"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-noble
 
 - type: entity
   parent: [DSMBasePDA, StreeCredRedeemableLow]
@@ -325,7 +549,7 @@
   components:
   - type: Pda
     id: DSMIDCardTemplar
-    state: basic
+    state: pda-noble
   - type: PdaBorderColor
     borderColor: "#6d5f8a"
 
@@ -345,7 +569,7 @@
   - type: Pda
     id: DSMIDCardArchmaester
   - type: Icon
-    state: pda-rd
+    state: pda-scribes
 
 - type: entity
   parent: [DSMBasePDA, MedPDA, StreeCredRedeemableLow]
@@ -370,8 +594,22 @@
   components:
   - type: Pda
     id: DSMIDCardScribe
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-scribes"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
-    state: pda-science
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-scribes
 
 - type: entity
   parent: [DSMBasePDA, StreeCredRedeemableLow]
@@ -433,16 +671,32 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: SRMBasePDA
   name: hunter's PDA
   description: Decorated for the Hunt.
   components:
   - type: Pda
     id: SRMIDCardTender
-    state: hunter
+    state: pda-hunter
   - type: PdaBorderColor
     borderColor: "#ffffff"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-hunter"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-hunter
 
 - type: entity
   parent: [SRMBasePDA, MedPDA, StreeCredRedeemableLow]
@@ -488,17 +742,31 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: SHIBasePDA
   name: corporate PDA
   description: Gunmetal gray.
   components:
   - type: Pda
-    state: pda-bartender
+    state: pda-civblack
   - type: PdaBorderColor
     borderColor: "#535961"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-corpsec"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
-    state: pda-bartender
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-corpsec
 
 - type: entity
   parent: [SHIBasePDA, StreeCredRedeemable]
@@ -523,6 +791,7 @@
   components:
   - type: Pda
     id: SHIIDCardCorpSec
+    state: pda-corpsec
 
 - type: entity
   parent: [SHIBasePDA, StreeCredRedeemableLow]
@@ -531,6 +800,7 @@
   components:
   - type: Pda
     id: SHIIDCardHighSec
+    state: pda-corpsec
 
 - type: entity
   parent: [SHIBasePDA, StreeCredRedeemableLow]
@@ -552,15 +822,31 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: CMMBasePDA
   name: marshal PDA
   description: Blue for cops.
   components:
   - type: Pda
-    state: cmm
+    state: pda-gliess
   - type: PdaBorderColor
     borderColor: "#5191e0"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-gliess"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-gliess
 
 - type: entity
   parent: [CMMBasePDA, StreeCredRedeemableLow]
@@ -621,7 +907,7 @@
 #misc
 
 - type: entity
-  parent: [BasePDA, StreeCredRedeemableLow]
+  parent: [BaseHULLROTPDA, StreeCredRedeemableLow]
   id: AntiquarianPDA
   name: antiquarian's PDA
   description: Why is it gray?
@@ -632,7 +918,7 @@
   - type: PdaBorderColor
     borderColor: "#808080"
   - type: Icon
-    state: pda
+    state: pda-civblack
 
 - type: entity
   parent: [BasePDA, StreeCredRedeemableLow]
@@ -694,15 +980,31 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: TAPBasePDA
   name: family PDA
   description: How clerical.
   components:
   - type: Pda
-    state: hunter
+    state: pda-hunter
   - type: PdaBorderColor
     borderColor: "#ffffff"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-hunter"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-hunter
 
 - type: entity
   parent: [TAPBasePDA, StreeCredRedeemable]
@@ -778,13 +1080,13 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: ATHBasePDA
   name: athena PDA
   description: Gunmetal gray.
   components:
   - type: Pda
-    state: pda-bartender
+    state: pda-civblack
   - type: PdaBorderColor
     borderColor: "#535961"
   - type: Icon
@@ -939,15 +1241,31 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: GliessBasePDA
   name: gliess PDA
   description: You are the law.
   components:
   - type: Pda
-    state: pda-corpsec
+    state: pda-gliess
   - type: PdaBorderColor
     borderColor: "#808080"
+  - type: Sprite
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-gliess"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Crescent/Objects/Devices/pda.rsi
+    state: pda-gliess
 
 - type: entity
   parent: [GliessBasePDA, StreeCredRedeemableLow]
@@ -975,7 +1293,7 @@
 
 - type: entity
   abstract: true
-  parent: [BasePDA]
+  parent: [BaseHULLROTPDA]
   id: SpacerBasePDA
   name: spacer PDA
   description: You aren't the law.
