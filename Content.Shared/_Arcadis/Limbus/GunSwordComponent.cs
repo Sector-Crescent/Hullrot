@@ -37,5 +37,5 @@ public sealed partial class GunSwordAmmoComponent : Component
     public float KnockbackForce = 2f;
 
     [DataField, AutoNetworkedField]
-    public float ReflectChanceIncrease = 5;
+    public float ReflectChanceIncrease = 0.05f;
 }
