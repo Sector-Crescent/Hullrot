@@ -29,6 +29,7 @@
           position: "0,-0.5"
         hard: false
   - type: Sprite
+    snapCardinals: false
     sprite: Structures/Doors/Airlocks/Standard/shuttle.rsi
   - type: Wires
     layoutId: Docking
@@ -48,9 +49,6 @@
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:
       - South
-  - type: Tag
-    tags:
-      - ForceNoFixRotations
   - type: PaintableAirlock
     group: Shuttle
     department: null

@@ -31,6 +31,13 @@
   id: C_WallMining
   name: mining wall
   components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/reinforced_diagonalcurved.rsi
+    state: state0
+  - type: Icon
+    sprite:  Structures/Walls/reinforced_diagonalcurved.rsi
+    state: state0
   - type: Tag
     tags:
       - Wall
@@ -46,6 +53,8 @@
     key: walls
     base: state
   - type: Appearance
+
+
 #reinforced
 
 - type: entity

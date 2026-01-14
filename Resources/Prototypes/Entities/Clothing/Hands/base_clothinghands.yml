@@ -3,6 +3,8 @@
   parent: Clothing
   id: ClothingHandsBase
   components:
+  - type: StaticPrice
+    price: 50
   - type: Sprite
     state: icon
   - type: Clothing

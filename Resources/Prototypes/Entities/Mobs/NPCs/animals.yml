@@ -572,7 +572,7 @@
       amount: 1
   - type: Food
   - type: Hunger
-    currentHunger: 25   # spawn with Okay hunger state
+    lastAuthoritativeHungerValue: 25   # spawn with Okay hunger state
     thresholds:
       Overfed: 40
       Okay: 25
