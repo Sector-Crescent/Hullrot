@@ -1,4 +1,5 @@
 using Content.Shared.Examine;
+using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.GameStates;
@@ -91,8 +92,8 @@ public abstract partial class SharedGunSystem
                 args.ShootPrototype = proto;
                 break;
             case HitscanBatteryAmmoProviderComponent hitscan:
-                ProtoManager.TryIndex(hitscan.HitscanEntityProto, out var hitProto);
-                args.ShootPrototype = hitProto;
+                ProtoManager.TryIndex<HitscanPrototype>(hitscan.Prototype, out var hitProto);
+                args.HitscanProto = hitProto;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

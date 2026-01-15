@@ -50,6 +50,12 @@ public sealed partial class ShipMoveToOperator : HTNOperator, IHtnConditionalShu
     public bool AvoidCollisions = true;
 
     /// <summary>
+    /// Whether to avoid shipgun projectiles.
+    /// </summary>
+    [DataField]
+    public bool AvoidProjectiles = false;
+
+    /// <summary>
     /// How unwilling we are to use brake to adjust our velocity. Higher means less willing.
     /// </summary>
     [DataField]
@@ -171,6 +177,7 @@ public sealed partial class ShipMoveToOperator : HTNOperator, IHtnConditionalShu
 
         comp.AlwaysFaceTarget = AlwaysFaceTarget;
         comp.AvoidCollisions = AvoidCollisions;
+        comp.AvoidProjectiles = AvoidProjectiles;
         comp.BrakeThreshold = BrakeThreshold;
         comp.FinishOnCollide = FinishOnCollide;
         comp.InRangeMaxSpeed = InRangeMaxSpeed;

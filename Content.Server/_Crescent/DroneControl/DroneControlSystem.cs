@@ -36,9 +36,7 @@ public sealed class DroneControlSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<DroneControlConsoleComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerbs);
-        SubscribeLocalEvent<DroneControlConsoleComponent, DeviceListUpdateEvent>(OnListUpdate);
 
-        SubscribeLocalEvent<DroneControlConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
         SubscribeLocalEvent<DroneControlConsoleComponent, DroneConsoleMoveMessage>(OnMoveMsg);
         SubscribeLocalEvent<DroneControlConsoleComponent, DroneConsoleTargetMessage>(OnTargetMsg);
 

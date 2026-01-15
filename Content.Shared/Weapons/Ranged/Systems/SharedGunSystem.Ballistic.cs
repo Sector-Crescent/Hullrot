@@ -303,7 +303,7 @@ public abstract partial class SharedGunSystem
             var ammo = ent.Comp.Entities[^1];
             args.ShootPrototype = MetaData(ammo).EntityPrototype;
         }
-        else if (ent.Comp.UnspawnedCount > 0 || ent.Comp.InfiniteUnspawned)
+        else if (ent.Comp.UnspawnedCount > 0)
         {
             ProtoManager.TryIndex(ent.Comp.Proto, out var proto);
             args.ShootPrototype = proto;

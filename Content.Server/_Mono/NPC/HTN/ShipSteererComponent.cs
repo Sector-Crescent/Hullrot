@@ -25,6 +25,12 @@ public sealed partial class ShipSteererComponent : Component
     public bool AlwaysFaceTarget = false;
 
     /// <summary>
+    /// Whether to avoid shipgun projectiles.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool AvoidProjectiles = false;
+
+    /// <summary>
     /// If AlwaysFaceTarget is true, how much of a difference in angle (in radians) to accept.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
@@ -109,6 +115,19 @@ public sealed partial class ShipSteererComponent : Component
     public float MaxObstructorDistance = 800f;
 
     /// <summary>
+    /// Ignore obstacles this close to our destination grid if moving to a grid, + other grid's radius.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float MinObstructorDistance = 20f;
+
+    /// <summary>
+    /// Don't finish early even if we've completed our order.
+    /// Use to keep doing collision detection when we're supposed to finish on plan finish.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool NoFinish = false;
+
+    /// <summary>
     /// What movement behavior to use.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
@@ -155,6 +174,12 @@ public sealed partial class ShipSteererComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     public float TargetRotation = 0f;
+
+    /// <summary>
+    /// Controls how much to ease in when turning with really high angular accelerations.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float TurnEaseIn = 0.2f;
 }
 
 public enum ShipSteeringStatus : byte
