@@ -7,4 +7,4 @@ namespace Content.Shared.Weapons.Ranged.Events;
 /// Raised on a gun when it would like to check the prototype of the next shot ammo.
 /// </summary>
 [ByRefEvent]
-public record struct CheckShootPrototypeEvent(EntityPrototype? ShootPrototype = null);
+public record struct CheckShootPrototypeEvent(EntityPrototype? ShootPrototype = null, HitscanPrototype? HitscanProto = null);

@@ -989,17 +989,19 @@ public abstract partial class SharedGunSystem : EntitySystem
     }
 
     // Mono
-    public bool TryNextShootPrototype(Entity<GunComponent?> gun, [NotNullWhen(true)] out EntityPrototype? proto)
+    public bool TryNextShootPrototype(Entity<GunComponent?> gun, out EntityPrototype? proto, out HitscanPrototype? hitscan)
     {
         proto = null;
+        hitscan = null;
         if (!Resolve(gun, ref gun.Comp))
             return false;
 
         var checkEv = new CheckShootPrototypeEvent();
         RaiseLocalEvent(gun, ref checkEv);
         proto = checkEv.ShootPrototype;
+        hitscan = checkEv.HitscanProto;
 
-        return proto != null;
+        return proto != null || hitscan != null;
     }
 
     // Mono
