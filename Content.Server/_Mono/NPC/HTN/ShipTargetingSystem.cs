@@ -1,13 +1,12 @@
 using Content.Server.PointCannons;
 using Content.Shared.PointCannons;
-using Content.Shared.Weapons.Ranged;
+using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Spawners;
 using System.Numerics;
 
@@ -16,7 +15,6 @@ namespace Content.Server._Mono.NPC.HTN;
 public sealed partial class ShipTargetingSystem : EntitySystem
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly PointCannonSystem _cannon = default!;
     [Dependency] private readonly SharedGunSystem _gun = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
@@ -108,25 +106,24 @@ public sealed partial class ShipTargetingSystem : EntitySystem
             if (TerminatingOrDeleted(uid))
                 continue;
 
-            var gXform = Transform(uid);
-
-            if (!gXform.Anchored || !_gunQuery.TryComp(uid, out var gun))
+            if (!_gunQuery.TryComp(uid, out var gun))
                 continue;
 
             var hitTime = 0f;
             var leadBy = Vector2.Zero;
-            if (_gun.TryNextShootPrototype((uid, gun), out var entProto, out var hitscanProto))
+            if (_gun.TryNextShootPrototype((uid, gun), out var proto))
             {
                 var gunToDestVec = destMapPos.Position - _transform.GetWorldPosition(gXform);
 
-                if (hitscanProto is { } hitscan)
+                if (proto.TryGetComponent<HitscanAmmoComponent>(out var hitscan, Factory))
                 {
                     // check if too far
-                    if (hitscan.MaxLength < gunToDestVec.Length()
+                    if (proto.TryGetComponent<HitscanBasicRaycastComponent>(out var raycast, Factory)
+                        && raycast.MaxDistance < gunToDestVec.Length()
                     )
                         continue;
                 }
-                else if (entProto is { } proto)
+                else
                 {
                     var centerToGunVec = gXform.LocalPosition - shipBody.LocalCenter;
                     // rotate 90deg left
