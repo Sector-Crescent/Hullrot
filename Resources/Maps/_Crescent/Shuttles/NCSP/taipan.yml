@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/25/2025 02:46:23
+  time: 01/16/2026 15:42:53
   entityCount: 385
 maps: []
 grids:
@@ -59,7 +59,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      baseMaxLinearVelocity: 30
+      baseMaxLinearVelocity: 25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -239,6 +239,15 @@ entities:
             403: -3,-2
             413: -2,-1
             419: -1,-14
+            449: -2,0
+            454: -2,1
+            459: -2,2
+            471: 3,-10
+            486: 5,-6
+            499: -3,-10
+            506: -3,-2
+            516: -2,-1
+            522: -1,-14
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -267,6 +276,14 @@ entities:
             385: 5,-6
             398: -3,-10
             416: -2,-1
+            435: 3,2
+            440: 3,3
+            462: -2,2
+            468: 1,-14
+            473: 3,-10
+            488: 5,-6
+            501: -3,-10
+            519: -2,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -301,6 +318,16 @@ entities:
             401: -3,-2
             406: -3,-1
             411: -2,-1
+            422: 0,8
+            425: 1,8
+            447: -2,0
+            452: -2,1
+            457: -2,2
+            465: -1,7
+            481: 5,-10
+            504: -3,-2
+            509: -3,-1
+            514: -2,-1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -332,6 +359,15 @@ entities:
             380: 5,-10
             408: -3,-1
             415: -2,-1
+            427: 1,8
+            430: 2,8
+            434: 3,2
+            439: 3,3
+            443: 3,4
+            461: -2,2
+            483: 5,-10
+            511: -3,-1
+            518: -2,-1
         - node:
             id: LatticeEdgeE
           decals:
@@ -395,6 +431,26 @@ entities:
             405: -3,-1
             410: -2,-1
             417: -1,-14
+            421: 0,8
+            424: 1,8
+            444: -3,2
+            446: -2,0
+            451: -2,1
+            456: -2,2
+            464: -1,7
+            469: 3,-10
+            474: 4,-10
+            476: 4,-6
+            480: 5,-10
+            484: 5,-6
+            492: -4,-10
+            494: -4,-6
+            496: -4,-1
+            497: -3,-10
+            503: -3,-2
+            508: -3,-1
+            513: -2,-1
+            520: -1,-14
         - node:
             id: LatticeEdgeN
           decals:
@@ -440,6 +496,20 @@ entities:
             402: -3,-2
             412: -2,-1
             418: -1,-14
+            432: 3,2
+            437: 3,3
+            448: -2,0
+            453: -2,1
+            458: -2,2
+            466: 1,-14
+            470: 3,-10
+            478: 5,-12
+            485: 5,-6
+            490: -5,-12
+            498: -3,-10
+            505: -3,-2
+            515: -2,-1
+            521: -1,-14
         - node:
             id: LatticeEdgeS
           decals:
@@ -491,6 +561,22 @@ entities:
             399: -3,-2
             404: -3,-1
             409: -2,-1
+            420: 0,8
+            423: 1,8
+            428: 2,8
+            431: 3,2
+            436: 3,3
+            441: 3,4
+            445: -2,0
+            450: -2,1
+            455: -2,2
+            463: -1,7
+            479: 5,-10
+            489: 5,-4
+            491: -5,-4
+            502: -3,-2
+            507: -3,-1
+            512: -2,-1
         - node:
             id: LatticeEdgeW
           decals:
@@ -545,6 +631,23 @@ entities:
             397: -3,-10
             407: -3,-1
             414: -2,-1
+            426: 1,8
+            429: 2,8
+            433: 3,2
+            438: 3,3
+            442: 3,4
+            460: -2,2
+            467: 1,-14
+            472: 3,-10
+            475: 4,-10
+            477: 4,-6
+            482: 5,-10
+            487: 5,-6
+            493: -4,-10
+            495: -4,-6
+            500: -3,-10
+            510: -3,-1
+            517: -2,-1
         - node:
             color: '#DE3A3A96'
             id: TrimlineEastEnd
@@ -760,35 +863,21 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-- proto: AAAHardpointSmallBallistic
+- proto: AAAHardpointSmallMissile
   entities:
   - uid: 3
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-4.5
+      rot: -1.5707963267948966 rad
+      pos: -5.5,-10.5
       parent: 1
     - type: Physics
       canCollide: False
   - uid: 4
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: -1.5707963267948966 rad
       pos: -5.5,-4.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 5
-    components:
-    - type: Transform
-      pos: 6.5,-10.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 6
-    components:
-    - type: Transform
-      pos: -5.5,-10.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -988,36 +1077,20 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,-13.5
       parent: 1
-- proto: BaseWeaponTurretHeavyPlasma
+- proto: BaseWeaponTurretShortbowGorlex
   entities:
-  - uid: 30
+  - uid: 5
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,5.5
+      rot: -1.5707963267948966 rad
+      pos: -5.5,-10.5
       parent: 1
-    - type: PointCannon
-      linkedConsoleIds:
-      - 156
-      linkedConsoleId: 156
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
+  - uid: 384
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,-4.5
+      parent: 1
 - proto: BedsheetBrigmedic
   entities:
   - uid: 31
@@ -1033,17 +1106,11 @@ entities:
     - type: Transform
       pos: 1.5,7.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 266
   - uid: 33
     components:
     - type: Transform
       pos: 0.5,7.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 266
 - proto: BlastDoorExterior1
   entities:
   - uid: 34
@@ -1052,18 +1119,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -0.5,0.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 267
   - uid: 35
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 267
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 36
@@ -1090,6 +1151,27 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
+- proto: C_ComputerTabletopShuttle
+  entities:
+  - uid: 155
+    components:
+    - type: Transform
+      pos: 1.5,6.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: CableApcExtension
   entities:
   - uid: 39
@@ -1690,27 +1772,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -0.5,-9.5
       parent: 1
-- proto: ComputerTabletopShuttle
-  entities:
-  - uid: 155
-    components:
-    - type: Transform
-      pos: 1.5,6.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: ComputerTabletopTargeting
   entities:
   - uid: 156
@@ -1718,12 +1779,6 @@ entities:
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
-    - type: TargetingConsole
-      cannonGroups:
-        all:
-        - 30
-        350c "Compakt" hybrid energy gatling:
-        - 30
 - proto: CrescentSuitStorageWallmountTSFCVacsuit
   entities:
   - uid: 157
@@ -2621,6 +2676,32 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.58043385,3.5531514
       parent: 1
+  - uid: 383
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.38114515,3.65657
+      parent: 1
+- proto: ThrowingStar
+  entities:
+  - uid: 6
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.14489523,3.4878201
+      parent: 1
+  - uid: 382
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.54989517,3.2853203
+      parent: 1
+  - uid: 385
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5836452,3.8590703
+      parent: 1
 - proto: ThrusterNCSPWarship
   entities:
   - uid: 284
@@ -3181,124 +3262,12 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-- proto: WeaponTurretVulcan
+- proto: WeaponTurretAbsolution
   entities:
-  - uid: 382
-    components:
-    - type: Transform
-      pos: -5.5,-10.5
-      parent: 1
-    - type: PointCannon
-      linkedConsoleId: 156
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 383
-    components:
-    - type: Transform
-      pos: 6.5,-10.5
-      parent: 1
-    - type: PointCannon
-      linkedConsoleId: 156
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 384
+  - uid: 30
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 6.5,-4.5
+      pos: -1.5,5.5
       parent: 1
-    - type: PointCannon
-      linkedConsoleId: 156
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 385
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,-4.5
-      parent: 1
-    - type: PointCannon
-      linkedConsoleId: 156
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 ...

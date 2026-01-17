@@ -1,0 +1,13 @@
+﻿- type: entity
+  id: PelletShotgun18g
+  name: pellet (18.5g buckshot)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 14 # 14 x 10 = 140

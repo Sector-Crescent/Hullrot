@@ -28,7 +28,6 @@ using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
 using Robust.Shared.Configuration;
-using Content.Shared.Telescope;
 using Robust.Shared.Utility;
 
 namespace Content.Server.GameTicking.Rules;

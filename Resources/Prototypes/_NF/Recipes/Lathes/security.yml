@@ -1,5 +1,14 @@
-- type: latheRecipe
-  abstract: true
-  id: BaseAmmoRecipe
-  category: Ammo
-  completetime: 5
+
+- type: latheRecipe # novalite mag empty
+  id: MagazineNovaliteC1Empty
+  parent: BaseEmptyAmmoRecipe
+  result: MagazineNovaliteC1Empty
+  materials:
+    Steel: 20
+
+- type: latheRecipe # novalite mag
+  id: MagazineNovaliteC1
+  parent: BaseAmmoRecipe
+  result: MagazineNovaliteC1
+  materials:
+    Steel: 245 # 20 [Steel per empty mag] + 15 [bullets] * 15 [Steel per bullet]

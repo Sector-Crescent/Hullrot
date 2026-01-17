@@ -7,7 +7,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunPlasmaRepeater
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -19,7 +19,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunExhumer
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -31,7 +31,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunBizmuth
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -43,7 +43,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunTorpedo
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -55,7 +55,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunKurosawa
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -67,7 +67,7 @@
   components:
     - type: MachineBoard
       prototype: ShuttleGunMissileRack
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -79,7 +79,7 @@
   components:
     - type: MachineBoard
       prototype: SlugthrowerCannon
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -91,7 +91,7 @@
   components:
     - type: MachineBoard
       prototype: HardlineBeamPulser
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -103,7 +103,7 @@
   components:
     - type: MachineBoard
       prototype: Type99Artillery
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -115,7 +115,7 @@
   components:
     - type: MachineBoard
       prototype: AcceleratorCannon
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -127,7 +127,7 @@
   components:
     - type: MachineBoard
       prototype: NTVulcanTurret
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -139,7 +139,7 @@
   components:
     - type: MachineBoard
       prototype: SAWCleanser
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -151,7 +151,7 @@
   components:
     - type: MachineBoard
       prototype: WaspSwarmPlatform
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -163,7 +163,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretPDT
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -175,7 +175,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretPDTAdvanced
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -187,7 +187,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretVulcan
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -199,7 +199,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretSwarmer
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -211,7 +211,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretCoilgun
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -223,7 +223,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretMortar
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -235,7 +235,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretLaser
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -247,7 +247,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretSmartbomb
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -259,7 +259,7 @@
   components:
     - type: MachineBoard
       prototype: WeaponTurretNeedler
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -271,7 +271,7 @@
   components:
     - type: MachineBoard
       prototype: PointNFireCannonExample
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -283,7 +283,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretGargoyle
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -295,7 +295,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretLancer
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -307,7 +307,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretBattlemortar
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -319,7 +319,7 @@
   components:
     - type: MachineBoard
       prototype: FlakCannonTurret
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -331,7 +331,7 @@
   components:
     - type: MachineBoard
       prototype: CatapultTorpedo
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -343,7 +343,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretHeavyPlasmaRimward
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -355,7 +355,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretHeavyPlasma
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -367,7 +367,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretSolaris
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -379,7 +379,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretJeong
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -391,7 +391,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretMagwell
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -403,7 +403,7 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretSlugspitter
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -415,7 +415,7 @@
   components:
     - type: MachineBoard
       prototype: FlakCannonRegent
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -427,7 +427,7 @@
   components:
     - type: MachineBoard
       prototype: MissilePodSnapdragon
-      requirements:
+      machinePartRequirements:
         MatterBin: 1
 
 - type: entity
@@ -439,5 +439,5 @@
   components:
     - type: MachineBoard
       prototype: BaseWeaponTurretKomodo
-      requirements:
+      machinePartRequirements:
         MatterBin: 1

@@ -54,3 +54,7 @@
 "Changes: Workflow":
   - changed-files:
     - any-glob-to-any-file: ".github/workflows/*.yml"
+
+"Changes: Changes Upstream":
+  - changed-files:
+    - any-glob-to-any-file: "!**/_Crescent/**"

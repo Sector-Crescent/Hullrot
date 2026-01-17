@@ -21,13 +21,14 @@ public abstract partial class SharedGunSystem
         SubscribeLocalEvent<BallisticAmmoProviderComponent, ComponentInit>(OnBallisticInit);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, MapInitEvent>(OnBallisticMapInit);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, TakeAmmoEvent>(OnBallisticTakeAmmo);
+        SubscribeLocalEvent<BallisticAmmoProviderComponent, CheckShootPrototypeEvent>(OnBallisticCheckProto); // Mono
         SubscribeLocalEvent<BallisticAmmoProviderComponent, GetAmmoCountEvent>(OnBallisticAmmoCount);
 
         SubscribeLocalEvent<BallisticAmmoProviderComponent, ExaminedEvent>(OnBallisticExamine);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, GetVerbsEvent<Verb>>(OnBallisticVerb);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, InteractUsingEvent>(OnBallisticInteractUsing);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, AfterInteractEvent>(OnBallisticAfterInteract);
-        SubscribeLocalEvent<BallisticAmmoProviderComponent, MagazineFillDoAfterEvent>(OnMagazineFillDoAfter);
+        SubscribeLocalEvent<BallisticAmmoProviderComponent, AmmoFillDoAfterEvent>(OnBallisticAmmoFillDoAfter);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, AmmoInsertDoAfterEvent>(OnAmmoInsertDoAfter);
         SubscribeLocalEvent<BallisticAmmoProviderComponent, UseInHandEvent>(OnBallisticUse);
     }
@@ -102,17 +103,20 @@ public abstract partial class SharedGunSystem
 
         args.Handled = true;
 
-        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.FillDelay, new MagazineFillDoAfterEvent(), used: uid, target: args.Target, eventTarget: uid)
+        // Continuous loading
+        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.FillDelay, new AmmoFillDoAfterEvent(), used: uid, target: args.Target, eventTarget: uid)
         {
             BreakOnMove = true,
             BreakOnDamage = false,
-            NeedHand = true
+            NeedHand = true,
         });
     }
 
-    private void OnMagazineFillDoAfter(EntityUid uid, BallisticAmmoProviderComponent component, MagazineFillDoAfterEvent args)
+    private void OnBallisticAmmoFillDoAfter(EntityUid uid, BallisticAmmoProviderComponent component, AmmoFillDoAfterEvent args)
     {
-        if (Deleted(args.Target)
+        if (args.Handled
+            || args.Cancelled
+            || Deleted(args.Target)
             || !TryComp(args.Target, out BallisticAmmoProviderComponent? target)
             || target.Whitelist is null)
             return;
@@ -212,7 +216,10 @@ public abstract partial class SharedGunSystem
         if (Resolve(uid, ref gunComp, false)
             && gunComp is { FireRateModified: > 0f }
             && !Paused(uid))
+        {
             gunComp.NextFire = Timing.CurTime + TimeSpan.FromSeconds(1 / gunComp.FireRateModified);
+            Dirty(uid, gunComp);
+        }
 
         Dirty(uid, component);
         Audio.PlayPredicted(component.SoundRack, uid, user);
@@ -294,6 +301,21 @@ public abstract partial class SharedGunSystem
         Dirty(uid, component);
     }
 
+    // Mono
+    private void OnBallisticCheckProto(Entity<BallisticAmmoProviderComponent> ent, ref CheckShootPrototypeEvent args)
+    {
+        if (ent.Comp.Entities.Count > 0)
+        {
+            var ammo = ent.Comp.Entities[^1];
+            args.ShootPrototype = MetaData(ammo).EntityPrototype;
+        }
+        else if (ent.Comp.UnspawnedCount > 0)
+        {
+            ProtoManager.TryIndex(ent.Comp.Proto, out var proto);
+            args.ShootPrototype = proto;
+        }
+    }
+
     private void OnBallisticAmmoCount(EntityUid uid, BallisticAmmoProviderComponent component, ref GetAmmoCountEvent args)
     {
         args.Count = GetBallisticShots(component);
@@ -308,13 +330,24 @@ public abstract partial class SharedGunSystem
         Appearance.SetData(uid, AmmoVisuals.AmmoCount, GetBallisticShots(component), appearance);
         Appearance.SetData(uid, AmmoVisuals.AmmoMax, component.Capacity, appearance);
     }
+
+    public void SetBallisticUnspawned(Entity<BallisticAmmoProviderComponent> entity, int count)
+    {
+        if (entity.Comp.UnspawnedCount == count)
+            return;
+
+        entity.Comp.UnspawnedCount = count;
+        UpdateBallisticAppearance(entity.Owner, entity.Comp);
+        UpdateAmmoCount(entity.Owner);
+        Dirty(entity);
+    }
 }
 
 /// <summary>
 /// DoAfter event for filling one ballistic ammo provider from another.
 /// </summary>
 [Serializable, NetSerializable]
-public sealed partial class MagazineFillDoAfterEvent : SimpleDoAfterEvent { }
+public sealed partial class AmmoFillDoAfterEvent : SimpleDoAfterEvent { }
 
 /// <summary>
 /// HULLROT: DoAfter event for inserting a magazine/singular cartridge into a gun. Used exclusively for ship guns.

@@ -8,7 +8,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared.VendingMachines
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
     public sealed partial class VendingMachineComponent : Component
     {
         /// <summary>
@@ -21,31 +21,45 @@ namespace Content.Shared.VendingMachines
         /// Used by the server to determine how long the vending machine stays in the "Deny" state.
         /// Used by the client to determine how long the deny animation should be played.
         /// </summary>
-        [DataField("denyDelay")]
-        public float DenyDelay = 2.0f;
+        [DataField]
+        public TimeSpan DenyDelay = TimeSpan.FromSeconds(2);
 
         /// <summary>
         /// Used by the server to determine how long the vending machine stays in the "Eject" state.
         /// The selected item is dispensed afer this delay.
         /// Used by the client to determine how long the deny animation should be played.
         /// </summary>
-        [DataField("ejectDelay")]
-        public float EjectDelay = 1.2f;
+        [DataField]
+        public TimeSpan EjectDelay = TimeSpan.FromSeconds(1.2);
 
-        [ViewVariables]
+        [DataField]
         public Dictionary<string, VendingMachineInventoryEntry> Inventory = new();
 
-        [ViewVariables]
+        [DataField]
         public Dictionary<string, VendingMachineInventoryEntry> EmaggedInventory = new();
 
-        [ViewVariables]
+        [DataField]
         public Dictionary<string, VendingMachineInventoryEntry> ContrabandInventory = new();
 
         public bool Contraband;
 
-        public bool Ejecting;
-        public bool Denying;
-        public bool DispenseOnHitCoolingDown;
+        [ViewVariables]
+        public bool Ejecting => EjectEnd != null;
+
+        [ViewVariables]
+        public bool Denying => DenyEnd != null;
+
+        [ViewVariables]
+        public bool DispenseOnHitCoolingDown => DispenseOnHitEnd != null;
+
+        [DataField, AutoPausedField]
+        public TimeSpan? EjectEnd;
+
+        [DataField, AutoPausedField]
+        public TimeSpan? DenyEnd;
+
+        [DataField]
+        public TimeSpan? DispenseOnHitEnd;
 
         public string? NextItemToEject;
 
@@ -79,8 +93,8 @@ namespace Content.Shared.VendingMachines
         ///     0 for a vending machine for legitimate reasons (no desired delay/no eject animation)
         ///     and can be circumvented with forced ejections.
         /// </summary>
-        [DataField("dispenseOnHitCooldown")]
-        public float? DispenseOnHitCooldown = 1.0f;
+        [DataField]
+        public TimeSpan? DispenseOnHitCooldown = TimeSpan.FromSeconds(1.0);
 
         /// <summary>
         ///     Sound that plays when ejecting an item
@@ -101,17 +115,6 @@ namespace Content.Shared.VendingMachines
         [DataField("soundDeny")]
         // Yoinked from: https://github.com/discordia-space/CEV-Eris/blob/35bbad6764b14e15c03a816e3e89aa1751660ba9/sound/machines/Custom_deny.ogg
         public SoundSpecifier SoundDeny = new SoundPathSpecifier("/Audio/Machines/custom_deny.ogg");
-
-        /// <summary>
-        ///     The action available to the player controlling the vending machine
-        /// </summary>
-        [DataField("action", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-        [AutoNetworkedField]
-        public string? Action = "ActionVendingThrow";
-
-        [DataField("actionEntity")]
-        [AutoNetworkedField]
-        public EntityUid? ActionEntity;
 
         public float NonLimitedEjectForce = 7.5f;
 
@@ -213,6 +216,13 @@ namespace Content.Shared.VendingMachines
             ID = id;
             Amount = amount;
         }
+        public VendingMachineInventoryEntry(VendingMachineInventoryEntry entry)
+        {
+            Type = entry.Type;
+            ID = entry.ID;
+            Amount = entry.Amount;
+            Price = entry.Price;
+        }
     }
 
     [Serializable, NetSerializable]
@@ -272,4 +282,22 @@ namespace Content.Shared.VendingMachines
     {
 
     };
+
+    [Serializable, NetSerializable]
+    public sealed class VendingMachineComponentState : ComponentState
+    {
+        public Dictionary<string, VendingMachineInventoryEntry> Inventory = new();
+
+        public Dictionary<string, VendingMachineInventoryEntry> EmaggedInventory = new();
+
+        public Dictionary<string, VendingMachineInventoryEntry> ContrabandInventory = new();
+
+        public bool Contraband;
+
+        public TimeSpan? EjectEnd;
+
+        public TimeSpan? DenyEnd;
+
+        public TimeSpan? DispenseOnHitEnd;
+    }
 }
