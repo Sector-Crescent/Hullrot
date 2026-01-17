@@ -21,6 +21,10 @@
     Termite:
       stationProto: StandardCrescentCivilianVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: civilian
         - type: StationNameSetup
           mapNameTemplate: 'ICM Termite {1}'
           nameGenerator:

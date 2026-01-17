@@ -74,6 +74,10 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: outpost
     - type: MetaData
       name: Shuttle BET-454
     - type: Transform

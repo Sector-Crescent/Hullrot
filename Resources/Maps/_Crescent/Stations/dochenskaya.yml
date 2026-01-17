@@ -32,6 +32,10 @@ entities:
     components:
     - type: MetaData
       name: Shuttle KXZ-911
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: station
     - type: Transform
       pos: -0.54461765,-0.6672447
       parent: invalid

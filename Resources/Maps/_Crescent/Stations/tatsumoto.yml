@@ -17365,6 +17365,9 @@ entities:
     - type: BecomesStation
       id: Tatsumoto
     - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: outpost
 - proto: AAAHardpointLargeBallistic
   entities:
   - uid: 2

@@ -154,6 +154,7 @@
         removeKeyOnFinish: true
         inRangeMaxSpeed: 0.1
         range: 15
+        maxRotateRate: 0
         leadingEnabled: false # nothing to lead
         alwaysFaceTarget: true
         targetKey: DroneTarget
@@ -170,7 +171,7 @@
         inRangeMaxSpeed: null # orbit as fast as we can
         range: 250
         rangeTolerance: 50
-        targetKey: ShootTarget
+        targetKey: DroneTarget
         mode: Orbit
     - !type:HTNPrimitiveTask
       operator: !type:ShipFireGunsOperator

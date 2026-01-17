@@ -74,6 +74,10 @@ entities:
     components:
     - type: MetaData
       name: grid
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: station
     - type: Transform
       pos: -0.4851277,-0.50743294
       parent: invalid

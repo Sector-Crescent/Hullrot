@@ -26,6 +26,10 @@ entities:
   entities:
   - uid: 2
     components:
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: scrap
     - type: MetaData
       name: grid
     - type: Transform
