@@ -456,6 +456,32 @@ public abstract partial class SharedGunSystem : EntitySystem
         TransformSystem.SetWorldRotation(uid, direction.ToWorldAngle() + projectile.Angle);
     }
 
+    // Mono
+    public bool TryNextShootPrototype(Entity<GunComponent?> gun, out EntityPrototype? proto, out HitscanPrototype? hitscan)
+    {
+        proto = null;
+        hitscan = null;
+        if (!Resolve(gun, ref gun.Comp))
+            return false;
+
+        var checkEv = new CheckShootPrototypeEvent();
+        RaiseLocalEvent(gun, ref checkEv);
+        proto = checkEv.ShootPrototype;
+        hitscan = checkEv.HitscanProto;
+
+        return proto != null || hitscan != null;
+    }
+
+    // Mono
+    public EntityPrototype GetBulletPrototype(EntityPrototype cartridge)
+    {
+        if (cartridge.TryGetComponent<CartridgeAmmoComponent>(out var cartComp, Factory))
+        {
+            return ProtoManager.Index(cartComp.Prototype);
+        }
+        return cartridge;
+    }
+
     protected abstract void Popup(string message, EntityUid? uid, EntityUid? user);
 
     // HULLROT-Patch: made public

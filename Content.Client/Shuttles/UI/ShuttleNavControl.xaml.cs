@@ -274,7 +274,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var relativeWorldPos = new Vector2(a.X, -a.Y);
         relativeWorldPos = _rotation.Value.RotateVec(relativeWorldPos);
         var coords = _coordinates.Value.Offset(relativeWorldPos);
-        OnRadarClick?.Invoke(coords);
+        // OnRadarClick?.Invoke(coords);
         OnRadarRelease?.Invoke();
     }
 
