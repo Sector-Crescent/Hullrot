@@ -6,7 +6,7 @@
   name: PTA Hammerhead
   description: |
     Common warship designed by Pang Tai Arms, intended as a generalized frontliner vessel, having medical, cargo, mining, and security modules.
-    LOADOUT: 6x 20x135mm PDT, 2x 100m "Lancer" Missile Lanuchers
+    LOADOUT: 6x 20mm 'Screamer' light autocannons, 2x 48mm 'Shortbow' rocket pods, 2x 120mm 'Pithatis' mono-barreled artillery cannons
     MINIMUM CREW: 1x Pilot, 1x Gunner
   price: 160000
   category: Large
@@ -25,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: cruiser
+            state: large_industrial
         - type: StationNameSetup
           mapNameTemplate: 'PTA Hammerhead {1}'
           nameGenerator:

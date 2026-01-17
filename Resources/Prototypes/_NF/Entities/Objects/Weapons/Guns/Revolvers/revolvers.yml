@@ -20,14 +20,3 @@
     ammoSlots: [ null, null, null, null, null, null, null, null ]
   - type: StaticPrice
     price: 200
-
-- type: entity
-  parent: WeaponRevolverArgenti
-  id: WeaponRevolverArgentiEmpty
-  suffix: Empty
-  components:
-  - type: RevolverAmmoProvider
-    capacity: 5
-    proto: CartridgeMagnumRubber
-    chambers: [ True, True, True, True, True ]
-    ammoSlots: [ null, null, null, null, null ]

@@ -19,6 +19,10 @@
     Birdie:
       stationProto: StandardCrescentExpeditionVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: civilian
         - type: StationNameSetup
           mapNameTemplate: 'ICM Birdie {1}'
           nameGenerator:

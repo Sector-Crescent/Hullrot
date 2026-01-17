@@ -11,6 +11,10 @@ entities:
     components:
     - type: MetaData
       name: grid
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: scrap
     - type: Transform
       pos: -0.67133117,-0.6939551
       parent: invalid

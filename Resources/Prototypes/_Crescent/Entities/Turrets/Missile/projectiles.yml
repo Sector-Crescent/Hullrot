@@ -319,7 +319,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 8
+    lifetime: 11 #roughly 1,035-1,060-1,075m range depending on shipgun
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -386,7 +386,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 12
+    lifetime: 14 #roughly 1,345-1,360-1,375m range depending on shipgun
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -453,7 +453,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 7 #roughly 795-810-825m range depending on shipgun
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -522,7 +522,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 12
+    lifetime: 18 #roughly 1,480m range
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -546,7 +546,7 @@
     acceleration: 25
     topSpeed: 80
     fieldOfView: 75
-    defaultSeekingRange: 1000
+    defaultSeekingRange: 1500
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
     fixtures:
@@ -590,7 +590,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 15
+    lifetime: 23 #roughly 1,880m range
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:

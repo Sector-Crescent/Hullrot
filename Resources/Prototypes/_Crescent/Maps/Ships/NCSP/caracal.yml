@@ -4,7 +4,10 @@
 - type: vessel
   id: Caracal
   name: SAW Caracal
-  description: Retroffited shipbreaker fighter platform.
+  description: |
+    Retroffited shipbreaker fighter platform.
+    LOADOUT: 3x 20mm 'Screamer' light carbine reapeater cannons, 2x 50mm 'Whistler' light autocannons, 1x 60mm 'Azimuth rapid fire LML system (TFSC edition)
+    MINIMUM CREW: 1x Pilot, 1x Gunner
   price: 60000
   category: Small
   group: None
@@ -19,6 +22,10 @@
     Caracal:
       stationProto: StandardCrescentVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: destroyer
         - type: StationNameSetup
           mapNameTemplate: 'SAW Caracal {1}'
           nameGenerator:
