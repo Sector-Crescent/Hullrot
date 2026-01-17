@@ -563,3 +563,59 @@
     - type: HardpointAnchorableOnly
       class: Missile
       size: Large
+
+#pila
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: BaseWeaponTurretPila
+  suffix: ShipGun
+  name: 30mm 'Pila' minirocket swarmer platform
+  description: A small 
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Missile/pila.rsi
+      drawdepth: Mobs
+      layers:
+        - state: pila
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ProjectileIFF
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 25
+      fireRate: 4
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 5
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: PilaRocketProjectile
+      capacity: 25
+      count: 25
+    - type: ApcPowerReceiver
+      powerLoad: 1000
+    - type: HardpointAnchorableOnly
+      class: Missile
+      size: Small

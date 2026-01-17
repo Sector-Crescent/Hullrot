@@ -4,6 +4,8 @@
   name: duffel bag
   description: A large duffel bag for holding extra things.
   components:
+  - type: StaticPrice
+    price: 100
   - type: Sprite
     sprite: Clothing/Back/Duffels/duffel.rsi
   - type: Storage
