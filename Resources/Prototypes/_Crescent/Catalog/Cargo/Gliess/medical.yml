@@ -39,6 +39,17 @@
   group: gliess
 
 - type: cargoProduct
+  id: VitalsTrackingSpacerSuppliesGliess
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateVitalsTrackingSpacer
+  cost: 750
+  category: cargoproduct-category-name-medical
+  group: gliess
+
+
+- type: cargoProduct
   id: VitalsTrackingIPMSuppliesGliess
   icon:
     sprite: Objects/Specific/Medical/implanter.rsi
