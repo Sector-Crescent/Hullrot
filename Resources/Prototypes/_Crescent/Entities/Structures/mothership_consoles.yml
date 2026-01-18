@@ -12,6 +12,17 @@
     - Cherenzikov
     - Ivarod
 
+
+- type: entity
+  id: NCWLCarrierShipyard
+  parent: BaseMothershipComputer
+  name: carrier shipyard
+  suffix: NCWL
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - HornetNCWL
+
 - type: entity
   id: JackalMothershipComputer
   parent: BaseMothershipComputer
