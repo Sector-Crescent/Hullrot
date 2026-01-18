@@ -9,6 +9,11 @@
     - DSM
     - SHI
     - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
 
 - type: npcFaction
   id: TFSC
@@ -18,6 +23,11 @@
     - DSM
     - SHI
     - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
 
 - type: npcFaction
   id: DSM
@@ -27,6 +37,11 @@
     # - DSM
     - SHI
     - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
 
 - type: npcFaction
   id: SHI
@@ -36,6 +51,11 @@
     - DSM
     # - SHI
     - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
 
 - type: npcFaction
   id: IND #independents
@@ -45,3 +65,78 @@
     - DSM
     - SHI
     # - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
+    
+- type: npcFaction
+  id: SRM #SRM
+  hostile:
+    - NCWL
+    - TFSC
+    - DSM
+    - SHI
+    - IND
+    # - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN
+
+- type: npcFaction
+  id: TAP #TAP
+  hostile:
+    - NCWL
+    - TFSC
+    - DSM
+    - SHI
+    - IND
+    - SRM
+    # - TAP
+    - NAP
+    - ATH
+    - UNKWN
+
+- type: npcFaction
+  id: NAP
+  hostile:
+    - NCWL
+    - TFSC
+    - DSM
+    - SHI
+    - IND
+    - SRM
+    - TAP
+    # - NAP
+    - ATH
+    - UNKWN
+    
+- type: npcFaction
+  id: ATH
+  hostile:
+    - NCWL
+    - TFSC
+    - DSM
+    - SHI
+    - IND
+    - SRM
+    - TAP
+    - NAP
+    # - ATH
+    - UNKWN
+    
+- type: npcFaction
+  id: UNKWN #Unknown
+  hostile:
+    - NCWL
+    - TFSC
+    - DSM
+    - SHI
+    - IND
+    - SRM
+    - TAP
+    - NAP
+    - ATH
+    - UNKWN

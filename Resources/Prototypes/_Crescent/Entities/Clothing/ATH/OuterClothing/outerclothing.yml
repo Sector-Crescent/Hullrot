@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitAuthorityPanzer
   name: heavy 'Panzer' mk II combat hardsuit
   description: A heavy shocktrooper's combat hardsuit belonging to the 43rd Battlegroup of the Authoritat.
@@ -33,6 +33,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitAuthorityPanzer
   - type: StaticPrice
     price: 4500
+  - type: ClothingAddFaction
+    faction: ATH
 
 #coats
 

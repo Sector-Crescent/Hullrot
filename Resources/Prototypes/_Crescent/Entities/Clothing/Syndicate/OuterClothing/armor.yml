@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitRamzi
   name: LUGNUT mk.I combat technician's hardsuit
   description: A modular hardsuit, bears the colors of the Shipfitters and Astronautics Workers Union of the Syndicate.
@@ -39,7 +39,7 @@
 
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitSyndieDonator
   name: UNIONIZER modified combat technician's hardsuit
   description: A modular hardsuit, bears the colors of the Shipfitters and Astronautics Workers Union of the Syndicate. Hard-worn and modified after many years of use.
@@ -102,7 +102,7 @@
     faction: TFSC
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitSyndicateBG
   name: BULWARK mk.II frontliner hardsuit
   description: A modular hardsuit painted in the colors of the Syndicate. Bulky nanokevlar pads the light titanium skeleton, shielding flimsy electronics and the fleshy operator underneath.
@@ -144,7 +144,7 @@
     - Bulwark
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitTraumasec
   name: interdyne traumasec hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for Interdyne TraumaSec officers.
@@ -178,7 +178,7 @@
     faction: TFSC
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCoordinator
   name: interdyne coordinator hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for Interdyne coordinators.
@@ -242,6 +242,148 @@
   - type: Construction
     graph: Freiritter
     node: armor
+  - type: ClothingAddFaction
+    faction: TFSC
+
+- type: entity
+  parent: C_ClothingOuterHardsuitBase
+  id: C_ClothingOuterHardsuitSyndieMedic
+  name: NCSP mk.IV "Zhongyao" hardsuit
+  description: A heavily armored and agile advanced hardsuit specifically designed for special operations.
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: DegradeableArmor
+    armorMaxHealth: 700
+    armorType: Metallic
+    armorRepair: SteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 30
+        Slash: 25
+        Piercing: 65
+        Heat: 15
+        Caustic: 15
+        Radiation: 35
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/syndicate_agent.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/syndicate_agent.rsi
+    clothingVisuals:  
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-glow
+        shader: unshaded
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSyndieMedic
+  - type: ClothingAddFaction
+    faction: TFSC
+
+- type: entity
+  parent: C_ClothingOuterHardsuitBase
+  id: C_ClothingOuterHardsuitSyndie
+  name: NCSP mk.III "Shanlin" hardsuit
+  description: A heavily armored hardsuit designed for work in special operations. Property of Gorlex Marauders.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/syndicate.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/syndicate.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-glow
+        shader: unshaded
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: DegradeableArmor
+    armorMaxHealth: 700
+    armorType: Metallic
+    armorRepair: SteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 30
+        Slash: 25
+        Piercing: 65
+        Heat: 15
+        Caustic: 15
+        Radiation: 35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSyndie
+  - type: ClothingAddFaction
+    faction: TFSC
+
+- type: entity
+  parent: [C_ClothingOuterHardsuitBase, BaseIntegratedMagboot, BaseIntegratedManeuveringThrusters]
+  id: C_ClothingOuterHardsuitCybersunStealth
+  suffix: stealth
+  name: CDT mk-1 "Egui" tacsuit
+  description: A hardsuit with stealth plating for operations, the shielding doesn't work while you're moving though! Needs the helmet on to finish the stealth field.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/Syndicate/OuterClothing/cybersunstealth.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _Crescent/Clothing/Syndicate/OuterClothing/cybersunstealth.rsi
+    #onEquipFunctions:
+    #  - !type:TraitAddComponent
+    #    components:
+   #       - type: BreakStealthOnAttack
+   # onUnequipFunctions:
+    #  - !type:TraitRemoveComponent
+     #   components:
+     #     - type: BreakStealthOnAttack
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: DegradeableArmor
+    armorMaxHealth: 600
+    armorType: Metallic
+    armorRepair: SteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 10
+        Slash: 25
+        Piercing: 45
+        Heat: 15
+        Caustic: 15
+        Radiation: 25
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCybersunStealth
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  - type: EmitsSoundOnMove
+    soundCollection:
+      collection: FootstepHardsuitLight
+      params:
+        volume: -15
+        maxDistance: 4
+        rolloffFactor: 1.2
+        # SIGNIFICANTLY Quieter than a normal hardsuit, but not perfectly stealthy. If you move while people are close enough, they can still hear it.
+  - type: ClothingAddFaction
+    faction: TFSC
 
 #regular shit. if you put hardsuit below here i'm going to explode your cock
 

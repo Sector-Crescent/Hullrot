@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitImperialWorker
   name: imperial worker hardsuit
   description: A modular worker's hardsuit, bears the colors of the Kaiser and House Olywir.
@@ -37,7 +37,7 @@
     faction: DSM
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitInspector
   name: mk. IV 'ORATEUR' combat hardsuit
   description: A modular combat hardsuit for the Advocati Compliance Corps. Bears the colors of the Kaiser's administration.
@@ -73,7 +73,7 @@
     faction: DSM
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitClarizianWorker
   name: clarizian maintenance hardsuit
   description: A modular worker's hardsuit, bears the colors of the Queen.
@@ -135,7 +135,7 @@
     faction: DSM
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitClarize
   name: royal trooper's hardsuit
   description: A modular trooper's hardsuit, bears the colors of the Queen.
@@ -171,7 +171,7 @@
     faction: DSM
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitImperialCommand
   name: imperial command hardsuit
   description: A modular commander's hardsuit, bearing the colors of House Olywir.
@@ -207,7 +207,7 @@
     faction: DSM
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase,StreeCredRedeemableLow]
+  parent: [C_ClothingOuterHardsuitBase,StreeCredRedeemableLow]
   id: ClothingOuterHardsuitImperialSoldier
   name: imperial 'JANNISSARY' mk I combat hardsuit
   description: A modular soldier's hardsuit, bears the colors of the Kaiser and House Olywir.
@@ -243,7 +243,7 @@
     faction: DSM
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitImperialKnight
   name: imperial 'KONIGSCHILD' mk II combat hardsuit
   description: A modular knight's hardsuit, bears the colors of the Kaiser and House Olywir.

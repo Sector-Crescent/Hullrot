@@ -1,0 +1,38 @@
+# Base hultrot hardsuit
+
+- type: entity
+  id: C_ClothingOuterEVASuitBase
+  parent: ClothingOuterEVASuitBase
+  components:
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: FireProtection
+    reduction: 1
+  - type: ClothingAddFaction
+    faction: UNKWN
+  - type: Tag
+    tags:
+    - HidesHarpyWings
+
+- type: entity
+  id: C_ClothingOuterHardsuitBase
+  parent: ClothingOuterHardsuitBase
+  components:
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: FireProtection
+    reduction: 1
+  - type: ClothingAddFaction
+    faction: UNKWN
+  - type: Tag
+    tags:
+    - Hardsuit
+    - HidesHarpyWings
+
+    
+    
+    
+    
+    

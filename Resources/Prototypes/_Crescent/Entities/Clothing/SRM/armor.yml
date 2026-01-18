@@ -1,7 +1,7 @@
 
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: C_ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitHunter
   name: salvaged hunting hardsuit
   description: A modular hardsuit assembled from what seems to be salvaged Imperial parts. For predators on the hunt.
@@ -31,9 +31,11 @@
     sprintModifier: 0.9
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHunter
+  - type: ClothingAddFaction
+    faction: SRM
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [C_ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitHunterElite
   name: sixth subjugation fireteam hardsuit
   description: A pristine battle-ready hardsuit printed fresh from a nanoforge. Still bears the House Romaine colors.
@@ -63,6 +65,8 @@
     sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitHunterElite
+  - type: ClothingAddFaction
+    faction: SRM
 
 - type: entity
   parent: ClothingOuterArmorBasic
