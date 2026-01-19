@@ -1005,16 +1005,6 @@ public abstract partial class SharedGunSystem : EntitySystem
     }
 
     // Mono
-    public EntityPrototype GetBulletPrototype(EntityPrototype cartridge)
-    {
-        if (cartridge.TryGetComponent<CartridgeAmmoComponent>(out var cartComp, Factory))
-        {
-            return ProtoManager.Index(cartComp.Prototype);
-        }
-        return cartridge;
-    }
-
-    // Mono
     public bool TryNextShootPrototype(Entity<GunComponent?> gun, [NotNullWhen(true)] out EntityPrototype? proto)
     {
         proto = null;
