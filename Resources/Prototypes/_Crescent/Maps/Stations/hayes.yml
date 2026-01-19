@@ -7,6 +7,10 @@
     Hayes:
       stationProto: StandardCrescentStation
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: outpost
         - type: StationNameSetup
           mapNameTemplate: 'IPM Hayes Medical Waystation'
         - type: VesselDesignation

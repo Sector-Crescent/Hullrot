@@ -9,6 +9,10 @@
       gridComponents:
         - type: BlockShipWeaponProjectileGrid
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: capital
         - type: StationNameSetup
           mapNameTemplate: 'CDT Dawnbreaker'
         - type: VesselDesignation

@@ -9,6 +9,10 @@
       gridComponents:
         - type: BlockShipWeaponProjectileGrid
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: outpost
         - type: StationNameSetup
           mapNameTemplate: 'Tribal Hideout'
         - type: Grammar
