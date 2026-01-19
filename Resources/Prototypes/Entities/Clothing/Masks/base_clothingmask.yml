@@ -3,14 +3,14 @@
   parent: Clothing
   id: ClothingMaskBase
   components:
+  - type: StaticPrice
+    price: 50
   - type: Sprite
     state: icon
   - type: Item
     size: Small
   - type: Clothing
     slots: [mask]
-  - type: StaticPrice
-    price: 25
 
 - type: entity
   abstract: true

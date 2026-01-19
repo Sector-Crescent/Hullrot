@@ -14,7 +14,6 @@ using Content.Server.Power.Components;
 using Robust.Shared.Physics;
 using Content.Shared._Crescent.SpaceArtillery;
 using Content.Shared.Projectiles;
-using Content.Shared._RMC14.Weapons.Ranged.Prediction;
 
 
 namespace Content.Server._Crescent.ShipShields;
@@ -70,7 +69,7 @@ public sealed partial class ShipShieldsSystem : EntitySystem
                 emitter.OverloadAccumulator -= EmitterUpdateRate;
             }
 
-            //this is the value that the emitter will heal up by each 1.5s, decided by .HealPerSecond. 
+            //this is the value that the emitter will heal up by each 1.5s, decided by .HealPerSecond.
             float healed = emitter.HealPerSecond * EmitterUpdateRate;
 
             //if our shield is down/recharging, then we should heal it's hp back up by this amount.

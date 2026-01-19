@@ -65,6 +65,9 @@ public abstract partial class SharedMoverController : VirtualController
     protected EntityQuery<NoRotateOnMoveComponent> NoRotateQuery;
     protected EntityQuery<FootstepModifierComponent> FootstepModifierQuery;
     protected EntityQuery<MapGridComponent> MapGridQuery;
+    protected EntityQuery<SleepingComponent> SleepingQuery;
+    protected EntityQuery<FootstepVolumeModifierComponent> FootstepVolumeQuery;
+    protected EntityQuery<NoShoesSilentFootstepsComponent> NoShoesQuery;
 
     /// <summary>
     /// <see cref="CCVars.StopSpeed"/>
@@ -72,11 +75,6 @@ public abstract partial class SharedMoverController : VirtualController
     private float _stopSpeed;
 
     private bool _relativeMovement;
-
-    /// <summary>
-    /// Cache the mob movement calculation to re-use elsewhere.
-    /// </summary>
-    public Dictionary<EntityUid, bool> UsedMobMovement = new();
 
     public override void Initialize()
     {
@@ -94,6 +92,9 @@ public abstract partial class SharedMoverController : VirtualController
         CanMoveInAirQuery = GetEntityQuery<CanMoveInAirComponent>();
         FootstepModifierQuery = GetEntityQuery<FootstepModifierComponent>();
         MapGridQuery = GetEntityQuery<MapGridComponent>();
+        SleepingQuery = GetEntityQuery<SleepingComponent>();
+        FootstepVolumeQuery = GetEntityQuery<FootstepVolumeModifierComponent>();
+        NoShoesQuery = GetEntityQuery<NoShoesSilentFootstepsComponent>();
 
         InitializeInput();
         InitializeRelay();
@@ -112,7 +113,6 @@ public abstract partial class SharedMoverController : VirtualController
     public override void UpdateAfterSolve(bool prediction, float frameTime)
     {
         base.UpdateAfterSolve(prediction, frameTime);
-        UsedMobMovement.Clear();
     }
 
     /// <summary>
@@ -126,11 +126,20 @@ public abstract partial class SharedMoverController : VirtualController
         TransformComponent xform,
         float frameTime)
     {
+        var (walkDir, sprintDir) = GetVelocityInput(mover);
+        bool hasInput = walkDir != Vector2.Zero || sprintDir != Vector2.Zero;
+        bool isAwake = physicsComponent.Awake;
+        bool isRotating = !MathHelper.CloseTo(mover.RelativeRotation.Theta, mover.TargetRelativeRotation.Theta, 0.001f);
+        bool isRelaying = RelayTargetQuery.TryGetComponent(uid, out var relayTarget);
+
+        if (!hasInput && !isAwake && !isRotating && !isRelaying)
+            return;
+
         var canMove = mover.CanMove;
-        if (RelayTargetQuery.TryGetComponent(uid, out var relayTarget))
+        if (isRelaying && relayTarget != null)
         {
             if (_mobState.IsIncapacitated(relayTarget.Source) ||
-                TryComp<SleepingComponent>(relayTarget.Source, out _) ||
+                SleepingQuery.HasComponent(relayTarget.Source) ||
                 // Shitmed Change
                 !PhysicsQuery.TryGetComponent(relayTarget.Source, out var relayedPhysicsComponent) ||
                 !MoverQuery.TryGetComponent(relayTarget.Source, out var relayedMover) ||
@@ -154,8 +163,8 @@ public abstract partial class SharedMoverController : VirtualController
         {
             if (mover.LerpTarget < Timing.CurTime)
             {
-                if (TryComp(uid, out RelayInputMoverComponent? relay)
-                    && TryComp(relay.RelayEntity, out TransformComponent? relayXform))
+                if (RelayQuery.TryGetComponent(uid, out var relay)
+                    && XformQuery.TryGetComponent(relay.RelayEntity, out var relayXform))
                 {
                     if (TryUpdateRelative(mover, relayXform))
                         Dirty(uid, mover);
@@ -172,18 +181,19 @@ public abstract partial class SharedMoverController : VirtualController
         // Shitmed Change End
 
         if (!canMove
-            || physicsComponent.BodyStatus != BodyStatus.OnGround && !CanMoveInAirQuery.HasComponent(uid)
-            || PullableQuery.TryGetComponent(uid, out var pullable) && pullable.BeingPulled)
-        {
-            UsedMobMovement[uid] = false;
+            || (physicsComponent.BodyStatus != BodyStatus.OnGround && !CanMoveInAirQuery.HasComponent(uid)))
             return;
-        }
 
+        // check last because negative query
+        if (PullableQuery.TryGetComponent(uid, out var pullable) && pullable.BeingPulled)
+            return;
 
-        UsedMobMovement[uid] = true;
+        mover.LastInputMoveTick = Timing.CurTick;
+
+        var hasGrid = MapGridQuery.TryGetComponent(xform.GridUid, out var gridComp);
+
         // Specifically don't use mover.Owner because that may be different to the actual physics body being moved.
         var weightless = _gravity.IsWeightless(physicsUid, physicsComponent, xform);
-        var (walkDir, sprintDir) = GetVelocityInput(mover);
         var touching = false;
 
         // Handle wall-pushes.
@@ -199,7 +209,7 @@ public abstract partial class SharedMoverController : VirtualController
                 // No gravity: is our entity touching anything?
                 touching = ev.CanMove;
 
-                if (!touching && TryComp<MobMoverComponent>(uid, out var mobMover))
+                if (!touching && MobMoverQuery.TryGetComponent(uid, out var mobMover))
                     touching |= IsAroundCollider(PhysicsSystem, xform, mobMover, physicsUid, physicsComponent);
             }
         }
@@ -209,8 +219,8 @@ public abstract partial class SharedMoverController : VirtualController
 
         // Don't bother getting the tiledef here if we're weightless or in-air
         // since no tile-based modifiers should be applying in that situation
-        if (MapGridQuery.TryComp(xform.GridUid, out var gridComp)
-            && _mapSystem.TryGetTileRef(xform.GridUid.Value, gridComp, xform.Coordinates, out var tile)
+        if (hasGrid && gridComp != null
+            && _mapSystem.TryGetTileRef(xform.GridUid!.Value, gridComp, xform.Coordinates, out var tile)
             && !(weightless || physicsComponent.BodyStatus == BodyStatus.InAir))
         {
             tileDef = (ContentTileDefinition) _tileDefinitionManager[tile.Tile.TypeId];
@@ -238,7 +248,7 @@ public abstract partial class SharedMoverController : VirtualController
 
         if (weightless)
         {
-            if (gridComp == null && !MapGridQuery.HasComp(xform.GridUid))
+            if (!hasGrid && !MapGridQuery.HasComp(xform.GridUid))
                 friction = moveSpeedComponent?.OffGridFriction ?? MovementSpeedModifierComponent.DefaultOffGridFriction;
             else if (worldTotal != Vector2.Zero && touching)
                 friction = moveSpeedComponent?.WeightlessFriction ?? MovementSpeedModifierComponent.DefaultWeightlessFriction;
@@ -251,13 +261,9 @@ public abstract partial class SharedMoverController : VirtualController
         else
         {
             if (worldTotal != Vector2.Zero)
-            {
                 friction = tileDef?.MobFriction ?? moveSpeedComponent?.Friction ?? MovementSpeedModifierComponent.DefaultFriction;
-            }
             else
-            {
                 friction = tileDef?.MobFrictionNoInput ?? moveSpeedComponent?.FrictionNoInput ?? MovementSpeedModifierComponent.DefaultFrictionNoInput;
-            }
 
             weightlessModifier = 1f;
             accel = tileDef?.MobAcceleration ?? moveSpeedComponent?.Acceleration ?? MovementSpeedModifierComponent.DefaultAcceleration;
@@ -282,7 +288,7 @@ public abstract partial class SharedMoverController : VirtualController
                 var soundModifier = mover.Sprinting ? 3.5f : 1.5f;
                 var volume = sound.Params.Volume + soundModifier;
 
-                if (_entities.TryGetComponent(uid, out FootstepVolumeModifierComponent? volumeModifier))
+                if (FootstepVolumeQuery.TryGetComponent(uid, out var volumeModifier))
                 {
                     volume += mover.Sprinting
                         ? volumeModifier.SprintVolumeModifier
@@ -394,7 +400,11 @@ public abstract partial class SharedMoverController : VirtualController
 
     public bool UseMobMovement(EntityUid uid)
     {
-        return UsedMobMovement.TryGetValue(uid, out var used) && used;
+        if (MoverQuery.TryComp(uid, out var mover))
+        {
+            return mover.LastInputMoveTick == Timing.CurTick;
+        }
+        return false;
     }
 
     /// <summary>
@@ -414,7 +424,7 @@ public abstract partial class SharedMoverController : VirtualController
                 !otherCollider.CanCollide ||
                 ((collider.CollisionMask & otherCollider.CollisionLayer) == 0 &&
                     (otherCollider.CollisionMask & collider.CollisionLayer) == 0) ||
-                (TryComp(otherCollider.Owner, out PullableComponent? pullable) && pullable.BeingPulled))
+                (PullableQuery.TryGetComponent(otherCollider.Owner, out PullableComponent? pullable) && pullable.BeingPulled))
             {
                 continue;
             }
@@ -482,7 +492,7 @@ public abstract partial class SharedMoverController : VirtualController
             return sound != null;
         }
 
-        if (_entities.TryGetComponent(uid, out NoShoesSilentFootstepsComponent? _) &
+        if (NoShoesQuery.HasComponent(uid) &&
             !_inventory.TryGetSlotEntity(uid, "shoes", out var _))
         {
             return false;

@@ -4,6 +4,8 @@
   name: satchel
   description: A trendy looking satchel.
   components:
+  - type: StaticPrice
+    price: 50
   - type: Sprite
     sprite: Clothing/Back/Satchels/satchel.rsi
   - type: Storage

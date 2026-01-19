@@ -20,6 +20,10 @@ entities:
   entities:
   - uid: 1
     components:
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: asteroids
     - type: MetaData
       name: grid
     - type: Transform

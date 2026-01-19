@@ -9,6 +9,10 @@
       gridComponents:
         - type: BlockShipWeaponProjectileGrid
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: outpost
         - type: StationNameSetup
           mapNameTemplate: 'Tribal Hideout'
         - type: Grammar
@@ -17,7 +21,6 @@
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: StationJobs
-          overflowJobs: []
           availableJobs:
             DraugrTAP: [ 1, 1 ]
             ServileTAP: [ 2, 2 ]

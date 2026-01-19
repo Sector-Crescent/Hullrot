@@ -66,6 +66,13 @@ namespace Content.Shared.Movement.Components
         public Angle RelativeRotation;
 
         /// <summary>
+        /// The last GameTick where HandleMobMovement successfully processed movement.
+        /// Used to replace the UsedMobMovement dictionary.
+        /// </summary>
+        [ViewVariables]
+        public GameTick LastInputMoveTick = GameTick.Zero;
+
+        /// <summary>
         /// If we traverse on / off a grid then set a timer to update our relative inputs.
         /// </summary>
         [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]

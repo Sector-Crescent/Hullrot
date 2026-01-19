@@ -338,42 +338,6 @@
   - type: Appearance
 
 - type: entity
-  id: SpeedLoaderRifleHeavyRubber
-  name: "speed loader (5.56x45mm rubber)"
-  parent: BaseSpeedLoaderHeavyRifle
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
-  - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/HeavyRifle/argenti_speed_loader.rsi
-    layers:
-      - state: base
-        map: [ "enum.GunVisualLayers.Base" ]
-      - state: rubber-8
-        map: [ "enum.GunVisualLayers.Mag" ]
-  - type: MagazineVisuals
-    magState: rubber
-    steps: 9
-    zeroVisible: false
-  - type: Appearance
-
-- type: entity
-  id: CartridgeLightRifleRubber
-  name: cartridge (.30 rifle rubber)
-  parent: BaseCartridgeLightRifle
-  components:
-  - type: CartridgeAmmo
-    proto: BulletLightRifleRubber
-  - type: Sprite
-    layers:
-      - state: base
-        map: [ "enum.AmmoVisualLayers.Base" ]
-      - state: tip
-        map: [ "enum.AmmoVisualLayers.Tip" ]
-        color: "#43c4f7"
-
-
-- type: entity
   id: OreMagnet
   name: SHI baromagnetic ore array
   description: A large, ship-mounted magnetic device. When pointed in the direction of loose ore, gathers the rocky material with a miniature tractor beam and stores it in an internal compartment for later harvest.

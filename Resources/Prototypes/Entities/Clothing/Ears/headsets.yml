@@ -5,6 +5,8 @@
   name: headset
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   components:
+  - type: StaticPrice
+    price: 50
   - type: ContainerContainer
     containers:
       key_slots: !type:Container

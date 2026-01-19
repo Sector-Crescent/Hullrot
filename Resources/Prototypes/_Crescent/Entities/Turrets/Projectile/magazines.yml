@@ -37,7 +37,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -73,13 +73,13 @@
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     layers:
-    - state: base
+    - state: base-gyrostable
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -115,13 +115,13 @@
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     layers:
-    - state: base
+    - state: base-plasma
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -157,7 +157,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -165,7 +165,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -201,13 +201,13 @@
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     layers:
-    - state: base
+    - state: base-gyrostable
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -243,13 +243,13 @@
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     layers:
-    - state: base
+    - state: base-plasma
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -294,7 +294,7 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -328,15 +328,15 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
     layers:
-    - state: base
+    - state: base-gyrostable
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 
@@ -370,15 +370,15 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
     layers:
-    - state: base
+    - state: base-plasma
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag
-    steps: 1
+    steps: 2
     zeroVisible: false
   - type: Appearance
 

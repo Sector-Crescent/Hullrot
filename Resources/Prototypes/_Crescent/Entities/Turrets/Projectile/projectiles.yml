@@ -19,7 +19,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3.5
+    lifetime: 6 #roughly 480m range
   - type: Fixtures
     fixtures:
       projectile:
@@ -67,7 +67,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 5.5
+    lifetime: 9 #roughly 720m range
   - type: Fixtures
     fixtures:
       projectile:
@@ -122,7 +122,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 2
+    lifetime: 4 #roughly 320m range
   - type: Fixtures
     fixtures:
       projectile:
@@ -170,7 +170,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 2
+    lifetime: 8 #roughly 640-680m range depending on shipgun
   - type: Fixtures
     fixtures:
       projectile:
@@ -218,7 +218,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 10 #roughly 800-850m range depending on shipgun
   - type: Fixtures
     fixtures:
       projectile:
@@ -273,7 +273,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3
+    lifetime: 5 #roughly 400-425m range depending on shipgun
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:

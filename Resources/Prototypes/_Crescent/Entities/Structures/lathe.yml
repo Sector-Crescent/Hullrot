@@ -103,7 +103,7 @@
       state: security
     - type: MachineBoard
       prototype: PristineMicroforge
-      requirements:
+      machinePartRequirements:
         MatterBin: 2
         Manipulator: 2
 
@@ -148,6 +148,7 @@
     - C_MicroforgeCDTDynamic
     - C_MicroforgeNCWLDynamic
     - C_MicroforgeSHIDynamic
+    - C_MicroforgeDynamic
     - ChemistryStatic
     - SurgeryStatic
     - AdvancedTools

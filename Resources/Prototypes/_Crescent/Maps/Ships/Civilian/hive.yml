@@ -6,7 +6,7 @@
   name: TS Hive
   description: |
     The Hive is made from the remains of a derelict superfreighter, what was once it's cargobays now serving has hangars for it's complement of fighters.
-    LOADOUT: 1x 120mm SHI Cannon, 2x 48mm Sumitomo Missiles, 2x 90mm Automortars, 2x 20x135mm PDT, 6x Small Ballistic Hardpoints
+    LOADOUT: 1x 120mm 'Pithatis' mono-barreled artillery cannon, 2x 48mm 'Shortbow' rocket pods, 2x 90mm 'Gistum' artillery cannons, 2x 20mm 'Screamer' light autocannons, 6x Small Ballistic Hardpoints
     MINIMUM CREW: 1x Captain, 1x Gunner/Loader, 4x Fighter Pilots
   price: 90000
   category: Large
@@ -25,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: battleship
+            state: carrier
         - type: StationNameSetup
           mapNameTemplate: 'Hive {1}'
           nameGenerator:

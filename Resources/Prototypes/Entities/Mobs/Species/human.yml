@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Hunger
-    currentHunger: 150
+    lastAuthoritativeHungerValue: 150
   - type: Thirst
     startingThirst: 450
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.

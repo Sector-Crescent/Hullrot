@@ -1,4 +1,5 @@
 using Robust.Shared.Map;
+using Robust.Shared.Prototypes; // Mono
 
 namespace Content.Shared.Weapons.Ranged.Events;
 

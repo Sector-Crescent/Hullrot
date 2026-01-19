@@ -17,12 +17,3 @@ job-supervisors-srm-overseer = Saint Romaine
 job-supervisors-srm-leaders = the Overseer of the Hunt
 job-supervisors-srm-hunters = the Overseer of the Hunt, and his chosen Montagnes
 job-supervisors-srm-apprentice = your assigned master hunter
-job-supervisors-conscript-dsm = The Marshal-Bannaret, then the Grand Steward of the Nemesis
-job-supervisors-conscript-dsm-high = your house's quest to restore its honor
-job-supervisors-conscript-ncwl = The Kommissar, then the Admiral of the Dear Clementine
-job-supervisors-conscript-ncwl-high = the revolution's embers
-job-supervisors-unionfall-dsm = The Knight-Bannaret, then the Grand Steward of the Nemesis
-job-supervisors-unionfall-dsm-high = your house's quest to restore its honor
-job-supervisors-unionfall-ncwl = The Kommissar, then the Captain of the Dear Clementine
-job-supervisors-unionfall-ncwl-high = the revolution's embers
-

@@ -62893,7 +62893,7 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: dreadnought
+        state: capital
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Countsman
@@ -87280,7 +87280,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CrateIdnaAmmo
+- proto: Crate60mmAmmo
   entities:
   - uid: 4524
     components:
@@ -87298,7 +87298,7 @@ entities:
     - type: Physics
       fixedRotation: False
       bodyType: Static
-- proto: CrateSlugthrowerAmmo
+- proto: Crate20mmAmmo
   entities:
   - uid: 4526
     components:
@@ -87310,14 +87310,14 @@ entities:
     - type: Transform
       pos: -13.5,2.5
       parent: 1
-- proto: CrateSumitomoAmmo
+- proto: Crate48mmAmmo
   entities:
   - uid: 4528
     components:
     - type: Transform
       pos: 15.5,-0.5
       parent: 1
-- proto: CrateVulcanAmmo
+- proto: Crate35mmAmmo
   entities:
   - uid: 4529
     components:

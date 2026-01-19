@@ -1,7 +1,39 @@
+- type: entity
+  parent: Clothing
+  id: IDCardStandardHullrot
+  name: identification card
+  description: A card necessary to access various areas aboard the station.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/idcards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Crescent/Objects/Misc/idcards.rsi
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+  - type: StealTarget
+    stealGroup: IDCard
+  - type: NanoChatCard
+  - type: MiningPoints
+
+
+
 #ncwl-2#
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardWorker
   name: NCWL ID card
   components:
@@ -10,13 +42,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: WorkerNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardFactionLeader
   name: NCWL ID card
   components:
@@ -25,13 +56,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: CommandantNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardHomeguardLeader
   name: NCWL ID card
   components:
@@ -40,13 +70,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: KommissarNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardMVDLeader
   name: NCWL ID card
   components:
@@ -55,13 +84,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: MVDOfficerNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardMVDGrunt
   name: NCWL ID card
   components:
@@ -70,13 +98,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: MVDGruntNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardHomeguardSquadCaptain
   name: NCWL ID card
   components:
@@ -85,13 +112,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: FleetkapitanNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardHomeguardSoldat
   name: NCWL ID card
   components:
@@ -100,13 +126,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: PartisanNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardMedicalLeader
   name: NCWL ID card
   components:
@@ -115,13 +140,12 @@
       DogtagNCWL: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: DirectorNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardMedicalWorker
   name: NCWL ID card
   components:
@@ -130,13 +154,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: DoctorNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardLogisticLeader
   name: NCWL ID card
   components:
@@ -145,13 +168,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: WorkerOverbossNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardLogisticWorker
   name: NCWL ID card
   components:
@@ -160,13 +182,12 @@
       DogtagNCWL: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: DockhandNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardEngineeringLeader
   name: NCWL ID card
   components:
@@ -175,13 +196,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: IndustryTaskmasterNCWL
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCWLIDCardEngineeringWorker
   name: NCWL ID card
   components:
@@ -190,149 +210,137 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: prisoner
-    - state: idcentcom
+    - state: ncwl
   - type: PresetIdCard
     job: ArtificerNCWL
 
 #syndicate#
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardRingleader
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: RingleaderNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardCyberdawnTech
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: CyberdawnTechNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardLieutenant
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: LieutenantNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardInfanteer
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: InfanteerNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardCoordinator
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: CoordinatorNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardRipperdoc
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: RipperdocNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardTraumasec
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: TraumasecNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardOperative
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+     - state: tfsc
   - type: PresetIdCard
     job: OperativeNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardIntelligenceOfficer
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: IntelligenceOfficerNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardForeman
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: ForemanNCSP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: NCSPIDCardShipbreaker
   name: NCSP ID card
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: default
+    - state: tfsc
   - type: PresetIdCard
     job: ShipbreakerNCSP
 
 #empire
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardFreeholder
   name: imperial ID card
   components:
@@ -341,13 +349,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: FreeholderDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardTemplar
   name: imperial ID card
   components:
@@ -356,13 +363,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: TemplarDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardAdvocatus
   name: imperial ID card
   components:
@@ -371,13 +377,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: AdvocatusDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardArchmaester
   name: imperial ID card
   components:
@@ -386,13 +391,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: ArchmaesterDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardSurgeon
   name: imperial ID card
   components:
@@ -401,13 +405,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: SurgeonDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardWealth
   name: imperial ID card
   components:
@@ -416,13 +419,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: WealthDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardForeman
   name: imperial ID card
   components:
@@ -431,13 +433,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: ForemanDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardScribe
   name: imperial ID card
   components:
@@ -446,13 +447,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: ScribeDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardLevyman
   name: imperial ID card
   components:
@@ -461,13 +461,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: LevymanDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardKnight
   name: imperial ID card
   components:
@@ -476,13 +475,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: KnightDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardRitter
   name: imperial ID card
   components:
@@ -491,13 +489,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: RitterDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardLabor
   name: imperial ID card
   components:
@@ -506,13 +503,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: LaborDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardCourtier
   name: imperial ID card
   components:
@@ -521,13 +517,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: CourtierDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardAdjutant
   name: imperial ID card
   components:
@@ -536,13 +531,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: carp
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: AdjutantDSM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DSMIDCardGovernor
   name: imperial ID card
   components:
@@ -551,70 +545,64 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: gold
-    - state: idcentcom
+    - state: impcommand
   - type: PresetIdCard
     job: GovernorDSM
 
 #srm
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SRMIDCardTender
   name: hunter ID card
   components:
   - type: Sprite
     layers:
-    - state: carp
-    - state: idbotanist
+    - state: srm
   - type: PresetIdCard
     job: TenderSRM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SRMIDCardAcolyte
   name: hunter ID card
   components:
   - type: Sprite
     layers:
-    - state: carp
-    - state: idbotanist
+    - state: srm
   - type: PresetIdCard
     job: AcolyteSRM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SRMIDCardHunter
   name: hunter ID card
   components:
   - type: Sprite
     layers:
-    - state: carp
-    - state: idbotanist
+    - state: srm
   - type: PresetIdCard
     job: HunterSRM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SRMIDCardOverseer
   name: overseer ID card
   components:
   - type: Sprite
     layers:
-    - state: carp
-    - state: idbotanist
+    - state: srm
   - type: PresetIdCard
     job: OverseerSRM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SRMIDCardMontagne
   name: hunter montagne's ID card
   components:
   - type: Sprite
     layers:
-    - state: carp
-    - state: idbotanist
+    - state: srm
   - type: PresetIdCard
     job: MontagneSRM
 
@@ -622,7 +610,7 @@
 
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardExecutive
   name: corporate ID card
   components:
@@ -631,13 +619,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: ExecutiveSHI
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardBoard
   name: corporate ID card
   components:
@@ -646,13 +633,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: BoardSHI
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardCorpSec
   name: corporate ID card
   components:
@@ -661,13 +647,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: CorpsecSHI
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardHighSec
   name: corporate ID card
   components:
@@ -676,13 +661,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: HighsecSHI
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardEmployee
   name: corporate ID card
   components:
@@ -691,13 +675,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: EmployeeSHI
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SHIIDCardMedtech
   name: corporate ID card
   components:
@@ -706,15 +689,14 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: black
-    - state: idcentcom
+    - state: shi
   - type: PresetIdCard
     job: MedtechSHI
 
 #cmm
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardOrdnanceman
   name: minuteman ID card
   components:
@@ -723,13 +705,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: OrdnancemanCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardMachinist
   name: minuteman ID card
   components:
@@ -738,13 +719,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: MachinistCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardPhysician
   name: minuteman ID card
   components:
@@ -753,13 +733,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: PhysicianCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardMinuteman
   name: minuteman ID card
   components:
@@ -768,13 +747,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: MinutemanCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardWatchmaster
   name: minuteman ID card
   components:
@@ -783,13 +761,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: WatchmasterCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardDeputyMarshal
   name: minuteman ID card
   components:
@@ -798,13 +775,12 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: DeputyMarshalCMM
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: CMMIDCardMarshal
   name: minuteman ID card
   components:
@@ -813,22 +789,20 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idcentcom
+    - state: gliess
   - type: PresetIdCard
     job: MarshalCMM
 
 #misc
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: IDCardAntiquarian
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: shi
   - type: PresetIdCard
     job: Antiquarian
 
@@ -864,7 +838,7 @@
 
 - type: entity
   name: "magnate ID card"
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DeparmentPassMagnate
   components:
   - type: Access
@@ -872,300 +846,275 @@
     - LogisticsWealth
   - type: Sprite
     layers:
-    - state: default
-    - state: senior
+    - state: impcommand
 
 #families
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardProphet
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: ProphetTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardAcolyte
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: AcolyteTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardTinkerer
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: TinkererTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardTechminer
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: TechminerTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardHangarTech
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: HangarTechTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardBeltrunner
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: BeltrunnerTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardDraugr
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: DraugrTAP
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: TAPIDCardServile
   name: nomadic ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: tap
   - type: PresetIdCard
     job: ServileTAP
 
 #ath
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardKommandant
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: KommandantATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardLeutnant
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: LeutnantATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardSoldat
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: SoldatATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardKanoneer
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: KanoneerATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardSanitat
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: SanitatATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardSteward
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: StewardATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardOberartz
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: OberartzATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardLogistat
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: LogistatATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardHandels
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: HandelsATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardForscher
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: ForscherATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardChirurgeon
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: ChirurgeonATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardVorarbeiter
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: VorarbeiterATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: ATHIDCardArbeiter
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: ArbeiterATH
 
 #anti psionic response team
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: APRTIDCardKanoneer
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: APRTKanoneerATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: APRTIDCardSanitat
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: APRTSanitatATH
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: APRTIDCardSoldat
   name: 43rd battlegroup ID card
   components:
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: ncwl
   - type: PresetIdCard
     job: APRTSoldatATH
 
@@ -1173,7 +1122,7 @@
 #misc
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: GliessIDCardSheriff
   name: spacer ID card
   components:
@@ -1182,13 +1131,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: gliess
   - type: PresetIdCard
     job: GliessianSheriff
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: GliessIDCardDeputy
   name: spacer ID card
   components:
@@ -1197,14 +1145,13 @@
       PlunderGSC: 10
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: gliess
   - type: PresetIdCard
     job: GliessianDeputy
 
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: GliessIDCardDockmaster
   name: spacer ID card
   components:
@@ -1213,13 +1160,12 @@
       PlunderGSC: 15
   - type: Sprite
     layers:
-    - state: default
-    - state: departmenthead
+    - state: gliess
   - type: PresetIdCard
     job: GliessianDockmaster
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: DockhandIDCard
   name: spacer ID card
   components:
@@ -1228,13 +1174,12 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: default
-    - state: passenger
+    - state: gliess
   - type: PresetIdCard
     job: GliessianDockhand
 
 - type: entity
-  parent: IDCardStandard
+  parent: IDCardStandardHullrot
   id: SpacerIDCard
   name: spacer ID card
   components:
@@ -1243,8 +1188,7 @@
       PlunderGSC: 5
   - type: Sprite
     layers:
-    - state: default
-    - state: passenger
+    - state: gliess
   - type: PresetIdCard
     job: Spacer
 
