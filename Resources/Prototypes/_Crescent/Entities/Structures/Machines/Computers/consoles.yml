@@ -17,8 +17,11 @@
     - type: CommunicationsConsole
       title: ship-comm-console
 
+<<<<<<< HEAD
 # faction consoles in preperation for the wargames
 
+=======
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 - type: entity
   parent: BaseComputerShuttle
   id: C_ComputerShuttle
@@ -65,11 +68,14 @@
           !type:DamageTrigger
           damage: 100
         behaviors:
+<<<<<<< HEAD
           - !type:SpawnEntitiesBehavior
             spawn:
               BlackboxCivDamaged:
                 min: 1
                 max: 1
+=======
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
 
@@ -101,6 +107,7 @@
           !type:DamageTrigger
           damage: 100
         behaviors:
+<<<<<<< HEAD
           - !type:SpawnEntitiesBehavior
             spawn:
               BlackboxCivDamaged:
@@ -354,5 +361,7 @@
               BlackboxNCWLMilitary:
                 min: 1
                 max: 1
+=======
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
           - !type:DoActsBehavior
             acts: [ "Destruction" ]

@@ -24,20 +24,35 @@
 - type: startingGear
   id: LawyerGear
   subGear:
-  - LawyerPlasmamanGear
+    - LawyerPlasmamanGear
+
   equipment:
+<<<<<<< HEAD
     jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
     back: ClothingBackpack
+=======
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
+    back: ClothingBackpackLawyerFilled
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
     pocket1: BookSecurity
+<<<<<<< HEAD
     pocket2: BookSpaceLaw
   inhand:
   - BriefcaseBrownFilled
   storage:
     back:
     - RubberStampLawyer
+=======
+    innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
+    satchel: ClothingBackpackSatchelLawyerFilled
+    duffelbag: ClothingBackpackDuffelLawyerFilled
+  inhand:
+    - BriefcaseBrownFilled
+
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: LawyerPlasmamanGear

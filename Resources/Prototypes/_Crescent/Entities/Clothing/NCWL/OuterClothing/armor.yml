@@ -161,6 +161,39 @@
   - type: ClothingAddFaction
     faction: NCWL
 
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterArmorNCWLLightBodyarmor
+  name: communard's light bulletproof carapace
+  description: A simple kevlar durathread carapace with no additional shoulder or arm protection.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/light.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/light.rsi
+  - type: DegradeableArmor
+    armorMaxHealth: 800
+    armorType: Metallic
+    armorRepair: HomelandAlloy
+    initialModifiers:
+      flatReductions:
+        Blunt: 15
+        Slash: 10
+        Piercing: 30
+        Heat: 10
+        Caustic: 10
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: GroupExamine
+  - type: StaticPrice
+    price: 500
+  - type: AllowSuitStorage
+  - type: ClothingAddFaction
+    faction: NCWL
+
 ## ncwl revamp clothing
 
 - type: entity

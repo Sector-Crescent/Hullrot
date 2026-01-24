@@ -83,6 +83,26 @@ namespace Content.Server.Administration.Commands
             {
                 foreach (var slot in slots)
                     invSystem.TryUnequip(target, slot.Name, true, true, false, inventoryComponent);
+<<<<<<< HEAD
+=======
+                    var gearStr = startingGear.GetGear(slot.Name);
+                    if (gearStr == string.Empty)
+                    {
+                        continue;
+                    }
+                    var equipmentEntity = entityManager.SpawnEntity(gearStr, entityManager.GetComponent<TransformComponent>(target).Coordinates);
+                    if (slot.Name == "id" &&
+                        entityManager.TryGetComponent(equipmentEntity, out PdaComponent? pdaComponent) &&
+                        entityManager.TryGetComponent<IdCardComponent>(pdaComponent.ContainedId, out var id))
+                    {
+                        id.FullName = entityManager.GetComponent<MetaDataComponent>(target).EntityName;
+                    }
+
+                    invSystem.TryEquip(target, equipmentEntity, slot.Name, silent: true, force: true, inventory: inventoryComponent);
+
+                    onEquipped?.Invoke(target, equipmentEntity);
+                }
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
             }
 
             var stationSpawning = entityManager.System<SharedStationSpawningSystem>();

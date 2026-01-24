@@ -215,12 +215,12 @@
     guides:
     - Cargo
 
-#pangtai
+#pangtai trader
 
 
 - type: entity
   id: ComputerCargoOrdersPangtai
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseStructureComputer]
+  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseStructureComputer]
   name: Pang Tai Arms corporate requisitions console
   description: A computer used to order goods from the internal cargo holds of this vessel.
   placement:
@@ -286,12 +286,12 @@
     guides:
     - Cargo
 
-#pangtai
+#shinohara trader
 
 
 - type: entity
   id: ComputerCargoOrdersShinohara
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseStructureComputer]
+  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseStructureComputer]
   name: Shinohara corporate requisitions console
   description: A computer used to order goods from the internal cargo holds of this vessel.
   placement:
@@ -358,7 +358,7 @@
     - Cargo
 
 # shinohara Station
-#
+
 - type: entity
   id: ComputerCargoOrdersShinoharaStation
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseStructureComputer]

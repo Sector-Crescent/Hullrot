@@ -71,3 +71,26 @@
         - CommandantNCWL
         - KommissarNCWL
         - MVDGruntNCWL
+
+- type: loadout
+  id: LoadoutOuterArmorNCWLLightCarapace
+  category: Outer
+  cost: 1
+  items:
+    - ClothingOuterArmorNCWLLightBodyarmor
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - CommandantNCWL
+        - KommissarNCWL
+        - FleetkapitanNCWL
+        - PartisanNCWL
+        - DirectorNCWL
+        - DoctorNCWL
+        - WorkerOverbossNCWL
+        - DockhandNCWL
+        - IndustryTaskmasterNCWL
+        - ArtificerNCWL
+        - WorkerNCWL

@@ -159,7 +159,11 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         string? cyborgName,
         HumanoidCharacterAppearance appearance,
         SpawnPriorityPreference spawnPriority,
+<<<<<<< HEAD
         Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
+=======
+        Dictionary<string, JobPriority> jobPriorities,
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
         PreferenceUnavailableMode preferenceUnavailable,
         HashSet<ProtoId<AntagPrototype>> antagPreferences,
         HashSet<ProtoId<TraitPrototype>> traitPreferences,
@@ -232,7 +236,11 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             other.CyborgName,
             other.Appearance.Clone(),
             other.SpawnPriority,
+<<<<<<< HEAD
             new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
+=======
+            new Dictionary<string, JobPriority>(other.JobPriorities),
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
             other.PreferenceUnavailable,
             new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
             new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
@@ -372,7 +380,10 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
     public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance) =>
         new(this) { Appearance = appearance };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     public HumanoidCharacterProfile WithSpawnPriorityPreference(SpawnPriorityPreference spawnPriority) =>
         new(this) { SpawnPriority = spawnPriority };
 

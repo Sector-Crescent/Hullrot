@@ -332,7 +332,11 @@
 
 - type: latheRecipe
   id: WeaponSubMachineGunAtreidesCyberdawn
+<<<<<<< HEAD
   result: WeaponSubMachineGunNCSPAtreides
+=======
+  result: WeaponSubMachineGunAtreidesHullrot
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   completetime: 1.5
   materials:
     Steel: 1500
@@ -513,23 +517,6 @@
     BallisticCycler: 500
     HardlightGenerator: 500
     LaserLocus: 500
-
-
-- type: latheRecipe
-  id: ReinforcementFlatpackSyndicateCyborgAssault
-  result: ReinforcementFlatpackSyndicateCyborgAssault
-  completetime: 1.5
-  materials:
-    AdvancedElectronics: 3500
-    AdvancedMechatronics: 3500
-    Silver: 2000
-    Steel: 3000
-    Gold: 2000
-    BallisticCycler: 2000
-    Plasma: 3000
-    HardlightGenerator: 500
-    LaserLocus: 500
-    Tungsten: 1000
 
 #ship LPCS
 

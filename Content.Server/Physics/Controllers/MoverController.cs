@@ -17,11 +17,16 @@ namespace Content.Server.Physics.Controllers;
 
 public sealed class MoverController : SharedMoverController
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
 
     private Dictionary<EntityUid, (ShuttleComponent, List<(EntityUid, PilotComponent, InputMoverComponent, TransformComponent)>)> _shuttlePilots = new();
 
+<<<<<<< HEAD
     public override void Initialize()
     {
         base.Initialize();
@@ -46,6 +51,31 @@ public sealed class MoverController : SharedMoverController
             SetMoveInput((entity.Comp.RelayEntity, inputMover), MoveButtons.None);
     }
 
+=======
+    public override void Initialize() {
+        base.Initialize();
+        SubscribeLocalEvent<RelayInputMoverComponent, PlayerAttachedEvent>(OnRelayPlayerAttached);
+        SubscribeLocalEvent<RelayInputMoverComponent, PlayerDetachedEvent>(OnRelayPlayerDetached);
+        SubscribeLocalEvent<InputMoverComponent, PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<InputMoverComponent, PlayerDetachedEvent>(OnPlayerDetached);
+        SubscribeLocalEvent<PilotComponent, GetShuttleInputsEvent>(OnPilotGetInputs); // Mono
+
+        SubscribeLocalEvent<PilotedShuttleComponent, StartCollideEvent>(PilotedShuttleRelayEvent<StartCollideEvent>); // Mono
+    }
+
+    private void OnRelayPlayerAttached(Entity<RelayInputMoverComponent> entity, ref PlayerAttachedEvent args)
+    {
+        if (MoverQuery.TryGetComponent(entity.Comp.RelayEntity, out var inputMover))
+            SetMoveInput((entity.Comp.RelayEntity, inputMover), MoveButtons.None);
+    }
+
+    private void OnRelayPlayerDetached(Entity<RelayInputMoverComponent> entity, ref PlayerDetachedEvent args)
+    {
+        if (MoverQuery.TryGetComponent(entity.Comp.RelayEntity, out var inputMover))
+            SetMoveInput((entity.Comp.RelayEntity, inputMover), MoveButtons.None);
+    }
+
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     private void OnPlayerAttached(Entity<InputMoverComponent> entity, ref PlayerAttachedEvent args)
     {
         SetMoveInput(entity, MoveButtons.None);
@@ -515,6 +545,87 @@ public sealed class MoverController : SharedMoverController
                 }
             }
         }
+<<<<<<< HEAD
+=======
+    }
+
+    private void HandleShuttlePilot(float frameTime)
+    {
+        var newPilots = new Dictionary<EntityUid, (ShuttleComponent Shuttle, List<(EntityUid PilotUid, PilotComponent Pilot, InputMoverComponent Mover, TransformComponent ConsoleXform)>)>();
+
+        // We just mark off their movement and the shuttle itself does its own movement
+        var activePilotQuery = EntityQueryEnumerator<PilotComponent, InputMoverComponent>();
+        var shuttleQuery = GetEntityQuery<ShuttleComponent>();
+        while (activePilotQuery.MoveNext(out var uid, out var pilot, out var mover))
+        {
+            var consoleEnt = pilot.Console;
+
+            // TODO: This is terrible. Just make a new mover and also make it remote piloting + device networks
+            if (TryComp<DroneConsoleComponent>(consoleEnt, out var cargoConsole))
+            {
+                consoleEnt = cargoConsole.Entity;
+            }
+
+            if (!TryComp(consoleEnt, out TransformComponent? xform)) continue;
+
+            var gridId = xform.GridUid;
+            // This tries to see if the grid is a shuttle and if the console should work.
+            if (!TryComp<MapGridComponent>(gridId, out var _) ||
+                !shuttleQuery.TryGetComponent(gridId, out var shuttleComponent) ||
+                !shuttleComponent.Enabled)
+                continue;
+
+            if (!newPilots.TryGetValue(gridId!.Value, out var pilots))
+            {
+                pilots = (shuttleComponent, new List<(EntityUid, PilotComponent, InputMoverComponent, TransformComponent)>());
+                newPilots[gridId.Value] = pilots;
+            }
+
+            pilots.Item2.Add((uid, pilot, mover, xform));
+        }
+
+        _shuttlePilots = newPilots;
+
+
+        // Collate all of the linear / angular velocites for a shuttle
+        // then do the movement input once for it.
+        foreach (var (shuttleUid, (shuttle, pilots)) in _shuttlePilots)
+        {
+            if (Paused(shuttleUid) || CanPilot(shuttleUid) || !TryComp<PhysicsComponent>(shuttleUid, out var body))
+                continue;
+
+            foreach (var (pilotUid, _, _, _) in pilots)
+            {
+                AddPilot(shuttleUid, pilotUid);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Registers an entity as an input source for a shuttle.
+    /// </summary>
+    public void AddPilot(EntityUid shuttleUid, EntityUid pilot)
+    {
+        var shuttle = EnsureComp<PilotedShuttleComponent>(shuttleUid);
+        shuttle.InputSources.Add(pilot);
+    }
+
+    #endregion
+
+    // .NET 8 seem to miscompile usage of Vector2.Dot above. This manual outline fixes it pending an upstream fix.
+    // See PR #24008
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public static float Vector2Dot(Vector2 value1, Vector2 value2)
+    {
+        return Vector2.Dot(value1, value2);
+    }
+
+    private bool CanPilot(EntityUid shuttleUid)
+    {
+        return TryComp<FTLComponent>(shuttleUid, out var ftl)
+        && (ftl.State & (FTLState.Starting | FTLState.Travelling | FTLState.Arriving)) != 0x0
+            || HasComp<PreventPilotComponent>(shuttleUid);
+>>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     }
 
     private void HandleShuttlePilot(float frameTime)
