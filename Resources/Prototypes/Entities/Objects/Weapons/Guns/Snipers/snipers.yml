@@ -18,6 +18,8 @@
     - Back
     - suitStorage
   - type: AmmoCounter
+  - type: Wieldable
+  - type: GunRequiresWield
   - type: Gun
     fireRate: 0.75
     selectedMode: SemiAuto
@@ -118,7 +120,7 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable]
   id: WeaponSniperMosin
   description: A last resort, with a bayonet attached at the barrel. Uses 7.62x51 USM ammo.
   components:
@@ -168,6 +170,16 @@
 - type: entity
   name: Kardashev-Mosin
   parent: WeaponSniperMosin
+  id: WeaponSniperMosinRubber
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle rubber ammo.
+  suffix: Non-Lethal
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleRubber
+
+- type: entity
+  name: Kardashev-Mosin
+  parent: WeaponSniperMosin
   id: WeaponSniperMosinEmpty
   description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
   suffix: Empty
@@ -176,46 +188,14 @@
     proto: null
   - type: ExtendDescription
     descriptionList:
-    - description: "gun-legality-salvage"
-      fontSize: 12
-      color: "#ff4f00"
-      requireDetailRange: false
-
-- type: entity
-  name: Hristov
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseSyndicateContraband]
-  id: WeaponSniperHristov
-  description: A portable anti-materiel rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-materiel ammo.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
-  - type: GunRequiresWield
-  - type: Gun
-    fireRate: 0.4
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - CartridgeAntiMateriel
-    capacity: 5
-    proto: CartridgeAntiMateriel
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.25
-    sprintModifier: 0.25
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+      - description: "gun-legality-salvage"
+        fontSize: 12
+        color: "#ff4f00"
+        requireDetailRange: false
 
 - type: entity
   name: musket
-  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMinorContraband ]
+  parent: BaseWeaponSniper
   id: Musket
   description: This should've been in a museum long before you were born. Uses musket catridges. # Delta V - swapping to our crafted musket ammo
   components:
@@ -268,7 +248,7 @@
 
 - type: entity
   name: flintlock pistol
-  parent: [BaseWeaponSniper, BaseMinorContraband]
+  parent: BaseWeaponSniper
   id: WeaponPistolFlintlock
   description: A pirate's companion. Yarrr! Uses musket cartridges. # Delta V - Ditto the above
   components:
@@ -303,7 +283,7 @@
     wideAnimationRotation: 135
   - type: DamageOtherOnHit
     staminaCost: 5
-###THIS NEEDS MOVING TO CRESCENT
+
 - type: entity
   name: NCWL Novo-mosin 7.62x51mm
   parent: [BaseWeaponSniper, BaseGunWieldable]

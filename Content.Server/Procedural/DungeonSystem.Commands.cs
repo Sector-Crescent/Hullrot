@@ -1,6 +1,8 @@
+using System.Threading.Tasks;
 using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.Procedural;
+using Content.Shared.Procedural.DungeonGenerators;
 using Robust.Shared.Console;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -42,15 +44,13 @@ public sealed partial class DungeonSystem
         }
 
         var position = new Vector2i(posX, posY);
-        var dungeonUid = _maps.GetMapOrInvalid(mapId);
+        var dungeonUid = _mapManager.GetMapEntityId(mapId);
 
         if (!TryComp<MapGridComponent>(dungeonUid, out var dungeonGrid))
         {
             dungeonUid = EntityManager.CreateEntityUninitialized(null, new EntityCoordinates(dungeonUid, position));
             dungeonGrid = EntityManager.AddComponent<MapGridComponent>(dungeonUid);
             EntityManager.InitializeAndStartEntity(dungeonUid, mapId);
-            // If we created a grid (e.g. space dungen) then offset it so we don't double-apply positions
-            position = Vector2i.Zero;
         }
 
         int seed;
@@ -116,7 +116,7 @@ public sealed partial class DungeonSystem
         }
 
         var mapId = new MapId(mapInt);
-        var mapUid = _maps.GetMapOrInvalid(mapId);
+        var mapUid = _mapManager.GetMapEntityId(mapId);
 
         if (!_prototype.TryIndex<DungeonRoomPackPrototype>(args[1], out var pack))
         {
@@ -154,7 +154,7 @@ public sealed partial class DungeonSystem
             }
         }
 
-        _maps.SetTiles(mapUid, grid, tiles);
+        grid.SetTiles(tiles);
         shell.WriteLine(Loc.GetString("cmd-dungen_pack_vis"));
     }
 
@@ -172,7 +172,7 @@ public sealed partial class DungeonSystem
         }
 
         var mapId = new MapId(mapInt);
-        var mapUid =_maps.GetMapOrInvalid(mapId);
+        var mapUid = _mapManager.GetMapEntityId(mapId);
 
         if (!_prototype.TryIndex<DungeonPresetPrototype>(args[1], out var preset))
         {
@@ -195,7 +195,7 @@ public sealed partial class DungeonSystem
             }
         }
 
-        _maps.SetTiles(mapUid, grid, tiles);
+        grid.SetTiles(tiles);
         shell.WriteLine(Loc.GetString("cmd-dungen_pack_vis"));
     }
 

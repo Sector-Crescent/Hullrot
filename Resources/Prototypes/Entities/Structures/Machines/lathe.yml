@@ -16,7 +16,7 @@
         mask:
         - MachineMask
         layer:
-        - MachineLayer
+          - MachineLayer
   - type: Lathe
   - type: MaterialStorage
   - type: Destructible
@@ -91,7 +91,7 @@
   id: Autolathe
   parent: [BaseLatheLube, BaseMaterialSiloUtilizer]
   name: autolathe
-  description: It produces basic items using metal and glass. Has the ability to process blueprints to print new recipes.
+  description: It produces basic items using metal and glass.
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe.rsi
@@ -122,41 +122,166 @@
   - type: Lathe
     idleState: icon
     runningState: building
-    unlitIdleState: unlit
-    unlitRunningState: unlit-building
-    staticPacks:
-    - ToolsStatic
-    - PartsStatic
-    - AtmosStatic
-    - CablesStatic
-    - CargoStatic
-    - MaterialsStatic
-    - BasicChemistryStatic
-    - RollerBedsStatic
-    - LightsStatic
-    - ServiceStatic
-    - PowerCellsStatic
-    - ElectronicsStatic
-    # EE EDIT START
-    - FauxTiles # moved to static
-    - TranslatorStatic
-    # EE EDIT END
+    staticRecipes:
+    - Wirecutter
+    - Igniter
+    - Signaller
+    - Screwdriver
+    - Welder
+    - Wrench
+    - Crowbar
+    - Multitool
+    - NetworkConfigurator
+    - AccessConfigurator
+    - SprayPainter
+    - FlashlightLantern
+    - CableStack
+    - CableMVStack
+    - CableHVStack
+    - HandheldGPSBasic
+    - TRayScanner
+    - AirTank
+    - GasAnalyzer
+    - UtilityBelt
+    - Fulton
+    - FultonBeacon
+    - Pickaxe
+    - ModularReceiver
+    - AppraisalTool
+    - SheetRGlass
+    - Beaker
+    - Syringe
+    - DisposableSyringe
+    - HandLabeler
+    - LightTube
+    - LedLightTube
+    - SodiumLightTube
+    - ExteriorLightTube
+    - LightBulb
+    - LedLightBulb
+    - Bucket
+    - DrinkMug
+    - DrinkMugMetal
+    - DrinkGlass
+    - DrinkShotGlass
+    - DrinkGlassCoupeShaped
+    - CustomDrinkJug
+    - FoodPlate
+    - FoodPlateSmall
+    - FoodPlatePlastic
+    - FoodPlateSmallPlastic
+    - FoodBowlBig
+    - FoodPlateTin
+    - FoodKebabSkewer
+    - SprayBottle
+    - MopItem
+    - Holoprojector
+    - Mousetrap
+    - LightReplacer
+    - TrashBag
+    - PowerCellSmall
+    - PowerCellMedium
+    - RollerBedSpawnFolded
+    - CheapRollerBedSpawnFolded
+    - EmergencyRollerBedSpawnFolded
+    - MicroManipulatorStockPart
+    - MatterBinStockPart
+    - CapacitorStockPart
+    - ConveyorBeltAssembly
+    - IntercomElectronics
+    - FirelockElectronics
+    - DoorElectronics
+    - AirAlarmElectronics
+    - StationMapElectronics
+    - FireAlarmElectronics
+    - MailingUnitElectronics
+    - SignalTimerElectronics
+    - APCElectronics
+    - SMESMachineCircuitboard
+    - SubstationMachineCircuitboard
+    - WallmountSubstationElectronics
+    - CellRechargerCircuitboard
+    - BorgChargerCircuitboard
+    - WeaponCapacitorRechargerCircuitboard
+    - HydroponicsTrayMachineCircuitboard
+    - HandheldStationMap
+    - ClothingHeadHatWelding
+    - ProgramDiskUnburnt # Arcadis - Modular Computer System
+    - FauxTileAstroGrass
+    - FauxTileMowedAstroGrass
+    - FauxTileJungleAstroGrass
+    - FauxTileAstroIce
+    - FauxTileAstroSnow
+    - CanilunztTranslator
+    - BubblishTranslator
+    - NekomimeticTranslator
+    - DraconicTranslator
+    - SolCommonTranslator
+    - NovuNedericTranslator
+    - RootSpeakTranslator
+    - BasicGalaticCommonTranslatorImplanter
+    - MofficTranslator
+    - N14MaterialCircuitry
+    - VehicleWheelchairFolded # Goobstation
+    - LatheHandHeldMassScanner
+    - ClothingBeltSalvageWebbing
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SecurityAmmoStatic
-    - SecurityWeaponsStatic
-  - type: BlueprintReceiver
-    whitelist:
-      tags:
-      - BlueprintAutolathe
-  - type: ContainerContainer
-    containers:
-      machine_board: !type:Container
-      machine_parts: !type:Container
-      blueprint: !type:Container
-  - type: EmptyOnMachineDeconstruct
-    containers:
-    - blueprint
+    emagStaticRecipes:
+    - BoxLethalshot
+    - BoxShotgunLumen
+    - BoxShotgunFlare
+    - BoxShotgunSlug
+    - MagazineBoxLightRifle
+    - MagazineBoxMagnum
+    - MagazineBoxPistol
+    - MagazineBoxRifle
+    - MagazineLightRifle
+    - MagazineLightRifleEmpty
+    - MagazinePistol
+    - MagazinePistolEmpty
+    - MagazinePistolSubMachineGun
+    - MagazinePistolSubMachineGunEmpty
+    - MagazinePistolSubMachineGunTopMounted
+    - MagazinePistolSubMachineGunTopMountedEmpty
+    - MagazineRifle
+    - MagazineRifleEmpty
+    - MagazineShotgun
+    - MagazineShotgunEmpty
+    - MagazineShotgunSlug
+    - RiotShield
+    - SpeedLoaderMagnum
+    - SpeedLoaderMagnumEmpty
+    - MagazineLightRifleMarkOneEmpty
+    - MagazineLightRifleMarkOne
+    - GrenadeFlashBang # Goobstation
+    # .35 Caseless Pistol
+    - MagazinePistolCaselessRiflePractice # EE
+    - MagazinePistolCaselessRifle # EE
+    - MagazinePistolCaselessRifleRubber # EE
+    # .35 Caseless (Civilian) Rifle
+    - MagazineCaselessRifleShortPractice # EE
+    - MagazineCaselessRifleShort # EE
+    - MagazineCaselessRifleShortRubber # EE
+    # .35 Caseless (Military) Rifle
+    - MagazineCaselessRiflePractice # EE
+    - MagazineCaselessRifle # EE
+    - MagazineCaselessRifleRubber # EE
+    # .35 Caseless (Box Mag) Rifle
+    - MagazineBoxCaselessRiflePractice # EE
+    - MagazineBoxCaselessRifle # EE
+    - MagazineBoxCaselessRifleRubber # EE
+    - MagazineMagnumEmpty # Goobstation
+    - MagazineMagnum # Goobstation
+    - MagazineMagnumLeverRifleEmpty # Goobstation
+    - MagazineMagnumLeverRifle # Goobstation
+    - CartridgeEpinephrine # Goobstation
+    - CartridgeBicaridine # Goobstation
+    - CartridgeDermaline # Goobstation
+    - CartridgeEphedrine # Goobstation
+    - CartridgeAtropine # Goobstation
+    - CartridgePuncturase # Goobstation
+    - SecHypo # Goobstation
+    - ParamedHypo # Goobstation - ParamedHypo
 
 - type: entity
   id: AutolatheHyperConvection
@@ -203,35 +328,155 @@
   - type: Lathe
     idleState: icon
     runningState: building
-    unlitIdleState: unlit
-    unlitRunningState: unlit-building
-    staticPacks:
-    - ChemistryStatic
-    - SurgeryStatic
-    dynamicPacks:
-    - AdvancedTools
-    - ScienceEquipment
-    - ScienceClothing
-    - PowerCells
-    - ScienceWeapons
-    - Mining
-    - AtmosTools
-    - EngineeringWeapons
-    - Chemistry
-    - Janitor
-    - Instruments
-    - Equipment
-    # EE EDIT START
-    # - FauxTiles # moved to static
-    - Parts
-    - Translator
-    # EE EDIT END
+    staticRecipes:
+    - LargeBeaker
+    - Dropper
+    - ClothingEyesGlassesChemical
+    - N14MaterialCircuitry
+    dynamicRecipes:
+    - PowerDrill
+    - MiningDrill
+    - MiningDrillDiamond
+    - AnomalyScanner
+    - AnomalyLocator
+    - AnomalyLocatorWide
+    - HandheldCrewMonitor
+    - Scalpel
+    - Retractor
+    - Cautery
+    - Drill
+    - WeaponParticleDecelerator
+    - HoloprojectorField
+    - Saw
+    - Hemostat
+    - CryostasisBeaker
+    - SyringeCryostasis
+    - Syringe
+    - DisposableSyringe
+    - Implanter
+    - PillCanister
+    - ChemistryEmptyBottle01
+    - AdvancedCapacitorStockPart
+    - AdvancedMatterBinStockPart
+    - NanoManipulatorStockPart
+    - SuperCapacitorStockPart
+    - SuperMatterBinStockPart
+    - PicoManipulatorStockPart
+    - BluespaceCapacitorStockPart
+    - BluespaceManipulatorStockPart
+    - BluespaceMatterBinStockPart
+    - AdvMopItem
+    - WeaponSprayNozzle
+    - ClothingBackpackWaterTank
+    - MegaSprayBottle
+    - TimerTrigger
+    - ChemicalPayload
+    - FlashPayload
+    - Signaller
+    - SignallerAdvanced
+    - SignalTrigger
+    - VoiceTrigger
+    - Igniter
+    - HandHeldMassScannerEE
+    - PowerCellMicrortg
+    - PowerCellMicroreactor
+    - PowerCellHigh
+    - WeaponPistolCHIMP
+    - ClothingMaskWeldingGas
+    - WeaponGauntletGorilla
+    - SynthesizerInstrument
+    - RPED
+    - ClothingShoesBootsMag
+    - ClothingShoesBootsMoon
+    - ClothingShoesBootsSpeed
+    - ClothingShoesBootsMagAdv
+    - NodeScanner
+    - HolofanProjector
+    - BluespaceBeaker
+    - SyringeBluespace
+  #  - WeaponForceGun
+    - WeaponLaserSvalinn
+    - WeaponCivilianDisabler
+    - WeaponProtoKineticAccelerator
+  #  - WeaponTetherGun
+  #  - WeaponGrapplingGun
+    - ClothingBackpackHolding
+    - ClothingBackpackSatchelHolding
+    - ClothingBackpackDuffelHolding
+    - WelderExperimental
+    - JawsOfLife
+    - CoreSilver # Nyanotrasen - Silver Golem core
+    - OreBagOfHolding
+    - DeviceQuantumSpinInverter
+    - PKAUpgradeDamage # Lavaland Change
+    - PKAUpgradeRange # Lavaland Change
+    - PKAUpgradeFireRate # Lavaland Change
+    - XenoTranslator
+    - AdvancedGalaticCommonTranslatorImplanter
+    - BubblishTranslatorImplanter
+    - NekomimeticTranslatorImplanter
+    - DraconicTranslatorImplanter
+    - CanilunztTranslatorImplanter
+    - SolCommonTranslatorImplanter
+    - RootSpeakTranslatorImplanter
+    - AnimalTranslator
+    - MofficTranslatorImplanter
+    - ClothingEyesNightVisionGoggles
+    - ClothingEyesNightVisionDiagnosticGoggles
+    - ClothingEyesThermalVisionGoggles
+    - RCDAmmo #DeltaV
+    - RCD #EE
+    - RPD
+    # Shitmed Change
+    - EnergyScalpel
+    - EnergyCautery
+    - AdvancedRetractor
+    - VehicleWheelchairFolded # Goobstation
   - type: EmagLatheRecipes
-    emagDynamicPacks:
-    - SecurityAmmo
-    - SecurityExplosives
-    - SecurityEquipment
-    - SecurityWeapons
+    emagDynamicRecipes:
+    - BoxBeanbag
+    - BoxShotgunIncendiary
+    - BoxShotgunUranium
+    - ExplosivePayload
+    - GrenadeBlast
+    - GrenadeEMP
+    - GrenadeFlash
+    - HoloprojectorSecurity
+    - MagazineBoxLightRifleIncendiary
+    - MagazineBoxLightRifleUranium
+    - MagazineBoxMagnumIncendiary
+    - MagazineBoxMagnumUranium
+    - MagazineBoxPistolIncendiary
+    - MagazineBoxPistolUranium
+    - MagazineBoxRifleIncendiary
+    - MagazineBoxRifleUranium
+    - MagazineGrenadeEmpty
+    - MagazineLightRifleIncendiary
+    - MagazineLightRifleUranium
+    - MagazinePistolIncendiary
+    - MagazinePistolUranium
+    - MagazineRifleIncendiary
+    - MagazineRifleUranium
+    - MagazineShotgunBeanbag
+    - MagazineShotgunIncendiary
+    - MagazineShotgunIncendiary
+    - PortableRecharger
+    - PowerCageHigh
+    - PowerCageMedium
+    - PowerCageSmall
+    - ShellTranquilizer
+    - SpeedLoaderMagnumIncendiary
+    - SpeedLoaderMagnumUranium
+    - TelescopicShield
+    - Truncheon
+    - WeaponAdvancedLaser
+    - WeaponLaserCannon
+    - WeaponLaserCarbine
+    - WeaponXrayCannon
+    - WeaponEnergyGun       # DeltaV - Energy Gun
+    - WeaponEnergyGunMini   # DeltaV - Miniature Energy Gun
+    - WeaponEnergyGunPistol # DeltaV - PDW-9 Energy Pistol
+    - WeaponGunLaserCarbineAutomatic # DeltaV - IK-60 Laser Carbine
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -267,25 +512,136 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: building
-    staticPacks:
-    - ScienceBoardsStatic
-    - ServiceBoardsStatic
-    - CargoBoardsStatic
-    - MedicalBoardsStatic
-    - EngineeringBoardsStatic
-    - CircuitFloorsStatic
-    dynamicPacks:
-    - EngineeringBoards
-    - CargoBoards
-    - MedicalBoards
-    - ServiceBoards
-    - ScienceBoards
-    - CameraBoards
-    - MechBoards
-    - ShuttleBoards
+    staticRecipes:
+    - ProtolatheMachineCircuitboard
+    - AutolatheMachineCircuitboard
+    - BookPressMachineCircuitboard
+    - CircuitImprinterMachineCircuitboard
+    - BiogeneratorMachineCircuitboard
+    - OreProcessorMachineCircuitboard
+    - MaterialReclaimerMachineCircuitboard
+    - ElectrolysisUnitMachineCircuitboard
+    - CentrifugeMachineCircuitboard
+    - ChemDispenserMachineCircuitboard
+    - ChemMasterMachineCircuitboard
+    - CondenserMachineCircuitBoard
+    - HotplateMachineCircuitboard
+    - PrinterDocMachineCircuitboard  # Corvax-Printer
+    - UniformPrinterMachineCircuitboard
+    - FloorGreenCircuit
+    - FloorBlueCircuit
+    - MicrowaveMachineCircuitboard
+    - ReagentGrinderMachineCircuitboard
+    - ElectricGrillMachineCircuitboard
+    - BoozeDispenserMachineCircuitboard
+    - SodaDispenserMachineCircuitboard
+    - DeepFryerMachineCircuitboard #Nyano - Summary: adds deep fryer circuit board
+    - SpaceHeaterMachineCircuitBoard
+    - StationAnchorCircuitboard
+    - SeedExtractorMachineCircuitboard
+    - ReagentGrinderIndustrialMachineCircuitboard
+    - StasisBedMachineCircuitboard
+    - CryoPodMachineCircuitboard
+    - N14MaterialCircuitry
+    dynamicRecipes:
+    - ThermomachineFreezerMachineCircuitBoard
+    - DroneElectronics
+    - HellfireFreezerMachineCircuitBoard
+    - PortableScrubberMachineCircuitBoard
+    - CloningPodMachineCircuitboard
+    - MedicalScannerMachineCircuitboard
+    - VaccinatorMachineCircuitboard
+    - DiagnoserMachineCircuitboard
+    - BiomassReclaimerMachineCircuitboard
+    - BiofabricatorMachineCircuitboard
+    - SurveillanceCameraRouterCircuitboard
+    - SurveillanceCameraMonitorCircuitboard
+    - SurveillanceWirelessCameraMonitorCircuitboard
+    - SurveillanceCameraWirelessRouterCircuitboard
+    - ComputerTelevisionCircuitboard
+    - JukeboxCircuitBoard
+    - SurveillanceWirelessCameraMovableCircuitboard
+    - SurveillanceWirelessCameraAnchoredCircuitboard
+    - SolarControlComputerCircuitboard
+    - SolarTrackerElectronics
+    - TurboItemRechargerCircuitboard
+    - PowerComputerCircuitboard
+    - AlertsComputerCircuitboard
+    - AutolatheHyperConvectionMachineCircuitboard
+    - ProtolatheHyperConvectionMachineCircuitboard
+    - CircuitImprinterHyperConvectionMachineCircuitboard
+    - FatExtractorMachineCircuitboard
+    - FlatpackerMachineCircuitboard
+    - SheetifierMachineCircuitboard
+    - ShuttleConsoleCircuitboard
+    - RadarConsoleCircuitboard
+    - TechDiskComputerCircuitboard
+    - DawInstrumentMachineCircuitboard
+    - CloningConsoleComputerCircuitboard
+    - OreProcessorIndustrialMachineCircuitboard
+    - CargoTelepadMachineCircuitboard
+    - RipleyCentralElectronics
+    - RipleyPeripheralsElectronics
+    - HonkerCentralElectronics
+    - HonkerPeripheralsElectronics
+    - HonkerTargetingElectronics
+    - HamtrCentralElectronics
+    - HamtrPeripheralsElectronics
+    - PortableGeneratorPacmanMachineCircuitboard
+    - PortableGeneratorSuperPacmanMachineCircuitboard
+    - PortableGeneratorJrPacmanMachineCircuitboard
+    - WallmountGeneratorElectronics
+    - WallmountGeneratorAPUElectronics
+    - WallmountSubstationElectronics
+    - PowerCageRechargerCircuitboard
+    - EmitterCircuitboard
+    - ThrusterMachineCircuitboard
+    - GyroscopeMachineCircuitboard
+    - MiniGravityGeneratorCircuitboard
+    - ShuttleGunKineticCircuitboard
+    - GasRecyclerMachineCircuitboard
+    - AnalysisComputerCircuitboard
+    - ExosuitFabricatorMachineCircuitboard
+    - AnomalyVesselCircuitboard
+    - AnomalyVesselExperimentalCircuitboard
+    - AnomalySynchronizerCircuitboard
+    - APECircuitboard
+    - ArtifactAnalyzerMachineCircuitboard
+    - ArtifactCrusherMachineCircuitboard
+    - TelecomServerCircuitboard
+    - MassMediaCircuitboard
+    - ReverseEngineeringMachineCircuitboard
+    - CrewMonitoringComputerCircuitboard
+    - DoorElectronics
+    - FireAlarmElectronics
+    - FirelockElectronics
+    - IntercomElectronics
+    - MailingUnitElectronics
+    - SalvageMagnetMachineCircuitboard
+    - StationMapElectronics
+    - MetempsychoticMachineCircuitboard
+    - SalvageExpeditionsComputerCircuitboard
+    - JukeboxCircuitBoard
+    - AutodocCircuitboard # Shitmed Change
+#    - OperatingTableCircuitboard # Shitmed Change
+    - MaterialSiloCircuitboard
+    - GygaxCentralElectronics
+    - GygaxPeripheralsElectronics
+    - GygaxTargetingElectronics
+    - DurandCentralElectronics
+    - DurandPeripheralsElectronics
+    - DurandTargetingElectronics
+    - ClarkeCentralElectronics
+    - ClarkePeripheralsElectronics
+    - SMESAdvancedMachineCircuitboard
+    - BaseComputerModularCircuitBoard # Arcadis - Modular Computer System
+    - DiskBurnerMachineCircuitboard # Arcadis - Modular Computer System
   - type: EmagLatheRecipes
-    emagDynamicPacks:
-    - SecurityBoards
+    emagDynamicRecipes:
+    - ShuttleGunDusterCircuitboard
+    - ShuttleGunFriendshipCircuitboard
+    - ShuttleGunPerforatorCircuitboard
+    - ShuttleGunSvalinnMachineGunCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -314,7 +670,7 @@
   id: ExosuitFabricator
   parent: [BaseLatheLube, BaseMaterialSiloUtilizer]
   name: exosuit fabricator
-  description: Creates parts for robotics and other mechanical needs.
+  description: Creates parts for robotics and other mechanical needs
   components:
   - type: Sprite
     sprite: Structures/Machines/exosuit_fabricator.rsi
@@ -330,25 +686,154 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - RoboticsStatic
-    - BorgModulesStatic
-    - BorgLimbsStatic
-    # EE EDIT START
-    - MechEquipmentStatic
-    # EE EDIT END
-    dynamicPacks:
-    - Robotics
-    - BorgModules
-    - MechParts
-    - MechEquipment
-    # EE EDIT START
-    - Modsuit
-    - Cybernetics
-    # EE EDIT END
+    staticRecipes:
+    - MMI
+    - PositronicBrain
+    - SciFlash
+    - BorgModuleCable
+    - BorgModuleFireExtinguisher
+    - BorgModuleRadiationDetection
+    - BorgModuleTool
+    - BorgModuleAppraisal
+    - BorgModuleConstruction
+    - BorgModuleService
+    - BorgModuleTreatment
+    - BorgModuleSurgery
+    - BorgModuleCleaning
+    - CyborgEndoskeleton
+    - LeftArmBorg
+    - RightArmBorg
+    - LeftLegBorg
+    - RightLegBorg
+    - LightHeadBorg
+    - TorsoBorg
+    - LeftArmBorgEngineer
+    - RightArmBorgEngineer
+    - LeftLegBorgEngineer
+    - RightLegBorgEngineer
+    - HeadBorgEngineer
+    - TorsoBorgEngineer
+    - LeftLegBorgJanitor
+    - RightLegBorgJanitor
+    - HeadBorgJanitor
+    - TorsoBorgJanitor
+    - LeftArmBorgMedical
+    - RightArmBorgMedical
+    - LeftLegBorgMedical
+    - RightLegBorgMedical
+    - HeadBorgMedical
+    - TorsoBorgMedical
+    - LeftArmBorgMining
+    - RightArmBorgMining
+    - LeftLegBorgMining
+    - RightLegBorgMining
+    - HeadBorgMining
+    - TorsoBorgMining
+    - LeftArmBorgService
+    - RightArmBorgService
+    - LeftLegBorgService
+    - RightLegBorgService
+    - HeadBorgService
+    - TorsoBorgService
+    - MechAirTank # Goobstation
+    - MechThruster # Goobstation
+    - PowerCageMedium # Goobstation - Powercell to exosuit fab
+    - PowerCageSmall # Goobstation - Powercell to exosuit fab
+    - ProximitySensor
+    dynamicRecipes:
+    - BorgModuleLightReplacer
+    - BorgModuleAdvancedCleaning
+    - BorgModuleMining
+  #  - BorgModuleGrapplingGun
+    - BorgModuleAdvancedTool
+    - BorgModuleGPS
+    - BorgModuleRCD
+    - BorgModuleJetpack
+    - BorgModulePka
+    - BorgModuleArtifact
+    - BorgModuleAnomaly
+    - BorgModuleGardening
+    - BorgModuleHarvesting
+    - BorgModuleMusique
+    - BorgModuleClowning
+    - BorgModuleDiagnosis
+    - BorgModuleDefibrillator
+    - BorgModuleAdvancedTreatment
+    - BorgModuleAdvancedSurgery
+    - JawsOfLifeLeftArm
+    - JawsOfLifeRightArm
+    - SpeedLeftLeg
+    - SpeedRightLeg
+    - BasicCyberneticEyes
+    - RipleyHarness
+    - RipleyLArm
+    - RipleyRArm
+    - RipleyLLeg
+    - RipleyRLeg
+    - RipleyMKIIHarness
+    - RipleyUpgradeKit
+    - MechEquipmentGrabber
+    - HonkerHarness
+    - HonkerLArm
+    - HonkerRArm
+    - HonkerLLeg
+    - HonkerRLeg
+    - MechEquipmentHorn
+    - MechEquipmentGrabberSmall
+    - HamtrHarness
+    - HamtrLArm
+    - HamtrRArm
+    - HamtrLLeg
+    - HamtrRLeg
+    - VimHarness
+    # Begin Nyano additions
+    - JetpackBlue
+    - JetpackMini
+  # End Nyano additions
+    - ClarkeHarness
+    - ClarkeHead
+    - ClarkeLArm
+    - ClarkeRArm
+    - ClarkeTreads
+    - DurandHarness
+    - DurandArmor
+    - DurandHead
+    - DurandLArm
+    - DurandLLeg
+    - DurandRArm
+    - DurandRLeg
+    - GygaxHarness
+    - GygaxArmor
+    - GygaxHead
+    - GygaxLArm
+    - GygaxLLeg
+    - GygaxRArm
+    - GygaxRLeg
+    - MechEquipmentDrill
+    - MechEquipmentDrillDiamond
+    - MechEquipmentKineticAccelerator
+    - MechEquipmentHonkerBananaMortar
+    - MechEquipmentHonkerMousetrapMortar
+    # Goobstation - Modsuits
+    - ModsuitChestplate
+    - ModsuitBoots
+    - ModsuitHelmet
+    - ModsuitGauntlets
+    - ModsuitShell
+    - ModsuitPlatingExternal
+    - PowerCageHigh # Goobstation - Powercell to exosuit fab
+    - ReverseMMI # IPCMMI
   - type: EmagLatheRecipes
-    emagDynamicPacks:
-    - MechEquipmentSecurity
+    emagDynamicRecipes:
+    - WeaponMechCombatImmolationGun
+    - WeaponMechCombatSolarisLaser
+    - WeaponMechCombatFiredartLaser
+    - WeaponMechCombatUltraRifle
+    - WeaponMechCombatShotgun
+    - WeaponMechCombatShotgunIncendiary
+    - WeaponMechCombatDisabler
+    - WeaponMechCombatFlashbangLauncher
+    - WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
@@ -367,7 +852,7 @@
 - type: entity
   id: Biofabricator
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
-  name: biocube fabricator
+  name: biofabricator
   description: Produces animal cubes using biomass.
   components:
   - type: Sprite
@@ -402,11 +887,19 @@
   - type: Lathe
     idleState: icon
     runningState: building
-    staticPacks:
-    - FriendlyCubesStatic
+    staticRecipes:
+    - MonkeyCube
+    - KoboldCube
+    - CowCube
+    - GoatCube
+    - MothroachCube
+    - MouseCube
+    - CockroachCube
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - HostileCubesStatic
+    emagStaticRecipes:
+    - AbominationCube
+    - SpaceCarpCube
+    - SpaceTickCube
 
 - type: entity
   id: SecurityTechFab
@@ -432,26 +925,257 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
-    - SecurityEquipmentStatic
-    - SecurityPracticeStatic
-    - SecurityAmmoStatic
-    - SecurityWeaponsStatic
-    # EE EDIT START
-    - SecurityClothingStatic
-    - SecurityHypoStatic
-    # EE EDIT END
-    dynamicPacks:
-    - SecurityEquipment
-    - SecurityBoards
-    - SecurityExplosives
-    - SecurityAmmo
-    - SecurityWeapons
-    # EE EDIT START
-    - SecurityClothing
-    - SecurityCybernetics
-    - MechEquipmentSecurity
-    # EE EDIT END
+    staticRecipes:
+      - BoxLethalshot
+      - BoxShotgunLumen
+      - BoxShotgunFlare
+      - BoxShotgunPractice
+      - BoxShotgunSlug
+      - ClothingEyesHudSecurity
+      - CombatKnife
+      - Flash
+      - ForensicPad
+      - Handcuffs
+      - ShellShotgun
+      - ShellShotgunSlug
+      - ShellShotgunLumen
+      - ShellShotgunFlare
+      - ShellTranquilizer
+      - MagazineBoxLightRifle
+      - MagazineBoxLightRiflePractice
+      - MagazineBoxMagnum
+      - MagazineBoxMagnumPractice
+      - MagazineBoxPistol
+      - MagazineBoxPistolPractice
+      - MagazineBoxRifle
+      - MagazineBoxRiflePractice
+      - MagazineBoxLightRifle
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazinePistol
+      - MagazinePistolEmpty
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMountedEmpty
+      # .35 Caseless Pistol
+      - MagazinePistolCaselessRiflePractice # EE
+      - MagazinePistolCaselessRifle # EE
+      - MagazinePistolCaselessRifleRubber # EE
+      # .35 Caseless (Civilian) Rifle
+      - MagazineCaselessRifleShortPractice # EE
+      - MagazineCaselessRifleShort # EE
+      - MagazineCaselessRifleShortRubber # EE
+      # .35 Caseless (Military) Rifle
+      - MagazineCaselessRiflePractice # EE
+      - MagazineCaselessRifle # EE
+      - MagazineCaselessRifleRubber # EE
+      # .35 Caseless (Box Mag) Rifle
+      - MagazineBoxCaselessRiflePractice # EE
+      - MagazineBoxCaselessRifle # EE
+      - MagazineBoxCaselessRifleRubber # EE
+      - MagazineMagnum
+      - MagazineMagnumEmpty
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineShotgun
+      - MagazineShotgunEmpty
+      - MagazineShotgunSlug
+      - RiotShield
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
+      - Stunbaton
+      - TargetClown
+      - ClothingOuterArmorPlateCarrier
+      - ClothingOuterArmorDuraVest
+      - TargetHuman
+      - TargetSyndicate
+      - WeaponDisablerPractice
+      - WeaponFlareGunSecurity
+      - WeaponLaserCarbinePractice
+      - Zipties
+      - GrenadeFlashBang # Goobstation
+      - ShockCollar
+      # DeltaV - .38 special ammo - Add various .38 special ammo to security techfab
+      - MagazineBoxSpecial
+      - MagazineBoxSpecialPractice
+      - SpeedLoaderSpecial
+      - MagazinePistolSpecial
+      - HandheldGPSBasic
+      - HandheldStationMap
+      - SpeedLoaderRifleHeavy
+      - SpeedLoaderRifleHeavyEmpty
+      - MagazineMagnumLeverRifle # Goobstation
+      - MagazineMagnumLeverRifleEmpty # Goobstation
+      - ClothingEyesGlassesSecurity
+      - TelescopicShield
+      - HoloprojectorSecurity
+      - BolaEnergy
+      - ClothingHeadHelmetBasic
+      - MagazineShotgunBeanbag
+      - ShellTranquilizer
+      - CartridgeEpinephrine # Goobstation
+      - CartridgeBicaridine # Goobstation
+      - CartridgeDermaline # Goobstation
+      - CartridgeAtropine # Goobstation
+      - CartridgeSaline # Goobstation
+      - SecHypo # Goobstation
+      - BoxBeanbag
+      - CartridgePistolRubber
+      - CartridgeMagnumRubber
+      - CartridgeLightRifleRubber
+      - CartridgeRifleRubber
+      - MagazineRifleRubber
+      - MagazinePistolRubber
+      - MagazinePistolSubMachineGunRubber
+      - MagazineMagnumRubber
+      - MagazineLightRifleRubber
+      - SpeedLoaderMagnumRubber
+      - MagazineBoxPistolRubber
+      - MagazineBoxMagnumRubber
+      - MagazineBoxLightRifleRubber
+      - MagazineBoxRifleRubber
+      - CartridgeSpecialRubber
+      - MagazineBoxSpecialRubber
+      - MagazineBoxLightRifleRubber # Frontier
+      - MagazineBoxMagnumRubber # Frontier
+      - MagazineBoxPistolRubber # Frontier
+      - MagazineBoxRifleRubber # Frontier
+      - BoxShotgunBirdshot
+      - BoxShotgun00Buckshot
+      - BoxShotgun0000Buckshot
+      - MagazineUniversalMagnumEmpty
+      - MagazineUniversalMagnum
+      - MagazineUniversalMagnumRubber
+      - MagazineLightRifleMarkOneEmpty
+      - MagazineLightRifleMarkOne
+    dynamicRecipes:
+      - Truncheon
+      - Terminus
+      - BoxShotgunIncendiary
+      - BoxShotgunUranium
+      - EncryptionKeySyndie
+      - CartridgeLightRifleIncendiary
+      - CartridgeMagnumIncendiary
+      - CartridgePistolIncendiary
+      - CartridgeRifleIncendiary
+      - CartridgeLightRifleUranium
+      - CartridgeMagnumUranium
+      - CartridgePistolUranium
+      - CartridgeRifleUranium
+      - ExplosivePayload
+      - FlashPayload
+      - GrenadeBlast
+      - GrenadeEMP
+      - GrenadeFlash
+      - MagazineBoxLightRifleIncendiary
+      - MagazineBoxLightRifleUranium
+      - MagazineBoxMagnumIncendiary
+      - MagazineBoxMagnumUranium
+      - MagazineBoxPistolIncendiary
+      - MagazineBoxPistolUranium
+      - MagazineBoxRifleIncendiary
+      - MagazineBoxRifleUranium
+      - ShellSoulbreaker
+      - MagazineGrenadeEmpty
+      - MagazineLightRifleIncendiary
+      - MagazineLightRifleUranium
+      - MagazinePistolIncendiary
+      - MagazinePistolUranium
+      - MagazinePistolSubMachineGunIncendiary
+      - MagazinePistolSubMachineGunUranium
+      - MagazineMagnumIncendiary
+      - MagazineMagnumUranium
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - MagazineShotgunIncendiary
+      - PortableRecharger
+      - PowerCageHigh
+      - PowerCageMedium
+      - PowerCageSmall
+      - ShuttleGunDusterCircuitboard
+      - ShuttleGunFriendshipCircuitboard
+      - ShuttleGunPerforatorCircuitboard
+      - ShuttleGunSvalinnMachineGunCircuitboard
+      - Signaller
+      - SignalTrigger
+      - SpeedLoaderMagnumIncendiary
+      - SpeedLoaderMagnumUranium
+      - SpeedLoaderRifleHeavyIncendiary
+      - SpeedLoaderRifleHeavyUranium
+      - TimerTrigger
+      - VoiceTrigger
+      - WeaponAdvancedLaser
+      - WeaponDisabler
+      - WeaponDisablerSMG
+      - WeaponLaserCannon
+      - WeaponLaserCarbine
+      - ClothingEyesNightVisionSecurityGoggles
+      - ClothingHeadHelmetInsulated # Nyanotrasen - Insulative headgear
+      - ClothingHeadCage # Nyanotrasen - Insulative headgear
+      - ShockCollar # Nyanotrasen - Shock Collar
+      - WeaponXrayCannon
+      - WeaponEnergyGun
+      - WeaponEnergyGunMini
+      - WeaponEnergyGunPistol
+      - WeaponGunLaserCarbineAutomatic
+      - CartridgeSpecialIncendiary
+      - CartridgeSpecialUranium
+      - CartridgeSpecialHoly
+      - CartridgeSpecialMindbreaker
+      - MagazineBoxSpecialIncendiary
+      - MagazineBoxSpecialUranium
+      - MagazineBoxSpecialMindbreaker
+      - SecurityCyberneticEyes
+      - MedicalCyberneticEyes
+      - ClothingOuterHardsuitCombatStandard
+      - ClothingOuterHardsuitCombatMedical
+      - ClothingOuterHardsuitCombatRiot
+      - ClothingOuterHardsuitCombatAdvanced
+      - ClothingOuterHardsuitShanlinUnpainted
+      - ClothingOuterHardsuitShiweiUnpainted
+      - ClothingOuterHardsuitJuggernautReverseEngineered
+      - WeaponMechCombatImmolationGun
+      - WeaponMechCombatSolarisLaser
+      - WeaponMechCombatFiredartLaser
+      - WeaponMechCombatUltraRifle
+      - WeaponMechCombatShotgun
+      - WeaponMechCombatShotgunIncendiary
+      - WeaponMechCombatDisabler
+      - WeaponMechCombatFlashbangLauncher
+      - WeaponMechCombatMissileRack8
+      - EnergySword
+      - EnergySwordDouble
+      - EnergyCutlass
+      - WeaponEnergyTurretAIMachineCircuitboard
+      - WeaponEnergyTurretStationMachineCircuitboard
+      - WeaponEnergyTurretAIControlPanelElectronics
+      - WeaponEnergyTurretStationControlPanelElectronics
+      - WeaponSubMachineGunFPA90
+      - WeaponSubMachineGunBRDIR25
+      - WeaponPistolMk58
+      - WeaponPistolN1984
+      - WeaponPistolViper
+      - WeaponPistolCobra
+      - MagazineRifleShrapnel
+      - MagazinePistolShrapnel
+      - MagazinePistolSubMachineGunShrapnel
+      - MagazineMagnumShrapnel
+      - MagazineLightRifleShrapnel
+      - MagazineCaselessRifleShrapnel
+      - MagazineCaselessRifleIncendiary
+      - MagazineCaselessRifleUranium
+      - MagazineBoxPistolShrapnel
+      - MagazineBoxMagnumShrapnel
+      - MagazineBoxLightRifleShrapnel
+      - MagazineBoxRifleShrapnel
+      - MagazineBoxCaselessRifleShrapnel
+      - MagazineBoxCaselessRifleIncendiary
+      - MagazineBoxCaselessRifleUranium
+      - MagazineUniversalMagnumUranium
+      - MagazineUniversalMagnumIncendiary
+      - MagazineUniversalMagnumShrapnel
+      - WeaponPistolUniversal
   - type: MaterialStorage
     whitelist:
       tags:
@@ -469,36 +1193,109 @@
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
-  - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: ammo
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: AmmoTechFabCircuitboard
-  - type: Lathe
-    idleState: icon
-    runningState: icon
-    staticPacks:
-    - SecurityAmmoStatic
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - RawMaterial
-      - Ingot
-      - Wooden
-      - ClothMade
-      - Gauze
-      - Metal
+    - type: Sprite
+      sprite: Structures/Machines/techfab.rsi
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: ammo
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: AmmoTechFabCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+      staticRecipes:
+        - SluggieHE
+        - SluggieAP
+        - SluggieEMP
+        - IdnaTorpedoRecipe
+        - Automortar90
+        - MagazineGrenadeEmpty
+        - Needler60
+        - MagazineVulcan
+        - MagazineFlak
+        - 48mmEMPRocket
+        - 48mmHighYieldRocket
+        - 48mmLowYieldRocket
+        - RocketMagazineEmpty
+        - LensInfaredRecipe
+        - LensPlasmaRecipe
+        - LensXrayRecipe
+        - Cartridge40mmFrag
+        - Cartridge40mmCan
+        - Cartridge40mmHEDP
+        - Cartridge40mmEMP
+        - Cartridge40mmSmoke
+        - Cartridge40mmThermobaric
+        - MagazineBoxImperialRifleBig
+        - MagazineHeavyRifleSmall
+        #Hullrot edit start
+        - BaseCartridgeRailgun15mm
+        - MagazineClip18gBuck
+        - MagazinePulse470Fmj
+        - MagazinePulse470
+        - MagazinePulse350Fmj
+        - MagazinePulse350
+        - DrumMagazineShotgunSlug
+        - DrumMagazineShotgunEmpty
+        - DrumMagazineShotgunBuck
+        - MagazineSmgSmartgun
+        - MagazineHeavyRifleBoxmag
+        - MagazinePistolHeavy
+        - MagazineBoxHeavyPistol
+        - SpeedLoader27mmAutocannonHE
+        - MagazineBoxAntiMateriel
+        - MagazineBoxHeavyRifle
+        - MagazineBoxRifle
+        - MagazineBoxLightRifle
+        - MagazineBoxCaselessRifle
+        - MagazineBoxCaselessRifleBig
+        - BoxShotgunFlash4g
+        - BoxShotgunSlug4g
+        - BoxLethalshot4g
+        - BoxBeanbag4g
+        - BoxLethalshot
+        - BoxShotgunSlug
+        - BoxShotgunLumen
+        - BoxShotgunFlare
+        - MagazineBoxMagnum
+        - MagazineBoxPistol
+        - MagazineAntiMateriel
+        - MagazineHeavyRifle
+        - MagazineRifleDrum
+        - MagazineRifle
+        - MagazineLightRifle
+        - MagazineShotgunSlug
+        - MagazineShotgun
+        - SpeedLoader127x99
+        - SpeedLoaderMagnum
+        - MagazineMagnumSub
+        - MagazineMagnum
+        - MagazinePistolSubMachineGunHeavy
+        - MagazinePistolSubMachineGun
+        - MagazinePistol6mmSmg
+        - MagazinePistolSmartgun
+        - MagazinePistol
+        - MagazinePistol6mm
+        - MagazinePistolSubMachineGunTopMounted
+        #Hullrot edit end
+    - type: MaterialStorage
+      whitelist:
+        tags:
+          - Sheet
+          - RawMaterial
+          - Ingot
+          - Wooden
+          - ClothMade
+          - Gauze
+          - Metal
 
 
 - type: entity
@@ -523,24 +1320,76 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
-    - TopicalsStatic
-    - ChemistryStatic
-    - MedicalStatic
-    - RollerBedsStatic
-    - MedicalClothingStatic
-    - EmptyMedkitsStatic
-    - SurgeryStatic
-    - ParamedHypoStatic # EE EDIT
-    dynamicPacks:
-    - Chemistry
-  # EE EDIT START
-    - Surgery
-    - MedicalClothing
+    staticRecipes:
+    - Brutepack
+    - Ointment
+    - Gauze
+    - HandLabeler
+    - Defibrillator
+    - HandheldHealthAnalyzer
+    - ClothingHandsGlovesLatex
+    - ClothingHandsGlovesNitrile
+    - ClothingMaskSterile
+    - DiseaseSwab
+    - Beaker
+    - LargeBeaker
+    - Dropper
+    - Jug
+    - Syringe
+    - DisposableSyringe
+    - Implanter
+    - PillCanister
+    - BodyBag
+    - ChemistryEmptyBottle01
+    - RollerBedSpawnFolded
+    - CheapRollerBedSpawnFolded
+    - EmergencyRollerBedSpawnFolded
+    - Medkit
+    - MedkitBurn
+    - MedkitToxin
+    - MedkitO2
+    - MedkitBrute
+    - MedkitAdvanced
+    - MedkitRadiation
+    - MedkitCombat
+    - Scalpel
+    - Retractor
+    - Cautery
+    - Drill
+    - Saw
+    - Hemostat
+    - ClothingEyesGlassesChemical
+    - BoneGel # Shitmed Change
+    - AACTablet # DeltaV
+    - VehicleWheelchairFolded # Goobstation - Vehicles
+    - SyringeCase # Morphine
+    - CartridgeAtropine # Goobstation - ParamedHypo
+    - CartridgeEpinephrine # Goobstation - ParamedHypo
+    - CartridgeBicaridine # Goobstation - ParamedHypo
+    - CartridgeDermaline # Goobstation - ParamedHypo
+    - CartridgeSaline # Goobstation - ParamedHypo
+    - ParamedHypo # Goobstation - ParamedHypo
+    dynamicRecipes:
+    - ChemicalPayload
+    - CryostasisBeaker
+    - BluespaceBeaker
+    - SyringeBluespace
+    - ClothingEyesHudMedical # Nyano
+    - ChemicalPayload # Nyano
+    - SyringeCryostasis
+    - ClothingEyesNightVisionMedicalGoggles
+    - EnvirosuitExtinguisherRefill
+    # Shitmed Change
+    - EnergyScalpel
+    - EnergyCautery
+    - AdvancedRetractor
+    - OmnimedTool
+    - MedicalCyberneticEyes
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SyndicateCatridgesStatic
-  # EE EDIT END
+    emagStaticRecipes:
+    - CartridgeEphedrine
+    - CartridgePuncturase
+    - CartridgeTirizene
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
@@ -566,24 +1415,204 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticPacks:
-    - ClothingCivilian
-    - ClothingCargo
-    - ClothingCommand
-    - ClothingEngineering
-    - ClothingMedical
-    - ClothingScience
-    - ClothingSecurity
-    - ClothingService
-    - WinterCoats
-    - Ties
-    - Scarves
-    - Carpets
-    - Bedsheets
+    staticRecipes:
+    - ClothingUniformJumpsuitColorGrey
+    - ClothingUniformJumpskirtColorGrey
+    - ClothingUniformJumpsuitBartender
+    - ClothingUniformJumpskirtBartender
+    - ClothingHeadHatCapcap
+    - ClothingHeadHatCaptain
+    - ClothingUniformJumpsuitCaptain
+    - ClothingUniformJumpskirtCaptain
+    - ClothingUniformJumpsuitCapFormal
+    - ClothingUniformJumpskirtCapFormalDress
+    - ClothingUniformJumpsuitCargo
+    - ClothingUniformJumpskirtCargo
+    - ClothingUniformJumpsuitSalvageSpecialist
+    - ClothingHeadHatBeretEngineering
+    - ClothingUniformJumpsuitChiefEngineer
+    - ClothingUniformJumpskirtChiefEngineer
+    - ClothingUniformJumpsuitChiefEngineerTurtle
+    - ClothingUniformJumpskirtChiefEngineerTurtle
+    - ClothingUniformJumpsuitChaplain
+    - ClothingUniformJumpskirtChaplain
+    - ClothingUniformJumpsuitChef
+    - ClothingUniformJumpskirtChef
+    - ClothingUniformJumpsuitChemistry
+    - ClothingUniformJumpskirtChemistry
+    - ClothingUniformJumpsuitClown
+    - ClothingHeadHatBeretCmo
+    - ClothingUniformJumpsuitCMO
+    - ClothingUniformJumpskirtCMO
+    - ClothingUniformJumpsuitCMOTurtle
+    - ClothingUniformJumpskirtCMOTurtle
+    - ClothingUniformJumpsuitDetective
+    - ClothingUniformJumpskirtDetective
+    - ClothingUniformJumpsuitEngineering
+    - ClothingUniformJumpskirtEngineering
+    - ClothingUniformJumpsuitSeniorEngineer
+    - ClothingUniformJumpskirtSeniorEngineer
+    - ClothingHeadHatHopcap
+    - ClothingUniformJumpsuitHoP
+    - ClothingUniformJumpskirtHoP
+    - ClothingHeadHatBeretHoS
+    - ClothingHeadHatHoshat
+    - ClothingUniformJumpsuitHoS
+    - ClothingUniformJumpskirtHoS
+    - ClothingUniformJumpsuitHoSBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtHoSBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpsuitHoSGrey # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtHoSGrey # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpsuitHosFormal
+    - ClothingUniformJumpskirtHosFormal
+    - ClothingUniformJumpsuitHoSAlt
+    - ClothingUniformJumpskirtHoSAlt
+    - ClothingUniformJumpsuitHoSBlue
+    - ClothingUniformJumpsuitHoSGrey
+    - ClothingUniformJumpsuitHoSParadeMale
+    - ClothingUniformJumpskirtHoSParadeMale
+    - ClothingUniformJumpsuitHydroponics
+    - ClothingUniformJumpskirtHydroponics
+    - ClothingUniformJumpsuitJanitor
+    - ClothingUniformJumpskirtJanitor
+    - ClothingUniformJumpsuitLawyerBlack
+    - ClothingUniformJumpsuitLibrarian
+    - ClothingUniformJumpskirtColorLightBrown
+    - ClothingUniformCourier # DeltaV - Courier Uniform
+    - ClothingUniformSkirtCourier # DeltaV - Courier Uniform
+    - ClothingUniformJumpsuitMantis # Nyanotrasen - Forensic Mantis
+    - ClothingUniformSkirtMantis # Nyanotrasen - Forensic Mantis
+    - ClothingHeadHatBeretSeniorPhysician
+    - ClothingUniformJumpsuitMedicalDoctor
+    - ClothingUniformJumpskirtMedicalDoctor
+    - ClothingUniformJumpsuitSeniorPhysician
+    - ClothingUniformJumpskirtSeniorPhysician
+    - ClothingUniformJumpsuitMime
+    - ClothingUniformJumpskirtMime
+    - ClothingUniformJumpsuitMusician
+    - ClothingUniformJumpsuitParamedic
+    - ClothingUniformJumpskirtParamedic
+    - ClothingUniformJumpsuitSeniorOfficer
+    - ClothingUniformJumpskirtSeniorOfficer
+    - ClothingUniformJumpsuitPrisoner
+    - ClothingUniformJumpskirtPrisoner
+    - ClothingHeadHatQMsoft
+    - ClothingHeadHatBeretQM
+    - ClothingUniformJumpsuitQM
+    - ClothingUniformJumpskirtQM
+    - ClothingUniformJumpsuitQMTurtleneck
+    - ClothingUniformJumpskirtQMTurtleneck
+    - ClothingUniformJumpsuitQMFormal
+    - ClothingHeadHatBeretRND
+    - ClothingUniformJumpsuitResearchDirector
+    - ClothingUniformJumpskirtResearchDirector
+    - ClothingUniformJumpsuitScientist
+    - ClothingUniformJumpskirtScientist
+    - ClothingUniformJumpsuitSeniorResearcher
+    - ClothingUniformJumpskirtSeniorResearcher
+    - ClothingHeadHatBeretSecurity
+    - ClothingUniformJumpsuitSec
+    - ClothingUniformJumpskirtSec
+    - ClothingUniformJumpsuitSecBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtSecBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpsuitSecGrey # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtSecGrey # DeltaV - alternate sec uniforms
+    - ClothingHeadHatBeretBrigmedic
+    - ClothingUniformJumpsuitBrigmedic
+    - ClothingUniformJumpskirtBrigmedic
+    - ClothingHeadHatBeretWarden
+    - ClothingHeadHatWarden
+    - ClothingUniformJumpsuitWarden
+    - ClothingUniformJumpskirtWarden
+    - ClothingUniformJumpsuitWardenBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtWardenBlue # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpsuitWardenGrey # DeltaV - alternate sec uniforms
+    - ClothingUniformJumpskirtWardenGrey # DeltaV - alternate sec uniforms
+    - ClothingHeadHatParamedicsoft
+    # Winter outfits
+    - ClothingOuterWinterCap
+    - ClothingOuterWinterCE
+    - ClothingOuterWinterCMO
+    - ClothingOuterWinterHoP
+    - ClothingOuterWinterHoSUnarmored
+    - ClothingOuterWinterWardenUnarmored
+    - ClothingOuterWinterQM
+    - ClothingOuterWinterRD
+    - ClothingNeckMantleCap
+    - ClothingNeckMantleCE
+    - ClothingNeckMantleCMO
+    - ClothingNeckMantleHOP
+    - ClothingNeckMantleHOS
+    - ClothingNeckMantleRD
+    - ClothingNeckMantleQM
+    - ClothingOuterStasecSweater # DeltaV - added stasec sweater to uniform printer.
+    - ClothingOuterWinterMusician
+    - ClothingOuterWinterClown
+    - ClothingOuterWinterMime
+    - ClothingOuterWinterCoat
+    - ClothingOuterWinterJani
+    - ClothingOuterWinterBar
+    - ClothingOuterWinterChef
+    - ClothingOuterWinterHydro
+    - ClothingOuterWinterAtmos
+    - ClothingOuterWinterEngi
+    - ClothingOuterWinterCargo
+    - ClothingOuterWinterMiner
+    - ClothingOuterWinterMed
+    - ClothingOuterWinterPara
+    - ClothingOuterWinterChem
+    - ClothingOuterWinterGen
+    - ClothingOuterWinterViro
+    - ClothingOuterWinterSci
+    - ClothingOuterWinterRobo
+    - ClothingOuterWinterSec
+    # Ties
+    - ClothingNeckTieRed
+    - ClothingNeckTieDet
+    - ClothingNeckTieSci
+    # Scarfs - All scarfs avaible in winterdrobe
+    - ClothingNeckScarfStripedGreen
+    - ClothingNeckScarfStripedBlue
+    - ClothingNeckScarfStripedRed
+    - ClothingNeckScarfStripedBrown
+    - ClothingNeckScarfStripedLightBlue
+    - ClothingNeckScarfStripedOrange
+    - ClothingNeckScarfStripedBlack
+    - ClothingNeckScarfStripedPurple
+    # Carpets
+    - Carpet
+    - CarpetBlack
+    - CarpetPink
+    - CarpetBlue
+    - CarpetGreen
+    - CarpetOrange
+    - CarpetPurple
+    - CarpetCyan
+    - CarpetWhite
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - ClothingCentComm
-    - ClothingSyndie
+    emagStaticRecipes:
+    - ClothingHeadHatCentcomcap
+    - ClothingHeadHatCentcom
+    - ClothingUniformJumpsuitCentcomAgent
+    - ClothingUniformJumpsuitCentcomFormal
+    - ClothingUniformJumpskirtCentcomFormalDress
+    - ClothingUniformJumpsuitCentcomOfficer
+    - ClothingUniformJumpsuitCentcomOfficial
+    - ClothingHeadHatSyndieMAA
+    - ClothingHeadHatSyndie
+    - ClothingUniformJumpsuitOperative
+    - ClothingUniformJumpskirtOperative
+    - ClothingUniformJumpsuitSyndieFormal
+    - ClothingUniformJumpskirtSyndieFormalDress
+    - ClothingHeadPyjamaSyndicateBlack
+    - ClothingUniformJumpsuitPyjamaSyndicateBlack
+    - ClothingHeadPyjamaSyndicatePink
+    - ClothingUniformJumpsuitPyjamaSyndicatePink
+    - ClothingHeadPyjamaSyndicateRed
+    - ClothingUniformJumpsuitPyjamaSyndicateRed
+    - ClothingOuterWinterCentcom
+    - ClothingOuterWinterSyndie
+    - ClothingOuterWinterSyndieCap
   - type: MaterialStorage
     whitelist:
       tags:
@@ -617,6 +1646,12 @@
   - type: Machine
     board: BiogeneratorMachineCircuitboard
   - type: MaterialStorage
+    insertOnInteract: true
+    canEjectStoredMaterials: true
+    ignoreColor: true
+    whitelist:
+      tags:
+      - RawMaterial
   - type: ProduceMaterialExtractor
   - type: ItemSlots
     slots:
@@ -634,9 +1669,35 @@
     reagentOutputSlotId: beaker_slot
     idleState: icon
     runningState: building
-    staticPacks:
-    - BioGenIngredientsStatic
-    - BioGenMaterialsStatic
+    staticRecipes:
+    - BioGenMilk
+    - BioGenMilkSoy #Gem
+    - BioGenEthanol
+    - BioGenCream
+    - BioGenBlackpepper
+    - BioGenEnzyme
+    - BioGenFlour
+    - BioGenSugar
+    - BioGenMonkeyCube
+    - BioGenKoboldCube
+    - CowCube
+    - GoatCube
+    - MothroachCube
+    - MouseCube
+    - BioGenMaterialCloth1
+    - BioGenMaterialCardboard1
+    - BioGenPaper
+    - BioGenPaperRolling1
+    - BioGenCandle
+    - BioGenPlantBGone
+    - BioGenWeedKiller
+    - BioGenPestKiller
+    - BioGenLeft4Zed
+    - BioGenEZNutrient
+    - BioGenRobustHarvest
+    - BioGenBoozeVendRestock
+    - BioGenCondimentsRestock
+    - BioGenChefVendRestock
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
@@ -667,9 +1728,28 @@
     idleState: icon
     runningState: building
     defaultProductionAmount: 10
-    staticPacks:
-    - OreSmelting
-    - RGlassSmelting
+    staticRecipes:
+    - BluespaceCrystal
+    - NormalityCrystal
+    - SheetSteel
+    - SheetGlass1
+    - SheetRGlass
+    - SheetPlasma1
+    - SheetPGlass1
+    - SheetRPGlass1
+    - SheetUranium1
+    - IngotGold1
+    - IngotSilver1
+    - MaterialBananium1
+    - N14IngotLead1
+    - IngotCopper1
+    - N14IngotAluminium1
+    - IngotTungsten1
+    # Additional recipes
+    - SheetPlasteel1
+    - SheetUGlass1
+    - SheetRUGlass1
+    - MaterialDiamond
   - type: MaterialStorageMagnetPickup # Delta V - Summary: Adds magnet pull from Frontier
     magnetEnabled: True
     range: 0.30 # Delta V - End Magnet Pull
@@ -691,12 +1771,6 @@
   - type: Lathe
     materialUseMultiplier: 0.75
     timeMultiplier: 0.5
-    # EE EDIT START
-    # staticPacks:
-    # - OreSmelting
-    # - RGlassSmelting
-    # - AdvancedSmelting
-    # EE EDIT END
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
@@ -725,44 +1799,9 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - SheetifierStatic
-
-- type: entity
-  parent: [BaseLathe, BaseMaterialSiloUtilizer]
-  id: CutterMachine
-  name: cutter machine
-  description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
-  components:
-  - type: Transform
-    noRot: false
-  - type: Sprite
-    sprite: Structures/Machines/cuttermachine.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: CutterMachineCircuitboard
-  - type: Lathe
-    producingSound: /Audio/Machines/cutter.ogg
-    idleState: icon
-    runningState: building
-    staticPacks:
-    - FloorTilesStatic
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - Metal
-      - Wooden
-      - RawMaterial
-      - Plastic
+    staticRecipes:
+    - MaterialSheetMeat
+    - SheetPaper
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
@@ -802,12 +1841,103 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
-    - PrizeStatic
+    staticRecipes:
+    - PrizeBall
+    - PlushieMothRandom
+    - PlushieVoidborn
+    - PlushieMothMusician
+    - PlushieMothBartender
+    - PlushieBee
+    - PlushieHampter
+    - PlushieRouny
+    - PlushieLamp
+    - PlushieArachind
+    - PlushieLizard
+    - PlushieSpaceLizard
+    - PlushieSharkBlue
+    - PlushieSharkPink
+    - PlushieSharkGrey
+    - PlushieCarp
+    - PlushieMagicarp
+    - PlushieHolocarp
+    - PlushieSlime
+    - PlushieSnake
+    - ToyMouse
+    - ToyRubberDuck
+    - PlushieVox
+    - PlushieAtmosian
+    - PlushiePenguin
+    - PlushieHuman
+    - PlushieArachne
+    - PlushieGnome
+    - PlushieLoveable
+    - PlushieDeer
+    - PlushieIpc
+    - PlushieGrey
+    - PlushieRedFox
+    - PlushiePurpleFox
+    - PlushiePinkFox
+    - PlushieOrangeFox
+    - PlushieMarbleFox
+    - PlushieCrimsonFox
+    - PlushieCoffeeFox
+    - PlushieBlueFox
+    - PlushieBlackFox
+    - PlushieVulp
+    - PlushieCorgi
+    - PlushieGirlyCorgi
+    - PlushieRobotCorgi
+    - PlushieCatBlack
+    - PlushieCatGrey
+    - PlushieCatOrange
+    - PlushieCatSiames
+    - PlushieCatTabby
+    - PlushieCatTuxedo
+    - PlushieCatWhite
+    - ToyAi
+    - ToyIan
+    - BalloonNT
+    - BalloonCorgi
+    - CrayonBox
+    - PetRockCarrier
+    - PlushieXeno
+    - FoamCrossbow
+    - RevolverCapGun
+    - PonderingOrb
+    - ToyAmongPequeno
+    - FoamCutlass
+    - WhoopieCushion
+    - ToyHammer
+    - PlasticBanana
+    - WeaponWaterPistol
+    - WeaponWaterBlaster
+    - NewtonCradle
+    - SnapPopBox
+    - MrDips
+    - MrChips
+    - CrazyGlue
+    - PlushieRatvar
+    - PlushieNar
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SyndicatePrizeStatic
+    emagStaticRecipes:
+    - PlushieGhost
+    - PlushieRGBee
+    - PlushieRainbowCarp
+    - PlushieJester
+    - PlushieSlips
+    - PlushieTrystan
+    - PlushieAbductor
+    - PlushieAbductorAgent
+    - PlushieNuke
+    - ToyNuke
+    - FoamBlade
+    - BalloonSyn
+    - SingularityToy
+    - TeslaToy
+    - ToySword
+    - BwoinkHammer
+    - ThronglerToy
   - type: MaterialStorage
     whitelist:
       tags:
-      - PrizeTicket
+        - PrizeTicket

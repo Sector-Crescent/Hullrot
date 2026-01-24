@@ -96,8 +96,7 @@
           Radiation: 0.50
           Caustic: 0.50
     - type: TemperatureProtection
-      heatingCoefficient: 0.01
-      coolingCoefficient: 0.01
+      coefficient: 0.01
     - type: StaminaDamageResistance
       coefficient: 0.5
     - type: FootstepModifier

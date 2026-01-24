@@ -15,7 +15,6 @@ public sealed class JetpackSystem : SharedJetpackSystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ClothingSystem _clothing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
 
     public override void Initialize()
     {
@@ -74,11 +73,11 @@ public sealed class JetpackSystem : SharedJetpackSystem
         }
 
         var coordinates = uidXform.Coordinates;
-        var gridUid = _transform.GetGrid(coordinates);
+        var gridUid = coordinates.GetGridUid(EntityManager);
 
         if (TryComp<MapGridComponent>(gridUid, out var grid))
         {
-            coordinates = new EntityCoordinates(gridUid.Value, _mapSystem.WorldToLocal(gridUid.Value, grid, _transform.ToMapCoordinates(coordinates).Position));
+            coordinates = new EntityCoordinates(gridUid.Value, grid.WorldToLocal(coordinates.ToMapPos(EntityManager, _transform)));
         }
         else if (uidXform.MapUid != null)
         {

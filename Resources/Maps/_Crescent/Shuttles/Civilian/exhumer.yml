@@ -863,7 +863,7 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: miner
+        state: industrial
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: BecomesStation
@@ -2264,7 +2264,7 @@ entities:
     - type: Transform
       pos: 5.5,5.5
       parent: 1
-- proto: C_ComputerTabletopShuttle
+- proto: ComputerTabletopShuttle
   entities:
   - uid: 252
     components:

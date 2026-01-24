@@ -144,7 +144,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 13
+        maxVol: 7
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
@@ -605,7 +605,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 18
         reagents:
         - ReagentId: Vitamin
           Quantity: 4
@@ -1443,7 +1443,7 @@
   name: poppy
   parent: FoodProduceBase
   id: FoodPoppy
-  description: A flower with extracts often used in the production of medicine.
+  description: A flower with extracts often used in the production of medicine
   components:
   - type: Clothing
     slots:
@@ -1761,7 +1761,7 @@
 
 - type: entity
   name: gatfruit
-  parent: [ FoodProduceBase, BaseSyndicateContraband ]
+  parent: FoodProduceBase
   id: FoodGatfruit
   description: A delicious, gun-shaped fruit with a thick wooden stem.
   components:
@@ -2244,11 +2244,6 @@
     sprite: Objects/Specific/Hydroponics/bungo.rsi
   - type: Produce
     seedId: bungo
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBungo
-        Quantity: 10
   - type: Tag
     tags:
     - Fruit
@@ -2393,56 +2388,6 @@
     - Vegetable
 
 - type: entity
-  name: blue pumpkin
-  parent: FoodProduceBase
-  id: FoodBluePumpkin
-  description: A large, blue... berry. Seriously.
-  components:
-  - type: Item
-    size: Small
-  - type: FlavorProfile
-    flavors:
-      - bluepumpkin
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 25
-        reagents:
-        - ReagentId: Ammonia
-          Quantity: 10
-        - ReagentId: Chlorine
-          Quantity: 5
-        - ReagentId: Vitamin
-          Quantity: 10
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBluePumpkin
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/blue_pumpkin.rsi
-  - type: Produce
-    seedId: bluePumpkin
-  - type: Damageable
-    damageContainer: Biological
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 16
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Fruit
-
-- type: entity
   name: cotton boll
   description: Moth people's favorite snack, and just as fluffy as them.
   id: CottonBol
@@ -2570,39 +2515,3 @@
     seedId: cherry
   - type: SpaceGarbage
   - type: BadFood
-
-- type: entity
-  name: anomaly berry
-  description: A strange blue fruit. Something about it doesn't seem right.
-  parent: FoodProduceBase
-  id: FoodAnomalyBerry
-  components:
-  - type: FlavorProfile
-    flavors:
-      - strange
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/anomaly_berry.rsi
-    state: produce
-  - type: Produce
-    seedId: anomalyBerry
-  - type: Food
-    trash:
-    - EffectAnomalyFloraBulb # Random loot
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 2
-        - ReagentId: Vitamin
-          Quantity: 2
-        - ReagentId: Artifexium
-          Quantity: 1
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: AnomalyBerry
-      Burger: AnomalyBerryBurger

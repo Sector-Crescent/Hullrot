@@ -148,13 +148,9 @@
     sprite: Clothing/Head/Misc/cone.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/cone.rsi
-  - type: Item
-    storedRotation: 0
   - type: PhysicalComposition #you can't just pass up some free plastic!
     materialComposition:
       Plastic: 100
-  - type: StaticPrice
-    price: 25
 
 - type: entity
   parent: ClothingHeadBase
@@ -172,11 +168,11 @@
     accent: MobsterAccent
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase
   id: ClothingHeadHatCatEars
   name: cat ears
   description: "NYAH!"
-  categories: [ DoNotMap ]
+  suffix: DO NOT MAP
   components:
   - type: Tag
     tags: [] # ignore "WhitelistChameleon" tag
@@ -191,7 +187,6 @@
   parent: [ClothingHeadHatCatEars, BaseToggleClothing]
   id: ClothingHeadHatCatEarsValid
   suffix: Valid, DO NOT MAP
-  categories: [ DoNotMap ]
   components:
   - type: ToggleClothing
     action: ActionBecomeValid
@@ -210,7 +205,7 @@
     accent: OwOAccent
 
 - type: entity
-  categories: [ Actions, HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   id: ActionBecomeValid
   name: Become Valid
   description: "*notices your killsign* owo whats this"
@@ -223,7 +218,7 @@
   id: ClothingHeadHatDogEars
   name: doggy ears
   description: Only for good boys.
-  categories: [ DoNotMap ]
+  suffix: DO NOT MAP
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/dogears.rsi
@@ -313,17 +308,6 @@
       - WhitelistChameleon
   - type: StaticPrice
     price: 1
-
-- type: entity
-  parent: ClothingHeadBase
-  id: ClothingHeadHatHairflower
-  name: hairflower
-  description: A beautiful hairflower that can be inserted between locks of hair.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Misc/hairflower.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Misc/hairflower.rsi
 
 - type: entity
   parent: ClothingHeadBase

@@ -42,7 +42,7 @@
   - BlueshieldOfficer
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, BluespaceLifelineImplant ] #Force the implant since its manual activation now
+    implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
@@ -66,7 +66,7 @@
     gloves: ClothingHandsGlovesCombat
     id: BlueshieldPDA
     pocket1: UniqueBlueshieldOfficerLockerTeleporter
-#    pocket2: BluespaceLifelineImplanter    #Doesn't need this since its implanted roundstart
+    pocket2: BluespaceLifelineImplanter
 
     #outerClothing: ClothingBlueshieldArmourVest
     #ears: ClothingHeadsetAltCommand
@@ -76,7 +76,7 @@
 
 - type: startingGear
   id: BlueshieldPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitBlueshield
     head: ClothingHeadEnvirohelmBlueshield

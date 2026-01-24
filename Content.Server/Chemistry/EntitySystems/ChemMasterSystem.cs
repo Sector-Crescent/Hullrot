@@ -1,4 +1,5 @@
 using Content.Server.Chemistry.Components;
+using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Labels;
 using Content.Server.Popups;
 using Content.Server.Storage.EntitySystems;
@@ -32,7 +33,7 @@ namespace Content.Server.Chemistry.EntitySystems
     {
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly AudioSystem _audioSystem = default!;
-        [Dependency] private readonly SharedSolutionContainerSystem  _solutionContainerSystem = default!;
+        [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly StorageSystem _storageSystem = default!;
@@ -57,11 +58,11 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
 
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetModeMessage>(OnSetModeMessage);
-            SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortingTypeCycleMessage>(OnCycleSortingTypeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetPillTypeMessage>(OnSetPillTypeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterReagentAmountButtonMessage>(OnReagentButtonMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreatePillsMessage>(OnCreatePillsMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterOutputToBottleMessage>(OnOutputToBottleMessage);
+            SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortMethodUpdated>(OnSortMethodUpdated);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterTransferringAmountUpdated>(OnTransferringAmountUpdated);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterAmountsUpdated>(OnAmountsUpdated);
         }
@@ -91,7 +92,6 @@ namespace Content.Server.Chemistry.EntitySystems
 
             var state = new ChemMasterBoundUserInterfaceState(
                 chemMaster.Mode,
-                chemMaster.SortingType,
                 BuildInputContainerInfo(container),
                 bufferReagents,
                 pillBufferReagents,
@@ -100,6 +100,7 @@ namespace Content.Server.Chemistry.EntitySystems
                 chemMaster.PillType,
                 chemMaster.PillDosageLimit,
                 updateLabel,
+                chemMaster.SortMethod,
                 chemMaster.TransferringAmount,
                 chemMaster.Amounts);
 
@@ -113,15 +114,6 @@ namespace Content.Server.Chemistry.EntitySystems
                 return;
 
             chemMaster.Comp.Mode = message.ChemMasterMode;
-            UpdateUiState(chemMaster);
-            ClickSound(chemMaster);
-        }
-
-        private void OnCycleSortingTypeMessage(Entity<ChemMasterComponent> chemMaster, ref ChemMasterSortingTypeCycleMessage message)
-        {
-            chemMaster.Comp.SortingType++;
-            if (chemMaster.Comp.SortingType > ChemMasterSortingType.Latest)
-                chemMaster.Comp.SortingType = ChemMasterSortingType.None;
             UpdateUiState(chemMaster);
             ClickSound(chemMaster);
         }
@@ -252,9 +244,14 @@ namespace Content.Server.Chemistry.EntitySystems
                 _storageSystem.Insert(container, item, out _, user: user, storage);
                 _labelSystem.Label(item, message.Label);
 
-                _solutionContainerSystem.EnsureSolutionEntity(item, SharedChemMaster.PillSolutionName,out var itemSolution ,message.Dosage);
-                if (!itemSolution.HasValue)
-                    return;
+                var hasItemSolution = _solutionContainerSystem.EnsureSolutionEntity(
+                    (item, null),
+                    SharedChemMaster.PillSolutionName,
+                    out var itemSolution,
+                    message.Dosage);
+
+                if (!hasItemSolution || itemSolution is null)
+                    continue;
 
                 _solutionContainerSystem.TryAddSolution(itemSolution.Value, withdrawal.SplitSolution(message.Dosage));
 
@@ -364,6 +361,12 @@ namespace Content.Server.Chemistry.EntitySystems
             {
                 Reagents = solution.Contents
             };
+
+        private void OnSortMethodUpdated(EntityUid uid, ChemMasterComponent chemMaster, ChemMasterSortMethodUpdated args)
+        {
+            chemMaster.SortMethod = args.SortMethod;
+            UpdateUiState((uid, chemMaster));
+        }
 
         private void OnTransferringAmountUpdated(EntityUid uid, ChemMasterComponent chemMaster, ChemMasterTransferringAmountUpdated args)
         {

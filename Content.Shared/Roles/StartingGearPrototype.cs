@@ -1,47 +1,17 @@
 using Content.Shared.Customization.Systems;
+using Content.Shared.Preferences;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 
 namespace Content.Shared.Roles;
 
-[Prototype]
+[Prototype("startingGear")]
 public sealed partial class StartingGearPrototype : IPrototype, IInheritingPrototype
 {
-    /// <inheritdoc/>
-    [ViewVariables]
-    [IdDataField]
-    public string ID { get; private set; } = string.Empty;
-
-    /// <inheritdoc/>
-    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<StartingGearPrototype>))]
-    public string[]? Parents { get; private set; }
-
-    /// <inheritdoc/>
-    [AbstractDataField]
-    [NeverPushInheritance]
-    public bool Abstract { get; private set; }
-
-    /// <summary>
-    ///     The list of starting gears that overwrite the entries on this starting gear
-    ///     if their requirements are satisfied.
-    /// </summary>
-    [DataField("subGear")]
-    [AlwaysPushInheritance]
-    public List<ProtoId<StartingGearPrototype>> SubGears = new();
-
-    /// <summary>
-    /// The slot and entity prototype ID of the equipment that is to be spawned and equipped onto the entity.
-    /// </summary>
     [DataField]
     [AlwaysPushInheritance]
     public Dictionary<string, EntProtoId> Equipment = new();
 
-<<<<<<< HEAD
-    /// <summary>
-    /// The inhand items that are equipped when this starting gear is equipped onto an entity.
-    /// </summary>
-=======
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     [DataField]
     [AlwaysPushInheritance]
     public List<EntProtoId> Inhand = new(0);
@@ -54,6 +24,14 @@ public sealed partial class StartingGearPrototype : IPrototype, IInheritingProto
     public Dictionary<string, List<EntProtoId>> Storage = new();
 
     /// <summary>
+    ///     The list of starting gears that overwrite the entries on this starting gear
+    ///     if their requirements are satisfied.
+    /// </summary>
+    [DataField("subGear")]
+    [AlwaysPushInheritance]
+    public List<ProtoId<StartingGearPrototype>> SubGears = new();
+
+    /// <summary>
     ///     The requirements of this starting gear.
     ///     Only used if this starting gear is a sub-gear of another starting gear.
     /// </summary>
@@ -61,11 +39,6 @@ public sealed partial class StartingGearPrototype : IPrototype, IInheritingProto
     [AlwaysPushInheritance]
     public List<CharacterRequirement> Requirements = new();
 
-<<<<<<< HEAD
-    /// <summary>
-    /// Gets the entity prototype ID of a slot in this starting gear.
-    /// </summary>
-=======
     [ViewVariables]
     [IdDataField]
     public string ID { get; private set; } = string.Empty;
@@ -79,7 +52,6 @@ public sealed partial class StartingGearPrototype : IPrototype, IInheritingProto
     [NeverPushInheritance]
     public bool Abstract { get; }
 
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     public string GetGear(string slot)
     {
         return Equipment.TryGetValue(slot, out var equipment) ? equipment : string.Empty;

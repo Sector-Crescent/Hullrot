@@ -89,8 +89,7 @@ public sealed partial class MeleeOperator : HTNOperator, IHtnConditionalShutdown
         HTNOperatorStatus status;
 
         if (_entManager.TryGetComponent<NPCMeleeCombatComponent>(owner, out var combat) &&
-            blackboard.TryGetValue<EntityUid>(TargetKey, out var target, _entManager) &&
-            target != EntityUid.Invalid)
+            blackboard.TryGetValue<EntityUid>(TargetKey, out var target, _entManager))
         {
             combat.Target = target;
 

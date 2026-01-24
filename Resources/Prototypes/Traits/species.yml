@@ -141,7 +141,7 @@
   category: Physical
   points: 3
   functions:
-    - !type:TraitModifyComponent
+    - !type:TraitReplaceComponent
       components:
         - type: Silicon
           entityType: enum.SiliconType.Player
@@ -157,14 +157,9 @@
             1: 0.45
             0: 0.00
   requirements:
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - IPC
-        - !type:CharacterTraitRequirement
-          traits:
-            - Shell
+    - !type:CharacterSpeciesRequirement
+      species:
+        - IPC
 
 - type: trait
   id: IPCBrittleBoneDisease
@@ -180,14 +175,9 @@
         - type: DeadModifier
           deadThresholdModifier: -60
   requirements:
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - IPC
-        - !type:CharacterTraitRequirement
-          traits:
-            - Shell
+    - !type:CharacterSpeciesRequirement
+      species:
+        - IPC
 
 - type: trait
   id: IPCFragileCircuits
@@ -198,14 +188,9 @@
       components:
         - type: KillOnDamage
   requirements:
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - IPC
-        - !type:CharacterTraitRequirement
-          traits:
-            - Shell
+    - !type:CharacterSpeciesRequirement
+      species:
+        - IPC
 
 - type: trait
   id: IPCFaultyWaterproofing
@@ -238,15 +223,6 @@
                   messages: [ "faultyWaterproofing-damage-popup" ]
                   probability: 1
   requirements:
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - IPC
-        - !type:CharacterTraitRequirement
-          traits:
-            - Shell
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - HardenedCircuits
+    - !type:CharacterSpeciesRequirement
+      species:
+        - IPC

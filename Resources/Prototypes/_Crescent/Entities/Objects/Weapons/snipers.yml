@@ -1,7 +1,7 @@
 - type: entity
   name: SHI PLCR-3M2 Hristov 15.2x169mm
   parent: [BaseWeaponRifleDMR, BaseGunWieldableDMR, StreeCredRedeemable]
-  id: C_WeaponSniperHristov
+  id: WeaponSniperHristov
   description: A portable anti-materiel rifle, equipped with a long range scope. Fires the large 15.2×169mm round.
   components:
   - type: Sprite
@@ -13,10 +13,7 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/hristov.rsi
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+  - type: Telescope
   - type: GunRequiresWield
   - type: Item
     shape:

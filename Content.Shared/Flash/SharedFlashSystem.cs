@@ -1,15 +1,19 @@
-using Content.Shared.Flash.Components;
-using Content.Shared.StatusEffect;
-using Robust.Shared.Audio;
-using Robust.Shared.Prototypes;
+using Robust.Shared.GameStates;
 
-namespace Content.Shared.Flash;
-
-public abstract class SharedFlashSystem : EntitySystem
+namespace Content.Shared.Flash
 {
-    public ProtoId<StatusEffectPrototype> FlashedKey = "Flashed";
-
-    public virtual void FlashArea(Entity<FlashComponent?> source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, float probability = 1f, SoundSpecifier? sound = null)
+    public abstract class SharedFlashSystem : EntitySystem
     {
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            SubscribeLocalEvent<FlashableComponent, ComponentGetState>(OnFlashableGetState);
+        }
+
+        private static void OnFlashableGetState(EntityUid uid, FlashableComponent component, ref ComponentGetState args)
+        {
+            args.State = new FlashableComponentState(component.Duration, component.LastFlash, component.EyeDamageChance, component.EyeDamage, component.DurationMultiplier);
+        }
     }
 }

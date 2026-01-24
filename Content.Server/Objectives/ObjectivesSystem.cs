@@ -11,10 +11,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
-using Content.Server.Objectives.Commands;
-using Content.Shared.Prototypes;
 using Robust.Server.Player;
-using Robust.Shared.Utility;
 
 namespace Content.Server.Objectives;
 
@@ -26,22 +23,11 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
 
-    private IEnumerable<string>? _objectives;
-
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEndText);
-
-        _prototypeManager.PrototypesReloaded += CreateCompletions;
-    }
-
-    public override void Shutdown()
-    {
-        base.Shutdown();
-
-        _prototypeManager.PrototypesReloaded -= CreateCompletions;
     }
 
     /// <summary>
@@ -142,12 +128,12 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
             var agentSummary = new StringBuilder();
             agentSummary.AppendLine(Loc.GetString("objectives-with-objectives", ("custody", custody), ("title", title), ("agent", agent)));
 
-            foreach (var objectiveGroup in objectives.GroupBy(o => Comp<ObjectiveComponent>(o).LocIssuer))
+            foreach (var objectiveGroup in objectives.GroupBy(o => Comp<ObjectiveComponent>(o).Issuer))
             {
                 //TO DO:
                 //check for the right group here. Getting the target issuer is easy: objectiveGroup.Key
                 //It should be compared to the type of the group's issuer.
-                agentSummary.AppendLine(objectiveGroup.Key);
+                agentSummary.AppendLine(Loc.GetString($"objective-issuer-{objectiveGroup.Key}"));
 
                 foreach (var objective in objectiveGroup)
                 {
@@ -194,32 +180,33 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
         }
     }
 
-    public EntityUid? GetRandomObjective(EntityUid mindId, MindComponent mind, ProtoId<WeightedRandomPrototype> objectiveGroupProto, float maxDifficulty)
+    public EntityUid? GetRandomObjective(EntityUid mindId, MindComponent mind, string objectiveGroupProto)
     {
-        if (!_prototypeManager.TryIndex(objectiveGroupProto, out var groupsProto))
+        if (!_prototypeManager.TryIndex<WeightedRandomPrototype>(objectiveGroupProto, out var groups))
         {
             Log.Error($"Tried to get a random objective, but can't index WeightedRandomPrototype {objectiveGroupProto}");
             return null;
         }
 
-        // Make a copy of the weights so we don't trash the prototype by removing entries
-        var groups = groupsProto.Weights.ShallowClone();
-
-        while (_random.TryPickAndTake(groups, out var groupName))
+        // TODO replace whatever the fuck this is with a proper objective selection system
+        // yeah the old 'preventing infinite loops' thing wasn't super elegant either and it mislead people on what exactly it did
+        var tries = 0;
+        while (tries < 20)
         {
+            var groupName = groups.Pick(_random);
+
             if (!_prototypeManager.TryIndex<WeightedRandomPrototype>(groupName, out var group))
             {
                 Log.Error($"Couldn't index objective group prototype {groupName}");
                 return null;
             }
 
-            var objectives = group.Weights.ShallowClone();
-            while (_random.TryPickAndTake(objectives, out var objectiveProto))
-            {
-                if (TryCreateObjective((mindId, mind), objectiveProto, out var objective)
-                    && Comp<ObjectiveComponent>(objective.Value).Difficulty <= maxDifficulty)
-                    return objective;
-            }
+            var proto = group.Pick(_random);
+            var objective = TryCreateObjective(mindId, mind, proto);
+            if (objective != null)
+                return objective;
+
+            tries++;
         }
 
         return null;
@@ -261,32 +248,6 @@ public sealed class ObjectivesSystem : SharedObjectivesSystem
         }
 
         return Loc.GetString("objectives-player-named", ("name", name));
-    }
-
-
-    private void CreateCompletions(PrototypesReloadedEventArgs unused)
-    {
-        CreateCompletions();
-    }
-
-    /// <summary>
-    /// Get all objective prototypes by their IDs.
-    /// This is used for completions in <see cref="AddObjectiveCommand"/>
-    /// </summary>
-    public IEnumerable<string> Objectives()
-    {
-        if (_objectives == null)
-            CreateCompletions();
-
-        return _objectives!;
-    }
-
-    private void CreateCompletions()
-    {
-        _objectives = _prototypeManager.EnumeratePrototypes<EntityPrototype>()
-            .Where(p => p.HasComponent<ObjectiveComponent>())
-            .Select(p => p.ID)
-            .Order();
     }
 }
 

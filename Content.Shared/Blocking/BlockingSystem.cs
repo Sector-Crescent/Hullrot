@@ -399,7 +399,7 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Crescent
         foreach (var coefficient in modifiers.Coefficients)
         {
             msg.PushNewline();
-            msg.AddMarkupOrThrow(Robust.Shared.Localization.Loc.GetString("blocking-coefficient-value",
+            msg.AddMarkup(Robust.Shared.Localization.Loc.GetString("blocking-coefficient-value",
                 ("type", coefficient.Key),
                 ("value", MathF.Round(coefficient.Value * 100, 1))
             ));
@@ -408,7 +408,7 @@ public sealed partial class BlockingSystem : SharedBlockingSystem // Crescent
         foreach (var flat in modifiers.FlatReduction)
         {
             msg.PushNewline();
-            msg.AddMarkupOrThrow(Robust.Shared.Localization.Loc.GetString("blocking-reduction-value",
+            msg.AddMarkup(Robust.Shared.Localization.Loc.GetString("blocking-reduction-value",
                 ("type", flat.Key),
                 ("value", flat.Value)
             ));

@@ -52,13 +52,6 @@
     potentiaMultiplier: 0
   - type: Mindbroken
   - type: PsionicInsulation
-  - type: Inventory
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
 
 - type: entity
   save: false
@@ -67,13 +60,3 @@
   id: MobOniDummy
   categories: [ HideSpawnMenu ]
   description: A dummy oni meant to be used in character setup.
-  components:
-  - type: HumanoidAppearance
-    species: Oni
-  - type: Inventory
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female

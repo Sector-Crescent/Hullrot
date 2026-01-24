@@ -1,6 +1,7 @@
 - type: entity
   id: LeftArmCybernetic
   parent: [PartIPC, BaseLeftArm]
+  abstract: true
   components:
   - type: Damageable
     damageContainer: Silicon
@@ -16,6 +17,7 @@
 - type: entity
   id: RightArmCybernetic
   parent: [PartIPC, BaseRightArm]
+  abstract: true
   components:
   - type: Damageable
     damageContainer: Silicon
@@ -31,6 +33,7 @@
 - type: entity
   id: LeftLegCybernetic
   parent: [PartIPC, BaseLeftLeg]
+  abstract: true
   components:
   - type: Damageable
     damageContainer: Silicon
@@ -46,6 +49,7 @@
 - type: entity
   id: RightLegCybernetic
   parent: [PartIPC, BaseRightLeg]
+  abstract: true
   components:
   - type: Damageable
     damageContainer: Silicon
@@ -153,7 +157,7 @@
     sprintSpeed: 5.625
   - type: BodyPart
     onAdd:
-    - type: ProtectedFromStepTriggers
+    - type: StepTriggerImmune
       whitelist:
         types:
         - Shard
@@ -171,7 +175,7 @@
     sprintSpeed: 5.625
   - type: BodyPart
     onAdd:
-    - type: ProtectedFromStepTriggers
+    - type: StepTriggerImmune
       whitelist:
         types:
         - Shard

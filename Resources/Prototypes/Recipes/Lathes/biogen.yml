@@ -228,5 +228,35 @@
   materials:
     Biomass: 18
 
+- type: latheRecipe
+  id: BioGenBoozeVendRestock
+  result: VendingMachineRestockBooze
+  category: Food
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  completetime: 10
+  materials:
+    Biomass: 200
 
+- type: latheRecipe
+  id: BioGenCondimentsRestock
+  result: VendingMachineRestockCondimentStation
+  category: Food
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  completetime: 10
+  materials:
+    Biomass: 200
 
+- type: latheRecipe
+  id: BioGenChefVendRestock
+  result: VendingMachineRestockChefvend
+  category: Food
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  completetime: 10
+  materials:
+    Biomass: 200

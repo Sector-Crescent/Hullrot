@@ -29,19 +29,19 @@ public sealed class RestrictedMeleeSystem : EntitySystem
     private void OnMeleeAttempt(EntityUid uid, RestrictedMeleeComponent comp, ref AttemptMeleeEvent args)
     {
         // Specism.
-        if (CanUse(args.User, comp))
+        if (CanUse(args.PlayerUid, comp))
             return;
 
         args.Message = Loc.GetString(comp.FailText, ("item", uid));
 
         if (comp.DoKnockdown)
-            _stun.TryKnockdown(args.User, comp.KnockdownDuration, true);
+            _stun.TryKnockdown(args.PlayerUid, comp.KnockdownDuration, true);
 
         if (comp.ForceDrop)
-            _hands.TryDrop(args.User);
+            _hands.TryDrop(args.PlayerUid);
 
-        if (!_statusEffects.HasStatusEffect(args.User, "KnockedDown"))
-            _audioSystem.PlayPredicted(comp.FallSound, args.User, args.User);
+        if (!_statusEffects.HasStatusEffect(args.PlayerUid, "KnockedDown"))
+            _audioSystem.PlayPredicted(comp.FallSound, args.PlayerUid, args.PlayerUid);
 
         // Display the message to the player and cancel the melee attempt.
         _popupSystem.PopupClient(args.Message, uid, PopupType.Large);

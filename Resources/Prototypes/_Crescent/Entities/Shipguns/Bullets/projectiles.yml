@@ -27,7 +27,7 @@
         # shape:
           # !type:PhysShapeAabb
           # bounds: "-0.15,-0.45,0.15,0.15"
-        # hard: False
+        # hard: false
       # fly-by: &flybyfixture
         # shape: !type:PhysShapeCircle
           # radius: 1.5
@@ -52,7 +52,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: ProjectileIFF
     visualType: Circle
@@ -76,14 +75,15 @@
   - type: Fixtures
     fixtures:
       projectile:
-        shape: !type:PhysShapeCircle
-          radius: 0.5
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
         layer:
         - BulletImpassable
         mask:
         - Impassable
         - BulletImpassable
-        hard: False
+        hard: true
       fly-by: &flybyfixture
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -105,7 +105,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Square
     color: White
@@ -142,7 +141,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: ProjectileIFF
     visualType: Circle
@@ -180,7 +178,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -218,7 +215,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -252,7 +248,6 @@
   parent: TorpedoBase
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Explosive
     explosionType: Default
     maxIntensity: 1000
@@ -266,7 +261,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -314,7 +308,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -338,7 +332,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -386,7 +379,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -411,7 +404,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -464,7 +456,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -489,7 +481,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -538,7 +529,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -562,7 +553,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -603,7 +593,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -646,7 +635,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -689,7 +677,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -729,7 +716,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -878,7 +864,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -920,7 +905,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -954,7 +938,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -991,7 +974,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1036,7 +1018,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1060,7 +1042,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1105,7 +1086,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1128,7 +1109,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: ProjectileIFF
     visualType: Circle
@@ -1166,7 +1146,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1201,7 +1180,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1242,7 +1220,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1278,7 +1255,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -1335,7 +1311,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: False
+        hard: true
       fly-by: *flybyfixture
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
@@ -1359,7 +1335,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -1394,7 +1369,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -1429,7 +1403,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -1466,7 +1439,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -1498,7 +1470,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Square
     color: White
@@ -1533,7 +1504,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Diamond
     color: White
@@ -1570,7 +1540,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Diamond
     color: White
@@ -1607,7 +1576,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Diamond
     color: White
@@ -1644,7 +1612,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -1670,7 +1637,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1692,7 +1659,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -1718,7 +1684,7 @@
         mask:
         - Impassable
         - BulletImpassable
-        hard: True
+        hard: true
       fly-by: *flybyfixture
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1740,7 +1706,6 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:

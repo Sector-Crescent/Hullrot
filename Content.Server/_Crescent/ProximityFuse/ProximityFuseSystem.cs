@@ -1,6 +1,5 @@
 using Content.Server.Explosion.Components;
 using Content.Server.Explosion.EntitySystems;
-using Content.Shared.Explosion.Components;
 using Content.Shared.Projectiles;
 using Robust.Shared.Physics.Components;
 using System.Numerics;

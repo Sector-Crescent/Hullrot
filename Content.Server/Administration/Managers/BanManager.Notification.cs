@@ -1,4 +1,6 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
+using Content.Server.Database;
 
 namespace Content.Server.Administration.Managers;
 
@@ -28,15 +30,36 @@ public sealed partial class BanManager
     private TimeSpan _banNotificationRateLimitStart;
     private int _banNotificationRateLimitCount;
 
-    private bool OnDatabaseNotificationEarlyFilter()
+    private void OnDatabaseNotification(DatabaseNotification notification)
     {
+        if (notification.Channel != BanNotificationChannel)
+            return;
+
+        if (notification.Payload == null)
+        {
+            _sawmill.Error("Got ban notification with null payload!");
+            return;
+        }
+
+        BanNotificationData data;
+        try
+        {
+            data = JsonSerializer.Deserialize<BanNotificationData>(notification.Payload)
+                   ?? throw new JsonException("Content is null");
+        }
+        catch (JsonException e)
+        {
+            _sawmill.Error($"Got invalid JSON in ban notification: {e}");
+            return;
+        }
+
         if (!CheckBanRateLimit())
         {
             _sawmill.Verbose("Not processing ban notification due to rate limit");
-            return false;
+            return;
         }
 
-        return true;
+        _taskManager.RunOnMainThread(() => ProcessBanNotification(data));
     }
 
     private async void ProcessBanNotification(BanNotificationData data)

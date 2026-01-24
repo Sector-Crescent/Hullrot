@@ -528,7 +528,7 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: civilian
+        state: industrial
     - type: BecomesStation
       id: Homesteader
     - type: SelfDeleteGrid
@@ -1476,7 +1476,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 4.5,-2.5
       parent: 1
-- proto: C_ComputerTabletopShuttle
+- proto: ComputerTabletopShuttle
   entities:
   - uid: 168
     components:

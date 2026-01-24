@@ -24,7 +24,7 @@ public sealed partial class CVarRequirement : CharacterRequirement
     public override bool IsValid(
         JobPrototype job,
         HumanoidCharacterProfile profile,
-        IReadOnlyDictionary<string, TimeSpan> playTimes,
+        Dictionary<string, TimeSpan> playTimes,
         bool whitelisted,
         IPrototype prototype,
         IEntityManager entityManager,

@@ -325,7 +325,7 @@ namespace Content.Server.Guardian
             if (!guardianComponent.GuardianLoose)
                 return;
 
-            if (!_transform.InRange(guardianXform.Coordinates, hostXform.Coordinates, guardianComponent.DistanceAllowed))
+            if (!guardianXform.Coordinates.InRange(EntityManager, _transform, hostXform.Coordinates, guardianComponent.DistanceAllowed))
                 RetractGuardian(hostUid, hostComponent, guardianUid, guardianComponent);
         }
 

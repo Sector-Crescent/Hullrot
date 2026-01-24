@@ -125,7 +125,14 @@ public sealed class StepTriggerSystem : EntitySystem
 
     private bool CanTrigger(EntityUid uid, EntityUid otherUid, StepTriggerComponent component)
     {
-        if (!component.Active || component.CurrentlySteppedOn.Contains(otherUid))
+        if (!component.Active
+            || component.CurrentlySteppedOn.Contains(otherUid))
+            return false;
+
+        // Immunity checks
+        if (TryComp<StepTriggerImmuneComponent>(otherUid, out var stepTriggerImmuneComponent)
+            && component.TriggerGroups != null
+            && component.TriggerGroups.IsValid(stepTriggerImmuneComponent))
             return false;
 
         // Can't trigger if we don't ignore weightless entities
@@ -135,7 +142,7 @@ public sealed class StepTriggerSystem : EntitySystem
             (physics.BodyStatus == BodyStatus.InAir || _gravity.IsWeightless(otherUid, physics)))
             return false;
 
-        var msg = new StepTriggerAttemptEvent { Source = (uid, component), Tripper = otherUid };
+        var msg = new StepTriggerAttemptEvent { Source = uid, Tripper = otherUid };
         RaiseLocalEvent(uid, ref msg);
 
         return msg.Continue && !msg.Cancelled;
@@ -219,7 +226,7 @@ public sealed class StepTriggerSystem : EntitySystem
 ///     Allows for entities to end the steptrigger early via args.Cancelled.
 /// </summary>
 [ByRefEvent]
-public record struct StepTriggerAttemptEvent(Entity<StepTriggerComponent> Source, EntityUid Tripper, bool Continue, bool Cancelled);
+public record struct StepTriggerAttemptEvent(EntityUid Source, EntityUid Tripper, bool Continue, bool Cancelled);
 
 /// <summary>
 ///     Raised when an entity stands on a steptrigger initially (assuming it has both on and off states).

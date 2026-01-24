@@ -54,17 +54,13 @@ public sealed class PacificationSystem : EntitySystem
             && !(_timing.CurTime > user.Comp.NextPopupTime))
             return;
 
-        var targetName = Identity.Entity(target, EntityManager);
-        _popup.PopupClient(Loc.GetString(reason, ("entity", targetName)), user, user);
+        _popup.PopupClient(Loc.GetString(reason, ("entity", target)), user, user);
         user.Comp.NextPopupTime = _timing.CurTime + user.Comp.PopupCooldown;
         user.Comp.LastAttackedEntity = target;
     }
 
     private void OnShootAttempt(Entity<PacifiedComponent> ent, ref ShotAttemptedEvent args)
     {
-        if (HasComp<PacifismAllowedGunComponent>(args.Used))
-            return;
-
         // Disallow firing guns in all cases.
         ShowPopup(ent, args.Used, "pacified-cannot-fire-gun");
         args.Cancel();

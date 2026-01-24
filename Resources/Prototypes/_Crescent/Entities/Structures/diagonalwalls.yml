@@ -25,36 +25,6 @@
   - type: Occluder
     enabled: false
 
-#WallMining without states
-- type: entity
-  parent: BaseWall
-  id: C_WallMining
-  name: mining wall
-  components:
-  - type: Sprite
-    drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonalcurved.rsi
-    state: state0
-  - type: Icon
-    sprite:  Structures/Walls/reinforced_diagonalcurved.rsi
-    state: state0
-  - type: Tag
-    tags:
-      - Wall
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 700
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: IconSmooth
-    key: walls
-    base: state
-  - type: Appearance
-
-
 #reinforced
 
 - type: entity
@@ -88,7 +58,7 @@
 # mining
 
 - type: entity
-  parent: [BaseWallCurved, C_WallMining]
+  parent: [BaseWallCurved, WallMining]
   id: WallMiningDiagonalCurved
   name: wall
   suffix: curved
@@ -102,7 +72,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallCurved, C_WallMining]
+  parent: [BaseWallCurved, WallMining]
   id: WallMiningDiagonalHollow
   name: wall
   suffix: hollow
@@ -242,7 +212,7 @@
 # DO NOT USE ANY OF THE BELOW PROTOTYPES; INCLUDED FOR BACKWARDS COMPATIBILITY ONLY
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalHollowNortheast
   name: wall
   suffix: DO NOT MAP
@@ -264,7 +234,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalHollowNorthwest
   name: wall
   suffix: DO NOT MAP
@@ -286,7 +256,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalHollowSoutheast
   name: wall
   suffix: DO NOT MAP
@@ -308,7 +278,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalHollowSouthwest
   name: wall
   suffix: DO NOT MAP
@@ -330,7 +300,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalCurvedNortheast
   name: wall
   suffix: DO NOT MAP
@@ -352,7 +322,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalCurvedNorthwest
   name: wall
   suffix: DO NOT MAP
@@ -374,7 +344,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalCurvedSouthwest
   name: wall
   suffix: DO NOT MAP
@@ -396,7 +366,7 @@
     state: state0
 
 - type: entity
-  parent: [BaseWallDiagonal, C_WallMining]
+  parent: [BaseWallDiagonal, WallMining]
   id: WallMiningDiagonalCurvedSoutheast
   name: wall
   suffix: DO NOT MAP

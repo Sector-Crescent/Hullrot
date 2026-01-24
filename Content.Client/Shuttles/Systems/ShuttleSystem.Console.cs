@@ -35,9 +35,9 @@ public sealed partial class ShuttleSystem
         switch (mapObj)
         {
             case ShuttleBeaconObject beacon:
-                return XformSystem.ToMapCoordinates(GetCoordinates(beacon.Coordinates));
+                return GetCoordinates(beacon.Coordinates).ToMap(EntityManager, XformSystem);
             case ShuttleExclusionObject exclusion:
-                return XformSystem.ToMapCoordinates(GetCoordinates(exclusion.Coordinates));
+                return GetCoordinates(exclusion.Coordinates).ToMap(EntityManager, XformSystem);
             case GridMapObject grid:
                 var gridXform = Transform(grid.Entity);
 

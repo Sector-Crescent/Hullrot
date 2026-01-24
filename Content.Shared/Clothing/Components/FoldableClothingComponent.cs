@@ -1,4 +1,3 @@
-using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Robust.Shared.GameStates;
 
@@ -31,16 +30,4 @@ public sealed partial class FoldableClothingComponent : Component
     /// </summary>
     [DataField]
     public string? FoldedHeldPrefix;
-
-    /// <summary>
-    /// Which layers does this hide when Unfolded? See <see cref="HumanoidVisualLayers"/> and <see cref="HideLayerClothingComponent"/>
-    /// </summary>
-    [DataField]
-    public HashSet<HumanoidVisualLayers> UnfoldedHideLayers = new();
-
-    /// <summary>
-    /// Which layers does this hide when folded? See <see cref="HumanoidVisualLayers"/> and <see cref="HideLayerClothingComponent"/>
-    /// </summary>
-    [DataField]
-    public HashSet<HumanoidVisualLayers> FoldedHideLayers = new();
 }

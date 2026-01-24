@@ -44,8 +44,8 @@
     base: mwindow
   - type: Appearance
   - type: DamageVisuals
-    thresholds: [5, 10, 20]
-    damageDivisor: 4
+    thresholds: [4, 8, 12]
+    damageDivisor: 6
     trackAllDamage: true
     damageOverlay:
       sprite: Structures/Windows/cracks.rsi
@@ -65,9 +65,6 @@
     drawdepth: WallTops
     sprite: Structures/Windows/mining_diagonal.rsi
     state: state0
-  - type: Tag
-    tags:
-    - Diagonal
   - type: IconSmooth
     mode: Diagonal
     key: walls

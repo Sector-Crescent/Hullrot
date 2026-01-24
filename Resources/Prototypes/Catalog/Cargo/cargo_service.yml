@@ -19,16 +19,6 @@
   group: market
 
 - type: cargoProduct
-  id: ServiceLightsHoliday
-  icon:
-    sprite: Objects/Power/light_bulb.rsi
-    state: normal
-  product: CrateServiceHolidayLights
-  cost: 800
-  category: cargoproduct-category-name-service
-  group: market
-
-- type: cargoProduct
   id: MousetrapBoxes
   icon:
     sprite: Objects/Devices/mousetrap.rsi
@@ -52,7 +42,7 @@
   id: ServiceSmokeables
   icon:
     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
-    state: icon
+    state: closed
   product: CrateServiceSmokeables
   cost: 1500
   category: cargoproduct-category-name-service
@@ -62,7 +52,7 @@
   id: ServiceCustomSmokable
   icon:
     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
-    state: icon
+    state: closed
   product: CrateServiceCustomSmokable
   cost: 1000
   category: cargoproduct-category-name-service
@@ -71,20 +61,10 @@
 - type: cargoProduct
   id: ServiceBureaucracy
   icon:
-    sprite: Objects/Misc/pens.rsi
+    sprite: Objects/Misc/bureaucracy.rsi
     state: pen
   product: CrateServiceBureaucracy
   cost: 1000
-  category: cargoproduct-category-name-service
-  group: market
-
-- type: cargoProduct
-  id: ServiceFaxMachine
-  icon:
-    sprite: Structures/Machines/fax_machine.rsi
-    state: icon
-  product: CrateServiceFaxMachine
-  cost: 2000
   category: cargoproduct-category-name-service
   group: market
 
@@ -193,7 +173,7 @@
   icon:
     sprite: Clothing/Head/Helmets/janitor_bombsuit.rsi
     state: icon
-  product: ClosetJanitorBombFilled
+  product: CrateJanitorExplosive
   cost: 1000
   category: cargoproduct-category-name-service
   group: market
@@ -207,15 +187,4 @@
   cost: 300
   category: cargoproduct-category-name-service
   group: market
-
-- type: cargoProduct
-  id: ServiceCandles
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
-  product: CrateCandles
-  cost: 500
-  category: cargoproduct-category-name-service
-  group: market
-
 

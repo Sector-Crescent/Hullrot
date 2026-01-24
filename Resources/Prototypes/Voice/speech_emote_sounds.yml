@@ -34,12 +34,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleHuman
@@ -76,12 +70,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: MaleReptilian
@@ -100,8 +88,6 @@
       collection: MaleCry
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -120,10 +106,6 @@
       collection: Snores
     Sigh:
       collection: MaleSigh
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -142,8 +124,6 @@
       collection: FemaleCry
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -162,10 +142,6 @@
       collection: Snores
     Sigh:
       collection: FemaleSigh
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: MaleSlime
@@ -204,12 +180,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleSlime
@@ -248,12 +218,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: MaleVoidborn
@@ -282,8 +246,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Hiss:
       collection: FelinidHisses
     Meow:
@@ -298,10 +260,6 @@
       collection: Mars
     Wurble:
       collection: Wurble
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleVoidborn
@@ -330,8 +288,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Hiss:
       collection: FelinidHisses
     Meow:
@@ -346,10 +302,6 @@
       collection: Mars
     Wurble:
       collection: Wurble
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: UnisexVox
@@ -386,12 +338,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: UnisexDiona
@@ -402,14 +348,10 @@
       path: /Audio/Voice/Diona/diona_scream.ogg
     Laugh:
       collection: DionaLaugh
-    Chirp:
-      path: /Audio/Animals/nymph_chirp.ogg
     Honk:
       collection: BikeHorn
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -432,10 +374,6 @@
       collection: MaleCry
     Whistle:
       collection: Whistles
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
 
 - type: emoteSounds
   id: UnisexArachnid
@@ -451,11 +389,9 @@
     Click:
       path: /Audio/Voice/Arachnid/arachnid_click.ogg
     Hiss:
-      path: /Audio/Animals/snake_hiss.ogg
+      path: /Audio/Animals/snake_hiss.ogg #DeltaV
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -480,10 +416,6 @@
       collection: MaleCry
     Whistle:
       collection: Whistles
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -521,12 +453,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleDwarf
@@ -564,12 +490,6 @@
       collection: Whistles
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: UnisexMoth
@@ -588,8 +508,6 @@
       path: /Audio/Voice/Moth/moth_squeak.ogg
     Weh:
       collection: Weh
-    Hew:
-      collection: Hew
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -614,10 +532,6 @@
       collection: MaleCry
     Whistle:
       collection: Whistles
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MothDeathGasp
 
 - type: emoteSounds
   id: UnisexIPC
@@ -775,8 +689,6 @@
   sounds:
     Clap:
       collection: Claps
-    ClapSingle:
-      collection: ClapSingle
     Snap:
       collection: Snaps
       params:
@@ -789,9 +701,6 @@
   sounds:
     Clap:
       path: /Audio/Voice/Diona/diona_clap.ogg
-    # TODO: Replace this with a similar wood themed single clap
-    ClapSingle:
-      collection: ClapSingle
     Snap:
       path: /Audio/Voice/Diona/diona_snap.ogg
       params:
@@ -799,25 +708,7 @@
     Salute:
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
-        volume: -5
-
-- type: emoteSounds
-  id: ReptilianBodyEmotes
-  sounds:
-    Thump:
-      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
-      params:
-        variation: 0.125
-    Clap:
-      collection: Claps
-    ClapSingle:
-      collection: ClapSingle
-    Snap:
-      collection: Snaps
-      params:
-        volume: -6
-    Salute:
-      collection: Salutes
+       volume: -5
 
 # mobs
 - type: emoteSounds
@@ -879,13 +770,6 @@
   id: Parrot
   sound:
     path: /Audio/Animals/parrot_raught.ogg
-    params:
-      variation: 0.125
-
-- type: emoteSounds
-  id: Goat
-  sound:
-    path: /Audio/Animals/goat_bah.ogg
     params:
       variation: 0.125
 

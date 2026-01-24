@@ -66,7 +66,7 @@
   id: FoodBreadBunTop
   parent: FoodBreadSliceBase
   name: top bun
-  description: The perfect finish for your burger tower.
+  description: the perfect finish for your burger tower
   components:
   - type: Food
   - type: Sprite
@@ -405,7 +405,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 15
         reagents:
         - ReagentId: Nutriment
           Quantity: 4
@@ -583,7 +583,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 15
         reagents:
         - ReagentId: Nutriment
           Quantity: 6
@@ -593,9 +593,6 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 1
-  - type: Tag
-    tags:
-    - Meat
 
 # Tastes like bun, HEAT.
 
@@ -886,7 +883,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 90
+        maxVol: 55
         reagents:
         - ReagentId: Nutriment
           Quantity: 44

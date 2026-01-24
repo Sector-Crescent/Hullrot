@@ -70,6 +70,7 @@
 - type: entity
   id: ActionStethoscope
   name: Listen with stethoscope
+  categories: [ HideSpawnMenu ]
   components:
   - type: EntityTargetAction
     icon:

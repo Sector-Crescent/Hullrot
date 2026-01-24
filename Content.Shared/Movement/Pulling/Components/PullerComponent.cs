@@ -1,4 +1,4 @@
-using Content.Shared._Goobstation.MartialArts;
+﻿using Content.Shared._Goobstation.MartialArts;
 using Content.Shared._Goobstation.TableSlam; // Goobstation - Table Slam
 using Content.Shared.Alert;
 using Content.Shared.Movement.Pulling.Systems;
@@ -19,10 +19,10 @@ public sealed partial class PullerComponent : Component
     /// <summary>
     ///     Next time the puller change where they are pulling the target towards.
     /// </summary>
-    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField, Access(Other = AccessPermissions.ReadWriteExecute)]
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
     public TimeSpan NextPushTargetChange;
 
-    [DataField, AutoNetworkedField, Access(Other = AccessPermissions.ReadWriteExecute)]
+    [DataField, AutoNetworkedField]
     public TimeSpan NextPushStop;
 
     [DataField]
@@ -147,5 +147,3 @@ public sealed partial class PullerComponent : Component
     public float ChokeGrabSpeedModifier = 0.4f;
     // Goobstation end
 }
-
-public sealed partial class StopPullingAlertEvent : BaseAlertEvent;

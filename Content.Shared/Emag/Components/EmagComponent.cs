@@ -1,8 +1,7 @@
 using Content.Shared.Emag.Systems;
 using Content.Shared.Tag;
-using Robust.Shared.Audio;
+using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization;
 
@@ -16,21 +15,21 @@ public sealed partial class EmagComponent : Component
     /// <summary>
     /// The tag that marks an entity as immune to emags
     /// </summary>
-    [DataField]
+    [DataField("emagImmuneTag", customTypeSerializer: typeof(PrototypeIdSerializer<TagPrototype>)), ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
-    public ProtoId<TagPrototype> EmagImmuneTag = "EmagImmune";
+    public string EmagImmuneTag = "EmagImmune";
 
+    // DeltaV - Add a whitelist/blacklist to the Emag
     /// <summary>
-    /// What type of emag effect this device will do
+    /// Whitelist that entities must be on to work.
     /// </summary>
     [DataField]
-    [AutoNetworkedField]
-    public EmagType EmagType = EmagType.Interaction;
+    public EntityWhitelist? Whitelist;
 
     /// <summary>
-    /// What sound should the emag play when used
+    /// Blacklist that entities must be off to work.
     /// </summary>
     [DataField]
-    [AutoNetworkedField]
-    public SoundSpecifier EmagSound = new SoundCollectionSpecifier("sparks");
+    public EntityWhitelist? Blacklist;
+    // End of DeltaV code
 }

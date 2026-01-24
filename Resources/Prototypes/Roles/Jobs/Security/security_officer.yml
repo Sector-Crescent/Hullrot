@@ -4,30 +4,23 @@
   description: job-description-security
   playTimeTracker: JobSecurityOfficer
   requirements:
-  - !type:CharacterDepartmentTimeRequirement
-    department: Security
-    min: 36000 # 10 hours
-  - !type:CharacterTraitRequirement
-    inverted: true
-    traits:
-    - Foreigner
-    - ForeignerLight
-    - Muted
-    - Blindness
-    - Pacifist
-    - BrittleBoneDisease
-  - !type:CharacterEmployerRequirement
-    employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
-    - EastOrionCompany
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 36000 # 10 hours
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Blindness
+        - Pacifist
+        - BrittleBoneDisease
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
   canBeAntag: false
   access:
   - Security
+  #- Brig # Delta V: Removed
   - Maintenance
   - Service
   - External
@@ -49,18 +42,15 @@
     jumpsuit: ClothingUniformJumpsuitSec
     back: ClothingBackpackSecurity
     shoes: ClothingShoesBootsCombatFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     head: ClothingHeadHelmetBasic
-    outerClothing: ClothingOuterArmorPlateCarrier
+    outerClothing: ClothingOuterArmorPlateCarrier # DeltaV - ClothingOuterArmorBasic replaced in favour of plate carrier
     id: SecurityPDA
-    ears: ClothingHeadsetAltSecurityRegular
+    ears: ClothingHeadsetAltSecurityRegular # Goobstation
     belt: ClothingBeltSecurityFilled
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtSec
     satchel: ClothingBackpackSatchelSecurity
     duffelbag: ClothingBackpackDuffelSecurity
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: SecurityOfficerPlasmamanGear

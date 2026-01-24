@@ -29,5 +29,3 @@ public sealed partial class OfferItemComponent : Component
     [DataField]
     public ProtoId<AlertPrototype> OfferAlert = "Offer";
 }
-
-public sealed partial class AcceptOfferAlertEvent : BaseAlertEvent;

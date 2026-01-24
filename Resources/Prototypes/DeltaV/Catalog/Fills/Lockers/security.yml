@@ -19,6 +19,8 @@
     contents:
     - id: WeaponSniperGrand
       amount: 2
+    - id: SpeedLoaderLightRifle
+      amount: 4
 
 - type: entity
   parent: GunSafe
@@ -31,7 +33,7 @@
       amount: 2
     - id: MagazineLightRifle
       amount: 4
-
+      
 - type: entity
   parent: GunSafe
   id: GunSafeAdjutantShotgun
@@ -43,7 +45,7 @@
       amount: 2
     - id: MagazineShotgun
       amount: 4
-
+      
 - type: entity
   parent: GunSafe
   id: GunSafeEnergyGun
@@ -53,7 +55,7 @@
     contents:
     - id: WeaponEnergyGun
       amount: 3
-
+      
 - type: entity
   parent: GunSafe
   id: GunSafeEnergyGunMini

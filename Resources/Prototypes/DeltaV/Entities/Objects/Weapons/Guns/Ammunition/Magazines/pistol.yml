@@ -7,7 +7,6 @@
   - type: Tag
     tags:
       - MagazinePistolSpecial
-      - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -56,6 +55,20 @@
   - type: Sprite
     layers:
     - state: practice
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MagazinePistolSpecialRubber
+  name: pistol magazine (.38 special rubber)
+  parent: BaseMagazinePistolSpecial
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeSpecialRubber
+  - type: Sprite
+    layers:
+    - state: rubber
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]

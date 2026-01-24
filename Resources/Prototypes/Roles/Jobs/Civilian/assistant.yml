@@ -15,20 +15,17 @@
   - PassengerPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtColorGrey
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: PassengerPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitColorGrey
     head: ClothingHeadEnvirohelmColorGrey

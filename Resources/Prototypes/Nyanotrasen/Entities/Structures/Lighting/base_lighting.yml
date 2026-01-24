@@ -6,11 +6,9 @@
   components:
   - type: PoweredLight
     hasLampOnSpawn: BlueLightTube
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 0.2
-    popupText: powered-light-component-burn-hand
 
 - type: entity
   parent: AlwaysPoweredWallLight
@@ -32,11 +30,9 @@
   components:
   - type: PoweredLight
     hasLampOnSpawn: LightBulbMaintenance
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 0.2
-    popupText: powered-light-component-burn-hand
 
 - type: entity
   parent: SmallLight
@@ -52,19 +48,17 @@
 
 #Colored lights
 
-- type: entity
-  id: PoweredLightColoredRed
-  description: "A light fixture. Draws power and produces light when equipped with a light tube."
-  suffix: Soft Red #Delta V - Changed to differentiate from upstream lights.
-  parent: Poweredlight
-  components:
-  - type: PoweredLight
-    hasLampOnSpawn: ColoredLightTubeRed
-  - type: DamageOnInteract
-    damage:
-      types:
-        Heat: 0.2
-    popupText: powered-light-component-burn-hand
+#- type: entity
+#  id: PoweredlightRed
+#  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+#  suffix: Soft Red #Delta V - Changed to differentiate from upstream lights.
+#  parent: Poweredlight
+#  components:
+#  - type: PoweredLight
+#    hasLampOnSpawn: ColoredLightTubeRed
+#    damage:
+#      types:
+#        Heat: 0.2
 
 #- type: entity
 #  id: AlwaysPoweredlightRed
@@ -86,11 +80,9 @@
   components:
   - type: PoweredLight
     hasLampOnSpawn: ColoredLightTubeFrostyBlue
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 0.2
-    popupText: powered-light-component-burn-hand
 
 - type: entity
   id: AlwaysPoweredLightColoredFrostyBlue
@@ -112,11 +104,9 @@
   components:
   - type: PoweredLight
     hasLampOnSpawn: ColoredLightTubeBlackLight
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 0.2
-    popupText: powered-light-component-burn-hand
 
 - type: entity
   id: AlwaysPoweredLightColoredBlack
@@ -141,11 +131,11 @@
     state: base
   - type: PoweredLight
     hasLampOnSpawn: ColoredLightTubeRed
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 2
-    popupText: powered-light-component-burn-hand
+  - type: StaticPrice #DynamicPrice
+    price: 25
 
 - type: entity
   id: AlwaysPoweredLightPostSmallRed
@@ -171,11 +161,9 @@
   components:
   - type: PoweredLight
     hasLampOnSpawn: LightBulbMaintenanceRed
-  - type: DamageOnInteract
     damage:
       types:
         Heat: 0.2
-    popupText: powered-light-component-burn-hand
 
 - type: entity
   parent: SmallLight

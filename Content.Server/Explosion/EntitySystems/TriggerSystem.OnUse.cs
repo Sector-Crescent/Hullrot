@@ -1,9 +1,9 @@
 using Content.Server.Explosion.Components;
+using Content.Server.Sticky.Events;
 using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
-using Content.Shared.Sticky;
 using Content.Shared.Verbs;
 
 namespace Content.Server.Explosion.EntitySystems;
@@ -21,7 +21,7 @@ public sealed partial class TriggerSystem
         SubscribeLocalEvent<RandomTimerTriggerComponent, MapInitEvent>(OnRandomTimerTriggerMapInit);
     }
 
-    private void OnStuck(EntityUid uid, OnUseTimerTriggerComponent component, ref EntityStuckEvent args)
+    private void OnStuck(EntityUid uid, OnUseTimerTriggerComponent component, EntityStuckEvent args)
     {
         if (!component.StartOnStick)
             return;
@@ -158,8 +158,7 @@ public sealed partial class TriggerSystem
         if (args.Handled || HasComp<AutomatedTimerComponent>(uid) || component.UseVerbInstead)
             return;
 
-        if (component.DoPopup)
-            _popupSystem.PopupEntity(Loc.GetString("trigger-activated", ("device", uid)), args.User, args.User);
+        _popupSystem.PopupEntity(Loc.GetString("trigger-activated", ("device", uid)), args.User, args.User);
 
         StartTimer((uid, component), args.User);
 

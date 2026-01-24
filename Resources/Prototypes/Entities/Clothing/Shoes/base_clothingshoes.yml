@@ -7,8 +7,7 @@
     slots:
     - FEET
   - type: Sprite
-    layers:
-      - state: icon
+    state: icon
   - type: Item
     size: Normal
   - type: Food
@@ -24,7 +23,7 @@
     tags:
     - ClothMade
     - WhitelistChameleon
-  - type: ProtectedFromStepTriggers
+  - type: ClothingRequiredStepTriggerImmune
   - type: Fixtures
     fixtures:
       fix1:
@@ -36,7 +35,6 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
-
 
 - type: entity
   abstract: true
@@ -67,20 +65,9 @@
 
 - type: entity
   abstract: true
-  id: ClothingShoesBootsSecFilled
-  suffix: Filled
-  components:
-  - type: ContainerFill
-    containers:
-      item:
-      - CombatKnife
-
-- type: entity
-  abstract: true
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesBaseWinterBoots
   description: Fluffy boots to help survive even the coldest of winters.
   components:
   - type: TemperatureProtection
-    heatingCoefficient: 1.025
-    coolingCoefficient: 0.8
+    coefficient: 0.8

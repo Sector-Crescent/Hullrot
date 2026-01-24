@@ -11,24 +11,12 @@
   cost: 7500
   recipeUnlocks:
   - MiningDrill
-  - MineralScannerEmpty
+#  - WeaponGrapplingGun
+  - BorgModuleMining
+#  - BorgModuleGrapplingGun
   - MechEquipmentDrill # Goobstation
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
-
-- type: technology
-  id: SpaceScanning
-  name: research-technology-space-scanning
-  icon:
-    sprite: Objects/Tools/handheld_mass_scanner.rsi
-    state: icon
-  discipline: Industrial
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - RadarConsoleCircuitboard
-  - HandHeldMassScanner
-  - BorgModuleGPS
 
 - type: technology
   id: AdvancedPowercells
@@ -85,6 +73,7 @@
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
   - PortableGeneratorJrPacmanMachineCircuitboard
+  - PowerComputerCircuitboard #the actual solar panel itself should be in here
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard
@@ -125,6 +114,20 @@
 # Tier 2
 
 - type: technology
+  id: SpaceScanning
+  name: research-technology-space-scanning
+  icon:
+    sprite: Objects/Tools/handheld_mass_scanner.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - RadarConsoleCircuitboard
+  - HandHeldMassScannerEE
+  - BorgModuleGPS
+
+- type: technology
   id: Shuttlecraft
   name: research-technology-shuttlecraft
   icon:
@@ -152,8 +155,6 @@
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
   - HolofanProjector
-  technologyPrerequisites:
-  - AtmosphericTech
 
 - type: technology
   id: AdvancedToolsTechnology
@@ -169,6 +170,7 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
+    - BorgModuleRCD
 
 - type: technology
   id: MassExcavation
@@ -182,7 +184,6 @@
   recipeUnlocks:
     - OreBagOfHolding
     - MiningDrillDiamond
-    - AdvancedMineralScannerEmpty
     - MechEquipmentDrillDiamond
 
 - type: technology

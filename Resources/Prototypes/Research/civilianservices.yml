@@ -9,9 +9,12 @@
   tier: 1
   cost: 15000
   recipeUnlocks:
+  - BorgModuleLightReplacer
   - BorgModuleAdvancedCleaning
   - BorgModuleGardening
   - BorgModuleHarvesting
+  - BorgModuleMusique
+  - BorgModuleClowning
   - HamtrHarness
   - HamtrLArm
   - HamtrRArm
@@ -44,7 +47,6 @@
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
-  - HolopadMachineCircuitboard
   - ComputerTelevisionCircuitboard
   - SynthesizerInstrument
   - DawInstrumentMachineCircuitboard
@@ -105,11 +107,6 @@
   - MedicalScannerMachineCircuitboard
   - MetempsychoticMachineCircuitboard
   - EnvirosuitExtinguisherRefill
-  - StasisBedMachineCircuitboard
-  - CryoPodMachineCircuitboard
-  - ReagentGrinderIndustrialMachineCircuitboard
-  - HydroponicsTrayMachineCircuitboard
-  - SeedExtractorMachineCircuitboard
 
 - type: technology
   id: HONKMech

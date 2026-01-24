@@ -13,12 +13,6 @@
   extendedAccess:
   - Kitchen
   - Bar
-  requirements:
-  - !type:CharacterEmployerRequirement
-    employers:
-    - NanoTrasen
-    - ZengHuPharmaceuticals
-    - EastOrionCompany
 
 - type: startingGear
   id: BotanistGear
@@ -26,22 +20,19 @@
   - BotanistPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitHydroponics
-    back: ClothingBackpackHydroponics
+    back: ClothingBackpackHydroponicsFilled
     shoes: ClothingShoesColorBrown
     id: BotanistPDA
     ears: ClothingHeadsetService
     outerClothing: ClothingOuterApronBotanist
     belt: ClothingBeltPlantFilled
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtHydroponics
     satchel: ClothingBackpackSatchelHydroponicsFilled
     duffelbag: ClothingBackpackDuffelHydroponicsFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: BotanistPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitHydroponics
     head: ClothingHeadEnvirohelmHydroponics

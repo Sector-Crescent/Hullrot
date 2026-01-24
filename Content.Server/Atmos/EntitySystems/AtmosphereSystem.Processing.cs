@@ -233,7 +233,7 @@ namespace Content.Server.Atmos.EntitySystems
             tile.MapAtmosphere = false;
             atmos.MapTiles.Remove(tile);
             tile.Air = null;
-            tile.AirArchived = null;
+            Array.Clear(tile.MolesArchived);
             tile.ArchivedCycle = 0;
             tile.LastShare = 0f;
             tile.Space = false;
@@ -263,7 +263,7 @@ namespace Content.Server.Atmos.EntitySystems
                     return;
 
                 tile.Air = null;
-                tile.AirArchived = null;
+                Array.Clear(tile.MolesArchived);
                 tile.ArchivedCycle = 0;
                 tile.LastShare = 0f;
                 tile.Hotspot = new Hotspot();
@@ -659,6 +659,16 @@ namespace Content.Server.Atmos.EntitySystems
                         }
 
                         atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.HighPressureDelta;
+                        continue;
+                    case AtmosphereProcessingState.HighPressureDelta:
+                        if (!ProcessHighPressureDelta((ent, ent)))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
                         atmosphere.State = AtmosphereProcessingState.Hotspots;
                         continue;
                     case AtmosphereProcessingState.Hotspots:
@@ -674,20 +684,10 @@ namespace Content.Server.Atmos.EntitySystems
                         //       Therefore, a change to this CVar might only be applied after that step is over.
                         atmosphere.State = Superconduction
                             ? AtmosphereProcessingState.Superconductivity
-                            : AtmosphereProcessingState.HighPressureDelta;
+                            : AtmosphereProcessingState.PipeNet;
                         continue;
                     case AtmosphereProcessingState.Superconductivity:
                         if (!ProcessSuperconductivity(atmosphere))
-                        {
-                            atmosphere.ProcessingPaused = true;
-                            return;
-                        }
-
-                        atmosphere.ProcessingPaused = false;
-                        atmosphere.State = AtmosphereProcessingState.HighPressureDelta;
-                        continue;
-                    case AtmosphereProcessingState.HighPressureDelta:
-                        if (!ProcessHighPressureDelta((ent, ent)))
                         {
                             atmosphere.ProcessingPaused = true;
                             return;

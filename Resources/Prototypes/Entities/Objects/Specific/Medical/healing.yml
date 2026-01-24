@@ -29,7 +29,7 @@
     heldPrefix: ointment
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       types:
         Heat: -10
@@ -80,7 +80,7 @@
     heldPrefix: regenerative-mesh
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       types:
         Heat: -15
@@ -120,7 +120,7 @@
     state: brutepack
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       groups:
         Brute: -30 # was 5 (-15 Brute) for each, Buffed due to limb damage changes
@@ -169,7 +169,7 @@
     storedRotation: -90
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       groups:
         Brute: -45 # was 10 for each, now 20 for each type in the group, Buffed due to Limb Damage Changes
@@ -207,7 +207,7 @@
     state: bloodpack
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       types:
         Bloodloss: -5 #lowers bloodloss damage, was .5, buffed due to Limb Damage Changes
@@ -236,26 +236,26 @@
   name: tourniquet
   description: Stops bleeding! Hopefully.
   components:
-  - type: Tag
-    tags:
-    - Tourniquet #Goobstation - ParamedHypo
-    - SecBeltEquip
-  - type: Sprite
-    state: tourniquet
-  - type: Healing
-    damageContainers:
-    - Biological
-    damage:
-      groups:
-        Brute: 5 # Tourniquets HURT!
-      types:
-        Asphyxiation: 5 # Essentially Stopping all blood reaching a part of your body
-    bloodlossModifier: -10 # Tourniquets stop bleeding
-    delay: 0.5
-    healingBeginSound:
-      path: "/Audio/Items/Medical/brutepack_begin.ogg"
-    healingEndSound:
-      path: "/Audio/Items/Medical/brutepack_end.ogg"
+    - type: Tag
+      tags:
+        - Tourniquet #Goobstation - ParamedHypo
+        - SecBeltEquip
+    - type: Sprite
+      state: tourniquet
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        #groups:
+          #Brute: 5 # Tourniquets HURT!! - WAAAHHH I WANT MY BINKY!!!!! OWIE!!!
+        types:
+          Asphyxiation: 5 # Essentially Stopping all blood reaching a part of your body
+      bloodlossModifier: -10 # Tourniquets stop bleeding
+      delay: 0.5
+      healingBeginSound:
+        path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: entity
   name: roll of gauze
@@ -274,7 +274,7 @@
     node: gauze
   - type: Healing
     damageContainers:
-    - Biological
+      - Biological
     damage:
       types:
         Slash: -10 # Was 5
@@ -325,7 +325,7 @@
   id: HealingToolbox
   name: healing toolbox
   description: A powerful toolbox imbued with robust energy. It can heal your wounds and fill you with murderous intent.
-  categories: [ DoNotMap ]
+  suffix: DO NOT MAP
   components:
   - type: Sprite
     sprite: Objects/Specific/Medical/healing_toolbox.rsi
@@ -370,7 +370,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterDexalin
-  suffix: Dexalin 10u, 7
+  suffix: Dexalin, 7
   components:
   - type: Label
     currentLabel: dexalin 10u
@@ -401,7 +401,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterDylovene
-  suffix: Dylovene 10u, 5
+  suffix: Dylovene, 5
   components:
   - type: Label
     currentLabel: dylovene 10u
@@ -432,7 +432,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterHyronalin
-  suffix: Hyronalin 10u, 5
+  suffix: Hyronalin, 5
   components:
   - type: Label
     currentLabel: hyronalin 10u
@@ -525,7 +525,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterCopper
-  suffix: Copper 10u, 5
+  suffix: Copper, 5
   components:
   - type: Label
     currentLabel: copper 10u
@@ -556,7 +556,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterKelotane
-  suffix: Kelotane 10u, 5
+  suffix: Kelotane, 5
   components:
   - type: Label
     currentLabel: kelotane 10u
@@ -587,7 +587,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterDermaline
-  suffix: Dermaline 10u, 5
+  suffix: Dermaline, 5
   components:
   - type: Label
     currentLabel: dermaline 10u
@@ -597,12 +597,12 @@
       amount: 5
 
 - type: entity
-  suffix: space mirage 15u
+  suffix: Space drugs 15u
   parent: Pill
   id: PillSpaceDrugs
   components:
   - type: Label
-    currentLabel: space mirage 15u
+    currentLabel: space drugs 15u
   - type: SolutionContainerManager
     solutions:
       food:
@@ -677,7 +677,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterTricordrazine
-  suffix: Tricordrazine 10u, 5
+  suffix: Tricordrazine, 5
   components:
   - type: Label
     currentLabel: tricordrazine 10u
@@ -708,7 +708,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterBicaridine
-  suffix: Bicaridine 10u, 5
+  suffix: Bicaridine, 5
   components:
   - type: Label
     currentLabel: bicaridine 10u
@@ -739,7 +739,7 @@
 - type: entity
   parent: PillCanister
   id: PillCanisterCharcoal
-  suffix: Charcoal 10u, 3
+  suffix: Charcoal, 3
   components:
   - type: Label
     currentLabel: charcoal 10u
@@ -768,34 +768,34 @@
   parent: Pill
   id: PillAmbuzol
   components:
-  - type: Label
-    currentLabel: ambuzol 10u
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Ambuzol
-          Quantity: 10
+    - type: Label
+      currentLabel: ambuzol 10u
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: Ambuzol
+              Quantity: 10
 
 - type: entity
   suffix: Ambuzol plus 5u
   parent: Pill
   id: PillAmbuzolPlus
   components:
-  - type: Pill
-    pillType: 2
-  - type: Sprite
-    state: pill3
-  - type: Label
-    currentLabel: ambuzol plus 5u
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: AmbuzolPlus
-          Quantity: 5
+    - type: Pill
+      pillType: 2
+    - type: Sprite
+      state: pill3
+    - type: Label
+      currentLabel: ambuzol plus 5u
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: AmbuzolPlus
+              Quantity: 5
 
 - type: entity
   parent: PillCanister
@@ -867,12 +867,10 @@
 
 # Syringes
 - type: entity
-  suffix: ephedrine
+  name: ephedrine syringe
   parent: PrefilledSyringe
   id: SyringeEphedrine
   components:
-  - type: Label
-    currentLabel: reagent-name-ephedrine
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -882,12 +880,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: inaprovaline
+  name: inaprovaline syringe
   parent: PrefilledSyringe
   id: SyringeInaprovaline
   components:
-  - type: Label
-    currentLabel: reagent-name-inaprovaline
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -897,12 +893,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: tranexamic acid
+  name: tranexamic acid syringe
   parent: PrefilledSyringe
   id: SyringeTranexamicAcid
   components:
-  - type: Label
-    currentLabel: reagent-name-tranexamic-acid
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -912,12 +906,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: bicaridine
+  name: bicaridine syringe
   parent: PrefilledSyringe
   id: SyringeBicaridine
   components:
-  - type: Label
-    currentLabel: reagent-name-bicaridine
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -927,12 +919,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: dermaline
+  name: dermaline syringe
   parent: PrefilledSyringe
   id: SyringeDermaline
   components:
-  - type: Label
-    currentLabel: reagent-name-dermaline
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -942,12 +932,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: hyronalin
+  name: hyronalin syringe
   parent: PrefilledSyringe
   id: SyringeHyronalin
   components:
-  - type: Label
-    currentLabel: reagent-name-hyronalin
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -957,12 +945,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: ipecac
+  name: ipecac syringe
   parent: PrefilledSyringe
   id: SyringeIpecac
   components:
-  - type: Label
-    currentLabel: reagent-name-ipecac
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -972,86 +958,76 @@
           Quantity: 15
 
 - type: entity
-  suffix: ambuzol
+  name: ambuzol syringe
   parent: PrefilledSyringe
   id: SyringeAmbuzol
   components:
-  - type: Label
-    currentLabel: reagent-name-ambuzol
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Ambuzol
-          Quantity: 15
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          reagents:
+            - ReagentId: Ambuzol
+              Quantity: 15
 
 - type: entity
-  suffix: sigynate
+  name: sigynate syringe
   parent: PrefilledSyringe
   id: SyringeSigynate
   components:
-  - type: Label
-    currentLabel: reagent-name-sigynate
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Sigynate
-          Quantity: 15
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          reagents:
+            - ReagentId: Sigynate
+              Quantity: 15
 
 - type: entity
   name: ethylredoxrazine syringe
   parent: PrefilledSyringe
   id: SyringeEthylredoxrazine
   components:
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Ethylredoxrazine
-          Quantity: 15
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          reagents:
+            - ReagentId: Ethylredoxrazine
+              Quantity: 15
 
 - type: entity
-  suffix: phalanximine
+  name: phalanximine syringe
   parent: PrefilledSyringe
   id: SyringePhalanximine
   components:
-  - type: Label
-    currentLabel: reagent-name-phalanximine
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Phalanximine
-          Quantity: 15
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          reagents:
+            - ReagentId: Phalanximine
+              Quantity: 15
 
 - type: entity
-  suffix: saline
+  name: saline syringe
   parent: PrefilledSyringe
   id: SyringeSaline
   components:
-  - type: Label
-    currentLabel: reagent-name-saline
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Saline
-          Quantity: 15
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          reagents:
+            - ReagentId: Saline
+              Quantity: 15
 
 #this is where all the syringes are so i didn't know where to put it
 - type: entity
-  suffix: romerol
+  name: romerol syringe
   parent: PrefilledSyringe
   id: SyringeRomerol
   components:
-  - type: Label
-    currentLabel: reagent-name-romerol
   - type: SolutionContainerManager
     solutions:
       injector:
@@ -1061,12 +1037,10 @@
           Quantity: 15
 
 - type: entity
-  suffix: hyperzine
+  name: stimulants syringe
   parent: PrefilledSyringe
   id: SyringeStimulants
   components:
-  - type: Label
-    currentLabel: reagent-name-stimulants
   - type: SolutionContainerManager
     solutions:
       injector:

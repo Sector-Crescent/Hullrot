@@ -10,6 +10,7 @@ namespace Content.Client.Pinpointer.UI;
 [GenerateTypedNameReferences]
 public sealed partial class StationMapBeaconControl : Control, IComparable<StationMapBeaconControl>
 {
+
     public readonly EntityCoordinates BeaconPosition;
     public Action<EntityCoordinates>? OnPressed;
     public string? Label => BeaconNameLabel.Text;

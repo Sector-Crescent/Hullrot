@@ -143,13 +143,11 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
 
 public sealed class ClearAllNetworkLinkOverlays : IConsoleCommand
 {
-    [Dependency] private readonly IEntityManager _e = default!;
-
     public string Command => "clearnetworklinkoverlays";
     public string Description => "Clear all network link overlays.";
     public string Help => Command;
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        _e.System<NetworkConfiguratorSystem>().ClearAllOverlays();
+        IoCManager.Resolve<IEntityManager>().System<NetworkConfiguratorSystem>().ClearAllOverlays();
     }
 }

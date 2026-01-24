@@ -63,6 +63,24 @@
   canBuildInImpassable: true
 
 - type: construction
+  name: solar assembly
+  id: SolarPanel
+  graph: SolarPanel
+  startNode: start
+  targetNode: solarpanel
+  category: construction-category-utilities
+  description: "Can be turned into a solar panel or solar tracker."
+  icon:
+    sprite: Structures/Power/Generation/solar_panel.rsi
+    state: solar_assembly
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+      failIfSpace: false
+
+- type: construction
   name: cable terminal
   id: CableTerminal
   graph: CableTerminal
@@ -486,12 +504,12 @@
   canBuildInImpassable: false
   icon:
     sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_passive
+    state: vent_off
   layers:
   - sprite: Structures/Piping/Atmospherics/pipe.rsi
     state: pipeHalf
   - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_passive
+    state: vent_off
   conditions:
     - !type:NoUnstackableInTile
 
@@ -697,20 +715,6 @@
     sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
     state: heStraight
 
-- type: construction
-  id: HeatExchangerBend
-  name: radiator bend
-  description: Transfers heat between the pipe and its surroundings.
-  graph: GasBinary
-  startNode: start
-  targetNode: bendradiator
-  category: construction-category-utilities
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
-    state: heBend
-
 # ATMOS TRINARY
 - type: construction
   id: GasFilter
@@ -785,7 +789,7 @@
 - type: construction
   id: PressureControlledValve
   name: pneumatic valve
-  description: A bidirectional valve controlled by pressure. Opens if the output pipe is lower than the pressure of the control pipe by 101.325 kPa.
+  description: Valve controlled by pressure.
   graph: GasTrinary
   startNode: start
   targetNode: pneumaticvalve

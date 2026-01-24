@@ -89,6 +89,7 @@
         /// </summary>
         EditNotes = 1 << 14,
 
+
         /// <summary>
         ///     Lets you Massban, on SS14.Admin
         /// </summary>
@@ -110,24 +111,9 @@
         Pii = 1 << 18,
 
         /// <summary>
-        ///     Lets you take moderator actions on the game server.
+        /// DeltaV - The ability to whitelist people. Either this permission or +BAN is required for remove.
         /// </summary>
-        Moderator = 1 << 19,
-
-        /// <summary>
-        ///     Lets you check currently online admins.
-        /// </summary>
-        AdminWho = 1 << 20,
-
-        /// <summary>
-        ///     Lets you set the color of your OOC name.
-        /// </summary>
-        NameColor = 1 << 21,
-
-        /// <summary>
-        /// The ability to whitelist people. Either this permission or +BAN is required for remove.
-        /// </summary>
-        Whitelist = 1 << 22,
+        Whitelist = 1 << 20,
 
         /// <summary>
         ///     Dangerous host permissions like scsi.

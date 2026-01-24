@@ -1,13 +1,12 @@
 - type: entity
   id: BaseMagazineHeavyRifle
-  name: "magazine (.20 rifle)"
-  parent: [ BaseItem, BaseRestrictedContraband ]
+  name: "16-round magazine (12.7×99mm USM)"
+  parent: BaseItem
   abstract: true
   components:
   - type: Tag
     tags:
       - MagazineHeavyRifle
-      - Magazine
   - type: Item
     size: Small
   - type: BallisticAmmoProvider
@@ -43,7 +42,6 @@
   - type: Tag
     tags:
       - MagazineBoxRifleMinigun
-      - Magazine
   - type: BallisticAmmoProvider
     proto: CartridgeMinigun
     capacity: 500

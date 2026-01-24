@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Numerics;
 using Content.Client.Animations;
 using Content.Shared.Hands;
@@ -129,7 +129,7 @@ public sealed class StorageSystem : SharedStorageSystem
             return;
         }
 
-        var finalMapPos = TransformSystem.ToMapCoordinates(finalCoords).Position;
+        var finalMapPos = finalCoords.ToMapPos(EntityManager, TransformSystem);
         var finalPos = Vector2.Transform(finalMapPos, TransformSystem.GetInvWorldMatrix(initialCoords.EntityId));
 
         _entityPickupAnimation.AnimateEntityPickup(item, initialCoords, finalPos, initialAngle);

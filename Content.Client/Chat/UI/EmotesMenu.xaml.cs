@@ -50,6 +50,7 @@ public sealed partial class EmotesMenu : RadialMenu
 
             var button = new EmoteMenuButton
             {
+                StyleClasses = { "RadialMenuButton" },
                 SetSize = new Vector2(64f, 64f),
                 ToolTip = Loc.GetString(emote.Name),
                 ProtoId = emote.ID,
@@ -105,7 +106,7 @@ public sealed partial class EmotesMenu : RadialMenu
 }
 
 
-public sealed class EmoteMenuButton : RadialMenuTextureButtonWithSector
+public sealed class EmoteMenuButton : RadialMenuTextureButton
 {
     public ProtoId<EmotePrototype> ProtoId { get; set; }
 }

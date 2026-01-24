@@ -7,7 +7,6 @@
   components:
   - type: WallMount
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/noticeboard.rsi
     layers:
       - state: noticeboard
@@ -23,7 +22,7 @@
     anchored: true
   - type: Damageable
     damageModifierSet: Wood
-    damageContainer: StructuralInorganic
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:

@@ -123,6 +123,27 @@
       state: generic_keys
 
 - type: entity
+  parent: [BaseStructureComputerTabletop, ComputerShuttleSalvage] # Shuttle
+  id: ComputerTabletopShuttleSalvage
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+
+- type: entity
   parent: [BaseStructureComputerTabletop, ComputerIFF, BaseStructureDisableToolUse]
   id: ComputerTabletopIFF
   components:

@@ -64,7 +64,7 @@ namespace Content.Shared.Cuffs
         {
             base.Initialize();
 
-            SubscribeLocalEvent<CuffableComponent, HandCountChangedEvent>(OnHandCountChanged);
+            SubscribeLocalEvent<HandCountChangedEvent>(OnHandCountChanged);
             SubscribeLocalEvent<UncuffAttemptEvent>(OnUncuffAttempt);
 
             SubscribeLocalEvent<CuffableComponent, EntRemovedFromContainerMessage>(OnCuffsRemovedFromContainer);
@@ -72,7 +72,6 @@ namespace Content.Shared.Cuffs
             SubscribeLocalEvent<CuffableComponent, RejuvenateEvent>(OnRejuvenate);
             SubscribeLocalEvent<CuffableComponent, ComponentInit>(OnStartup);
             SubscribeLocalEvent<CuffableComponent, AttemptStopPullingEvent>(HandleStopPull);
-            SubscribeLocalEvent<CuffableComponent, RemoveCuffsAlertEvent>(OnRemoveCuffsAlert);
             SubscribeLocalEvent<CuffableComponent, UpdateCanMoveEvent>(HandleMoveAttempt);
             SubscribeLocalEvent<CuffableComponent, IsEquippingAttemptEvent>(OnEquipAttempt);
             SubscribeLocalEvent<CuffableComponent, IsUnequippingAttemptEvent>(OnUnequipAttempt);
@@ -262,14 +261,6 @@ namespace Content.Shared.Cuffs
                 args.Cancelled = true;
         }
 
-        private void OnRemoveCuffsAlert(Entity<CuffableComponent> ent, ref RemoveCuffsAlertEvent args)
-        {
-            if (args.Handled)
-                return;
-            TryUncuff(ent, ent, cuffable: ent.Comp);
-            args.Handled = true;
-        }
-
         private void AddUncuffVerb(EntityUid uid, CuffableComponent component, GetVerbsEvent<Verb> args)
         {
             // Can the user access the cuffs, and is there even anything to uncuff?
@@ -401,24 +392,33 @@ namespace Content.Shared.Cuffs
         /// <summary>
         ///     Check the current amount of hands the owner has, and if there's less hands than active cuffs we remove some cuffs.
         /// </summary>
-        private void OnHandCountChanged(Entity<CuffableComponent> ent, ref HandCountChangedEvent message)
+        private void OnHandCountChanged(HandCountChangedEvent message)
         {
-            var dirty = false;
-            var handCount = CompOrNull<HandsComponent>(ent.Owner)?.Count ?? 0;
+            var owner = message.Sender;
 
-            while (ent.Comp.CuffedHandCount > handCount && ent.Comp.CuffedHandCount > 0)
+            if (!TryComp(owner, out CuffableComponent? cuffable) ||
+                !cuffable.Initialized)
+            {
+                return;
+            }
+
+            var dirty = false;
+            var handCount = CompOrNull<HandsComponent>(owner)?.Count ?? 0;
+
+            while (cuffable.CuffedHandCount > handCount && cuffable.CuffedHandCount > 0)
             {
                 dirty = true;
 
-                var handcuffContainer = ent.Comp.Container;
-                var handcuffEntity = handcuffContainer.ContainedEntities[^1];
+                var container = cuffable.Container;
+                var entity = container.ContainedEntities[^1];
 
-                _transform.PlaceNextTo(handcuffEntity, ent.Owner);
+                _container.Remove(entity, container);
+                _transform.SetWorldPosition(entity, _transform.GetWorldPosition(owner));
             }
 
             if (dirty)
             {
-                UpdateCuffState(ent.Owner, ent.Comp);
+                UpdateCuffState(owner, cuffable);
             }
         }
 
@@ -493,7 +493,7 @@ namespace Content.Shared.Cuffs
         }
 
         /// <returns>False if the target entity isn't cuffable.</returns>
-        public bool TryCuffing(EntityUid user, EntityUid target, EntityUid handcuff, HandcuffComponent? handcuffComponent = null, CuffableComponent? cuffable = null, float distanceThreshold = 1f)
+        public bool TryCuffing(EntityUid user, EntityUid target, EntityUid handcuff, HandcuffComponent? handcuffComponent = null, CuffableComponent? cuffable = null, float distanceThreshold = SharedInteractionSystem.InteractionRange)
         {
             if (!Resolve(handcuff, ref handcuffComponent) || !Resolve(target, ref cuffable, false))
                 return false;
@@ -629,9 +629,7 @@ namespace Content.Shared.Cuffs
                 return;
             }
 
-            var ev = new ModifyUncuffDurationEvent(user, target, isOwner ? cuff.BreakoutTime : cuff.UncuffTime);
-            RaiseLocalEvent(user, ref ev);
-            var uncuffTime = ev.Duration;
+            var uncuffTime = (isOwner ? cuff.BreakoutTime : cuff.UncuffTime) * (cuff.UncuffEasierWhenLarge ? 1 / _contests.MassContest(user) : _contests.MassContest(user));
 
             if (isOwner)
             {
@@ -651,7 +649,7 @@ namespace Content.Shared.Cuffs
                 BreakOnDamage = true,
                 NeedHand = true,
                 RequireCanInteract = false, // Trust in UncuffAttemptEvent
-                DistanceThreshold = 1f // shorter than default but still feels good
+                DistanceThreshold = 0.3f
             };
 
             if (!_doAfter.TryStartDoAfter(doAfterEventArgs))

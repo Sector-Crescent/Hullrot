@@ -1081,7 +1081,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: AccessBreaker
+- proto: Doorjack
   entities:
   - uid: 61
     components:
@@ -1647,6 +1647,8 @@ entities:
     - type: Transform
       pos: 3.546875,-9.387623
       parent: 1
+- proto: MagazineRifleRubber
+  entities:
   - uid: 425
     components:
     - type: Transform

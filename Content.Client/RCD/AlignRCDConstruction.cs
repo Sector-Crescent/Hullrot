@@ -45,7 +45,7 @@ public sealed class AlignRCDConstruction : PlacementMode
         _unalignedMouseCoords = ScreenToCursorGrid(mouseScreen);
         MouseCoords = _unalignedMouseCoords.AlignWithClosestGridTile(SearchBoxSize, _entityManager, _mapManager);
 
-        var gridId = _transformSystem.GetGrid(MouseCoords);
+        var gridId = MouseCoords.GetGridUid(_entityManager);
 
         if (!_entityManager.TryGetComponent<MapGridComponent>(gridId, out var mapGrid))
             return;
@@ -75,7 +75,7 @@ public sealed class AlignRCDConstruction : PlacementMode
         if (!_entityManager.TryGetComponent<TransformComponent>(player, out var xform))
             return false;
 
-        if (!_transformSystem.InRange(xform.Coordinates, position, SharedInteractionSystem.InteractionRange))
+        if (!xform.Coordinates.InRange(_entityManager, _transformSystem, position, SharedInteractionSystem.InteractionRange))
         {
             InvalidPlaceColor = InvalidPlaceColor.WithAlpha(0);
             return false;
@@ -105,8 +105,8 @@ public sealed class AlignRCDConstruction : PlacementMode
 
         if (currentState is not GameplayStateBase screen)
             return false;
-        
-        var target = screen.GetClickedEntity(_transformSystem.ToMapCoordinates(_unalignedMouseCoords));
+
+        var target = screen.GetClickedEntity(_unalignedMouseCoords.ToMap(_entityManager, _transformSystem));
 
         // Determine if the RCD operation is valid or not
         if (!_rcdSystem.IsRCDOperationStillValid(heldEntity.Value, rcd, mapGridData.Value, target, player.Value, false))

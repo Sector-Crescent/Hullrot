@@ -1,5 +1,3 @@
-using System.Linq;
-using Content.Shared.Guidebook;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 
@@ -47,20 +45,5 @@ namespace Content.Shared.Explosion.Components
         ///     Whether you can examine the item to see its timer or not.
         /// </summary>
         [DataField] public bool Examinable = true;
-
-        /// <summary>
-        ///     Whether or not to show the user a popup when starting the timer.
-        /// </summary>
-        [DataField] public bool DoPopup = true;
-
-        #region GuidebookData
-
-        [GuidebookData]
-        public float? ShortestDelayOption => DelayOptions?.Min();
-
-        [GuidebookData]
-        public float? LongestDelayOption => DelayOptions?.Max();
-
-        #endregion GuidebookData
     }
 }

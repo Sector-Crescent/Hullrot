@@ -6,9 +6,9 @@
   components:
   - type: MachineBoard
     prototype: M_Emp
-    machinePartRequirements:
+    requirements:
       Capacitor: 4
-    stackRequirements:
+    materialRequirements:
       Steel: 5
       CableHV: 5
       Cable: 2

@@ -12,17 +12,6 @@
     - Cherenzikov
     - Ivarod
 
-
-- type: entity
-  id: NCWLCarrierShipyard
-  parent: BaseMothershipComputer
-  name: carrier shipyard
-  suffix: NCWL
-  components:
-  - type: ShipyardListing
-    shuttles:
-    - HornetNCWL
-
 - type: entity
   id: JackalMothershipComputer
   parent: BaseMothershipComputer
@@ -65,6 +54,16 @@
     - Imparator
     - Perigale
     - Voruna
+
+- type: entity
+  id: UnionfallNemesisMothershipComputer
+  parent: BaseMothershipComputer
+  name: nemesis internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - UnionfallConquest
+    - UnionfallValor
 
 
 - type: entity
@@ -133,6 +132,16 @@
     shuttles:
     - Khopesh
     - Broadsword
+
+- type: entity
+  id: UnionfallClementineMothershipComputer
+  parent: BaseMothershipComputer
+  name: clementine internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - UnionfallKhopesh
+    - UnionfallBroadsword
 
 - type: entity
   id: JackalCarrierMothershipComputer

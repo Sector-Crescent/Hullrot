@@ -108,18 +108,14 @@
     ## NyanoTrasen
     - id: noosphericStorm # A large amount of glimmer has joined the station and made people psionic
       path: events/noospheric_storm.ogg
-    ## EE
-    - id: shadowlingAscension
-      path: /Audio/_EE/Shadowling/ascension.ogg
-      ignoreBasePath: true
 
     # Shuttle
     - id: shuttleCalled # The shuttle is on its way
-      path: shuttle/shuttlecalled.ogg
+      path: shuttle/called.ogg
     - id: shuttleRecalled # The shuttle is going back to Central Command
-      path: shuttle/shuttlerecalled.ogg
+      path: shuttle/recalled.ogg
     - id: shuttleDock # The shuttle has arrived at the station
-      path: shuttle/shuttledock.ogg
+      path: shuttle/dock.ogg
     # - id: shuttleNearby # The shuttle couldn't dock, it's at a specified location
     #   path: shuttle/nearby.ogg
     # - id: shuttleGoodLuck # The shuttle could not find its way to the station, good luck crew

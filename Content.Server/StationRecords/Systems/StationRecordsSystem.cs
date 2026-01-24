@@ -1,8 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Server.Access.Systems;
 using Content.Server.Forensics;
-using Content.Shared.Access.Components;
-using Content.Shared.Forensics.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
@@ -11,7 +8,6 @@ using Content.Shared.Roles;
 using Content.Shared.StationRecords;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Random;
 
 namespace Content.Server.StationRecords.Systems;
 
@@ -39,15 +35,12 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly StationRecordKeyStorageSystem _keyStorage = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IdCardSystem _idCard = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawn);
-        SubscribeLocalEvent<EntityRenamedEvent>(OnRename);
     }
 
     private void OnPlayerSpawn(PlayerSpawnCompleteEvent args)
@@ -56,30 +49,6 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
             return;
 
         CreateGeneralRecord(args.Station, args.Mob, args.Profile, args.JobId, stationRecords);
-    }
-
-    private void OnRename(ref EntityRenamedEvent ev)
-    {
-        // When a player gets renamed their card gets changed to match.
-        // Unfortunately this means that an event is called for it as well, and since TryFindIdCard will succeed if the
-        // given entity is a card and the card itself is the key the record will be mistakenly renamed to the card's name
-        // if we don't return early.
-        if (HasComp<IdCardComponent>(ev.Uid))
-            return;
-
-        if (_idCard.TryFindIdCard(ev.Uid, out var idCard))
-        {
-            if (TryComp(idCard, out StationRecordKeyStorageComponent? keyStorage)
-                && keyStorage.Key is {} key)
-            {
-                if (TryGetRecord<GeneralStationRecord>(key, out var generalRecord))
-                {
-                    generalRecord.Name = ev.NewName;
-                }
-
-                Synchronize(key);
-            }
-        }
     }
 
     private void CreateGeneralRecord(EntityUid station, EntityUid player, HumanoidCharacterProfile profile,
@@ -95,8 +64,6 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
 
         TryComp<FingerprintComponent>(player, out var fingerprintComponent);
         TryComp<DnaComponent>(player, out var dnaComponent);
-
-        CreateGeneralRecord(station, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, jobId, fingerprintComponent?.Fingerprint, dnaComponent?.DNA, profile, records);
 
         string specie = profile.Species;
         if (!string.IsNullOrEmpty(profile.Customspeciename))
@@ -241,28 +208,6 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
     }
 
     /// <summary>
-    /// Gets a random record from the station's record entries.
-    /// </summary>
-    /// <param name="ent">The EntityId of the station from which you want to get the record.</param>
-    /// <param name="entry">The resulting entry.</param>
-    /// <typeparam name="T">Type to get from the record set.</typeparam>
-    /// <returns>True if a record was obtained. False otherwise.</returns>
-    public bool TryGetRandomRecord<T>(Entity<StationRecordsComponent?> ent, [NotNullWhen(true)] out T? entry)
-    {
-        entry = default;
-
-        if (!Resolve(ent.Owner, ref ent.Comp))
-            return false;
-
-        if (ent.Comp.Records.Keys.Count == 0)
-            return false;
-
-        var key = _random.Pick(ent.Comp.Records.Keys);
-
-        return ent.Comp.Records.TryGetRecordEntry(key, out entry);
-    }
-
-    /// <summary>
     /// Returns an id if a record with the same name exists.
     /// </summary>
     /// <remarks>
@@ -280,17 +225,6 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
         }
 
         return null;
-    }
-
-    /// <summary>
-    /// Get the name for a record, or an empty string if it has no record.
-    /// </summary>
-    public string RecordName(StationRecordKey key)
-    {
-        if (!TryGetRecord<GeneralStationRecord>(key, out var record))
-           return string.Empty;
-
-        return record.Name;
     }
 
     /// <summary>
@@ -402,7 +336,6 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
                 && IsFilterWithSomeCodeValue(someRecord.Fingerprint, filterLowerCaseValue),
             StationRecordFilterType.DNA => someRecord.DNA != null
                 && IsFilterWithSomeCodeValue(someRecord.DNA, filterLowerCaseValue),
-            _ => throw new IndexOutOfRangeException(nameof(filter.Type)),
         };
     }
 

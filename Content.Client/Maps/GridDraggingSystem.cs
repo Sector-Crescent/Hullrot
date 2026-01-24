@@ -18,7 +18,6 @@ public sealed class GridDraggingSystem : SharedGridDraggingSystem
     [Dependency] private readonly IInputManager _inputManager = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly InputSystem _inputSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
     public bool Enabled { get; set; }
 
@@ -62,12 +61,12 @@ public sealed class GridDraggingSystem : SharedGridDraggingSystem
     {
         if (_dragging == null) return;
 
-        if (_lastMousePosition != null && TryComp(_dragging.Value, out TransformComponent? xform) &&
-            TryComp<PhysicsComponent>(_dragging.Value, out _) &&
+        if (_lastMousePosition != null && TryComp<TransformComponent>(_dragging.Value, out var xform) &&
+            TryComp<PhysicsComponent>(_dragging.Value, out var body) &&
             xform.MapID == _lastMousePosition.Value.MapId)
         {
             var tickTime = _gameTiming.TickPeriod;
-            var distance = _lastMousePosition.Value.Position - _transformSystem.GetWorldPosition(xform);
+            var distance = _lastMousePosition.Value.Position - xform.WorldPosition;
             RaiseNetworkEvent(new GridDragVelocityRequest()
             {
                 Grid = GetNetEntity(_dragging.Value),
@@ -105,7 +104,7 @@ public sealed class GridDraggingSystem : SharedGridDraggingSystem
             StartDragging(gridUid, Vector2.Transform(mousePos.Position, Transform(gridUid).InvWorldMatrix));
         }
 
-        if (!TryComp(_dragging, out TransformComponent? xform))
+        if (!TryComp<TransformComponent>(_dragging, out var xform))
         {
             StopDragging();
             return;

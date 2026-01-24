@@ -2,7 +2,6 @@ using Content.Server.Forensics;
 using Content.Server.Humanoid;
 using Content.Shared._Shitmed.StatusEffects;
 using Content.Shared.Forensics;
-using Content.Shared.Forensics.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Preferences;
 using Content.Shared.Popups;
@@ -25,7 +24,7 @@ public sealed class ScrambleDnaEffectSystem : EntitySystem
         if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoid))
         {
             var newProfile = HumanoidCharacterProfile.RandomWithSpecies(humanoid.Species);
-            _humanoidAppearance.LoadProfile(uid, newProfile, humanoid, loadExtensions: false, generateLoadouts: false);
+            _humanoidAppearance.LoadProfile(uid, newProfile, humanoid);
             _metaData.SetEntityName(uid, newProfile.Name);
             if (TryComp<DnaComponent>(uid, out var dna))
             {

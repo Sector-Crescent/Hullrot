@@ -37,7 +37,7 @@ namespace Content.Server.NodeContainer.Nodes
             _alwaysReachable.Add(pipeNode);
 
             if (NodeGroup != null)
-                IoCManager.Resolve<IEntityManager>().System<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
+                EntitySystem.Get<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
         }
 
         public void RemoveAlwaysReachable(PipeNode pipeNode)
@@ -47,7 +47,7 @@ namespace Content.Server.NodeContainer.Nodes
             _alwaysReachable.Remove(pipeNode);
 
             if (NodeGroup != null)
-                IoCManager.Resolve<IEntityManager>().System<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
+                EntitySystem.Get<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Content.Server.NodeContainer.Nodes
                 _connectionsEnabled = value;
 
                 if (NodeGroup != null)
-                    IoCManager.Resolve<IEntityManager>().System<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
+                    EntitySystem.Get<NodeGroupSystem>().QueueRemakeGroup((BaseNodeGroup) NodeGroup);
             }
         }
 

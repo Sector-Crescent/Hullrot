@@ -82,7 +82,6 @@
         - Biological
         - Inorganic
         - Silicon
-        - SiliconUnshielded
     - type: PointLight
       color: "#FFDF00"
     - type: SealableClothingVisuals
@@ -140,8 +139,7 @@
       highPressureMultiplier: 0.02
       lowPressureMultiplier: 1000
     - type: TemperatureProtection
-      heatingCoefficient: 0.001
-      coolingCoefficient: 0.001
+      coefficient: 0.001
     - type: ExplosionResistance
       damageCoefficient: 0.2
     - type: FireProtection

@@ -7,13 +7,42 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 75
-        Structural: 226
-    penetrationThreshold: 360
-    penetrationDamageTypeRequirement:
-    - Structural
+        Piercing: 100 # crits anybody in T1 armor and leaves anybody wearing T2 armor 1 sneze away from crit
+        Structural: 400
   - type: StaminaDamageOnCollide
-    damage: 60
+    damage: 40
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletUranium
+  id: BulletAntiMaterielUranium
+  name: bullet (15.2×169mm AP-DU)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 100 # crits anybody in T1 armor and leaves anybody wearing T2 armor 1 sneze away from crit
+        Structural: 1250
+  - type: StaminaDamageOnCollide
+    damage: 40
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletIncendiary
+  id: BulletAntiMaterielIncendiary
+  name: bullet (15.2×169mm incendiary)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 15
+        Heat: 25
+        Structural: 200
+    harmorPenetration: 25
+  - type: IgniteOnCollide
+    fireStacks: 1
+  - type: StaminaDamageOnCollide
+    damage: 40
 
 - type: entity
   id: BulletAntiMaterielShrapnel

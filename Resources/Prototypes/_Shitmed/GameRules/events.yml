@@ -1,6 +1,7 @@
 - type: entity
   parent: BaseGameRule
   id: LoneAbductorSpawn
+  categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
     earliestStart: 15
@@ -15,10 +16,7 @@
     objectives:
     - AbductObjective
   - type: AntagLoadProfileRule
-    speciesOverride: Abductor
-    alwaysUseSpeciesOverride: true
-    allowProfileExtensions: false
-    allowAntagLoadouts: false
+    speciesHardOverride: Abductor
   - type: AntagSelection
     definitions:
     - spawnerPrototype: LoneAbductorSpawner
@@ -76,6 +74,7 @@
 - type: entity
   parent: BaseGameRule
   id: AbductorVictim
+  categories: [ HideSpawnMenu ]
   components:
   - type: AbductorVictimRule
   - type: AntagSelection
@@ -95,6 +94,7 @@
 - type: entity
   parent: BaseGameRule
   id: DuoAbductorSpawn
+  categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
     earliestStart: 15
@@ -109,10 +109,7 @@
     objectives:
     - AbductObjective
   - type: AntagLoadProfileRule
-    speciesOverride: Abductor
-    alwaysUseSpeciesOverride: true
-    allowProfileExtensions: false
-    allowAntagLoadouts: false
+    speciesHardOverride: Abductor
   - type: AntagSelection
     definitions:
     - spawnerPrototype: AbductorScientistSpawner

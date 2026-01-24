@@ -28,8 +28,9 @@
     locked: true
     lockOnClick: false
     unlockOnClick: false
-    breakOnAccessBreaker: false
+    breakOnEmag: false
   - type: AccessReader
+    breakOnEmag: true
     ownerHasAccess: true
   - type: NpcFactionMember
     factions:
@@ -38,13 +39,16 @@
   - type: MobState
     allowedStates:
       - Alive
+      - Critical
       - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
+      119.999: Critical # TO make it almost impossible
       120: Dead
     stateAlertDict:
       Alive: BorgHealth
+      Critical: BorgCrit
       Dead: BorgDead
   - type: TypingIndicator
     proto: robot
@@ -66,7 +70,7 @@
     templateId: ipc
   - type: GuideHelp
     guides:
-      - IPC
+      - IPCs
   - type: Silicon
     entityType: enum.SiliconType.Player
     batteryPowered: true
@@ -107,7 +111,7 @@
   - type: Carriable
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
-  - type: ProtectedFromStepTriggers
+  - type: StepTriggerImmune
     whitelist:
       types:
       - Shard
@@ -130,24 +134,6 @@
     - DoorBumpOpener
     - SiliconEmotes
     - SiliconMob
-  - type: Damageable
-    damageContainer: SiliconUnshielded
-    damageModifierSet: IPC
-  - type: Barotrauma
-    damage:
-      types:
-        Heat: 0.55 #per second, scales with pressure and other constants. Uniquely Heat instead of blunt, to simulate mechanical overheating in vacuum. IPCs are normally air cooled.
-  - type: Bloodstream
-    bloodlossDamage:
-      types:
-        Bloodloss: 0
-    bloodlossHealDamage:
-      types:
-        Bloodloss: 0
-    bloodRegenerationHunger: 0
-    bloodRegenerationThirst: 0
-    bloodReagent: IPCCoolant
-    cauterizeMessage: null
 
 - type: entity
   save: false

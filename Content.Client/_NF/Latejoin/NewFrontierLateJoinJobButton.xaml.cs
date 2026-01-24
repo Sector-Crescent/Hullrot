@@ -36,7 +36,7 @@ public sealed partial class NewFrontierLateJoinJobButton : Button
         _gameTicker.LobbyJobsAvailableUpdated -= UpdateButton;
     }
 
-    private void UpdateButton(IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> obj)
+    private void UpdateButton(IReadOnlyDictionary<NetEntity, Dictionary<string, uint?>> obj)
     {
         if (!obj.ContainsKey(_station) || !obj[_station].ContainsKey(_jobId))
         {

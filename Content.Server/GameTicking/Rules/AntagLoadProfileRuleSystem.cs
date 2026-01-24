@@ -32,18 +32,21 @@ public sealed class AntagLoadProfileRuleSystem : GameRuleSystem<AntagLoadProfile
             : HumanoidCharacterProfile.RandomWithSpecies();
 
 
-        if (profile?.Species is not { } speciesId || !_proto.TryIndex(speciesId, out var species))
+        if (profile?.Species is not { } speciesId || !_proto.TryIndex<SpeciesPrototype>(speciesId, out var species))
+        {
             species = _proto.Index<SpeciesPrototype>(SharedHumanoidAppearanceSystem.DefaultSpecies);
+        }
 
         if (ent.Comp.SpeciesOverride != null
-            && (ent.Comp.AlwaysUseSpeciesOverride
-                || (ent.Comp.SpeciesOverrideBlacklist?.Contains(new ProtoId<SpeciesPrototype>(species.ID)) ?? false)))
+            && (ent.Comp.AlwaysUseSpeciesOverride || ( ent.Comp.SpeciesOverrideBlacklist?.Contains(new (species.ID)) ?? false))) // Goob edit
+        {
             species = _proto.Index(ent.Comp.SpeciesOverride.Value);
+        }
+
+        if (ent.Comp.SpeciesHardOverride is not null) // Shitmed - Starlight Abductors
+            species = _proto.Index(ent.Comp.SpeciesHardOverride.Value); // Shitmed - Starlight Abductors
 
         args.Entity = Spawn(species.Prototype);
-        _humanoid.LoadProfile(args.Entity.Value,
-            profile?.WithSpecies(species.ID),
-            loadExtensions: ent.Comp.AllowProfileExtensions,
-            generateLoadouts: ent.Comp.AllowAntagLoadouts);
+        _humanoid.LoadProfile(args.Entity.Value, profile?.WithSpecies(species.ID));
     }
 }

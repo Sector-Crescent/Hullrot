@@ -31,7 +31,7 @@
     anchored: true
   - type: Anchorable
   - type: Damageable
-    damageContainer: StructuralInorganic
+    damageContainer: Inorganic
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -62,7 +62,7 @@
     tags:
       - Disposal
   - type: StaticPrice
-    price: 30
+    price: 22
 
 - type: entity
   id: DisposalHolder
@@ -80,7 +80,7 @@
   id: DisposalPipeBroken
   parent: DisposalPipeBase
   name: broken disposal pipe
-  description: A BBP (big broken pipe).
+  description: A BBP (big broken pipe)
   components:
   - type: Sprite
     drawdepth: ThickPipe

@@ -25,14 +25,10 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 2.25
+    price: 1
   - type: PhysicalComposition
     materialComposition:
       Steel: 15
-  - type: GuideHelp
-    guides:
-    - VoltageNetworks
-    - Power
 
 - type: entity
   id: CableHVStack
@@ -75,7 +71,6 @@
     delay: 1.8
     damageContainers:
     - Silicon
-    - SiliconUnshielded
     damage:
       types: # these are all split across multiple types. IPCs can still take cold damage, they just heavily resist it.
         Heat: -8
@@ -161,7 +156,6 @@
     delay: 1.2
     damageContainers:
     - Silicon
-    - SiliconUnshielded
     damage:
       types: # these are all split across multiple types. IPCs can still take cold damage, they just heavily resist it.
         Heat: -4
@@ -246,7 +240,6 @@
     delay: 0.6
     damageContainers:
     - Silicon
-    - SiliconUnshielded
     damage:
       types: # these are all split across multiple types. IPCs can still take cold damage, they just heavily resist it.
         Heat: -2

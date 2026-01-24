@@ -30,10 +30,7 @@
     - type: AtmosDevice
     - type: GasMiner
       maxExternalPressure: 300
-      spawnAmount: 400
-    - type: GuideHelp
-      guides:
-      - GasMiningAndStorage
+      spawnAmount: 200
 
 - type: entity
   name: O2 gas miner
@@ -122,14 +119,6 @@
   components:
     - type: GasMiner
       spawnGas: Tritium
-
-- type: entity
-  name: frezon gas miner
-  parent: GasMinerBase
-  id: GasMinerFrezon
-  components:
-    - type: GasMiner
-      spawnGas: Frezon
 
 - type: entity
   name: water vapor gas miner

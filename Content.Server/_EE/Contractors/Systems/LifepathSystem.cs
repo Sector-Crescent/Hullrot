@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Shared._EE.Contractors.Prototypes;
 using Content.Shared.CCVar;
@@ -7,6 +8,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
@@ -28,15 +30,10 @@ public sealed class LifepathSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
-        SubscribeLocalEvent<LoadProfileExtensionsEvent>(OnProfileLoad);
     }
 
     // When the player is spawned in, add the Lifepath components selected during character creation
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args) =>
-        ApplyLifepath(args.Mob, args.JobId, args.Profile,
-            _playTimeTracking.GetTrackerTimes(args.Player), args.Player.ContentData()?.Whitelisted ?? false);
-
-    private void OnProfileLoad(LoadProfileExtensionsEvent args) =>
         ApplyLifepath(args.Mob, args.JobId, args.Profile,
             _playTimeTracking.GetTrackerTimes(args.Player), args.Player.ContentData()?.Whitelisted ?? false);
 
@@ -51,9 +48,9 @@ public sealed class LifepathSystem : EntitySystem
 
         var jobPrototypeToUse = _prototype.Index(jobId.Value);
 
-        ProtoId<LifepathPrototype> lifepath = profile.Lifepath != string.Empty ? profile.Lifepath : SharedHumanoidAppearanceSystem.DefaultLifepath;
+        ProtoId<LifepathPrototype> lifepath = profile.Lifepath != string.Empty? profile.Lifepath : SharedHumanoidAppearanceSystem.DefaultLifepath;
 
-        if (!_prototype.TryIndex(lifepath, out var lifepathPrototype))
+        if(!_prototype.TryIndex<LifepathPrototype>(lifepath, out var lifepathPrototype))
         {
             DebugTools.Assert($"Lifepath '{lifepath}' not found!");
             return;

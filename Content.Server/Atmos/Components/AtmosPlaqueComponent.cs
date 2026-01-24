@@ -14,7 +14,7 @@ namespace Content.Server.Atmos.Components
             set
             {
                 Type = value;
-                IoCManager.Resolve<IEntityManager>().System<AtmosPlaqueSystem>().UpdateSign(Owner, this);
+                EntitySystem.Get<AtmosPlaqueSystem>().UpdateSign(Owner, this);
             }
         }
     }

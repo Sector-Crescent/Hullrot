@@ -298,15 +298,17 @@
       species:
         - Vulpkanin # This trait functions exactly as-is for the Vulpkanin trait.
         - Voidborn
-        - Tajaran
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
         - Blindness
   functions:
-    - !type:TraitAddComponent
+    - !type:TraitReplaceComponent
       components:
-        - type: EyeDamageOnFlashing
+        - type: Flashable
+          eyeDamageChance: 0.3
+          eyeDamage: 1
+          durationMultiplier: 1.5
 
 - type: trait
   id: Clumsy

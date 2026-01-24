@@ -161,7 +161,7 @@
   description: A plastic card for confidential corporate matters.
   components:
     - type: Paper
-      editingDisabled: true
+      canEdit: false
     - type: Sprite
       layers:
         - state: corpslip

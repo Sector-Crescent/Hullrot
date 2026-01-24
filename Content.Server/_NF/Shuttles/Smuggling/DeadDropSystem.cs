@@ -21,7 +21,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Shared.Paper;
 
 namespace Content.Server._NF.Smuggling;
 
@@ -117,7 +116,7 @@ public sealed class DeadDropSystem : EntitySystem
 
         var paper = EntityManager.SpawnEntity(component.HintPaper, Transform(uid).Coordinates);
 
-        // _paper.SetContent(paper, dropHint.ToString()); TODO: Fix this later.
+        _paper.SetContent(paper, dropHint.ToString());
         _meta.SetEntityName(paper, Loc.GetString("deaddrop-hint-name"));
         _meta.SetEntityDescription(paper, Loc.GetString("deaddrop-hint-desc"));
         _hands.PickupOrDrop(user, paper, handsComp: hands);

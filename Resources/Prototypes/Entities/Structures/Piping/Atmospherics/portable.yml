@@ -30,7 +30,6 @@
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-      visible: false
     - state: draining
       shader: unshaded
       visible: false
@@ -68,7 +67,7 @@
   - type: Machine
     board: PortableScrubberMachineCircuitBoard
   - type: Damageable
-    damageContainer: StructuralInorganic
+    damageContainer: Inorganic
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -95,9 +94,6 @@
                 max: 2
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
-  - type: GuideHelp
-    guides:
-    - PortableScrubber
 
 - type: entity
   id: SpaceHeater
@@ -159,7 +155,7 @@
     temperatureTolerance: 0.2
     atmospheric: true
   - type: Damageable
-    damageContainer: StructuralInorganic
+    damageContainer: Inorganic
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -183,9 +179,6 @@
                 max: 3
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
-  - type: GuideHelp
-    guides:
-    - Thermomachines
 
 - type: entity
   parent: SpaceHeater

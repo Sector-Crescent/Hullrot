@@ -77,12 +77,14 @@ namespace Content.Client.Actions.UI
                     MaxWidth = TooltipTextMaxWidth,
                     StyleClasses = {StyleNano.StyleClassTooltipActionRequirements}
                 };
-
-                if (!FormattedMessage.TryFromMarkup("[color=#635c5c]" + requires + "[/color]", out var markup))
-                    return;
-
-                requiresLabel.SetMessage(markup);
-
+                try
+                {
+                    requiresLabel.SetMessage(FormattedMessage.FromMarkupOrThrow("[color=#635c5c]" + requires + "[/color]"));
+                }
+                catch(Exception e)
+                {
+                    requiresLabel.SetMessage(e.Message);
+                }
                 vbox.AddChild(requiresLabel);
             }
         }
@@ -100,11 +102,16 @@ namespace Content.Client.Actions.UI
             if (timeLeft > TimeSpan.Zero)
             {
                 var duration = Cooldown.Value.End - Cooldown.Value.Start;
+                try
+                {
+                    _cooldownLabel.SetMessage(FormattedMessage.FromMarkupOrThrow(
+                        $"[color=#a10505]{(int) duration.TotalSeconds} sec cooldown ({(int) timeLeft.TotalSeconds + 1} sec remaining)[/color]"));
 
-                if (!FormattedMessage.TryFromMarkup(Loc.GetString("ui-actionslot-duration", ("duration", (int)duration.TotalSeconds), ("timeLeft", (int)timeLeft.TotalSeconds + 1)), out var markup))
-                    return;
-
-                _cooldownLabel.SetMessage(markup);
+                }
+                catch(Exception e)
+                {
+                    _cooldownLabel.SetMessage(e.Message);
+                }
                 _cooldownLabel.Visible = true;
             }
             else

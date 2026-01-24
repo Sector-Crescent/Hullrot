@@ -9,12 +9,12 @@
   access:
   - Service
   - Maintenance
-  - Zookeeper
+  - Zookeeper # DeltaV - Add Zookeeper access
   requirements:
-  - !type:CharacterEmployerRequirement
-    inverted: true
-    employers:
-    - Unemployed
+    - !type:CharacterEmployerRequirement
+      inverted: true
+      employers:
+      - Unemployed
 
 - type: startingGear
   id: ZookeeperGear
@@ -22,21 +22,18 @@
   - ZookeeperPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSafari
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     head: ClothingHeadSafari
     shoes: ClothingShoesColorWhite
     id: ZookeeperPDA
     ears: ClothingHeadsetService
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpsuitSafari
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: ZookeeperPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitSafari
     head: ClothingHeadEnvirohelmSafari

@@ -52,29 +52,6 @@ namespace Content.Client.Actions
             SubscribeLocalEvent<EntityWorldTargetActionComponent, ComponentHandleState>(OnEntityWorldTargetHandleState);
         }
 
-        public override void FrameUpdate(float frameTime)
-        {
-            base.FrameUpdate(frameTime);
-
-            var worldActionQuery = EntityQueryEnumerator<WorldTargetActionComponent>();
-            while (worldActionQuery.MoveNext(out var uid, out var action))
-            {
-                UpdateAction(uid, action);
-            }
-
-            var instantActionQuery = EntityQueryEnumerator<InstantActionComponent>();
-            while (instantActionQuery.MoveNext(out var uid, out var action))
-            {
-                UpdateAction(uid, action);
-            }
-
-            var entityActionQuery = EntityQueryEnumerator<EntityTargetActionComponent>();
-            while (entityActionQuery.MoveNext(out var uid, out var action))
-            {
-                UpdateAction(uid, action);
-            }
-        }
-
         private void OnInstantHandleState(EntityUid uid, InstantActionComponent component, ref ComponentHandleState args)
         {
             if (args.Current is not InstantActionComponentState state)
@@ -120,8 +97,6 @@ namespace Content.Client.Actions
             component.Icon = state.Icon;
             component.IconOn = state.IconOn;
             component.IconColor = state.IconColor;
-            component.OriginalIconColor = state.OriginalIconColor;
-            component.DisabledIconColor = state.DisabledIconColor;
             component.Keywords.Clear();
             component.Keywords.UnionWith(state.Keywords);
             component.Enabled = state.Enabled;
@@ -139,7 +114,6 @@ namespace Content.Client.Actions
             component.Priority = state.Priority;
             component.AttachedEntity = EnsureEntity<T>(state.AttachedEntity, uid);
             component.RaiseOnUser = state.RaiseOnUser;
-            component.RaiseOnAction = state.RaiseOnAction;
             component.AutoPopulate = state.AutoPopulate;
             component.Temporary = state.Temporary;
             component.ItemIconStyle = state.ItemIconStyle;
@@ -148,12 +122,10 @@ namespace Content.Client.Actions
             UpdateAction(uid, component);
         }
 
-        public override void UpdateAction(EntityUid? actionId, BaseActionComponent? action = null)
+        protected override void UpdateAction(EntityUid? actionId, BaseActionComponent? action = null)
         {
             if (!ResolveActionData(actionId, ref action))
                 return;
-
-            action.IconColor = action.Charges < 1 ? action.DisabledIconColor : action.OriginalIconColor;
 
             base.UpdateAction(actionId, action);
             if (_playerManager.LocalEntity != action.AttachedEntity)
@@ -261,13 +233,13 @@ namespace Content.Client.Actions
 
         public void LinkAllActions(ActionsComponent? actions = null)
         {
-            if (_playerManager.LocalEntity is not { } user ||
-                !Resolve(user, ref actions, false))
-            {
-                return;
-            }
+             if (_playerManager.LocalEntity is not { } user ||
+                 !Resolve(user, ref actions, false))
+             {
+                 return;
+             }
 
-            LinkActions?.Invoke(actions);
+             LinkActions?.Invoke(actions);
         }
 
         public override void Shutdown()

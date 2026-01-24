@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
 using Content.Server.Chat;
 using Content.Server.Chat.Systems;
-using Content.Server.Speech.Components;
 
 namespace Content.Server.Speech
 {
@@ -18,11 +17,8 @@ namespace Content.Server.Speech
         {
             var accentEvent = new AccentGetEvent(args.Sender, args.Message);
 
-            if (!HasComp<DisableAccentComponent>(args.Sender))
-            {
-                RaiseLocalEvent(args.Sender, accentEvent, true);
-                args.Message = accentEvent.Message;
-            }
+            RaiseLocalEvent(args.Sender, accentEvent, true);
+            args.Message = accentEvent.Message;
         }
     }
 

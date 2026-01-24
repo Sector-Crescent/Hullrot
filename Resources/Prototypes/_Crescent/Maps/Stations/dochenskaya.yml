@@ -7,10 +7,6 @@
     Dochenskaya:
       stationProto: StandardCrescentStation
       components:
-        - type: VesselIcon
-          iffIcon:
-            sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: outpost
         - type: StationNameSetup
           mapNameTemplate: 'Dochenskaya-Hyundari Engineering Outpost'
         - type: VesselMusic
@@ -21,6 +17,7 @@
         - type: VesselDesignation
           designation: vessel-designation-outpost
         - type: StationJobs
+          overflowJobs: []
           availableJobs: #10 total
             ForemanNCSP: [ 1, 1 ]
             ShipbreakerNCSP: [ 9, 9 ]

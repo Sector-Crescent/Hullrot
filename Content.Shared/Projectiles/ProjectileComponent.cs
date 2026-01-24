@@ -1,5 +1,4 @@
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Physics.Dynamics;
@@ -84,33 +83,11 @@ public sealed partial class ProjectileComponent : Component
     [DataField]
     public bool OnlyCollideWhenShot = false;
 
+    /// <summary>
+    ///     Whether this projectile has already damaged an entity.
+    /// </summary>
     [DataField, AutoNetworkedField]
     public bool DamagedEntity;
-
-    /// <summary>
-    ///     If true, the projectile has hit enough targets and should no longer interact with further collisions pending deletion.
-    /// </summary>
-
-    [DataField]
-    public bool ProjectileSpent;
-
-    /// <summary>
-    ///     When a projectile has this threshold set, it will continue to penetrate entities until the damage dealt reaches this threshold.
-    /// </summary>
-    [DataField]
-    public FixedPoint2 PenetrationThreshold = FixedPoint2.Zero;
-
-    /// <summary>
-    ///     If set, the projectile will not penetrate objects that lack the ability to take these damage types.
-    /// </summary>
-    [DataField]
-    public List<string>? PenetrationDamageTypeRequirement;
-
-    /// <summary>
-    ///     Tracks the amount of damage dealt for penetration purposes.
-    /// </summary>
-    [DataField]
-    public FixedPoint2 PenetrationAmount = FixedPoint2.Zero;
 
     // Goobstation start
     [DataField]

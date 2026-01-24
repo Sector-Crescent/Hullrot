@@ -22,6 +22,17 @@
         Blunt: 2
 
 - type: entity
+  id: BulletCaselessRifleRubber
+  name: bullet (9x39mm caseless rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
   id: BulletCaselessRifleIncendiary
   name: bullet (9x39mm caseless incendiary)
   parent: BaseBulletIncendiary

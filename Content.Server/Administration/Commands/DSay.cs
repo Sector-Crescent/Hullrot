@@ -5,11 +5,9 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands
 {
-    [AdminCommand(AdminFlags.Moderator)]
+    [AdminCommand(AdminFlags.Admin)]
     sealed class DSay : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "dsay";
 
         public string Description => Loc.GetString("dsay-command-description");
@@ -18,9 +16,10 @@ namespace Content.Server.Administration.Commands
 
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
-            if (shell.Player is not { } player)
+            var player = shell.Player;
+            if (player == null)
             {
-                shell.WriteError(Loc.GetString("shell-cannot-run-command-from-server"));
+                shell.WriteLine("shell-only-players-can-run-this-command");
                 return;
             }
 
@@ -34,7 +33,7 @@ namespace Content.Server.Administration.Commands
             if (string.IsNullOrEmpty(message))
                 return;
 
-            var chat = _e.System<ChatSystem>();
+            var chat = EntitySystem.Get<ChatSystem>();
             chat.TrySendInGameOOCMessage(entity, message, InGameOOCChatType.Dead, false, shell, player);
         }
     }

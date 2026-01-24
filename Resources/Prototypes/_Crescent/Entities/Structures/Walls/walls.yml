@@ -1,7 +1,7 @@
 #reinforced
 - type: entity
-  parent: WallReinforced
-  id: C_WallReinforced
+  parent: BaseWall
+  id: WallReinforced
   name: reinforced wall
   components:
   - type: Sprite
@@ -83,7 +83,7 @@
 
 #Capital
 - type: entity
-  parent: C_WallReinforced
+  parent: WallReinforced
   id: WallReinforcedCapital
   suffix: Capital
   components:

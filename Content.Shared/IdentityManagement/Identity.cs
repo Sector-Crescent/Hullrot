@@ -15,11 +15,7 @@ public static class Identity
     /// </summary>
     public static string Name(EntityUid uid, IEntityManager ent, EntityUid? viewer=null)
     {
-        var meta = ent.GetComponent<MetaDataComponent>(uid);
-        if (meta.EntityLifeStage <= EntityLifeStage.Initializing)
-            return meta.EntityName; // Identity component and such will not yet have initialized and may throw NREs
-
-        var uidName = meta.EntityName;
+        var uidName = ent.GetComponent<MetaDataComponent>(uid).EntityName;
 
         if (!ent.TryGetComponent<IdentityComponent>(uid, out var identity))
             return uidName;
@@ -38,7 +34,7 @@ public static class Identity
             return uidName;
         }
 
-        return $"{uidName} ({identName})";
+        return uidName + $" ({identName})";
     }
 
     /// <summary>

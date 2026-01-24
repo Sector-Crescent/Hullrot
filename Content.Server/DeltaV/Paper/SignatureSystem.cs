@@ -1,5 +1,3 @@
-using Content.Shared._Goobstation.Paper;
-using Content.Shared._Goobstation.Devil;
 using Content.Server.Access.Systems;
 using Content.Server.Paper;
 using Content.Server.Popups;
@@ -51,7 +49,7 @@ public sealed class SignatureSystem : EntitySystem
     }
 
     /// <summary>
-    ///     Tries to add a signature to the paper with signer's name.
+    ///     Tries add add a signature to the paper with signer's name.
     /// </summary>
     public bool TrySignPaper(Entity<PaperComponent> paper, EntityUid signer, EntityUid pen)
     {
@@ -62,11 +60,6 @@ public sealed class SignatureSystem : EntitySystem
         if (ev.Cancelled)
             return false;
 
-        var paperEvent = new BeingSignedAttemptEvent(paper, signer); // Goobstation
-        RaiseLocalEvent(paper.Owner, ref paperEvent);
-        if (paperEvent.Cancelled)
-            return false;
-
         var signatureName = DetermineEntitySignature(signer);
 
         var stampInfo = new StampDisplayInfo()
@@ -75,24 +68,18 @@ public sealed class SignatureSystem : EntitySystem
             StampedColor = Color.DarkSlateGray, //TODO Make this configurable depending on the pen.
         };
 
-        if (!comp.StampedBy.Contains(stampInfo) && _paper.TryStamp((paper, comp), stampInfo, SignatureStampState))
+        if (!comp.StampedBy.Contains(stampInfo) && _paper.TryStamp(paper, stampInfo, SignatureStampState, comp))
         {
             // Show popups and play a paper writing sound
-            if (!HasComp<DevilComponent>(signer)) // Goobstation - Don't display popups for devils, it covers the others.
-            {
-                var signedOtherMessage = Loc.GetString("paper-signed-other", ("user", signer), ("target", paper.Owner));
-                _popup.PopupEntity(signedOtherMessage, signer, Filter.PvsExcept(signer, entityManager: EntityManager), true);
+            var signedOtherMessage = Loc.GetString("paper-signed-other", ("user", signer), ("target", paper.Owner));
+            _popup.PopupEntity(signedOtherMessage, signer, Filter.PvsExcept(signer, entityManager: EntityManager), true);
 
-                var signedSelfMessage = Loc.GetString("paper-signed-self", ("target", paper.Owner));
-                _popup.PopupEntity(signedSelfMessage, signer, signer);
-            }
+            var signedSelfMessage = Loc.GetString("paper-signed-self", ("target", paper.Owner));
+            _popup.PopupEntity(signedSelfMessage, signer, signer);
 
             _audio.PlayPvs(comp.Sound, signer);
 
-            _paper.UpdateUserInterface((paper, comp));
-
-            var evSignSucessfulEvent = new SignSuccessfulEvent(paper, signer); // Goobstation - Devil Antagonist
-            RaiseLocalEvent(paper, ref evSignSucessfulEvent); // Goobstation - Devil Antagonist
+            _paper.UpdateUserInterface(paper, comp);
 
             return true;
         }
@@ -107,10 +94,6 @@ public sealed class SignatureSystem : EntitySystem
 
     private string DetermineEntitySignature(EntityUid uid)
     {
-        // Goobstation - Allow devils to sign their true name.
-        if (TryComp<DevilComponent>(uid, out var devilComp) && !string.IsNullOrWhiteSpace(devilComp.TrueName))
-            return devilComp.TrueName;
-
         // If the entity has an ID, use the name on it.
         if (_idCard.TryFindIdCard(uid, out var id) && !string.IsNullOrWhiteSpace(id.Comp.FullName))
             return id.Comp.FullName;

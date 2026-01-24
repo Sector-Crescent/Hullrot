@@ -56,7 +56,7 @@ namespace Content.Server.Engineering.EntitySystems
             if (component.Deleted || Deleted(uid))
                 return;
 
-            if (!TryComp(uid, out TransformComponent? transformComp))
+            if (!TryComp<TransformComponent>(uid, out var transformComp))
                 return;
 
             var entity = EntityManager.SpawnEntity(component.Prototype, transformComp.Coordinates);

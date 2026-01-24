@@ -3,15 +3,17 @@ using Content.Server._Crescent.HullrotSelfDeleteTimer;
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
 using Content.Server.Buckle.Systems;
+using Content.Server.Doors.Systems;
 using Content.Server.Parallax;
-using Content.Server.Procedural;
 using Content.Server.Shuttles.Components;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Server.Stunnable;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Damage;
+using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
@@ -37,28 +39,26 @@ namespace Content.Server.Shuttles.Systems;
 [UsedImplicitly]
 public sealed partial class ShuttleSystem : SharedShuttleSystem
 {
-    [Dependency] private readonly IAdminLogManager _logger = default!;
     [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly BiomeSystem _biomes = default!;
     [Dependency] private readonly BodySystem _bobby = default!;
     [Dependency] private readonly BuckleSystem _buckle = default!;
     [Dependency] private readonly DamageableSystem _damageSys = default!;
     [Dependency] private readonly DockingSystem _dockSystem = default!;
-    [Dependency] private readonly DungeonSystem _dungeon = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly FixtureSystem _fixtures = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
+    [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedMapSystem _maps = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedSalvageSystem _salvage = default!;
@@ -68,6 +68,8 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly IAdminLogManager _logger = default!;
+    [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
 
     private EntityQuery<BuckleComponent> _buckleQuery;
@@ -155,13 +157,13 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         if (HasComp<MapComponent>(ev.EntityUid))
             return;
 
-        //hullrot edit: handling adding lag compensation
+        //hullrot edit: handling adding lag compensation 
         //_sawmill.Debug("GRID INITIALIZED! GRID ID:" + ev.EntityUid.ToString());
 
         // THAT DOESN'T WORK BECAUSE EITHER:
         // 1. THIS ISN'T THE RIGHT GRID ID. FROM WHAT I SAW, THIS GRID ID IS +1 FROM THE GRIDS ADDED TO THE FUCKING STATIONS!!!
         // 2. THIS RUNS BEFORE BECOMESSTATION AND IFFCOMPONENT AND NAMES GET ADDED, FUCKING EVERYTHING UP!
-        // WE ADD THIS TO EVERY GRID, THEN WHEN THE TIMER TICKS DOWN, IF IT
+        // WE ADD THIS TO EVERY GRID, THEN WHEN THE TIMER TICKS DOWN, IF IT 
         //if (!TryComp<BecomesStationComponent>(ev.EntityUid, out var _) || !TryComp<IFFComponent>(ev.EntityUid, out var _) || !(Name(ev.EntityUid) != "grid"))
         //_sawmill.Debug("NEW DEBRIS GRID MADE!");
 

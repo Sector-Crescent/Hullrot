@@ -1,4 +1,50 @@
 - type: entity
+  id: BaseIntegratedMagboot
+  name: integrated magboots
+  description: A set of magnetic locks integrated into a suit.
+  abstract: true
+  components:
+    - type: ToggleClothing
+      action: ActionToggleMagboots
+    - type: Magboots
+      slot: outerClothing
+    - type: ItemToggle
+      onUse: false # can't really wear it like that
+
+- type: entity
+  id: BaseIntegratedManeuveringThrusters
+  name: integrated maneuvering thrusters
+  description: A set of maneuvering thrusters integrated into a suit.
+  abstract: true
+  components:
+    - type: GasTank
+      outputPressure: 42.6
+      air:
+        # 10 minutes of thrust
+        volume: 3.75
+        temperature: 293.15
+        moles:
+          - 0.769267145 # oxygen
+          - 0.769267145 # nitrogen
+      isInternals: false # So you don't suck on your integrated thrusters
+    - type: ActivatableUI
+      key: enum.SharedGasTankUiKey.Key
+      verbOnly: true
+    - type: UserInterface
+      interfaces:
+        enum.SharedGasTankUiKey.Key:
+          type: GasTankBoundUserInterface
+    - type: Jetpack
+      moleUsage: 0.00085
+    - type: CanMoveInAir
+    - type: InputMover
+      toParent: true
+    - type: MovementSpeedModifier
+      weightlessAcceleration: 1
+      weightlessFriction: 0.3
+      weightlessModifier: 1.2
+
+- type: entity
   parent: [ClothingShoesBase, BaseToggleClothing]
   id: ClothingShoesBootsMagBase
   name: magboots
@@ -14,7 +60,6 @@
     sprite: Clothing/Shoes/Boots/magboots-science.rsi
   - type: ToggleClothing
     action: ActionToggleMagboots
-    mustEquip: false
   - type: ComponentToggler
     components:
     - type: NoSlip
@@ -45,7 +90,7 @@
   id: ClothingShoesBootsMag
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseGrandTheftContraband]
+  parent: ClothingShoesBootsMag
   id: ClothingShoesBootsMagAdv
   name: advanced magboots
   description: State-of-the-art magnetic boots that do not slow down their wearer.
@@ -73,7 +118,7 @@
     stealGroup: ClothingShoesBootsMagAdv
 
 - type: entity
-  parent: ClothingShoesBootsMagBase
+  parent: ClothingShoesBootsMag
   id: ClothingShoesBootsMagBlinding
   name: magboots of blinding speed
   description: These would look fetching on a fetcher like you.
@@ -90,10 +135,10 @@
     price: 3000
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseSyndicateContraband]
+  parent: [ClothingShoesBootsMag, BaseJetpack]
   id: ClothingShoesBootsMagSyndie
   name: blood-red magboots
-  description: Reverse-engineered magnetic boots that have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
+  description: Reverse-engineered magnetic boots that have a heavy magnetic pull and integrated thrusters.
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi
@@ -115,8 +160,29 @@
       volume: 0.75
       temperature: 293.15
       moles:
-      - 0.153853429 # oxygen
-      - 0.153853429 # nitrogen
+        - 0.153853429 # oxygen
+        - 0.153853429 # nitrogen
+  - type: ActivatableUI
+    key: enum.SharedGasTankUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 20
+  - type: Jetpack
+    moleUsage: 0.00085
+  - type: CanMoveInAir
+  - type: InputMover
+    toParent: true
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 1
+    weightlessFriction: 0.3
+    weightlessModifier: 1.2
+  - type: Tag
+    tags:
+      - WhitelistChameleon
   - type: Item
     sprite: null
     size: Normal
@@ -145,7 +211,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingShoesBootsMag, ClothingShoesMilitaryBase]
+  parent: ClothingShoesBootsMag
   id: ClothingShoesBootsMagSec
   name: heavy combat magboots
   description: Heavy-duty magboots with added protection and a convenient sidearm strap.
@@ -167,16 +233,16 @@
     tags:
     - WhitelistChameleon
   - type: StaticPrice
-    price: 500
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 13
-    staminaCost: 15
-  - type: ClothingSlowOnDamageModifier
-    modifier: 0.8
-  - type: ClothingModifyStunTime # Goobstation
-    modifier: 0.8
+    price: 1000
+  - type: Matchbox
+  - type: ItemSlots
+    slots:
+      item:
+        name: clothing-boots-sidearm
+        whitelist:
+          tags:
+          - Knife
+          - Sidearm
   - type: Armor
     modifiers:
       coefficients:
@@ -184,57 +250,15 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
-
-- type: entity
-  id: BaseIntegratedMagboot
-  name: integrated magboots
-  description: A set of magnetic locks integrated into a suit.
-  abstract: true
-  components:
-  - type: ToggleClothing
-    action: ActionToggleMagboots
-  - type: Magboots
-    slot: outerClothing
-  - type: ItemToggle
-    onUse: false # can't really wear it like that
-
-- type: entity
-  id: BaseIntegratedManeuveringThrusters
-  name: integrated maneuvering thrusters
-  description: A set of maneuvering thrusters integrated into a suit.
-  abstract: true
-  components:
-  - type: GasTank
-    outputPressure: 42.6
-    air:
-      # 10 minutes of thrust
-      volume: 3.75
-      temperature: 293.15
-      moles:
-      - 0.769267145 # oxygen
-      - 0.769267145 # nitrogen
-    isInternals: false # So you don't suck on your integrated thrusters
-  - type: ActivatableUI
-    key: enum.SharedGasTankUiKey.Key
-    verbOnly: true
-  - type: UserInterface
-    interfaces:
-      enum.SharedGasTankUiKey.Key:
-        type: GasTankBoundUserInterface
-  - type: Jetpack
-    moleUsage: 0.00085
-  - type: CanMoveInAir
-  - type: InputMover
-    toParent: true
-  - type: MovementSpeedModifier
-    weightlessAcceleration: 1
-    weightlessFriction: 0.3
-    weightlessModifier: 1.2
+  - type: ContainerContainer
+    containers:
+      item: !type:ContainerSlot
 
 - type: entity
   id: ActionToggleMagboots
   name: Toggle Magboots
   description: Toggles the magboots on and off.
+  categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
     itemIconStyle: BigItem

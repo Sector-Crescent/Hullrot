@@ -1,5 +1,4 @@
-using Content.Shared._Goobstation.CrematorImmune;
-using Content.Server.Ghost;
+using Content.Server.GameTicking;
 using Content.Server.Morgue.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
@@ -14,6 +13,8 @@ using Content.Shared.Standing;
 using Content.Shared.Storage;
 using Content.Shared.Storage.Components;
 using Content.Shared.Verbs;
+using Robust.Server.GameObjects;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
@@ -24,7 +25,7 @@ public sealed class CrematoriumSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly GhostSystem _ghostSystem = default!;
+    [Dependency] private readonly GameTicker _ticker = default!;
     [Dependency] private readonly EntityStorageSystem _entityStorage = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly StandingStateSystem _standing = default!;
@@ -134,9 +135,6 @@ public sealed class CrematoriumSystem : EntitySystem
             for (var i = storage.Contents.ContainedEntities.Count - 1; i >= 0; i--)
             {
                 var item = storage.Contents.ContainedEntities[i];
-                if (HasComp<CrematoriumImmuneComponent>(item)) // GOOBCODE ALERT //
-                    continue;
-
                 _containers.Remove(item, storage.Contents);
                 EntityManager.DeleteEntity(item);
             }
@@ -156,7 +154,7 @@ public sealed class CrematoriumSystem : EntitySystem
         var victim = args.Victim;
         if (TryComp(victim, out ActorComponent? actor) && _minds.TryGetMind(victim, out var mindId, out var mind))
         {
-            _ghostSystem.OnGhostAttempt(mindId, false, mind: mind);
+            _ticker.OnGhostAttempt(mindId, false, mind: mind);
 
             if (mind.OwnedEntity is { Valid: true } entity)
             {

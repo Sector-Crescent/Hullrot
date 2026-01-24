@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Content.Shared.CCVar;
 using Content.Shared.Customization.Systems;
 using Content.Shared.Players.JobWhitelist;
@@ -20,7 +20,6 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
     [Dependency] private readonly IBaseClient _client = default!;
     [Dependency] private readonly IClientNetManager _net = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
 
     private readonly Dictionary<string, TimeSpan> _roles = new();
@@ -126,14 +125,11 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
     }
 
 
-    public IReadOnlyDictionary<string, TimeSpan> GetPlayTimes(ICommonSession session)
+    public Dictionary<string, TimeSpan> GetPlayTimes()
     {
-        if (session != _playerManager.LocalSession)
-        {
-            return new Dictionary<string, TimeSpan>();
-        }
-
-        return _roles;
+        var dict = FetchPlaytimeByRoles();
+        dict.Add(PlayTimeTrackingShared.TrackerOverall, FetchOverallPlaytime());
+        return dict;
     }
 
     public Dictionary<string, TimeSpan> GetRawPlayTimeTrackers()

@@ -74,10 +74,6 @@ entities:
     components:
     - type: MetaData
       name: grid
-    - type: VesselIcon
-      iffIcon:
-        sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: station
     - type: Transform
       pos: -0.4851277,-0.50743294
       parent: invalid
@@ -151323,7 +151319,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -16.5,-3.5
       parent: 1
-- proto: ComputerTabletopShuttleNCWLMilitary
+- proto: ComputerTabletopShuttle
   entities:
   - uid: 3637
     components:

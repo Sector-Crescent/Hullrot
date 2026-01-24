@@ -8,7 +8,6 @@ using Content.Server.Station.Systems;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Examine;
 using Content.Server.Explosion.Components;
-using Content.Shared.Explosion.Components;
 
 namespace Content.Server._Crescent.ShipShields;
 public partial class ShipShieldsSystem

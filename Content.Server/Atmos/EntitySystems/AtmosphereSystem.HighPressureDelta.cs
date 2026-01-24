@@ -1,7 +1,3 @@
-// All changes made to AtmosphereSystem.HighPressureDelta.cs as well as associated changes to the AtmosphereSystem and adjacent systems made by
-// Tyler Chase Johnson (also known as VMSolidus) are marked CC0 1.0. To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
-// As these changes are done to more files than I am reasonably able to track down in order to mark them all,
-// this notice may be taken in good faith that all code modifications necessary for the functioning of Space Wind V5 may also be considered as CC0 1.0 even without included marks.
 using Content.Server.Atmos.Components;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
@@ -58,15 +54,11 @@ public sealed partial class AtmosphereSystem
 
         // No atmos yeets, return early.
         if (!SpaceWind
-            || !gridAtmosphere.Comp.SpaceWindSimulation // Is the grid marked as exempt from space wind?)
-            || tile.Space) // No Air Checks. Pressure differentials can't exist in a hard vacuum.
-            return;
-
-        var pressure = tile.AirArchived?.Pressure;
-        if (pressure is null
-            || pressure <= atmosComp.PressureCutoff // Below 5kpa(can't throw a base item)
-            || oneAtmos - atmosComp.PressureCutoff <= pressure
-            && pressure <= oneAtmos + atmosComp.PressureCutoff // Check within 5kpa of default pressure.
+            || !gridAtmosphere.Comp.SpaceWindSimulation // Is the grid marked as exempt from space wind?
+            || tile.Air is null || tile.Space // No Air Checks. Pressure differentials can't exist in a hard vacuum.
+            || tile.Air.Pressure <= atmosComp.PressureCutoff // Below 5kpa(can't throw a base item)
+            || oneAtmos - atmosComp.PressureCutoff <= tile.Air.Pressure
+            && tile.Air.Pressure <= oneAtmos + atmosComp.PressureCutoff // Check within 5kpa of default pressure.
             || !TryComp(gridAtmosphere.Owner, out MapGridComponent? mapGrid)
             || !_mapSystem.TryGetTileRef(gridAtmosphere.Owner, mapGrid, tile.GridIndices, out var tileRef))
             return;
@@ -118,15 +110,15 @@ public sealed partial class AtmosphereSystem
             // Ideally containers would have their own EntityQuery internally or something given recursively it may need to slam GetComp<T> anyway.
             // Also, don't care about static bodies (but also due to collisionwakestate can't query dynamic directly atm).
             if (!bodies.TryGetComponent(entity, out var body)
-                || !pressureQuery.TryGetComponent(entity, out var pressureComp)
-                || !pressureComp.Enabled
+                || !pressureQuery.TryGetComponent(entity, out var pressure)
+                || !pressure.Enabled
                 || _containers.IsEntityInContainer(entity, metas.GetComponent(entity))
-                || pressureComp.LastHighPressureMovementAirCycle >= gridAtmosphere.Comp.UpdateCounter)
+                || pressure.LastHighPressureMovementAirCycle >= gridAtmosphere.Comp.UpdateCounter)
                 continue;
 
             // tl;dr YEET
             ExperiencePressureDifference(
-                (entity, pressureComp),
+                (entity, pressure),
                 gridAtmosphere.Comp.UpdateCounter,
                 pressureVector,
                 pVecLength,

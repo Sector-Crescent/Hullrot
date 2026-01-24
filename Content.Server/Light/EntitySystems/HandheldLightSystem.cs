@@ -9,6 +9,7 @@ using Content.Shared.Light;
 using Content.Shared.Light.Components;
 using Content.Shared.Rounding;
 using Content.Shared.Toggleable;
+using Content.Shared.Verbs;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
@@ -45,6 +46,7 @@ namespace Content.Server.Light.EntitySystems
             SubscribeLocalEvent<HandheldLightComponent, ComponentShutdown>(OnShutdown);
 
             SubscribeLocalEvent<HandheldLightComponent, ExaminedEvent>(OnExamine);
+            SubscribeLocalEvent<HandheldLightComponent, GetVerbsEvent<ActivationVerb>>(AddToggleLightVerb);
 
             SubscribeLocalEvent<HandheldLightComponent, ActivateInWorldEvent>(OnActivate);
 
@@ -177,7 +179,25 @@ namespace Content.Server.Light.EntitySystems
             }
         }
 
-        public override bool TurnOff(Entity<HandheldLightComponent> ent, bool makeNoise = true)
+        private void AddToggleLightVerb(Entity<HandheldLightComponent> ent, ref GetVerbsEvent<ActivationVerb> args)
+        {
+            if (!args.CanAccess || !args.CanInteract || !ent.Comp.ToggleOnInteract)
+                return;
+
+            var @event = args;
+            ActivationVerb verb = new()
+            {
+                Text = Loc.GetString("verb-common-toggle-light"),
+                Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/light.svg.192dpi.png")),
+                Act = ent.Comp.Activated
+                    ? () => TurnOff(ent)
+                    : () => TurnOn(@event.User, ent)
+            };
+
+            args.Verbs.Add(verb);
+        }
+
+        public bool TurnOff(Entity<HandheldLightComponent> ent, bool makeNoise = true)
         {
             if (!ent.Comp.Activated || !_lights.TryGetLight(ent, out var pointLightComponent))
             {
@@ -191,7 +211,7 @@ namespace Content.Server.Light.EntitySystems
             return true;
         }
 
-        public override bool TurnOn(EntityUid user, Entity<HandheldLightComponent> uid)
+        public bool TurnOn(EntityUid user, Entity<HandheldLightComponent> uid)
         {
             var component = uid.Comp;
             if (component.Activated || !_lights.TryGetLight(uid, out var pointLightComponent))
@@ -202,7 +222,7 @@ namespace Content.Server.Light.EntitySystems
             if (!_powerCell.TryGetBatteryFromSlot(uid, out var battery) &&
                 !TryComp(uid, out battery))
             {
-                _audio.PlayPvs(_audio.ResolveSound(component.TurnOnFailSound), uid);
+                _audio.PlayPvs(_audio.GetSound(component.TurnOnFailSound), uid);
                 _popup.PopupEntity(Loc.GetString("handheld-light-component-cell-missing-message"), uid, user);
                 return false;
             }
@@ -212,7 +232,7 @@ namespace Content.Server.Light.EntitySystems
             // Simple enough.
             if (component.Wattage > battery.CurrentCharge)
             {
-                _audio.PlayPvs(_audio.ResolveSound(component.TurnOnFailSound), uid);
+                _audio.PlayPvs(_audio.GetSound(component.TurnOnFailSound), uid);
                 _popup.PopupEntity(Loc.GetString("handheld-light-component-cell-dead-message"), uid, user);
                 return false;
             }

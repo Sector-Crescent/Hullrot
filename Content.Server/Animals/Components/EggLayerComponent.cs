@@ -1,4 +1,3 @@
-using Content.Server.Animals.Systems;
 using Content.Shared.Storage;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -10,18 +9,9 @@ namespace Content.Server.Animals.Components;
 ///     It also grants an action to players who are controlling these entities, allowing them to do it manually.
 /// </summary>
 
-[RegisterComponent, Access(typeof(EggLayerSystem)), AutoGenerateComponentPause]
+[RegisterComponent]
 public sealed partial class EggLayerComponent : Component
 {
-    /// <summary>
-    ///     The item that gets laid/spawned, retrieved from animal prototype.
-    /// </summary>
-    [DataField(required: true)]
-    public List<EntitySpawnEntry> EggSpawn = new();
-
-    /// <summary>
-    ///     Player action.
-    /// </summary>
     [DataField]
     public EntProtoId EggLayAction = "ActionAnimalLayEgg";
 
@@ -30,26 +20,33 @@ public sealed partial class EggLayerComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float HungerUsage = 30f;
-    [DataField]
-    public SoundSpecifier EggLaySound = new SoundPathSpecifier("/Audio/Effects/pop.ogg");
 
     /// <summary>
     ///     Minimum cooldown used for the automatic egg laying.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float EggLayCooldownMin = 60f;
+    public float EggLayCooldownMin = 15f;
 
     /// <summary>
     ///     Maximum cooldown used for the automatic egg laying.
     /// </summary>
-    [DataField]
-    public float EggLayCooldownMax = 120f;
-
-    [DataField] public EntityUid? Action;
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float EggLayCooldownMax = 43f;
 
     /// <summary>
-    ///     When to next try to produce.
+    ///     Set during component init.
     /// </summary>
-    [DataField, AutoPausedField]
-    public TimeSpan NextGrowth = TimeSpan.Zero;
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float CurrentEggLayCooldown;
+
+    [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
+    public List<EntitySpawnEntry> EggSpawn = default!;
+
+    [DataField]
+    public SoundSpecifier EggLaySound = new SoundPathSpecifier("/Audio/Effects/pop.ogg");
+
+    [DataField]
+    public float AccumulatedFrametime;
+
+    [DataField] public EntityUid? Action;
 }

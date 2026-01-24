@@ -1,14 +1,15 @@
+using Content.Server.Advertise.Components;
 using Content.Server.Chat.Systems;
-using Content.Shared.Advertise.Components;
-using Content.Shared.Advertise.Systems;
+using Content.Server.UserInterface;
+using Content.Shared.Advertise;
 using Content.Shared.Chat;
-using Content.Shared.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using ActivatableUIComponent = Content.Shared.UserInterface.ActivatableUIComponent;
 
-namespace Content.Server.Advertise.EntitySystems;
+namespace Content.Server.Advertise;
 
-public sealed partial class SpeakOnUIClosedSystem : SharedSpeakOnUIClosedSystem
+public sealed partial class SpeakOnUIClosedSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -39,12 +40,21 @@ public sealed partial class SpeakOnUIClosedSystem : SharedSpeakOnUIClosedSystem
         if (!entity.Comp.Enabled)
             return false;
 
-        if (!_prototypeManager.TryIndex(entity.Comp.Pack, out var messagePack))
+        if (!_prototypeManager.TryIndex(entity.Comp.Pack, out MessagePackPrototype? messagePack))
             return false;
 
-        var message = Loc.GetString(_random.Pick(messagePack.Values), ("name", Name(entity)));
+        var message = Loc.GetString(_random.Pick(messagePack.Messages), ("name", Name(entity)));
         _chat.TrySendInGameICMessage(entity, message, InGameICChatType.Speak, true);
         entity.Comp.Flag = false;
+        return true;
+    }
+
+    public bool TrySetFlag(Entity<SpeakOnUIClosedComponent?> entity, bool value = true)
+    {
+        if (!Resolve(entity, ref entity.Comp))
+            return false;
+
+        entity.Comp.Flag = value;
         return true;
     }
 }

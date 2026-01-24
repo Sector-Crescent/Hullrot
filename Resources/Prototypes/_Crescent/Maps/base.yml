@@ -5,6 +5,7 @@
     - BaseStationCargo
     - BaseStationJobsSpawning
     - BaseStationRecords
+    - BaseStationShuttles
     - BaseStationAlertLevels
     - BaseStationSiliconLawCrescentStation
     - BaseStationSectorNews
@@ -16,6 +17,7 @@
   id: StandardCrescentPOI #POI
   parent:
     - BaseStation
+    - BaseStationShuttles
     - BaseStationCargo
   categories: [ HideSpawnMenu ]
   components:
@@ -132,15 +134,3 @@
   components:
     - type: AlertLevel
       alertLevelPrototype: combatShipAlerts
-
-- type: gameMap
-  id: EmptyCrescent
-  mapName: Empty
-  mapPath: /Maps/Test/empty.yml
-  minPlayers: 0
-  stations:
-    Empty:
-      stationProto: StandardCrescentStation # hehe
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: "" # this was so easy why did nobody do this before

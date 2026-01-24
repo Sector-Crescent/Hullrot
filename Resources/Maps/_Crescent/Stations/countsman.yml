@@ -59117,7 +59117,7 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: capital
+        state: dreadnought
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Countsman
@@ -83555,7 +83555,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 10.5,-17.5
       parent: 1
-- proto: ComputerShuttleDSMMilitary
+- proto: ComputerShuttle
   entities:
   - uid: 4545
     components:
@@ -111071,7 +111071,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponSubMachineGunDSMTalon
+- proto: WeaponSubMachineGunC20r
   entities:
   - uid: 8445
     components:

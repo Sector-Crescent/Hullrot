@@ -25,7 +25,8 @@
     - BaseStationSiliconLawAsimov
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
-    - BaseStationDeliveries
+    - BaseRandomStation
+    - BaseStationMail # Nyano component, required for station mail to function
     - BaseStationCaptainState # DeltaV
     - BaseStationStockMarket # DeltaV
   categories: [ HideSpawnMenu ]
@@ -44,6 +45,7 @@
     - BaseStationExpeditions
     - BaseStationSiliconLawAsimov
     - BaseStationNanotrasen
+    - BaseRandomStation
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
@@ -67,75 +69,78 @@
   - BaseStationNanotrasen
   categories: [ HideSpawnMenu ]
   components:
-  - type: Transform
+    - type: Transform
 
 - type: entity
   id: StandardNanotrasenStationNoATS
   parent:
-  - BaseStation
-  - BaseStationNews
-  - BaseStationCargo
-  - BaseStationJobsSpawning
-  - BaseStationRecords
-  - BaseStationArrivals
-  - BaseStationGateway
-  - BaseStationShuttlesSalvageOnly
-  - BaseStationCentcomm
-  - BaseStationEvacuation
-  - BaseStationAlertLevels
-  - BaseStationMagnet
-  - BaseStationExpeditions
-  - BaseStationSiliconLawAsimov
-  - BaseStationAllEventsEligible
-  - BaseStationNanotrasen
-  - BaseStationDeliveries
+    - BaseStation
+    - BaseStationNews
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationGateway
+    - BaseStationShuttlesSalvageOnly
+    - BaseStationCentcomm
+    - BaseStationEvacuation
+    - BaseStationAlertLevels
+    - BaseStationMagnet
+    - BaseStationExpeditions
+    - BaseStationSiliconLawAsimov
+    - BaseStationAllEventsEligible
+    - BaseStationNanotrasen
+    - BaseRandomStation
+    - BaseStationMail
   categories: [ HideSpawnMenu ]
   components:
-  - type: Transform
+    - type: Transform
 
 - type: entity
   id: StandardNanotrasenStationNoShuttles
   parent:
-  - BaseStation
-  - BaseStationNews
-  - BaseStationCargo
-  - BaseStationJobsSpawning
-  - BaseStationRecords
-  - BaseStationArrivals
-  - BaseStationGateway
-  - BaseStationCentcomm
-  - BaseStationEvacuation
-  - BaseStationAlertLevels
-  - BaseStationMagnet
-  - BaseStationExpeditions
-  - BaseStationSiliconLawAsimov
-  - BaseStationAllEventsEligible
-  - BaseStationNanotrasen
-  - BaseStationDeliveries
+    - BaseStation
+    - BaseStationNews
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationGateway
+    - BaseStationCentcomm
+    - BaseStationEvacuation
+    - BaseStationAlertLevels
+    - BaseStationMagnet
+    - BaseStationExpeditions
+    - BaseStationSiliconLawAsimov
+    - BaseStationAllEventsEligible
+    - BaseStationNanotrasen
+    - BaseRandomStation
+    - BaseStationMail
   categories: [HideSpawnMenu]
   components:
-  - type: Transform
+    - type: Transform
 
 - type: entity
   id: StandardNanotrasenStationCargoOnly
   parent:
-  - BaseStation
-  - BaseStationNews
-  - BaseStationCargo
-  - BaseStationJobsSpawning
-  - BaseStationRecords
-  - BaseStationArrivals
-  - BaseStationGateway
-  - BaseStationShuttlesCargoOnly
-  - BaseStationCentcomm
-  - BaseStationEvacuation
-  - BaseStationAlertLevels
-  - BaseStationMagnet
-  - BaseStationExpeditions
-  - BaseStationSiliconLawAsimov
-  - BaseStationAllEventsEligible
-  - BaseStationNanotrasen
-  - BaseStationDeliveries
+    - BaseStation
+    - BaseStationNews
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationGateway
+    - BaseStationShuttlesCargoOnly
+    - BaseStationCentcomm
+    - BaseStationEvacuation
+    - BaseStationAlertLevels
+    - BaseStationMagnet
+    - BaseStationExpeditions
+    - BaseStationSiliconLawAsimov
+    - BaseStationAllEventsEligible
+    - BaseStationNanotrasen
+    - BaseRandomStation
+    - BaseStationMail
   categories: [HideSpawnMenu]
   components:
-  - type: Transform
+    - type: Transform

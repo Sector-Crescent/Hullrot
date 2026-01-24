@@ -39,8 +39,6 @@
         - map: ["enum.SmesVisualLayers.Output"]
           state: "smes-op1"
           shader: unshaded
-        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-          state: smes-open
     - type: Smes
     - type: UpgradeBattery
       maxChargeMultiplier: 2
@@ -85,7 +83,6 @@
       color: "#c9c042"
       castShadows: false
     - type: WiresPanel
-    - type: WiresVisuals
     - type: Machine
       board: SMESMachineCircuitboard
     - type: StationInfiniteBatteryTarget
@@ -97,8 +94,8 @@
       highVoltageNode: input
       mediumVoltageNode: output
     - type: Damageable
-      damageContainer: StructuralInorganic
-      damageModifierSet: StructuralMetallicStrong
+      damageContainer: Inorganic
+      damageModifierSet: StrongMetallic
     - type: BatterySensor
     - type: DeviceNetwork
       deviceNetId: AtmosDevices
@@ -108,18 +105,13 @@
       sendBroadcastAttemptEvent: true
       examinableAddress: true
     - type: WiredNetworkConnection
-    - type: GuideHelp
-      guides:
-      - PowerStorage
-      - VoltageNetworks
-      - Power
 
 # SMES' in use
 
 - type: entity
   parent: BaseSMES
   id: SMESBasic
-  suffix: Basic, 120MJ
+  suffix: Basic, 120MW
   components:
   - type: Battery
     maxCharge: 120000000

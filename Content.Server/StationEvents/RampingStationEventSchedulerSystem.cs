@@ -1,4 +1,4 @@
-using Content.Server.GameTicking;
+﻿using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.StationEvents.Components;
 using Content.Shared.GameTicking.Components;
@@ -30,10 +30,10 @@ public sealed class RampingStationEventSchedulerSystem : GameRuleSystem<RampingS
 
         // Worlds shittiest probability distribution
         // Got a complaint? Send them to
-        component.MaxChaos = component.AverageChaos * _random.NextFloat(0.75f, 1.25f);
+        component.MaxChaos = _random.NextFloat(component.AverageChaos - component.AverageChaos / 4, component.AverageChaos + component.AverageChaos / 4);
         // This is in minutes, so *60 for seconds (for the chaos calc)
-        component.EndTime = component.AverageEndTime * _random.NextFloat(0.75f, 1.25f) * 60f;
-        component.StartingChaos = component.MaxChaos * component.StartingChaosRatio;
+        component.EndTime = _random.NextFloat(component.AverageEndTime - component.AverageEndTime / 4, component.AverageEndTime + component.AverageEndTime / 4) * 60f;
+        component.StartingChaos = component.MaxChaos / 10;
 
         PickNextEventTime(uid, component);
     }
@@ -67,11 +67,9 @@ public sealed class RampingStationEventSchedulerSystem : GameRuleSystem<RampingS
     /// </summary>
     private void PickNextEventTime(EntityUid uid, RampingStationEventSchedulerComponent component)
     {
-        component.TimeUntilNextEvent =
-            _random.NextFloat(
-                component.MinimumTimeUntilNextEvent,
-                component.MaximumTimeUntilNextEvent)
-            * component.EventDelayModifier
-            / GetChaosModifier(uid, component);
+        var mod = GetChaosModifier(uid, component);
+
+        // 4-12 minutes baseline. Will get faster over time as the chaos mod increases.
+        component.TimeUntilNextEvent = _random.NextFloat(240f / mod, 720f / mod);
     }
 }

@@ -8,15 +8,13 @@ namespace Content.Server.Power.Commands
     [AdminCommand(AdminFlags.Debug)]
     public sealed class PowerStatCommand : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "powerstat";
         public string Description => "Shows statistics for pow3r";
         public string Help => "Usage: powerstat";
 
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
-            var stats = _e.System<PowerNetSystem>().GetStatistics();
+            var stats = EntitySystem.Get<PowerNetSystem>().GetStatistics();
 
             shell.WriteLine($"networks: {stats.CountNetworks}");
             shell.WriteLine($"loads: {stats.CountLoads}");

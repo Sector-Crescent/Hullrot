@@ -201,7 +201,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingOuterBase, BaseMagicalContraband ]
+  parent: ClothingOuterBase
   id: ClothingOuterWizardBase
   components:
   - type: WizardClothes
@@ -333,7 +333,7 @@
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
   - type: TemperatureProtection
-    coolingCoefficient: 0.3
+    coefficient: 0.3
 
 - type: entity
   parent: ClothingOuterBase
@@ -369,7 +369,7 @@
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
   - type: TemperatureProtection
-    coolingCoefficient: 0.3
+    coefficient: 0.3
 
 - type: entity
   parent: ClothingOuterBase
@@ -405,7 +405,7 @@
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
   - type: TemperatureProtection
-    coolingCoefficient: 0.3
+    coefficient: 0.3
 
 - type: entity
   parent: ClothingOuterBase

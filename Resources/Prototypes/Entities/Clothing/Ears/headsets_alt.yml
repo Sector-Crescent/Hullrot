@@ -30,7 +30,7 @@
 - type: entity
   parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltCentCom
-  name: CentComm over-ear headset
+  name: CentCom over-ear headset
   components:
   - type: ContainerFill
     containers:
@@ -43,7 +43,17 @@
     sprite: Clothing/Ears/Headsets/centcom.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: ClothingHeadsetAltCentCom
+  id: ClothingHeadsetAltCentComFake
+  suffix: Fake
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+
+- type: entity
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltCommand
   name: command over-ear headset
   components:
@@ -57,7 +67,7 @@
     sprite: Clothing/Ears/Headsets/command.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltEngineering
   name: chief engineer's over-ear headset
   components:
@@ -73,7 +83,7 @@
     sprite: Clothing/Ears/Headsets/engineering.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltMedical
   name: chief medical officer's over-ear headset
   components:
@@ -91,7 +101,7 @@
     stealGroup: ClothingHeadsetAltMedical
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltSecurity
   name: head of security's over-ear headset
   components:
@@ -107,7 +117,7 @@
     sprite: Clothing/Ears/Headsets/security.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltScience
   name: mystagogue's over-ear headset # DeltaV - Epistemics Department replacing Science
   components:
@@ -123,7 +133,7 @@
     sprite: Clothing/Ears/Headsets/science.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseSyndicateContraband]
+  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltSyndicate
   name: blood-red over-ear headset
   description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).

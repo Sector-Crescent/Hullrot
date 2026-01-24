@@ -45,10 +45,6 @@
   id: AirlockArmory
 
 - type: wireLayout
-  parent: Airlock
-  id: AirlockExternal
-
-- type: wireLayout
   id: HighSec
   wires:
   - !type:AccessWireAction

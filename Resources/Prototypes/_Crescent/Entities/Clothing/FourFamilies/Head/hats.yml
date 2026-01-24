@@ -31,7 +31,7 @@
   - type: IdentityBlocker
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitDraugr
   categories: [ HideSpawnMenu ]
   name: draugr's exohelm
@@ -59,7 +59,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitIzdari
   categories: [ HideSpawnMenu ]
   name: beltrunner's hardsuit helmet
@@ -88,7 +88,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitThukker
   categories: [ HideSpawnMenu ]
   name: thukker's engineering hardsuit helmet
@@ -117,7 +117,7 @@
         Caustic: 0.9
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitArabet
   categories: [ HideSpawnMenu ]
   name: arabet's hardsuit helmet

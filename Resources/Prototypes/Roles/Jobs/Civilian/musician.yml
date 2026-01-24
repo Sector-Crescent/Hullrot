@@ -9,7 +9,7 @@
   access:
   - Maintenance # TODO Remove maint access for all gimmick jobs once access work is completed
   - Theatre
-  - Musician
+  - Musician # DeltaV - Add Musician access
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: MikuDay
@@ -21,20 +21,17 @@
   - MusicianPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitMusician
-    back: ClothingBackpack
+    back: ClothingBackpackMusicianFilled
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesBootsLaceup
     id: MusicianPDA
     ears: ClothingHeadsetService
-<<<<<<< HEAD
-=======
     satchel: ClothingBackpackSatchelMusicianFilled
     duffelbag: ClothingBackpackDuffelMusicianFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: MusicianPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitMusician
     head: ClothingHeadEnvirohelmMusician

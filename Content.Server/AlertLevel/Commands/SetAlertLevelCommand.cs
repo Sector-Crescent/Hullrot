@@ -8,7 +8,7 @@ using Robust.Shared.Console;
 namespace Content.Server.AlertLevel.Commands
 {
     [UsedImplicitly]
-    [AdminCommand(AdminFlags.Fun)]
+    [AdminCommand(AdminFlags.Admin)]
     public sealed class SetAlertLevelCommand : LocalizedCommands
     {
         [Dependency] private readonly IEntitySystemManager _entitySystems = default!;

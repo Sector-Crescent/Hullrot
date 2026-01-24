@@ -1,73 +1,55 @@
 #Wizard outfit startingGear definitions.
 - type: startingGear
   id: WizardBlueGear
-  subGear:
-  - BoxSurvival
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorDarkBlue
+    back: ClothingBackpackFilled
     head: ClothingHeadHatWizard
-    back: ClothingBackpack # Wizard backpack?
     outerClothing: ClothingOuterWizard
     shoes: ClothingShoesWizard
-<<<<<<< HEAD
-    id: WizardPDA
-    ears: ClothingHeadsetAltCommand
-    belt: ClothingBeltWand
-    # pocket1: TODO: Include wizard teleport scroll
-    pocket2: WizardsGrimoire
-=======
     id: PassengerPDA
     ears: ClothingHeadsetService
     innerClothingSkirt: ClothingUniformJumpskirtColorDarkBlue
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: WizardRedGear
-  parent: WizardBlueGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorRed
+    back: ClothingBackpackFilled
     head: ClothingHeadHatRedwizard
     outerClothing: ClothingOuterWizardRed
-<<<<<<< HEAD
-=======
     shoes: ClothingShoesWizard
     id: PassengerPDA
     ears: ClothingHeadsetService
     innerClothingSkirt: ClothingUniformJumpskirtColorRed
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: WizardVioletGear
-  parent: WizardBlueGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
+    back: ClothingBackpackFilled
     head: ClothingHeadHatVioletwizard
     outerClothing: ClothingOuterWizardViolet
-<<<<<<< HEAD
-=======
     shoes: ClothingShoesWizard
     id: PassengerPDA
     ears: ClothingHeadsetService
     innerClothingSkirt: ClothingUniformJumpskirtColorPurple
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: WizardHardsuitGear
-  parent: WizardVioletGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPurple
+    back: ClothingBackpackFilled
     outerClothing: ClothingOuterHardsuitWizard
-<<<<<<< HEAD
-=======
     shoes: ClothingShoesWizard
     id: PassengerPDA
     ears: ClothingHeadsetService
     innerClothingSkirt: ClothingUniformJumpskirtColorPurple
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f

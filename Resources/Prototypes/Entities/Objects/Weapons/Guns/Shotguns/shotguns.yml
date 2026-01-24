@@ -71,10 +71,9 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
 
 - type: entity
-  # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunBulldog
-  name: PTA MOD-2 Pozhar 12g
+  name: PTA MOD-2 Pozhar 12g  
   description: A tube-fed, fully automatic, combat shotgun designed for close quarters combat. Loads shells one by one. Uses 12 gauge shotgun shells.
   components:
   - type: Sprite
@@ -109,18 +108,6 @@
     capacity: 8
     autoCycle: true
   - type: Wieldable
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineShotgun
-        priority: 2
-        whitelist:
-          tags:
-          - MagazineShotgun
-        whitelistFailPopup: gun-magazine-whitelist-fail
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -183,7 +170,7 @@
 
 - type: entity
   name: double-barreled shotgun
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityBartenderContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunDoubleBarreled
   description: An immortal classic. Uses .12 gauge shotgun shells.
   components:
@@ -223,8 +210,8 @@
     proto: ShellShotgunBeanbag
 
 - type: entity
-  name: Enforcer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseRestrictedContraband]
+  name: SHI 00-2 Enforcer 12g
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunEnforcer
   description: A premium, carbon-finish combat shotgun based on the NanoTrasen Kammerer design, featuring an upgraded clip capacity. Takes 12g shotgun shells.
   components:
@@ -255,8 +242,8 @@
     proto: ShellShotgunBeanbag
 
 - type: entity
-  name: Kammerer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseRestrictedContraband]
+  name: NT 00-1 Kammerer 12g
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunKammerer
   description: A simple 12-gauge pump-action shotgun, equipped with a choke to improve accuracy. This is the gun you imagine when someone says shotgun.
   components:
@@ -288,7 +275,7 @@
 
 - type: entity
   name: sawn-off shotgun
-  parent: [ BaseWeaponShotgun, BaseSecurityBartenderContraband ]
+  parent: BaseWeaponShotgun
   id: WeaponShotgunSawn
   description: Groovy! Uses .50 shotgun shells.
   components:
@@ -329,7 +316,7 @@
     proto: ShellShotgunLumen
 
 - type: entity
-  name: sawn-off shotgun
+  name: sawn-off shogun
   parent: WeaponShotgunSawn
   id: WeaponShotgunSawnEmpty
   description: Groovy! Uses .50 shotgun shells.
@@ -344,7 +331,7 @@
 
 - type: entity
   name: handmade pistol
-  parent: [BaseWeaponShotgun, BaseMinorContraband]
+  parent: BaseWeaponShotgun
   id: WeaponShotgunHandmade
   description: Looks unreliable. Uses .50 shotgun shells.
   components:
@@ -377,7 +364,7 @@
 
 - type: entity
   name: blunderbuss
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseMinorContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunBlunderbuss
   suffix: Pirate
   description: Deadly at close range.
@@ -400,7 +387,7 @@
 
 - type: entity
   name: improvised shotgun
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseMinorContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunImprovised
   description: A shitty, hand-made shotgun that uses .50 shotgun shells. It can only hold one round in the chamber.
   components:

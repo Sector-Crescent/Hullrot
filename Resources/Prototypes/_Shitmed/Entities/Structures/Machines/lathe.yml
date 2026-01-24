@@ -27,8 +27,27 @@
   - type: Lathe
     idleState: limbgrower_idleoff
     runningState: limbgrower_idleon
-    staticPacks:
-    - Biofabricatortatic
+    staticRecipes:
+    - SynthLiver
+    - SynthHeart
+    - SynthLungs
+    - SynthEyes
+    - SynthLeftLeg
+    - SynthRightLeg
+    - SynthLeftFoot
+    - SynthRightFoot
+    - SynthLeftArm
+    - SynthRightArm
+    - SynthLeftHand
+    - SynthRightHand
+    - SynthHead
+    - SynthTorso
   - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SyndicateBiofabricatorStatic
+    emagStaticRecipes:
+    - PizzaLeftArm
+    - PizzaRightArm
+    - SpaceLungsAnimal
+    - SpaceHeartAnimal
+    - SpaceLungsDragon
+    - SpaceEyesLaser
+    - SpaceHeartCobra

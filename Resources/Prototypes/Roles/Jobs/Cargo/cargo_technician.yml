@@ -11,12 +11,7 @@
   - Maintenance
   extendedAccess:
   - Salvage
-  - Orders
-  requirements:
-  - !type:CharacterEmployerRequirement
-    employers:
-    - OrionExpress
-    - NanoTrasen
+  - Orders # DeltaV - Orders, see Resources/Prototypes/DeltaV/Access/cargo.yml
 
 - type: startingGear
   id: CargoTechGear
@@ -25,21 +20,18 @@
   equipment:
     head: ClothingHeadHatCargosoft
     jumpsuit: ClothingUniformJumpsuitCargo
-    back: ClothingBackpackCargo
+    back: ClothingBackpackCargoFilled
     shoes: ClothingShoesColorBlack
     id: CargoPDA
     ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtCargo
     satchel: ClothingBackpackSatchelCargoFilled
     duffelbag: ClothingBackpackDuffelCargoFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: CargoTechPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitCargo
     head: ClothingHeadEnvirohelmCargo

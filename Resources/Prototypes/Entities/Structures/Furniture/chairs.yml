@@ -6,7 +6,6 @@
   placement:
     mode: PlaceFree
   components:
-  - type: Animateable
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
@@ -34,7 +33,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 25
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -48,7 +47,7 @@
         sound:
           collection: MetalBreak
   - type: StaticPrice
-    price: 50
+    price: 25
   - type: RequireProjectileTarget
 
 #Starts unanchored, cannot be rotated while anchored
@@ -85,6 +84,7 @@
   - type: Rotatable
     rotateWhileAnchored: true
 
+# Goobstation - rolly chairs that actually roll!
 - type: entity
   name: chair
   id: RollingOfficeChairBase
@@ -119,8 +119,8 @@
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
         damage: 50
@@ -223,7 +223,7 @@
   - type: SpawnItemsAtLocationOnUse
     spawnItemsVerbText: disable-wheel-locks
     items:
-    - id: ChairOfficeLightRolling
+      - id: ChairOfficeLightRolling
 
 - type: entity
   name: dark office chair
@@ -238,9 +238,9 @@
   - type: SpawnItemsAtLocationOnUse
     spawnItemsVerbText: disable-wheel-locks
     items:
-    - id: ChairOfficeDarkRolling
+      - id: ChairOfficeDarkRolling
 
-# EE start
+ # EE start
 
 - type: entity
   name: white office chair
@@ -256,7 +256,7 @@
   - type: SpawnItemsAtLocationOnUse
     spawnItemsVerbText: activate-wheel-locks
     items:
-    - id: ChairOfficeLight
+      - id: ChairOfficeLight
 
 - type: entity
   name: dark office chair
@@ -272,9 +272,9 @@
   - type: SpawnItemsAtLocationOnUse
     spawnItemsVerbText: activate-wheel-locks
     items:
-    - id: ChairOfficeDark
+      - id: ChairOfficeDark
 
-# EE end
+ # EE end
 
 - type: entity
   name: comfy chair
@@ -426,7 +426,7 @@
     node: chair
 
 - type: entity
-  parent: [SeatBase, BaseDeployFoldable]
+  parent: [SeatBase, BaseFoldable]
   id: ChairFolding
   name: folding chair
   description: If you carry six of these you become the coolest kid at church.
@@ -452,7 +452,6 @@
   - type: Construction
     graph: Seat
     node: chairFolding
-  - type: DamageExaminable
 
 - type: entity
   parent: ChairFolding
@@ -504,4 +503,4 @@
             min: 2
             max: 4
   - type: StaticPrice
-    price: 50
+    price: 20

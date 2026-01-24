@@ -92,12 +92,12 @@ public sealed partial class JobIconPrototype : StatusIconPrototype, IInheritingP
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<JobIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 
     /// <summary>
     /// Name of the icon used for menu tooltips.
@@ -123,12 +123,12 @@ public sealed partial class HealthIconPrototype : StatusIconPrototype, IInheriti
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<HealthIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 /// <summary>
@@ -139,12 +139,12 @@ public sealed partial class SatiationIconPrototype : StatusIconPrototype, IInher
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<SatiationIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 /// <summary>
@@ -155,12 +155,12 @@ public sealed partial class SecurityIconPrototype : StatusIconPrototype, IInheri
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<SecurityIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 /// <summary>
@@ -187,12 +187,12 @@ public sealed partial class FactionIconPrototype : StatusIconPrototype, IInherit
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<FactionIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 /// <summary>
@@ -203,12 +203,12 @@ public sealed partial class DebugIconPrototype : StatusIconPrototype, IInheritin
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<DebugIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 /// <summary>
@@ -219,12 +219,12 @@ public sealed partial class SsdIconPrototype : StatusIconPrototype, IInheritingP
 {
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<SsdIconPrototype>))]
-    public string[]? Parents { get; private set; }
+    public string[]? Parents { get; }
 
     /// <inheritdoc />
     [NeverPushInheritance]
     [AbstractDataField]
-    public bool Abstract { get; private set; }
+    public bool Abstract { get; }
 }
 
 [Serializable, NetSerializable]

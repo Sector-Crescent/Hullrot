@@ -22,20 +22,15 @@ public sealed partial class AntagLoadProfileRuleComponent : Component
     public HashSet<ProtoId<SpeciesPrototype>>? SpeciesOverrideBlacklist;
 
     /// <summary>
+    /// Goobstation
     /// If true, then SpeciesOverride will always be used
     /// </summary>
     [DataField]
     public bool AlwaysUseSpeciesOverride;
 
     /// <summary>
-    ///     Whether this antag will also attempt to generate Traits, Nationality, Employer, and Lifepath. Basically all the "Traits"
+    ///     Shitmed - Starlight Abductors: Species valid for the rule.
     /// </summary>
     [DataField]
-    public bool AllowProfileExtensions = true;
-
-    /// <summary>
-    ///     Whether this antag will also generate Loadouts. Fun fact: Look up CharacterAntagonistRequirement
-    /// </summary>
-    [DataField]
-    public bool AllowAntagLoadouts = true;
+    public ProtoId<SpeciesPrototype>? SpeciesHardOverride;
 }

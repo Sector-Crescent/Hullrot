@@ -1,13 +1,12 @@
 
 
-- type: localizedDataset
+- type: messagePack
   id: WarVendAds
-  values:
-    prefix: advertisement-war-
-    count: 1
+  messages:
+  - advertisement-war-1
 
-- type: localizedDataset
+
+- type: messagePack
   id: ShipVendAds
-  values:
-    prefix: advertisement-ship-
-    count: 1
+  messages:
+  - advertisement-ship-1

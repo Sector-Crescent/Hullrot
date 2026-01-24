@@ -45,7 +45,7 @@
       map: ["base"]
   - type: Item
     size: Normal
-    heldPrefix: rods
+#    heldPrefix: rods
   - type: Construction
     graph: MetalRod
     node: MetalRod
@@ -57,7 +57,7 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 7.5
+    price: 5
   - type: Extractable
     grindableSolutionName: rod
   - type: SolutionContainerManager
@@ -101,9 +101,6 @@
         - prototype: SheetRUGlass
         - prototype: SheetRUGlass0
         - prototype: SheetRGlass
-  - type: GuideHelp
-    guides:
-    - ExpandingRepairingStation
 
 - type: entity
   parent: PartRodMetal

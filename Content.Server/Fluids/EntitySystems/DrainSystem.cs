@@ -1,6 +1,5 @@
 using Content.Server.DoAfter;
 using Content.Server.Popups;
-using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Audio;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
@@ -35,9 +34,6 @@ public sealed class DrainSystem : SharedDrainSystem
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-
-    private const float UpdateTime = 1f;
-    private float _updateTimer = 0f;
 
     public override void Initialize()
     {
@@ -120,12 +116,6 @@ public sealed class DrainSystem : SharedDrainSystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-
-        _updateTimer += frameTime;
-        if (_updateTimer < UpdateTime)
-            return;
-        _updateTimer = 0f;
-
         var managerQuery = GetEntityQuery<SolutionContainerManagerComponent>();
         var xformQuery = GetEntityQuery<TransformComponent>();
         var puddleQuery = GetEntityQuery<PuddleComponent>();
@@ -134,6 +124,13 @@ public sealed class DrainSystem : SharedDrainSystem
         var query = EntityQueryEnumerator<DrainComponent>();
         while (query.MoveNext(out var uid, out var drain))
         {
+            drain.Accumulator += frameTime;
+            if (drain.Accumulator < drain.DrainFrequency)
+            {
+                continue;
+            }
+            drain.Accumulator -= drain.DrainFrequency;
+
             // Disable ambient sound from emptying manually
             if (!drain.AutoDrain)
             {
@@ -155,10 +152,10 @@ public sealed class DrainSystem : SharedDrainSystem
             }
 
             // Remove a bit from the buffer
-            _solutionContainerSystem.SplitSolution(drain.Solution.Value, drain.UnitsDestroyedPerSecond * UpdateTime);
+            _solutionContainerSystem.SplitSolution(drain.Solution.Value, drain.UnitsDestroyedPerSecond * drain.DrainFrequency);
 
             // This will ensure that UnitsPerSecond is per second...
-            var amount = drain.UnitsPerSecond * UpdateTime;
+            var amount = drain.UnitsPerSecond * drain.DrainFrequency;
 
             if (!xformQuery.TryGetComponent(uid, out var xform))
                 continue;
@@ -170,10 +167,10 @@ public sealed class DrainSystem : SharedDrainSystem
             {
                 // No InRangeUnobstructed because there's no collision group that fits right now
                 // and these are placed by mappers and not buildable/movable so shouldnt really be a problem...
-                if (!puddleQuery.TryGetComponent(entity, out var puddle))
-                    continue;
-
-                puddles.Add(((entity, puddle), puddle.SolutionName));
+                if (puddleQuery.TryGetComponent(entity, out var puddle))
+                {
+                    puddles.Add(((entity, puddle), puddle.SolutionName));
+                }
             }
 
             if (puddles.Count == 0)
@@ -206,7 +203,9 @@ public sealed class DrainSystem : SharedDrainSystem
                 drainSolution.AddSolution(transferSolution, _prototypeManager);
 
                 if (puddleSolution.Volume <= 0)
+                {
                     QueueDel(puddle);
+                }
             }
 
             _solutionContainerSystem.UpdateChemicals(drain.Solution.Value);

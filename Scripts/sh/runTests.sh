@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 cd ../../
 
 mkdir Scripts/logs

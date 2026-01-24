@@ -30,8 +30,8 @@ public sealed partial class PathfindingSystem
 
         if (end.GraphUid != start.GraphUid)
         {
-            if (!TryComp(start.GraphUid, out TransformComponent? startXform) ||
-                !TryComp(end.GraphUid, out TransformComponent? endXform))
+            if (!TryComp<TransformComponent>(start.GraphUid, out var startXform) ||
+                !TryComp<TransformComponent>(end.GraphUid, out var endXform))
             {
                 return Vector2.Zero;
             }

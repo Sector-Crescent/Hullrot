@@ -24,7 +24,7 @@ public sealed partial class SiliconLawProviderComponent : Component
 
     /// <summary>
     /// The sound that plays for the Silicon player
-    /// when the law change is processed for the provider.
+    /// when the particular lawboard has been inserted.
     /// </summary>
     [DataField]
     public SoundSpecifier? LawUploadSound = new SoundPathSpecifier("/Audio/Misc/cryo_warning.ogg");
@@ -36,11 +36,5 @@ public sealed partial class SiliconLawProviderComponent : Component
     /// </summary>
     [DataField]
     public bool UnRemovable;
-
-    /// <summary>
-    /// Whether this silicon is subverted by an ion storm or emag.
-    /// </summary>
-    [DataField]
-    public bool Subverted = false;
 
 }

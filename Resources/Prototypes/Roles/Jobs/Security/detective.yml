@@ -6,27 +6,21 @@
   requirements:
   - !type:CharacterDepartmentTimeRequirement
     department: Security
-    min: 36000
+    min: 36000 # DeltaV - 10 hours
   - !type:CharacterTraitRequirement
     inverted: true
     traits:
-    - Foreigner
-    - ForeignerLight
-    - Muted
-    - Blindness
-    - Pacifist
-    - BrittleBoneDisease
-  - !type:CharacterEmployerRequirement
-    employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
+      - Muted
+      - Blindness
+      - Pacifist
+      - BrittleBoneDisease
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
   canBeAntag: false
   access:
   - Security
+  #- Brig # Delta V: Removed
   - Maintenance
   - Service
   - Detective
@@ -45,22 +39,20 @@
   id: DetectiveGear
   subGear:
   - DetectivePlasmamanGear
+
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetective
     back: ClothingBackpackSecurity
     shoes: ClothingShoesBootsCombatFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     head: ClothingHeadHatFedoraBrown
     outerClothing: ClothingOuterVestDetective
     id: DetectivePDA
-    ears: ClothingHeadsetAltSecurityRegular
+    ears: ClothingHeadsetAltSecurityRegular # Goobstation
     belt: ClothingBeltHolsterFilled
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtDetective
     satchel: ClothingBackpackSatchelSecurity
     duffelbag: ClothingBackpackDuffelSecurity
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: DetectivePlasmamanGear

@@ -118,9 +118,10 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
 
             _announcer.SendAnnouncement(
                 "blob-recall-shuttle",
+                Filter.Broadcast(),
                 Loc.GetString("blob-alert-recall-shuttle"),
-                colorOverride: Color.Red,
-                station: stationUid
+                station: stationUid,
+                colorOverride: Color.Red
                 );
         }
 
@@ -131,9 +132,10 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
 
                 _announcer.SendAnnouncement(
                     "blob-detect",
+                    Filter.Broadcast(),
                     Loc.GetString("blob-alert-detect"),
-                    colorOverride: Color.Red,
-                    station: stationUid
+                    station: stationUid,
+                    colorOverride: Color.Red
                     );
 
                 // blobRuleComp.DetectedAudio,
@@ -156,9 +158,10 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
 
                         _announcer.SendAnnouncement(
                             "blob-critical",
+                            Filter.Broadcast(),
                             Loc.GetString("blob-alert-critical"),
-                            colorOverride: Color.Red,
-                            station: stationUid
+                            station: stationUid,
+                            colorOverride: Color.Red
                             );
                         // blobRuleComp.CriticalAudio
                     }
@@ -168,6 +171,7 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
 
                         _announcer.SendAnnouncement(
                             "blob-critical-no-nuke",
+                            Filter.Broadcast(),
                             Loc.GetString("blob-alert-critical-NoNukeCode"),
                             colorOverride: Color.Red
                             );
@@ -224,7 +228,7 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
             foreach (var objective in objectives)
             {
                 var comp = Comp<ObjectiveComponent>(objective);
-                if (comp.LocIssuer != Loc.GetString(BlobIssuer))
+                if (comp.Issuer != BlobIssuer)
                     continue;
 
                 var info = _objectivesSystem.GetInfo(objective, mindId, mind);
@@ -288,7 +292,7 @@ public sealed class BlobRuleSystem : GameRuleSystem<BlobRuleComponent>
             else if (name != null)
                 result += "\n" + Loc.GetString("blob-was-a-blob-with-objectives-named", ("name", name));
 
-            foreach (var objectiveGroup in objectives.GroupBy(o => Comp<ObjectiveComponent>(o).LocIssuer == Loc.GetString(BlobIssuer)))
+            foreach (var objectiveGroup in objectives.GroupBy(o => Comp<ObjectiveComponent>(o).Issuer == BlobIssuer))
             {
                 if (!objectiveGroup.Key)
                     continue;

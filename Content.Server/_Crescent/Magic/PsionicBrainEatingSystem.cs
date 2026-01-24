@@ -5,7 +5,6 @@ using Content.Server.Storage.EntitySystems;
 using Content.Shared._Crescent.Magic;
 using Content.Shared.Abilities.Psionics;
 using Content.Shared.Magic.Events;
-using Content.Shared.Nutrition;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Psionics;
 using Robust.Server.Containers;

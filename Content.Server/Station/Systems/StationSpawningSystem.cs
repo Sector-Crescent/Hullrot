@@ -145,6 +145,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 startingGear = ApplySubGear(startingGear, profile, prototype);
 
             EquipStartingGear(entity.Value, startingGear, raiseEvent: false);
+            if (profile != null)
+                EquipIdCard(entity.Value, profile.Name, prototype, station);
             _internalEncryption.TryInsertEncryptionKey(entity.Value, startingGear, EntityManager);
         }
 
@@ -153,10 +155,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         if (profile != null)
         {
-            if (prototype != null)
-                SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station);
-
-            _humanoidSystem.LoadProfile(entity.Value, profile, loadExtensions: false, generateLoadouts: false);
+            _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
             if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
                 EnsureComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
@@ -178,13 +177,14 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             jobSpecial.AfterEquip(entity);
     }
 
-    /// Sets the ID card and PDA name, job, and access data.
+    /// <summary>
+    /// Equips an ID card and PDA onto the given entity.
     /// </summary>
     /// <param name="entity">Entity to load out.</param>
     /// <param name="characterName">Character name to use for the ID.</param>
     /// <param name="jobPrototype">Job prototype to use for the PDA and ID.</param>
     /// <param name="station">The station this player is being spawned on.</param>
-    public void SetPdaAndIdCardData(EntityUid entity, string characterName, JobPrototype jobPrototype, EntityUid? station)
+    public void EquipIdCard(EntityUid entity, string characterName, JobPrototype jobPrototype, EntityUid? station)
     {
         if (!InventorySystem.TryGetSlotEntity(entity, "id", out var idUid))
             return;
@@ -212,7 +212,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         _accessSystem.SetAccessToJob(cardId, jobPrototype, extendedAccess);
 
         if (pdaComponent != null)
-            _pdaSystem.SetOwner(idUid.Value, pdaComponent, entity, characterName);
+            _pdaSystem.SetOwner(idUid.Value, pdaComponent, characterName);
     }
 
 

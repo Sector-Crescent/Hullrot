@@ -1,4 +1,4 @@
-using Content.Shared.Roles;
+﻿using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Ghost.Roles.Components;

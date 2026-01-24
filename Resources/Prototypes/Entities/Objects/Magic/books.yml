@@ -1,7 +1,7 @@
 ﻿- type: entity
   id: BaseSpellbook
   name: spellbook
-  parent: [ BaseItem, BaseMagicalContraband ]
+  parent: BaseItem
   abstract: true
   components:
     - type: Sprite
@@ -31,7 +31,7 @@
   id: WizardsGrimoire
   name: wizards grimoire
   suffix: Wizard
-  parent: [ BaseItem, StorePresetSpellbook, BaseMagicalContraband ]
+  parent: BaseItem
   components:
     - type: Sprite
       sprite: Objects/Misc/books.rsi
@@ -144,7 +144,7 @@
       - state: overlay_blood
     - type: Spellbook
       spellActions:
-        ActionSmiteNoReq: -1
+        ActionSmite: -1
 
 - type: entity
   id: KnockSpellbook

@@ -1,0 +1,29 @@
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackDuffelMedical
+  id: ClothingBackpackDuffelParamedicFilledDV
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyRollerBedSpawnFolded
+      - id: BodyBagFolded
+      - id: Portafib
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackDuffelMedical
+  id: ClothingBackpackDuffelPsychologistFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: RubberStampPsychologist
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelLawyerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: RubberStampLawyer

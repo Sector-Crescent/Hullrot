@@ -4,20 +4,14 @@
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
   requirements:
-  - !type:CharacterTraitRequirement
-    inverted: true
-    traits:
-    - Foreigner
-    - ForeignerLight
-    - Muted
-    - Blindness
-    - Pacifist
-    - BrittleBoneDisease
-  - !type:CharacterEmployerRequirement
-    employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Blindness
+        - Pacifist
+        - BrittleBoneDisease
+        - WheelchairBound
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
@@ -27,19 +21,21 @@
   access:
   - HeadOfSecurity
   - Command
+  #- Brig  # Delta V: Removed
   - Security
   - Armory
   - Maintenance
   - Service
   - External
   - Detective
+  - Corpsman # DeltaV - added Corpsman access
   - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-    - type: CommandStaff
+      - type: CommandStaff
   afterLoadoutSpecial:
   - !type:ModifyEnvirosuitSpecial
     charges: 8
@@ -52,23 +48,16 @@
   - HoSPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoS
-    back: ClothingBackpackSecurity
+    back: ClothingBackpackHOSFilled
     shoes: ClothingShoesBootsCombatFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
     belt: ClothingBeltSecurityFilled
-<<<<<<< HEAD
-  storage:
-    back:
-    - Flash
-    - MagazinePistol
-=======
     innerClothingSkirt: ClothingUniformJumpskirtHoS
     satchel: ClothingBackpackSatchelHOSFilled
     duffelbag: ClothingBackpackDuffelHOSFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: HoSPlasmamanGear

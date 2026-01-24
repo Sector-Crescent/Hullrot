@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   parent: GasPipeBase
   abstract: true
   id: GasBinaryBase
@@ -31,14 +31,6 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: ExtensionCableReceiver
-  - type: LightningTarget
-    priority: 1
-  - type: ApcPowerReceiver
-    powerLoad: 200
-  - type: Rotatable
-  - type: Transform
-    noRot: false
   - type: Sprite
     sprite: Structures/Piping/Atmospherics/pump.rsi
     layers:
@@ -57,13 +49,10 @@
   - type: PipeColorVisuals
   - type: GasPressurePump
     enabled: false
-  - type: ActivatableUI
-    key: enum.GasPressurePumpUiKey.Key
-  - type: ActivatableUIRequiresAnchor
   - type: UserInterface
     interfaces:
-      enum.GasPressurePumpUiKey.Key:
-        type: GasPressurePumpBoundUserInterface
+        enum.GasPressurePumpUiKey.Key:
+          type: GasPressurePumpBoundUserInterface
   - type: Construction
     graph: GasBinary
     node: pressurepump
@@ -76,9 +65,6 @@
   - type: AtmosMonitoringConsoleDevice
     navMapBlip: GasFlowRegulator
   - type: StationAiWhitelist
-  - type: GuideHelp
-    guides:
-    - Pumps
 
 - type: entity
   parent: GasBinaryBase
@@ -88,14 +74,6 @@
   placement:
     mode: SnapgridCenter
   components:
-    - type: ExtensionCableReceiver
-    - type: LightningTarget
-      priority: 1
-    - type: ApcPowerReceiver
-      powerLoad: 200
-    - type: Rotatable
-    - type: Transform
-      noRot: false
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/pump.rsi
       layers:
@@ -139,9 +117,6 @@
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasFlowRegulator
     - type: StationAiWhitelist
-    - type: GuideHelp
-      guides:
-      - Pumps
 
 - type: entity
   parent: GasBinaryBase
@@ -173,9 +148,6 @@
         path: /Audio/Ambience/Objects/gas_hiss.ogg
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasValve
-    - type: GuideHelp
-      guides:
-      - PassiveGate
 
 - type: entity
   parent: GasBinaryBase
@@ -226,9 +198,6 @@
         path: /Audio/Ambience/Objects/gas_hiss.ogg
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasValve
-    - type: GuideHelp
-      guides:
-      - ManualValve
 
 - type: entity
   parent: GasBinaryBase
@@ -290,9 +259,6 @@
       path: /Audio/Ambience/Objects/gas_hiss.ogg
   - type: AtmosMonitoringConsoleDevice
     navMapBlip: GasValve
-  - type: GuideHelp
-    guides:
-    - SignalValve
 
 - type: entity
   parent: GasBinaryBase
@@ -324,9 +290,6 @@
       node: port
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasVentOpening
-    - type: GuideHelp
-      guides:
-      - GasCanisters
 
 - type: entity
   parent: GasVentPump
@@ -353,7 +316,6 @@
             In: { state: vent_in }
             Out: { state: vent_out }
             Welded: { state: vent_welded }
-            Lockout: { state: vent_lockout }
     - type: PipeColorVisuals
     - type: GasVentPump
       inlet: inlet
@@ -385,9 +347,6 @@
       enabled: true
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasVentOpening
-    - type: GuideHelp
-      guides:
-      - AirVent
 
 - type: entity
   parent: [ BaseMachine, ConstructibleMachine ]
@@ -494,32 +453,3 @@
     node: radiator
   - type: AtmosMonitoringConsoleDevice
     navMapBlip: Thermoregulator
-  - type: GuideHelp
-    guides:
-    - Radiators
-
-- type: entity
-  parent: HeatExchanger
-  id: HeatExchangerBend
-  suffix: Bend
-  components:
-    - type: Sprite
-      layers:
-      - sprite: Structures/Piping/Atmospherics/pipe.rsi
-        state: pipeBend
-        map: [ "enum.PipeVisualLayers.Pipe" ]
-      - state: heBend
-        map: [ "enum.SubfloorLayers.FirstLayer" ]
-    - type: NodeContainer
-      nodes:
-        inlet:
-          !type:PipeNode
-          nodeGroupID: Pipe
-          pipeDirection: South
-        outlet:
-          !type:PipeNode
-          nodeGroupID: Pipe
-          pipeDirection: West
-    - type: Construction
-      graph: GasBinary
-      node: bendradiator

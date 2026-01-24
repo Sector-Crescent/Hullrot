@@ -1,9 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Hands;
-using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
-using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Popups;
@@ -45,9 +43,6 @@ public abstract class SharedVirtualItemSystem : EntitySystem
         SubscribeLocalEvent<VirtualItemComponent, BeingUnequippedAttemptEvent>(OnBeingUnequippedAttempt);
 
         SubscribeLocalEvent<VirtualItemComponent, BeforeRangedInteractEvent>(OnBeforeRangedInteract);
-        SubscribeLocalEvent<VirtualItemComponent, GettingInteractedWithAttemptEvent>(OnGettingInteractedWithAttemptEvent);
-
-        SubscribeLocalEvent<VirtualItemComponent, GetUsedEntityEvent>(OnGetUsedEntity);
     }
 
     /// <summary>
@@ -77,29 +72,6 @@ public abstract class SharedVirtualItemSystem : EntitySystem
         args.Handled = true;
     }
 
-    private void OnGettingInteractedWithAttemptEvent(Entity<VirtualItemComponent> ent, ref GettingInteractedWithAttemptEvent args)
-    {
-        // No interactions with a virtual item, please.
-        args.Cancelled = true;
-    }
-
-    private void OnGetUsedEntity(Entity<VirtualItemComponent> ent, ref GetUsedEntityEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        // if the user is holding the real item the virtual item points to,
-        // we allow them to use it in the interaction
-        foreach (var hand in _handsSystem.EnumerateHands(args.User))
-        {
-            if (hand.HeldEntity == ent.Comp.BlockingEntity)
-            {
-                args.Used = ent.Comp.BlockingEntity;
-                return;
-            }
-        }
-    }
-
     #region Hands
 
     /// <summary>
@@ -114,10 +86,10 @@ public abstract class SharedVirtualItemSystem : EntitySystem
     }
 
     /// <inheritdoc cref="TrySpawnVirtualItemInHand(Robust.Shared.GameObjects.EntityUid,Robust.Shared.GameObjects.EntityUid,bool)"/>
-    public bool TrySpawnVirtualItemInHand(EntityUid blockingEnt, EntityUid user, [NotNullWhen(true)] out EntityUid? virtualItem, bool dropOthers = false, Hand? empty = null)
+    public bool TrySpawnVirtualItemInHand(EntityUid blockingEnt, EntityUid user, [NotNullWhen(true)] out EntityUid? virtualItem, bool dropOthers = false)
     {
         virtualItem = null;
-        if (empty == null && !_handsSystem.TryGetEmptyHand(user, out empty))
+        if (!_handsSystem.TryGetEmptyHand(user, out var empty))
         {
             if (!dropOthers)
                 return false;
@@ -126,6 +98,7 @@ public abstract class SharedVirtualItemSystem : EntitySystem
             {
                 if (hand.HeldEntity is not { } held
                     || held == blockingEnt
+                    || HasComp<VirtualItemComponent>(held)
                     || !_handsSystem.TryDrop(user, hand))
                     continue;
 
@@ -266,7 +239,7 @@ public abstract class SharedVirtualItemSystem : EntitySystem
         if (TerminatingOrDeleted(item))
             return;
 
-        _transformSystem.DetachEntity(item, Transform(item));
+        _transformSystem.DetachParentToNull(item, Transform(item));
         if (_netManager.IsServer)
             QueueDel(item);
     }

@@ -13,7 +13,7 @@
 ## hardsuit helmets
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitHunter
   categories: [ HideSpawnMenu ]
   name: hunter's hardsuit helmet
@@ -42,7 +42,7 @@
         Heat: 0.9
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitHunterElite
   categories: [ HideSpawnMenu ]
   name: sixth subjugation fireteam hardsuit helmet

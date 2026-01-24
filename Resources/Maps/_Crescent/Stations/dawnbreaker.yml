@@ -17340,7 +17340,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -8.5,-20.5
       parent: 1
-- proto: C_ComputerTabletopShuttle
+- proto: ComputerTabletopShuttle
   entities:
   - uid: 1292
     components:
@@ -17487,11 +17487,7 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       links:
-<<<<<<< HEAD
-      - 2632
-=======
       - 2624
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 - proto: Crate120mmAmmo
   entities:
   - uid: 1303
@@ -17499,43 +17495,26 @@ entities:
     - type: Transform
       pos: 9.5,4.5
       parent: 1
-<<<<<<< HEAD
-- proto: Crate50mmAmmo
-=======
 - proto: Crate48mmAmmo
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   entities:
   - uid: 1304
     components:
     - type: Transform
       pos: 10.5,6.5
       parent: 1
-<<<<<<< HEAD
-- proto: Crate48mmAmmo
-  entities:
-=======
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   - uid: 1305
     components:
     - type: Transform
       pos: 8.5,6.5
       parent: 1
-<<<<<<< HEAD
-- proto: Crate90mmAmmo
-=======
 - proto: Crate50mmAmmo
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   entities:
   - uid: 1306
     components:
     - type: Transform
       pos: 10.5,5.5
       parent: 1
-<<<<<<< HEAD
-- proto: Crate48mmAmmo
-=======
 - proto: Crate90mmAmmo
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   entities:
   - uid: 1307
     components:

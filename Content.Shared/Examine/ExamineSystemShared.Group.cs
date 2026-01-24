@@ -1,4 +1,3 @@
-using Content.Shared.Ghost;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 
@@ -15,8 +14,6 @@ namespace Content.Shared.Examine
             base.Initialize();
 
             SubscribeLocalEvent<GroupExamineComponent, GetVerbsEvent<ExamineVerb>>(OnGroupExamineVerb);
-
-            _ghostQuery = GetEntityQuery<GhostComponent>();
         }
 
         /// <summary>
@@ -75,7 +72,7 @@ namespace Content.Shared.Examine
 
             if (group.Title != null)
             {
-                message.AddMarkupOrThrow(Loc.GetString(group.Title));
+                message.AddMarkup(Loc.GetString(group.Title));
                 message.PushNewline();
             }
             message.AddMessage(GetFormattedMessageFromExamineEntries(group.Entries));

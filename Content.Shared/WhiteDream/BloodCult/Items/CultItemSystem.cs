@@ -42,7 +42,7 @@ public sealed class CultItemSystem : EntitySystem
     {
         if (CanUse(args.User, item) ||
             // Allow non-cultists to remove embedded cultist weapons and getting knocked down afterwards on pickup
-            (TryComp<EmbeddableProjectileComponent>(item.Owner, out var embeddable) && embeddable.EmbeddedIntoUid != null))
+            (TryComp<EmbeddableProjectileComponent>(item.Owner, out var embeddable) && embeddable.Target != null))
             return;
 
         args.Handled = true;
@@ -69,11 +69,11 @@ public sealed class CultItemSystem : EntitySystem
 
     private void OnMeleeAttempt(Entity<CultItemComponent> item, ref AttemptMeleeEvent args)
     {
-        if (CanUse(args.User, item))
+        if (CanUse(args.PlayerUid, item))
             return;
 
         args.Cancelled = true;
-        KnockdownAndDropItem(item, args.User, Loc.GetString("cult-item-component-attack-fail"));
+        KnockdownAndDropItem(item, args.PlayerUid, Loc.GetString("cult-item-component-attack-fail"));
     }
 
     private void OnBeforeBlocking(Entity<CultItemComponent> item, ref BeforeBlockingEvent args)

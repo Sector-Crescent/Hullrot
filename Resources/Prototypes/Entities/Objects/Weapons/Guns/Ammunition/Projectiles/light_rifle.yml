@@ -23,6 +23,18 @@
         Blunt: 2
 
 - type: entity
+  id: BulletLightRifleRubber
+  name: bullet (5.56x45mm Imperial rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+    stoppingPower: 4
+
+- type: entity
   id: BulletLightRifleIncendiary
   parent: BaseBulletIncendiary
   name: bullet (5.56x45mm Imperial dragon's breath)

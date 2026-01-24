@@ -1,4 +1,4 @@
-using Content.Shared.Actions;
+﻿using Content.Shared.Actions;
 using Content.Shared.Chat;
 using Robust.Shared.Prototypes;
 
@@ -12,19 +12,16 @@ public sealed partial class ChangeComponentsSpellEvent : EntityTargetActionEvent
     // TODO allow it to set component data-fields?
     // for now a Hackish way to do that is to remove & add, but that doesn't allow you to selectively set specific data fields.
 
-    [DataField]
+    [DataField("toAdd")]
     [AlwaysPushInheritance]
     public ComponentRegistry ToAdd = new();
 
-    [DataField]
+    [DataField("toRemove")]
     [AlwaysPushInheritance]
     public HashSet<string> ToRemove = new();
 
-    [DataField]
+    [DataField("speech")]
     public string? Speech { get; private set; }
-
-    [DataField]
-    public bool DoSpeech { get; private set; }
 
     public InGameICChatType ChatType { get; } = InGameICChatType.Speak;
 }

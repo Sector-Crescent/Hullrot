@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Server.Bank;
 using Content.Server.Cargo.Components;
 using Content.Server.Labels.Components;
+using Content.Server.Paper;
 using Content.Server.Station.Components;
 using Content.Shared.Bank.Components;
 using Content.Shared.Cargo;
@@ -11,12 +12,13 @@ using Content.Shared.Cargo.Components;
 using Content.Shared.Cargo.Events;
 using Content.Shared.Cargo.Prototypes;
 using Content.Shared.Database;
-using Content.Shared.Emag.Systems;
+using Content.Shared.Emag.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
-using Content.Shared.Paper;
 using Robust.Shared.Map;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Cargo.Systems
@@ -24,9 +26,6 @@ namespace Content.Server.Cargo.Systems
     public sealed partial class CargoSystem
     {
         [Dependency] private readonly BankSystem _bankSystem = default!;
-        [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-        [Dependency] private readonly EmagSystem _emag = default!;
-
         /// <summary>
         /// How much time to wait (in seconds) before increasing bank accounts balance.
         /// </summary>
@@ -46,7 +45,6 @@ namespace Content.Server.Cargo.Systems
             //SubscribeLocalEvent<CargoOrderConsoleComponent, ComponentInit>(OnInit);
             //SubscribeLocalEvent<CargoOrderConsoleComponent, InteractUsingEvent>(OnInteractUsing);
             SubscribeLocalEvent<CargoOrderConsoleComponent, BankBalanceUpdatedEvent>(OnOrderBalanceUpdated);
-            SubscribeLocalEvent<CargoOrderConsoleComponent, GotEmaggedEvent>(OnEmagged);
             Reset();
         }
         /* Hullrot edit - Maybe readd when we add cash-orders?
@@ -68,7 +66,6 @@ namespace Content.Server.Cargo.Systems
             _audio.PlayPvs(component.ConfirmSound, uid);
             UpdateBankAccount(stationUid.Value, bank, (int) price);
             QueueDel(args.Used);
-            args.Handled = true;
         }
 
 
@@ -82,17 +79,6 @@ namespace Content.Server.Cargo.Systems
         private void Reset()
         {
             _timer = 0;
-        }
-
-        private void OnEmagged(Entity<CargoOrderConsoleComponent> ent, ref GotEmaggedEvent args)
-        {
-            if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-                return;
-
-            if (_emag.CheckFlag(ent, EmagType.Interaction))
-                return;
-
-            args.Handled = true;
         }
 
         private void UpdateConsole(float frameTime)
@@ -215,7 +201,7 @@ namespace Content.Server.Cargo.Systems
             order.Approved = true;
             _audio.PlayPvs(component.ConfirmSound, uid);
 
-            if (!_emag.CheckFlag(uid, EmagType.Interaction))
+            if (!HasComp<EmaggedComponent>(uid))
             {
                 var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, player);
                 RaiseLocalEvent(tryGetIdentityShortInfoEvent);
@@ -382,7 +368,7 @@ namespace Content.Server.Cargo.Systems
 
         private void PlayDenySound(EntityUid uid, CargoOrderConsoleComponent component)
         {
-            _audio.PlayPvs(_audio.ResolveSound(component.ErrorSound), uid);
+            _audio.PlayPvs(_audio.GetSound(component.ErrorSound), uid);
         }
 
         private static CargoOrderData GetOrderData(CargoConsoleAddOrderMessage args, CargoProductPrototype cargoProduct, int id)
@@ -537,9 +523,6 @@ namespace Content.Server.Cargo.Systems
             // Create the item itself
             var item = Spawn(order.ProductId, spawn);
 
-            // Ensure the item doesn't start anchored
-            _transformSystem.Unanchor(item, Transform(item));
-
             // Create a sheet of paper to write the order details on
             var printed = EntityManager.SpawnEntity(paperProto, spawn);
             if (TryComp<PaperComponent>(printed, out var paper))
@@ -548,14 +531,14 @@ namespace Content.Server.Cargo.Systems
                 var val = Loc.GetString("cargo-console-paper-print-name", ("orderNumber", order.OrderId));
                 _metaSystem.SetEntityName(printed, val);
 
-                _paperSystem.SetContent((printed, paper), Loc.GetString(
+                _paperSystem.SetContent(printed, Loc.GetString(
                         "cargo-console-paper-print-text",
                         ("orderNumber", order.OrderId),
                         ("itemName", MetaData(item).EntityName),
-                        ("orderQuantity", order.OrderQuantity),
                         ("requester", order.Requester),
                         ("reason", order.Reason),
-                        ("approver", order.Approver ?? string.Empty)));
+                        ("approver", order.Approver ?? string.Empty)),
+                    paper);
 
                 // attempt to attach the label to the item
                 if (TryComp<PaperLabelComponent>(item, out var label))

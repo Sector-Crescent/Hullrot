@@ -18,15 +18,6 @@
 
 - type: entity
   parent: BaseSignDirectional
-  id: SignDirectionalAtmos
-  name: atmos sign
-  description: A direction sign, pointing out which way the Atmospherics department is.
-  components:
-  - type: Sprite
-    state: direction_atmos
-
-- type: entity
-  parent: BaseSignDirectional
   id: SignDirectionalBar
   name: bar sign
   description: A direction sign, pointing out which way the bar is.
@@ -682,7 +673,7 @@
 - type: entity
   parent: BaseSign
   id: SignNosmoking
-  name: no smoking sign
+  name: nosmoking sign
   description: A sign indicating that smoking is not allowed in the vicinity.
   components:
   - type: Sprite
@@ -768,14 +759,6 @@
   components:
   - type: Sprite
     state: cans
-
-- type: entity
-  parent: SignCans
-  id: SignCansScience
-  suffix: science
-  components:
-  - type: Sprite
-    state: cans_sci
 
 - type: entity
   parent: BaseSign
@@ -1113,15 +1096,7 @@
   - type: Sprite
     state: medium_secure
 
-# TODO: make a fancier version of this sign
-- type: entity
-  parent: BaseSign
-  id: SignVox
-  name: vox area sign
-  description: A sign indicating that the area ahead is intended for Vox crew members and does not have an oxygen atmosphere.
-  components:
-  - type: Sprite
-    state: vox
+
 
 # Atmos Warnings
 
@@ -1201,7 +1176,7 @@
   parent: BaseSign
   id: SignSmoking
   name: no smoking sign
-  description: A warning sign which reads 'NO SMOKING'.
+  description: A warning sign which reads 'NO SMOKING'
   components:
   - type: Sprite
     state: nosmoking2
@@ -1210,7 +1185,7 @@
   parent: BaseSign
   id: SignSomethingOld
   name: old sign
-  description: Technical information of some sort, shame it's too worn-out to read.
+  description: Technical information of some sort, shame its too worn-out to read.
   components:
   - type: Sprite
     state: something-old1
@@ -1219,7 +1194,7 @@
   parent: BaseSign
   id: SignSomethingOld2
   name: old sign
-  description: Looks like a planet crashing by some station above it. It's kinda scary.
+  description: Looks like a planet crashing by some station above it. Its kinda scary.
   components:
   - type: Sprite
     state: something-old2
@@ -1259,7 +1234,6 @@
   components:
   - type: Sprite
     state: nanotrasen_sign1
-    snapCardinals: false
 
 - type: entity
   parent: BaseSign
@@ -1269,7 +1243,6 @@
   components:
   - type: Sprite
     state: nanotrasen_sign2
-    snapCardinals: false
 
 - type: entity
   parent: BaseSign
@@ -1279,7 +1252,6 @@
   components:
   - type: Sprite
     state: nanotrasen_sign3
-    snapCardinals: false
 
 - type: entity
   parent: BaseSign
@@ -1289,7 +1261,6 @@
   components:
   - type: Sprite
     state: nanotrasen_sign4
-    snapCardinals: false
 
 - type: entity
   parent: BaseSign
@@ -1299,7 +1270,6 @@
   components:
   - type: Sprite
     state: nanotrasen_sign5
-    snapCardinals: false
 
 - type: entity
   parent: BaseSign

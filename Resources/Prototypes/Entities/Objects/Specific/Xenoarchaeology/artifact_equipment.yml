@@ -7,7 +7,7 @@
     - type: Transform
       noRot: true
     - type: AccessReader
-      access: [["Research"], ["Cargo"]]
+      access: [["Research"], ["Salvage"]]
     - type: Lock
     - type: ResistLocker
     - type: Sprite
@@ -54,8 +54,8 @@
     - type: PlaceableSurface
       isPlaceable: false
     - type: Damageable
-      damageContainer: StructuralInorganic
-      damageModifierSet: StructuralMetallicStrong
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
     - type: Destructible
       thresholds:
         - trigger:
@@ -66,14 +66,11 @@
               acts: ["Destruction"]
     - type: PaperLabel
       labelSlot:
-        insertVerbText: comp-paper-label-insert
-        ejectVerbText: comp-paper-label-eject
+        insertVerbText: Attach Label
+        ejectVerbText: Remove Label
         whitelist:
           components:
             - Paper
-        blacklist:
-          tags:
-          - Book
     - type: Appearance
     - type: EntityStorageVisuals
       stateDoorOpen: artifact_container_open
@@ -94,7 +91,7 @@
           enum.PaperLabelVisuals.Layer:
             True: { offset: "0.0,0.3125" }
             False: { offset: "0.0,0.0" }
-
+            
     - type: LockVisuals
     - type: ItemSlots
     - type: ContainerContainer

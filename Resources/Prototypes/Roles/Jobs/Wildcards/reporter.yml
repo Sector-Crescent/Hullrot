@@ -9,13 +9,13 @@
   access:
   - Service
   - Maintenance
-  - Theatre
-  - Reporter
+  - Theatre # DeltaV - Add Theatre access
+  - Reporter # DeltaV - Add Reporter access
   requirements:
-  - !type:CharacterEmployerRequirement
-    inverted: true
-    employers:
-    - Unemployed
+    - !type:CharacterEmployerRequirement
+      inverted: true
+      employers:
+      - Unemployed
 
 - type: startingGear
   id: ReporterGear
@@ -23,20 +23,17 @@
   - ReporterPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitReporter
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     shoes: ClothingShoesColorWhite
     id: ReporterPDA
     ears: ClothingHeadsetService
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpsuitJournalist
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: ReporterPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitReporter
     head: ClothingHeadEnvirohelmReporter

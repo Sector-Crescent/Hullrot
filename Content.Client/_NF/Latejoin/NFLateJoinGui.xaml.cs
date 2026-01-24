@@ -63,7 +63,7 @@ public sealed partial class NFLateJoinGui : FancyWindow
         _gameTicker.LobbyJobsAvailableUpdated -= UpdateUi;
     }
 
-    public void UpdateUi(IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> obj)
+    public void UpdateUi(IReadOnlyDictionary<NetEntity, Dictionary<string, uint?>> obj)
     {
         if (VesselSelection.Selected is null)
         {

@@ -5,7 +5,7 @@
   id: SkeletonBiker
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     head: ClothingHeadBandSkull
     eyes: ClothingEyesGlassesSunglasses
     outerClothing: ClothingOuterCoatGentle
@@ -13,19 +13,15 @@
     shoes: ClothingShoesBootsJack
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtColorBlack
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 # Syndicate Operative Outfit - Civilian
 - type: startingGear
   id: SyndicateOperativeGearCivilian
   subGear:
-  - BoxSurvivalClown
-  - SyndicateOperativePlasmamanGear
+  - SyndicatePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSyndieFormal
     back: ClothingBackpackDuffelSyndicate
@@ -34,8 +30,6 @@
     id: SyndiPDA
     ears: ClothingHeadsetAltSyndicate
 
-<<<<<<< HEAD
-=======
 #Space Ninja Outfit
 - type: startingGear
   id: SpaceNinjaGear
@@ -166,7 +160,6 @@
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelSyndicateOperative
 
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 # Syndicate Footsoldier Gear - No Headset
 - type: startingGear
   id: SyndicateFootsoldierGearRuin
@@ -175,45 +168,15 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitOperative
     head: ClothingHeadHelmetSwatSyndicate
-    mask: ClothingMaskGasSyndicate
+    mask: ClothingMaskGas
     outerClothing: ClothingOuterArmorBasic
     gloves: ClothingHandsGlovesCombat
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
     id: SyndiPDA
-<<<<<<< HEAD
-
-# Syndicate Footsoldier Gear
-- type: startingGear
-  id: SyndicateFootsoldierGear
-  parent: SyndicateOperativeGearCivilian
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitOperative
-    head: ClothingHeadHelmetSwatSyndicate
-    eyes: ClothingEyesHudSyndicate
-    outerClothing: ClothingOuterArmorBasic
-    gloves: ClothingHandsGlovesCombat
-    back: ClothingBackpack
-    shoes: ClothingShoesBootsCombatFilled
-  storage:
-    back:
-    - BoxSurvivalSyndicate
-
-- type: startingGear
-  id: SyndicateFootsoldierTeamLeaderGear
-  parent: SyndicateFootsoldierGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitSyndieFormal
-    head: ClothingHeadHatOutlawHat
-    outerClothing: ClothingOuterArmorBasicSlim
-    back: ClothingBackpackSatchel
-    pocket1: BaseUplinkRadio25TC
-    pocket2: EnergySword
-=======
     innerClothingSkirt: ClothingUniformJumpsuitOperative
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelSyndicateOperative
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 # Nanotrasen Paramilitary Unit Gear
 - type: startingGear
@@ -222,20 +185,14 @@
   - SecurityOfficerPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
-    back: ClothingBackpackSecurity
+    back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsCombatFilled
     eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHelmetSwat
     mask: ClothingMaskGasSwat
     outerClothing: ClothingOuterArmorBasicSlim
-    ears: ClothingHeadsetAltSecurityRegular
+    ears: ClothingHeadsetAltSecurityRegular # Goobstation
     gloves: ClothingHandsGlovesCombat
-<<<<<<< HEAD
-  storage:
-    back:
-    - Flash
-    - MagazinePistol
-=======
     innerClothingSkirt: ClothingUniformJumpskirtSec
     satchel: ClothingBackpackSatchelSecurityFilled
     duffelbag: ClothingBackpackDuffelSecurityFilled
@@ -262,7 +219,6 @@
     innerClothingSkirt: ClothingUniformJumpsuitColorBrown
     satchel: ClothingBackpackDuffelCBURNFilled
     duffelbag: ClothingBackpackDuffelCBURNFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: BoxingKangarooGear
@@ -277,8 +233,6 @@
     jumpsuit: ClothingUniformJumpsuitJacketMonkey
     id: PunPunIDCard
 
-<<<<<<< HEAD
-=======
 # Passenger but without the ID, bag, or headset
 
 - type: startingGear
@@ -290,7 +244,6 @@
     shoes: ClothingShoesColorBlack
     innerClothingSkirt: ClothingUniformJumpskirtColorGrey
 
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 # DeathMatch Gear
 
 - type: startingGear
@@ -302,20 +255,9 @@
     shoes: ClothingShoesBootsJack
     ears: ClothingHeadsetGrey
     gloves: ClothingHandsGlovesFingerless
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtColorWhite
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   inhand:
     - WeaponMeleeToolboxRobust
-
-- type: startingGear
-  id: DeathMatchPlasmamanGear
-  parent: BasePlasmamanMaskGear
-  equipment:
-    jumpsuit: ClothingUniformEnvirosuitColorWhite
-    head: ClothingHeadEnvirohelmColorWhite
-    gloves: ClothingHandsGlovesEnviroglovesWhite
 
 #Brigmedic
 
@@ -333,29 +275,32 @@
     ears: ClothingHeadsetBrigmedic
     mask: ClothingMaskBreathMedicalSecurity
     belt: ClothingBeltMedicalFilled
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtBrigmedic
     satchel: ClothingBackpackSatchelBrigmedicFilled
     duffelbag: ClothingBackpackDuffelBrigmedicFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 # Aghost
 - type: startingGear
   id: MobAghostGear
   equipment:
-    back: ClothingBackpackSatchelHolding
+    back: ClothingBackpackSatchelHoldingAdmin
     id: AdminPDA
+
+#Head Rev Gear
+- type: startingGear
+  id: HeadRevGear
   storage:
     back:
-    - GasAnalyzer
-    - trayScanner
-    - AccessConfiguratorUniversal
-    - Multitool
-    - WelderExperimental
-    - PowerDrill
-    - GeigerCounter
-    - JawsOfLife
+    - RevolutionaryManifesto
+
+#Thief Gear
+- type: startingGear
+  id: ThiefGear
+  storage:
+    back:
+    - ThiefBeacon
+    - ToolboxThief
+    - ClothingHandsChameleonThief
 
 #Gladiator with spear
 - type: startingGear
@@ -380,22 +325,8 @@
 - type: startingGear
   id: BananaClown
   subGear:
-  - BoxSurvivalClown
   - ClownPlasmamanGear # TODO: Banana clown plasmaman starting gear
   equipment:
-    id: VisitorPDA
-    back: ClothingBackpackClown
     shoes: ClothingShoesClownBanana
     jumpsuit: ClothingUniformJumpsuitClownBanana
     mask: ClothingMaskClownBanana
-    pocket1: BikeHorn
-    pocket2: ClownRecorder
-
-# Passenger but without the ID, bag, or headset
-- type: startingGear
-  id: LimitedPassengerGear
-  subGear:
-  - PassengerPlasmamanGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitColorGrey
-    shoes: ClothingShoesColorBlack

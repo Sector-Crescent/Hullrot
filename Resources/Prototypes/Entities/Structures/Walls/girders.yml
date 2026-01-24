@@ -29,7 +29,7 @@
     state: wall_girder
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -53,7 +53,9 @@
         sound:
           collection: MetalBreak
   - type: StaticPrice
-    price: 30
+    price: 10
+  - type: Climbable
+  - type: SelfDeleteInSpace #hullrot edit - to save performance when ships blow up
 
 - type: entity
   id: ReinforcedGirder
@@ -96,7 +98,7 @@
               sound:
                 collection: MetalBreak
     - type: StaticPrice
-      price: 130
+      price: 66
 
 - type: entity
   id: ClockworkGirder
@@ -110,8 +112,6 @@
     - type: Construction
       graph: ClockworkGirder
       node: clockGirder
-    - type: StaticPrice
-      price: 75
     - type: Destructible
       thresholds:
         - trigger:

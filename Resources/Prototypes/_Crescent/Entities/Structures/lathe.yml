@@ -22,8 +22,35 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - C_ScrapRefinerStatic
+    staticRecipes:
+    - SteelScrap
+    - TitaniumScrap
+    - Garbage
+    - PlasticFromGarbage1
+    - PlasticFromGarbage
+    - PlasteelFromScrapHighGrade1
+    - PlasteelFromScrapHighGrade
+    - TungstenFromScrapHighGrade1
+    - TungstenFromScrapHighGrade
+    - SteelFromScrapLowGrade1
+    - SteelFromScrapLowGrade
+    - CopperFromScrapLowGrade1
+    - CopperFromScrapLowGrade
+    - GoldFromScrapCircuit1
+    - GoldFromScrapCircuit
+    - SilverFromScrapCircuit1
+    - SilverFromScrapCircuit
+    - PlasmaFromScrapPlasma1
+    - PlasmaFromScrapPlasma
+    - PhoronFromScrapPlasma
+    - IsotopesFromScrapPlasma
+    - UraniumFromScrapUranium1
+    - UraniumFromScrapUranium
+    - FibreAlloyFromCombinedScrap
+    - BasicElectronicsFromCombinedScrap
+    - BasicMechatronicsFromCombinedScrap
+    - BallisticCyclerFromCombinedScrap
+    - HardsuitElectronicsFromCombinedScrap
 
 - type: entity
   parent: [ BaseMachinePowered, ConstructibleMachine ]
@@ -49,8 +76,35 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - C_IndustrialScrapRefinerStatic
+    staticRecipes:
+    - SteelScrap
+    - TitaniumScrap
+    - Garbage
+    - PlasticFromGarbage1
+    - PlasticFromGarbage
+    - PlasteelFromScrapHighGrade1
+    - PlasteelFromScrapHighGrade
+    - TungstenFromScrapHighGrade1
+    - TungstenFromScrapHighGrade
+    - SteelFromScrapLowGrade1
+    - SteelFromScrapLowGrade
+    - CopperFromScrapLowGrade1
+    - CopperFromScrapLowGrade
+    - GoldFromScrapCircuit1
+    - GoldFromScrapCircuit
+    - SilverFromScrapCircuit1
+    - SilverFromScrapCircuit
+    - PlasmaFromScrapPlasma1
+    - PlasmaFromScrapPlasma
+    - PhoronFromScrapPlasma
+    - IsotopesFromScrapPlasma
+    - UraniumFromScrapUranium1
+    - UraniumFromScrapUranium
+    - FibreAlloyFromCombinedScrap
+    - BasicElectronicsFromCombinedScrap
+    - BasicMechatronicsFromCombinedScrap
+    - BallisticCyclerFromCombinedScrap
+    - HardsuitElectronicsFromCombinedScrap
 
 #drugs
 
@@ -82,10 +136,66 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - C_DrugLatheStatic
-    dynamicPacks:
-    - C_DrugLatheDynamic
+    staticRecipes:
+    - Crash
+    - Exile
+    - Kaiser
+    - Mechanite
+    - Bloodeye
+    - Scalpel
+    - Retractor
+    - Cautery
+    - Drill
+    - Saw
+    - Hemostat
+    - BoneGel
+    - ParamedHypo
+    - ClothingHandsGlovesNitrile
+    - ClothingMaskSterile
+    - Brutepack
+    - Ointment
+    - Gauze
+    - DisposableSyringe
+    - HandheldHealthAnalyzer
+    - BodyBag
+    - Beaker
+    - LargeBeaker
+    - Dropper
+    - Jug
+    - Syringe
+    - Defibrillator
+    dynamicRecipes:
+      - ClothingUniformJumpsuitSyndicateInterdyne
+      - ClothingBeltSyndicateWebbingInterdyne
+      - ClothingHeadHatSyndicateInterdyne
+      - ClothingOuterArmorSyndicateApron
+      - ClothingHeadHelmetSyndicateBasicInterdyne
+      - ClothingOuterArmorSyndicateArmorvestInterdyne
+      - ClothingOuterHardsuitTraumasec
+      - DefibrillatorSyndicate
+      - OmnimedToolSyndieInterdyne
+      - CyberneticsPainEditorInterdyne
+      - CyberneticsAdrenalInterdyne
+      - CyberneticsBloodPumpInterdyne
+      - InterdyneOpticsInterdyne
+      - CrowbarLeftArmInterdyne
+      - CrowbarRightArmInterdyne
+      - HypoInterdyne
+      - CartridgeEphedrineInterdyne
+      - CartridgeTirizeneInterdyne
+      - CartridgeBicaridineInterdyne
+      - CartridgeSalineInterdyne
+      - CartridgeDermalineInterdyne
+      - CartridgePuncturaseInterdyne
+      - CartridgeAtropineInterdyne
+      - SyringeCase
+      - InterdyneOptics
+      - MothroachCubeBiochemical
+      - CowCubeBiochemical
+      - GoatCubeBiochemical
+      - CryostasisBeaker
+      - SyringeCryostasis
+      - StasisBedMachineCircuitboardBiochemical
   - type: Anchorable
     flags:
     - Anchorable
@@ -103,7 +213,7 @@
       state: security
     - type: MachineBoard
       prototype: PristineMicroforge
-      machinePartRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 2
 
@@ -141,32 +251,6 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-<<<<<<< HEAD
-    staticPacks:
-    - C_MicroforgeStatic
-    dynamicPacks:
-    - C_MicroforgeDSMDynamic
-    - C_MicroforgeCDTDynamic
-    - C_MicroforgeNCWLDynamic
-    - C_MicroforgeSHIDynamic
-    - C_MicroforgeDynamic
-    - ChemistryStatic
-    - SurgeryStatic
-    - AdvancedTools
-    - ScienceEquipment
-    - ScienceClothing
-    - PowerCells
-    - ScienceWeapons
-    - Mining
-    - AtmosTools
-    - EngineeringWeapons
-    - Chemistry
-    - Janitor
-    - Instruments
-    - Equipment
-    - Parts
-    - Translator
-=======
     staticRecipes:
       - BaseCartridgeRailgun15mm
       - MagazineClip18gBuck
@@ -1315,7 +1399,6 @@
       - ClothingNeckIFFOrange
       - ClothingNeckIFFPurple
 
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   - type: Machine
     board: MicroforgeCircuitboard
 
@@ -1348,8 +1431,8 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - C_BoriaticRefinerStatic
+    staticRecipes:
+    - JugBoriaticFuelCraft
 
 #ship parts
 
@@ -1379,8 +1462,10 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - C_ShipyardManufactorumStatic
+    staticRecipes:
+    - ShipHull
+    - ShipElectronics
+    - ShipEngine
   - type: Anchorable
     flags:
     - Anchorable
@@ -1411,8 +1496,8 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_OrganPrinterStatic
+    staticRecipes:
+    - OrganCrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1449,8 +1534,12 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_ImperialTradeGoodsStatic
+    staticRecipes:
+    - FabricsCrate
+    - WineCrate
+    - AntibioticCrate
+    - CyberneticCrate
+    - BadscrapCrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1485,8 +1574,12 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_SHITradeGoodsStatic
+    staticRecipes:
+    - MiltechCrate
+    - AlloysCrate
+    - CyberneticCrate
+    - Scopcrate
+    - GunpartsCrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1521,8 +1614,13 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_SAWTradeGoodsStatic
+    staticRecipes:
+    - PlasmaCrate
+    - ScrapCrate
+    - GunpartsCrate
+    - TitaniumScrapAlloyCrate
+    - BadscrapCrate
+    - Ammocrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1557,8 +1655,11 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_GliessTradeGoodsStatic
+    staticRecipes:
+    - GoodSilkCrate
+    - AlcoholCrate
+    - BadscrapCrate
+    - Ammocrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1593,8 +1694,11 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_NCWLTradeGoodsStatic
+    staticRecipes:
+    - UnionWeaponCrate
+    - UnionBallisticsCrate
+    - UnionVodka
+    - ScrapCrate
   - type: Anchorable
     flags:
     - Anchorable
@@ -1629,8 +1733,10 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - C_IPMTradeGoodsStatic
+    staticRecipes:
+    - AntibioticCrate
+    - AlcoholCrate
+    - DrugCrate
   - type: Anchorable
     flags:
     - Anchorable

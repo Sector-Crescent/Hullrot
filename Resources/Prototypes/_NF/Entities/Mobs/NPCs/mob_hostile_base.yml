@@ -67,7 +67,7 @@
   - type: MovementAlwaysTouching
   - type: MovementIgnoreGravity
   - type: NoSlip
-  - type: ProtectedFromStepTriggers
+  - type: StepTriggerImmune
   - type: Climbing
   - type: Tool
     speedModifier: 1.5
@@ -195,6 +195,7 @@
     speedModifierThresholds:
       60: 0.7
       80: 0.5
+  - type: Flashable
   - type: Blindable
   - type: Butcherable
     butcheringType: Spike

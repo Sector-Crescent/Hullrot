@@ -9,10 +9,6 @@
       gridComponents:
         - type: BlockShipWeaponProjectileGrid
       components:
-        - type: VesselIcon
-          iffIcon:
-            sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: capital
         - type: StationNameSetup
           mapNameTemplate: 'GSC Jackal'
         - type: VesselDesignation
@@ -23,6 +19,7 @@
           attributes:
             proper: true
         - type: StationJobs
+          overflowJobs: []
           availableJobs: #12 total
             RingleaderNCSP: [ 1, 1 ]
             LieutenantNCSP: [ 1, 1 ]

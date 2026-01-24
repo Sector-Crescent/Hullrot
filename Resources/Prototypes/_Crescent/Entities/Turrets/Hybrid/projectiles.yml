@@ -7,11 +7,7 @@
   components:
   - type: ProjectileIFF
     visualType: Circle
-<<<<<<< HEAD
-    color: Purple
-=======
     color: "#ea86f7" #you have no idea how hard it was to see the previous IFF color
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -20,11 +16,7 @@
         Radiation: 90
   - type: PointLight
     radius: 3.5
-<<<<<<< HEAD
-    color: "#be7de3" #you have no idea how hard it was to see the previous IFF color
-=======
     color: purple
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
     energy: 0.5
   - type: TimedDespawn
     lifetime: 7 #roughly 560m range
@@ -62,11 +54,7 @@
   components:
   - type: ProjectileIFF
     visualType: Circle
-<<<<<<< HEAD
-    color: "#be7de3"
-=======
     color: "#ea86f7"
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -100,11 +88,7 @@
   components:
   - type: ProjectileIFF
     visualType: Circle
-<<<<<<< HEAD
-    color: "#be7de3"
-=======
     color: "#ea86f7"
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true

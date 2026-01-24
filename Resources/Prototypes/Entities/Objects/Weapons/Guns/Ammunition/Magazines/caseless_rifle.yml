@@ -1,13 +1,12 @@
 - type: entity
   id: BaseMagazineCaselessRifle
-  name: "magazine (.25 caseless)"
-  parent: [ BaseItem, BaseRestrictedContraband ]
+  name: "30-round magazine (9x39mm caseless)"
+  parent: BaseItem
   abstract: true
   components:
   - type: Tag
     tags:
       - MagazineCaselessRifle
-      - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -73,7 +72,6 @@
   - type: Tag
     tags:
       - MagazinePistolCaselessRifle
-      - Magazine
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -123,6 +121,14 @@
     proto: CartridgeCaselessRiflePractice
 
 - type: entity
+  id: MagazinePistolCaselessRifleRubber
+  name: "10-round pistol magazine (9x39mm caseless rubber)"
+  parent: BaseMagazinePistolCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifleRubber
+
+- type: entity
   id: MagazinePistolCaselessRifleIncendiary
   name: "10-round pistol magazine (9x39mm caseless incendiary)"
   parent: BaseMagazinePistolCaselessRifle
@@ -161,6 +167,14 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRiflePractice
+
+- type: entity
+  id: MagazineCaselessRifleRubber
+  name: "30-round magazine (9x39mm caseless rubber)"
+  parent: BaseMagazineCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifleRubber
 
 - type: entity
   id: MagazineCaselessRifleIncendiary
@@ -202,6 +216,14 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRiflePractice
+
+- type: entity
+  id: MagazineCaselessRifleShortRubber
+  name: "20-round short magazine (9x39mm caseless rubber)"
+  parent: BaseMagazineCaselessRifleShort
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifleRubber
 
 - type: entity
   id: MagazineCaselessRifleShortIncendiary

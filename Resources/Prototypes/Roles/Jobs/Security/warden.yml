@@ -4,33 +4,27 @@
   description: job-description-warden
   playTimeTracker: JobWarden
   requirements:
-  - !type:CharacterPlaytimeRequirement
-    tracker: JobSecurityOfficer
-    min: 43200 # DeltaV - 12 hrs
-  - !type:CharacterPlaytimeRequirement
-    tracker: JobDetective
-    min: 14400 # DeltaV - 4 hours
-  - !type:CharacterWhitelistRequirement
-  - !type:CharacterTraitRequirement
-    inverted: true
-    traits:
-    - Foreigner
-    - ForeignerLight
-    - Muted
-    - Blindness
-    - Pacifist
-    - BrittleBoneDisease
-  - !type:CharacterEmployerRequirement
-    employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
+    - !type:CharacterPlaytimeRequirement # DeltaV - JobSecurityOfficer time requirement. Make them experienced in proper officer work.
+      tracker: JobSecurityOfficer
+      min: 43200 # DeltaV - 12 hrs
+    - !type:CharacterPlaytimeRequirement # DeltaV - JobDetective time requirement. Give them an understanding of basic forensics.
+      tracker: JobDetective
+      min: 14400 # DeltaV - 4 hours
+    - !type:CharacterWhitelistRequirement
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Blindness
+        - Pacifist
+        - BrittleBoneDisease
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
   canBeAntag: false
   access:
   - Security
+  #- Brig # Delta V: Removed
   - Armory
   - Maintenance
   - Service
@@ -55,17 +49,14 @@
     jumpsuit: ClothingUniformJumpsuitWarden
     back: ClothingBackpackSecurity
     shoes: ClothingShoesBootsCombatFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     outerClothing: ClothingOuterCoatWarden
     id: WardenPDA
-    ears: ClothingHeadsetAltSecurityRegular
+    ears: ClothingHeadsetAltSecurityRegular # Goobstation
     belt: ClothingBeltSecurityFilled
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtWarden
     satchel: ClothingBackpackSatchelSecurity
     duffelbag: ClothingBackpackDuffelSecurity
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: WardenPlasmamanGear

@@ -5,7 +5,7 @@
   playTimeTracker: JobSeniorResearcher
   requirements:
     - !type:CharacterDepartmentTimeRequirement
-      department: Epistemics
+      department: Epistemics # DeltaV - Epistemics Department replacing Science
       min: 216000 #60 hrs
   startingGear: SeniorResearcherGear
   icon: "JobIconSeniorResearcher"
@@ -21,15 +21,12 @@
   equipment:
     head: ClothingHeadHatBeretRND
     jumpsuit: ClothingUniformJumpsuitSeniorResearcher
-    back: ClothingBackpackScience
+    back: ClothingBackpackScienceFilled
     shoes: ClothingShoesColorBlack
     outerClothing: ClothingOuterCoatLabSeniorResearcher
     id: SeniorResearcherPDA
     ears: ClothingHeadsetScience
     pocket1: BookPsionicsGuidebook
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtSeniorResearcher
     satchel: ClothingBackpackSatchelScienceFilled
     duffelbag: ClothingBackpackDuffelScienceFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f

@@ -5,7 +5,6 @@
   name: gas canister
   description: A canister that can contain any type of gas. It can be attached to connector ports using a wrench.
   components:
-    - type: Animateable
     - type: InteractionOutline
     - type: Transform
       noRot: true
@@ -17,7 +16,7 @@
     - type: Appearance
     - type: GenericVisualizer
       visuals:
-        enum.AnchorVisuals.Anchored:
+        enum.GasPortableVisuals.ConnectedState:
           connectedToPort:
             False: { state: can-connector, visible: false }
             True: { state: can-connector, visible: true }
@@ -101,14 +100,11 @@
             - GasTank
             - BorgJetpack
     - type: StaticPrice
-      price: 200
+      price: 1000
     - type: AccessReader
       access: [["Atmospherics"], ["Engineering"], ["Research"]]
     - type: Lock
       locked: false
-    - type: GuideHelp
-      guides:
-      - GasCanisters
 
 - type: entity
   parent: GasCanister
@@ -697,7 +693,7 @@
       materialComposition:
         Steel: 500
     - type: StaticPrice
-      price: 125
+      price: 60
 
 - type: entity
   parent: GasCanisterBrokenBase

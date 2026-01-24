@@ -74,7 +74,7 @@ public sealed partial class LatheMenu : DefaultWindow
 
         if (_entityManager.TryGetComponent<LatheComponent>(Entity, out var latheComponent))
         {
-            if (!latheComponent.DynamicPacks.Any())
+            if (!latheComponent.DynamicRecipes.Any())
             {
                 ServerListButton.Visible = false;
             }

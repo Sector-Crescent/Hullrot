@@ -167,7 +167,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return new DamageSpecifier();
 
-        var ev = new GetMeleeDamageEvent(uid, new(component.Damage * Damageable.UniversalMeleeDamageModifier), new(), user, component.ResistanceBypass);
+        var ev = new GetMeleeDamageEvent(uid, new(component.Damage), new(), user, component.ResistanceBypass);
         RaiseLocalEvent(uid, ref ev);
 
         if (component.ContestArgs is not null)
@@ -203,7 +203,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return false;
 
-        var ev = new GetMeleeDamageEvent(uid, new(component.Damage * Damageable.UniversalMeleeDamageModifier), new(), user, component.ResistanceBypass);
+        var ev = new GetMeleeDamageEvent(uid, new(component.Damage), new(), user, component.ResistanceBypass);
         RaiseLocalEvent(uid, ref ev);
 
         return ev.ResistanceBypass;
@@ -353,7 +353,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         // Do this AFTER attack so it doesn't spam every tick
         var ev = new AttemptMeleeEvent
         {
-            User = user
+            PlayerUid = user
         };
         RaiseLocalEvent(weaponUid, ref ev);
 
@@ -415,7 +415,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         targetXform = null;
         return !Deleted(target) &&
             HasComp<DamageableComponent>(target) &&
-            TryComp(target, out targetXform) &&
+            TryComp<TransformComponent>(target, out targetXform) &&
             // Not in LOS.
             InRange(user, target.Value, component.Range * component.LightRangeModifier, session);
     }
@@ -715,13 +715,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
             if (res.Count != 0)
             {
-                // If there's exact distance overlap, we simply have to deal with all overlapping objects to avoid selecting randomly.
-                var resChecked = res.Where(x => x.Distance.Equals(res[0].Distance));
-                foreach (var r in resChecked)
-                {
-                    if (Interaction.InRangeUnobstructed(ignore, r.HitEntity, range + 0.1f, overlapCheck: false))
-                        resSet.Add(r.HitEntity);
-                }
+                resSet.Add(res[0].HitEntity);
             }
         }
 

@@ -470,6 +470,10 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         if (_container == null)
             return;
 
+        // TODO ACTIONS allow buttons to persist across state applications
+        // Then we don't have to interrupt drags any time the buttons get rebuilt.
+        _menuDragHelper.EndDrag();
+
         if (_actionsSystem != null)
             _container?.SetActionData(_actionsSystem, _pages[_currentPageIndex]);
     }
@@ -705,7 +709,8 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         if (args.Function != EngineKeyFunctions.UIClick && args.Function != EngineKeyFunctions.Use)
             return;
 
-        HandleActionPressed(args, action);
+        _menuDragHelper.MouseDown(action);
+        args.Handle();
     }
 
     private void OnWindowActionUnPressed(GUIBoundKeyEventArgs args, ActionButton dragged)
@@ -713,7 +718,8 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         if (args.Function != EngineKeyFunctions.UIClick && args.Function != EngineKeyFunctions.Use)
             return;
 
-        HandleActionUnpressed(args, dragged);
+        DragAction();
+        args.Handle();
     }
 
     private void OnWindowActionFocusExisted(ActionButton button)
@@ -733,11 +739,6 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         if (args.Function != EngineKeyFunctions.UIClick)
             return;
 
-        HandleActionPressed(args, button);
-    }
-
-    private void HandleActionPressed(GUIBoundKeyEventArgs args, ActionButton button)
-    {
         args.Handle();
         if (button.ActionId != null)
         {
@@ -753,15 +754,7 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
 
     private void OnActionUnpressed(GUIBoundKeyEventArgs args, ActionButton button)
     {
-        if (args.Function != EngineKeyFunctions.UIClick)
-            return;
-
-        HandleActionUnpressed(args, button);
-    }
-
-    private void HandleActionUnpressed(GUIBoundKeyEventArgs args, ActionButton button)
-    {
-        if (_actionsSystem == null)
+        if (args.Function != EngineKeyFunctions.UIClick || _actionsSystem == null)
             return;
 
         args.Handle();
@@ -1043,7 +1036,7 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         var range = entityAction.CheckCanAccess ? action.Range : -1;
 
         _interactionOutline?.SetEnabled(false);
-        _targetOutline?.Enable(range, entityAction.CheckCanAccess, predicate, entityAction.Whitelist, entityAction.Blacklist, null);
+        _targetOutline?.Enable(range, entityAction.CheckCanAccess, predicate, entityAction.Whitelist, null);
     }
 
     /// <summary>

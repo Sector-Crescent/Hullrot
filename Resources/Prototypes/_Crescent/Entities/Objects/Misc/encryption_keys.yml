@@ -45,6 +45,8 @@
     layers:
     - state: crypt_gray
     - state: common_label
+  - type: Contraband
+    value: 2
 
 - type: entity
   parent: EncryptionKey

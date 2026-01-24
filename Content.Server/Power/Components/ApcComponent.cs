@@ -11,9 +11,12 @@ public sealed partial class ApcComponent : BaseApcNetComponent
     [DataField("onReceiveMessageSound")]
     public SoundSpecifier OnReceiveMessageSound = new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg");
 
+    [DataField("lastChargeState")]
     public ApcChargeState LastChargeState;
-    public TimeSpan? LastChargeStateTime;
+    [DataField("lastChargeStateTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
+    public TimeSpan LastChargeStateTime;
 
+    [DataField("lastExternalState")]
     public ApcExternalPowerState LastExternalState;
 
     /// <summary>
@@ -21,15 +24,14 @@ public sealed partial class ApcComponent : BaseApcNetComponent
     /// Done after every <see cref="VisualsChangeDelay"/> to show the latest load.
     /// If charge state changes it will be instantly updated.
     /// </summary>
+    [DataField("lastUiUpdate", customTypeSerializer: typeof(TimeOffsetSerializer))]
     public TimeSpan LastUiUpdate;
 
     [DataField("enabled")]
     public bool MainBreakerEnabled = true;
-
-    /// <summary>
-    /// APC state needs to always be updated after first processing tick.
-    /// </summary>
-    public bool NeedStateUpdate;
+    // TODO: remove this since it probably breaks when 2 people use it
+    [DataField("hasAccess")]
+    public bool HasAccess = false;
 
     public const float HighPowerThreshold = 0.9f;
     public static TimeSpan VisualsChangeDelay = TimeSpan.FromSeconds(1);

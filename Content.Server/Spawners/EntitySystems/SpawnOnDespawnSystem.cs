@@ -1,5 +1,4 @@
 using Content.Server.Spawners.Components;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Spawners;
 
 namespace Content.Server.Spawners.EntitySystems;
@@ -28,10 +27,5 @@ public sealed class SpawnOnDespawnSystem : EntitySystem
         foreach (var prot in comp.Prototypes)
             Spawn(prot, xform.Coordinates);
         // Lavaland Change end
-    }
-
-    public void SetPrototype(Entity<SpawnOnDespawnComponent> entity, EntProtoId prototype)
-    {
-        entity.Comp.Prototype = prototype;
     }
 }

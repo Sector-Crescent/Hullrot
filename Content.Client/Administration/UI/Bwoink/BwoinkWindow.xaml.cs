@@ -18,13 +18,16 @@ namespace Content.Client.Administration.UI.Bwoink
             {
                 if (sel is null)
                 {
-                    Title = Loc.GetString("bwoink-title-none-selected");
+                    Title = Loc.GetString("bwoink-none-selected");
                     return;
                 }
 
-                Title = $"{sel.CharacterName} / {sel.Username} | {Loc.GetString("generic-playtime-title")}: ";
+                Title = $"{sel.CharacterName} / {sel.Username}";
 
-                Title += sel.OverallPlaytime != null ? sel.PlaytimeString : Loc.GetString("generic-unknown-title");
+                if (sel.OverallPlaytime != null)
+                {
+                    Title += $" | {Loc.GetString("generic-playtime-title")}: {sel.PlaytimeString}";
+                }
             };
 
             OnOpen += () =>

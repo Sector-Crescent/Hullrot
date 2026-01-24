@@ -3,7 +3,6 @@ using Content.Client.Guidebook.Components;
 using Content.Client.Light;
 using Content.Client.Verbs;
 using Content.Shared.Guidebook;
-using Content.Shared.Guidebook.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Light.Components;
 using Content.Shared.Speech;
@@ -33,6 +32,7 @@ public sealed class GuidebookSystem : EntitySystem
     [Dependency] private readonly RgbLightControllerSystem _rgbLightControllerSystem = default!;
     [Dependency] private readonly SharedPointLightSystem _pointLightSystem = default!;
     [Dependency] private readonly TagSystem _tags = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     public event Action<List<ProtoId<GuideEntryPrototype>>,
         List<ProtoId<GuideEntryPrototype>>?,
@@ -141,19 +141,16 @@ public sealed class GuidebookSystem : EntitySystem
         });
     }
 
-    private void OnGuidebookControlsTestActivateInWorld(EntityUid uid, GuidebookControlsTestComponent component, ActivateInWorldEvent args)
-    {
-        Transform(uid).LocalRotation += Angle.FromDegrees(90);
-    }
+    private void OnGuidebookControlsTestActivateInWorld(EntityUid uid, GuidebookControlsTestComponent component, ActivateInWorldEvent args) => Transform(uid).LocalRotation += Angle.FromDegrees(90);
 
     private void OnGuidebookControlsTestInteractHand(EntityUid uid, GuidebookControlsTestComponent component, InteractHandEvent args)
     {
-        if (!TryComp<SpeechComponent>(uid, out var speech) || speech.SpeechSounds is null)
+        if (!TryComp<SpeechComponent>(uid, out var speech)
+            || !_prototypeManager.TryIndex(speech.SpeechSounds, out var sounds))
             return;
 
-        // This code is broken because SpeechSounds isn't a file name or sound specifier directly.
-        // Commenting out to avoid compile failure with https://github.com/space-wizards/RobustToolbox/pull/5540
-        // _audioSystem.PlayGlobal(speech.SpeechSounds, Filter.Local(), false, speech.AudioParams);
+        // TODO: I don't know if this is correct. Help.
+        _audioSystem.PlayGlobal(sounds.SaySound, Filter.Local(), false, speech.AudioParams);
     }
 
     public void FakeClientActivateInWorld(EntityUid activated)

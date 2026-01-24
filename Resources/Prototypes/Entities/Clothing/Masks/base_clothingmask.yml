@@ -3,8 +3,6 @@
   parent: Clothing
   id: ClothingMaskBase
   components:
-  - type: StaticPrice
-    price: 50
   - type: Sprite
     state: icon
   - type: Item
@@ -23,6 +21,7 @@
   id: ActionToggleMask
   name: Toggle Mask
   description: Handy, but prevents insertion of pie into your pie hole.
+  categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
     icon: { sprite: Clothing/Mask/gas.rsi, state: icon }

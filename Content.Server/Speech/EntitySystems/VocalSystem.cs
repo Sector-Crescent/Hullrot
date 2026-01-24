@@ -1,7 +1,6 @@
 using Content.Server.Actions;
 using Content.Server.Chat.Systems;
 using Content.Server.Speech.Components;
-using Content.Server.Speech.Prototypes;
 using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
 using Content.Shared.Chat.Prototypes;
@@ -69,12 +68,6 @@ public sealed class VocalSystem : EntitySystem
             || !_actionBlocker.CanSpeak(uid)
             || TryComp<ReplacementAccentComponent>(uid, out var replacement) && replacement.Accent == MuzzleAccent) // This is not ideal, but it works.
             return;
-
-        if (_proto.TryIndex(component.ForceEmoteSounds, out var emoteSoundsPrototype, false))
-        {
-            component.EmoteSounds = emoteSoundsPrototype;
-            component.ForceEmoteSounds = null;
-        }
 
         // snowflake case for wilhelm scream easter egg
         if (args.Emote.ID == component.ScreamId)

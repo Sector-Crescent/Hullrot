@@ -1,27 +1,25 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Alert;
-using Content.Shared.CCVar;
 using Content.Shared.Damage;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Rejuvenate;
 using Content.Shared.StatusIcon;
+using Robust.Shared.Prototypes;
 using Content.Shared.Mood;
 using Robust.Shared.Network;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Robust.Shared.Configuration;
+using Content.Shared.CCVar;
 
 namespace Content.Shared.Nutrition.EntitySystems;
 
 public sealed class HungerSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
@@ -29,6 +27,8 @@ public sealed class HungerSystem : EntitySystem
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
+    [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly IConfigurationManager _config = default!;
 
     [ValidatePrototypeId<SatiationIconPrototype>]
     private const string HungerIconOverfedId = "HungerIconOverfed";
@@ -39,9 +39,17 @@ public sealed class HungerSystem : EntitySystem
     [ValidatePrototypeId<SatiationIconPrototype>]
     private const string HungerIconStarvingId = "HungerIconStarving";
 
+    private SatiationIconPrototype? _hungerIconOverfed;
+    private SatiationIconPrototype? _hungerIconPeckish;
+    private SatiationIconPrototype? _hungerIconStarving;
+
     public override void Initialize()
     {
         base.Initialize();
+
+        DebugTools.Assert(_prototype.TryIndex(HungerIconOverfedId, out _hungerIconOverfed) &&
+                          _prototype.TryIndex(HungerIconPeckishId, out _hungerIconPeckish) &&
+                          _prototype.TryIndex(HungerIconStarvingId, out _hungerIconStarving));
 
         SubscribeLocalEvent<HungerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<HungerComponent, ComponentShutdown>(OnShutdown);
@@ -78,16 +86,6 @@ public sealed class HungerSystem : EntitySystem
     }
 
     /// <summary>
-    /// Gets the current hunger value of the given <see cref="HungerComponent"/>.
-    /// </summary>
-    public float GetHunger(HungerComponent component)
-    {
-        var dt = _timing.CurTime - component.LastAuthoritativeHungerChangeTime;
-        var value = component.LastAuthoritativeHungerValue - (float)dt.TotalSeconds * component.ActualDecayRate;
-        return ClampHungerWithinThresholds(component, value);
-    }
-
-    /// <summary>
     /// Adds to the current hunger of an entity by the specified value
     /// </summary>
     /// <param name="uid"></param>
@@ -97,7 +95,7 @@ public sealed class HungerSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
-        SetHunger(uid, GetHunger(component) + amount, component);
+        SetHunger(uid, component.CurrentHunger + amount, component);
     }
 
     /// <summary>
@@ -110,23 +108,11 @@ public sealed class HungerSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
-
-        SetAuthoritativeHungerValue((uid, component), amount);
+        component.CurrentHunger = Math.Clamp(amount,
+            component.Thresholds[HungerThreshold.Dead],
+            component.Thresholds[HungerThreshold.Overfed]);
         UpdateCurrentThreshold(uid, component);
-    }
-
-    /// <summary>
-    /// Sets <see cref="HungerComponent.LastAuthoritativeHungerValue"/> and
-    /// <see cref="HungerComponent.LastAuthoritativeHungerChangeTime"/>, and dirties this entity. This "resets" the
-    /// starting point for <see cref="GetHunger"/>'s calculation.
-    /// </summary>
-    /// <param name="entity">The entity whose hunger will be set.</param>
-    /// <param name="value">The value to set the entity's hunger to.</param>
-    private void SetAuthoritativeHungerValue(Entity<HungerComponent> entity, float value)
-    {
-        entity.Comp.LastAuthoritativeHungerChangeTime = _timing.CurTime;
-        entity.Comp.LastAuthoritativeHungerValue = ClampHungerWithinThresholds(entity.Comp, value);
-        Dirty(entity);
+        DirtyField(uid, component, nameof(HungerComponent.CurrentHunger));
     }
 
     private void UpdateCurrentThreshold(EntityUid uid, HungerComponent? component = null)
@@ -173,7 +159,6 @@ public sealed class HungerSystem : EntitySystem
         if (component.HungerThresholdDecayModifiers.TryGetValue(component.CurrentThreshold, out var modifier))
         {
             component.ActualDecayRate = component.BaseDecayRate * modifier;
-            SetAuthoritativeHungerValue((uid, component), GetHunger(component));
         }
 
         component.LastThreshold = component.CurrentThreshold;
@@ -201,7 +186,7 @@ public sealed class HungerSystem : EntitySystem
     /// <returns></returns>
     public HungerThreshold GetHungerThreshold(HungerComponent component, float? food = null)
     {
-        food ??= GetHunger(component);
+        food ??= component.CurrentHunger;
         var result = HungerThreshold.Dead;
         var value = component.Thresholds[HungerThreshold.Overfed];
         foreach (var threshold in component.Thresholds)
@@ -212,7 +197,6 @@ public sealed class HungerSystem : EntitySystem
                 value = threshold.Value;
             }
         }
-
         return result;
     }
 
@@ -248,13 +232,13 @@ public sealed class HungerSystem : EntitySystem
         switch (component.CurrentThreshold)
         {
             case HungerThreshold.Overfed:
-                _prototype.TryIndex(HungerIconOverfedId, out prototype);
+                prototype = _hungerIconOverfed;
                 break;
             case HungerThreshold.Peckish:
-                _prototype.TryIndex(HungerIconPeckishId, out prototype);
+                prototype = _hungerIconPeckish;
                 break;
             case HungerThreshold.Starving:
-                _prototype.TryIndex(HungerIconStarvingId, out prototype);
+                prototype = _hungerIconStarving;
                 break;
             default:
                 prototype = null;
@@ -264,13 +248,6 @@ public sealed class HungerSystem : EntitySystem
         return prototype != null;
     }
 
-    private static float ClampHungerWithinThresholds(HungerComponent component, float hungerValue)
-    {
-        return Math.Clamp(hungerValue,
-            component.Thresholds[HungerThreshold.Dead],
-            component.Thresholds[HungerThreshold.Overfed]);
-    }
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -278,13 +255,12 @@ public sealed class HungerSystem : EntitySystem
         var query = EntityQueryEnumerator<HungerComponent>();
         while (query.MoveNext(out var uid, out var hunger))
         {
-            if (_timing.CurTime < hunger.NextThresholdUpdateTime)
+            if (_timing.CurTime < hunger.NextUpdateTime)
                 continue;
-            hunger.NextThresholdUpdateTime = _timing.CurTime + hunger.ThresholdUpdateRate;
+            hunger.NextUpdateTime = _timing.CurTime + hunger.UpdateRate;
 
-            UpdateCurrentThreshold(uid, hunger);
+            ModifyHunger(uid, -hunger.ActualDecayRate, hunger);
             DoContinuousHungerEffects(uid, hunger);
         }
     }
 }
-

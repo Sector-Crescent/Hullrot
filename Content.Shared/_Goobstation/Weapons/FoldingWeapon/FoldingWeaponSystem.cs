@@ -9,7 +9,7 @@ namespace Content.Shared._Goobstation.Weapons.FoldingWeapon;
 
 public sealed class FoldingWeaponSystem : EntitySystem
 {
-    [Dependency] private readonly SharedWieldableSystem _wieldable = default!;
+    [Dependency] private readonly WieldableSystem _wieldable = default!;
     [Dependency] private readonly ClothingSystem _clothing = default!;
     [Dependency] private readonly SharedItemSystem _item = default!;
 
@@ -17,7 +17,7 @@ public sealed class FoldingWeaponSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<FoldingWeaponComponent, WieldAttemptEvent>(OnWieldAttempt);
+        SubscribeLocalEvent<FoldingWeaponComponent, BeforeWieldEvent>(OnBeforeWield);
         SubscribeLocalEvent<FoldingWeaponComponent, ItemToggledEvent>(OnToggle);
         SubscribeLocalEvent<FoldingWeaponComponent, AttemptShootEvent>(OnShootAttempt);
     }
@@ -39,7 +39,7 @@ public sealed class FoldingWeaponSystem : EntitySystem
         _clothing.SetEquippedPrefix(ent, prefix);
     }
 
-    private void OnWieldAttempt(Entity<FoldingWeaponComponent> ent, ref WieldAttemptEvent args)
+    private void OnBeforeWield(Entity<FoldingWeaponComponent> ent, ref BeforeWieldEvent args)
     {
         if (!CanShoot(ent))
             args.Cancel();

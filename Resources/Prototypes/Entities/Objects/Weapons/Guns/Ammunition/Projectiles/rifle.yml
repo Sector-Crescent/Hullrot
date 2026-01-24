@@ -23,6 +23,17 @@
         Blunt: 2
 
 - type: entity
+  id: BulletRifleRubber
+  name: bullet (7.62x51mm rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
   id: BulletRifleIncendiary
   parent: BaseBulletIncendiary
   name: bullet (7.62x51mm dragon's breath)
@@ -69,3 +80,4 @@
     proto: BulletRifleShrapnel
     count: 4
     spread: 15
+

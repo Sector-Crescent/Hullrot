@@ -5,21 +5,18 @@
   equipment:
     head: ClothingHeadCourier
     jumpsuit: ClothingUniformCourier
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
     id: MailCarrierPDA
     ears: ClothingHeadsetCargo
     belt: CourierBag
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformSkirtCourier
     satchel: ClothingBackpackSatchelFilled
     duffelbag: ClothingBackpackDuffelFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: CourierPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitCourier
     head: ClothingHeadEnvirohelmCourier

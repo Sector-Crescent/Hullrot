@@ -8,16 +8,17 @@
       state: security
     - type: MachineBoard
       prototype: WeaponEnergyTurretStation
-      machinePartRequirements:
+      requirements:
         PowerCell: 1
       tagRequirements:
         TurretCompatibleWeapon:
-          amount: 1
-          defaultPrototype: WeaponLaserCannon
-          examineName: construction-insert-info-examine-name-laser-cannon
+          Amount: 1
+          DefaultPrototype: WeaponLaserCannon
+          ExamineName: Laser Cannon
         ProximitySensor:
-          amount: 1
-          defaultPrototype: ProximitySensor
+          Amount: 1
+          DefaultPrototype: ProximitySensor
+          ExamineName: Proximity Sensor
 
 - type: entity
   id: WeaponEnergyTurretAIMachineCircuitboard

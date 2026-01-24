@@ -95,16 +95,12 @@
     - Captain
     - HeadOfSecurity
     - Security
-    - NanotrasenRepresentative #EE
-    - BlueshieldOfficer #EE
-    - Magistrate #EE
     - Borg
     - BasicSilicon
   - type: DeployableTurretController
     accessGroups:
     - Cargo
     - Command
-    - Dignitary #EE
     - Engineering
     - General
     - Medical
@@ -117,8 +113,6 @@
     - Atmospherics
     - Bar
     - BasicSilicon
-    - BlueshieldOfficer #EE
-    - Boxer #EE
     - Borg
     - Brig
     - Detective
@@ -128,9 +122,7 @@
     - Chemistry
     - ChiefEngineer
     - ChiefMedicalOfficer
-    - Clown #EE
     - Command
-    - Corpsman #EE
     - Cryogenics
     - Engineering
     - External
@@ -140,18 +132,9 @@
     - Janitor
     - Kitchen
     - Lawyer
-    - Mail #EE
     - Maintenance
-    - Mantis #EE
-    - Magistrate #EE
     - Medical
-    - Mime #EE
-    - Musician #EE
-    - NanotrasenRepresentative #EE
-    - Paramedic #EE
-    - Psychologist #EE
     - Quartermaster
-    - Reporter #EE
     - Research
     - ResearchDirector
     - Salvage
@@ -221,9 +204,6 @@
     exemptAccessLevels:
     - Captain
     - ResearchDirector
-    - NanotrasenRepresentative #EE
-    - BlueshieldOfficer #EE
-    - Magistrate #EE
     - BasicSilicon
     - Borg
   - type: DeviceNetwork

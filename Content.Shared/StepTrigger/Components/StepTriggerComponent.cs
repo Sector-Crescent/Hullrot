@@ -6,7 +6,7 @@ using Robust.Shared.GameStates;
 namespace Content.Shared.StepTrigger.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-[Access(typeof(StepTriggerSystem), typeof(StepTriggerImmuneSystem))]
+[Access(typeof(StepTriggerSystem))]
 public sealed partial class StepTriggerComponent : Component
 {
     /// <summary>

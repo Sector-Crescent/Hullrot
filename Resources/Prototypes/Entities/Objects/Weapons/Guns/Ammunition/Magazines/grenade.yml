@@ -1,13 +1,12 @@
 - type: entity
   id: BaseMagazineGrenade
-  name: grenade cartridge
-  parent: [ BaseItem, BaseRestrictedContraband ]
+  name: missile cartridge
+  parent: BaseItem
   abstract: true
   components:
   - type: Tag
     tags:
     - MagazineGrenade
-    - Magazine
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -46,7 +45,7 @@
   parent: BaseMagazineGrenade
   components:
   - type: BallisticAmmoProvider
-
+    
 - type: entity
   id: MagazineGrenadeFrag
   name: frag grenade cartridge

@@ -25,7 +25,7 @@ public sealed partial class GravitySystem
     {
         var localPlayer = _playerManager.LocalEntity;
 
-        if (!TryComp(localPlayer, out TransformComponent? xform) ||
+        if (!TryComp<TransformComponent>(localPlayer, out var xform) ||
             xform.GridUid != uid && xform.MapUid != uid)
         {
             return;
@@ -46,7 +46,7 @@ public sealed partial class GravitySystem
 
         var localPlayer = _playerManager.LocalEntity;
 
-        if (!TryComp(localPlayer, out TransformComponent? xform))
+        if (!TryComp<TransformComponent>(localPlayer, out var xform))
             return;
 
         if (xform.GridUid != uid ||

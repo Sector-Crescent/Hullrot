@@ -4,13 +4,14 @@
   description: job-description-research-assistant
   playTimeTracker: JobResearchAssistant
   requirements:
-    - !type:CharacterEmployerRequirement
-      employers:
-      - NanoTrasen
-      - ZengHuPharmaceuticals
+    # - !type:DepartmentTimeRequirement # DeltaV - Removes time limit
+    #   department: Science
+    #   time: 54000 #15 hrs
+    #   inverted: true # stop playing intern if you're good at science!
   startingGear: ResearchAssistantGear
   icon: "JobIconResearchAssistant"
   supervisors: job-supervisors-science
+  canBeAntag: true # DeltaV - Can be antagonist
   access:
   - Research
   - Maintenance
@@ -21,18 +22,12 @@
   - ScientistPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorWhite
-    back: ClothingBackpackScience
+    back: ClothingBackpackScienceFilled
     shoes: ClothingShoesColorWhite
     id: ResearchAssistantPDA
     ears: ClothingHeadsetScience
     pocket1: BookPsionicsGuidebook
     pocket2: BookScientistsGuidebook
-<<<<<<< HEAD
-  storage:
-    back:
-    - BoxSurvival
-=======
     innerClothingSkirt: ClothingUniformJumpskirtColorWhite
     satchel: ClothingBackpackSatchelScienceFilled
     duffelbag: ClothingBackpackDuffelScienceFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f

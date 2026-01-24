@@ -43,7 +43,7 @@ public sealed partial class AntagPrototype : IPrototype
     /// <summary>
     ///     Requirements that must be met to opt in to this antag role.
     /// </summary>
-    [DataField, Access(typeof(SharedRoleSystem), Other = AccessPermissions.None)]
+    [DataField("requirements")]
     public List<CharacterRequirement>? Requirements;
 
     /// <summary>

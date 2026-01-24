@@ -1,12 +1,7 @@
-# TODO: this could probably use some kind of base structure prototype
-# every wallmount cabinet copypastes placement and like 8 components
-- type: entity
-  parent: BaseItemCabinet
+﻿- type: entity
   id: ExtinguisherCabinet
   name: extinguisher cabinet
   description: A small wall mounted cabinet designed to hold a fire extinguisher.
-  placement:
-    mode: SnapgridCenter
   components:
     - type: WallMount
       arc: 360
@@ -20,19 +15,27 @@
       layers:
       - state: frame
       - state: extinguisher
-        map: ["enum.ItemCabinetVisuals.Layer"]
+        map: ["enum.ItemCabinetVisualLayers.ContainsItem"]
         visible: true
       - state: closed
-        map: ["enum.OpenableVisuals.Layer"]
+        map: ["enum.ItemCabinetVisualLayers.Door"]
+    - type: ItemCabinet
+      cabinetSlot:
+        ejectOnInteract: true
+        whitelist:
+          components:
+          - FireExtinguisher
+      doorSound:
+        path: /Audio/Machines/machine_switch.ogg
+      openState: open
+      closedState: closed
+    - type: Appearance
     - type: ItemSlots
-      slots:
-        ItemCabinet:
-          ejectOnInteract: true
-          whitelist:
-            components:
-            - SpraySafety
+    - type: ContainerContainer
+      containers:
+        ItemCabinet: !type:ContainerSlot
     - type: Damageable
-      damageContainer: StructuralInorganic
+      damageContainer: Inorganic
       damageModifierSet: Metallic
     - type: Destructible
       thresholds:
@@ -54,26 +57,46 @@
                 collection: MetalGlassBreak
                 params:
                   volume: -4
+  placement:
+    mode: SnapgridCenter
 
 - type: entity
-  parent: ExtinguisherCabinet
   id: ExtinguisherCabinetOpen
+  parent: ExtinguisherCabinet
   suffix: Open
   components:
-  - type: Openable
+  - type: ItemCabinet
     opened: true
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: open
+    closedState: closed
 
 - type: entity
-  parent: ExtinguisherCabinet
   id: ExtinguisherCabinetFilled
+  parent: ExtinguisherCabinet
   suffix: Filled
   components:
-  - type: ContainerFill
-    containers:
-      ItemCabinet:
-      - FireExtinguisher
+  - type: ItemCabinet
+    cabinetSlot:
+      ejectOnInteract: true
+      startingItem: FireExtinguisher
+      whitelist:
+        components:
+        - FireExtinguisher
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: open
+    closedState: closed
 
 - type: entity
-  parent: [ExtinguisherCabinetFilled, ExtinguisherCabinetOpen]
   id: ExtinguisherCabinetFilledOpen
+  parent: ExtinguisherCabinetFilled
   suffix: Filled, Open
+  components:
+  - type: ItemCabinet
+    opened: true
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: open
+    closedState: closed

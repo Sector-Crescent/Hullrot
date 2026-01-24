@@ -1,11 +1,11 @@
 - type: entity
   categories: [ HideSpawnMenu ]
-  parent: [ClothingBackpack]
+  parent: [ClothingBackpackFilled]
   id: ClothingBackpackMercenaryFilled
 
 - type: entity
   categories: [ HideSpawnMenu ]
-  parent: [ClothingBackpackPilot, ClothingBackpack]
+  parent: [ClothingBackpackPilot, ClothingBackpackFilled]
   id: ClothingBackpackPilotFilled
 
 - type: entity

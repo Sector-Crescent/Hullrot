@@ -8,7 +8,7 @@ using Robust.Shared.Toolshed.TypeParsers;
 
 namespace Content.Server.Toolshed.Commands.Verbs;
 
-[ToolshedCommand, AdminCommand(AdminFlags.Moderator)]
+[ToolshedCommand, AdminCommand(AdminFlags.Admin)]
 public sealed class RunVerbAsCommand : ToolshedCommand
 {
     private SharedVerbSystem? _verb;

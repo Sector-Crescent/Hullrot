@@ -64,9 +64,11 @@ namespace Content.Client.Inventory
         {
             base.Open();
 
-            _strippingMenu = this.CreateWindowCenteredLeft<StrippingMenu>();
+            _strippingMenu = this.CreateWindow<StrippingMenu>();
             _strippingMenu.OnDirty += UpdateMenu;
             _strippingMenu.Title = Loc.GetString("strippable-bound-user-interface-stripping-menu-title", ("ownerName", Identity.Name(Owner, EntMan)));
+
+            _strippingMenu?.OpenCenteredLeft();
         }
 
         protected override void Dispose(bool disposing)
@@ -102,7 +104,7 @@ namespace Content.Client.Inventory
                 }
             }
 
-            if (EntMan.TryGetComponent<HandsComponent>(Owner, out var handsComp) && handsComp.CanBeStripped)
+            if (EntMan.TryGetComponent<HandsComponent>(Owner, out var handsComp))
             {
                 // good ol hands shit code. there is a GuiHands comparer that does the same thing... but these are hands
                 // and not gui hands... which are different...
@@ -140,7 +142,7 @@ namespace Content.Client.Inventory
                     StyleClasses = { StyleBase.ButtonOpenRight }
                 };
 
-                button.OnPressed += (_) => SendPredictedMessage(new StrippingEnsnareButtonPressed());
+                button.OnPressed += (_) => SendMessage(new StrippingEnsnareButtonPressed());
 
                 _strippingMenu.SnareContainer.AddChild(button);
             }
@@ -180,7 +182,7 @@ namespace Content.Client.Inventory
             // So for now: only stripping & examining
             if (ev.Function == EngineKeyFunctions.Use)
             {
-                SendPredictedMessage(new StrippingSlotButtonPressed(slot.SlotName, slot is HandButton));
+                SendMessage(new StrippingSlotButtonPressed(slot.SlotName, slot is HandButton));
                 return;
             }
 
@@ -188,15 +190,9 @@ namespace Content.Client.Inventory
                 return;
 
             if (ev.Function == ContentKeyFunctions.ExamineEntity)
-            {
                 _examine.DoExamine(slot.Entity.Value);
-                ev.Handle();
-            }
             else if (ev.Function == EngineKeyFunctions.UseSecondary)
-            {
                 _ui.GetUIController<VerbMenuUIController>().OpenVerbMenu(slot.Entity.Value);
-                ev.Handle();
-            }
         }
 
         private void AddInventoryButton(EntityUid invUid, string slotId, InventoryComponent inv)

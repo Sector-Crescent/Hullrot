@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.Preferences;
@@ -43,10 +42,8 @@ public sealed partial class CharacterItemGroupItem
         switch (Type)
         {
             case "trait":
-                // RobustToolbox my beloved
-                value = profile.TraitPreferences.FirstOrNull(
-                    p => protoMan.Index<TraitPrototype>((string) p).ID == ID);
-                return value != null;
+                return profile.TraitPreferences.TryFirstOrDefault(
+                    p => protoMan.Index<TraitPrototype>((string) p).ID == ID, out value);
             case "loadout":
                 return profile.LoadoutPreferences.TryFirstOrDefault(
                     p => protoMan.Index<LoadoutPrototype>(((Loadout) p).LoadoutName).ID == ID, out value);

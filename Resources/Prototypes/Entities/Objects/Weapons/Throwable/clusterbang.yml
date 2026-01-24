@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseItem, BaseRestrictedContraband]
+  parent: BaseItem
   id: ClusterBang
   name: clusterbang
   description: Can be used only with flashbangs. Explodes several times.
@@ -20,7 +20,7 @@
 - type: entity
   parent: GrenadeBase
   id: ClusterBangFull
-  name: clusterbang
+  name: ClusterBang
   description: Launches three flashbangs after the timer runs out.
   suffix: Full
   components:
@@ -46,7 +46,7 @@
       cluster-payload: !type:Container
 
 - type: entity
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: GrenadeBase
   id: ClusterGrenade
   name: clustergrenade
   description: Why use one grenade when you can use three at once!
@@ -71,7 +71,7 @@
       cluster-payload: !type:Container
 
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: BaseItem
   id: ClusterBananaPeel
   name: cluster banana peel
   description: Releases a deadly sound of a beeping grenade. does nothing functionally since the NT ACT 8232, banning the production of shrapnel grenades due to bluespace distortion.
@@ -104,7 +104,7 @@
       cluster-payload: !type:Container
 
 - type: entity
-  parent: [GrenadeBase, BaseSecurityContraband]
+  parent: GrenadeBase
   id: GrenadeStinger
   name: stinger grenade
   description: Releases a deadly sound of a beeping grenade. does nothing functionally since the NT ACT 8232, banning the production of shrapnel grenades due to bluespace distortion.
@@ -129,7 +129,7 @@
       cluster-payload: !type:Container
 
 - type: entity
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: GrenadeBase
   id: GrenadeIncendiary
   name: incendiary grenade
   description: Releases a deadly sound of a beeping grenade. does nothing functionally since the NT ACT 8232, banning the production of shrapnel grenades due to bluespace distortion.
@@ -154,7 +154,7 @@
       cluster-payload: !type:Container
 
 - type: entity
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: GrenadeBase
   id: GrenadeShrapnel
   name: shrapnel grenade
   description: Releases a deadly sound of a beeping grenade. does nothing functionally since the NT ACT 8232, banning the production of shrapnel grenades due to bluespace distortion.

@@ -1,13 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Cargo.Systems;
 using Content.Server.Emp;
-using Content.Server.Power.Components;
 using Content.Shared.Emp;
+using Content.Server.Power.Components;
 using Content.Shared.Examine;
 using Content.Shared.Rejuvenate;
+using Content.Shared.Timing;
 using JetBrains.Annotations;
-using Robust.Shared.Utility;
 using Robust.Shared.Containers;
+using Robust.Shared.Utility;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Power.EntitySystems
@@ -15,8 +16,8 @@ namespace Content.Server.Power.EntitySystems
     [UsedImplicitly]
     public sealed class BatterySystem : EntitySystem
     {
-        [Dependency] protected readonly IGameTiming Timing = default!;
         [Dependency] private readonly SharedContainerSystem _containers = default!; // WD EDIT
+        [Dependency] protected readonly IGameTiming Timing = default!;
 
         private const string CellContainer = "cell_slot";
 
@@ -92,8 +93,8 @@ namespace Content.Server.Power.EntitySystems
             var query = EntityQueryEnumerator<BatterySelfRechargerComponent, BatteryComponent>();
             while (query.MoveNext(out var uid, out var comp, out var batt))
             {
-                if (!comp.AutoRecharge || IsFull(uid, batt))
-                    continue;
+                if (!comp.AutoRecharge) continue;
+                if (batt.IsFullyCharged) continue;
 
                 if (comp.AutoRechargePause)
                 {
@@ -161,11 +162,8 @@ namespace Content.Server.Power.EntitySystems
 
             var old = battery.CurrentCharge;
             battery.CurrentCharge = MathHelper.Clamp(value, 0, battery.MaxCharge);
-            if (MathHelper.CloseTo(battery.CurrentCharge, old) &&
-                !(old != battery.CurrentCharge && battery.CurrentCharge == battery.MaxCharge))
-            {
+            if (MathHelper.CloseTo(battery.CurrentCharge, old))
                 return;
-            }
 
             var ev = new ChargeChangedEvent(battery.CurrentCharge, battery.MaxCharge);
             RaiseLocalEvent(uid, ref ev);
@@ -230,14 +228,14 @@ namespace Content.Server.Power.EntitySystems
         }
 
         /// <summary>
-        /// Returns whether the battery is full.
+        /// Returns whether the battery is at least 99% charged, basically full.
         /// </summary>
         public bool IsFull(EntityUid uid, BatteryComponent? battery = null)
         {
             if (!Resolve(uid, ref battery))
                 return false;
 
-            return battery.CurrentCharge >= battery.MaxCharge;
+            return battery.CurrentCharge / battery.MaxCharge >= 0.99f;
         }
 
         // WD EDIT START

@@ -5,7 +5,7 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands
 {
-    [AdminCommand(AdminFlags.NameColor)]
+    [AdminCommand(AdminFlags.Admin)]
     internal sealed class SetAdminOOC : IConsoleCommand
     {
         public string Command => "setadminooc";
@@ -16,7 +16,7 @@ namespace Content.Server.Administration.Commands
         {
             if (shell.Player == null)
             {
-                shell.WriteError(Loc.GetString("shell-cannot-run-command-from-server"));
+                shell.WriteError(Loc.GetString("shell-only-players-can-run-this-command"));
                 return;
             }
 

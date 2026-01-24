@@ -74,7 +74,6 @@
         - Biological
         - Inorganic
         - Silicon
-        - SiliconUnshielded
     - type: PointLight
       color: "#FFDF00"
     - type: SealableClothingVisuals
@@ -129,8 +128,7 @@
     - type: StaminaDamageResistance
       coefficient: 0.5 # 50%
     - type: TemperatureProtection
-      heatingCoefficient: 0.001
-      coolingCoefficient: 0.001
+      coefficient: 0.001
 
 - type: entity
   parent: ClothingModsuitBootsStandard

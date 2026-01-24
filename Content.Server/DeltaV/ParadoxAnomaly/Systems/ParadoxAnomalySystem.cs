@@ -133,11 +133,7 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         //////////////////////////
 
         // Copy the details.
-        _humanoid.LoadProfile(
-            spawned,
-            profile,
-            loadExtensions: true, //Yes it's absolutely intended that they should straight up be EXACTLY the same character
-            generateLoadouts: true); //That means loadouts too. Have fun with there potentially being a 2nd HoS Gun for traitors to want to steal.
+        _humanoid.LoadProfile(spawned, profile);
         _metaData.SetEntityName(spawned, Name(uid));
 
         if (TryComp<DetailExaminableComponent>(uid, out var detail))
@@ -149,7 +145,7 @@ public sealed class ParadoxAnomalySystem : EntitySystem
         if (job.StartingGear != null && _proto.TryIndex<StartingGearPrototype>(job.StartingGear, out var gear))
         {
             _stationSpawning.EquipStartingGear(spawned, gear);
-            _stationSpawning.SetPdaAndIdCardData(spawned,
+            _stationSpawning.EquipIdCard(spawned,
                 profile.Name,
                 job,
                 station);

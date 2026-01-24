@@ -65,8 +65,6 @@ using Content.Shared.Projectiles;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Overlays.Switchable;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.Forensics.Components;
-
 
 namespace Content.Server.Changeling;
 

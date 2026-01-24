@@ -5,7 +5,7 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands;
 
-[AdminCommand(AdminFlags.Fun)]
+[AdminCommand(AdminFlags.Admin)]
 public sealed class FaxUiCommand : IConsoleCommand
 {
     public string Command => "faxui";
@@ -15,9 +15,10 @@ public sealed class FaxUiCommand : IConsoleCommand
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        if (shell.Player is not { } player)
+        var player = shell.Player;
+        if (player == null)
         {
-            shell.WriteError(Loc.GetString("shell-cannot-run-command-from-server"));
+            shell.WriteLine("shell-only-players-can-run-this-command");
             return;
         }
 
@@ -26,3 +27,4 @@ public sealed class FaxUiCommand : IConsoleCommand
         eui.OpenEui(ui, player);
     }
 }
+

@@ -35,7 +35,6 @@ public abstract class SharedEmitSoundSystem : EntitySystem
     [Dependency] private   readonly SharedAmbientSoundSystem _ambient = default!;
     [Dependency] private   readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] protected readonly SharedPopupSystem Popup = default!;
-    [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
 
     public override void Initialize()
@@ -84,13 +83,13 @@ public abstract class SharedEmitSoundSystem : EntitySystem
     private void OnEmitSoundOnLand(EntityUid uid, BaseEmitSoundComponent component, ref LandEvent args)
     {
         if (!args.PlaySound ||
-            !TryComp(uid, out TransformComponent? xform) ||
+            !TryComp<TransformComponent>(uid, out var xform) ||
             !TryComp<MapGridComponent>(xform.GridUid, out var grid))
         {
             return;
         }
 
-        var tile = _map.GetTileRef(xform.GridUid.Value, grid, xform.Coordinates);
+        var tile = grid.GetTileRef(xform.Coordinates);
 
         // Handle maps being grids (we'll still emit the sound).
         if (xform.GridUid != xform.MapUid && tile.IsSpace(_tileDefMan))
@@ -145,22 +144,14 @@ public abstract class SharedEmitSoundSystem : EntitySystem
         if (component.Sound == null)
             return;
 
-        if (component.Positional)
+        if (predict)
         {
-            var coords = Transform(uid).Coordinates;
-            if (predict)
-                _audioSystem.PlayPredicted(component.Sound, coords, user);
-            else if (_netMan.IsServer)
-                // don't predict sounds that client couldn't have played already
-                _audioSystem.PlayPvs(component.Sound, coords);
+            _audioSystem.PlayPredicted(component.Sound, uid, user);
         }
-        else
+        else if (_netMan.IsServer)
         {
-            if (predict)
-                _audioSystem.PlayPredicted(component.Sound, uid, user);
-            else if (_netMan.IsServer)
-                // don't predict sounds that client couldn't have played already
-                _audioSystem.PlayPvs(component.Sound, uid);
+            // don't predict sounds that client couldn't have played already
+            _audioSystem.PlayPvs(component.Sound, uid);
         }
     }
 
@@ -187,7 +178,7 @@ public abstract class SharedEmitSoundSystem : EntitySystem
 
         if (_netMan.IsServer && sound != null)
         {
-            _audioSystem.PlayPvs(_audioSystem.ResolveSound(sound), uid, AudioParams.Default.WithVolume(volume));
+            _audioSystem.PlayPvs(_audioSystem.GetSound(sound), uid, AudioParams.Default.WithVolume(volume));
         }
     }
 

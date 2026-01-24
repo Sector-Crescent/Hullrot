@@ -19,8 +19,7 @@
     - BorgModuleGeneric
   - type: GuideHelp
     guides:
-    - Cyborgs
-    - Robotics
+      - Cyborgs
 
 - type: entity
   id: BaseProviderBorgModule
@@ -35,6 +34,7 @@
   id: ActionBorgSwapModule
   name: Swap Module
   description: Select this module, enabling you to use the tools it provides.
+  categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
     itemIconStyle: BigAction
@@ -91,18 +91,18 @@
   parent: BaseBorgModule
   abstract: true
   components:
-  - type: Tag
-    tags:
-    - BorgModuleSyndicate
+    - type: Tag
+      tags:
+        - BorgModuleSyndicate
 
 - type: entity
   id: BaseBorgModuleSyndicateAssault
   parent: BaseBorgModule
   abstract: true
   components:
-  - type: Tag
-    tags:
-    - BorgModuleSyndicateAssault
+    - type: Tag
+      tags:
+        - BorgModuleSyndicateAssault
 
 # generic modules
 - type: entity
@@ -220,7 +220,6 @@
     items:
     - MiningDrill
     # - Shovel # Goobstation
-    - MineralScannerUnpowered
     - OreBag
     - Crowbar
     - RadioHandheld
@@ -287,10 +286,9 @@
     - state: icon-tools-adv
   - type: ItemBorgModule
     items:
-    - JawsOfLife
-    - PowerDrill
-    - Multitool
+    - Omnitool
     - WelderExperimental
+    - NetworkConfigurator
     - RemoteSignaller
     - GasAnalyzer
     - GeigerCounter
@@ -426,11 +424,11 @@
     - state: icon-treatment
   - type: ItemBorgModule
     items:
-    - HandheldHealthAnalyzerUnpowered
     - Brutepack10Lingering
     - Ointment10Lingering
     - Gauze10Lingering
     - Bloodpack10Lingering
+    - Syringe
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: treatment-module }
 
@@ -461,9 +459,9 @@
   - type: ItemBorgModule
     items:
     - HandheldHealthAnalyzerUnpowered
-    #    - Beaker # Frontier
-    #    - Beaker # Frontier
-    #    - BorgDropper # Frontier
+#    - Beaker # Frontier
+#    - Beaker # Frontier
+#    - BorgDropper # Frontier
     - BorgHypo
     # Frontier: droppable borg items
     droppableItems:
@@ -618,7 +616,7 @@
 #syndicate modules
 - type: entity
   id: BorgModuleSyndicateWeapon
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   name: weapon cyborg module
   components:
   - type: Sprite
@@ -627,79 +625,93 @@
     - state: icon-syndicate
   - type: ItemBorgModule
     items:
-    - WeaponPistolEchis
-    - EnergyDaggerLoud
+    - WeaponSMGC20ROW
+    - EnergySword
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
 
 - type: entity
   id: BorgModuleOperative
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   name: operative cyborg module
-  description: A module that comes with a crowbar, an Emag, an Access Breaker and a syndicate pinpointer.
+  description: A module that comes with a crowbar, an Emag and a syndicate pinpointer.
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-syndicate
-  - type: ItemBorgModule
-    items:
-    - Crowbar
-    - Emag
-    - AccessBreaker
-    - PinpointerSyndicateNuclear
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
-
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+      - SyndicateJawsOfLife
+      - Emag
+      - Doorjack
+      - WelderIndustrial
+      - MassScannerEEBorg
+      droppableItems:
+      - id: JetpackBlackFilled
+        whitelist:
+          components:
+          - HullJetpack
+      - id: MagazineVulcan
+        whitelist:
+          components:
+          - BallisticAmmoProvider
+          - CartridgeAmmo
+      - id: AgentIDCard
+        whitelist:
+          components:
+          - Access
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
 - type: entity
   id: BorgModuleEsword
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   name: energy sword cyborg module
   description: A module that comes with a double energy sword.
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-syndicate
-  - type: ItemBorgModule
-    items:
-    - CyborgEnergySwordDouble
-    - PinpointerSyndicateNuclear
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+      - EnergySwordDouble
+      - MassScannerEEBorg
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
 
 - type: entity
   id: BorgModuleL6C
-  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseSyndicateContraband ]
-  name: L6C ROW cyborg module
-  description: A module that comes with a L6C.
+  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule ]
+  name: C54 ROW cyborg module
+  description: A module that comes with a C54.
   components:
-  - type: Sprite
-    layers:
-    - state: syndicate
-    - state: icon-syndicate
-  - type: ItemBorgModule
-    items:
-    - WeaponLightMachineGunL6C
-    - PinpointerSyndicateNuclear
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+        - MassScannerEEBorg
+        - WeaponLightMachineGunC54ROW
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
 
 - type: entity
   id: BorgModuleMartyr
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
   name: martyr cyborg module
   description: "A module that comes with an explosive you probably don't want to handle yourself."
   components:
-  - type: Sprite
-    layers:
-    - state: syndicateborgbomb
-    - state: icon-bomb
-  - type: ItemBorgModule
-    items:
-    - SelfDestructSeq
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-martyr-module }
+    - type: Sprite
+      layers:
+        - state: syndicateborgbomb
+        - state: icon-bomb
+    - type: ItemBorgModule
+      items:
+        - SelfDestructSeq
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-martyr-module }
 
 # Shitmed Modules
 
@@ -745,11 +757,8 @@
     - state: icon-advanced-surgery
   - type: ItemBorgModule
     items:
-    - EnergyScalpel
-    - EnergyCautery
-    - AdvancedRetractor
-    - BoneGel
-    # Frontier: droppable borg items
+    - OmnimedToolSyndie
+    - DefibrillatorOneHandedUnpowered
     droppableItems:
     - id: OrganHumanHeart
       whitelist:

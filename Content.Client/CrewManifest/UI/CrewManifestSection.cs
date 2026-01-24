@@ -22,7 +22,7 @@ public sealed class CrewManifestSection : BoxContainer
         AddChild(new Label()
         {
             StyleClasses = { "LabelBig" },
-            Text = Loc.GetString(section.Name)
+            Text = Loc.GetString($"department-{section.ID}")
         });
 
         var gridContainer = new GridContainer()

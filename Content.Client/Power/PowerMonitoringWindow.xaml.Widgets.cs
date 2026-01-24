@@ -102,7 +102,6 @@ public sealed partial class PowerMonitoringWindow
         // Update tool tip
         button.ToolTip = Loc.GetString(name);
 
-        // Update power value
         // Don't use SI prefixes, just give the number in W, so that it is readily apparent which consumer is using a lot of power.
         button.PowerValue.Text = Loc.GetString("power-monitoring-window-button-value", ("value", Math.Round(entry.PowerValue).ToString("N0")));
 
@@ -269,6 +268,27 @@ public sealed partial class PowerMonitoringWindow
         return false;
     }
 
+    private bool TryGetVerticalScrollbar(ScrollContainer scroll, [NotNullWhen(true)] out VScrollBar? vScrollBar)
+    {
+        vScrollBar = null;
+
+        foreach (var child in scroll.Children)
+        {
+            if (child is not VScrollBar)
+                continue;
+
+            var castChild = child as VScrollBar;
+
+            if (castChild != null)
+            {
+                vScrollBar = castChild;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void AutoScrollToFocus()
     {
         if (!_autoScrollActive)
@@ -278,12 +298,15 @@ public sealed partial class PowerMonitoringWindow
         if (scroll == null)
             return;
 
+        if (!TryGetVerticalScrollbar(scroll, out var vScrollbar))
+            return;
+
         if (!TryGetNextScrollPosition(out float? nextScrollPosition))
             return;
 
-        scroll.VScrollTarget = nextScrollPosition.Value;
+        vScrollbar.ValueTarget = nextScrollPosition.Value;
 
-        if (MathHelper.CloseToPercent(scroll.VScroll, scroll.VScrollTarget))
+        if (MathHelper.CloseToPercent(vScrollbar.Value, vScrollbar.ValueTarget))
             _autoScrollActive = false;
     }
 
@@ -306,7 +329,7 @@ public sealed partial class PowerMonitoringWindow
                 BorderThickness = new Thickness(2),
             };
 
-            msg.AddMarkupOrThrow(Loc.GetString("power-monitoring-window-rogue-power-consumer"));
+            msg.AddMarkup(Loc.GetString("power-monitoring-window-rogue-power-consumer"));
             SystemWarningPanel.Visible = true;
         }
 
@@ -319,7 +342,7 @@ public sealed partial class PowerMonitoringWindow
                 BorderThickness = new Thickness(2),
             };
 
-            msg.AddMarkupOrThrow(Loc.GetString("power-monitoring-window-power-net-abnormalities"));
+            msg.AddMarkup(Loc.GetString("power-monitoring-window-power-net-abnormalities"));
             SystemWarningPanel.Visible = true;
         }
 
@@ -440,12 +463,10 @@ public sealed class PowerMonitoringButton : Button
     public BoxContainer MainContainer;
     public TextureRect TextureRect;
     public Label NameLocalized;
-
+    public Label PowerValue;
     public ProgressBar BatteryLevel;
     public PanelContainer BackgroundPanel;
     public Label BatteryPercentage;
-
-    public Label PowerValue;
 
     public PowerMonitoringButton()
     {
@@ -479,7 +500,7 @@ public sealed class PowerMonitoringButton : Button
         };
 
         MainContainer.AddChild(NameLocalized);
-
+        
         BatteryLevel = new ProgressBar()
         {
             SetWidth = 47f,
@@ -526,8 +547,7 @@ public sealed class PowerMonitoringButton : Button
         PowerValue = new Label()
         {
             HorizontalAlignment = HAlignment.Right,
-            Align = Label.AlignMode.Right,
-            SetWidth = 80f,
+            SetWidth = 72f,
             Margin = new Thickness(10, 0, 0, 0),
             ClipText = true,
         };

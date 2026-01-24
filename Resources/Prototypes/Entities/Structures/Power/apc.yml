@@ -86,6 +86,7 @@
         type: ApcBoundUserInterface
   - type: ActivatableUI
     inHandsOnly: false
+    singleUser: true
     key: enum.ApcUiKey.Key
   - type: Construction
     graph: APC
@@ -99,8 +100,8 @@
   - type: WiresPanel
   - type: WiresVisuals
   - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallicStrong
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -140,10 +141,6 @@
     price: 500
   - type: BatteryDrinkerSource # Parkstation IPCs
     maxAmount: 10000
-  - type: GuideHelp
-    guides:
-    - VoltageNetworks
-    - Power
 
 # APC under construction
 - type: entity
@@ -167,8 +164,8 @@
     node: apcFrame
   - type: WallMount
   - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -205,7 +202,7 @@
 - type: entity
   parent: BaseAPC
   id: APCBasic
-  suffix: Basic, 50kJ
+  suffix: Basic, 50kW
   components:
   - type: Battery
     maxCharge: 50000
@@ -216,7 +213,7 @@
 - type: entity
   parent: BaseAPC
   id: APCHighCapacity
-  suffix: High Capacity, 100kJ
+  suffix: High Capacity, 100kW
   components:
   - type: Battery
     maxCharge: 100000
@@ -227,7 +224,7 @@
 - type: entity
   parent: BaseAPC
   id: APCSuperCapacity
-  suffix: Super Capacity, 150kJ
+  suffix: Super Capacity, 150kW
   components:
   - type: Battery
     maxCharge: 150000
@@ -238,7 +235,7 @@
 - type: entity
   parent: BaseAPC
   id: APCHyperCapacity
-  suffix: Hyper Capacity, 200kJ
+  suffix: Hyper Capacity, 200kW
   components:
   - type: Battery
     maxCharge: 200000

@@ -1,6 +1,6 @@
 # Hacky for the stress test so don't even consider adding to this
 - type: entity
-  name: burrower
+  name: Burrower
   id: MobXeno
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
@@ -22,10 +22,15 @@
         true
       NavSmash: !type:Bool
         true
-  - type: Prying
-    pryPowered: true
-    force: true
+  - type: Tool
     speedModifier: 1.5
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+      true
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: Reactive
@@ -79,7 +84,7 @@
     altDisarm: false
     angle: 0
     soundHit:
-      collection: AlienClaw
+     collection: AlienClaw
     animation: WeaponArcBite
     damage:
       groups:
@@ -118,9 +123,9 @@
     currentTemperature: 310.15
   - type: Tag
     tags:
-    - CannotSuicide
-    - DoorBumpOpener
-    - FootstepSound
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
     molsPerSecondPerUnitMass: 0.0005
@@ -132,7 +137,7 @@
     roller: false
   - type: InnatePsionicPowers
     powersToAdd:
-    - TelepathyPower
+      - TelepathyPower
   - type: LanguageKnowledge
     speaks:
     - Xeno
@@ -147,7 +152,7 @@
   - type: Fauna # Lavaland Change
 
 - type: entity
-  name: praetorian
+  name: Praetorian
   parent: MobXeno
   id: MobXenoPraetorianNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -182,7 +187,7 @@
         - MobLayer
 
 - type: entity
-  name: drone
+  name: Drone
   parent: MobXeno
   id: MobXenoDroneNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -221,7 +226,7 @@
         - MobLayer
 
 - type: entity
-  name: queen
+  name: Queen
   parent: MobXeno
   id: MobXenoQueenNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -244,8 +249,8 @@
   - type: MovementSpeedModifier
   - type: MeleeWeapon
     damage:
-      groups:
-        Brute: 12
+     groups:
+       Brute: 12
   - type: Fixtures
     fixtures:
       fix1:
@@ -269,7 +274,7 @@
     - Xeno
 
 - type: entity
-  name: ravager
+  name: Ravager
   parent: MobXeno
   id: MobXenoRavagerNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -290,8 +295,8 @@
     baseSprintSpeed: 4
   - type: MeleeWeapon
     damage:
-      groups:
-        Brute: 10
+     groups:
+       Brute: 10
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
@@ -308,7 +313,7 @@
         - MobLayer
 
 - type: entity
-  name: runner
+  name: Runner
   parent: MobXeno
   id: MobXenoRunnerNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -324,8 +329,8 @@
     baseSprintSpeed: 6.0
   - type: MeleeWeapon
     damage:
-      groups:
-        Brute: 10
+     groups:
+       Brute: 10
   - type: Fixtures
     fixtures:
       fix1:
@@ -339,7 +344,7 @@
         - MobLayer
 
 - type: entity
-  name: rouny
+  name: Rouny
   parent: MobXenoRunnerNPC # Delta V - These no longer inherit the ghost takeover comp
   id: MobXenoRounyNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -355,7 +360,7 @@
       amount: 3
 
 - type: entity
-  name: spitter
+  name: Spitter
   parent: MobXeno
   id: MobXenoSpitterNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
@@ -388,7 +393,7 @@
     useKey: false
     selectedMode: FullAuto
     availableModes:
-    - FullAuto
+      - FullAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
   - type: Fixtures
     fixtures:
@@ -423,10 +428,6 @@
         Base: dead_purple_snake
       Dead:
         Base: dead_purple_snake
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatSnake
-      amount: 4
   - type: Grammar
     attributes:
       proper: true
@@ -494,9 +495,5 @@
         Base: dead_small_purple_snake
       Dead:
         Base: dead_small_purple_snake
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatSnake
-      amount: 2
   - type: SolutionTransfer
     maxTransferAmount: 1

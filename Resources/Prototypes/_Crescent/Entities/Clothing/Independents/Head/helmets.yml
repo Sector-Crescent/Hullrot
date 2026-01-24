@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitIndependentsEVA
   categories: [ HideSpawnMenu ]
   name: spacionaut helmet
@@ -31,7 +31,7 @@
         Caustic: 5
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitFishbed
   categories: [ HideSpawnMenu ]
   name: fishbed helmet
@@ -63,7 +63,7 @@
         Caustic: 5
 
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCenobite
   categories: [ HideSpawnMenu ]
   name: cenobite helmet

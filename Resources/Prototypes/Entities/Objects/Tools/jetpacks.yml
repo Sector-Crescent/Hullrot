@@ -15,61 +15,63 @@
   - type: EffectVisuals
   - type: Tag
     tags:
-    - HideContextMenu
+      - HideContextMenu
   - type: AnimationPlayer
 
 - type: entity
   parent: GasTankBase
   abstract: true
   id: BaseJetpack
-  name: jetpack
-  description: It's a jetpack. It can hold 5 L of gas.
+  name: Jetpack
+  description: It's a jetpack.
   components:
-  - type: InputMover
-    toParent: true
-  - type: MovementSpeedModifier
-    weightlessAcceleration: 1
-    weightlessFriction: 0.3
-    weightlessModifier: 1.2
-  - type: CanMoveInAir
-  - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
-    state: icon
-  - type: Item
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
-    size: Huge
-  - type: UserInterface
-    interfaces:
-      enum.SharedGasTankUiKey.Key:
-        type: GasTankBoundUserInterface
-  - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/blue.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: GasTank
-    outputPressure: 21.3
-    air:
-      volume: 5
-      temperature: 293.15
-  - type: Jetpack
-    moleUsage: 0.00085
-  - type: Appearance
-  - type: StaticPrice
-    price: 100
-  #    - type: DynamicPrice
-  #      price: 100
-  - type: ReverseEngineering # Nyano
-    generic: true
-    difficulty: 3
-    recipes:
-    - JetpackBlue
+    - type: InputMover
+      toParent: true
+    - type: MovementSpeedModifier
+      weightlessAcceleration: 0.2
+      weightlessFriction: 0.3
+      weightlessModifier: 7
+    - type: CanMoveInAir
+    - type: Sprite
+      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      state: icon
+    - type: Item
+      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      size: Huge
+    - type: UserInterface
+      interfaces:
+        enum.SharedGasTankUiKey.Key:
+          type: GasTankBoundUserInterface
+    - type: Clothing
+      sprite: Objects/Tanks/Jetpacks/blue.rsi
+      quickEquip: false
+      slots:
+        - Back
+        - suitStorage
+    - type: GasTank
+      outputPressure: 21.3
+      air:
+        volume: 5
+        temperature: 293.15
+    - type: Jetpack
+      moleUsage: 0.00085
+    - type: Appearance
+    - type: HullJetpack
+    - type: StaticPrice
+      price: 100
+#    - type: DynamicPrice
+#      price: 100
+    - type: ReverseEngineering # Nyano
+      generic: true
+      difficulty: 3
+      recipes:
+        - JetpackBlue
 
 - type: entity
   id: ActionToggleJetpack
   name: Toggle jetpack
   description: Toggles the jetpack, giving you movement outside the station.
+  categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
     icon:
@@ -81,7 +83,7 @@
     useDelay: 1.0
     event: !type:ToggleJetpackEvent
 
-    #Empty blue
+#Empty blue
 - type: entity
   id: JetpackBlue
   parent: BaseJetpack
@@ -92,6 +94,9 @@
     sprite: Objects/Tanks/Jetpacks/blue.rsi
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/blue.rsi
+    slots:
+      - Back
+      - suitStorage
 
 # Filled blue
 - type: entity
@@ -107,13 +112,13 @@
       volume: 5
       temperature: 293.15
       moles:
-      - 1.025689525 # oxygen
-      - 1.025689525 # nitrogen
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
 
 #Empty black
 - type: entity
   id: JetpackBlack
-  parent: [BaseJetpack, BaseSyndicateContraband]
+  parent: BaseJetpack
   name: jetpack
   suffix: Empty
   components:
@@ -123,6 +128,9 @@
     sprite: Objects/Tanks/Jetpacks/black.rsi
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/black.rsi
+    slots:
+      - Back
+      - suitStorage
 
 # Filled black
 - type: entity
@@ -138,13 +146,13 @@
       volume: 5
       temperature: 293.15
       moles:
-      - 1.025689525 # oxygen
-      - 1.025689525 # nitrogen
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
 
 #Empty captain
 - type: entity
   id: JetpackCaptain
-  parent: [BaseJetpack, BaseGrandTheftContraband]
+  parent: BaseJetpack
   name: captain's jetpack
   suffix: Empty
   components:
@@ -152,6 +160,9 @@
     sprite: Objects/Tanks/Jetpacks/captain.rsi
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/captain.rsi
+    slots:
+      - Back
+      - suitStorage
   - type: Item
     sprite: Objects/Tanks/Jetpacks/captain.rsi
     size: Normal
@@ -175,35 +186,36 @@
       volume: 5
       temperature: 293.15
       moles:
-      - 1.025689525 # oxygen
-      - 1.025689525 # nitrogen
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
 
 #Empty mini
 - type: entity
   id: JetpackMini
   parent: BaseJetpack
   name: mini jetpack
-  description: It's a jetpack. It can hold 1.5 L of gas.
   suffix: Empty
   components:
-  - type: Item
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-  - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-  - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-    slots:
-    - Back
-    - suitStorage
-    - Belt
-  - type: GasTank
-    outputPressure: 42.6
-    air:
-      volume: 1.5
-  - type: ReverseEngineering # Nyano
-    difficulty: 2
-    recipes:
-    - JetpackMini
+    - type: Item
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      shape:
+      - 0,0,3,1
+    - type: Sprite
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+    - type: Clothing
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      slots:
+        - Back
+        - suitStorage
+        - Belt
+    - type: GasTank
+      outputPressure: 42.6
+      air:
+        volume: 1.5
+    - type: ReverseEngineering # Nyano
+      difficulty: 2
+      recipes:
+        - JetpackMini
 
 # Filled mini
 - type: entity
@@ -219,13 +231,13 @@
       volume: 2.5
       temperature: 293.15
       moles:
-      - 0.307706858 # oxygen
-      - 0.307706858 # nitrogen
+        - 0.307706858 # oxygen
+        - 0.307706858 # nitrogen
 
 #Empty security
 - type: entity
   id: JetpackSecurity
-  parent: [BaseJetpack, BaseRestrictedContraband]
+  parent: BaseJetpack
   name: security jetpack
   suffix: Empty
   components:
@@ -235,6 +247,9 @@
     sprite: Objects/Tanks/Jetpacks/security.rsi
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/security.rsi
+    slots:
+      - Back
+      - SuitStorage
 
 #Filled security
 - type: entity
@@ -250,8 +265,8 @@
       volume: 5
       temperature: 293.15
       moles:
-      - 1.025689525 # oxygen
-      - 1.025689525 # nitrogen
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
 
 #Empty void
 - type: entity
@@ -269,9 +284,9 @@
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/void.rsi
     slots:
-    - Back
-    - suitStorage
-    - Belt
+      - Back
+      - suitStorage
+      - Belt
 
 # Filled void
 - type: entity
@@ -287,8 +302,8 @@
       volume: 5
       temperature: 293.15
       moles:
-      - 1.025689525 # oxygen
-      - 1.025689525 # nitrogen
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
 
 #Empty micro - Used in the Cyborg module, visually the same as mini jetpack.
 - type: entity
@@ -297,20 +312,20 @@
   name: micro jetpack
   suffix: Empty
   components:
-  - type: Item
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-  - type: Sprite
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-  - type: Clothing
-    sprite: Objects/Tanks/Jetpacks/mini.rsi
-    slots:
-    - Back
-    - suitStorage
-    - Belt
-  - type: GasTank
-    outputPressure: 42.6
-    air:
-      volume: 0.75
+    - type: Item
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+    - type: Sprite
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+    - type: Clothing
+      sprite: Objects/Tanks/Jetpacks/mini.rsi
+      slots:
+        - Back
+        - suitStorage
+        - Belt
+    - type: GasTank
+      outputPressure: 42.6
+      air:
+        volume: 0.75
 
 
 # Filled micro
@@ -327,5 +342,5 @@
       volume: 1.25
       temperature: 293.15
       moles:
-      - 0.153853429 # oxygen
-      - 0.153853429 # nitrogen
+        - 0.153853429 # oxygen
+        - 0.153853429 # nitrogen

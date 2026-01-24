@@ -2,7 +2,6 @@ using System.Numerics;
 using Content.Server.DoAfter;
 using Content.Server.EUI;
 using Content.Server.GameTicking;
-using Content.Server.Ghost;
 using Content.Server.Interaction;
 using Content.Server.Mind;
 using Content.Server.Popups;
@@ -50,8 +49,6 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
     [Dependency] private readonly MobStateSystem _mobSystem = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly ShipyardSystem _shipyard = default!; // For the FoundOrganics method
-
-    [Dependency] private readonly GhostSystem _ghostSystem = default!;
 
     private readonly Dictionary<NetUserId, StoredBody?> _storedBodies = new();
     private EntityUid? _storageMap;
@@ -267,7 +264,7 @@ public sealed partial class CryoSleepSystem : SharedCryoSleepSystem
         NetUserId? id = null;
         if (_mind.TryGetMind(bodyId, out var mindEntity, out var mind) && mind.CurrentEntity is { Valid : true } body)
         {
-            _ghostSystem.OnGhostAttempt(mindEntity, false, true, mind: mind);
+            _gameTicker.OnGhostAttempt(mindEntity, false, true, mind: mind);
 
             id = mind.UserId;
             if (id != null)

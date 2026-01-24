@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Shared._Shitmed.Antags.Abductor;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions.Events;
 using Content.Shared.Administration.Logs;
@@ -9,19 +8,21 @@ using Content.Shared.Hands;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Mind;
-using Content.Shared.Popups;
 using Content.Shared.Rejuvenate;
-using Content.Shared.Silicons.StationAi;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-
 namespace Content.Shared.Actions;
+
+// Shitmed Change
+using Content.Shared._Shitmed.Antags.Abductor;
+using Content.Shared.Silicons.StationAi;
+using Content.Shared.Popups;
+using Robust.Shared.Prototypes;
 
 public abstract class SharedActionsSystem : EntitySystem
 {
@@ -78,42 +79,8 @@ public abstract class SharedActionsSystem : EntitySystem
         SubscribeAllEvent<RequestPerformActionEvent>(OnActionRequest);
     }
 
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-
-        var worldActionQuery = EntityQueryEnumerator<WorldTargetActionComponent>();
-        while (worldActionQuery.MoveNext(out var uid, out var action))
-        {
-            if (IsCooldownActive(action) || !ShouldResetCharges(action))
-                continue;
-
-            ResetCharges(uid, dirty: true);
-        }
-
-        var instantActionQuery = EntityQueryEnumerator<InstantActionComponent>();
-        while (instantActionQuery.MoveNext(out var uid, out var action))
-        {
-            if (IsCooldownActive(action) || !ShouldResetCharges(action))
-                continue;
-
-            ResetCharges(uid, dirty: true);
-        }
-
-        var entityActionQuery = EntityQueryEnumerator<EntityTargetActionComponent>();
-        while (entityActionQuery.MoveNext(out var uid, out var action))
-        {
-            if (IsCooldownActive(action) || !ShouldResetCharges(action))
-                continue;
-
-            ResetCharges(uid, dirty: true);
-        }
-    }
-
     private void OnActionMapInit(EntityUid uid, BaseActionComponent component, MapInitEvent args)
     {
-        component.OriginalIconColor = component.IconColor;
-
         if (component.Charges == null)
             return;
 
@@ -166,7 +133,7 @@ public abstract class SharedActionsSystem : EntitySystem
         bool logError = true)
     {
         result = null;
-        if (uid == null || TerminatingOrDeleted(uid.Value))
+        if (!Exists(uid))
             return false;
 
         var ev = new GetActionDataEvent();
@@ -290,7 +257,7 @@ public abstract class SharedActionsSystem : EntitySystem
     }
 
     #region ComponentStateManagement
-    public virtual void UpdateAction(EntityUid? actionId, BaseActionComponent? action = null)
+    protected virtual void UpdateAction(EntityUid? actionId, BaseActionComponent? action = null)
     {
         // See client-side code.
     }
@@ -369,18 +336,14 @@ public abstract class SharedActionsSystem : EntitySystem
         Dirty(actionId.Value, action);
     }
 
-    public void ResetCharges(EntityUid? actionId, bool update = false, bool dirty = false)
+    public void ResetCharges(EntityUid? actionId)
     {
         if (!TryGetActionData(actionId, out var action))
             return;
 
         action.Charges = action.MaxCharges;
-
-        if (update)
-            UpdateAction(actionId, action);
-
-        if (dirty)
-            Dirty(actionId.Value, action);
+        UpdateAction(actionId, action);
+        Dirty(actionId.Value, action);
     }
 
     public void SetMaxCharges(EntityUid? actionId, int? maxCharges)
@@ -444,12 +407,13 @@ public abstract class SharedActionsSystem : EntitySystem
             return;
 
         var curTime = GameTiming.CurTime;
-        if (IsCooldownActive(action, curTime))
+        // TODO: Check for charge recovery timer
+        if (action.Cooldown.HasValue && action.Cooldown.Value.End > curTime)
             return;
 
         // TODO: Replace with individual charge recovery when we have the visuals to aid it
         if (action is { Charges: < 1, RenewCharges: true })
-            ResetCharges(actionEnt, true, true);
+            ResetCharges(actionEnt);
 
         BaseActionEvent? performEvent = null;
 
@@ -493,7 +457,7 @@ public abstract class SharedActionsSystem : EntitySystem
                 }
 
                 var entityCoordinatesTarget = GetCoordinates(netCoordinatesTarget);
-                _rotateToFaceSystem.TryFaceCoordinates(user, _transformSystem.ToMapCoordinates(entityCoordinatesTarget).Position);
+                _rotateToFaceSystem.TryFaceCoordinates(user, entityCoordinatesTarget.ToMapPos(EntityManager, _transformSystem));
 
                 if (!ValidateWorldTarget(user, entityCoordinatesTarget, (actionEnt, worldAction)))
                     return;
@@ -559,7 +523,6 @@ public abstract class SharedActionsSystem : EntitySystem
         if (!ValidateEntityTargetBase(user,
                 target,
                 comp.Whitelist,
-                comp.Blacklist,
                 comp.CheckCanInteract,
                 comp.CanTargetSelf,
                 comp.CheckCanAccess,
@@ -574,7 +537,6 @@ public abstract class SharedActionsSystem : EntitySystem
     private bool ValidateEntityTargetBase(EntityUid user,
         EntityUid? targetEntity,
         EntityWhitelist? whitelist,
-        EntityWhitelist? blacklist,
         bool checkCanInteract,
         bool canTargetSelf,
         bool checkCanAccess,
@@ -584,9 +546,6 @@ public abstract class SharedActionsSystem : EntitySystem
             return false;
 
         if (_whitelistSystem.IsWhitelistFail(whitelist, target))
-            return false;
-
-        if (_whitelistSystem.IsBlacklistPass(blacklist, target))
             return false;
 
         if (checkCanInteract && !_actionBlockerSystem.CanInteract(user, target))
@@ -652,7 +611,7 @@ public abstract class SharedActionsSystem : EntitySystem
             if (range <= 0)
                 return true;
 
-            return _transformSystem.InRange(coords, Transform(user).Coordinates, range);
+            return coords.InRange(EntityManager, _transformSystem, Transform(user).Coordinates, range);
         }
 
         return _interactionSystem.InRangeUnobstructed(user, coords, range: range);
@@ -667,7 +626,6 @@ public abstract class SharedActionsSystem : EntitySystem
         var entityValidated = ValidateEntityTargetBase(user,
             entity,
             comp.Whitelist,
-            null,
             comp.CheckCanInteract,
             comp.CanTargetSelf,
             comp.CheckCanAccess,
@@ -709,9 +667,6 @@ public abstract class SharedActionsSystem : EntitySystem
 
             if (!action.RaiseOnUser && action.Container != null && !HasComp<MindComponent>(action.Container))
                 target = action.Container.Value;
-
-            if (action.RaiseOnAction)
-                target = actionId;
 
             RaiseLocalEvent(target, (object) actionEvent, broadcast: true);
             handled = actionEvent.Handled;

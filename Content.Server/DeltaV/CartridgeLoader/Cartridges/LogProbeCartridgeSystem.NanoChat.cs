@@ -62,11 +62,11 @@ public sealed partial class LogProbeCartridgeSystem
         EntityUid target,
         NanoChatCardComponent card)
     {
-        _audio.PlayEntity(ent.Comp.SoundScan,
+        _audioSystem.PlayEntity(ent.Comp.SoundScan,
             args.InteractEvent.User,
             target,
             AudioHelpers.WithVariation(0.25f, _random));
-        _popup.PopupCursor(Loc.GetString("log-probe-scan-nanochat", ("card", target)), args.InteractEvent.User);
+        _popupSystem.PopupCursor(Loc.GetString("log-probe-scan-nanochat", ("card", target)), args.InteractEvent.User);
 
         ent.Comp.PulledAccessLogs.Clear();
 

@@ -4,24 +4,11 @@
   description: job-description-chaplain
   playTimeTracker: JobChaplain
   requirements:
-  - !type:CharacterDepartmentTimeRequirement
-    department: Epistemics # Chaplain is now one of the station's "Crew-Aligned Wizards"
-    min: 14400 # 4 hours
-  - !type:CharacterLogicOrRequirement
-    requirements:
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-      - IPC
-    - !type:CharacterTraitRequirement
-      traits:
-      - AnomalousPositronics
-  - !type:CharacterEmployerRequirement
-    inverted: true
-    employers:
-    - Unemployed
-  - !type:CharacterItemGroupRequirement
-    group: TraitsCasterType
+    - !type:CharacterDepartmentTimeRequirement
+      department: Epistemics # Chaplain is now one of the station's "Crew-Aligned Wizards"
+      min: 14400 # 4 hours
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
   startingGear: ChaplainGear
   icon: "JobIconChaplain"
   supervisors: job-supervisors-rd
@@ -40,9 +27,8 @@
       powerPool: ElementalistPowerPool
     - type: InnatePsionicPowers
       powersToAdd:
-      - HealingWordPower
-      - SummonRemiliaPower
-    - type: Condemned
+        - HealingWordPower
+        - SummonRemiliaPower
 
 - type: startingGear
   id: ChaplainGear
@@ -55,16 +41,13 @@
     id: ChaplainPDA
     ears: ClothingHeadsetScience
     pocket1: BookPsionicsGuidebook
-<<<<<<< HEAD
-=======
     innerClothingSkirt: ClothingUniformJumpskirtChaplain
     satchel: ClothingBackpackSatchelChaplainFilled
     duffelbag: ClothingBackpackDuffelChaplainFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: ChaplainPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitChaplain
     head: ClothingHeadEnvirohelmChaplain

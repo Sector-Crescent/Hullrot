@@ -23,6 +23,19 @@
         Blunt: 1
 
 - type: entity
+  id: BulletMagnumRubber
+  name: bullet (.327 Imperial rubber)
+  parent: BaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+  - type: StaminaDamageOnCollide
+    damage: 35 # 3 hits to stun cuz revolver
+
+- type: entity
   id: BulletMagnumIncendiary
   parent: BaseBulletIncendiary
   name: bullet (.327 Imperial incendiary)

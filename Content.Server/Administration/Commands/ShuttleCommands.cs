@@ -8,8 +8,6 @@ namespace Content.Server.Administration.Commands
     [AdminCommand(AdminFlags.Round)]
     public sealed class CallShuttleCommand : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "callshuttle";
         public string Description => Loc.GetString("call-shuttle-command-description");
         public string Help => Loc.GetString("call-shuttle-command-help-text", ("command",Command));
@@ -21,7 +19,7 @@ namespace Content.Server.Administration.Commands
             // ReSharper disable once ConvertIfStatementToSwitchStatement
             if (args.Length == 1 && TimeSpan.TryParseExact(args[0], ContentLocalizationManager.TimeSpanMinutesFormats, loc.DefaultCulture, out var timeSpan))
             {
-                _e.System<RoundEndSystem>().RequestRoundEnd(timeSpan, shell.Player?.AttachedEntity, false);
+                EntitySystem.Get<RoundEndSystem>().RequestRoundEnd(timeSpan, shell.Player?.AttachedEntity, false);
             }
             else if (args.Length == 1)
             {
@@ -29,7 +27,7 @@ namespace Content.Server.Administration.Commands
             }
             else
             {
-                _e.System<RoundEndSystem>().RequestRoundEnd(shell.Player?.AttachedEntity, false);
+                EntitySystem.Get<RoundEndSystem>().RequestRoundEnd(shell.Player?.AttachedEntity, false);
             }
         }
     }
@@ -37,15 +35,13 @@ namespace Content.Server.Administration.Commands
     [AdminCommand(AdminFlags.Round)]
     public sealed class RecallShuttleCommand : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-
         public string Command => "recallshuttle";
         public string Description => Loc.GetString("recall-shuttle-command-description");
         public string Help => Loc.GetString("recall-shuttle-command-help-text", ("command",Command));
 
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
-            _e.System<RoundEndSystem>().CancelRoundEndCountdown(shell.Player?.AttachedEntity, false);
+            EntitySystem.Get<RoundEndSystem>().CancelRoundEndCountdown(shell.Player?.AttachedEntity, false);
         }
     }
 }

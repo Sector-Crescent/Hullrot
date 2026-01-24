@@ -6,17 +6,10 @@
   description: job-description-cmo
   playTimeTracker: JobChiefMedicalOfficer
   requirements:
-  - !type:CharacterTraitRequirement
-    inverted: true
-    traits:
-    - Foreigner
-    - ForeignerLight
-    - Muted
-  - !type:CharacterEmployerRequirement
-    employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
-    - NanoTrasen
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
@@ -29,16 +22,16 @@
   - Maintenance
   - Chemistry
   - ChiefMedicalOfficer
-  - Paramedic
-  - External
-  - Psychologist
+  - Paramedic # DeltaV - Add Paramedic access
+  - External # DeltaV - Paramedics need this access
+  - Psychologist # DeltaV - Add Psychologist access
   - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-    - type: CommandStaff
+      - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: CPRTraining
@@ -56,24 +49,17 @@
   - CMOPlasmamanGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitCMO
-    back: ClothingBackpackMedical
+    back: ClothingBackpackCMOFilled
     shoes: ClothingShoesColorBrown
     id: CMOPDA
-<<<<<<< HEAD
-    ears: ClothingHeadsetAltMedical
-  storage:
-    back:
-    - Flash
-=======
     ears: ClothingHeadsetAltMedical # Goobstation
     innerClothingSkirt: ClothingUniformJumpskirtCMO
     satchel: ClothingBackpackSatchelCMOFilled
     duffelbag: ClothingBackpackDuffelCMOFilled
->>>>>>> 5756720415e76712123f53cbaa5f0f73193fba4f
 
 - type: startingGear
   id: CMOPlasmamanGear
-  parent: BasePlasmamanMaskGear
+  parent: BasePlasmamanGear
   equipment:
     jumpsuit: ClothingUniformEnvirosuitCMO
     head: ClothingHeadEnvirohelmCMO

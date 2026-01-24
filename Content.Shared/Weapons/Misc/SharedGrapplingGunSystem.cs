@@ -31,6 +31,8 @@ public abstract class SharedGrapplingGunSystem : EntitySystem
 
     public const string GrapplingJoint = "grappling";
 
+    public const float ReelRate = 2.5f;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -64,7 +66,7 @@ public abstract class SharedGrapplingGunSystem : EntitySystem
             var visuals = EnsureComp<JointVisualsComponent>(shotUid.Value);
             visuals.Sprite = component.RopeSprite;
             visuals.OffsetA = new Vector2(0f, 0.5f);
-            visuals.Target = GetNetEntity(uid);
+            visuals.Target = uid;
             Dirty(shotUid.Value, visuals);
         }
 
@@ -185,7 +187,7 @@ public abstract class SharedGrapplingGunSystem : EntitySystem
             }
 
             // TODO: This should be on engine.
-            distance.MaxLength = MathF.Max(distance.MinLength, distance.MaxLength - grappling.ReelRate * frameTime);
+            distance.MaxLength = MathF.Max(distance.MinLength, distance.MaxLength - ReelRate * frameTime);
             distance.Length = MathF.Min(distance.MaxLength, distance.Length);
 
             _physics.WakeBody(joint.BodyAUid);

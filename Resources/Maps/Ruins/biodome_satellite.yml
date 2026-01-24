@@ -2145,13 +2145,15 @@ entities:
     - type: Transform
       pos: 11.5,-2.5
       parent: 2
-- proto: FloraTree
+- proto: FloraTree02
   entities:
   - uid: 387
     components:
     - type: Transform
       pos: 16.897663,4.841407
       parent: 2
+- proto: FloraTree03
+  entities:
   - uid: 383
     components:
     - type: Transform
@@ -2167,6 +2169,8 @@ entities:
     - type: Transform
       pos: 17.093353,2.688822
       parent: 2
+- proto: FloraTree05
+  entities:
   - uid: 380
     components:
     - type: Transform
@@ -2177,13 +2181,15 @@ entities:
     - type: Transform
       pos: 15.845831,3.87519
       parent: 2
-- proto: FloraTreeLarge
+- proto: FloraTreeLarge02
   entities:
   - uid: 379
     components:
     - type: Transform
       pos: 11.870888,3.920478
       parent: 2
+- proto: FloraTreeLarge03
+  entities:
   - uid: 382
     components:
     - type: Transform

@@ -106,4 +106,6 @@ public class ActionButtonContainer : GridContainer
             if (control is ActionButton button)
                 yield return button;
     }
+
+    ~ActionButtonContainer() => UserInterfaceManager.GetUIController<ActionUIController>().RemoveActionContainer();
 }
