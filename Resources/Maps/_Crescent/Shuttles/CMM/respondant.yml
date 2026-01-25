@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 01/25/2026 14:39:50
-  entityCount: 504
+  time: 01/25/2026 15:57:02
+  entityCount: 506
 maps: []
 grids:
 - 1
@@ -334,6 +334,7 @@ entities:
             616: -1,2
             685: -1,2
             739: -1,2
+            793: -1,2
         - node:
             zIndex: 1
             angle: -3.141592653589793 rad
@@ -348,6 +349,7 @@ entities:
             613: -1,1
             682: -1,1
             736: -1,1
+            790: -1,1
         - node:
             zIndex: 1
             angle: -1.5707963267948966 rad
@@ -358,6 +360,7 @@ entities:
             567: 1,1
             636: 1,1
             690: 1,1
+            744: 1,1
         - node:
             zIndex: 1
             id: ErisCarpetBCorner
@@ -367,6 +370,7 @@ entities:
             570: 1,2
             639: 1,2
             693: 1,2
+            747: 1,2
         - node:
             angle: -4.71238898038469 rad
             id: ErisCarpetBEdge
@@ -389,6 +393,8 @@ entities:
             684: -1,2
             735: -1,1
             738: -1,2
+            789: -1,1
+            792: -1,2
         - node:
             angle: -3.141592653589793 rad
             id: ErisCarpetBEdge
@@ -416,6 +422,9 @@ entities:
             686: 0,1
             688: 1,1
             734: -1,1
+            740: 0,1
+            742: 1,1
+            788: -1,1
         - node:
             angle: -1.5707963267948966 rad
             id: ErisCarpetBEdge
@@ -430,6 +439,8 @@ entities:
             637: 1,2
             689: 1,1
             691: 1,2
+            743: 1,1
+            745: 1,2
         - node:
             id: ErisCarpetBEdge
           decals:
@@ -456,6 +467,9 @@ entities:
             687: 0,2
             692: 1,2
             737: -1,2
+            741: 0,2
+            746: 1,2
+            791: -1,2
         - node:
             zIndex: 1
             id: LatticeCornerNE
@@ -478,6 +492,8 @@ entities:
             677: -5,0
             716: -10,2
             731: -5,0
+            770: -10,2
+            785: -5,0
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -500,6 +516,8 @@ entities:
             659: 10,2
             698: 5,0
             713: 10,2
+            752: 5,0
+            767: 10,2
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -540,6 +558,10 @@ entities:
             719: -9,7
             722: -8,8
             725: -7,8
+            756: 7,8
+            773: -9,7
+            776: -8,8
+            779: -7,8
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -580,6 +602,10 @@ entities:
             707: 8,8
             710: 9,7
             727: -7,8
+            758: 7,8
+            761: 8,8
+            764: 9,7
+            781: -7,8
         - node:
             id: LatticeEdgeE
           decals:
@@ -637,6 +663,12 @@ entities:
             721: -8,8
             724: -7,8
             729: -5,0
+            755: 7,8
+            768: -10,2
+            772: -9,7
+            775: -8,8
+            778: -7,8
+            783: -5,0
         - node:
             id: LatticeEdgeN
           decals:
@@ -676,6 +708,10 @@ entities:
             711: 10,2
             715: -10,2
             730: -5,0
+            750: 5,0
+            765: 10,2
+            769: -10,2
+            784: -5,0
         - node:
             id: LatticeEdgeS
           decals:
@@ -787,6 +823,18 @@ entities:
             728: -6,9
             732: -4,10
             733: -2,11
+            748: 2,11
+            749: 4,10
+            753: 6,9
+            754: 7,8
+            759: 8,8
+            762: 9,7
+            771: -9,7
+            774: -8,8
+            777: -7,8
+            782: -6,9
+            786: -4,10
+            787: -2,11
         - node:
             id: LatticeEdgeW
           decals:
@@ -844,6 +892,12 @@ entities:
             709: 9,7
             712: 10,2
             726: -7,8
+            751: 5,0
+            757: 7,8
+            760: 8,8
+            763: 9,7
+            766: 10,2
+            780: -7,8
         - node:
             zIndex: 1
             color: '#765428C1'
@@ -1838,6 +1892,20 @@ entities:
     components:
     - type: Transform
       pos: 6.4623623,3.4597769
+      parent: 1
+- proto: BoxLatexGloves
+  entities:
+  - uid: 506
+    components:
+    - type: Transform
+      pos: 6.5,3.5
+      parent: 1
+- proto: BoxSterileMask
+  entities:
+  - uid: 505
+    components:
+    - type: Transform
+      pos: 6.5,3.5
       parent: 1
 - proto: ButtonFrameExit
   entities:
