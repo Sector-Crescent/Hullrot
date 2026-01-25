@@ -14,37 +14,18 @@
       types:
         Structural: 95
         Piercing: 90
+  - type: ProjectilePhasePrevent
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
     lifetime: 6 #roughly 480m range
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: Bullet35mmGyrostable
@@ -62,37 +43,18 @@
       types:
         Structural: 75
         Piercing: 75
+  - type: ProjectilePhasePrevent
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
     lifetime: 9 #roughly 720m range
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: Bullet35mmPlasma
@@ -104,6 +66,7 @@
   - type: ProjectileIFF
     visualType: Circle
     color: White
+  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -123,31 +86,11 @@
     energy: 0.5
   - type: TimedDespawn
     lifetime: 4 #roughly 320m range
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: Bullet20mmBase
@@ -156,6 +99,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Circle
     color: White
@@ -171,31 +115,11 @@
     energy: 0.5
   - type: TimedDespawn
     lifetime: 8 #roughly 640-680m range depending on shipgun
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: Bullet20mmGyrostable
@@ -204,6 +128,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Circle
     color: White
@@ -219,31 +144,11 @@
     energy: 0.5
   - type: TimedDespawn
     lifetime: 10 #roughly 800-850m range depending on shipgun
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: Bullet20mmPlasma
@@ -251,6 +156,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Circle
     color: White

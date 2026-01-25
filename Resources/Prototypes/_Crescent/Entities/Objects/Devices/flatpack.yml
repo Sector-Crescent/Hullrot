@@ -951,3 +951,131 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+
+# new guns!
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretSmallArtilleryFlatpack
+  name: 50mm 'Whistler' light autocannon Flatpack
+  description: Parts used to build a 50mm 'Whistler' light autocannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretSmallArtillery
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretMediumMachinegunFlatpack
+  name: 35mm 'Scout' rotary cannon Flatpack
+  description: Parts used to build a 35mm 'Scout' rotary cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretMediumMachinegun
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretSmallMachinegunFlatpack
+  name: 20mm 'Screamer' light carbine repeater cannon Flatpack
+  description: Parts used to build a 20mm 'Screamer' light carbine repeater cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretSmallMachinegun
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretMediumArtilleryFlatpack
+  name: 120mm 'Pithatis' mono-barreled artillery cannon Flatpack
+  description: Parts used to build a 120mm 'Pithatis' mono-barreled artillery cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretMediumArtillery
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretLargeMachinegunFlatpack
+  name: 90mm 'Gistum' tri-barreled repeater cannon Flatpack
+  description: Parts used to build a 90mm 'Gistum' tri-barreled repeater cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretLargeMachinegun
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: WeaponTurretLargeArtilleryFlatpack
+  name: 300mm 'Pithis' dual-barreled subnuclear battery Flatpack
+  description: Parts used to build a 300mm 'Pithis' dual-barreled subnuclear battery. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretLargeArtillery
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretShortbowFlatpack
+  name: 48mm 'Shortbow' SRM rocket system Flatpack
+  description: Parts used to build a 48mm 'Shortbow' SRM rocket system. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretShortbow
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretAzimuthFlatpack
+  name: 60mm 'Azimuth' rapid-fire LML system Flatpack
+  description: Parts used to build a 60mm 'Azimuth' rapid-fire LML system. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretAzimuth
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretArbalestFlatpack
+  name: 95mm 'Arbalest' heavy assault MRM platform Flatpack
+  description: Parts used to build a 95mm 'Arbalest' heavy assault MRM platform. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretArbalest
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000

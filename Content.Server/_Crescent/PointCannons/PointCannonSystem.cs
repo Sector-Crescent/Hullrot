@@ -17,6 +17,7 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Shuttles.Components;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -26,6 +27,7 @@ using Robust.Shared.Player;
 using System;
 using Content.Server._Crescent.Hardpoint;
 using Content.Server.Power.Components;
+using Content.Shared._Crescent.CCvars;
 using Content.Shared._Crescent.Hardpoints;
 using Content.Shared.Communications;
 using Content.Shared.Physics;
@@ -46,10 +48,17 @@ public class PointCannonSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly MapSystem _maps = default!;
     [Dependency] private readonly HardpointSystem _hardpoint = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+
+    private float _accumulatedFrameTime;
+    private float _uiTps;
 
     public override void Initialize()
     {
         base.Initialize();
+
+        Subs.CVar(_cfg, CrescentCVars.PointCannonUiTps, (float val) => { _uiTps = val; }, true);
+
         SubscribeLocalEvent<TargetingConsoleComponent, ActivatableUIOpenAttemptEvent>(OnConsoleOpenAttempt);
         SubscribeLocalEvent<TargetingConsoleComponent, BoundUserInterfaceMessageAttempt>(BUIValidation);
         SubscribeLocalEvent<TargetingConsoleComponent, BoundUIOpenedEvent>(OnConsoleOpened);
@@ -71,6 +80,17 @@ public class PointCannonSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        _accumulatedFrameTime += frameTime;
+
+        float targetTime = _uiTps > 0 ? 1.0f / _uiTps : 1.0f;
+
+        if (_accumulatedFrameTime < targetTime) // no update spam
+            return;
+
+        _accumulatedFrameTime -= targetTime;
+        if (_accumulatedFrameTime > targetTime) // no lag-induced spam
+            _accumulatedFrameTime = 0;
 
         var query = EntityQueryEnumerator<TargetingConsoleComponent>();
         while (query.MoveNext(out var uid, out var console))

@@ -111,8 +111,8 @@
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMidshipman
   - type: StaticPrice
@@ -142,12 +142,46 @@
         Blunt: 35
         Slash: 25
         Piercing: 60
-        Heat: 10
+        Heat: 20
         Caustic: 15
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCMMPatrol
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableLow]
+  id: ClothingOuterHardsuitCMMEnsing
+  name: ensign patrol suit
+  description: A gliessian attempt to modernize the design of the reinforced-patrol hardsuit and cut down its weigh. Due to lack of needed technology and resources some armor had to be sacrficed in order to achive that goal.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/CMM/OuterClothing/ensign.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/CMM/OuterClothing/ensign.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: DegradeableArmor
+    armorMaxHealth: 1000
+    armorType: Metallic
+    armorRepair: NTPolymer
+    initialModifiers:
+      flatReductions:
+        Blunt: 30
+        Slash: 25
+        Piercing: 55
+        Heat: 20
+        Caustic: 15
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCMMEnsign
   - type: StaticPrice
     price: 1500

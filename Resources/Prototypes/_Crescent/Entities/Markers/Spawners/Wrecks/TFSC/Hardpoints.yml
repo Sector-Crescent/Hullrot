@@ -12,17 +12,7 @@
     - type: RandomSpawner
       prototypes:
        - MachineFrameDestroyed
-       - ShuttleGunMissileRack
-       - WeaponTurretLaser
-       - ShuttleGunTorpedo
-       - MachineFrameDestroyed
-       - PointNFireCannonExample
-       - BaseWeaponTurretLancer
-       - SlugthrowerCannon
-       - ShuttleGunKurosawa
-       - NTVulcanTurret
-       - WeaponTurretVulcan
       chance: 0.15
       rarePrototypes:
-       - SAWCleanser
+       - MachineFrameDestroyed
       rareChance: 0.05

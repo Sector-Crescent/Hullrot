@@ -1,0 +1,37 @@
+# Author Info
+# Discord: szyefan
+
+- type: vessel
+  id: Guard
+  name: TS Guard
+  description: |
+    Minutemen interceptor/fighter. Designed to chase down running vessels.
+    LOADOUT: 1x 35mm 'Scout' rotatory cannon
+    MINIMUM CREW: 1x Pilot
+  price: 15000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/guard.yml
+
+- type: gameMap
+  id: Guard
+  mapName: 'TS Guard'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/guard.yml
+  minPlayers: 0
+  stations:
+    Guard:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Guard {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-fighter
+        - type: VesselDescription
+          description: As small as it can get, walls carved to fit everything inside.

@@ -16,7 +16,7 @@
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraCommunardNCWL
     - type: WirelessNetworkConnection
-      range: 7000
+      range: 100000
 
 - type: entity
   parent: SurveillanceCameraWirelessRouterBase
@@ -26,4 +26,14 @@
     - type: SurveillanceCameraRouter
       subnetFrequency: SurveillanceCameraInterdyneIPM
     - type: WirelessNetworkConnection
-      range: 7000
+      range: 100000
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterBase
+  id: SurveillanceCameraRouterGliessMallcops
+  suffix: Gliess
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraGliessMallcops
+    - type: WirelessNetworkConnection
+      range: 100000

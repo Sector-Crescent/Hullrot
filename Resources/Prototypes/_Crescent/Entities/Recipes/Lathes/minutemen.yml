@@ -1,0 +1,125 @@
+#SHIPS
+- type: latheRecipe
+  id: ArbiterLPC
+  result: ShipVoucherArbiter
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4500
+    ShipComponents: 5000
+    ShipHull: 5000
+
+- type: latheRecipe
+  id: CorsairLPC
+  result: ShipVoucherCorsair
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 5000
+    ShipComponents: 6000
+    ShipHull: 6000
+
+- type: latheRecipe
+  id: MinutemanLPC
+  result: ShipVoucherMinuteman
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4000
+    ShipComponents: 3500
+    ShipHull: 4000
+
+- type: latheRecipe
+  id: SentinelLPC
+  result: ShipVoucherSentinel
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4000
+    ShipComponents: 4000
+    ShipHull: 4000
+
+- type: latheRecipe
+  id: SentryLPC
+  result: ShipVoucherSentry
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 1500
+    ShipHull: 1000
+
+- type: latheRecipe
+  id: RespondantLPC
+  result: ShipVoucherRespondant
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 2000
+    ShipComponents: 2000
+    ShipHull: 2000
+
+- type: latheRecipe
+  id: GuardLPC
+  result: ShipVoucherGuard
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 500
+    ShipComponents: 500
+    ShipHull: 500
+
+- type: latheRecipe
+  id: AdjudicatorLPC
+  result: ShipVoucherAdjudicator
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 1000
+    ShipHull: 1000
+
+- type: latheRecipe
+  id: JudgeLPC
+  result: ShipVoucherJudge
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4500
+    ShipComponents: 5500
+    ShipHull: 4500
+
+- type: latheRecipe
+  id: ExecutionerLPC
+  result: ShipVoucherExecutioner
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 3500
+    ShipComponents: 6000
+    ShipHull: 3500
+    NanotrasenElectronics: 500
+
+#HARDSUITS
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitMinutemenEnsign
+  result: ClothingOuterHardsuitCMMEnsing
+  completetime: 1
+  materials:
+    Steel: 2500
+    HardsuitElectronics: 500
+    Tungsten: 500
+    Durathread: 500
+
+#WEAPONS
+- type: latheRecipe
+  id: WeaponShotgunKammerer
+  result: WeaponShotgunKammerer
+  completetime: 1
+  materials:
+    Steel: 1500
+    Plasteel: 500
+    BallisticCycler: 1000
+
+- type: latheRecipe
+  id: WeaponRifleCMMNimrod
+  result: WeaponRifleCMMNimrod
+  completetime: 1
+  materials:
+    Steel: 1000
+    Plasteel: 250
+    BallisticCycler: 500
+
+#MISC
+

@@ -1,0 +1,37 @@
+# Author Info
+# Discord: the_inbetwixt
+
+- type: vessel
+  id: Respondant
+  name: TS Respondant
+  description: |
+    LOADOUT: 2x 50mm 'Whistler' gatlings, 2x 60mm 'Azimuth' LMLs
+    MINIMUM CREW: 1x Pilot, 1x Loader Optional
+    DESC.
+  price: 35000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/respondant.yml
+
+- type: gameMap
+  id: Respondant
+  mapName: 'TS Respondant'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/respondant.yml
+  minPlayers: 0
+  stations:
+    Respondant:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Respondant {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-corvette
+        - type: VesselDescription
+          description: A compact corvette, good at brawling. Skilled pilot might pick targets range at range with its whistlers.

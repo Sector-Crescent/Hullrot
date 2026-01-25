@@ -15,15 +15,19 @@
 
 - type: gameMap
   id: Adjudicator
-  mapName: 'Adjudicator'
+  mapName: 'TS Adjudicator'
   mapPath: /Maps/_Crescent/Shuttles/CMM/adjudicator.yml
   minPlayers: 0
   stations:
     Adjudicator:
       stationProto: StandardCrescentExpeditionVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
         - type: StationNameSetup
-          mapNameTemplate: 'Adjudicator {1}'
+          mapNameTemplate: 'TS Adjudicator {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

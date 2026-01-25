@@ -26,101 +26,101 @@
   priority: 9
 
 - type: listing
-  id: StoreListingSAWHephaeustus
-  name: 230mm 'Haephaeustus' assault artillery flatpack
-  description: An artillery for large ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Autoturrets/battlemortar.rsi, state: syndie_lethal }
-  productEntity: HephCannonTurretFlatpack
-  cost:
-    ScrapSAW: 55
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWNeedler
-  name: 60mm PTA 'Needler' flatpack
-  description: An artillery for medium ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Autoturrets/needler.rsi, state: syndie_lethal }
-  productEntity: NeedlerFlatpack
-  cost:
-    ScrapSAW: 25
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWMortar
-  name: 90mm heavy mortar-pounder flatpack
-  description: An artillery for medium ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Autoturrets/heavymortar.rsi, state: syndie_lethal }
-  productEntity: AutomortarFlatpack
-  cost:
-    ScrapSAW: 25
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWHullpiercer
-  name: 43mm hullpiercer turret flatpack
-  description: A turret for medium small ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Autoturrets/slugspitter.rsi, state: slugspitter }
-  productEntity: HullpiercerFlatpack
-  cost:
-    ScrapSAW: 18
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWOperator
-  name: 20mm vulcan turret flatpack
-  description: A turret for small ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Autoturrets/vulcangatling.rsi, state: syndie_lethal }
-  productEntity: OperatorFlatpack
+  id: StoreListing20mmcannon
+  name: 20mm 'Screamer' light carbine repeater cannon flatpack
+  description: An repeater cannon for small ballistic hardpoint.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/machinegun.rsi, state: machinegun }
+  productEntity: WeaponTurretSmallMachinegunFlatpack
   cost:
     ScrapSAW: 15
   categories:
   - StoreCategorySAWGuns
 
 - type: listing
-  id: StoreListingSAWGargoyle
-  name: Gargoyle missile launcher flatpack
-  description: A missile launcher for large hardpoints.
-  icon: { sprite: _Crescent/Objects/Autoturrets/gargoylemissile.rsi, state: syndie_lethal }
-  productEntity: BaseWeaponTurretGargoyleFlatpack
-  cost:
-    ScrapSAW: 55
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWIdna
-  name: Idna missile launcher flatpack
-  description: A missile launcher for medium hardpoints.
-  icon: { sprite: _Crescent/Objects/Autoturrets/magwell.rsi, state: base }
-  productEntity: MagwellFlatpack
-  cost:
-    ScrapSAW: 22
-  categories:
-  - StoreCategorySAWGuns
-
-- type: listing
-  id: StoreListingSAWSwarmer
-  name: Swarmer missile launcher flatpack
-  description: A missile launcher for small hardpoints.
-  icon: { sprite: _Crescent/Objects/Autoturrets/swarmermissile.rsi, state: swarmer }
-  productEntity: SwarmerFlatpack
+  id: StoreListingscoutcannon
+  name: 35mm 'Scout' rotary cannon flatpack
+  description: An rotary cannon for small ballistic hardpoint.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/minigun.rsi, state: minigun }
+  productEntity: WeaponTurretMediumMachinegunFlatpack
   cost:
     ScrapSAW: 20
   categories:
   - StoreCategorySAWGuns
 
 - type: listing
-  id: StoreListingSAWPlasmaCaster
-  name: 400c Plasma repeater flatpack
-  description: A "go-to" ship weapon for salvaging ships, made for universal hardpoints
-  icon: { sprite: _Crescent/Objects/ShuttleWeapons/lasersmall.rsi, state: lse-400c }
-  productEntity: PlasmaRepeaterFlatpack
+  id: StoreListing50mmautocannon
+  name: 50mm 'Whistler' light autocannon flatpack
+  description: An artillery for medium ballistic hardpoint.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/autocannon.rsi, state: autocannon }
+  productEntity: WeaponTurretSmallArtilleryFlatpack
   cost:
-    ScrapSAW: 13
+    ScrapSAW: 30
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListing120mmcannon
+  name: 120mm 'Pithatis' mono-barreled artillery cannon flatpack
+  description: A artillery for medium ballistic hardpoints
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/medium_auto.rsi, state: medium_auto}
+  productEntity: WeaponTurretMediumArtilleryFlatpack
+  cost:
+    ScrapSAW: 45
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListing90mmcannon
+  name: 90mm 'Gistum' tri-barreled repeater cannon flatpack
+  description: A large machine gun for large hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi, state: repeater }
+  productEntity: WeaponTurretLargeMachinegunFlatpack
+  cost:
+    ScrapSAW: 55
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListing300mmbattery
+  name: 300mm 'Pithis' dual-barreled subnuclear battery flatpack
+  description: A large artillery cannon for large hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/howitzer.rsi, state: howitzer }
+  productEntity: WeaponTurretLargeArtilleryFlatpack
+  cost:
+    ScrapSAW: 55
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingSRMMissile
+  name: 48mm 'Shortbow' SRM rocket system flatpack
+  description: A missile launcher for small missile hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Missile/shortbow.rsi, state: shortbow }
+  productEntity: BaseWeaponTurretShortbowFlatpack
+  cost:
+    ScrapSAW: 25
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingLMLMissile
+  name: 60mm 'Azimuth' rapid-fire LML system flatpack
+  description: A missile launcher for small missile hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Missile/azimuth.rsi, state: azimuth }
+  productEntity: BaseWeaponTurretAzimuthFlatpack
+  cost:
+    ScrapSAW: 35
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
+  id: StoreListingMRMMissile
+  name: 95mm 'Arbalest' heavy assault MRM platform flatpack
+  description: A missile launcher for Medium missile hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Missile/arbalest.rsi, state: arbalest }
+  productEntity: BaseWeaponTurretArbalestFlatpack
+  cost:
+    ScrapSAW: 40
   categories:
   - StoreCategorySAWGuns
 

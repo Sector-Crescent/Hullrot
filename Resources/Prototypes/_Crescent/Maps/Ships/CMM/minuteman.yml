@@ -1,0 +1,37 @@
+# Author Info
+# Discord: szyefan
+
+- type: vessel
+  id: Minuteman
+  name: TS Minuteman
+  description: |
+    A corvette designated for wolfpack attacks and taking down enemy shields quickly as support vessel in bigger fleets.
+    LOADOUT: 1x 200w 'Curse' ion blaster, 2x 48mm 'Shortbow' SRMs
+    MINIMUM CREW: 1x Pilot, Loader Optional
+  price: 45000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/minuteman.yml
+
+- type: gameMap
+  id: Minuteman
+  mapName: 'TS Minuteman'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/minuteman.yml
+  minPlayers: 0
+  stations:
+    Minuteman:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Minuteman {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-corvette
+        - type: VesselDescription
+          description: Small and swift corvette featuring an ion blaster, best in wolfpack tatics taking down shields and firing its missile load in a pack.

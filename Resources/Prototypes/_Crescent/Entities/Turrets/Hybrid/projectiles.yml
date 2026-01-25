@@ -12,7 +12,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 100
+        Structural: 400
         Radiation: 90
   - type: PointLight
     radius: 3.5
@@ -20,22 +20,6 @@
     energy: 0.5
   - type: TimedDespawn
     lifetime: 7 #roughly 560m range
-  - type: Fixtures
-    fixtures:
-      projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.45,0.15,0.15"
-        hard: false
-      fly-by:
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -60,7 +44,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 150
+        Structural: 200
         Radiation: 110
   - type: ExplodeOnTrigger
   - type: Explosive
@@ -94,7 +78,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 500
+        Structural: 150
         Radiation: 120
   - type: ExplodeOnTrigger
   - type: Explosive

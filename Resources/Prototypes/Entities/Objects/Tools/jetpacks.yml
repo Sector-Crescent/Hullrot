@@ -28,8 +28,8 @@
     - type: InputMover
       toParent: true
     - type: MovementSpeedModifier
-      weightlessAcceleration: 0.2
-      weightlessFriction: 0.3
+      weightlessAcceleration: 0.05
+      weightlessFriction: 0.2
       weightlessModifier: 7
     - type: CanMoveInAir
     - type: Sprite

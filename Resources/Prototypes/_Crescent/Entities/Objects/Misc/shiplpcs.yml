@@ -1,4 +1,4 @@
-#dsm
+# #dsm
 
 - type: entity
   parent: BaseItem
@@ -1205,7 +1205,7 @@
   - type: ShipVoucher
     ship: Wreck
 
-#cmm
+#CMM OLD
 
 - type: entity
   parent: BaseItem
@@ -1292,22 +1292,7 @@
   - type: ShipVoucher
     ship: WhiteBastion
 
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherAdjudicator
-  name: TSP 'Adjudicator' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with TSP 'Adjudicator' attack shuttle. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 14000
-  - type: ShipVoucher
-    ship: Adjudicator
+#CMM NEW
 
 - type: entity
   parent: BaseItem
@@ -1325,6 +1310,161 @@
     price: 100000
   - type: ShipVoucher
     ship: Executioner
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherAdjudicator
+  name: TS 'Adjudicator' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with TSP 'Adjudicator' attack shuttle. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 14000
+  - type: ShipVoucher
+    ship: Adjudicator
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherArbiter
+  name: TS 'Arbiter' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian arbiter-class destroyer. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 32000
+  - type: ShipVoucher
+    ship: Arbiter
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherCorsair
+  name: TS 'Corsair' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Corsair-class missile destroyer. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 24000
+  - type: ShipVoucher
+    ship: Corsair
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherMinuteman
+  name: TS 'Minuteman' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Minuteman-class hybrid corvette. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 22000
+  - type: ShipVoucher
+    ship: Minuteman
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherSentry
+  name: TS 'Sentry' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Sentry-class hybrid fighter. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 8000
+  - type: ShipVoucher
+    ship: Sentry
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherRespondant
+  name: TS 'Respondant' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Respondant-class ballistic corvette. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 16000
+  - type: ShipVoucher
+    ship: Respondant
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherGuard
+  name: TS 'Guard' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Guard-class fighter. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 5000
+  - type: ShipVoucher
+    ship: Guard
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherJudge
+  name: TS 'Judge' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Judge-class fighter. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 32000
+  - type: ShipVoucher
+    ship: Judge
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherSentinel
+  name: TS 'Sentinel' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a Gliessian Sentinel-class fighter. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 18000
+  - type: ShipVoucher
+    ship: Sentinel
+
+
 
 #SRM
 

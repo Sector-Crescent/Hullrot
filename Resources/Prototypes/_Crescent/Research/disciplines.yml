@@ -47,6 +47,18 @@
     3: 0.75
 
 - type: techDiscipline
+  id: Minutemen
+  name: research-discipline-minutemen
+  color: "#0000FF"
+  icon:
+    sprite: _Crescent/Interface/Misc/research_disciplines.rsi
+    state: minutemen
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+- type: techDiscipline
   id: Interdyne
   name: research-discipline-interdyne
   color: "#FF6961"
