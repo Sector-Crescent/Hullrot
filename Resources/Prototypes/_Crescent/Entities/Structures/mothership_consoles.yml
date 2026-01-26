@@ -9,6 +9,7 @@
     - Vanguard
     - Lodka
     - Ivarod
+    - Sunder
     - Stern
     - Gargut
     - Hind
@@ -57,11 +58,12 @@
     - Redemptor
     - Ibis
     - Impel
-    - Covetor
     - Gnosis
     - Praxis
+    - Imparator
     - Laelaps
-    #- Dragoon
+    - Dragoon
+    - Suzerain
 
 - type: entity
   id: NemesisMothershipComputer
@@ -70,6 +72,7 @@
   components:
   - type: ShipyardListing
     shuttles:
+    - Janissary
     - Redemptor
     - Imparator
     - Perigale
@@ -121,14 +124,11 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Probe
     - buffalo
     - gazpachov
     - Musinyane
-    - Bison
+    - Flea
     - Nazaar
-    - colossus
-    - Chanchu
 
 - type: entity
   id: RamziMothershipComputer
@@ -150,9 +150,8 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - HornetDrone
-    #- Khopesh
-    #- Broadsword
+    - Khopesh
+    - Broadsword
 
 - type: entity
   id: UnionfallClementineMothershipComputer
