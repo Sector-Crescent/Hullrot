@@ -21,6 +21,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
@@ -55,6 +56,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
         SubscribeLocalEvent<ProjectileComponent, StartCollideEvent>(OnStartCollide);
         SubscribeLocalEvent<ProjectileComponent, PreventCollideEvent>(PreventCollision);
+        SubscribeLocalEvent<ProjectileComponent, HullrotBulletHitEvent>(OnBulletHit);
         SubscribeLocalEvent<EmbeddableProjectileComponent, ProjectileHitEvent>(OnEmbedProjectileHit);
         SubscribeLocalEvent<EmbeddableProjectileComponent, ThrowDoHitEvent>(OnEmbedThrowDoHit);
         SubscribeLocalEvent<EmbeddableProjectileComponent, ActivateInWorldEvent>(OnEmbedActivate, before: new[] { typeof(ActivatableUISystem), typeof(ItemToggleSystem), });
@@ -361,6 +363,14 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     {
         public override DoAfterEvent Clone() => this;
     }
+    private void OnBulletHit(EntityUid uid, ProjectileComponent component, ref HullrotBulletHitEvent args) // Hullrot - Phase Prevention
+    {
+        // This is so entities that shouldn't get a collision are ignored.
+        if (!args.targetFixture.Hard || component.DamagedEntity || component is { Weapon: null, OnlyCollideWhenShot: true })
+            return;
+
+        ProjectileCollide((uid, component, args.selfPhys), args.hitEntity);
+    }
 }
 
 [Serializable, NetSerializable]
@@ -394,3 +404,14 @@ public record struct ProjectileHitEvent(DamageSpecifier Damage, EntityUid Target
 [ByRefEvent]
 public record struct AfterProjectileHitEvent(DamageSpecifier Damage, EntityUid Target);
 
+[ByRefEvent] // Hullrot - Phase Prevention
+public sealed class HullrotBulletHitEvent : EntityEventArgs
+{
+    public EntityUid selfEntity;
+    public EntityUid hitEntity;
+    public Fixture targetFixture = default!;
+    public Fixture selfFixture = default!;
+    public PhysicsComponent selfPhys = default!;
+    public string selfFixtureKey = string.Empty;
+    public string targetFixtureKey = string.Empty;
+}

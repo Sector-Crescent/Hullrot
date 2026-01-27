@@ -1,3 +1,4 @@
+#NCWL
 - type: entity
   name: NCWL DS3 Militant 9x39mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
@@ -38,206 +39,11 @@
     availableModes:
     - SemiAuto
     - FullAuto
-    fireRate: 7
+    fireRate: 12
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
       params:
         volume: -10
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-
-- type: entity
-  name: PTA T3 Ghost 12mm
-  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, StreeCredRedeemable]
-  id: WeaponSubMachineGunGhost
-  description: A internally supressed supressed SMG, chambered in 12mm Smart.
-  components:
-  - type: GunRequiresWield
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/ghost.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Gun
-    fireRate: 6
-    selectedMode: FullAuto
-    availableModes:
-    - SemiAuto
-    - FullAuto
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
-      params:
-        volume: -10
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineSmgSmartgun
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineSmgSmartgun #The mags require uranium to make.Also made it required to be wielded.
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistol12mm
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgePistolSmart
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-  - type: StaticPrice
-    price: 400
-
-
-- type: entity
-  name: CDT C-20R Corsair 11mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
-  id: WeaponSubMachineGunCorsair
-  description: A compact 11 mm submachine gun made by Cyberdawn. Commonly called the C-20R, though Cyberdawn recently tried to force the nickname Corsair on it.
-  components:
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/corsair.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Gun
-    minAngle: 21
-    maxAngle: 32
-    fireRate: 8
-    selectedMode: FullAuto
-    availableModes:
-    - SemiAuto
-    - FullAuto
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_1.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolSubMachineGunHeavy
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineHeavySMG
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgeHeavyPistol
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgeHeavyPistol
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: true
-  - type: Appearance
-  - type: StaticPrice
-    price: 400
-  - type: Wieldable
-    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -19
-    maxAngle: -16
-
-- type: entity
-  name: C-20R ROW
-  id: WeaponSMGC20ROW
-  parent: BaseItem
-  description: A C20 SMG for use by cyborgs. Creates 11 mm Pistol ammo on the fly from an internal ammo fabricator, which slowly self-charges.
-  components:
-  - type: Gun
-    minAngle: 15
-    maxAngle: 25
-    fireRate: 8
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_1.ogg
-    soundEmpty:
-      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/corsair.rsi
-    layers:
-    - state: base
-      map: [ "enum.GunVisualLayers.Base" ]
-    - state: mag-2
-      map: [ "enum.GunVisualLayers.Mag" ]
-  - type: Item
-    size: Huge
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: ProjectileBatteryAmmoProvider
-    proto: CartridgeHeavyPistol
-    fireCost: 100
-  - type: Battery
-    maxCharge: 2500
-    startingCharge: 2500
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 25
-  - type: AmmoCounter
-
-- type: entity
-  name: PTA P-M50 Vektor 6mm #The only gun that actually has obvious problems
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
-  id: WeaponSubMachineGunPTAVektor
-  description: A cheap, open-bolt copy of the Vector. Unlike the real vector this one doesnt have the signature Super V recoil mitigation system. Chambered in small 6mm rounds.
-  components:
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistol6mmSmg
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineSMG6mm
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistol6mm
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgePistol6mm
-  - type: Item
-    shape:
-    - 0,0,2,1
-  - type: Gun
-    minAngle: 24
-    maxAngle: 45
-    angleIncrease: 4
-    angleDecay: 16
-    fireRate: 16.67 #i know this seems very high but the gun cant hit anything at a distance of 3-2 tiles anyway
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -260,7 +66,7 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
   - type: Gun
-    fireRate: 14
+    fireRate: 15
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
   - type: MagazineVisuals
@@ -272,56 +78,36 @@
     price: 600
 
 - type: entity
-  name: SHI MP49 Warden 9x19mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
-  id: WeaponSubMachineGunMP49
-  description: Shinohara's attempt at copying the vintage NanoTrasen MP5 and outsourcing it to the open market. Seen as an inferior model at first, most mercs and solos have taken a liking to this cheaper alternative.
+  name: NCWL Partisan 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: WeaponSubMachineGunNCWLPartisanHullrot
+  description: A rugged, deregulated SMG favoured by partisans and infiltrators simple, ruthless, and cheap to produce from scavenged parts.
   components:
-  - type: StaticPrice
-    price: 600
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_smg.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_smg.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
   - type: Gun
-    fireRate: 8
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-
-- type: entity
-  name: NT MP5 9x19mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
-  id: WeaponSubMachineGunMP5
-  description: A light Terran submachinegun originating from the now-defunct NanoTrasen Industries. Seen as a superior alternative to most light SMGs on the market and often used by elite militias everywhere.
-  components:
-  - type: StaticPrice
-    price: 800
-  - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
-  - type: Gun
-    fireRate: 14
+    fireRate: 20
+    angleIncrease: 15
+    angleDecay: 90
+    maxAngle: 90
+    minAngle: 1
     selectedMode: FullAuto
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
     availableModes:
+    - SemiAuto
     - FullAuto
+    fireOnDropChance: 0.1
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -362,7 +148,7 @@
     - type: Clothing
       sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi
     - type: Gun
-      fireRate: 6
+      fireRate: 9
       selectedMode: FullAuto
       soundGunshot:
         path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
@@ -392,6 +178,144 @@
       zeroVisible: true
     - type: Appearance
 
+#DSM
+- type: entity
+  name: IRM DA-20 Talon 11mm
+  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponSubMachineGunC20rHullrot
+  description: A slick submachinegun produced by Olywir Armaments for the Imperial Navy. Sees little use in the hands of actual troopers due to the cost of manufacturing.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/talon.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/talon.rsi
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -16
+  - type: Gun
+    fireRate: 15
+    minAngle: 21
+    maxAngle: 32
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunHeavy
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavySMG
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: IRM Arbiter 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: WeaponSubMachineGunDSMArbiterHullrot
+  description: A stripped-down Imperial SMG made for mass production. Features and components requiring skilled machining have been removed to allow manufacture by lesser domains.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/surplus_dsm_smg.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/surplus_dsm_smg.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 12
+    angleIncrease: 0.25
+    angleDecay: 15
+    minAngle: 0
+    maxAngle: 5
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+#SHI
+- type: entity
+  name: SHI MP49 Warden 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
+  id: WeaponSubMachineGunMP49
+  description: Shinohara's attempt at copying the vintage NanoTrasen MP5 and outsourcing it to the open market. Seen as an inferior model at first, most mercs and solos have taken a liking to this cheaper alternative.
+  components:
+  - type: StaticPrice
+    price: 600
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+  - type: Gun
+    fireRate: 15
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
 - type: entity
   name: SHI M221s Phantom 6mm
   parent: [BaseWeaponSubMachineGun, StreeCredRedeemableLow]
@@ -413,7 +337,7 @@
     shape:
     - 0,0,2,1
   - type: Gun
-    fireRate: 9
+    fireRate: 10
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_2.ogg
@@ -446,59 +370,272 @@
   - type: Appearance
 
 - type: entity
-  name: HP Mak-11 Beetle 9x19mm
-  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
-  id: WeaponSubMachineGunBeetle
-  description: A crude weapon manufactured by the Hunter's Pride merchant's guild. Intended as nothing more than cheap armament to stuff into the hands of expendable fodder.
+  name: NT WT50 Sabre 11mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: WeaponSubMachineGunWt550Hullrot
+  description: A light Terran-originating submachine gun with a top-mounted magazine. Chamberd in 11mm PSTF.
   components:
-  - type: StaticPrice
-    price: 1000
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/wt550.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
-  - type: Item
-    shape:
-    - 0,0,2,1
+    sprite: _Crescent/Objects/Weapons/Guns/wt550.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
   - type: Gun
-    minAngle: 2
-    maxAngle: 20
-    angleIncrease: 4
-    angleDecay: 16
-    fireRate: 8
+    fireRate: 15
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1.5
+    angleDecay: 6
     selectedMode: FullAuto
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
     availableModes:
+    - SemiAuto
     - FullAuto
+    fireOnDropChance: 0.1
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: MagazinePistolSubMachineGunTopMounted
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazinePistolSubMachineGun
+            - MagazinePistolSubMachineGunTopMounted
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgeHeavyPistol
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+            - CartridgeHeavyPistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 11
+    zeroVisible: true
+  - type: Appearance
+
+#TFSC
+- type: entity
+  name: CDT C-20R Corsair 11mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: WeaponSubMachineGunCorsair
+  description: A compact 11 mm submachine gun made by Cyberdawn. Commonly called the C-20R, though Cyberdawn recently tried to force the nickname Corsair on it.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/corsair.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 21
+    maxAngle: 32
+    fireRate: 15
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_1.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunHeavy
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavySMG
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 400
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -19
+    maxAngle: -16
+
+- type: entity
+  name: NCSP SR-2MP Atreides 9x19mm
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunAtreidesHullrot
+  description: A rapid-fire submachinegun developed by the Shipfitters Union. Eats through ammo like a starving elephant.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/atreides.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 15
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
+    fireOnDropChance: 0.3
   - type: MagazineVisuals
     magState: mag
     steps: 1
     zeroVisible: true
   - type: Appearance
+
+- type: entity
+  name: C-20R ROW
+  id: WeaponSMGC20ROW
+  parent: BaseItem
+  description: A C20 SMG for use by cyborgs. Creates 11 mm Pistol ammo on the fly from an internal ammo fabricator, which slowly self-charges.
+  components:
+  - type: Gun
+    minAngle: 15
+    maxAngle: 25
+    fireRate: 14
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_1.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/corsair.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-2
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Item
+    size: Huge
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeHeavyPistol
+    fireCost: 100
+  - type: Battery
+    maxCharge: 2500
+    startingCharge: 2500
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25
+  - type: AmmoCounter
+
+#PTA
+- type: entity
+  name: PTA P-M50 Vektor 6mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
+  id: WeaponSubMachineGunPTAVektor
+  description: A cheap, open-bolt copy of the Vector. Unlike the real vector this one doesnt have the signature Super V recoil mitigation system. Chambered in small 6mm rounds.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol6mmSmg
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineSMG6mm
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol6mm
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol6mm
+  - type: Item
+    shape:
+    - 0,0,2,1
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 20
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PTA T3 Ghost 12mm
+  parent: [BaseWeaponSubMachineGun, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponSubMachineGunGhost
+  description: A internally supressed supressed SMG, chambered in 12mm Smart.
+  components:
+  - type: GunRequiresWield
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/ghost.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  -  type: Gun
+     fireRate: 14
+     soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
+      params:
+        volume: -10
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineSmgSmartgun
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineSmgSmartgun #The mags require uranium to make.Also made it required to be wielded.
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol12mm
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistolSmart
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 400
 
 - type: entity
   name: PTA P-M100 Cheshyre 11mm
@@ -518,7 +655,7 @@
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
   - type: Gun
-    fireRate: 8
+    fireRate: 20
     selectedMode: Burst
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
@@ -550,6 +687,118 @@
   - type: Appearance
 
 - type: entity
+  name: PTA P-M85 Drozd .327
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: WeaponSubMachineGunDroz
+  description: A fast very firing bullpup submachine gun. Manufactured by Pang Tai Arms and outsourced to mercenary factors in the area. Suffers from immense recoil due to it's caliber.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Weapons/Guns/drozd.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: _Crescent/Objects/Weapons/Guns/drozd.rsi
+    - type: Wieldable
+      unwieldOnUse: false
+    - type: GunWieldBonus
+      minAngle: -10
+      maxAngle: -15
+    - type: Gun
+      minAngle: 21
+      maxAngle: 32
+      fireRate: 9
+      burstFireRate: 12
+      selectedMode: FullAuto
+      soundGunshot:
+        path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
+      availableModes:
+        - FullAuto
+        - Burst
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazineMagnumSubMachineGun
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - MagazineMagnumSubMachineGun
+        gun_chamber:
+          name: Chamber
+          startingItem: CartridgePistol
+          priority: 1
+          whitelist:
+            tags:
+              - CartridgePistol
+    - type: MagazineVisuals
+      magState: mag
+      steps: 1
+      zeroVisible: true
+    - type: Appearance
+
+#SRM
+- type: entity
+  name: HP Mak-11 Beetle 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
+  id: WeaponSubMachineGunBeetle
+  description: A crude weapon manufactured by the Hunter's Pride merchant's guild. Intended as nothing more than cheap armament to stuff into the hands of expendable fodder.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
+  - type: Item
+    shape:
+    - 0,0,2,1
+  - type: Gun
+    minAngle: 2
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 15
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+#ATH
+- type: entity
   name: HGS KleMG-40 Blume 9x19mm
   parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
   id: WeaponSubMachineGunMP40
@@ -567,7 +816,7 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/mp40.rsi
   - type: Gun
-    fireRate: 6.5
+    fireRate: 15
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
@@ -615,7 +864,56 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/kevyt.rsi
   - type: Gun
-    fireRate: 7
+    fireRate: 15
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+#NT
+- type: entity
+  name: NT MP5 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
+  id: WeaponSubMachineGunMP5
+  description: A light Terran submachinegun originating from the now-defunct NanoTrasen Industries. Seen as a superior alternative to most light SMGs on the market and often used by elite militias everywhere.
+  components:
+  - type: StaticPrice
+    price: 800
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
+  - type: Gun
+    fireRate: 15
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg

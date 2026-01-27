@@ -1,0 +1,127 @@
+#tier 1
+#--- Funny clutter ---#
+# (riot shields and nightsticks)
+# (narcan autoinjector and gun)
+
+#--- MAYBE IF NOT MAPPED ---#
+# (shipworks & material processing)  
+# (explosives, propelland and casings production)
+# (ammo assembly)
+
+- type: technology
+  id: MinutemenBoltRifle
+  name: research-technology-minutemen-light-guns
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/nimrod.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 1
+  cost: 3000
+  recipeUnlocks:
+  - WeaponRifleCMMNimrod
+  #- WeaponSubMachineGunWt550 - uncomment in case of SMG
+
+- type: technology
+  id: MinutemenHybridCorvette
+  name: research-technology-minutemen-hybrid-corvettes
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MinutemanLPC
+  - SentinelLPC
+
+- type: technology
+  id: MinutemenLightCrafts
+  name: research-technology-minutemen-light-crafts
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 1
+  cost: 5000 # 6k if guard comes back
+  recipeUnlocks:
+  - RespondantLPC
+  - AdjudicatorLPC
+  - SentryLPC
+  #- GuardLPC --uncomment someday in the future when we will get an UL
+
+#tier 2
+
+# maybe kammer in the future - uncomment in case of shotgun
+#- type: technology
+#  id: MinutemenShotgun
+#  name: research-technology-minutemen-shotgun
+#  icon:
+#    sprite: _Crescent/Objects/Weapons/Guns/kammer.rsi
+#    state: icon
+#  discipline: Minutemen
+#  tier: 2
+#  cost: 6000
+#  recipeUnlocks:
+#  - WeaponShotgunKammerer
+
+- type: technology
+  id: MinutemenHardsuit
+  name: research-technology-minutemen-hardsuit
+  icon:
+    sprite: _Crescent/Clothing/CMM/OuterClothing/ensign.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - ClothingOuterHardsuitMinutemenEnsign
+
+- type: technology
+  id: MinutemenHeavyDestroyer
+  name: research-technology-minutemen-heavy-artillery-destroyer
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - ArbiterLPC
+  
+- type: technology
+  id: MinutemenLightMissileDestroyer
+  name: research-technology-minutemen-light-missile-destroyer
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - CorsairLPC
+
+#tier 3
+
+- type: technology
+  id: MinutemenIonDestroyer
+  name: research-technology-minutemen-ion-destroyer
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - JudgeLPC
+
+- type: technology
+  id: MinutemenNTCorvette
+  name: research-technology-minutemen-light-nt-corvette
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Minutemen
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - ExecutionerLPC

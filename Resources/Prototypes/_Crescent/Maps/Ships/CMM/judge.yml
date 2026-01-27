@@ -1,0 +1,35 @@
+# Author Info
+# Discord: szyefan
+
+- type: vessel
+  id: Judge
+  name: TS Judge
+  description: |
+    Minutemen destroyer. Designed to brawl.
+    LOADOUT: 1x 300cc 'Bolter' plasma blaster
+    MINIMUM CREW: 1x Pilot
+  price: 15000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/judge.yml
+
+- type: gameMap
+  id: Judge
+  mapName: 'TS Judge'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/judge.yml
+  minPlayers: 0
+  stations:
+    Judge:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: destroyer
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Judge {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-destroyer

@@ -6,6 +6,11 @@
   save: false
   abstract: true
   components:
+  - type: BypassLock
+    openWiresPanel: true
+  - type: BypassLockRequiresMobState
+    requiredMobState:
+    - Critical
   - type: Reactive
     groups:
       Acidic: [Touch]

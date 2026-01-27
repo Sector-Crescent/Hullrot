@@ -273,3 +273,246 @@
       - id: SwarmrocketClip
         amount: 5
 
+#Shipgun Rework Ammo Below
+
+- type: entity
+  id: Crate20mmAmmo
+  parent: N14CrateAluminium
+  name: 20mm FMJ 'Screamer' carbine magazine crate
+  description: 12 boxes of FMJ ammunition for the 'Screamer' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mm
+        amount: 12
+
+- type: entity
+  id: Crate20mmAmmoPlasma
+  parent: N14CrateAluminium
+  name: 20mm PC 'Screamer' carbine magazine crate
+  description: 12 boxes of PC ammunition for the 'Screamer' weapon platform. Superior payload at the cost of reduced range.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mmPlasma
+        amount: 12
+
+- type: entity
+  id: Crate20mmAmmoGyrostable
+  parent: N14CrateAluminium
+  name: 20mm Gyrostable 'Screamer' carbine magazine crate
+  description: 12 boxes of Gyrostabilized ammunition for the 'Screamer' weapon platform. Superior range capabilities for a weaker payload.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mmGyrostable
+        amount: 12
+
+- type: entity
+  id: Crate35mmAmmo
+  parent: N14CrateAluminium
+  name: 35mm FMJ 'Scout' gatling magazine crate
+  description: 10 boxes of FMJ ammunition for the 'Scout' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine35mm
+        amount: 10
+
+- type: entity
+  id: Crate35mmAmmoPlasma
+  parent: N14CrateAluminium
+  name: 35mm PC 'Scout' gatling magazine crate
+  description: 10 boxes of PC ammunition for the 'Scout' weapon platform. Superior payload at the cost of reduced range.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine35mmPlasma
+        amount: 10
+
+- type: entity
+  id: Crate35mmAmmoGyrostable
+  parent: N14CrateAluminium
+  name: 35mm Gyrostable 'Scout' gatling magazine crate
+  description: 10 boxes of Gyrostabilized ammunition for the 'Scout' weapon platform. Superior range capabilities for a weaker payload.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine35mmGyrostable
+        amount: 10
+
+- type: entity
+  id: Crate48mmAmmo
+  parent: N14CrateAluminium
+  name: 48mm HE 'Shortbow' rocket crate
+  description: 24 HE rockets for the 'Shortbow' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge48mmRocket
+        amount: 24
+
+- type: entity
+  id: Crate50mmAmmo
+  parent: N14CrateAluminium
+  name: 50mm FMJ 'Whistler' autocannon magazine crate
+  description: 8 boxes of FMJ ammunition for the 'Whistler' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mm
+        amount: 8
+
+- type: entity
+  id: Crate50mmAmmoPlasma
+  parent: N14CrateAluminium
+  name: 50mm PC 'Whistler' autocannon magazine crate
+  description: 8 boxes of PC ammunition for the 'Whistler' weapon platform. Superior payload at the cost of reduced range.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mmPlasma
+        amount: 8
+
+- type: entity
+  id: Crate50mmAmmoGyrostable
+  parent: N14CrateAluminium
+  name: 50mm Gyrostable 'Whistler' autocannon magazine crate
+  description: 8 boxes of Gyrostabilized ammunition for the 'Whistler' weapon platform. Superior range capabilities for a weaker payload.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine20mmGyrostable
+        amount: 8
+
+- type: entity
+  id: Crate60mmAmmo
+  parent: N14CrateAluminium
+  name: 60mm HE 'Azimuth' light missile crate
+  description: 12 HE light missiles for the 'Azimuth' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge60mmRocket
+        amount: 12
+
+- type: entity
+  id: Crate88mmAmmo
+  parent: N14CrateAluminium
+  name: 88mm HE 'Corpus' flak-screen shell box crate
+  description: 6 boxes of HE ammunition for the 'Corpus' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineCorpus
+        amount: 6
+
+- type: entity
+  id: Crate90mmAmmo
+  parent: N14CrateAluminium
+  name: 90mm FMJ 'Gistum' cannon clip crate
+  description: 6 clips of FMJ ammunition for the 'Gistum' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineGistum
+        amount: 6
+
+- type: entity
+  id: Crate90mmAmmoPlasma
+  parent: N14CrateAluminium
+  name: 90mm PC 'Gistum' cannon clip crate
+  description: 6 clips of PC ammunition for the 'Gistum' weapon platform. Superior payload at the cost of reduced range.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineGistumPlasma
+        amount: 6
+
+- type: entity
+  id: Crate90mmAmmoGyrostable
+  parent: N14CrateAluminium
+  name: 90mm Gyrostable 'Gistum' cannon clip crate
+  description: 6 clips of Gyrostabilized ammunition for the 'Gistum' weapon platform. Superior range capabilities for a weaker payload.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineGistumGyrostable
+        amount: 6
+
+- type: entity
+  id: Crate95mmAmmo
+  parent: N14CrateAluminium
+  name: 95mm HE 'Arbalest' heavy missile crate
+  description: 10 HE heavy missiles for the 'Arbalest' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge95mmRocket
+        amount: 12
+
+- type: entity
+  id: Crate120mmAmmo
+  parent: N14CrateAluminium
+  name: 120mm FMJ 'Pithatis' artillery shell crate
+  description: 20 shells of FMJ ammunition for the 'Pithatis' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mm
+        amount: 20
+
+- type: entity
+  id: Crate120mmAmmoPlasma
+  parent: N14CrateAluminium
+  name: 120mm PC 'Pithatis' artillery shell crate
+  description: 20 shells of PC ammunition for the 'Pithatis' weapon platform. Superior payload at the cost of reduced range.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mmPlasma
+        amount: 20
+
+- type: entity
+  id: Crate120mmAmmoGyrostable
+  parent: N14CrateAluminium
+  name: 120mm Gyrostable 'Pithatis' artillery shell crate
+  description: 20 shells of Gyrostabilized ammunition for the 'Pithatis' weapon platform. Superior range capabilities for a weaker payload.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge120mmGyrostable
+        amount: 20
+
+- type: entity
+  id: Crate240mmAmmo
+  parent: N14CrateAluminium
+  name: 240mm HE 'Gargoyle' heavy torpedo crate
+  description: 12 HE heavy torpedoes for the 'Gargoyle' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge240mmRocket
+        amount: 12
+
+- type: entity
+  id: Crate300mmAmmo
+  parent: N14CrateAluminium
+  name: 300mm FMJ 'Pithis' artillery subnuclear shell crate
+  description: 12 shells of FMJ USM ammunition for the 'Pithis' weapon platform. May the Saints have mercy upon your foe.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge300mm
+        amount: 12
+
+- type: entity
+  id: Crate330mmAmmo
+  parent: N14CrateAluminium
+  name: 330mm FMJ 'Catapult' ultra-heavy cruise missile crate
+  description: 9 ultra-heavy cruise missiles for the 'Catapult' weapon platform. One step removed from the atomic solution.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Cartridge330mmRocket
+        amount: 9

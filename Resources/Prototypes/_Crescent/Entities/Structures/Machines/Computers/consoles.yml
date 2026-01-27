@@ -16,3 +16,83 @@
   components:
     - type: CommunicationsConsole
       title: ship-comm-console
+
+- type: entity
+  parent: BaseComputerShuttle
+  id: C_ComputerShuttle
+  name: standard shuttle console
+  description: Used to pilot a shuttle.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: DeviceLinkSink
+  - type: DeviceLinkSource
+    ports:
+      - Group1
+      - Group2
+      - Group3
+      - Group4
+      - Group5
+  - type: NamedModules
+    buttonNames:
+      - "Module A"
+      - "Module B"
+      - "Module C"
+      - "Module D"
+      - "Module E"
+  - type: Computer
+    board: C_ShuttleConsoleCircuitboard
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, C_ComputerShuttle]
+  id: C_ComputerTabletopShuttle
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: shuttle
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]

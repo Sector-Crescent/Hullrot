@@ -1,0 +1,35 @@
+# Author Info
+# Discord: mlgtastic
+#
+- type: vessel
+  id: Adjudicator
+  name: TS Adjudicator
+  description: |
+    A very light interceptor used in armed policing actions. No longer in mass production after the disbandment of the CMM, this hull is more expensive to field than the average fighter.
+    LOADOUT: 1x NT 20mm Vulcan, 1x SHI 48mm Missile Launcher
+    MINIMUM CREW: 1x Pilot
+  price: 22000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/adjudicator.yml
+
+- type: gameMap
+  id: Adjudicator
+  mapName: 'TS Adjudicator'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/adjudicator.yml
+  minPlayers: 0
+  stations:
+    Adjudicator:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Adjudicator {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-utility

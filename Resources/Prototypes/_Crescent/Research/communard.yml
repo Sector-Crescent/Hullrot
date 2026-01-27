@@ -65,7 +65,6 @@
   cost: 5000
   recipeUnlocks:
   - VanguardLPC
-  - ZorniyLPC
   - LodkaLPC
   - CherenzikovLPC
 
@@ -128,18 +127,6 @@
   cost: 8500
   recipeUnlocks:
   - GargutLPC
-
-- type: technology
-  id: CommunardVanguardMarkTwo
-  name: research-technology-communard-vanguardmktwo
-  icon:
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    state: icon
-  discipline: Communard
-  tier: 2
-  cost: 8000
-  recipeUnlocks:
-  - VanguardMarkTwoLPC
 
 - type: technology
   id: CommunardHeavyInfantry

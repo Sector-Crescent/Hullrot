@@ -15,6 +15,7 @@
     denySound:
       path: /Audio/Machines/airlock_deny.ogg
   - type: Sprite
+    snapCardinals: false
     sprite: Structures/Doors/Airlocks/Standard/external.rsi
   - type: PaintableAirlock
     group: External

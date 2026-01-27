@@ -1,9 +1,10 @@
+using Robust.Shared;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._Crescent.CCvars;
 
 [CVarDefs]
-public sealed class CrescentCVars
+public sealed class CrescentCVars : CVars
 {
     /// <summary>
     /// Whether or not respawning is enabled.
@@ -30,4 +31,16 @@ public sealed class CrescentCVars
     /// </summary>
     public static readonly CVarDef<string> UILayout =
         CVarDef.Create("sc.ui.layout", "Classic", CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// How often point cannons will be updated, in ticks per second.
+    /// </summary>
+    public static readonly CVarDef<float> PointCannonUiTps =
+        CVarDef.Create("sc.pointcannons.ui_tps", 8.0f, CVar.SERVERONLY);
+
+    /// <summary>
+    /// HULLROT: How often shuttle consoles will be updated, in ticks per second.
+    /// </summary>
+    public static readonly CVarDef<float> ShuttleConsoleUiTps =
+        CVarDef.Create("shuttle.console_tps", 4.0f, CVar.SERVERONLY);
 }

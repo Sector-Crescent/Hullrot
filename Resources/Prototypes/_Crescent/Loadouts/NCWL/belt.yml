@@ -58,3 +58,16 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutBelt
+
+- type: loadout
+  id: LoadoutBeltSheathNCWLKukri
+  category: Belt
+  cost: 0
+  items:
+    - ClothingBeltSheathNCWLKukriFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - CommandantNCWL

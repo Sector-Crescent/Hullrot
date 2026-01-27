@@ -1,0 +1,37 @@
+# Author Info
+# Discord: szyefan
+
+- type: vessel
+  id: Arbiter
+  name: TS Arbiter
+  description: |
+    Minutemen destroyer. Designed to act as a small outpost durning extended deployment.
+    LOADOUT: 2x 120mm 'Pithatis' mono-barreled artillery cannon, 2x 20mm 'Screamer' gatlings, 4x 50mm 'Whistler' light autocannon
+    MINIMUM CREW: 1x Pilot, 1x Gunner, 1x Loader
+  price: 100000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/arbiter.yml
+
+- type: gameMap
+  id: Arbiter
+  mapName: 'TS Arbiter'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/arbiter.yml
+  minPlayers: 0
+  stations:
+    Arbiter:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: destroyer
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Arbiter {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-destroyer
+        - type: VesselDescription
+          description: A ship built to last, the hull is based on a plastitanium spine to increase its durability.

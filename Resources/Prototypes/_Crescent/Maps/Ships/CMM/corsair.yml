@@ -1,0 +1,37 @@
+# Author Info
+# Discord: szyefan
+
+- type: vessel
+  id: Corsair
+  name: TS Corsair
+  description: |
+    A fast destroyer, its missiles wont do alot against shields but they shred armor.
+    LOADOUT: 1x 120mm 'Pithatis' mono-barreled artillery cannon, 6x 60mm 'Azimuth' LMLs
+    MINIMUM CREW: 1x Pilot, 1-2x Loaders
+  price: 100000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/corsair.yml
+
+- type: gameMap
+  id: Corsair
+  mapName: 'TS Corsair'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/corsair.yml
+  minPlayers: 0
+  stations:
+    Corsair:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: destroyer
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Corsair {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-destroyer
+        - type: VesselDescription
+          description: Light missile destroyer, not much by itself but with a right fleet support...

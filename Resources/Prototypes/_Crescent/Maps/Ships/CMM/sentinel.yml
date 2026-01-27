@@ -1,0 +1,35 @@
+# Author Info
+# Discord: szyefan
+#
+- type: vessel
+  id: Sentinel
+  name: TS Sentinel
+  description: |
+    A relatively light corvette used to harass enemy with its short range plasma guns.
+    LOADOUT: 1x 300cc 'Bolter' plasma blaster, 2x 150cc 'starlight' plasma gatlings
+    MINIMUM CREW: 1x Pilot
+  price: 45000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/CMM/sentinel.yml
+
+- type: gameMap
+  id: Sentinel
+  mapName: 'TS Sentinel'
+  mapPath: /Maps/_Crescent/Shuttles/CMM/sentinel.yml
+  minPlayers: 0
+  stations:
+    Sentinel:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'TS Sentinel {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-corvette

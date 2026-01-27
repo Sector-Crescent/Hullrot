@@ -126,6 +126,8 @@
         whitelist:
           components:
           - IdCard
+  - type: ShipNpcTarget # Mono
+    needPower: true
   - type: ActivatableUI
     key: enum.ShuttleConsoleUiKey.Key
   - type: UserInterface

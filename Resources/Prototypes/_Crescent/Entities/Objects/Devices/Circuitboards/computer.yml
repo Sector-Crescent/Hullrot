@@ -10,3 +10,14 @@
     prototype: ComputerAdvancedRadar
   - type: ComputerTabletopBoard # Frontier
     prototype: ComputerTabletopAdvancedRadar # Frontier
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: C_ShuttleConsoleCircuitboard
+  name: standard shuttle console board
+  description: A computer printed circuit board for a civilian shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: C_ComputerShuttle

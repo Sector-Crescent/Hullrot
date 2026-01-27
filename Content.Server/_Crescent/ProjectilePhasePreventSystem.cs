@@ -20,18 +20,6 @@ using Robust.Shared.Threading;
 ///  This system is expected to be ran on objects that DO not have any HARD-FIXTURES. As in all-collision events are handled only by this and not by physics due to actual body collision.
 /// </summary>
 ///
-[ByRefEvent]
-public class HullrotBulletHitEvent : EntityEventArgs
-{
-    public EntityUid selfEntity;
-    public EntityUid hitEntity;
-    public Fixture targetFixture = default!;
-    public Fixture selfFixture = default!;
-    public string selfFixtureKey = string.Empty;
-    public string targetFixtureKey = string.Empty;
-
-
-}
 public class ProjectilePhasePreventerSystem : EntitySystem
 {
     [Dependency] private readonly PhysicsSystem _phys = default!;
@@ -132,7 +120,6 @@ public class ProjectilePhasePreventerSystem : EntitySystem
                 CollisionRay ray = new CollisionRay(phase.start, (worldPos - phase.start).Normalized(), phase.relevantBitmasks);
                 var rayLength = (worldPos - phase.start).Length();
                 phase.start = worldPos;
-                var bulletPhysics = physQuery.GetComponent(owner);
                 var bulletFixtures = fixtureQuery.GetComponent(owner);
                 var bulletString = bulletFixtures.Fixtures.Keys.First();
                 var checkUid = EntityUid.Invalid;
@@ -142,6 +129,8 @@ public class ProjectilePhasePreventerSystem : EntitySystem
                     checkUid = projectileWeaponTransform.GridUid!.Value;
                 foreach (var hit in _phys.IntersectRay(_trans.GetMapId(owner), ray,rayLength, projectile.Weapon, false))
                 {
+                    if (owner == hit.HitEntity)
+                        continue;
                     // whilst the raycast supports a filter function . i do not want to package variabiles in lambdas in bulk
                     if (projectile.Shooter == hit.HitEntity && projectile.IgnoreShooter)
                         continue;
@@ -153,6 +142,7 @@ public class ProjectilePhasePreventerSystem : EntitySystem
                     if (hitTransform.GridUid is not null && checkUid == hitTransform.GridUid && projectile.IgnoreWeaponGrid)
                         continue;
                     var targetPhysics = physQuery.GetComponent(hit.HitEntity);
+                    PhysicsComponent bulletPhysics = physQuery.GetComponent(owner);
                     var targetFixtures = fixtureQuery.GetComponent(hit.HitEntity);
                     var targetString = targetFixtures.Fixtures.Keys.First();
                     // i hate how verbose this is. - SPCR 2025
@@ -163,6 +153,7 @@ public class ProjectilePhasePreventerSystem : EntitySystem
                         selfFixtureKey = bulletString,
                         targetFixture = targetFixtures.Fixtures.Values.First(),
                         targetFixtureKey = targetString,
+                        selfPhys = bulletPhysics
                     };
 
                     args.output.Add(bulletEvent);

@@ -84217,7 +84217,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CrateIdnaAmmo
+- proto: Crate60mmAmmo
   entities:
   - uid: 4639
     components:
@@ -84235,7 +84235,7 @@ entities:
     - type: Physics
       fixedRotation: False
       bodyType: Static
-- proto: CrateSlugthrowerAmmo
+- proto: Crate20mmAmmo
   entities:
   - uid: 4641
     components:
@@ -84247,14 +84247,14 @@ entities:
     - type: Transform
       pos: -13.5,2.5
       parent: 1
-- proto: CrateSumitomoAmmo
+- proto: Crate48mmAmmo
   entities:
   - uid: 4643
     components:
     - type: Transform
       pos: 15.5,-0.5
       parent: 1
-- proto: CrateVulcanAmmo
+- proto: Crate35mmAmmo
   entities:
   - uid: 4644
     components:

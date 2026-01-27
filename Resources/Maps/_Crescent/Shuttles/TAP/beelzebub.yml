@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/22/2025 02:32:23
+  time: 01/23/2026 01:42:20
   entityCount: 166
 maps: []
 grids:
@@ -146,6 +146,10 @@ entities:
             245: -3,-1
             248: -2,-5
             251: -1,-6
+            268: 1,2
+            291: -3,-1
+            294: -2,-5
+            297: -1,-6
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -170,6 +174,10 @@ entities:
             254: 1,-6
             257: 2,-5
             263: 3,-1
+            285: -1,2
+            300: 1,-6
+            303: 2,-5
+            309: 3,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -194,6 +202,10 @@ entities:
             231: -3,2
             234: -2,3
             242: -3,-3
+            266: 1,2
+            277: -3,2
+            280: -2,3
+            288: -3,-3
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -218,6 +230,10 @@ entities:
             228: 3,2
             238: -1,2
             260: 3,-3
+            271: 2,3
+            274: 3,2
+            284: -1,2
+            306: 3,-3
         - node:
             id: LatticeEdgeE
           decals:
@@ -256,6 +272,13 @@ entities:
             243: -3,-1
             246: -2,-5
             249: -1,-6
+            265: 1,2
+            276: -3,2
+            279: -2,3
+            287: -3,-3
+            289: -3,-1
+            292: -2,-5
+            295: -1,-6
         - node:
             id: LatticeEdgeN
           decals:
@@ -299,6 +322,14 @@ entities:
             252: 1,-6
             255: 2,-5
             261: 3,-1
+            267: 1,2
+            282: -1,2
+            290: -3,-1
+            293: -2,-5
+            296: -1,-6
+            298: 1,-6
+            301: 2,-5
+            307: 3,-1
         - node:
             id: LatticeEdgeS
           decals:
@@ -342,6 +373,14 @@ entities:
             235: -1,2
             240: -3,-3
             258: 3,-3
+            264: 1,2
+            269: 2,3
+            272: 3,2
+            275: -3,2
+            278: -2,3
+            281: -1,2
+            286: -3,-3
+            304: 3,-3
         - node:
             id: LatticeEdgeW
           decals:
@@ -380,6 +419,13 @@ entities:
             256: 2,-5
             259: 3,-3
             262: 3,-1
+            270: 2,3
+            273: 3,2
+            283: -1,2
+            299: 1,-6
+            302: 2,-5
+            305: 3,-3
+            308: 3,-1
         - node:
             color: '#EFB34196'
             id: WarnLineE
@@ -396,25 +442,25 @@ entities:
         tiles:
           0,-1:
             0: 13075
-            2: 32896
-            1: 8
+            1: 32896
+            2: 8
           0,0:
-            1: 168
-            2: 18944
+            2: 168
+            1: 18944
             0: 8192
           -1,0:
-            1: 162
-            2: 18944
+            2: 162
+            1: 18944
             0: 32768
           -1,-1:
-            2: 8224
+            1: 8224
             0: 34824
-            1: 2
+            2: 2
           -1,-2:
-            2: 18432
+            1: 18432
           0,-2:
             0: 4352
-            2: 16896
+            1: 16896
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -432,7 +478,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
+          immutable: True
           moles:
           - 0
           - 0
@@ -447,7 +493,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          temperature: 293.15
           moles:
           - 0
           - 0
@@ -1192,32 +1238,6 @@ entities:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
-- proto: ShuttleGunPlasmaRepeater
-  entities:
-  - uid: 119
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,3.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 3093.226
-    - type: ApcPowerReceiverBattery
-      enabled: True
-  - uid: 120
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,3.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 3096.0608
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: StairStageDark
   entities:
   - uid: 121
@@ -1240,11 +1260,11 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 101
-          - 104
-          - 102
-          - 100
           - 103
+          - 100
+          - 102
+          - 104
+          - 101
     - type: Physics
       canCollide: False
 - proto: Thruster
@@ -1476,42 +1496,56 @@ entities:
       parent: 1
 - proto: WarpPointShip
   entities:
-  - uid: 166
+  - uid: 160
     components:
     - type: Transform
       pos: 0.5,-1.5
       parent: 1
+- proto: WeaponTurretRetribution
+  entities:
+  - uid: 119
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,3.5
+      parent: 1
+  - uid: 120
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,3.5
+      parent: 1
 - proto: WindowReinforcedDirectional
   entities:
-  - uid: 160
+  - uid: 161
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,0.5
       parent: 1
-  - uid: 161
+  - uid: 162
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,0.5
       parent: 1
-  - uid: 162
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,0.5
-      parent: 1
   - uid: 163
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 1.5,0.5
       parent: 1
   - uid: 164
     components:
     - type: Transform
-      pos: 0.5,0.5
+      pos: 1.5,0.5
       parent: 1
   - uid: 165
+    components:
+    - type: Transform
+      pos: 0.5,0.5
+      parent: 1
+  - uid: 166
     components:
     - type: Transform
       pos: -0.5,0.5

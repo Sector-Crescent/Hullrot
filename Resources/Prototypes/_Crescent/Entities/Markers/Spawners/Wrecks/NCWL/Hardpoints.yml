@@ -12,18 +12,7 @@
     - type: RandomSpawner
       prototypes:
        - MachineFrameDestroyed
-       - PointNFireCannonExample
-       - BaseWeaponTurretLancer
-       - SlugthrowerCannon
-       - ShuttleGunKurosawa
-       - NTVulcanTurret
-       - WeaponTurretVulcan
       chance: 0.15
       rarePrototypes:
-       - BaseWeaponTurretBattlemortar
-       - FlakCannonTurret
-       - BaseWeaponTurretGargoyle
-       - Type99Artillery
-       - WeaponTurretMortar
-       - BaseWeaponTurretHeavyPlasma
+       - MachineFrameDestroyed
       rareChance: 0.05

@@ -1,0 +1,23 @@
+- type: vessel
+  id: ValorDrone
+  name: DSM Valor
+  description: An imperial ultralight fighter drone.
+  price: 15000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/valordrone.yml
+
+- type: gameMap
+  id: ValorDrone
+  mapName: 'DSM Valor'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/valordrone.yml
+  minPlayers: 0
+  stations:
+    ValorDrone:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Valor {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

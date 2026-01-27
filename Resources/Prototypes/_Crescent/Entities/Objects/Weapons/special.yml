@@ -329,9 +329,9 @@
     attackRate: 0.75
     damage:
       types:
-        Blunt: 30
-        Heat: 20
-        Structural: 25
+        Blunt: 25
+        Heat: 30
+        Structural: 50
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.15
@@ -344,7 +344,7 @@
     size: Normal
   - type: DisarmMalus #harder to shake firm grip
   - type: IgniteOnMeleeHit
-    fireStacks: 3
+    fireStacks: 10 #BURN ALIVE ONCE ARMOR FAILS
 
 - type: entity
   name: SHI-30J Paperwork

@@ -68,3 +68,12 @@
   components:
     - type: DeviceNetwork
       receiveFrequencyId: SurveillanceCameraInterdyneIPM
+
+- type: entity
+  parent: ClothingNeckWearableCamera
+  id: ClothingNeckWearableCameraMallcops
+  name: old wearable surveying port
+  description: some broken tech that barely works, a memory of more orderly days.
+  components:
+    - type: DeviceNetwork
+      receiveFrequencyId: SurveillanceCameraGliessMallcops

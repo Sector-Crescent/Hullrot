@@ -133,6 +133,40 @@
       - CartridgeRifle
 
 - type: entity
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponRifleCMMNimrod
+  name: CMM M32 Nimrod 7.62x51mm
+  description: An cheap-to-make hunting rifle, design modernized by gliessian milita for gliessian milita. Chambered in 7.62x51mm.
+  components:
+  - type: Item
+    shape:
+    - 0,0,5,1
+  - type: StaticPrice
+    price: 2000
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/nimrod.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/nimrod.rsi
+  - type: Gun
+    damageModifier: 1.5
+    fireRate: 3
+    projectileSpeed: 45
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/UnionfallWeapons/lever_fire.ogg
+  - type: BallisticAmmoProvider
+    soundInsert:
+      collection: LeverReload
+    capacity: 12
+    autoCycle: false
+    proto: CartridgeRifle
+    whitelist:
+      tags:
+      - CartridgeRifle
+
+- type: entity
   name: IRM DA-11 legionnaire 7.62x51mm
   id: WeaponRifleDSMLegionnaire
   parent: [BaseWeaponRifle, StreeCredRedeemable]

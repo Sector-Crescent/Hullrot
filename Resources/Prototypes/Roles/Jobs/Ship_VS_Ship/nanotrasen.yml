@@ -13,9 +13,9 @@
     gloves: ClothingHandsGlovesColorBlack
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-  innerClothingSkirt: ClothingUniformJumpsuitRecruitNT #Wearing a jumpskirt into combat is a little unfitting and silly, so there is no jumpskirt counterpart for any of the Ship VS. Ship suits.
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
+    innerClothingSkirt: ClothingUniformJumpsuitRecruitNT #Wearing a jumpskirt into combat is a little unfitting and silly, so there is no jumpskirt counterpart for any of the Ship VS. Ship suits.
+    satchel: ClothingBackpackSatchelFilled
+    duffelbag: ClothingBackpackDuffelFilled
 
 #Repairman
 - type: startingGear
@@ -30,9 +30,9 @@
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetAltCommand #Should use the "alt" engineering headset sprite.
-  innerClothingSkirt: ClothingUniformJumpsuitRepairmanNT
-  satchel: ClothingBackpackSatchelEngineeringFilled
-  duffelbag: ClothingBackpackDuffelEngineeringFilled
+    innerClothingSkirt: ClothingUniformJumpsuitRepairmanNT
+    satchel: ClothingBackpackSatchelEngineeringFilled
+    duffelbag: ClothingBackpackDuffelEngineeringFilled
 
 #Paramedic
 - type: startingGear
@@ -46,9 +46,9 @@
     eyes: ClothingEyesHudMedical
     gloves: ClothingHandsGlovesLatex
     belt: ClothingBeltMedicalFilled
-  innerClothingSkirt: ClothingUniformJumpskirtMedicalDoctor
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
+    innerClothingSkirt: ClothingUniformJumpskirtMedicalDoctor
+    satchel: ClothingBackpackSatchelFilled
+    duffelbag: ClothingBackpackDuffelFilled
 
 #HEADS OF STAFF
 #Chief Engineer
@@ -64,6 +64,6 @@
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetAltCommand #Same as repairman - make this use the alt headset sprite.
     belt: ClothingBeltUtilityEngineering
-  innerClothingSkirt: ClothingUniformJumpsuitChiefEngineerNT
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
+    innerClothingSkirt: ClothingUniformJumpsuitChiefEngineerNT
+    satchel: ClothingBackpackSatchelFilled
+    duffelbag: ClothingBackpackDuffelFilled

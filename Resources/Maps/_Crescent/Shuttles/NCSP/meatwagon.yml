@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/28/2025 01:01:13
+  time: 01/22/2026 08:25:56
   entityCount: 217
 maps: []
 grids:
@@ -132,6 +132,15 @@ entities:
             267: -3,-4
             273: -2,-8
             281: -1,0
+            290: 4,-8
+            295: 5,-8
+            310: 6,-7
+            330: -4,-6
+            336: -3,-6
+            343: -3,-5
+            351: -3,-4
+            357: -2,-8
+            365: -1,0
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -160,6 +169,14 @@ entities:
             243: 8,-6
             254: -3,-6
             262: -3,-5
+            292: 4,-8
+            297: 5,-8
+            305: 6,-8
+            313: 6,-7
+            321: 7,-7
+            327: 8,-6
+            338: -3,-6
+            346: -3,-5
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -200,6 +217,18 @@ entities:
             276: -2,-1
             279: -1,0
             284: -1,1
+            287: 0,4
+            300: 5,-3
+            308: 6,-7
+            316: 6,-3
+            324: 7,-2
+            333: -4,-5
+            341: -3,-5
+            349: -3,-4
+            354: -3,-3
+            360: -2,-1
+            363: -1,0
+            368: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -216,6 +245,10 @@ entities:
             228: 6,-7
             234: 6,-3
             261: -3,-5
+            302: 5,-3
+            312: 6,-7
+            318: 6,-3
+            345: -3,-5
         - node:
             id: LatticeEdgeE
           decals:
@@ -270,6 +303,23 @@ entities:
             275: -2,-1
             278: -1,0
             283: -1,1
+            286: 0,4
+            288: 4,-8
+            293: 5,-8
+            299: 5,-3
+            307: 6,-7
+            315: 6,-3
+            323: 7,-2
+            328: -4,-6
+            332: -4,-5
+            334: -3,-6
+            340: -3,-5
+            348: -3,-4
+            353: -3,-3
+            355: -2,-8
+            359: -2,-1
+            362: -1,0
+            367: -1,1
         - node:
             id: LatticeEdgeN
           decals:
@@ -309,6 +359,18 @@ entities:
             266: -3,-4
             272: -2,-8
             280: -1,0
+            289: 4,-8
+            294: 5,-8
+            303: 6,-8
+            309: 6,-7
+            319: 7,-7
+            325: 8,-6
+            329: -4,-6
+            335: -3,-6
+            342: -3,-5
+            350: -3,-4
+            356: -2,-8
+            364: -1,0
         - node:
             id: LatticeEdgeS
           decals:
@@ -348,6 +410,18 @@ entities:
             274: -2,-1
             277: -1,0
             282: -1,1
+            285: 0,4
+            298: 5,-3
+            306: 6,-7
+            314: 6,-3
+            322: 7,-2
+            331: -4,-5
+            339: -3,-5
+            347: -3,-4
+            352: -3,-3
+            358: -2,-1
+            361: -1,0
+            366: -1,1
         - node:
             id: LatticeEdgeW
           decals:
@@ -381,6 +455,16 @@ entities:
             242: 8,-6
             253: -3,-6
             260: -3,-5
+            291: 4,-8
+            296: 5,-8
+            301: 5,-3
+            304: 6,-8
+            311: 6,-7
+            317: 6,-3
+            320: 7,-7
+            326: 8,-6
+            337: -3,-6
+            344: -3,-5
         - node:
             color: '#DE3A3A96'
             id: WarnLineGreyscaleE
@@ -1074,11 +1158,11 @@ entities:
           - SpaceArtilleryFire
     - type: NamedModules
       buttonNames:
-      - Toggle Slugthrower
-      - Fire Sumimoto
-      - Module C
-      - Module D
-      - Module E
+      - Toggle "Starburst" Plasma Gattling
+      - Fire "Starburst" Plasma Gattling
+      - Empty Module
+      - Empty Module
+      - Empty Module
 - proto: ComputerTabletopStationRecords
   entities:
   - uid: 94
@@ -1399,20 +1483,6 @@ entities:
     - type: Transform
       pos: 2.4781144,-5.3525233
       parent: 1
-- proto: ShuttleGunMissileRack
-  entities:
-  - uid: 143
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,-2.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 16679.19
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: SignalButton
   entities:
   - uid: 144
@@ -1448,42 +1518,6 @@ entities:
         11:
         - - Pressed
           - Toggle
-- proto: SlugthrowerCannon
-  entities:
-  - uid: 146
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,1.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 16679.19
-    - type: ApcPowerReceiverBattery
-      enabled: True
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: SpawnPointLatejoin
   entities:
   - uid: 147
@@ -1876,5 +1910,19 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 0.5,-4.5
+      parent: 1
+- proto: WeaponTurretStarburst
+  entities:
+  - uid: 143
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,-2.5
+      parent: 1
+  - uid: 146
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,1.5
       parent: 1
 ...

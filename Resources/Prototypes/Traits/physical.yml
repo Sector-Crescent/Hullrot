@@ -506,11 +506,11 @@
           damageCap: 400
           damage:
             groups:
-              Brute: -0.35
-              Burn: -0.35
-              Airloss: -0.25
-              Toxin: -0.35
-              Genetic: -0.35
+              Brute: -0.65
+              Burn: -0.65
+              Airloss: -0.75
+              Toxin: -1.0
+              Genetic: -1.0
         - type: BloodDeficiency # Incredibly actually works
           bloodLossPercentage: -0.025
 
