@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/28/2025 06:01:18
+  time: 01/23/2026 22:10:22
   entityCount: 847
 maps: []
 grids:
@@ -67,6 +67,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      baseMaxLinearVelocity: 25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -375,6 +376,14 @@ entities:
             798: -8,-4
             801: -6,-15
             804: -3,-16
+            862: -10,1
+            873: -8,12
+            887: -10,-12
+            892: -10,-8
+            898: -10,-3
+            909: -8,-4
+            912: -6,-15
+            915: -3,-16
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -407,6 +416,13 @@ entities:
             824: 10,-12
             829: 10,-8
             835: 10,-3
+            848: 8,12
+            918: 3,-16
+            921: 6,-15
+            927: 8,-4
+            935: 10,-12
+            940: 10,-8
+            946: 10,-3
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -463,6 +479,19 @@ entities:
             790: -9,-7
             795: -8,-6
             819: 9,-7
+            841: 7,13
+            860: -10,1
+            865: -10,2
+            868: -9,11
+            871: -8,12
+            876: -8,13
+            879: -7,13
+            884: -2,2
+            890: -10,-8
+            895: -10,-7
+            901: -9,-7
+            906: -8,-6
+            930: 9,-7
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -515,6 +544,18 @@ entities:
             821: 9,-7
             828: 10,-8
             832: 10,-7
+            838: 2,2
+            843: 7,13
+            847: 8,12
+            851: 8,13
+            854: 9,11
+            857: 10,1
+            881: -7,13
+            903: -9,-7
+            924: 8,-6
+            932: 9,-7
+            939: 10,-8
+            943: 10,-7
         - node:
             id: LatticeEdgeE
           decals:
@@ -590,6 +631,24 @@ entities:
             799: -6,-15
             802: -3,-16
             818: 9,-7
+            840: 7,13
+            859: -10,1
+            864: -10,2
+            867: -9,11
+            870: -8,12
+            875: -8,13
+            878: -7,13
+            883: -2,2
+            885: -10,-12
+            889: -10,-8
+            894: -10,-7
+            896: -10,-3
+            900: -9,-7
+            905: -8,-6
+            907: -8,-4
+            910: -6,-15
+            913: -3,-16
+            929: 9,-7
         - node:
             id: LatticeEdgeN
           decals:
@@ -653,6 +712,21 @@ entities:
             822: 10,-12
             826: 10,-8
             833: 10,-3
+            845: 8,12
+            861: -10,1
+            872: -8,12
+            886: -10,-12
+            891: -10,-8
+            897: -10,-3
+            908: -8,-4
+            911: -6,-15
+            914: -3,-16
+            916: 3,-16
+            919: 6,-15
+            925: 8,-4
+            933: 10,-12
+            937: 10,-8
+            944: 10,-3
         - node:
             id: LatticeEdgeS
           decals:
@@ -740,6 +814,27 @@ entities:
             817: 9,-7
             825: 10,-8
             830: 10,-7
+            836: 2,2
+            839: 7,13
+            844: 8,12
+            849: 8,13
+            852: 9,11
+            855: 10,1
+            858: -10,1
+            863: -10,2
+            866: -9,11
+            869: -8,12
+            874: -8,13
+            877: -7,13
+            882: -2,2
+            888: -10,-8
+            893: -10,-7
+            899: -9,-7
+            904: -8,-6
+            922: 8,-6
+            928: 9,-7
+            936: 10,-8
+            941: 10,-7
         - node:
             id: LatticeEdgeW
           decals:
@@ -811,6 +906,23 @@ entities:
             827: 10,-8
             831: 10,-7
             834: 10,-3
+            837: 2,2
+            842: 7,13
+            846: 8,12
+            850: 8,13
+            853: 9,11
+            856: 10,1
+            880: -7,13
+            902: -9,-7
+            917: 3,-16
+            920: 6,-15
+            923: 8,-6
+            926: 8,-4
+            931: 9,-7
+            934: 10,-12
+            938: 10,-8
+            942: 10,-7
+            945: 10,-3
         - node:
             color: '#D381C996'
             id: WarnBox
@@ -1234,28 +1346,11 @@ entities:
     - type: BecomesStation
       id: Praxis
     - type: SelfDeleteGrid
-- proto: AAAHardpointSmallBallistic
+- proto: AAAHardpointSmallEnergy
   entities:
-  - uid: 2
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,13.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 3
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -9.5,-6.5
-      parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 4
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -7.5,13.5
       parent: 1
     - type: Physics
@@ -1263,7 +1358,22 @@ entities:
   - uid: 5
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      pos: 8.5,13.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 838
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,-6.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 840
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 10.5,-6.5
       parent: 1
     - type: Physics
@@ -6398,88 +6508,32 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponTurretPDT
+- proto: WeaponTurretRetribution
   entities:
+  - uid: 2
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,-6.5
+      parent: 1
+  - uid: 3
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -7.5,13.5
+      parent: 1
   - uid: 837
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,13.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 838
+  - uid: 839
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -9.5,-6.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 839
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,13.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-  - uid: 840
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,-6.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: WeldingFuelTankFull
   entities:
   - uid: 841

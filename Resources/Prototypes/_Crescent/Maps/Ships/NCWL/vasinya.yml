@@ -1,0 +1,27 @@
+# Author Info
+# Discord: @fleshangel
+
+- type: vessel
+  id: Vasinya
+  name: NCWL Vasinya
+  description: A light communard patrol corvette.
+  price: 50000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/vasinya.yml
+
+- type: gameMap
+  id: Vasinya
+  mapName: 'NCWL Vasinya'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/vasinya.yml
+  minPlayers: 0
+  stations:
+    Vasinya:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Vasinya {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation

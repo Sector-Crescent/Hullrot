@@ -4,9 +4,9 @@
 - type: vessel
   id: Stern
   name: NCWL Stern
-  description: A communard heavy battlecruiser.
-  price: 125000
-  category: Small
+  description: A communard heavy battleship.
+  price: 350000
+  category: Large
   group: None
   path: /Maps/_Crescent/Shuttles/NCWL/stern.yml
 
@@ -19,10 +19,6 @@
     Stern:
       stationProto: StandardCrescentVessel
       components:
-        - type: VesselIcon
-          iffIcon:
-            sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: battleship
         - type: StationNameSetup
           mapNameTemplate: 'NCWL Stern {1}'
           nameGenerator:

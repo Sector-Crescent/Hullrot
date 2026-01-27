@@ -347,23 +347,6 @@
 
 - type: entity
   parent: BaseItem
-  id: ShipVoucherZorniy
-  name: NCWL 'Zorniy' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Zorniy-class light bomber pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 24000
-  - type: ShipVoucher
-    ship: Zorniy
-
-- type: entity
-  parent: BaseItem
   id: ShipVoucherLodka
   name: NCWL 'Lodka' pattern LPC fabprint disk
   description: An LPC fabprint disk loaded with a communard Lodka-class combat freighter pattern. Has to be redeemed at a shipyard console.
@@ -471,23 +454,6 @@
     price: 43500
   - type: ShipVoucher
     ship: Hind
-
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherVanguardMarkTwo
-  name: NCWL 'Vanguard Mk.II' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Vanguard Mk.II-class elite gunship pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 26000
-  - type: ShipVoucher
-    ship: VanguardMarkTwo
 
 - type: entity
   parent: BaseItem
@@ -604,22 +570,6 @@
 
 #Donator
 
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherGrishingrad
-  name: NCWL 'Grishingrad' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Grishingrad-class assault frigate pattern. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 125000
-  - type: ShipVoucher
-    ship: Grishingrad
 
 #Donator END
 
