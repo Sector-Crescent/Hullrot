@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/16/2025 16:40:15
-  entityCount: 247
+  time: 01/16/2026 03:04:55
+  entityCount: 248
 maps: []
 grids:
 - 1
@@ -30,8 +30,7 @@ tilemap:
   116: FloorWhite
   129: Lattice
   130: Plating
-  133: PlatingBurnt
-  134: PlatingDamaged
+  133: PlatingDamaged
 entities:
 - proto: ""
   entities:
@@ -58,7 +57,7 @@ entities:
           version: 7
         0,-1:
           ind: 0,-1
-          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAACBAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxAAAAAAAAggAAAAAAAAcAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEAAAAAAAAJAAAAAAAACAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAggAAAAAAAIIAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcQAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAACCAAAAAAAAggAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAAAAAAAACgAAAAAAAIIAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcQAAAAAAAAoAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEAAAAAAACGAAAAAAAAggAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxAAAAAAAAggAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAACBAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxAAAAAAAAggAAAAAAAAcAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEAAAAAAAAJAAAAAAAACAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAggAAAAAAAIIAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcQAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAACCAAAAAAAAggAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACFAAAAAAAACgAAAAAAAIIAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcQAAAAAAAAoAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEAAAAAAACFAAAAAAAAggAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxAAAAAAAAggAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAIIAAAAAAAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
           version: 7
     - type: Broadphase
     - type: Physics
@@ -268,6 +267,9 @@ entities:
             428: -3,-11
             434: -3,-6
             437: -1,-12
+            470: -3,-11
+            476: -3,-6
+            479: -1,-12
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -297,6 +299,9 @@ entities:
             440: 1,-12
             446: 3,-11
             452: 3,-6
+            482: 1,-12
+            488: 3,-11
+            494: 3,-6
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -326,6 +331,9 @@ entities:
             419: -2,3
             426: -3,-11
             431: -3,-8
+            461: -2,3
+            468: -3,-11
+            473: -3,-8
         - node:
             color: '#FFFFFFFF'
             id: LatticeCornerSE
@@ -361,6 +369,9 @@ entities:
             416: 2,3
             445: 3,-11
             449: 3,-8
+            458: 2,3
+            487: 3,-11
+            491: 3,-8
         - node:
             id: LatticeEdgeE
           decals:
@@ -409,6 +420,11 @@ entities:
             430: -3,-8
             432: -3,-6
             435: -1,-12
+            460: -2,3
+            467: -3,-11
+            472: -3,-8
+            474: -3,-6
+            477: -1,-12
         - node:
             id: LatticeEdgeN
           decals:
@@ -479,6 +495,16 @@ entities:
             441: 3,-12
             443: 3,-11
             450: 3,-6
+            454: 1,4
+            463: -1,4
+            465: -3,-12
+            469: -3,-11
+            475: -3,-6
+            478: -1,-12
+            480: 1,-12
+            483: 3,-12
+            485: 3,-11
+            492: 3,-6
         - node:
             color: '#FFFFFFFF'
             id: LatticeEdgeN
@@ -552,6 +578,16 @@ entities:
             429: -3,-8
             442: 3,-11
             447: 3,-8
+            453: 1,4
+            455: 1,5
+            456: 2,3
+            459: -2,3
+            462: -1,4
+            464: -1,5
+            466: -3,-11
+            471: -3,-8
+            484: 3,-11
+            489: 3,-8
         - node:
             color: '#FFFFFFFF'
             id: LatticeEdgeS
@@ -606,6 +642,11 @@ entities:
             444: 3,-11
             448: 3,-8
             451: 3,-6
+            457: 2,3
+            481: 1,-12
+            486: 3,-11
+            490: 3,-8
+            493: 3,-6
         - node:
             color: '#FFFFFFFF'
             id: LatticeEdgeW
@@ -766,20 +807,21 @@ entities:
     - type: VesselIcon
       iffIcon:
         sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: industrial
+        state: corvette
     - type: BecomesStation
       id: Mercurymk2
+    - type: SelfDeleteGrid
+    - type: IFF
+      relations: {}
+      flags: IsPlayerShuttle
 - proto: AAAHardpointFixed
   entities:
-  - uid: 2
+  - uid: 248
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,2.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 146
     - type: Physics
       canCollide: False
 - proto: AirlockShuttle
@@ -970,9 +1012,6 @@ entities:
     - type: Transform
       pos: 0.5,3.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 180
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 37
@@ -1001,6 +1040,41 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -0.5,0.5
       parent: 1
+- proto: C_ComputerShuttle
+  entities:
+  - uid: 147
+    components:
+    - type: Transform
+      pos: -0.5,-2.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        248:
+        - - Group1
+          - Toggle
+        - - Group2
+          - SpaceArtilleryFire
+    - type: NamedModules
+      buttonNames:
+      - Toggle 35mm 'Scout'
+      - Fire 35mm 'Scout'
+      - Module C
+      - Module D
+      - Module E
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: CableApcExtension
   entities:
   - uid: 46
@@ -1506,6 +1580,15 @@ entities:
           - 41
           - 40
           - 39
+- proto: ClothingHeadHelmetSyndicate
+  entities:
+  - uid: 146
+    components:
+    - type: Transform
+      parent: 141
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: ClothingOuterHardsuitSyndicate
   entities:
   - uid: 142
@@ -1515,62 +1598,27 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ComputerShuttle
-  entities:
-  - uid: 146
-    components:
-    - type: Transform
-      pos: -0.5,-2.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        2:
-        - - Group1
-          - Toggle
-        - - Group2
-          - SpaceArtilleryFire
-    - type: NamedModules
-      buttonNames:
-      - Toggle Cleanser
-      - Fire Cleanser
-      - Module C
-      - Module D
-      - Module E
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: FaxMachineShip
   entities:
-  - uid: 147
+  - uid: 148
     components:
     - type: Transform
       pos: -0.5,-4.5
       parent: 1
 - proto: Firelock
   entities:
-  - uid: 148
+  - uid: 149
     components:
     - type: Transform
       pos: 0.5,-0.5
       parent: 1
-  - uid: 149
+  - uid: 150
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,-7.5
       parent: 1
-  - uid: 150
+  - uid: 151
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1578,62 +1626,62 @@ entities:
       parent: 1
 - proto: Girder
   entities:
-  - uid: 151
+  - uid: 152
     components:
     - type: Transform
       pos: 1.5,1.5
       parent: 1
-  - uid: 152
+  - uid: 153
     components:
     - type: Transform
       pos: -0.5,2.5
       parent: 1
-  - uid: 153
+  - uid: 154
     components:
     - type: Transform
       pos: 1.5,2.5
       parent: 1
-  - uid: 154
+  - uid: 155
     components:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
 - proto: GravityGeneratorMini
   entities:
-  - uid: 155
+  - uid: 156
     components:
     - type: Transform
       pos: 2.5,-8.5
       parent: 1
 - proto: Grille
   entities:
-  - uid: 156
+  - uid: 157
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,1.5
       parent: 1
-  - uid: 157
+  - uid: 158
     components:
     - type: Transform
       pos: -0.5,2.5
       parent: 1
-  - uid: 158
+  - uid: 159
     components:
     - type: Transform
       pos: 1.5,2.5
       parent: 1
-  - uid: 159
+  - uid: 160
     components:
     - type: Transform
       pos: -1.5,-4.5
       parent: 1
-  - uid: 160
+  - uid: 161
     components:
     - type: Transform
       pos: 2.5,-4.5
       parent: 1
-  - uid: 161
+  - uid: 162
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1641,7 +1689,7 @@ entities:
       parent: 1
 - proto: Gyroscope
   entities:
-  - uid: 162
+  - uid: 163
     components:
     - type: Transform
       pos: 1.5,-2.5
@@ -1692,25 +1740,25 @@ entities:
       canCollide: False
 - proto: N14BarricadeSandbagSingle
   entities:
-  - uid: 163
+  - uid: 164
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
-  - uid: 164
+  - uid: 165
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,2.5
       parent: 1
-  - uid: 165
+  - uid: 166
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,2.5
       parent: 1
-  - uid: 166
+  - uid: 167
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1718,26 +1766,26 @@ entities:
       parent: 1
 - proto: NFHolopadShip
   entities:
-  - uid: 167
+  - uid: 168
     components:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
 - proto: PoweredSmallLight
   entities:
-  - uid: 168
+  - uid: 169
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,0.5
       parent: 1
-  - uid: 169
+  - uid: 170
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,-9.5
       parent: 1
-  - uid: 170
+  - uid: 171
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1745,7 +1793,7 @@ entities:
       parent: 1
 - proto: PoweredSmallLightMaintenance
   entities:
-  - uid: 171
+  - uid: 172
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1753,7 +1801,7 @@ entities:
       parent: 1
 - proto: PoweredSmallLightMaintenanceRed
   entities:
-  - uid: 172
+  - uid: 173
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1761,25 +1809,25 @@ entities:
       parent: 1
 - proto: Railing
   entities:
-  - uid: 173
+  - uid: 174
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,4.5
       parent: 1
-  - uid: 174
+  - uid: 175
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,4.5
       parent: 1
-  - uid: 175
+  - uid: 176
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,5.5
       parent: 1
-  - uid: 176
+  - uid: 177
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1787,54 +1835,16 @@ entities:
       parent: 1
 - proto: ReinforcedGirder
   entities:
-  - uid: 177
+  - uid: 178
     components:
     - type: Transform
       pos: 2.5,-4.5
       parent: 1
-  - uid: 178
+  - uid: 179
     components:
     - type: Transform
       pos: -1.5,-4.5
       parent: 1
-- proto: SAWCleanser
-  entities:
-  - uid: 179
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,2.5
-      parent: 1
-    - type: Anchorable
-      flags: Anchorable
-    - type: ApcPowerReceiver
-      powerLoad: 5000
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: Battery
-      startingCharge: 12233.924
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: Screwdriver
   entities:
   - uid: 43
@@ -1878,10 +1888,11 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 142
-          - 143
-          - 145
           - 144
+          - 145
+          - 143
+          - 142
+          - 146
     - type: Physics
       canCollide: False
 - proto: Table
@@ -2319,4 +2330,26 @@ entities:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
+- proto: WeaponTurretMediumMachinegun
+  entities:
+  - uid: 2
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,2.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 ...

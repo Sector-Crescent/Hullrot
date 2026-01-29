@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/29/2025 07:08:05
+  time: 01/16/2026 08:32:31
   entityCount: 60
 maps: []
 grids:
@@ -18,8 +18,7 @@ tilemap:
   5: FloorTechMaint
   1: Lattice
   4: Plating
-  0: PlatingBurnt
-  3: PlatingDamaged
+  0: PlatingDamaged
 entities:
 - proto: ""
   entities:
@@ -83,6 +82,7 @@ entities:
             113: 0,5
             124: 0,5
             135: 0,5
+            146: 0,5
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -101,6 +101,7 @@ entities:
             116: 0,5
             127: 0,5
             138: 0,5
+            149: 0,5
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -116,6 +117,7 @@ entities:
             111: 0,5
             122: 0,5
             133: 0,5
+            144: 0,5
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -131,6 +133,7 @@ entities:
             115: 0,5
             126: 0,5
             137: 0,5
+            148: 0,5
         - node:
             id: LatticeEdgeE
           decals:
@@ -156,6 +159,8 @@ entities:
             130: -1,5
             132: 0,5
             141: -1,5
+            143: 0,5
+            152: -1,5
         - node:
             id: LatticeEdgeN
           decals:
@@ -183,6 +188,7 @@ entities:
             112: 0,5
             123: 0,5
             134: 0,5
+            145: 0,5
         - node:
             id: LatticeEdgeS
           decals:
@@ -210,6 +216,8 @@ entities:
             128: 0,6
             131: 0,5
             139: 0,6
+            142: 0,5
+            150: 0,6
         - node:
             id: LatticeEdgeW
           decals:
@@ -235,6 +243,8 @@ entities:
             129: 1,5
             136: 0,5
             140: 1,5
+            147: 0,5
+            151: 1,5
     - type: RadiationGridResistance
     - type: GridAtmosphere
       version: 2
@@ -304,6 +314,10 @@ entities:
     - type: BecomesStation
       id: Hornet
     - type: SelfDeleteGrid
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: fighter
 - proto: AAAHardpointFixed
   entities:
   - uid: 2
@@ -312,9 +326,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,4.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 32
     - type: Physics
       canCollide: False
 - proto: AirlockShuttle
@@ -396,6 +407,14 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
+- proto: BaseWeaponTurretAzimuth
+  entities:
+  - uid: 60
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,4.5
+      parent: 1
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 17
@@ -407,6 +426,41 @@ entities:
       on: False
     - type: Physics
       bodyType: Static
+- proto: C_ComputerShuttle
+  entities:
+  - uid: 32
+    components:
+    - type: Transform
+      pos: 0.5,1.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+    - type: DeviceLinkSource
+      linkedPorts:
+        2:
+        - - Group1
+          - Toggle
+        - - Group2
+          - SpaceArtilleryFire
+    - type: NamedModules
+      buttonNames:
+      - Toggle 60mm 'Azimuth'
+      - Fire 60mm 'Azimuth'
+      - Module C
+      - Module D
+      - Module E
 - proto: CableApcExtension
   entities:
   - uid: 18
@@ -489,41 +543,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,0.5
       parent: 1
-- proto: ComputerShuttle
-  entities:
-  - uid: 32
-    components:
-    - type: Transform
-      pos: 0.5,1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: DeviceLinkSource
-      linkedPorts:
-        2:
-        - - Group1
-          - Toggle
-        - - Group2
-          - SpaceArtilleryFire
-    - type: NamedModules
-      buttonNames:
-      - Toggle Needler
-      - Fire Needler
-      - Module C
-      - Module D
-      - Module E
 - proto: Gyroscope
   entities:
   - uid: 33
@@ -671,57 +690,27 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,2.5
       parent: 1
-- proto: WeaponTurretNeedler
-  entities:
-  - uid: 56
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,4.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: WindowReinforcedDirectional
   entities:
-  - uid: 57
+  - uid: 56
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,2.5
       parent: 1
-  - uid: 58
+  - uid: 57
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,3.5
       parent: 1
-  - uid: 59
+  - uid: 58
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,3.5
       parent: 1
-  - uid: 60
+  - uid: 59
     components:
     - type: Transform
       rot: -1.5707963267948966 rad

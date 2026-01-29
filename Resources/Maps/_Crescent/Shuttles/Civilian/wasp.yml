@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/29/2025 07:10:10
+  time: 01/16/2026 08:35:28
   entityCount: 57
 maps: []
 grids:
@@ -18,8 +18,7 @@ tilemap:
   5: FloorTechMaint
   1: Lattice
   4: Plating
-  0: PlatingBurnt
-  3: PlatingDamaged
+  0: PlatingDamaged
 entities:
 - proto: ""
   entities:
@@ -228,6 +227,10 @@ entities:
     - type: BecomesStation
       id: Wasp
     - type: SelfDeleteGrid
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: fighter
 - proto: AAAHardpointFixed
   entities:
   - uid: 2
@@ -236,9 +239,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,4.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 28
     - type: Physics
       canCollide: False
 - proto: AirlockShuttle
@@ -311,6 +311,41 @@ entities:
       on: False
     - type: Physics
       bodyType: Static
+- proto: C_ComputerShuttle
+  entities:
+  - uid: 28
+    components:
+    - type: Transform
+      pos: 0.5,1.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+    - type: DeviceLinkSource
+      linkedPorts:
+        2:
+        - - Group1
+          - Toggle
+        - - Group2
+          - SpaceArtilleryFire
+    - type: NamedModules
+      buttonNames:
+      - Toggle 20mm 'Screamer'
+      - Fire 20mm 'Screamer'
+      - Module C
+      - Module D
+      - Module E
 - proto: CableApcExtension
   entities:
   - uid: 14
@@ -393,41 +428,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,0.5
       parent: 1
-- proto: ComputerShuttle
-  entities:
-  - uid: 28
-    components:
-    - type: Transform
-      pos: 0.5,1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: DeviceLinkSource
-      linkedPorts:
-        2:
-        - - Group1
-          - Toggle
-        - - Group2
-          - SpaceArtilleryFire
-    - type: NamedModules
-      buttonNames:
-      - Toggle 20mm
-      - Fire 20mm
-      - Module C
-      - Module D
-      - Module E
 - proto: Gyroscope
   entities:
   - uid: 29
@@ -438,44 +438,6 @@ entities:
     - type: Thruster
       baseThrust: 50
       thrust: 50
-- proto: NTVulcanTurret
-  entities:
-  - uid: 30
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,4.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5000
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: True
-    - type: Battery
-      startingCharge: 19800.117
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: PoweredSmallLightMaintenanceRed
   entities:
   - uid: 31
@@ -546,6 +508,28 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,2.5
       parent: 1
+- proto: WeaponTurretSmallMachinegun
+  entities:
+  - uid: 30
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,4.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: WindowReinforcedDirectional
   entities:
   - uid: 42

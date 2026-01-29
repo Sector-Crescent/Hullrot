@@ -434,6 +434,10 @@ entities:
         sprite: _Crescent/ShipIcons/ifficons.rsi
         state: industrial
     - type: RadiationGridResistance
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: hauler
     - type: BecomesStation
       id: Impel
 - proto: AirAlarm

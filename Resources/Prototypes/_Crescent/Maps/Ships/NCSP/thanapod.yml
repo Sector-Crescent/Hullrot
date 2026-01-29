@@ -4,7 +4,10 @@
 - type: vessel
   id: Thanapod
   name: SAW Thanapod
-  description: An armed mining vessel.
+  description: |
+    An armed mining vessel.
+    LOADOUT: 2x 250c Exhumer mining guns, 2x Hardpoints, 2x 20mm 'Screamer' light carbine repeater cannons
+    MINIMUM CREW: 1x Pilot
   price: 60000
   category: Medium
   group: None
@@ -22,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: fighter
+            state: corvette
         - type: StationNameSetup
           mapNameTemplate: 'SAW Thanapod{1}'
           nameGenerator:

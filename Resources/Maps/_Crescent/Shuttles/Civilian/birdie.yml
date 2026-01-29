@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/06/2025 07:00:06
+  time: 01/16/2026 06:18:22
   entityCount: 264
 maps: []
 grids:
@@ -290,6 +290,14 @@ entities:
             1170: -1,18
             1178: 0,19
             1194: 2,19
+            1222: 4,6
+            1230: 4,7
+            1238: 4,8
+            1269: -3,12
+            1275: -2,4
+            1284: -1,18
+            1292: 0,19
+            1308: 2,19
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -411,6 +419,18 @@ entities:
             1181: 0,19
             1197: 2,19
             1205: 3,18
+            1212: 4,4
+            1217: 4,5
+            1225: 4,6
+            1233: 4,7
+            1241: 4,8
+            1246: 4,9
+            1252: 5,6
+            1257: 5,7
+            1263: 5,12
+            1295: 0,19
+            1311: 2,19
+            1319: 3,18
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -521,6 +541,17 @@ entities:
             1184: 0,20
             1187: 1,20
             1192: 2,19
+            1220: 4,6
+            1228: 4,7
+            1236: 4,8
+            1272: -3,14
+            1278: -2,10
+            1282: -1,18
+            1287: -1,19
+            1290: 0,19
+            1298: 0,20
+            1301: 1,20
+            1306: 2,19
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -671,6 +702,21 @@ entities:
             1200: 2,20
             1204: 3,18
             1208: 3,19
+            1216: 4,5
+            1224: 4,6
+            1232: 4,7
+            1240: 4,8
+            1245: 4,9
+            1249: 4,10
+            1256: 5,7
+            1260: 5,8
+            1266: 5,14
+            1294: 0,19
+            1303: 1,20
+            1310: 2,19
+            1314: 2,20
+            1318: 3,18
+            1322: 3,19
         - node:
             id: LatticeEdgeE
           decals:
@@ -807,6 +853,20 @@ entities:
             1183: 0,20
             1186: 1,20
             1191: 2,19
+            1219: 4,6
+            1227: 4,7
+            1235: 4,8
+            1267: -3,12
+            1271: -3,14
+            1273: -2,4
+            1277: -2,10
+            1279: -2,16
+            1281: -1,18
+            1286: -1,19
+            1289: 0,19
+            1297: 0,20
+            1300: 1,20
+            1305: 2,19
         - node:
             id: LatticeEdgeN
           decals:
@@ -954,6 +1014,21 @@ entities:
             1177: 0,19
             1193: 2,19
             1202: 3,18
+            1210: 4,4
+            1214: 4,5
+            1221: 4,6
+            1229: 4,7
+            1237: 4,8
+            1243: 4,9
+            1250: 5,6
+            1254: 5,7
+            1261: 5,12
+            1268: -3,12
+            1274: -2,4
+            1283: -1,18
+            1291: 0,19
+            1307: 2,19
+            1316: 3,18
         - node:
             id: LatticeEdgeS
           decals:
@@ -1150,6 +1225,26 @@ entities:
             1198: 2,20
             1201: 3,18
             1206: 3,19
+            1213: 4,5
+            1218: 4,6
+            1226: 4,7
+            1234: 4,8
+            1242: 4,9
+            1247: 4,10
+            1253: 5,7
+            1258: 5,8
+            1264: 5,14
+            1270: -3,14
+            1276: -2,10
+            1280: -1,18
+            1285: -1,19
+            1288: 0,19
+            1296: 0,20
+            1299: 1,20
+            1304: 2,19
+            1312: 2,20
+            1315: 3,18
+            1320: 3,19
         - node:
             id: LatticeEdgeW
           decals:
@@ -1337,6 +1432,25 @@ entities:
             1203: 3,18
             1207: 3,19
             1209: 4,16
+            1211: 4,4
+            1215: 4,5
+            1223: 4,6
+            1231: 4,7
+            1239: 4,8
+            1244: 4,9
+            1248: 4,10
+            1251: 5,6
+            1255: 5,7
+            1259: 5,8
+            1262: 5,12
+            1265: 5,14
+            1293: 0,19
+            1302: 1,20
+            1309: 2,19
+            1313: 2,20
+            1317: 3,18
+            1321: 3,19
+            1323: 4,16
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -1494,6 +1608,13 @@ entities:
     - type: ShuttleDeed
       shuttleName: Shuttle MV-529
       shuttleUid: 1
+    - type: SelfDeleteGrid
+    - type: BecomesStation
+      id: Birdie
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: civilian
 - proto: ActionToggleInternals
   entities:
   - uid: 4
@@ -1557,7 +1678,7 @@ entities:
       pos: 1.5,15.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20.508389
+      secondsUntilStateChange: -63.027233
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1807,6 +1928,57 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,9.5
       parent: 1
+- proto: C_ComputerTabletopShuttle
+  entities:
+  - uid: 120
+    components:
+    - type: Transform
+      pos: 1.5,19.5
+      parent: 1
+    - type: NamedModules
+      buttonNames:
+      - Toggle Shutters
+      - Module B
+      - Module C
+      - Module D
+      - Module E
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+    - type: DeviceLinkSource
+      linkedPorts:
+        201:
+        - - Group1
+          - Toggle
+        196:
+        - - Group1
+          - Toggle
+        197:
+        - - Group1
+          - Toggle
+        198:
+        - - Group1
+          - Toggle
+        202:
+        - - Group1
+          - Toggle
+        199:
+        - - Group1
+          - Toggle
+        200:
+        - - Group1
+          - Toggle
 - proto: CableApcExtension
   entities:
   - uid: 58
@@ -2207,57 +2379,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,17.5
       parent: 1
-- proto: ComputerTabletopShuttle
-  entities:
-  - uid: 120
-    components:
-    - type: Transform
-      pos: 1.5,19.5
-      parent: 1
-    - type: NamedModules
-      buttonNames:
-      - Toggle Shutters
-      - Module B
-      - Module C
-      - Module D
-      - Module E
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: DeviceLinkSource
-      linkedPorts:
-        201:
-        - - Group1
-          - Toggle
-        196:
-        - - Group1
-          - Toggle
-        197:
-        - - Group1
-          - Toggle
-        198:
-        - - Group1
-          - Toggle
-        202:
-        - - Group1
-          - Toggle
-        199:
-        - - Group1
-          - Toggle
-        200:
-        - - Group1
-          - Toggle
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 121
@@ -2833,27 +2954,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,8.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 203
   - uid: 194
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,7.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 203
   - uid: 195
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,6.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 203
 - proto: ShuttersNormalOpen
   entities:
   - uid: 196
@@ -2862,62 +2974,41 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,19.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 197
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 0.5,20.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 198
     components:
     - type: Transform
       pos: 1.5,20.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 199
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,19.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 200
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,18.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 201
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,18.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
   - uid: 202
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,20.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 120
 - proto: SignalButton
   entities:
   - uid: 203

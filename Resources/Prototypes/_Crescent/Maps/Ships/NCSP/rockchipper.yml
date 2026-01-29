@@ -4,7 +4,10 @@
 - type: vessel
   id: Rockchipper
   name: SAW Rockchipper
-  description: A SAW Retrofit of wrecked termites. Made for intense mining operations.
+  description: |
+    A SAW Retrofit of wrecked termites. Made for intense mining operations.
+    LOADOUT: 2x 250c Exhumer mining guns
+    MINIMUM CREW: 1x Pilot
   price: 19000
   category: Small
   group: None
@@ -22,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: corvette
+            state: miner
         - type: StationNameSetup
           mapNameTemplate: 'SAW Rockchipper {1}'
           nameGenerator:
