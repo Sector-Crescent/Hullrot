@@ -1,8 +1,11 @@
 - type: vessel
   id: Covetor
   name: DSM Covetor
-  description: A well-stocked Imperial mining and salvaging corvette, with ample space for freight and armed for self-defense.
-  price: 75000
+  description: |
+    A well-stocked Imperial mining, salvaging, and munitions production Destroyer-sized Industrial Platform. Through a minaturized ultralight gantry, it is capable producing vessels that can preform greater mining or resource harvesting operations. Lightly armed and sluggish.
+    LOADOUT: 1x 300w 'Curse' energized ion bolt cannon, 4x 200cc 'Retribution' small laser gatling, 1x SHI 250c "Exhumer" kinetic Pulser
+    MINIMUM CREW: 1x Captain, 1x Gunner, 2x Miner Crew
+  price: 85000
   category: Small
   group: None
   path: /Maps/_Crescent/Shuttles/DSM/covetor.yml
@@ -16,6 +19,10 @@
     Covetor:
       stationProto: StandardCrescentCivilianVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: large_industrial
         - type: StationNameSetup
           mapNameTemplate: 'DSM Covetor {1}'
           nameGenerator:

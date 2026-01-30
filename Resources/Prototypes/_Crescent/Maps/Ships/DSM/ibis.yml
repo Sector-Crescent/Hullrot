@@ -1,7 +1,10 @@
 - type: vessel
   id: Ibis
   name: DSM Ibis
-  description: A heavy fighter equipped with an errant shield emitter, designed for ranging and harassment missions.
+  description: |
+    A heavy fighter equipped with an errant shield emitter, designed for ranging and harassment missions.
+    LOADOUT: 2x 150cc 'Starburst' hybrid plasma gatlings
+    MINIMUM CREW: 1x Pilot
   price: 38000
   category: Small
   group: None
@@ -19,7 +22,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: corvette
+            state: fighter
         - type: StationNameSetup
           mapNameTemplate: 'DSM Ibis {1}'
           nameGenerator:
