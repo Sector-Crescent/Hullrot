@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/12/2025 02:01:18
+  time: 01/29/2026 22:21:16
   entityCount: 73
 maps: []
 grids:
@@ -97,6 +97,7 @@ entities:
             29: -1,-3
             41: -1,-3
             67: -1,-3
+            79: -1,-3
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -105,6 +106,7 @@ entities:
             32: 1,-3
             44: 1,-3
             70: 1,-3
+            82: 1,-3
         - node:
             id: LatticeEdgeE
           decals:
@@ -112,6 +114,7 @@ entities:
             27: -1,-3
             39: -1,-3
             65: -1,-3
+            77: -1,-3
         - node:
             id: LatticeEdgeN
           decals:
@@ -131,6 +134,10 @@ entities:
             66: -1,-3
             68: 1,-3
             71: 3,-3
+            76: -3,-3
+            78: -1,-3
+            80: 1,-3
+            83: 3,-3
         - node:
             id: LatticeEdgeS
           decals:
@@ -150,6 +157,10 @@ entities:
             61: 3,1
             62: -3,1
             63: -1,3
+            72: 1,3
+            73: 3,1
+            74: -3,1
+            75: -1,3
         - node:
             id: LatticeEdgeW
           decals:
@@ -157,6 +168,7 @@ entities:
             31: 1,-3
             43: 1,-3
             69: 1,-3
+            81: 1,-3
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -239,13 +251,13 @@ entities:
             2: 8320
           0,-1:
             0: 12560
-            1: 33792
+            1: 50176
             2: 160
           -1,0:
             2: 32800
             1: 4
           -1,-1:
-            1: 9216
+            1: 25600
             0: 32768
             2: 160
         uniqueMixes:
@@ -299,6 +311,10 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Voruna
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: fighter
     - type: IFF
       relations: {}
       color: '#F6CE9C9C'
@@ -416,28 +432,6 @@ entities:
     - type: Transform
       pos: -1.5,-0.5
       parent: 1
-- proto: BaseWeaponTurretHeavyPlasmaRimward
-  entities:
-  - uid: 21
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,2.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 22
@@ -772,5 +766,13 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-0.5
+      parent: 1
+- proto: WeaponTurretStarburst
+  entities:
+  - uid: 21
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,2.5
       parent: 1
 ...

@@ -147,6 +147,9 @@ namespace Content.Server.Preferences.Managers
                             _sawmill.Info($"{session.Name} has tried to give their character money. They are using a modified client!");
                         profile = humanProfile.WithBank(humanoidEditingTarget.BankBalance);
                     }
+
+                    // prevent client from changing flags on a slot. fuck you
+                    profile = humanProfile.WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
                 }
             }
 

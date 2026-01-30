@@ -30,20 +30,20 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 1.2
+      projectileSpeed: 50
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 45
-      minAngle: 5
-      maxAngle: 15
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 3
+      rechargeCooldown: 10
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -51,8 +51,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletCurse
-      capacity: 10
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -94,9 +94,9 @@
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 45
-      minAngle: 5
-      maxAngle: 15
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
@@ -136,7 +136,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -151,19 +151,19 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 90
-      fireRate: 4
+      fireRate: 25
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 45
-      minAngle: 5
-      maxAngle: 15
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 1
+      rechargeCooldown: 0.8
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -171,10 +171,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 30
-      count: 10
+      capacity: 300
+      count: 300
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 5000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Small
@@ -210,28 +210,24 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 90
-      fireRate: 5
+      fireRate: 25
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 45
-      minAngle: 5
-      maxAngle: 15
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.8
+      rechargeCooldown: 0.5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
           pitch: 1.2
           variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletRetribution
-      capacity: 40
-      count: 10
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -256,7 +252,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -270,14 +266,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 85
-      fireRate: 3.2
+      projectileSpeed: 70
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 25
-      minAngle: 2
-      maxAngle: 8
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -291,8 +287,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 20
-      count: 10
+      capacity: 35
+      count: 35
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -315,7 +311,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -376,7 +372,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -390,8 +386,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
-      fireRate: 1.5
+      projectileSpeed: 50
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -400,7 +396,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 3.5
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -408,8 +404,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 20
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 6000
     - type: HardpointAnchorableOnly

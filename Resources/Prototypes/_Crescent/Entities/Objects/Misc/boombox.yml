@@ -28,3 +28,28 @@
           type: JukeboxBoundUserInterface
   - type: StaticPrice
     price: 2500
+
+- type: entity
+  id: SingingParasite
+  name: singing parasite
+  parent: BaseItem
+  description: Weird small bug of musical abilities. It doesn't look real.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/singingparasite.rsi
+    layers:
+    - state: "off"
+      map: ["enum.JukeboxVisualLayers.Base"]
+  - type: Item
+    size: Small
+  - type: Jukebox
+    offState: off
+  - type: Appearance
+  - type: ActivatableUI
+    key: enum.JukeboxUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.JukeboxUiKey.Key:
+          type: JukeboxBoundUserInterface
+  - type: StaticPrice
+    price: 2500

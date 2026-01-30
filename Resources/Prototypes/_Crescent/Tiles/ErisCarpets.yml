@@ -270,8 +270,59 @@
     sprite: /Textures/_Crescent/ErisPorted/carpet.rsi
     state: oracarpet_corners
 
+# New Carpets
+- type: tile
+  id: TAPCarpet
+  name: "Carpet of Mother"
+  sprite: /Textures/_Crescent/Floors/carpet.rsi/tapcarpet.png
+  baseTurf: Plating
+  isSubfloor: false
+  directionals: TAPCarpet
+  directionalRequirement: Same
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepCarpet
+  itemDrop: FloorTileItemErisCarpetTAP
+  heatCapacity: 10000
 
+- type: decal
+  id: TAPCarpetEdge
+  tags: ["station", "markings"]
+  sprite:
+    sprite: /Textures/_Crescent/Floors/carpet.rsi
+    state: tapcarpet_edges
 
+- type: decal
+  id: TAPCarpetCorner
+  tags: ["station", "markings"]
+  sprite:
+    sprite: /Textures/_Crescent/Floors/carpet.rsi
+    state: tapcarpet_outer
+
+- type: decal
+  id: TAPCarpetOuterCorner
+  tags: ["station", "markings"]
+  sprite:
+    sprite: /Textures/_Crescent/Floors/carpet.rsi
+    state: tapcarpet_corners
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemErisCarpetTAP
+  name: Mother Carpet
+  description: Looks to have elaborate motifs. But it's a carpet.
+  components:
+  - type: Sprite
+    sprite: Objects/Tiles/tile.rsi
+    state: tapcarpet
+  - type: Item
+    heldPrefix: generic
+  - type: FloorTile
+    outputs:
+      - Plating
+      - TAPCarpet
+  - type: Stack
+    stackType: FloorTileStackErisCarpetTAP
 
 
 

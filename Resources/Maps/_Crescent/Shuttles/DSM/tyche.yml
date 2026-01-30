@@ -3031,6 +3031,10 @@ entities:
         chunkSize: 4
     - type: BecomesStation
       id: Tyche
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: corvette
 - proto: AirAlarm
   entities:
   - uid: 2

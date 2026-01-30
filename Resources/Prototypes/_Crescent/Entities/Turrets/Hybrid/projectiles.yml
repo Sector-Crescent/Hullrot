@@ -12,14 +12,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 400
+        Structural: 300
         Radiation: 90
   - type: PointLight
     radius: 3.5
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 7 #roughly 560m range
+    lifetime: 11 #660m
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -49,16 +49,16 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 150
-    intensitySlope: 15
-    totalIntensity: 150
+    maxIntensity: 400
+    intensitySlope: 50
+    totalIntensity: 10000
     maxTileBreak: 6
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 14 #roughly 1,050m range
+    lifetime: 20 #800m
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -78,21 +78,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 150
+        Structural: 1000
         Radiation: 120
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
     maxIntensity: 400
-    intensitySlope: 30
-    totalIntensity: 400
+    intensitySlope: 500
+    totalIntensity: 20000
     maxTileBreak: 7
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 21 #roughly 1470m range
+    lifetime: 10 #500m
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:

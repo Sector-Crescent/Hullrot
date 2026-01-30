@@ -71,12 +71,12 @@
 
 - type: listing
   id: StoreListing90mmcannon
-  name: 90mm 'Gistum' tri-barreled repeater cannon flatpack
+  name: 90mm 'Gistum' tri-barreled repeater cannon flatpack (DO NOT WORK, SORRY)
   description: A large machine gun for large hardpoints.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi, state: repeater }
   productEntity: WeaponTurretLargeMachinegunFlatpack
   cost:
-    ScrapSAW: 55
+    ScrapSAW: 80
   categories:
   - StoreCategorySAWGuns
 
@@ -87,7 +87,7 @@
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/howitzer.rsi, state: howitzer }
   productEntity: WeaponTurretLargeArtilleryFlatpack
   cost:
-    ScrapSAW: 55
+    ScrapSAW: 100
   categories:
   - StoreCategorySAWGuns
 

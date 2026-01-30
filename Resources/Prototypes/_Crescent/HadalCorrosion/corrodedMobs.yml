@@ -1,0 +1,38 @@
+- type: entity
+  parent: BaseMobFleshExpeditions
+  id: MobFleshGolemCorroded
+  name: corroded human
+  description: What an unfortunate fate to befall.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: golem
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: golem
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+
+- type: polymorph
+  id: HadalCorrosion
+  configuration:
+    entity: MobFleshGolemCorroded
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Drop
+    revertOnDeath: true
+    revertOnCrit: true
+    copiedComponents:
+    - HadalCorrosion
+    - StaticOverlay
+

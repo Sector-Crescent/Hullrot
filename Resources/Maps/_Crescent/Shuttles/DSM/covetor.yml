@@ -2366,42 +2366,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,0.5
       parent: 1
-- proto: ComputerTabletopShuttleDSMCivilian
-  entities:
-  - uid: 284
-    components:
-    - type: Transform
-      pos: 3.5,13.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        3:
-        - - Group1
-          - Toggle
-        2:
-        - - Group1
-          - Toggle
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: NamedModules
-      buttonNames:
-      - Fire Exhumers
-      - Module B
-      - Module C
-      - Module D
-      - Module E
 - proto: ComputerTabletopSurveillanceCameraMonitor
   entities:
   - uid: 285
