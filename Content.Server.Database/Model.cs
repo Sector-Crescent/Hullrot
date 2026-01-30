@@ -413,6 +413,10 @@ namespace Content.Server.Database
         public string EyeColor { get; set; } = null!;
         public string SkinColor { get; set; } = null!;
         public int SpawnPriority { get; set; } = 0;
+
+        // HULLROT-CSR edit: Character flags.
+        // These can be applied to unlock traits, cause permanent effects on a character, etc.
+        public string[] CharacterFlags { get; set; } = default!;
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
         public List<Trait> Traits { get; } = new();
@@ -451,7 +455,6 @@ namespace Content.Server.Database
 
         public string AntagName { get; set; } = null!;
     }
-
     public class Trait
     {
         public int Id { get; set; }

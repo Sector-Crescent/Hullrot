@@ -38,8 +38,7 @@ public sealed class LanguageAdderSystem : EntitySystem
 
         comp.CurrentLanguage = comp.SpokenLanguages.First();
         RaiseLocalEvent(ent, new LanguagesUpdateEvent());
-        Dirty(ent);
-
+        DirtyEntity(ent.Owner);
     }
 
 }

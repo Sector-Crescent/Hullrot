@@ -1,98 +1,4 @@
 - type: entity
-  id: Bullet35mmBase
-  name: 35mm FMJ lead-core projectile
-  description: Uh oh.
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 95
-        Piercing: 90
-  - type: ProjectilePhasePrevent
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 6 #roughly 480m range
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
-
-- type: entity
-  id: Bullet35mmGyrostable
-  name: 35mm gyrostable projectile
-  description: Uh oh.
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 75
-        Piercing: 75
-  - type: ProjectilePhasePrevent
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 9 #roughly 720m range
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
-
-- type: entity
-  id: Bullet35mmPlasma
-  name: 35mm unstable plasma-core projectile
-  description: Uh oh.
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: ProjectilePhasePrevent
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 60
-        Piercing: 75
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 7
-    intensitySlope: 15
-    totalIntensity: 15
-    maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 4 #roughly 320m range
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
-
-- type: entity
   id: Bullet20mmBase
   name: 20mm FMJ lead-core projectile
   description: Uh oh.
@@ -107,14 +13,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 65
-        Piercing: 90
+        Structural: 26
+        Piercing: 50
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 8 #roughly 640-680m range depending on shipgun
+    lifetime: 12 #960m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -136,14 +42,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 50
-        Piercing: 90
+        Structural: 20
+        Piercing: 50
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #roughly 800-850m range depending on shipgun
+    lifetime: 15 #1200m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -165,21 +71,205 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 50
-        Piercing: 50
+        Structural: 20
+        Piercing: 20
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 5
-    intensitySlope: 10
-    totalIntensity: 10
+    maxIntensity: 25
+    intensitySlope: 100
+    totalIntensity: 1000
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 5 #roughly 400-425m range depending on shipgun
+    lifetime: 7 #560m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+
+- type: entity
+  id: Bullet35mmBase
+  name: 35mm FMJ lead-core projectile
+  description: Uh oh.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 45
+        Piercing: 85
+  - type: ProjectilePhasePrevent
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 10 #750m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+  - type: ShipWeaponProjectile
+
+- type: entity
+  id: Bullet35mmGyrostable
+  name: 35mm gyrostable projectile
+  description: Uh oh.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 35
+        Piercing: 75
+  - type: ProjectilePhasePrevent
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 13 #975m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+  - type: ShipWeaponProjectile
+
+- type: entity
+  id: Bullet35mmPlasma
+  name: 35mm unstable plasma-core projectile
+  description: Uh oh.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+  - type: ProjectilePhasePrevent
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 30
+        Piercing: 45
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 50
+    intensitySlope: 100
+    totalIntensity: 500
+    maxTileBreak: 1
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 6 #450m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+  - type: ShipWeaponProjectile
+
+#50mm
+
+- type: entity
+  id: Bullet50mmBase
+  name: 50mm FMJ lead-core projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Square
+    color: White
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 130
+        Piercing: 80
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 23 #1500m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+
+- type: entity
+  id: Bullet50mmGyrostable
+  name: 50mm gyrostable projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Square
+    color: White
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 80
+        Piercing: 50
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 30 #2000m
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+    layers:
+      - state: base-projectile
+
+- type: entity
+  id: Bullet50mmPlasma
+  name: 50mm plasma-core projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileIFF
+    visualType: Square
+    color: White
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 50
+        Piercing: 30
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 250
+    intensitySlope: 200
+    totalIntensity: 3000
+    maxTileBreak: 3
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 13 #845
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -202,21 +292,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 100
-        Piercing: 100
+        Structural: 80
+        Piercing: 80
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 175
-    intensitySlope: 75
-    totalIntensity: 500
+    maxIntensity: 900
+    intensitySlope: 600
+    totalIntensity: 10000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10.5
+    lifetime: 12 #660
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/mortarcasing.rsi
     layers:
@@ -237,21 +327,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 200
-        Piercing: 100
+        Structural: 100
+        Piercing: 40
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 100
-    intensitySlope: 25
-    totalIntensity: 125
+    maxIntensity: 400
+    intensitySlope: 600
+    totalIntensity: 2500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 35
+    lifetime: 35 #1925m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/mortarcasing.rsi
     layers:
@@ -272,128 +362,22 @@
     damage:
       types:
         Structural: 150
-        Piercing: 100
+        Piercing: 40
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 150
-    intensitySlope: 50
-    totalIntensity: 250
+    maxIntensity: 400
+    intensitySlope: 600
+    totalIntensity: 5000
     maxTileBreak: 3
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 20
+    lifetime: 22 #1210m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/mortarcasing.rsi
-    layers:
-      - state: base-projectile
-
-
-#50mm
-
-
-- type: entity
-  id: Bullet50mmBase
-  name: 50mm FMJ lead-core projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 135
-        Piercing: 50
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 8
-    intensitySlope: 15
-    totalIntensity: 15
-    maxTileBreak: 2
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 20
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-
-- type: entity
-  id: Bullet50mmGyrostable
-  name: 50mm gyrostable projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 115
-        Piercing: 50
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 5
-    intensitySlope: 10
-    totalIntensity: 10
-    maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 35
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-
-- type: entity
-  id: Bullet50mmPlasma
-  name: 50mm plasma-core projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 100
-        Piercing: 50
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 15
-    intensitySlope: 35
-    totalIntensity: 35
-    maxTileBreak: 3
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 10
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
       - state: base-projectile
 
@@ -412,9 +396,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 300
+        Structural: 150
+        Piercing: 150
   - type: TimedDespawn
-    lifetime: 25
+    lifetime: 30 #1350m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -422,9 +407,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 800
-    intensitySlope: 650
-    totalIntensity: 800
+    maxIntensity: 900
+    intensitySlope: 900
+    totalIntensity: 10000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -445,9 +430,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 350
+        Structural: 200
+        Piercing: 100
   - type: TimedDespawn
-    lifetime: 90
+    lifetime: 90 #4000m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -455,9 +441,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 400
+    maxIntensity: 250
     intensitySlope: 250
-    totalIntensity: 500
+    totalIntensity: 2500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -478,9 +464,9 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 500
+        Structural: 250
   - type: TimedDespawn
-    lifetime: 60
+    lifetime: 65 #2925m
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -488,9 +474,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 750
+    maxIntensity: 500
     intensitySlope: 500
-    totalIntensity: 750
+    totalIntensity: 5000
     maxTileBreak: 3
   - type: PointLight
     radius: 3.5
@@ -508,9 +494,9 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 5000
+        Structural: 1000
   - type: TimedDespawn
-    lifetime: 100
+    lifetime: 180 #6300
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/1000_armorpiercing_rail_casing.rsi
     layers:
@@ -518,8 +504,8 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 9000
-    intensitySlope: 90
+    maxIntensity: 700
+    intensitySlope: 250
     totalIntensity: 25000
     maxTileBreak: 90
   - type: PointLight
@@ -543,13 +529,13 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 600
-        Blunt: 40
+        Structural: 100
+        Blunt: 150
   - type: Tag
     tags:
       - FlakShell
   - type: TimedDespawn
-    lifetime: 15
+    lifetime: 12 #480m
   - type: Sprite
     sprite: _Crescent/Objects/ShuttleWeapons/flak.rsi
     layers:

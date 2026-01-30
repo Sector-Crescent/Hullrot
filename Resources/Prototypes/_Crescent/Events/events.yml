@@ -20,49 +20,49 @@
      maxX: 4000
      maxY: 6300
 
- - type: entity # Need rework
-   id: ShinoharaTrader
-   parent: BaseGameRule
-   components:
-   - type: StationEvent
-     startAnnouncement: true
-     endAnnouncement: true
-     earliestStart: 90
-     minimumPlayers: 25
-     weight: 3
-     startDelay: 10
-     duration: 2100
-     maxDuration: 2400
-     maxOccurrences: 2
-   - type: BluespaceErrorRule
-     gridPath: /Maps/_Crescent/Bluespace/shitrader.yml
-     rewardFactor: 0.5 # Filler to make the bank go up
-     minX: -1000
-     minY: -5500
-     maxX: 8800
-     maxY: 10000
+ #- type: entity # Need rework
+ #  id: ShinoharaTrader
+ #  parent: BaseGameRule
+ #  components:
+ #  - type: StationEvent
+ #    startAnnouncement: true
+ #    endAnnouncement: true
+ #    earliestStart: 90
+ #    minimumPlayers: 25
+ #    weight: 3
+ #    startDelay: 10
+ #    duration: 2100
+ #    maxDuration: 2400
+ #    maxOccurrences: 2
+ #  - type: BluespaceErrorRule
+ #    gridPath: /Maps/_Crescent/Bluespace/shitrader.yml
+ #    rewardFactor: 0.5 # Filler to make the bank go up
+ #    minX: -1000
+ #    minY: -5500
+ #    maxX: 8800
+ #    maxY: 10000
 
- - type: entity # Need rework
-   id: PangTaiTrader
-   parent: BaseGameRule
-   components:
-   - type: StationEvent
-     startAnnouncement: true
-     endAnnouncement: true
-     earliestStart: 90
-     minimumPlayers: 25
-     weight: 5
-     startDelay: 10
-     duration: 2100
-     maxDuration: 2400
-     maxOccurrences: 2
-   - type: BluespaceErrorRule
-     gridPath: /Maps/_Crescent/Bluespace/trader.yml
-     rewardFactor: 0.5 # Filler to make the bank go up
-     minX: -1000
-     minY: -5500
-     maxX: 8800
-     maxY: 10000
+# - type: entity # Need rework
+#   id: PangTaiTrader
+#   parent: BaseGameRule
+#   components:
+#   - type: StationEvent
+#     startAnnouncement: true
+#     endAnnouncement: true
+#     earliestStart: 90
+#     minimumPlayers: 25
+#     weight: 5
+#     startDelay: 10
+#     duration: 2100
+#     maxDuration: 2400
+#     maxOccurrences: 2
+#   - type: BluespaceErrorRule
+#    gridPath: /Maps/_Crescent/Bluespace/trader.yml
+#     rewardFactor: 0.5 # Filler to make the bank go up
+#     minX: -1000
+#     minY: -5500
+#     maxX: 8800
+#     maxY: 10000
 
  - type: entity # Need rework
    id: ShinoharaDED

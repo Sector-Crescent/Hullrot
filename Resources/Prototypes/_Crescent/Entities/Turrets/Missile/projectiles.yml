@@ -14,7 +14,7 @@
         Structural: 125
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 8
+    lifetime: 20 #800m + Lock on range = 1200m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -22,9 +22,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 500
-    intensitySlope: 100
-    totalIntensity: 600
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -82,7 +82,7 @@
         Structural: 150
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 20 #800m + Lock on range = 1100m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -90,9 +90,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 600
-    intensitySlope: 200
-    totalIntensity: 800
+    maxIntensity: 100
+    intensitySlope: 100
+    totalIntensity: 500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -151,7 +151,7 @@
         Structural: 175
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 8
+    lifetime: 18 #1080 + Lock on range = 1880m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -159,9 +159,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 900
-    intensitySlope: 300
-    totalIntensity: 1250
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 1500
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -217,16 +217,16 @@
         Structural: 250
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 4
+    lifetime: 18 #1080m + Lock on range = 1780m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: gscazimuthfired
   - type: Explosive
     explosionType: Default
-    maxIntensity: 950
-    intensitySlope: 320
-    totalIntensity: 1350
+    maxIntensity: 200
+    intensitySlope: 200
+    totalIntensity: 1500
     maxTileBreak: 5
   - type: HeatSeeking
     rotationSpeed: 35
@@ -250,16 +250,16 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 18 #1080m + Lock on range = 2080m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: ncwlazimuthfired
   - type: Explosive
     explosionType: Default
-    maxIntensity: 850
-    intensitySlope: 250
-    totalIntensity: 1000
+    maxIntensity: 100
+    intensitySlope: 10
+    totalIntensity: 2000
     maxTileBreak: 4
   - type: HeatSeeking
     rotationSpeed: 35
@@ -271,7 +271,7 @@
 
 - type: entity
   id: AzimuthRocketProjectileAdvanced
-  name: 60mm high-explosive fragmentation rocket mk.II
+  name: 60mm high-explosive fragmentation rocket mk.II #this one needs more work but it isnt a core ammo so i cba rn
   description: Shit.
   parent: AzimuthRocketProjectile
   categories: [ HideSpawnMenu ]
@@ -283,16 +283,16 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 9
+    lifetime: 18 #1080m + Lock on range = 1930m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: azimuthmk2fired
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 800
-    intensitySlope: 250
-    totalIntensity: 900
+    explosionType: Electric
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 1250
     maxTileBreak: 4
   - type: HeatSeeking
     rotationSpeed: 30
@@ -319,7 +319,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 11 #roughly 1,035-1,060-1,075m range depending on shipgun
+    lifetime: 20 #1200m + Lock on range = 2700m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -327,9 +327,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1100
-    intensitySlope: 300
-    totalIntensity: 1350
+    maxIntensity: 100
+    intensitySlope: 100
+    totalIntensity: 3000
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -386,7 +386,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 14 #roughly 1,345-1,360-1,375m range depending on shipgun
+    lifetime: 20 #1200 + Lock on range = 2700m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -394,9 +394,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1100
-    intensitySlope: 300
-    totalIntensity: 1350
+    maxIntensity: 50
+    intensitySlope: 20
+    totalIntensity: 3000
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -453,7 +453,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 7 #roughly 795-810-825m range depending on shipgun
+    lifetime: 20 #1200m + Lock on range = 2200m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -461,9 +461,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1250
-    intensitySlope: 250
-    totalIntensity: 1450
+    maxIntensity: 500
+    intensitySlope: 500
+    totalIntensity: 3000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -522,7 +522,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 18 #roughly 1,480m range
+    lifetime: 50 #1500m + Lock on range = 3000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -590,7 +590,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 23 #roughly 1,880m range
+    lifetime: 50 #1500m + Lock on range = 4500m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -599,7 +599,7 @@
   - type: Explosive
     explosionType: Default
     maxIntensity: 5000
-    intensitySlope: 200
+    intensitySlope: 50
     totalIntensity: 5000
     maxTileBreak: 12
   - type: PointLight
@@ -660,7 +660,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 25
+    lifetime: 100 #3000m + Lock on = 8000m  (This might need adjustment)
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/catapult.rsi
     layers:
@@ -668,9 +668,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 12500
-    intensitySlope: 400
-    totalIntensity: 12500
+    maxIntensity: 150000
+    intensitySlope: 500
+    totalIntensity: 100000
     maxTileBreak: 20
   - type: PointLight
     radius: 3.5
@@ -731,7 +731,7 @@
         Structural: 125
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 25 #625m + Lock on = 1025m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -739,9 +739,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 300
-    intensitySlope: 500
-    totalIntensity: 300
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 250
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5

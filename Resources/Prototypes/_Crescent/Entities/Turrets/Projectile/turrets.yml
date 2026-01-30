@@ -30,7 +30,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 3.8
+      fireRate: 4
       projectileSpeed: 80
       selectedMode: FullAuto
       availableModes:
@@ -55,7 +55,7 @@
             tags:
               - Cartridge20mm
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 2000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -91,8 +91,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 4.3
-      projectileSpeed: 85
+      fireRate: 4.5
+      projectileSpeed: 80
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -116,7 +116,7 @@
             tags:
               - Cartridge20mm
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 1000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -152,8 +152,8 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 6
+      projectileSpeed: 65
+      fireRate: 5.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -181,7 +181,7 @@
             tags:
               - Cartridge35mm
     - type: ApcPowerReceiver
-      powerLoad: 1000
+      powerLoad: 2500
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -216,8 +216,8 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
-      fireRate: 1.5
+      projectileSpeed: 70
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -279,8 +279,8 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 65
-      fireRate: 2.2
+      projectileSpeed: 60
+      fireRate: 2.0
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -345,7 +345,7 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
+      projectileSpeed: 50
       fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
@@ -363,7 +363,7 @@
         tags:
         - Cartridge120mm
     - type: ApcPowerReceiver
-      powerLoad: 3500
+      powerLoad: 2000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Medium
@@ -397,8 +397,8 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
-      fireRate: 1.5
+      projectileSpeed: 55
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -442,8 +442,8 @@
       powerLoad: 800
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 2.1
+      projectileSpeed: 55
+      fireRate: 2.8
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -485,8 +485,8 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
-      fireRate: 0.4
+      projectileSpeed: 35
+      fireRate: 0.2
       selectedMode: SemiAuto
       availableModes:
         - SemiAuto
@@ -522,14 +522,18 @@
         - state: ncwl-howitzer
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 1.1
+      projectileSpeed: 40
+      fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: ApcPowerReceiver
       powerLoad: 8500
+    - type: BallisticAmmoProvider
+      fillDelay: 3.5
+      cycleable: true
+      capacity: 2
 
 #FLAK
 
@@ -564,8 +568,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
-      fireRate: 0.65
+      projectileSpeed: 40
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto

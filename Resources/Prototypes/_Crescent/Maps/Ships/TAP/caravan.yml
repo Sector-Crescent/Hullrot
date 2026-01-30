@@ -1,0 +1,29 @@
+- type: vessel
+  id: Caravan
+  name: TAP Caravan
+  description: A miniscule culture trading pod.
+  price: 7500
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/TAP/caravan.yml
+
+- type: gameMap
+  id: Caravan
+  mapName: 'TAP Caravan'
+  mapPath: /Maps/_Crescent/Shuttles/TAP/caravan.yml
+  minPlayers: 0
+  stations:
+    Caravan:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
+        - type: StationNameSetup
+          mapNameTemplate: 'TAP Caravan {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-fighter

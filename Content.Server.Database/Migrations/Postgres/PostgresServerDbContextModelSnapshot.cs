@@ -838,6 +838,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("bigint")
                         .HasColumnName("bank_balance");
 
+                    b.Property<string[]>("CharacterFlags")
+                        .IsRequired()
+                        .HasColumnType("text[]")
+                        .HasColumnName("character_flags");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("text")
