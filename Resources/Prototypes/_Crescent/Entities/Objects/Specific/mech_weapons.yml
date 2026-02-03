@@ -116,7 +116,7 @@
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletRocketSmart
-    fireCost: 100
+    fireCost: 200
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -212,7 +212,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: rifle
   - type: Gun
-    fireRate: 1
+    fireRate: 1.5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -220,7 +220,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechLightRifle
-    fireCost: 40
+    fireCost: 80
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -317,7 +317,7 @@
       path: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechLightRifle
-    fireCost: 45
+    fireCost: 100
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -343,7 +343,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechHeavyRifle
-    fireCost: 60
+    fireCost: 100
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -387,7 +387,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: autoshotgun
   - type: Gun
-    fireRate: 1
+    fireRate: 1.5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -395,7 +395,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutoshotgunPelletSpread
-    fireCost: 80
+    fireCost: 120
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -413,7 +413,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: autopuntgun
   - type: Gun
-    fireRate: 0.5
+    fireRate: 1
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -421,7 +421,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutopuntgunPelletSpread
-    fireCost: 100
+    fireCost: 180
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -504,7 +504,7 @@
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletHeavyPistol
-    fireCost: 7
+    fireCost: 10
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -530,7 +530,7 @@
       path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
   - type: HitscanBatteryAmmoProvider
     proto: LumenLaser
-    fireCost: 10
+    fireCost: 40
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -575,7 +575,7 @@
     startingCharge: 250
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitPlasmaBoltHeavy
-    fireCost: 200
+    fireCost: 300
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -604,7 +604,7 @@
     startingCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: Projectile84mmRecoillessHEAT
-    fireCost: 300
+    fireCost: 400
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
