@@ -171,5 +171,5 @@ research-technology-shinohara-light-destroyer = SHI Light Destroyers
 research-technology-shinohara-stealth-pod = SHI Stealth Pods
 research-technology-shinohara-oldntballistics = Old NT Gun Schematics
 research-technology-shinohara-ntartillery = NT Artillery Patent
-research-technology-shinohara-weaponcase = Shinohara Weapon Cases
+research-technology-shinohara-weaponcase = Shinohara Storage Standards
 

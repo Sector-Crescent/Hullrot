@@ -406,3 +406,24 @@
   - WeaponRifleM90GrenadeLauncher
   - WeaponSubMachineGunWt550Hullrot
 
+- type: technology
+  id: ShinoharaWeaponCase
+  name: research-technology-shinohara-weaponcase
+  icon:
+    sprite: _Crescent/Objects/Tools/riflecase.rsi
+    state: icon
+  discipline: Corporate
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - WeaponCaseRifle
+  - GrenadeCase
+  - WeaponCasePistol
+  - WeaponCaseSmg
+  - WeaponCaseSniper
+  - WeaponCaseRpg
+  - WeaponCaseLmg
+  - WeaponCaseShotgun
+  - WeaponCaseGl
+  - WeaponCaseAmmo
+
