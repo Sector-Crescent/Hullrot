@@ -42,11 +42,11 @@
     maxAngle: 45
     angleIncrease: 3
     angleDecay: 20
-  - type: HeldSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/conscript/gunshot.ogg
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: MagazineVisuals
     magState: mag
     steps: 3
