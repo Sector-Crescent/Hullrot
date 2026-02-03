@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 02/03/2026 09:56:56
+  time: 02/03/2026 09:53:47
   entityCount: 8566
 maps: []
 grids:
@@ -20661,21 +20661,11 @@ entities:
     - type: Transform
       pos: 14.5,24.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
   - uid: 237
     components:
     - type: Transform
       pos: -7.5,12.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
 - proto: AnomalyScanner
   entities:
   - uid: 238
@@ -22955,11 +22945,6 @@ entities:
     - type: Transform
       pos: -14.5,17.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
 - proto: AutoloomFactory
   entities:
   - uid: 676
@@ -39983,11 +39968,6 @@ entities:
     - type: Transform
       pos: -7.5,19.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
 - proto: CloningPod
   entities:
   - uid: 3967
@@ -43924,11 +43904,6 @@ entities:
     - type: Transform
       pos: -7.5,20.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
 - proto: Factory120Assembler
   entities:
   - uid: 4501
@@ -56825,26 +56800,6 @@ entities:
     - type: Transform
       pos: -14.5,15.5
       parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        675:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
-        6289:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
-        237:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
-        4500:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
-        3966:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
-        236:
-        - - MaterialSilo
-          - MaterialSiloUtilizer
 - proto: MatterBinStockPart
   entities:
   - uid: 6167
@@ -57861,11 +57816,6 @@ entities:
     - type: Transform
       pos: -10.5,17.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 6166
-    - type: MaterialSiloUtilizer
-      silo: 6166
 - proto: OxygenCanister
   entities:
   - uid: 6290
