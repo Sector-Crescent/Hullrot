@@ -349,7 +349,9 @@
   description: A short, rugged double-barrel shotgun built in-house by NCWL Homeguard workshops. Partisans prize its compact size and reliability for clearing tight ship corridors; Kommissars often carry one as a backup.
   components:
   - type: Item
-    size: Normal
+    size: Small
+    shape:
+    - 0,0,2,0
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_shotgun.rsi
   - type: Clothing
@@ -358,8 +360,8 @@
     - Back
     - suitStorage
   - type: Gun
-    fireRate: 2
-    damageModifier: 1.8
+    fireRate: 4
+    damageModifier: 0.85
     burstFireRate: 15
     shotgunSpreadMultiplier: 3
     shotsPerBurst: 2

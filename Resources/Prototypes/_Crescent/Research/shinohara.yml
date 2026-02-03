@@ -143,6 +143,8 @@
   - WeaponPistolMk58SHI
   - WeaponSubMachineGunMP49
   - WeaponSubMachineGunSabre
+  - WeaponRevolverMateba
+  - WeaponRifleGoro
 
 - type: technology
   id: ShinoharaBasicFactory
@@ -167,54 +169,6 @@
   cost: 1000
   recipeUnlocks:
   - AutoloomFablatheFlatpack
-
-- type: technology
-  id: ShinoharaHardpoint
-  name: research-technology-shinohara-hardpoint
-  icon:
-    sprite: _Crescent/Structures/fixedHardpoint.rsi
-    state: large
-  discipline: Corporate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - FixedHardpointFlatpack
-
-- type: technology
-  id: ShinoharaSlugthrower
-  name: research-technology-shinohara-slugthrower
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/50cal.rsi
-    state: space_artillery
-  discipline: Corporate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - SlugthrowerFlatpack
-
-- type: technology
-  id: ShinoharaExhumer
-  name: research-technology-shinohara-exhumer
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/mininglaser.rsi
-    state: states
-  discipline: Corporate
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - ExhumerFlatpack
-
-- type: technology
-  id: ShinoharaPlasmaRepeater
-  name: research-technology-shinohara-repeater
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/lasersmall.rsi
-    state: lse-400c
-  discipline: Corporate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - PlasmaRepeaterFlatpack
 
 - type: technology
   id: ShinoharaAdvancedMaterials
@@ -248,20 +202,6 @@
   - LaserLocus1
 
 - type: technology
-  id: ShinoharaWeaponTorpedo
-  name: research-technology-shinohara-torpedo
-  icon:
-    sprite: _Crescent/Objects/Autoturrets/magwell.rsi
-    state: base
-  discipline: Corporate
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - MagwellFlatpack
-  - IdnaFlatpack
-  - IdnaTorpedo
-
-- type: technology
   id: ShinoharaAdvancedFab
   name: research-technology-shinohara-advancedfactory
   icon:
@@ -285,9 +225,8 @@
   tier: 2
   cost: 12500
   recipeUnlocks:
-  - WeaponRifleGoro
+  - WeaponShotgunEnforcer
   - WeaponRifleLecterSHI
-  - WeaponRevolverMateba
   - WeaponLightMachineGunL6
   - WeaponSniperHristov
   - WeaponRifleBarghest
@@ -460,23 +399,10 @@
     sprite: _Crescent/Objects/Weapons/Guns/spas13.rsi
     state: icon
   discipline: Corporate
-  tier: 2
+  tier: 3
   cost: 6000
   recipeUnlocks:
   - WeaponShotgunSpas
   - WeaponRifleM90GrenadeLauncher
   - WeaponSubMachineGunWt550Hullrot
-
-- type: technology
-  id: ShinoharaNTEnergyArtillery
-  name: research-technology-shinohara-ntartillery
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/bigfuckinglaser.rsi
-    state: space_artillery
-  discipline: Corporate
-  tier: 3
-  cost: 12500
-  recipeUnlocks:
-  - HardlinerFlatpack
-  - PowerCageHardliner
 

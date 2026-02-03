@@ -244,7 +244,7 @@
   - type: Appearance
 
 - type: entity
-  name: SHI M931c Lecter 7.62x51mm
+  name: SHI M931c Lecter 5.56x45mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
   id: WeaponRifleLecter
   description: A fancy SHI-brand rifle sold to corporations and security forces everywhere.
@@ -262,7 +262,7 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/lecter.rsi
   - type: Gun
-    fireRate: 6
+    fireRate: 8
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/rifle_1/rifle_gunshot_2.ogg
     fireOnDropChance: 0.2
@@ -270,20 +270,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: MagazineLightRifle
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+            - MagazineLightRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: CartridgeLightRifle
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - CartridgeLightRifle
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

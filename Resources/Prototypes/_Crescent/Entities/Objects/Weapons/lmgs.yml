@@ -2,7 +2,7 @@
   name: CDT C-54 Compakt 5.56x45mm
   id: WeaponLightMachineGunCompakt
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
-  description: A compact LMG designed sacraficing damage for size. Made by Cyberdawn for Cyberdawn.
+  description: A compact LMG designed sacrificing damage for size. Made by Cyberdawn for Cyberdawn.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/compakt.rsi
@@ -37,7 +37,14 @@
     selectedMode: FullAuto
     availableModes:
     - FullAuto
-    fireRate: 7.5
+    fireRate: 10
+    minAngle: 25
+    maxAngle: 45
+    angleIncrease: 3
+    angleDecay: 20
+  - type: HeldSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/conscript/gunshot.ogg
   - type: MagazineVisuals
@@ -195,6 +202,17 @@
   parent: BaseWeaponLightMachineGun
   description: A bulky machinegun made from ancient schematics. Chambered in 7.62x51mm.
   components:
+  - type: Gun
+    minAngle: 25
+    maxAngle: 60
+    angleIncrease: 5
+    angleDecay: 24
+    fireRate: 9
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/lmg_1/lmg_gunshot_1.ogg
+  - type: HeldSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/rpd.rsi
     layers:
@@ -223,10 +241,6 @@
   - type: Item
     shape:
     - 0,0,5,2
-  - type: Gun
-    fireRate: 8
-    soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/lmg_1/lmg_gunshot_1.ogg
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -274,10 +288,17 @@
     - Burst
     - FullAuto
     burstFireRate: 10
-    burstCooldown: 0.5
-    fireRate: 6
+    burstCooldown: 0.2
+    minAngle: 20
+    maxAngle: 40
+    angleIncrease: 2
+    angleDecay: 20
+    fireRate: 8
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/lmg_2/lmg_gunshot_1.ogg
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: MagazineVisuals
     magState: mag
     steps: 3

@@ -2,7 +2,7 @@
   name: SHI PLCR-3M2 Hristov 15.2x169mm
   parent: [BaseWeaponRifleDMR, BaseGunWieldableDMR, StreeCredRedeemable]
   id: WeaponSniperHristov
-  description: A portable anti-materiel rifle, equipped with a long range scope. Fires the large 15.2×169mm round.
+  description: A barely portable anti-materiel rifle, equipped with a long range scope. Fires the large 15.2×169mm round.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/hristov.rsi
@@ -19,12 +19,16 @@
     shape:
     - 0,0,5,2
   - type: Gun
-    fireRate: 1
+    fireRate: 1.5
+    projectileSpeed: 45
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: HeldSpeedModifier
+    walkModifier: 0.6 #the heaviest sniper
+    sprintModifier: 0.6 #how chonk
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -75,12 +79,16 @@
     shape:
     - 0,0,5,2
   - type: Gun
-    fireRate: 0.75
+    fireRate: 1
+    projectileSpeed: 45
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -131,12 +139,16 @@
     shape:
     - 0,0,5,2
   - type: Gun
-    fireRate: 0.75
+    fireRate: 1
+    projectileSpeed: 45
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: HeldSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -187,12 +199,16 @@
     shape:
     - 0,0,5,2
   - type: Gun
-    fireRate: 0.75
+    fireRate: 1
+    projectileSpeed: 45
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -250,6 +266,7 @@
     - 0,0,5,2
   - type: Gun
     fireRate: 1.5
+    projectileSpeed: 45
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
     selectedMode: SemiAuto
