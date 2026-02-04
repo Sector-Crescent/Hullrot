@@ -669,3 +669,27 @@
     Plasma: 500
     Steel: 100
 
+- type: latheRecipe
+  id:  BallisticCyclerDSM
+  result: BallisticCycler1
+  completetime: 1.5
+  materials:
+    BasicMechatronics: 1000
+    Steel: 2500
+
+- type: latheRecipe
+  id:  TubeLoaderDSM
+  result: TubeLoader1
+  completetime: 1.5
+  materials:
+    BasicMechatronics:  1000
+    Steel: 2500
+
+- type: latheRecipe
+  id: HardsuitElectronicsDSM
+  result: HardsuitElectronics1
+  completetime: 2
+  materials:
+    BasicElectronics: 1500
+    Silver: 1500
+    Gold: 1000

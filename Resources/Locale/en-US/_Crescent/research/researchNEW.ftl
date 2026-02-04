@@ -110,6 +110,7 @@ research-technology-imperial-suzerain = Imperial Siege Battlecruiser
 research-technology-imperial-nemesis = Imperial Artillery Carrier
 research-technology-imperial-torturer = Imperial Stealth Bomber
 research-technology-imperial-magnate = Imperial Fire Support Vessel
+research-technology-imperial-craftcomps = Imperial Crafting Components
 
 # NCWL
 research-technology-communard-clothes = Communard Clothes
@@ -132,6 +133,7 @@ research-technology-communard-grenadelauncher = Communard Grenade Launcher
 research-technology-communard-bogatyr = Communard Battle Mech
 research-technology-communard-commienaut = Communard Juggernaut Suit
 research-technology-communard-vibrokukri = Communard Chengridz Vibrokukri
+research-technology-communard-craftcomps = Communard Crafting Components
 
 # SHI
 research-technology-shinohara-clothes = Corporate Uniforms

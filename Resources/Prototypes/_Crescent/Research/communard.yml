@@ -240,3 +240,17 @@
   recipeUnlocks:
   - NCWLKukri
   - ClothingBeltSheathNCWLKukri
+
+- type: technology
+  id: NCWLCraftingComponents
+  name: research-technology-communard-craftcomps
+  icon:
+    sprite: _Crescent/Objects/Materials/materials.rsi
+    state: tubeloaderrobotics
+  discipline: Communard
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - BallisticCyclerNCWL
+  - TubeLoaderNCWL
+  - HardsuitElectronicsNCWL

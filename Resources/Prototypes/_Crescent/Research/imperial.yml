@@ -331,3 +331,17 @@
   cost: 12000
   recipeUnlocks:
   - SuzerainLPC
+
+- type: technology
+  id: DSMCraftComps
+  name: research-technology-imperial-craftcomps
+  icon:
+    sprite: _Crescent/Objects/Materials/materials.rsi
+    state: tubeloaderrobotics
+  discipline: Imperial
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - BallisticCyclerDSM
+  - TubeLoaderDSM
+  - HardsuitElectronicsDSM
