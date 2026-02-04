@@ -116,7 +116,7 @@
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletRocketSmart
-    fireCost: 200
+    fireCost: 25
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -139,12 +139,12 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Weapons/Melee/rapierhit.ogg"
-    attackRate: 0.6
+    attackRate: 1
     damage:
       types:
-        Structural: 100
-        Slash: 65
-        Blunt: 20
+        Structural: 15
+        Slash: 100
+        Blunt: 40
   - type: Tag
     tags:
     - ScoutMechEquipment
@@ -165,12 +165,12 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Weapons/Melee/rapierhit.ogg"
-    attackRate: 0.9
+    attackRate: 1.2
     damage:
       types:
-        Structural: 150
-        Slash: 100
-        Heat: 35
+        Structural: 25
+        Slash: 160
+        Heat: 25
   - type: Tag
     tags:
     - ScoutMechEquipment
@@ -191,11 +191,11 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Weapons/Melee/rapierhit.ogg"
-    attackRate: 0.9
+    attackRate: 0.4
     damage:
       types:
         Structural: 250
-        Blunt: 60
+        Blunt: 90
   - type: Tag
     tags:
     - ScoutMechEquipment
@@ -212,7 +212,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: rifle
   - type: Gun
-    fireRate: 1.5
+    fireRate: 3.5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -220,7 +220,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechLightRifle
-    fireCost: 80
+    fireCost: 15
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -249,7 +249,7 @@
       path: /Audio/Weapons/Guns/Gunshots/dirge.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletHeavyPistol
-    fireCost: 10
+    fireCost: 5
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -309,7 +309,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: Minigun
   - type: Gun
-    fireRate: 2
+    fireRate: 7
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -317,7 +317,7 @@
       path: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechLightRifle
-    fireCost: 100
+    fireCost: 45
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -335,7 +335,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: hmg
   - type: Gun
-    fireRate: 1.5
+    fireRate: 1.9
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -343,7 +343,7 @@
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechHeavyRifle
-    fireCost: 100
+    fireCost: 25
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -361,7 +361,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: Cannon
   - type: Gun
-    fireRate: 0.4
+    fireRate: 0.8
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -369,7 +369,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMechAutocannon
-    fireCost: 150
+    fireCost: 50
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -395,7 +395,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutoshotgunPelletSpread
-    fireCost: 120
+    fireCost: 20
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -413,7 +413,7 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: autopuntgun
   - type: Gun
-    fireRate: 1
+    fireRate: 0.9
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -421,7 +421,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutopuntgunPelletSpread
-    fireCost: 180
+    fireCost: 25
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -447,7 +447,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: Projectile40mmFrag
-    fireCost: 100
+    fireCost: 50
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -476,7 +476,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitPlasmaBoltLight
-    fireCost: 40
+    fireCost: 10
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -494,9 +494,9 @@
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: imperialsmg
   - type: Gun
+    fireRate: 10
     minAngle: 6
     maxAngle: 16
-    damageModifier: 0.5
     selectedMode: FullAuto
     availableModes:
       - FullAuto
@@ -504,7 +504,7 @@
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletHeavyPistol
-    fireCost: 10
+    fireCost: 2
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -530,7 +530,7 @@
       path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
   - type: HitscanBatteryAmmoProvider
     proto: LumenLaser
-    fireCost: 40
+    fireCost: 3
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -575,7 +575,7 @@
     startingCharge: 250
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitPlasmaBoltHeavy
-    fireCost: 300
+    fireCost: 50
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -604,7 +604,7 @@
     startingCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: Projectile84mmRecoillessHEAT
-    fireCost: 400
+    fireCost: 300
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
