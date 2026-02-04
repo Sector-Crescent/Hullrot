@@ -77,7 +77,7 @@
   cost: 8000
   recipeUnlocks:
   - KrechetLPC
-  
+
 - type: technology
   id: CommunardMolot
   name: research-technology-communard-molot
@@ -89,7 +89,7 @@
   cost: 8000
   recipeUnlocks:
   - MolotLPC
-  
+
 - type: technology
   id: CommunardIvarod
   name: research-technology-communard-ivarod
@@ -101,7 +101,7 @@
   cost: 8000
   recipeUnlocks:
   - IvarodLPC
-  
+
 - type: technology
   id: CommunardHind
   name: research-technology-communard-corvette
@@ -113,7 +113,7 @@
   cost: 8500
   recipeUnlocks:
   - HindLPC
-  
+
 - type: technology
   id: CommunardGargut
   name: research-technology-communard-carrier
@@ -152,9 +152,11 @@
     state: lancer
   discipline: Communard
   tier: 2
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - LancerFlatpack
+  - WeaponMechSword
+  - WeaponMechCombatLightRifle
 
 - type: technology
   id: CommunardGrenadeLauncher
@@ -212,9 +214,11 @@
     state: bogatyr
   discipline: Communard
   tier: 3
-  cost: 12500
+  cost: 20000
   recipeUnlocks:
   - BogatyrFlatpack
+  - WeaponMechMaul
+  - WeaponMechCombatHeavyRifle
 
 - type: technology
   id: CommunardCommienaut

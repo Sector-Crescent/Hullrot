@@ -487,6 +487,34 @@
     AdvancedMechatronics: 1000
 
 - type: latheRecipe
+  id: WeaponMechMaul
+  result: WeaponMechMaul
+  completetime: 2
+  materials:
+    Steel: 10000
+    BasicMechatronics: 1000
+
+- type: latheRecipe
+  id: WeaponMechCombatHeavyRifle
+  result: WeaponMechCombatHeavyRifle
+  completetime: 2
+  materials:
+    Steel: 5000
+    BallisticCycler: 2000
+    BasicMechatronics: 3000
+    Uranium: 1000
+
+- type: latheRecipe
+  id: WeaponMechCombatAutocannon
+  result: WeaponMechCombatAutocannon
+  completetime: 2
+  materials:
+    Steel: 7500
+    BallisticCycler: 2000
+    BasicMechatronics: 3000
+    Uranium: 2000
+
+- type: latheRecipe
   id: WeaponMechGustaf
   result: WeaponMechCombatCarlGustaf
   completetime: 2
