@@ -3,7 +3,7 @@
   name: job-name-overseer
   description: job-description-overseer
   playTimeTracker: JobOverseerSRM
-  weight: 99
+  weight: 101
   startingGear: OverseerGear
   alwaysUseSpawner: true
   requireAdminNotify: false
@@ -12,6 +12,8 @@
   canBeAntag: false
   requirements:
     - !type:CharacterWhitelistRequirement
+    - !type:CharacterOverallTimeRequirement
+      min: 40000
     - !type:FactionRequirement
       factionID: "SRM"
     - !type:CharacterSpeciesRequirement
