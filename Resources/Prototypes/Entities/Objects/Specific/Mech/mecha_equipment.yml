@@ -22,6 +22,7 @@
   - type: Sprite
     state: mecha_clamp
   - type: MechGrabber
+    grabDelay: 0.2
     maxContents: 5
   - type: UIFragment
     ui: !type:MechGrabberUi
@@ -39,7 +40,7 @@
     state: mecha_clamp_small
   - type: MechGrabber
     maxContents: 4
-    grabDelay: 3
+    grabDelay: 0.2
     grabEnergyDelta: -20
   - type: UIFragment
     ui: !type:MechGrabberUi
