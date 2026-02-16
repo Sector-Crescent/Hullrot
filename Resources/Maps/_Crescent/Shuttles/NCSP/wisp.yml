@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/24/2025 20:00:48
+  time: 02/09/2026 10:44:59
   entityCount: 278
 maps: []
 grids:
@@ -63,6 +63,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      baseMaxLinearVelocity: 25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -89,6 +90,12 @@ entities:
             94: -4,-4
             97: -3,-4
             102: -2,-4
+            110: 3,-4
+            115: 4,-4
+            140: -7,-1
+            143: -4,-4
+            146: -3,-4
+            151: -2,-4
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -98,6 +105,11 @@ entities:
             71: 5,-4
             99: -3,-4
             104: -2,-4
+            112: 3,-4
+            117: 4,-4
+            120: 5,-4
+            148: -3,-4
+            153: -2,-4
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -106,6 +118,10 @@ entities:
             83: -2,6
             86: -8,-2
             89: -7,-1
+            129: -7,0
+            132: -2,6
+            135: -8,-2
+            138: -7,-1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -113,6 +129,9 @@ entities:
             58: 3,6
             74: 8,-1
             77: 9,-2
+            107: 3,6
+            123: 8,-1
+            126: 9,-2
         - node:
             id: LatticeEdgeE
           decals:
@@ -125,6 +144,15 @@ entities:
             92: -4,-4
             95: -3,-4
             100: -2,-4
+            108: 3,-4
+            113: 4,-4
+            128: -7,0
+            131: -2,6
+            134: -8,-2
+            137: -7,-1
+            141: -4,-4
+            144: -3,-4
+            149: -2,-4
         - node:
             id: LatticeEdgeN
           decals:
@@ -135,6 +163,13 @@ entities:
             93: -4,-4
             96: -3,-4
             101: -2,-4
+            109: 3,-4
+            114: 4,-4
+            118: 5,-4
+            139: -7,-1
+            142: -4,-4
+            145: -3,-4
+            150: -2,-4
         - node:
             id: LatticeEdgeS
           decals:
@@ -145,6 +180,13 @@ entities:
             81: -2,6
             84: -8,-2
             87: -7,-1
+            105: 3,6
+            121: 8,-1
+            124: 9,-2
+            127: -7,0
+            130: -2,6
+            133: -8,-2
+            136: -7,-1
         - node:
             id: LatticeEdgeW
           decals:
@@ -156,6 +198,14 @@ entities:
             76: 9,-2
             98: -3,-4
             103: -2,-4
+            106: 3,6
+            111: 3,-4
+            116: 4,-4
+            119: 5,-4
+            122: 8,-1
+            125: 9,-2
+            147: -3,-4
+            152: -2,-4
         - node:
             color: '#DE3A3A96'
             id: WarnCornerGreyscaleNE
@@ -340,6 +390,7 @@ entities:
     - type: BecomesStation
       id: Wisp
     - type: PacifistShipHullmod
+    - type: SelfDeleteGrid
 - proto: AirAlarm
   entities:
   - uid: 2
