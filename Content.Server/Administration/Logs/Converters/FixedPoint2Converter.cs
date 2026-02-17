@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 
 namespace Content.Server.Administration.Logs.Converters;
 

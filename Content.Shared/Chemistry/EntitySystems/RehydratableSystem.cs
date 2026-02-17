@@ -1,5 +1,6 @@
 using Content.Shared.Chemistry.Components;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Popups;
 using Robust.Shared.Network;
 using Robust.Shared.Random;

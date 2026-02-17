@@ -1,4 +1,5 @@
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Fluids.Components;
 using Robust.Shared.GameStates;
 

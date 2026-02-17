@@ -8,7 +8,8 @@ using Content.Shared.Damage.Components;
 using Content.Shared.Mood;
 using Robust.Shared.Random;
 using Robust.Shared.GameObjects;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 
 namespace Content.Shared.Traits.Assorted.Systems;
 

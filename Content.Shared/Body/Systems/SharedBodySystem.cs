@@ -27,6 +27,8 @@ public abstract partial class SharedBodySystem : EntitySystem
     /// Container ID prefix for any body organs.
     /// </summary>
     public const string OrganSlotContainerIdPrefix = "body_organ_slot_";
+    [Dependency] protected readonly IPrototypeManager Prototypes = default!;
+    [Dependency] protected readonly DamageableSystem Damageable = default!;
     [Dependency] protected readonly MovementSpeedModifierSystem Movement = default!;
     [Dependency] protected readonly SharedContainerSystem Containers = default!;
     [Dependency] protected readonly SharedTransformSystem SharedTransform = default!;

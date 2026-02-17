@@ -68,6 +68,7 @@ public sealed class PullingSystem : EntitySystem
     [Dependency] private readonly SharedGravitySystem _gravity = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _modifierSystem = default!;
     [Dependency] private readonly SharedJointSystem _joints = default!;
+    [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedInteractionSystem _interaction = default!;
@@ -80,7 +81,6 @@ public sealed class PullingSystem : EntitySystem
     [Dependency] private readonly StaminaSystem _stamina = default!;
     [Dependency] private readonly SharedColorFlashEffectSystem _color = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly SharedVirtualItemSystem _virtualSystem = default!;
     [Dependency] private readonly GrabThrownSystem _grabThrown = default!;
     [Dependency] private readonly SharedCombatModeSystem _combatMode = default!;
@@ -130,7 +130,7 @@ public sealed class PullingSystem : EntitySystem
             && TryComp<PullableComponent>(ent.Comp.Pulling, out var comp)
             && ent.Comp.Pulling != null)
         {
-            if(_netManager.IsServer)
+            if(_net.IsServer)
                 StopPulling(ent.Comp.Pulling.Value, comp);
         }
     }
@@ -155,7 +155,7 @@ public sealed class PullingSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        if (_netManager.IsClient) // Client cannot predict this
+        if (_net.IsClient) // Client cannot predict this
             return;
 
         var query = EntityQueryEnumerator<PullerComponent, PhysicsComponent, TransformComponent>();
@@ -526,7 +526,7 @@ public sealed class PullingSystem : EntitySystem
         if (TryComp<PullerComponent>(oldPuller, out var pullerComp))
         {
             var pullerUid = oldPuller.Value;
-            if (_netManager.IsServer)
+            if (_net.IsServer)
                 _alertsSystem.ClearAlert(pullerUid, pullerComp.PullingAlert);
             pullerComp.Pulling = null;
             // Goobstation - Grab Intent
@@ -549,7 +549,7 @@ public sealed class PullingSystem : EntitySystem
         }
 
 
-        if (_netManager.IsServer)
+        if (_net.IsServer)
             _alertsSystem.ClearAlert(pullableUid, pullableComp.PulledAlert);
     }
 
@@ -729,7 +729,7 @@ public sealed class PullingSystem : EntitySystem
             if (!TryStopPull(pullableUid, pullableComp, pullableComp.Puller))
             {
                 // Not succeed to retake grabbed entity
-                if (_netManager.IsServer)
+                if (_net.IsServer)
                 {
                     _popup.PopupEntity(Loc.GetString("popup-grab-retake-fail",
                             ("puller", Identity.Entity(pullableComp.Puller.Value, EntityManager)),
@@ -746,7 +746,7 @@ public sealed class PullingSystem : EntitySystem
             else if (pullableComp.GrabStage != GrabStage.No)
             {
                 // Successful retake
-                if (_netManager.IsServer)
+                if (_net.IsServer)
                 {
                     _popup.PopupEntity(Loc.GetString("popup-grab-retake-success",
                             ("puller", Identity.Entity(pullableComp.Puller.Value, EntityManager)),
@@ -843,7 +843,7 @@ public sealed class PullingSystem : EntitySystem
         // Goobstation - Grab Intent
         if (!ignoreGrab)
         {
-            if (_netManager.IsServer && user != null && user.Value == pullableUid)
+            if (_net.IsServer && user != null && user.Value == pullableUid)
             {
                 var releaseAttempt = AttemptGrabRelease(pullableUid);
                 if (!releaseAttempt)
@@ -990,7 +990,7 @@ public sealed class PullingSystem : EntitySystem
         _modifierSystem.RefreshMovementSpeedModifiers(puller);
 
         // I'm lazy to write client code
-        if (!_netManager.IsServer)
+        if (!_net.IsServer)
             return true;
 
         _popup.PopupEntity(Loc.GetString($"popup-grab-{puller.Comp.GrabStage.ToString().ToLower()}-target", ("puller", Identity.Entity(puller, EntityManager))), pullable, pullable, popupType);
@@ -1029,7 +1029,7 @@ public sealed class PullingSystem : EntitySystem
                 var emptyHand = _handsSystem.TryGetEmptyHand(puller, out _);
                 if (!emptyHand)
                 {
-                    if (_netManager.IsServer)
+                    if (_net.IsServer)
                         _popup.PopupEntity(Loc.GetString("popup-grab-need-hand"), puller, puller, PopupType.Medium);
 
                     return false;
@@ -1038,7 +1038,7 @@ public sealed class PullingSystem : EntitySystem
                 if (!_virtualSystem.TrySpawnVirtualItemInHand(pullable, puller.Owner, out var item, true))
                 {
                     // I'm lazy write client code
-                    if (_netManager.IsServer)
+                    if (_net.IsServer)
                         _popup.PopupEntity(Loc.GetString("popup-grab-need-hand"), puller, puller, PopupType.Medium);
 
                     return false;

@@ -247,7 +247,7 @@ public sealed partial class ContentAudioSystem
         if (_musicProto == null) //if we don't find any, we play the default track.
         {
             _musicProto = _protMan.Index<AmbientMusicPrototype>("default");
-            //_lastBiome = _proto.Index<SpaceBiomePrototype>("default");
+            //_lastBiome = _protMan.Index<SpaceBiomePrototype>("default");
         }
 
         SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);

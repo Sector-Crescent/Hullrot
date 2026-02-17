@@ -1,5 +1,6 @@
 using Robust.Shared.GameStates;
-//using Content.Shared.FixedPoint;
+//using Content.Goobstation.Maths.FixedPoint;
+
 
 namespace Content.Shared.Traits.Assorted.Components;
 

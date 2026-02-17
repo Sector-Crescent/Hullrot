@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 
 namespace Content.Server.WhiteDream.BloodCult.Runes.Revive;
 
