@@ -556,10 +556,10 @@
   showInVote: true
   description: The last days of Taypan.
   rules:
-  - OverworldRemap
+  - PrimaryFactionsLowpop
   - HullrotEventScheduler
 - type: entity
-  id: OverworldRemap
+  id: PrimaryFactionsLowpop
   parent: BaseGameRule
   categories: [ HideSpawnMenu ]
   components:
@@ -604,10 +604,10 @@
   showInVote: true
   description: The last days of Taypan.
   rules:
-  - OverworldRemap
+  - SecondaryFactionsLowpop
   - HullrotEventScheduler
 - type: entity
-  id: OverworldRemap
+  id: SecondaryFactionsLowpop
   parent: BaseGameRule
   categories: [ HideSpawnMenu ]
   components:
