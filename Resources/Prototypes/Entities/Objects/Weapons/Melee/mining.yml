@@ -56,6 +56,7 @@
   components:
   - type: Item
     storedRotation: -90
+    size: Normal
   - type: Tag
     tags:
     - Pickaxe
@@ -63,23 +64,24 @@
     sprite: Objects/Tools/handdrill.rsi
     state: handdrill
   - type: MeleeWeapon
+    heavyRateModifier: 1
     autoAttack: true
     angle: 0
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
-    attackRate: 0.3
+    attackRate: 0.1 #BRRRR IT'S A DRILL IT GO FAST
     range: 1.5
-    heavyStaminaCost: 1
+    heavyStaminaCost: 0
     damage:
       types:
-        Structural: 15
+        Structural: 5 #lowers the damage but is fast as fuck boiii
         Piercing: 10 #hullrot change, slightly buffs the drill.
   - type: DamageOtherOnHit
-    staminaCost: 9
+    staminaCost: 0 #no more stamina on an automatic drill
     damage:
       types:
-        Structural: 25
+        Structural: 10
         Piercing: 6
   - type: ThrowingAngle
     angle: 270
@@ -101,7 +103,7 @@
     wideAnimationRotation: -90
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
-    heavyStaminaCost: 0.5 # More efficient so less stamina needed to use
+    heavyStaminaCost: 0 # no stamima use it's a drill
     damage:
       types:
         Piercing: 20 #hullrot change, a better drill for piercing people to death
@@ -162,6 +164,7 @@
       types:
         Blunt: 25 # hullrot change, Slightly better than the machete now
         Slash: 10 # hullrot change
+        Structural: 50 #hullrot change, makes them half as good as breaching hammers.
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
@@ -211,6 +214,7 @@
     damage:
       types:
         Slash: 25
+        Structural: 15 #hullrot change, make it a nice emergency tool
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 8
     heavyRateModifier: 1
@@ -248,6 +252,7 @@
     damage:
       types:
         Slash: 35 # hullrot change, no blunt damage, just slash, but +5 damage compared to crushers' 45 damage
+        Structural: 50 #hullrot change, makes them half as good as breaching hammers.
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25

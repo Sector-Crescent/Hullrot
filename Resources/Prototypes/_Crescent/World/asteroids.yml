@@ -78,7 +78,7 @@
     - type: MapGrid
     - type: BlobFloorPlanBuilder
       radius: 12
-      floorPlacements: 159
+      floorPlacements: 300
 
 - type: entity
   id: HullrotMediumYield
@@ -103,16 +103,19 @@
             prob: 0.6
             orGroup: rock
           - id: WallRockBasaltUranium
-            prob: 0.06
+            prob: 0.05
             orGroup: rock
           - id: WallRockBasaltSilver
-            prob: 0.06
+            prob: 0.009
             orGroup: rock
           - id: WallRockBasaltGold
-            prob: 0.06
+            prob: 0.009
             orGroup: rock
           - id: WallRockBasaltArtifactFragment
-            prob: 0.09
+            prob: 0.0002
+            orGroup: rock
+          - id: WallRockBasaltCopper
+            prob: 0.05
             orGroup: rock
     - type: IFF
       flags: HideLabel
@@ -138,7 +141,7 @@
     - type: MapGrid
     - type: BlobFloorPlanBuilder
       radius: 12
-      floorPlacements: 75
+      floorPlacements: 100
 
 - type: entity
   id: HullrotMediumYieldLarge
@@ -149,7 +152,7 @@
     - type: MapGrid
     - type: BlobFloorPlanBuilder
       radius: 12
-      floorPlacements: 130
+      floorPlacements: 150
 
 - type: entity
   id: HullrotHighYield
@@ -167,20 +170,23 @@
     - type: SimpleFloorPlanPopulator
       entries:
         FloorChromite:
-          - id: RandomArtifactSpawner20
-            prob: 0.009
-            orGroup: rock
           - id: WallRockChromite
             prob: 0.5
             orGroup: rock
           - id: WallRockChromitePlasma
-            prob: 0.2
+            prob: 0.006
             orGroup: rock
           - id: WallRockChromiteArtifactFragment
-            prob: 0.1
+            prob: 0.005
             orGroup: rock
           - id: WallRockChromiteTungsten
-            prob: 0.3
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockChromiteCoal
+            prob: 0.03
+            orGroup: rock
+          - id: WallRockChromiteTin
+            prob: 0.05
             orGroup: rock
     - type: IFF
       flags: HideLabel

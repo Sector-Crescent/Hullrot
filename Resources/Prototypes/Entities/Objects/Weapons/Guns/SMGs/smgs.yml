@@ -494,3 +494,56 @@
 #        whitelist:
 #          tags:
 #            - CartridgeMagnum
+
+#Sweet Morningstar
+- type: entity
+  name: Sweet Morningstar 11mm submachinegun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMorningStar
+  description: Handcrafted modification by Libitina of the legendary WT50. With a sapphire coating on the outside and a ruby heart on the right side. Death has never been so rich or so sweet with this weapon.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 7
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1.5
+    angleDecay: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunTopMounted
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGunTopMounted
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 11
+    zeroVisible: true
+  - type: Appearance

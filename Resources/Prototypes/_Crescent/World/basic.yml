@@ -549,8 +549,6 @@
       prob: 0.2
     - id: HullrotMediumYieldLarge
       prob: 0.1
-    - id: HullrotHighYieldSmall
-      prob: 0.08
 
 - type: spaceBiome
   id: NewAsteroidsStandardTaypanTwo
@@ -572,11 +570,9 @@
     - id: HullrotLowYieldLargest
       prob: 0.5
     - id: HullrotMediumYieldSmall
-      prob: 0.2
+      prob: 0.4
     - id: HullrotMediumYieldLarge
-      prob: 0.1
-    - id: HullrotHighYieldSmall
-      prob: 0.08
+      prob: 0.2
 
 - type: spaceBiome
   id: AsteroidCentralBelt
@@ -600,8 +596,11 @@
     - id: HullrotMediumYieldSmall
       prob: 0.1
     - id: HullrotMediumYieldMedium
-      prob: 0.3
+      prob: 0.4
     - id: HullrotMediumYieldLarge
       prob: 0.5
-    - id: HullrotLowYieldSmall
-      prob: 0.05
+    - id: HullrotLowYieldLarge
+      prob: 0.2
+    - id: HullrotLowYieldLargest
+      prob: 0.2
+

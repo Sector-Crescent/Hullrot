@@ -61,30 +61,31 @@ public sealed class BlobFloorPlanBuilderSystem : BaseWorldSystem
             var tileDef = _tileDefinition[_random.Pick(comp.FloorTileset)];
             taken.Add(point, new Tile(tileDef.TileId, 0, _tiles.PickVariant((ContentTileDefinition) tileDef)));
         }
-        if (spawnPoints.Count != 0)
+
+        PlaceTile(Vector2i.Zero);
+
+        for (var i = 0; i < comp.FloorPlacements; i++)
         {
-            PlaceTile(Vector2i.Zero);
+            if (spawnPoints.Count == 0)
+                break; // let's not keep doing this.
 
-            for (var i = 0; i < comp.FloorPlacements; i++)
+            var point = _random.Pick(spawnPoints);
+            PlaceTile(point);
+
+            if (comp.BlobDrawProb > 0.0f)
             {
-                var point = _random.Pick(spawnPoints);
-                PlaceTile(point);
-
-                if (comp.BlobDrawProb > 0.0f)
-                {
-                    if (!taken.ContainsKey(point.Offset(Direction.North)) && _random.Prob(comp.BlobDrawProb))
-                        PlaceTile(point.Offset(Direction.North));
-                    if (!taken.ContainsKey(point.Offset(Direction.South)) && _random.Prob(comp.BlobDrawProb))
-                        PlaceTile(point.Offset(Direction.South));
-                    if (!taken.ContainsKey(point.Offset(Direction.East)) && _random.Prob(comp.BlobDrawProb))
-                        PlaceTile(point.Offset(Direction.East));
-                    if (!taken.ContainsKey(point.Offset(Direction.West)) && _random.Prob(comp.BlobDrawProb))
-                        PlaceTile(point.Offset(Direction.West));
-                }
+                if (!taken.ContainsKey(point.Offset(Direction.North)) && _random.Prob(comp.BlobDrawProb))
+                    PlaceTile(point.Offset(Direction.North));
+                if (!taken.ContainsKey(point.Offset(Direction.South)) && _random.Prob(comp.BlobDrawProb))
+                    PlaceTile(point.Offset(Direction.South));
+                if (!taken.ContainsKey(point.Offset(Direction.East)) && _random.Prob(comp.BlobDrawProb))
+                    PlaceTile(point.Offset(Direction.East));
+                if (!taken.ContainsKey(point.Offset(Direction.West)) && _random.Prob(comp.BlobDrawProb))
+                    PlaceTile(point.Offset(Direction.West));
             }
-
-            grid.SetTiles(taken.Select(x => (x.Key, x.Value)).ToList());
         }
+
+        grid.SetTiles(taken.Select(x => (x.Key, x.Value)).ToList());
     }
 }
 

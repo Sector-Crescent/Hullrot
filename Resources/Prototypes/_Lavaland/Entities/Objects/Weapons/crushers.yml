@@ -68,6 +68,7 @@
       types:
         Blunt: 10
         Slash: 40 #hullrot change, buffs it to be better than machete
+        Structural: 50 #hullrot change, makes them half as good as breaching hammers.
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.5
@@ -113,6 +114,7 @@
     damage:
       types:
         Blunt: 42
+        Structural: 75 #hullrot change, almost as good as a breaching hammer
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 12
     heavyRateModifier: 1.75
@@ -163,6 +165,7 @@
     damage:
       types:
         Slash: 28
+        Structural: 25 #hullrot change, a nice sidegrade.
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 8
     heavyRateModifier: 1.15
@@ -203,6 +206,7 @@
     damage:
       types:
         Slash: 45
+        Structural: 15 #hullrot change, more combat focused
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
