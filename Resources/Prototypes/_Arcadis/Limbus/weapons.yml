@@ -159,3 +159,34 @@
           tags:
           - Arayashiki
   - type: Appearance
+
+- type: entity
+  name: mimicry
+  parent: BaseSword
+  id: Mimicry
+  description: A weapon claimed by a Color from someone far outside of the sector.
+  components:
+  - type: Sprite
+    sprite: _Arcadis/Limbus/mimicry.rsi
+    state: icon
+  - type: MeleeWeapon
+    angle: 90
+    heavyStaminaCost: 0
+    wideAnimationRotation: -135
+    attackRate: 0.75
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    damage:
+      types:
+        Slash: 30
+        Structural: 150
+    maxTargets: 99
+    heavyRateModifier: 1
+  - type: EmbeddableProjectile
+  - type: EmbedPassiveDamage
+  - type: ThrowingAngle
+    angle: 225
+  - type: Item
+    size: Normal
+    sprite: _Arcadis/Limbus/mimicry.rsi
+  - type: DisarmMalus
