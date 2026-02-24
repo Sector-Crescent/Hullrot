@@ -150,6 +150,9 @@ namespace Content.Server.Preferences.Managers
 
                     // prevent client from changing flags on a slot. fuck you
                     profile = humanProfile.WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
+
+                    // AND NO EDITING YOUR OWN PERSISTENT ITEMS EITHER.
+                    profile = humanProfile.WithItemStorage(humanoidEditingTarget.ItemStorage);
                 }
             }
 

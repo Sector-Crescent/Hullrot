@@ -667,6 +667,38 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("loadout", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.PersistentItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("persistent_item_id");
+
+                    b.Property<string>("ItemData")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("item_data");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.Property<bool>("SpawnOnJoin")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("spawn_on_join");
+
+                    b.Property<bool>("Sticky")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("sticky");
+
+                    b.HasKey("Id")
+                        .HasName("PK_persistent_item");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("persistent_item", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
                 {
                     b.Property<int>("Id")
@@ -1625,6 +1657,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Profile");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.PersistentItem", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithMany("ItemStorage")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_persistent_item_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Player", b =>
                 {
                     b.OwnsOne("Content.Server.Database.TypedHwid", "LastSeenHWId", b1 =>
@@ -1948,6 +1992,8 @@ namespace Content.Server.Database.Migrations.Sqlite
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
                 {
                     b.Navigation("Antags");
+
+                    b.Navigation("ItemStorage");
 
                     b.Navigation("Jobs");
 

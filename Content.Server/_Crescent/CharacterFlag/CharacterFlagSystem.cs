@@ -17,8 +17,6 @@ namespace Content.Server._Crescent.CharacterFlags;
 public sealed partial class CharacterFlagSystem : EntitySystem
 {
     [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
-    [Dependency] private readonly IServerDbManager _dbManager = default!;
-
     private ISawmill _log = default!;
 
     public override void Initialize()
