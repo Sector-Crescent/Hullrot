@@ -419,7 +419,7 @@ namespace Content.Server.Database
         public string[] CharacterFlags { get; set; } = default!;
 
         // HULLROT edit: Persistent items!
-        public List<PersistentItem> ItemStorage { get; set; } = default!;
+        public List<PersistentItem> ItemStorage { get; set; } = new();
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
         public List<Trait> Traits { get; } = new();

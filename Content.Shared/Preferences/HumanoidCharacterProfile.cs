@@ -21,16 +21,9 @@ namespace Content.Shared.Preferences;
 [Serializable, NetSerializable]
 public sealed class PersistentItemProfile
 {
-    [DataField] public string ItemData;
+    [DataField] public required string ItemData;
     [DataField] public bool SpawnOnJoin = false;
     [DataField] public bool Sticky = false;
-
-    public PersistentItemProfile(string itemData, bool spawnOnJoin, bool sticky)
-    {
-        ItemData = itemData;
-        SpawnOnJoin = spawnOnJoin;
-        Sticky = sticky;
-    }
 }
 
 /// Character profile. Looks immutable, but uses non-immutable semantics internally for serialization/code sanity purposes
@@ -153,6 +146,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
     [DataField]
     public List<string> CharacterFlags { get; private set; } = new();
+
+    [DataField]
     public List<PersistentItemProfile> ItemStorage { get; private set; } = new();
 
     public HumanoidCharacterProfile(

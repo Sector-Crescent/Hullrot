@@ -249,7 +249,12 @@ namespace Content.Server.Database
                 profile.BankBalance,
                 profile.Faction,
                 profile.CharacterFlags.ToList(),
-                profile.ItemStorage.Select(i => new PersistentItemProfile(i.ItemData, i.SpawnOnJoin, i.Sticky)).ToList()
+                profile.ItemStorage.Select(i => new PersistentItemProfile()
+                {
+                    ItemData = i.ItemData,
+                    SpawnOnJoin = i.SpawnOnJoin,
+                    Sticky = i.Sticky
+                }).ToList()
             );
         }
 
