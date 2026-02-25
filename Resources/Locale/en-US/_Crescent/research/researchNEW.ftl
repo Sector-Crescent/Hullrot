@@ -110,6 +110,7 @@ research-technology-imperial-suzerain = Imperial Siege Battlecruiser
 research-technology-imperial-nemesis = Imperial Artillery Carrier
 research-technology-imperial-torturer = Imperial Stealth Bomber
 research-technology-imperial-magnate = Imperial Fire Support Vessel
+research-technology-imperial-craftcomps = Imperial Weapon Components
 
 # NCWL
 research-technology-communard-clothes = Communard Clothes
@@ -132,6 +133,7 @@ research-technology-communard-grenadelauncher = Communard Grenade Launcher
 research-technology-communard-bogatyr = Communard Battle Mech
 research-technology-communard-commienaut = Communard Juggernaut Suit
 research-technology-communard-vibrokukri = Communard Chengridz Vibrokukri
+research-technology-communard-craftcomps = Communard Weapon Components
 
 # SHI
 research-technology-shinohara-clothes = Corporate Uniforms
@@ -168,5 +170,8 @@ research-technology-shinohara-dermalarmor = KOURINDO-U Dermal Armor
 research-technology-shinohara-shiverblade = SHI-RIP9 Shiver Blade
 research-technology-shinohara-advance-armor = Svbt Experimental Armors
 research-technology-shinohara-light-destroyer = SHI Light Destroyers
+research-technology-shinohara-stealth-pod = SHI Stealth Pods
 research-technology-shinohara-oldntballistics = Old NT Gun Schematics
 research-technology-shinohara-ntartillery = NT Artillery Patent
+research-technology-shinohara-weaponcase = Shinohara Storage Standards
+research-technology-shinohara-grenades = Shinohara Grenade Patterns

@@ -14,9 +14,6 @@
       - Prying
     useSound:
       path: /Audio/Items/crowbar.ogg
-  - type: GuideHelp
-    guides:
-    - Abductors
 
 - type: entity
   name: high-tech wirecutter
@@ -69,9 +66,6 @@
       path: /Audio/Items/wirecutter.ogg
       params:
         variation: 0.125
-  - type: GuideHelp
-    guides:
-    - Abductors
 
 - type: entity
   name: high-tech screwdriver
@@ -118,9 +112,6 @@
       collection: Screwdriver
     endSound:
       path: /Audio/_Shitmed/Medical/Surgery/retractor2.ogg
-  - type: GuideHelp
-    guides:
-    - Abductors
 
 - type: entity
   name: high-tech wrench
@@ -144,9 +135,6 @@
       - Anchoring
     useSound:
       path: /Audio/Items/ratchet.ogg
-  - type: GuideHelp
-    guides:
-    - Abductors
 
 - type: entity
   name: high-tech welding tool
@@ -179,9 +167,6 @@
     useSound:
       collection: Welder
     qualities: Welding
-  - type: GuideHelp
-    guides:
-    - Abductors
 
 - type: entity
   name: high-tech multitool
@@ -210,9 +195,6 @@
     quickEquip: false
     slots:
     - Belt
-  - type: GuideHelp
-    guides:
-    - Abductors
   - type: UserInterface
     interfaces:
       enum.NetworkConfiguratorUiKey.List:

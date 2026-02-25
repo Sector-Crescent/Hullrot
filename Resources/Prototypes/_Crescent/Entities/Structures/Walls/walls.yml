@@ -19,7 +19,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 700
       behaviors:
       - !type:PlaySoundBehavior #Nyano
         sound:
@@ -233,7 +233,7 @@
       base: rplastitanium
     - type: Damageable
       damageContainer: StructuralInorganic
-      damageModifierSet: StructuralMetallicStrong
+      damageModifierSet: StructuralMetallicReinforcedPlast
     - type: Destructible
       thresholds:
         - trigger:

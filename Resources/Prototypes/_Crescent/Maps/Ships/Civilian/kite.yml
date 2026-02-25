@@ -6,7 +6,7 @@
   name: ICM Kite
   description: |
     A small all-rounder shuttle with expedition capabilities for beginner pilots, armed with dual plasmacasters.
-    LOADOUT: 2x SHI 400c  Plasma Bolt Repeater
+    LOADOUT: 2x 20mm 'Screamer' light autocannons
     MINIMUM CREW: 1x Pilot
   price: 35000
   category: Small
@@ -22,6 +22,10 @@
     Kite:
       stationProto: StandardCrescentExpeditionVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: civilian
         - type: StationNameSetup
           mapNameTemplate: 'ICM Kite {1}'
           nameGenerator:

@@ -58,6 +58,7 @@
       shader: unshaded
   - type: Item
     sprite: _NF/Objects/Tools/guncaselong.rsi
+    size: Large
   - type: GenericVisualizer
     visuals:
       enum.StorageVisuals.Open:
@@ -93,6 +94,7 @@
       shader: unshaded
   - type: Item
     sprite: _Crescent/Objects/Tools/pistolcase.rsi
+    size: Normal
   - type: GenericVisualizer
     visuals:
       enum.StorageVisuals.Open:
@@ -103,6 +105,48 @@
     maxItemSize: Normal
     grid:
     - 0,0,3,1
+    whitelist:
+      components:
+      - Gun
+      - BallisticAmmoProvider
+      - Projectile
+      - CartridgeAmmo
+      - PowerCell
+      - MeleeWeapon
+      - Blocking
+      - WeaponCaseInsertable
+      tags:
+      - Cartridge
+
+- type: entity
+  name: ammo case
+  id: WeaponCaseAmmo
+  parent: ToolboxBase
+  description: A reinforced casing for storing ammunitions.
+  suffix: Ammo
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/ammocase.rsi
+    layers:
+    - map: [ base ]
+      state: icon
+    - state: unshaded
+      shader: unshaded
+  - type: Item
+    sprite: _Crescent/Objects/Tools/ammocase.rsi
+    size: Normal
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon-open }
+          False: { state: icon }
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,2
     whitelist:
       components:
       - Gun
@@ -134,6 +178,7 @@
       shader: unshaded
   - type: Item
     sprite: _Crescent/Objects/Tools/smgcase.rsi
+    size: Large
   - type: GenericVisualizer
     visuals:
       enum.StorageVisuals.Open:
@@ -141,7 +186,7 @@
           True: { state: icon-open }
           False: { state: icon }
   - type: Storage
-    maxItemSize: Huge
+    maxItemSize: Large
     grid:
     - 0,0,3,2
     whitelist:

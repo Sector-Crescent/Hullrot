@@ -94,6 +94,15 @@
   parent: BaseWeaponLightMachineGun
   description: A light machinegun developed by a Shinohara subsidiary. Chambered in 5.56x45mm Imperial.
   components:
+  - type: Gun
+    minAngle: 20
+    maxAngle: 45
+    angleIncrease: 3
+    angleDecay: 26
+    fireRate: 12
+  - type: HeldSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/l6saw.rsi
     layers:

@@ -36,8 +36,6 @@ public abstract class SharedAnomalySystem : EntitySystem
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] protected readonly SharedPopupSystem Popup = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -391,7 +389,7 @@ public abstract class SharedAnomalySystem : EntitySystem
             if (tilerefs.Count == 0)
                 break;
 
-            var tileref = _random.Pick(tilerefs);
+            var tileref = Random.Pick(tilerefs);
             var distance = MathF.Sqrt(MathF.Pow(tileref.X - xform.LocalPosition.X, 2) + MathF.Pow(tileref.Y - xform.LocalPosition.Y, 2));
 
             //cut outer & inner circle

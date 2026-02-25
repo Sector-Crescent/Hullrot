@@ -1,4 +1,5 @@
 using Content.Server.Atmos.EntitySystems;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.FixedPoint;
 using Content.Shared.Tools.Components;
@@ -45,10 +46,10 @@ public sealed class ToolSystem : SharedToolSystem
             if (welder.WelderTimer < welder.WelderUpdateTimer)
                 continue;
 
-            if (!SolutionContainerSystem.TryGetSolution((uid, solutionContainer), welder.FuelSolutionName, out var solutionComp, out var solution))
+            if (!SolutionContainer.TryGetSolution((uid, solutionContainer), welder.FuelSolutionName, out var solutionComp, out var solution))
                 continue;
 
-            SolutionContainerSystem.RemoveReagent(solutionComp.Value, welder.FuelReagent, welder.FuelConsumption * welder.WelderTimer);
+            SolutionContainer.RemoveReagent(solutionComp.Value, welder.FuelReagent, welder.FuelConsumption * welder.WelderTimer);
 
             if (solution.GetTotalPrototypeQuantity(welder.FuelReagent) <= FixedPoint2.Zero)
             {

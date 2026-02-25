@@ -28,8 +28,8 @@
     - type: InputMover
       toParent: true
     - type: MovementSpeedModifier
-      weightlessAcceleration: 0.2
-      weightlessFriction: 0.3
+      weightlessAcceleration: 0.15
+      weightlessFriction: 0.1
       weightlessModifier: 7
     - type: CanMoveInAir
     - type: Sprite
@@ -54,7 +54,7 @@
         volume: 5
         temperature: 293.15
     - type: Jetpack
-      moleUsage: 0.00085
+      moleUsage: 0.0016
     - type: Appearance
     - type: HullJetpack
     - type: StaticPrice

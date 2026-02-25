@@ -1,31 +1,39 @@
 - type: entity
   id: Factory120Fab
   parent: BaseMachinePowered
-  name: shell fabricator
+  name: Shell Fabricator (Missiles & Shells)
   description: Shapes metal for use by ship munitions.
   components:
   - type: Sprite
     sprite: _Crescent/Structures/factorystructures.rsi
     snapCardinals: true
     layers:
-    - state: pooper
+    - state: pooper #pooper.
   - type: Factory
     sound:
       collection: Welder
       params:
         variation: 0.125
     recipes:
-      - 120mmCasingDU
-      - 120mmCasingHE
-      - GargoyleCasing
-      - LancerCasing
-      - IdnaTorpedoManufacturing
-      - 230mmCasing
+      #- 120mmCasingDU
+      #- 120mmCasingHE
+      #- GargoyleCasing
+      #- LancerCasing
+      #- IdnaTorpedoManufacturing
+      #- 230mmCasing
+      # new shipgun ammo
+      - 120mmRegularFabrication
+      - 120mmGyrostableFabrication
+      - 120mmPlasmaFabrication
+      - 300mmRegularFabrication
+      - 240mmRegularFabrication
+      - 240mmNCWLFabrication
+      - 330mmRegularFabrication
 
 - type: entity
   id: Factory120Weld
   parent: BaseMachinePowered
-  name: cartridge welding arm
+  name: Cartridge Welding Arm (120mm)
   description: Welds shell casings for priming.
   components:
   - type: Sprite
@@ -39,13 +47,13 @@
       params:
         variation: 0.125
     recipes:
-      - 120mmWeldDU
+      - 120mmWeldDU #can't seem to delete all the recipies, because it'll just vanish and can't be spawned
       - 120mmWeldHE
 
 - type: entity
   id: Factory120Assembler
   parent: BaseMachinePowered
-  name: assembling arm
+  name: Assembling Arm (120mm)
   description: Packs explosive armaments into munitions.
   components:
   - type: Sprite
@@ -65,7 +73,7 @@
 - type: entity
   id: Factory320Assembler
   parent: BaseMachinePowered
-  name: assembling arm
+  name: Assembling Arm (320mm)
   description: Packs explosive armaments into munitions.
   components:
   - type: Sprite
@@ -84,14 +92,14 @@
 - type: entity
   id: Factory320Fab
   parent: BaseMachinePowered
-  name: shell fabricator
+  name: Shell Fabricator (320mm)
   description: Shapes metal for use by ship munitions.
   components:
   - type: Sprite
     sprite: _Crescent/Structures/factorystructures.rsi
     snapCardinals: true
     layers:
-    - state: pooper
+    - state: pooper #hehehehehehehe pooper
   - type: Factory
     sound:
       collection: Welder
@@ -225,9 +233,23 @@
       - FabricateMagazineRifleDrum
       - FabricateMagazineRifle
       - FabricateMagazineLightRifle
-      - FabricateMagazineFlak
-      - FabricateMagazineNeedler
-      - FabricateMagazineMortar
+      #- FabricateMagazineFlak
+      #- FabricateMagazineNeedler
+      #- FabricateMagazineMortar
+      # New Shipgun Ammo Recipies
+      - FabricateMagazine20mmScreamerRegular
+      - FabricateMagazine20mmScreamerGyrostable
+      - FabricateMagazine20mmScreamerPlasma
+      - FabricateMagazine35mmScoutRegular
+      - FabricateMagazine35mmScoutGyrostable
+      - FabricateMagazine35mmScoutPlasma
+      - FabricateMagazine50mmWhistlerRegular
+      - FabricateMagazine50mmWhistlerGyrostable
+      - FabricateMagazine50mmWhistlerPlasma
+      - FabricateMagazine88mmFlakRegular
+      - FabricateMagazine90mmRegular
+      - FabricateMagazine90mmGyrostable
+      - FabricateMagazine90mmPlasma
   - type: Sprite
     sprite: _Crescent/Structures/factorystructures.rsi
     layers:

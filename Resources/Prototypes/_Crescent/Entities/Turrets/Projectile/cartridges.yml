@@ -70,7 +70,7 @@
 - type: entity
   id: Cartridge120mm
   name: cartridge (120mm USM)
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -91,7 +91,7 @@
 - type: entity
   id: Cartridge120mmPlasma
   name: cartridge (120mm plasma-core USM)
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -112,7 +112,7 @@
 - type: entity
   id: Cartridge120mmGyrostable
   name: cartridge (120mm gyrostable USM)
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -171,7 +171,7 @@
   id: Cartridge300mm
   name: cartridge (300mm FMJ USM)
   description: A full metal jacket artillery shell with a standard explosive payload. Heavy.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:

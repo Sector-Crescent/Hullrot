@@ -4,7 +4,10 @@
 - type: vessel
   id: Scabrak
   name: SAW Scabrak
-  description: Medium-sized mining barge
+  description: |
+    Medium-sized mining barge
+    LOADOUT: 4x 250c Exhumer mining guns, 4x 20mm 'Screamer' light carbine repeater cannons
+    MINIMUM CREW: 1x Pilot
   price: 72000
   category: Medium
   group: None
@@ -22,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: industrial
+            state: miner
         - type: StationNameSetup
           mapNameTemplate: 'SAW Scabrak {1}'
           nameGenerator:

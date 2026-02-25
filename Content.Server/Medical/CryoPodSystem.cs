@@ -46,7 +46,6 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
     [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
     [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
-    [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedToolSystem _toolSystem = default!;
@@ -196,7 +195,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         }
 
         // TODO: This should be a state my dude
-        _userInterfaceSystem.ServerSendUiMessage(
+        _uiSystem.ServerSendUiMessage(
             entity.Owner,
             HealthAnalyzerUiKey.Key,
             new HealthAnalyzerScannedUserMessage(GetNetEntity(entity.Comp.BodyContainer.ContainedEntity),

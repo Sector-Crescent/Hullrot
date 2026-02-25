@@ -66,14 +66,19 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
+  - type: PointLight
+    enabled: true
+    color: "#ffe3c4"
+    radius: 0.25
+    energy: 0.05
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: buckshot
   - type: Projectile
     damage:
       types:
-        Piercing: 45
-        Structural: 100
+        blunt: 20 #its just crushes targets
+        Structural: 30
     harmorPenetration: 40
     stoppingPower: 7
 
@@ -84,7 +89,7 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgun
-    count: 3
+    count: 10
     spread: 15
 
 - type: entity
@@ -100,18 +105,18 @@
   - type: Projectile
     damage:
       types:
-        Heat: 40
+        Heat: 20
         Radiation: 5
         Structural: 60
     harmorPenetration: 60
     stoppingPower: 6
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 300
-    intensitySlope: 100
-    totalIntensity: 300
-    maxTileBreak: 2
+    explosionType: Electric
+    maxIntensity: 100
+    intensitySlope: 3
+    totalIntensity: 50
+    canCreateVacuum: false
   - type: PointLight
     radius: 3.5
     color: Orange
@@ -142,9 +147,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1500
-    intensitySlope: 300
-    totalIntensity: 1500
+    maxIntensity: 125
+    intensitySlope: 50
+    totalIntensity: 900 #2 shots jugs and light mechs
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -154,3 +159,23 @@
     sprite: _NF/Objects/SpaceArtillery/plasmaheavy.rsi
     layers:
       - state: icon
+
+- type: entity
+  id: ExosuitCannonAPFSDS
+  name: 43mm APFSDS
+  categories: [ HideSpawnMenu ]
+  parent: [ BaseBulletTrigger, BulletRailgun15mm ]
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Piercing: 300 # crits anybody in T1 armor and leaves anybody wearing T2 armor 1 sneze away from crit
+          Structural: 1000
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: DemolitionCharge
+      totalIntensity: 10
+      intensitySlope: 5
+      maxIntensity: 10
+      canCreateVacuum: false
+

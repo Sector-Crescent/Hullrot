@@ -3,9 +3,9 @@
 
 - type: vessel
   id: Spriggan
-  name: NCSP Spriggan
+  name: CD Spriggan
   description: |
-    The result of a SAW engineer's experiment with hotrodding, the Spriggan is a mobile smuggler/salvage ship, cheap and easily modified to be anything you want. 
+    The result of a SAW engineer's experiment with hotrodding, the Spriggan is a mobile smuggler/salvage ship, cheap and easily modified to be anything you want.
     LOADOUT: 2x Exhumer mining guns
     MINIMUM CREW: 1x Pilot
   price: 38000
@@ -15,7 +15,7 @@
 
 - type: gameMap
   id: Spriggan
-  mapName: 'NCSP Spriggan'
+  mapName: 'CD Spriggan'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/spriggan.yml
   minPlayers: 0
   stations:
@@ -27,7 +27,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'NCSP Spriggan {1}'
+          mapNameTemplate: 'CD Spriggan {1}'
           nameGenerator:
            !type:NanotrasenNameGenerator
             prefixCreator: '14'

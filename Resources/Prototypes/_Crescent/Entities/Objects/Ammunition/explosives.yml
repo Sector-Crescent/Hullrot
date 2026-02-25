@@ -74,9 +74,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Fragmentation
-    maxIntensity: 100
-    intensitySlope: 5.5
-    totalIntensity: 100
+    maxIntensity: 4
+    intensitySlope: 10
+    totalIntensity: 25
     canCreateVacuum: false
   - type: PointLight
     radius: 3.5
@@ -252,7 +252,7 @@
       - state: frag
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Fragmentation
+    explosionType: Thermobaric
     maxIntensity: 100
     intensitySlope: 4
     totalIntensity: 100
@@ -430,7 +430,7 @@
       - state: frag
   - type: EmpOnTrigger
     range: 3
-    energyConsumption: 2700000
+    energyConsumption: 4000
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Electric
@@ -1268,7 +1268,8 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectileIFF
+  - type: ProjectilePhasePrevent
+  - type: ShipWeaponProjectile
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -1288,3 +1289,31 @@
     rotationSpeed: 40
     acceleration: 25
     topSpeed: 125
+  - type: ProjectileIFF
+    visualType: SquareReticle
+    color: Red
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
+        layer:
+        - BulletImpassable
+        mask:
+        - Impassable
+        - BulletImpassable
+        hard: true
+        density: 100
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior

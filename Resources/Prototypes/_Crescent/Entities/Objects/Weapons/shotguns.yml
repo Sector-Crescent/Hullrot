@@ -33,7 +33,7 @@
   name: NCWL Toz-97 Proletar 12g
   parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponShotgunProletar
-  description: A 12-gauge pump-action shotgun with the magazine tube mounted above the barrel and a reversed pumping action.
+  description: A 12-gauge pump-action shotgun with the magazine tube mounted above the barrel and a reversed pumping action. Comes with an extended tube.
   components:
   - type: Item
     size: Normal
@@ -45,8 +45,10 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/proletar.rsi
   - type: GunRequiresWield
+  - type: Gun
+    damageModifier: 1.25 #its a pumper so its reasonable
   - type: BallisticAmmoProvider
-    capacity: 6
+    capacity: 8
     autoCycle: false
   - type: Tag
     tags:
@@ -212,6 +214,7 @@
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
   - type: ChamberMagazineAmmoProvider
+    autoCycle: false #its a lever gun its not semi auto....
     autoEject: true
     soundAutoEject:
       path: /Audio/Weapons/Guns/EmptyAlarm/M1_empty_alarm.ogg
@@ -291,6 +294,7 @@
   - type: BallisticAmmoProvider
   - type: StaticPrice
     price: 1500
+  - type: GunRequiresWield #which chuddy didnt include wielding on this..
 
 - type: entity
   name: NT SPAS-13 12g
@@ -349,7 +353,9 @@
   description: A short, rugged double-barrel shotgun built in-house by NCWL Homeguard workshops. Partisans prize its compact size and reliability for clearing tight ship corridors; Kommissars often carry one as a backup.
   components:
   - type: Item
-    size: Normal
+    size: Small
+    shape:
+    - 0,0,2,0
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_shotgun.rsi
   - type: Clothing
@@ -358,8 +364,8 @@
     - Back
     - suitStorage
   - type: Gun
-    fireRate: 2
-    damageModifier: 1.8
+    fireRate: 4
+    damageModifier: 0.85
     burstFireRate: 15
     shotgunSpreadMultiplier: 3
     shotsPerBurst: 2

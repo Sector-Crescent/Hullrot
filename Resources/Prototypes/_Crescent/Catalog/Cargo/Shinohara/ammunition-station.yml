@@ -1,279 +1,245 @@
-- type: cargoProduct
-  id: ShuttleSumitomoAmmoShinoharaStation
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
-    state: baton
-  product: CrateSumitomoAmmo
-  cost: 5000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
+#20mm Screamer
 
 - type: cargoProduct
-  id: ShuttleSumitomoAmmoEMPShinoharaStation
+  id: Shuttle20mmAmmoShinohara
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
-    state: emp
-  product: CrateSumitomoAmmoEMP
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleSumitomoAmmoHYShinoharaStation
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
-    state: blast
-  product: CrateSumitomoAmmoHighYield
-  cost: 10000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleCrateVulcanAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/vulcan.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
     state: base
-  product: CrateVulcanAmmo
+  product: Crate20mmAmmo
+  cost: 1000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle20mmAmmoPlasmaShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
+    state: base-plasma
+  product: Crate20mmAmmoPlasma
+  cost: 2000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle20mmAmmoGyrostableShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
+    state: base-gyrostable
+  product: Crate20mmAmmoGyrostable
   cost: 3000
   category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
+  group: genericAmmo
+
+#35mm Scout
 
 - type: cargoProduct
-  id: ShuttleCrateSlugAmmoShinoharaStation
+  id: Shuttle35mmAmmoShinohara
   icon:
-    sprite: _Crescent/Ammunition/conscript_ammo_box.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
     state: base
-  product: CrateSlugthrowerAmmo
+  product: Crate35mmAmmo
+  cost: 1250
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle35mmAmmoPlasmaShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    state: base-plasma
+  product: Crate35mmAmmoPlasma
+  cost: 2500
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle35mmAmmoGyrostableShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    state: base-gyrostable
+  product: Crate35mmAmmoGyrostable
+  cost: 3500
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#48mm Longbow
+
+- type: cargoProduct
+  id: Shuttle48mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/shortbow.rsi
+    state: shortbow
+  product: Crate48mmAmmo
+  cost: 4000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#50mm Whistler
+
+- type: cargoProduct
+  id: Shuttle50mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    state: base
+  product: Crate50mmAmmo
+  cost: 1500
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle50mmAmmoPlasmaShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    state: base-plasma
+  product: Crate50mmAmmoPlasma
   cost: 3000
   category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
+  group: genericAmmo
 
 - type: cargoProduct
-  id: ShuttleCrateSlugAmmoExplosiveShinoharaStation
+  id: Shuttle50mmAmmoGyrostableShinohara
   icon:
-    sprite: _Crescent/Ammunition/conscript_ammo_box.rsi
-    state: base
-  product: CrateSlugthrowerAmmoExplosive
-  cost: 9000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleCoolantShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/Misc/coolant.rsi
-    state: icon
-  product: CrateCoolant
-  cost: 5000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleGargoyleAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/torp.rsi
-    state: base
-  product: CrateGargoyleAmmo
-  cost: 10000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleLancerAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/lance.rsi
-    state: base
-  product: CrateLancerAmmo
-  cost: 5000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleAssaultMortarAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/battleshell.rsi
-    state: base
-  product: CrateAssaultMortarAmmo
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleIdnaAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/torpedop.rsi
-    state: base
-  product: CrateIdnaAmmo
-  cost: 5000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: Shuttle120mmAmmoShinoharaStation
-  icon:
-    sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
-    state: base
-  product: CrateArtilleryAmmo
-  cost: 5000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: Shuttle120mmAmmoExplosiveShinoharaStation
-  icon:
-    sprite: _NF/Objects/SpaceArtillery/630_highexplosive_shell_casing.rsi
-    state: base
-  product: CrateArtilleryAmmoExplosive
-  cost: 12500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleAutomortarAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/mortar.rsi
-    state: base
-  product: CrateMortarAmmo
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleNeedlerAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/mortar.rsi
-    state: base
-  product: CrateAutogunAmmo
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleSwarmerAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/coil.rsi
-    state: base
-  product: CrateSwarmerAmmo
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleCompaktAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/lenses.rsi
-    state: infraredlens
-  product: CrateCompaktAmmoInfrared
-  cost: 12500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleCompaktAmmoPlasmaShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/lenses.rsi
-    state: plasmalens
-  product: CrateCompaktAmmoPlasma
-  cost: 25000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleSolarisAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/amcanister.rsi
-    state: base
-  product: CrateSolarisAmmo
-  cost: 12500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleSolarisAmmoGuidedShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/amcanisterguided.rsi
-    state: base
-  product: CrateSolarisAmmoGuided
-  cost: 25000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleSolarisAmmoPlasmaShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/ShuttleWeapons/amcanisterplas.rsi
-    state: base
-  product: CrateSolarisAmmoPlasma
-  cost: 25000
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttlePrinceAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/flak.rsi
-    state: base
-  product: CratePrinceAmmo
-  cost: 12500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: ShuttleJeongAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Ammunition/flak.rsi
-    state: base
-  product: CrateJeongAmmo
-  cost: 7500
-  category: cargoproduct-category-name-shuttleammo
-  group: shinoharastation
-
-- type: cargoProduct
-  id: CrateHammerheadAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/hammerhead_rocket.rsi
-    state: hammer
-  product: Crate65mmHammerheadRocket
-  cost: 9000
-  category: cargoproduct-category-name-shuttle
-  group: shinoharastation
-
-- type: cargoProduct
-  id: Crate40mmGrenadeAPAmmoShinoharaStation
-  icon:
-    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/40mm_grenade.rsi
-    state: frag
-  product: Crate40mmGrenadeAP
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/whistler.rsi
+    state: base-gyrostable
+  product: Crate50mmAmmoGyrostable
   cost: 4500
-  category: cargoproduct-category-name-shuttle
-  group: shinoharastation
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#60mm Azimuth
 
 - type: cargoProduct
-  id: Crate40mmGrenadeATAmmoShinoharaStation
+  id: Shuttle60mmAmmoShinohara
   icon:
-    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/40mm_grenade.rsi
-    state: hedp
-  product: Crate40mmGrenadeAT
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/azimuth.rsi
+    state: azimuthrocket
+  product: Crate60mmAmmo
   cost: 6000
-  category: cargoproduct-category-name-shuttle
-  group: shinoharastation
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#88m Corpus
 
 - type: cargoProduct
-  id: Crate40mmGrenadeSupAmmoShinoharaStation
+  id: Shuttle88mmAmmoShinohara
   icon:
-    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/40mm_grenade.rsi
-    state: smoke
-  product: Crate40mmGrenadeSup
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/corpus.rsi
+    state: base
+  product: Crate88mmAmmo
+  cost: 4000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#90mm Gistum
+
+- type: cargoProduct
+  id: Shuttle90mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
+    state: base
+  product: Crate90mmAmmo
   cost: 3000
-  category: cargoproduct-category-name-shuttle
-  group: shinoharastation
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
 
 - type: cargoProduct
-  id: Crate40mmGrenadeASAmmoShinoharaStation
+  id: Shuttle90mmAmmoPlasmaShinohara
   icon:
-    sprite: _Crescent/Objects/Weapons/Ammunition/Casings/40mm_grenade.rsi
-    state: thermo
-  product: Crate40mmGrenadeAS
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
+    state: base-plasma
+  product: Crate90mmAmmoPlasma
   cost: 6000
-  category: cargoproduct-category-name-shuttle
-  group: shinoharastation
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle90mmAmmoGyrostableShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
+    state: base-gyrostable
+  product: Crate90mmAmmoGyrostable
+  cost: 9000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#95mm Arbalest
+
+- type: cargoProduct
+  id: Shuttle95mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/arbalest.rsi
+    state: arbalest
+  product: Crate95mmAmmo
+  cost: 8000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#120mm Pithatis
+
+- type: cargoProduct
+  id: Shuttle120mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    state: apds
+  product: Crate120mmAmmo
+  cost: 3500
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle120mmAmmoPlasmaShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    state: heat
+  product: Crate120mmAmmoPlasma
+  cost: 7000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+- type: cargoProduct
+  id: Shuttle120mmAmmoGyrostableShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    state: gyro
+  product: Crate120mmAmmoGyrostable
+  cost: 12000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#240mm Gargoyle
+
+- type: cargoProduct
+  id: Shuttle240mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/gargoyle.rsi
+    state: gargoyle
+  product: Crate240mmAmmo
+  cost: 10000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#300m Pithis
+
+- type: cargoProduct
+  id: Shuttle300mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithis.rsi
+    state: ap
+  product: Crate300mmAmmo
+  cost: 8000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#330mm Catapult
+
+- type: cargoProduct
+  id: Shuttle330mmAmmoShinohara
+  icon:
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/catapult.rsi
+    state: catapult
+  product: Crate330mmAmmo
+  cost: 16000
+  category: cargoproduct-category-name-shuttleammo
+  group: genericAmmo
+
+#Coolant or whatever goes below here

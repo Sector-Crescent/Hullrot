@@ -59,7 +59,6 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly AdminSystem _adminSystem = default!;
         [Dependency] private readonly DisposalTubeSystem _disposalTubes = default!;
-        [Dependency] private readonly EuiManager _euiManager = default!;
         [Dependency] private readonly GameTicker _ticker = default!;
         [Dependency] private readonly GhostRoleSystem _ghostRoleSystem = default!;
         [Dependency] private readonly ArtifactSystem _artifactSystem = default!;
@@ -359,7 +358,7 @@ namespace Content.Server.Administration.Systems
                             {
                                 return;
                             }
-                            _euiManager.OpenEui(ui, session);
+                            _eui.OpenEui(ui, session);
                             ui.UpdateLaws(lawBoundComponent, args.Target);
                         },
                         Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Actions/actions_borg.rsi"), "state-laws"),
@@ -367,7 +366,7 @@ namespace Content.Server.Administration.Systems
                 }
 
                 // Begin DeltaV Additions - thaven moods
-                if (TryComp<ThavenMoodsComponent>(args.Target, out var moods)) 
+                if (TryComp<ThavenMoodsComponent>(args.Target, out var moods))
                 {
                     args.Verbs.Add(new Verb()
                     {
@@ -379,10 +378,10 @@ namespace Content.Server.Administration.Systems
                             if (!_playerManager.TryGetSessionByEntity(args.User, out var session))
                                 return;
 
-                            _euiManager.OpenEui(ui, session);
+                            _eui.OpenEui(ui, session);
                             ui.UpdateMoods(moods, args.Target);
                         },
-                        Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Actions/actions_borg.rsi"), "state-laws"), 
+                        Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Actions/actions_borg.rsi"), "state-laws"),
                     });
                 }
             }
@@ -492,7 +491,7 @@ namespace Content.Server.Administration.Systems
                     Text = Loc.GetString("set-outfit-verb-get-data-text"),
                     Category = VerbCategory.Debug,
                     Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/outfit.svg.192dpi.png")),
-                    Act = () => _euiManager.OpenEui(new SetOutfitEui(GetNetEntity(args.Target)), player),
+                    Act = () => _eui.OpenEui(new SetOutfitEui(GetNetEntity(args.Target)), player),
                     Impact = LogImpact.Medium
                 };
                 args.Verbs.Add(verb);
@@ -595,7 +594,7 @@ namespace Content.Server.Administration.Systems
                 return;
 
             var eui = new EditSolutionsEui(uid);
-            _euiManager.OpenEui(eui, session);
+            _eui.OpenEui(eui, session);
             eui.StateDirty();
 
             if (!_openSolutionUis.ContainsKey(session)) {

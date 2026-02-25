@@ -6,6 +6,7 @@ using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.Nodes;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Piping;
 using Content.Shared.Atmos.Piping.Binary.Components;
 using Content.Shared.Audio;

@@ -3,7 +3,7 @@
 
 - type: vessel
   id: Exhumermk2
-  name: TS Exhumer MKII
+  name: Exhumer MKII
   description: |
     Made out of wrecked Exhumers, the Exhumer MKII is a combined Industrial/Combat ship, capable of doing both, but not excelling in either field. Comes with an Ore Magnet.
     LOADOUT: 1x SHI 120mm Cannon, 2x Operator 20mm PD turrets, 2x Fixed Universal Hardpoints.
@@ -25,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: industrial
+            state: corvette
         - type: StationNameSetup
           mapNameTemplate: 'Exhumer MKII {1}'
           nameGenerator:

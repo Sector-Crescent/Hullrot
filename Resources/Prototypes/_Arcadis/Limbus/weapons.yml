@@ -80,3 +80,82 @@
     proto: PelletShotgunIncendiarySpread
   - type: SpentAmmoVisuals
     state: "incendiary"
+
+- type: entity
+  name: arayashiki
+  parent: BaseSword
+  id: Arayashiki
+  description: A relic from a time long past. Every slice slowly severs away the hit, [color=#FF0000]but severs away one of your memories as well.[/color]
+  components:
+  - type: Tag
+    tags:
+    - Katana
+    - Arayashiki
+  - type: Sprite
+    sprite: _Arcadis/Limbus/arayashiki.rsi
+    state: icon
+  - type: MeleeWeapon
+    angle: 90
+    heavyStaminaCost: 0
+    wideAnimationRotation: -135
+    attackRate: 0.25
+    soundHit:
+      path: /Audio/SimpleStation14/Weapons/Melee/rapierhit.ogg
+    damage:
+      types:
+        Slash: 0 # Doesn't do damage, but...
+    maxTargets: 99
+    heavyRateModifier: 1
+    hidden: true
+  - type: EmbeddableProjectile
+  - type: EmbedPassiveDamage
+  - type: ThrowingAngle
+    angle: 225
+  - type: Item
+    size: Normal
+    sprite: _Arcadis/Limbus/arayashiki.rsi
+  - type: DisarmMalus
+  - type: Arayashiki
+
+- type: entity
+  name: die
+  parent: Arayashiki
+  id: ArayashikiCanon
+  description: die
+  components:
+  - type: Arayashiki
+    eraseUser: false
+    erasurePerHit: 1
+    textErasedPercentage: 1
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltSheathArayashiki
+  name: arayasheathki
+  description: :|
+  components:
+  - type: Sprite
+    sprite: _Arcadis/Limbus/arayasheathki.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _Arcadis/Limbus/arayasheathki.rsi
+  - type: Item
+    size: Large
+  - type: ItemSlots
+    slots:
+      item:
+        name: Blade
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/SimpleStation14/Items/Handling/sword_sheath.ogg
+        ejectSound: /Audio/SimpleStation14/Items/Handling/sword_unsheath.ogg
+        whitelist:
+          tags:
+          - Arayashiki
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Arayashiki
+  - type: Appearance

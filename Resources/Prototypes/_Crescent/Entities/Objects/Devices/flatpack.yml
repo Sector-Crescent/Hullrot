@@ -954,6 +954,8 @@
 
 # new guns!
 
+
+#ballistics
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretSmallArtilleryFlatpack
@@ -1040,6 +1042,35 @@
 
 - type: entity
   parent: BaseFlatpack
+  id: WeaponTurretCorpusFlatpack
+  name: 88mm 'Corpus' flak-screen point defense system
+  description: Parts used to build a 88mm 'Corpus' flak-screen point defense system. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: FlakCannonTurretCorpus
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+#missiles
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretPilaFlatpack
+  name: 30mm 'Pila' minirocket swarmer platform Flatpack
+  description: Parts used to build a 30mm 'Pila' minirocket swarmer platform. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretPila
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
   id: BaseWeaponTurretShortbowFlatpack
   name: 48mm 'Shortbow' SRM rocket system Flatpack
   description: Parts used to build a 48mm 'Shortbow' SRM rocket system. Activate with a multitool to deploy.
@@ -1074,6 +1105,122 @@
   components:
   - type: Flatpack
     entity: BaseWeaponTurretArbalest
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretNewGargoyleFlatpack
+  name: 240mm 'Gargoyle' heavy torpedo launcher system
+  description: Parts used to build a 240mm 'Gargoyle' heavy torpedo launcher system. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretGargoyleTorpedo
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretCatapultFlatpack
+  name: 330mm 'Catapult' ultra-heavy cruise missile platform
+  description: Parts used to build a 330mm 'Catapult' ultra-heavy cruise missile platform. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: BaseWeaponTurretCatapult
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+
+#energy
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretRetributionFlatpack
+  name: 200cc 'Absolution' hardlight cannon Flatpack
+  description: Parts used to build a 200cc 'Absolution' hardlight cannon Flatpack. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretRetribution
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretAbsolutionFlatpack
+  name: 350cc 'Absolution' hardlight cannon Flatpack
+  description: Parts used to build a 350cc 'Absolution' hardlight cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretAbsolution
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretDamnationFlatpack
+  name: 600cc 'Damnation' hardlight carronade Flatpack
+  description: Parts used to build a 600cc 'Damnation' hardlight carronade. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretDamnation
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+
+#hybrids
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretStarburstFlatpack
+  name: 150cc 'Starburst' hybrid plasma gatling Flatpack
+  description: Parts used to build a 150cc 'Starburst' hybrid plasma gatling. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretStarburst
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretBolterFlatpack
+  name: 300cc 'Bolter' hybrid plasma caster
+  description: Parts used to build a 300cc 'Bolter' hybrid plasma caster. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretBolter
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: BaseWeaponTurretMaulerFlatpack
+  name: 500cc 'Mauler' hybrid plasma gatling
+  description: Parts used to build a 500cc 'Mauler' hybrid plasma gatling. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretMauler
   - type: Sprite
     layers:
     - state: ame-part

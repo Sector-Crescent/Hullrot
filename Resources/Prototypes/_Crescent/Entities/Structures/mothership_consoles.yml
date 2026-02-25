@@ -9,10 +9,10 @@
     - Vanguard
     - Lodka
     - Ivarod
-    - Sunder
     - Stern
     - Gargut
     - Hind
+    - Vasinya
 
 - type: entity
   id: NCWLLightCarrierComputer
@@ -45,6 +45,7 @@
     - Cerberus
     - Corvax
     - Ouroboros
+    - Cleaver
 
 - type: entity
   id: CountsmanMothershipComputer
@@ -56,11 +57,11 @@
     - Redemptor
     - Ibis
     - Impel
+    - Covetor
     - Gnosis
     - Praxis
-    - Imparator
-    - Praetorian
     - Laelaps
+    #- Dragoon
 
 - type: entity
   id: NemesisMothershipComputer
@@ -69,7 +70,6 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Janissary
     - Redemptor
     - Imparator
     - Perigale
@@ -121,14 +121,11 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Probe
     - buffalo
     - gazpachov
     - Musinyane
-    - Flea
-    - Bison
+    - Chanchu
     - Nazaar
-    - colossus
 
 - type: entity
   id: RamziMothershipComputer
@@ -150,8 +147,9 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Khopesh
-    - Broadsword
+    - HornetDrone
+    #- Khopesh
+    #- Broadsword
 
 - type: entity
   id: UnionfallClementineMothershipComputer
@@ -242,6 +240,7 @@
   - type: ShipyardListing
     shuttles:
     - Lucifer
+    - Fadeem
 
 - type: entity
   id: OuroborosMothershipComputer
@@ -284,3 +283,12 @@
     shuttles:
     - Roachling
     - Dungbeetle
+
+- type: entity
+  id: FadeemMothershipComputer
+  parent: BaseMothershipComputer
+  name: fadeem internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Caravan

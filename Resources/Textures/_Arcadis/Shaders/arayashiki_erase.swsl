@@ -1,0 +1,24 @@
+uniform highp vec4 fade_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform highp float fade_level = 0.0;
+
+void fragment() {
+    highp vec4 tex = texture2D(TEXTURE, UV);
+    highp vec3 base_rgb = tex.rgb * fade_color.rgb;
+    highp float base_a = tex.a * fade_color.a;
+
+    highp float tc = clamp(fade_level, 0.0, 100.0);
+
+    // Stage 1: 0.0 to 0.25 - blend to white
+    highp float stage1_blend = smoothstep(0.0, 0.25, tc);
+    highp vec3 rgb = mix(base_rgb, vec3(1.0), stage1_blend);
+    highp float alpha = base_a;
+
+    // Stage 2: 0.25 to 1 - hold full white
+    // (no change needed)
+
+    // Stage 3: 1 to 2.0 - fade to transparent
+    highp float stage3_fade = smoothstep(1.0, 2.0, tc);
+    alpha = mix(base_a, 0.0, stage3_fade);
+
+    COLOR = vec4(rgb, alpha);
+}

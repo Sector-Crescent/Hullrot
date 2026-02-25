@@ -748,11 +748,14 @@
   - type: Icon
     sprite: Structures/Walls/shuttle.rsi
     state: full
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
   - type: Destructible
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 800
+          damage: 600
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]

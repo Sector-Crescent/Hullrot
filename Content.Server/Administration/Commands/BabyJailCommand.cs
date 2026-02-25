@@ -18,18 +18,18 @@ public sealed class BabyJailCommand : LocalizedCommands
 
     public override void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        var toggle = Toggle(CCVars.BabyJailEnabled, shell, args, _cfg);
+        var toggle = Toggle(CCVars.BabyJailEnabled, shell, args, _cfg, Loc);
         if (toggle == null)
             return;
 
         shell.WriteLine(Loc.GetString(toggle.Value ? "babyjail-command-enabled" : "babyjail-command-disabled"));
     }
 
-    public static bool? Toggle(CVarDef<bool> cvar, IConsoleShell shell, string[] args, IConfigurationManager config)
+    public static bool? Toggle(CVarDef<bool> cvar, IConsoleShell shell, string[] args, IConfigurationManager config, ILocalizationManager loc)
     {
         if (args.Length > 1)
         {
-            shell.WriteError(Loc.GetString("shell-need-between-arguments",("lower", 0), ("upper", 1)));
+            shell.WriteError(loc.GetString("shell-need-between-arguments",("lower", 0), ("upper", 1)));
             return null;
         }
 
@@ -41,7 +41,7 @@ public sealed class BabyJailCommand : LocalizedCommands
                 enabled = !enabled;
                 break;
             case 1 when !bool.TryParse(args[0], out enabled):
-                shell.WriteError(Loc.GetString("shell-argument-must-be-boolean"));
+                shell.WriteError(loc.GetString("shell-argument-must-be-boolean"));
                 return null;
         }
 
@@ -61,7 +61,7 @@ public sealed class BabyJailShowReasonCommand : LocalizedCommands
 
     public override void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        var toggle = BabyJailCommand.Toggle(CCVars.BabyJailShowReason, shell, args, _cfg);
+        var toggle = BabyJailCommand.Toggle(CCVars.BabyJailShowReason, shell, args, _cfg, Loc);
         if (toggle == null)
             return;
 

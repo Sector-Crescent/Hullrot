@@ -4,7 +4,7 @@
 - type: vessel
   id: Hind
   name: NCWL Hind
-  description: A light ore freighter converted into a missile frigate.
+  description: A light ore freighter converted into a missile destroyer.
   price: 60000
   category: Medium
   group: None
@@ -19,10 +19,6 @@
     Hind:
       stationProto: StandardCrescentVessel
       components:
-        - type: VesselIcon
-          iffIcon:
-            sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: frigate
         - type: StationNameSetup
           mapNameTemplate: 'NCWL Hind {1}'
           nameGenerator:

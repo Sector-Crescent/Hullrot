@@ -642,6 +642,199 @@
         layer:
         - MachineLayer
 
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodScrapersLootbox
+  name: Scrapper's Lootbox
+  description: A potentially "Valuable" crate of scrap parts. Salvaged and packed by shifty scrappers.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/scrap.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodCommunardScrap
+  name: Communard's Surplus Scrap Crate
+  description: A crate full of scrap parts deemed surplus by the communards.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodImperialScrap
+  name: Imperial Stamped Scrap Crate
+  description: A crate carrying the stamp of the imperial seal of commerce- available to civilian markets.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodImperialArmor
+  name: Imperial noble-grade Armor Crate
+  description: Stacked neatly inside are armor plates- good enough for the imperial officers of taypan.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarycybernetics.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodValuableScrapTFSC
+  name: Valuable Scrap Box
+  description: A crate filled with scrap deemed valuable by experienced salvagers.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodUnionQualitySalvage
+  name: Union Quality Salvage Crate
+  description: A crate filled with scrap deemed valuable by unionized communard scrappers.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodImperialQualitySalvage
+  name: Imperial Quality Salvage Crate
+  description: A crate filled with scrap deemed valuable by imperial scrappers.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodTestCrate
+  name: Test Crate
+  description: Test Crate (Not for player use)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/scrap.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 1500
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.29,0.25,0.32"
+        density: 40
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+
 #deeds
 
 - type: entity
@@ -737,6 +930,39 @@
 
 - type: entity
   parent: BaseItem
+  id: TradeDeed2500
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed4500
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed6k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
   id: TradeDeed10k
   name: deed of delivery
   description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
@@ -748,7 +974,73 @@
 
 - type: entity
   parent: BaseItem
+  id: TradeDeed15k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed20k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed25k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed30k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeed50k
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
   id: TradeDeedExotic
+  name: deed of delivery
+  description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/deed.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: BaseItem
+  id: TradeDeedTest
   name: deed of delivery
   description: A printed deed of delivery. Blocky letting informs that this deed is worth ten thousand Union credits to an official chartered station.
   components:

@@ -74,6 +74,10 @@ namespace Content.Server.Database
                 v => JsonDocumentToByteArray(v),
                 v => ByteArrayToJsonDocument(v));
 
+            var stringArrayConverter = new ValueConverter<string[], string>(
+                v => string.Join(",", v ?? Array.Empty<string>()),
+                v => v.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+
             modelBuilder.Entity<AdminLog>()
                 .Property(log => log.Json)
                 .HasConversion(jsonStringConverter);
@@ -81,6 +85,10 @@ namespace Content.Server.Database
             modelBuilder.Entity<Profile>()
                 .Property(log => log.Markings)
                 .HasConversion(jsonByteArrayConverter);
+
+            modelBuilder.Entity<Profile>()
+                .Property(log => log.CharacterFlags)
+                .HasConversion(stringArrayConverter);
         }
 
         public override int CountAdminLogs()

@@ -31,7 +31,21 @@ entities:
     - type: MetaData
       name: grid
     - type: Transform
-      pos: -0.50743103,-0.5520318
+    - type: Map
+      mapPaused: True
+
+    - type: GridTree
+
+    - type: Broadphase
+    - type: OccluderTree
+    - type: LoadedMap
+  - uid: 2
+    components:
+    - type: MetaData
+      name: Northway
+    - type: Transform
+      pos: 17.209646,16.270586
+      parent: 1
     - type: MapGrid
       chunks:
         -1,0:

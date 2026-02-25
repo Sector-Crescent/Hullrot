@@ -5,10 +5,10 @@
   id: Exhumer
   name: ICM Exhumer
   description: |
-    An ancient and widely used design, the ICM Exhumer is an entry-level mining corvette, equipped with basic salvaging equipment and mining plusers to allow for automated mining.
+    An ancient and widely used design, the ICM Exhumer is an entry-level mining corvette, equipped with mining plusers; this ship is the backbone of taypan's mining industry.
     LOADOUT: 2x SHI 250c "Exhumer" kinetic Pulser
     MINIMUM CREW: 1x Pilot
-  price: 50000
+  price: 30000
   category: Small
   group: Civilian
   path: /Maps/_Crescent/Shuttles/Civilian/exhumer.yml
@@ -25,7 +25,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: industrial
+            state: miner
         - type: StationNameSetup
           mapNameTemplate: 'ICM Exhumer {1}'
           nameGenerator:

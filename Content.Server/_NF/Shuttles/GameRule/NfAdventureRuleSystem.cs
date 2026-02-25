@@ -30,6 +30,7 @@ using Content.Shared.GameTicking.Components;
 using Robust.Shared.Configuration;
 using Content.Shared.Telescope;
 using Robust.Shared.Utility;
+using Content.Shared._Crescent.SpaceBiomes;
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -64,6 +65,16 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("nfadventurerulesystem");
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawningEvent);
+        SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
+    }
+
+    private void OnRoundEnd(RoundEndMessageEvent args)
+    {
+        var query = EntityManager.EntityQueryEnumerator<SpaceBiomeSourceComponent>();
+        while (query.MoveNext(out var uid, out var biomeSource))
+        {
+            biomeSource.Biome = "default";
+        }
     }
 
     protected override void AppendRoundEndText(EntityUid uid, AdventureRuleComponent component, GameRuleComponent gameRule, ref RoundEndTextAppendEvent ev)

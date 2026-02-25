@@ -6,6 +6,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -14,7 +15,7 @@
         Structural: 125
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 8
+    lifetime: 28 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -22,9 +23,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 500
-    intensitySlope: 100
-    totalIntensity: 600
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -36,8 +37,8 @@
   - type: HeatSeeking
     rotationSpeed: 15 # slow rotation so it isnt aimbot, still fairly accurate though
     acceleration: 120
-    topSpeed: 100
-    fieldOfView: 30
+    topSpeed: 90
+    fieldOfView: 15
     defaultSeekingRange: 400
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
@@ -74,6 +75,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -82,7 +84,7 @@
         Structural: 150
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 28 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -90,9 +92,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 600
-    intensitySlope: 200
-    totalIntensity: 800
+    maxIntensity: 100
+    intensitySlope: 100
+    totalIntensity: 500
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -103,10 +105,10 @@
     color: Red
   - type: HeatSeeking
     rotationSpeed: 10 # slow rotation so it isnt aimbot, still fairly accurate though
-    acceleration: 120
-    topSpeed: 120
-    fieldOfView: 20
-    defaultSeekingRange: 300
+    acceleration: 90
+    topSpeed: 90
+    fieldOfView: 15
+    defaultSeekingRange: 400
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
     fixtures:
@@ -143,6 +145,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -151,7 +154,7 @@
         Structural: 175
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 8
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -159,9 +162,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 900
-    intensitySlope: 300
-    totalIntensity: 1250
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 1500
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -173,8 +176,8 @@
   - type: HeatSeeking
     rotationSpeed: 25
     acceleration: 50
-    topSpeed: 150
-    fieldOfView: 60
+    topSpeed: 100
+    fieldOfView: 35
     defaultSeekingRange: 800
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -210,6 +213,7 @@
   parent: AzimuthRocketProjectile
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -217,22 +221,22 @@
         Structural: 250
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 4
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: gscazimuthfired
   - type: Explosive
     explosionType: Default
-    maxIntensity: 950
-    intensitySlope: 320
-    totalIntensity: 1350
+    maxIntensity: 200
+    intensitySlope: 200
+    totalIntensity: 1500
     maxTileBreak: 5
   - type: HeatSeeking
     rotationSpeed: 35
     acceleration: 100
     topSpeed: 150
-    fieldOfView: 50
+    fieldOfView: 35
     defaultSeekingRange: 700
     guidanceAlgorithm: PurePursuit
 
@@ -243,6 +247,7 @@
   parent: AzimuthRocketProjectile
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -250,32 +255,33 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: ncwlazimuthfired
   - type: Explosive
     explosionType: Default
-    maxIntensity: 850
-    intensitySlope: 250
-    totalIntensity: 1000
+    maxIntensity: 100
+    intensitySlope: 10
+    totalIntensity: 2000
     maxTileBreak: 4
   - type: HeatSeeking
     rotationSpeed: 35
-    acceleration: 70
-    topSpeed: 175
-    fieldOfView: 75
+    acceleration: 100
+    topSpeed: 100
+    fieldOfView: 25
     defaultSeekingRange: 1000
     guidanceAlgorithm: PurePursuit
 
 - type: entity
   id: AzimuthRocketProjectileAdvanced
-  name: 60mm high-explosive fragmentation rocket mk.II
+  name: 60mm high-explosive fragmentation rocket mk.II #this one needs more work but it isnt a core ammo so i cba rn
   description: Shit.
   parent: AzimuthRocketProjectile
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
@@ -283,22 +289,22 @@
         Structural: 200
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 9
+    lifetime: 25 #2500
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
       - state: azimuthmk2fired
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 800
-    intensitySlope: 250
-    totalIntensity: 900
+    explosionType: Electric
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 1250
     maxTileBreak: 4
   - type: HeatSeeking
     rotationSpeed: 30
     acceleration: 60
-    topSpeed: 150
-    fieldOfView: 50
+    topSpeed: 100
+    fieldOfView: 45
     defaultSeekingRange: 850
     guidanceAlgorithm: PurePursuit
 
@@ -311,6 +317,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -319,7 +326,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 11 #roughly 1,035-1,060-1,075m range depending on shipgun
+    lifetime: 50 #5000
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -327,9 +334,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1100
-    intensitySlope: 300
-    totalIntensity: 1350
+    maxIntensity: 100
+    intensitySlope: 100
+    totalIntensity: 3000
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -342,7 +349,7 @@
     rotationSpeed: 35
     acceleration: 45
     topSpeed: 100
-    fieldOfView: 75
+    fieldOfView: 40
     defaultSeekingRange: 1500
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -370,6 +377,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 - type: entity
   id: ArbalestRocketProjectileNCWL
@@ -378,6 +386,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -386,7 +395,7 @@
         Structural: 225
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 14 #roughly 1,345-1,360-1,375m range depending on shipgun
+    lifetime: 50 #5000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -394,9 +403,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1100
-    intensitySlope: 300
-    totalIntensity: 1350
+    maxIntensity: 50
+    intensitySlope: 20
+    totalIntensity: 3000
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -409,7 +418,7 @@
     rotationSpeed: 35
     acceleration: 45
     topSpeed: 100
-    fieldOfView: 75
+    fieldOfView: 65
     defaultSeekingRange: 1500
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -437,6 +446,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 - type: entity
   id: ArbalestRocketProjectileGSC
@@ -445,6 +455,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -453,7 +464,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 7 #roughly 795-810-825m range depending on shipgun
+    lifetime: 50 #5000
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -461,9 +472,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1250
-    intensitySlope: 250
-    totalIntensity: 1450
+    maxIntensity: 500
+    intensitySlope: 500
+    totalIntensity: 3000
     maxTileBreak: 5
   - type: PointLight
     radius: 3.5
@@ -475,7 +486,7 @@
   - type: HeatSeeking
     rotationSpeed: 20
     acceleration: 75
-    topSpeed: 125
+    topSpeed: 100
     fieldOfView: 40
     defaultSeekingRange: 1000
     guidanceAlgorithm: PurePursuit
@@ -504,6 +515,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 #gargoyle
 
@@ -514,6 +526,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -522,7 +535,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 18 #roughly 1,480m range
+    lifetime: 70 #5600m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -545,7 +558,7 @@
     rotationSpeed: 10
     acceleration: 25
     topSpeed: 80
-    fieldOfView: 75
+    fieldOfView: 65
     defaultSeekingRange: 1500
     guidanceAlgorithm: PurePursuit
   - type: Fixtures
@@ -582,6 +595,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -590,7 +604,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 23 #roughly 1,880m range
+    lifetime: 70 #5600m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -599,7 +613,7 @@
   - type: Explosive
     explosionType: Default
     maxIntensity: 5000
-    intensitySlope: 200
+    intensitySlope: 50
     totalIntensity: 5000
     maxTileBreak: 12
   - type: PointLight
@@ -613,7 +627,7 @@
     rotationSpeed: 12
     acceleration: 35
     topSpeed: 85
-    fieldOfView: 75
+    fieldOfView: 70
     defaultSeekingRange: 3000
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
@@ -652,6 +666,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -660,7 +675,7 @@
         Structural: 275
         Blunt: 60
   - type: TimedDespawn
-    lifetime: 25
+    lifetime: 100 #9000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/catapult.rsi
     layers:
@@ -668,9 +683,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 12500
-    intensitySlope: 400
-    totalIntensity: 12500
+    maxIntensity: 150000
+    intensitySlope: 500
+    totalIntensity: 100000
     maxTileBreak: 20
   - type: PointLight
     radius: 3.5
@@ -683,7 +698,7 @@
     rotationSpeed: 8
     acceleration: 10
     topSpeed: 90
-    fieldOfView: 50
+    fieldOfView: 40
     defaultSeekingRange: 5000
     guidanceAlgorithm: PredictiveGuidance
   - type: Fixtures
@@ -723,6 +738,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -731,7 +747,7 @@
         Structural: 125
         Blunt: 40
   - type: TimedDespawn
-    lifetime: 5
+    lifetime: 25 #1250m + Lock on = 1650m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -739,9 +755,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 300
-    intensitySlope: 500
-    totalIntensity: 300
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 250
     maxTileBreak: 1
   - type: PointLight
     radius: 3.5

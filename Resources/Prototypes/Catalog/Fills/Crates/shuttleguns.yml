@@ -63,3 +63,75 @@
     contents:
       - id: HardlinerFlatpack
         amount: 1
+
+#----
+#new shipguns!
+
+#ballistic
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun20mmScreamer
+  name: 20mm 'Screamer' light carbine repeater cannon Flatpack
+  description: Parts used to build a 20mm 'Screamer' light carbine repeater cannon. HARDPOINT TYPE - SMALL/BALLISTIC
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponTurretSmallMachinegunFlatpack
+        amount: 1
+
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun35mmScout
+  name: 35mm 'Scout' rotary cannon Flatpack
+  description: Parts used to build a 35mm 'Scout' rotary cannon. HARDPOINT TYPE - SMALL/BALLISTIC
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponTurretMediumMachinegun
+        amount: 1
+
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun50mmWhistler
+  name: 50mm 'Whistler' light autocannon Flatpack
+  description: Parts used to build a 50mm 'Whistler' light autocannon. HARDPOINT TYPE - SMALL/BALLISTIC
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponTurretSmallArtillery
+        amount: 1
+
+#missiles
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun48mmShortbow
+  name: 48mm 'Shortbow' SRM rocket system Flatpack
+  description: Parts used to build a 48mm 'Shortbow' SRM rocket system. HARDPOINT TYPE - SMALL/MISSILE
+  components:
+  - type: StorageFill
+    contents:
+      - id: BaseWeaponTurretShortbowFlatpack
+        amount: 1
+
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun60mmAzimuth
+  name: 60mm 'Azimuth' rapid-fire LML system Flatpack
+  description: Parts used to build a 60mm 'Azimuth' rapid-fire LML system Flatpack. HARDPOINT TYPE - SMALL/MISSILE
+  components:
+  - type: StorageFill
+    contents:
+      - id: BaseWeaponTurretAzimuthFlatpack
+        amount: 1
+
+#Energy
+- type: entity
+  parent: CrateEngineering
+  id: CrateShuttlegun200ccAbsolution
+  name: 200cc 'Absolution' hardlight cannon Flatpack
+  description: Parts used to build a 200cc 'Absolution' hardlight cannon Flatpack. HARDPOINT TYPE - SMALL/ENERGY
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponTurretRetribution
+        amount: 1

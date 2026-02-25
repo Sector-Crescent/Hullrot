@@ -223,23 +223,13 @@
     BallisticCycler: 500
 
 - type: latheRecipe
-  id: WeaponPistolSmartpistol
+  id: WeaponPistolSmartpistolSHI
   result: WeaponPistolSmartpistol
   completetime: 2
   materials:
     Steel: 2500
     Plastic: 500
     AdvancedElectronics: 500
-    BallisticCycler: 500
-
-- type: latheRecipe
-  id: WeaponShotgunEnforcer
-  result: WeaponShotgunEnforcer
-  completetime: 2
-  materials:
-    Steel: 2500
-    Plastic: 1000
-    BallisticCycler: 500
 
 - type: latheRecipe
   id: WeaponShotgunSHIDoubleBarreled4g
@@ -307,6 +297,15 @@
     BallisticCycler: 500
 
 - type: latheRecipe
+  id: WeaponShotgunEnforcer
+  result: WeaponShotgunEnforcer
+  completetime: 2
+  materials:
+    Steel: 3000
+    Plastic: 1500
+    TubeLoader: 500
+
+- type: latheRecipe
   id: WeaponLightMachineGunL6
   result: WeaponLightMachineGunL6
   completetime: 2
@@ -366,6 +365,15 @@
     AdvancedElectronics: 1000
 
 - type: latheRecipe
+  id: CartridgeHammerheadRocket
+  result: CartridgeHammerheadRocket
+  completetime: 2
+  materials:
+    Steel: 1000
+    Gold: 250
+    Plasma: 1000
+
+- type: latheRecipe
   id: WeaponLauncherMilkor
   result: WeaponLauncherMilkor
   completetime: 2
@@ -390,7 +398,7 @@
     Steel: 2500
     Plastic: 1000
     Silver: 1000
-    BallisticCycler: 2000
+    BallisticCycler: 1000
 
 - type: latheRecipe
   id: WeaponRifleM90GrenadeLauncher
@@ -485,6 +493,34 @@
     Steel: 3000
     Plasma: 2000
     AdvancedMechatronics: 1000
+
+- type: latheRecipe
+  id: WeaponMechMaul
+  result: WeaponMechMaul
+  completetime: 2
+  materials:
+    Steel: 10000
+    BasicMechatronics: 1000
+
+- type: latheRecipe
+  id: WeaponMechCombatHeavyRifle
+  result: WeaponMechCombatHeavyRifle
+  completetime: 2
+  materials:
+    Steel: 5000
+    BallisticCycler: 2000
+    BasicMechatronics: 3000
+    Uranium: 1000
+
+- type: latheRecipe
+  id: WeaponMechCombatAutocannon
+  result: WeaponMechCombatAutocannon
+  completetime: 2
+  materials:
+    Steel: 7500
+    BallisticCycler: 2000
+    BasicMechatronics: 3000
+    Uranium: 2000
 
 - type: latheRecipe
   id: WeaponMechGustaf
@@ -592,7 +628,7 @@
     Gold: 3000
     Silver: 5000
     Steel: 12500
-    Tungsten: 2500
+    Tungsten: 5000 #doubled the price- it's a weapon of mass destruction- it should atleast cost 2 hardsuits worth of tungsten.
 
 - type: latheRecipe
   id: BoriaticComposterFlatpack
@@ -855,4 +891,109 @@
     Plasma: 500
     Steel: 100
 
+- type: latheRecipe
+  id: SHIHG3TearGasHandgrenade
+  result: SHIHG3TearGasHandgrenade
+  completetime: 2
+  materials:
+    Plastic: 100
+    Steel: 100
+
+- type: latheRecipe
+  id: SHIHG7FlashbangHandgrenade
+  result: SHIHG7FlashbangHandgrenade
+  completetime: 2
+  materials:
+    Plastic: 100
+    Plasma: 50
+    Steel: 150
+
+- type: latheRecipe
+  id: SHIHG19SmartHandgrenadeEMP
+  result: SHIHG19SmartHandgrenadeEMP
+  completetime: 2
+  materials:
+    Gold: 150
+    Plasma: 100
+    Steel: 100
+
+
+- type: latheRecipe
+  id: HG13M2MiniHandgrenade
+  result: HG13M2MiniHandgrenade
+  completetime: 2
+  materials:
+    Plasma: 250
+    Steel: 100
+#mark cases
+
+- type: latheRecipe
+  id: WeaponCaseRifle
+  result: WeaponCaseRifle
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: GrenadeCase
+  result: GrenadeCase
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCasePistol
+  result: WeaponCasePistol
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseSmg
+  result: WeaponCaseSmg
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseSniper
+  result: WeaponCaseSniper
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseRpg
+  result: WeaponCaseRpg
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseLmg
+  result: WeaponCaseLmg
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseShotgun
+  result: WeaponCaseShotgun
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseGl
+  result: WeaponCaseGl
+  completetime: 2
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  id: WeaponCaseAmmo
+  result: WeaponCaseAmmo
+  completetime: 2
+  materials:
+    Steel: 500
 

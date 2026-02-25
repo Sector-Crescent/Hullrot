@@ -74,13 +74,21 @@
   - type: Dispenser
     defaultItem: TradeDeedStub
     inventory:
-      TradeDeedLow: SpaceCash1500
-      TradeDeedNormal: SpaceCash3500
-      TradeDeedHigh: SpaceCash4500
-      TradeDeedVeryHigh: SpaceCash6000
-      TradeDeedUnique: SpaceCash7500
+      TradeDeedLow: SpaceCash1000
+      TradeDeedNormal: SpaceCash1500
+      TradeDeedHigh: SpaceCash3500
+      TradeDeedVeryHigh: SpaceCash4500
+      TradeDeedUnique: SpaceCash6000
+      TradeDeedExotic: SpaceCash10000
+      TradeDeed2500: SpaceCash2500
+      TradeDeed4500: SpaceCash4500
+      TradeDeed6k: SpaceCash6000
       TradeDeed10k: SpaceCash10000
-      TradeDeedExotic: SpaceCash15000
+      TradeDeed15k: SpaceCash15000
+      TradeDeed20k: SpaceCash20000
+      TradeDeed25k: SpaceCash25000
+      TradeDeed30k: SpaceCash30000
+      TradeDeed50k: SpaceCash50000
   - type: Sprite
     sprite: _Crescent/Structures/deedsmachine.rsi
     layers:
@@ -94,7 +102,7 @@
   parent: BaseDispenser
   id: NovaBalreskaCargoChute
   name: balreskan cargo turn-in chute
-  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds. The electronic display informs that the NCWL are in need of antibiotics.
+  description: A machine with piping systems that lead into the bowels of the station, accepting export goods for trade deeds.
   components:
   - type: Anchorable
     flags:
@@ -102,25 +110,165 @@
   - type: Dispenser
     defaultItem: TradeDeedStub
     inventory:
-      TradeGoodAmmo: TradeDeedVeryHigh
-      TradeGoodAlcohol: TradeDeedVeryHigh
-      TradeGoodNanoTrasen: TradeDeedHigh
-      TradeGoodOldCyber: TradeDeedHigh
-      TradeGoodOldParts: TradeDeedHigh
-      TradeGoodAntibiotics: TradeDeedVeryHigh
-      TradeGoodScrap: TradeDeedVeryHigh
-      TradeGoodCybernetics: TradeDeedHigh
-      TradeGoodGunparts: TradeDeedHigh
-      TradeGoodScop: TradeDeedNormal
-      TradeGoodWine: TradeDeedExotic
-      TradeGoodAlloys: TradeDeedExotic
-      TradeGoodMiltech: TradeDeedVeryHigh
-      TradeGoodFabrics: TradeDeedExotic
-      TradeGoodPlasma: TradeDeedVeryHigh
-      TradeGoodSilks: TradeDeedUnique
-      TradeGoodSugar: TradeDeedHigh
-      TradeGoodRice: TradeDeedHigh
-      TradeGoodFlour: TradeDeedHigh
+      TradeGoodScrap: TradeDeed2.5k
+      TradeGoodScrapersLootbox: TradeDeed2.5k
+      TradeGoodImperialScrap: TradeDeed6k
+      TradeGoodScop: TradeDeed2.5k
+      TradeGoodAntibiotics: TradeDeed2.5k
+      TradeGoodWine: TradeDeed6k
+      TradeGoodAmmo: TradeDeed2.5k
+      TradeGoodGunparts: TradeDeed2.5k
+      TradeGoodCybernetics: TradeDeed6k
+      TradeGoodAlloys: TradeDeed10k
+      TradeGoodPlasma: TradeDeed10k
+      TradeGoodImperialArmor: TradeDeed15k
+      TradeGoodGoodScrap: TradeDeed10k
+      TradeGoodValuableScrapTFSC: TradeDeed10k
+      TradeGoodImperialQualitySalvage: TradeDeed15k
+      TradeGoodSilks: TradeDeed10k
+      TradeGoodOrgans: TradeDeed10k
+      TradeGoodDrugs: TradeDeed10k
+      TradeGoodFabrics: TradeDeed4500
+      TradeGoodMiltech: TradeDeed4500
+      TradeGoodAlcohol: TradeDeed4500
+      TradeGoodRice: TradeDeed4500
+      TradeGoodSugar: TradeDeed4500
+      TradeGoodFlour: TradeDeed4500
+      TradeGoodOldParts: TradeDeed4500
+      TradeGoodOldCyber: TradeDeed4500
+      TradeGoodNanoTrasen: TradeDeed4500
+  - type: Sprite
+    sprite: _Crescent/Structures/cargochute.rsi
+    layers:
+    - state: "icon"
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: entity
+  parent: BaseDispenser
+  id: CountsmanCargoChute
+  name: imperial cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the ship, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: TradeDeedStub
+    inventory:
+      TradeGoodScrap: TradeDeed2.5k
+      TradeGoodScrapersLootbox: TradeDeed2.5k
+      TradeGoodCommunardScrap: TradeDeed6k
+      TradeGoodScop: TradeDeed2.5k
+      TradeGoodAntibiotics: TradeDeed2.5k
+      TradeGoodUnionVodka: TradeDeed6k
+      TradeGoodAmmo: TradeDeed2.5k
+      TradeGoodGunparts: TradeDeed2.5k
+      TradeGoodUnionWeapon: TradeDeed6k
+      TradeGoodAlloys: TradeDeed10k
+      TradeGoodPlasma: TradeDeed10k
+      TradeGoodUnionBallistic: TradeDeed15k
+      TradeGoodGoodScrap: TradeDeed10k
+      TradeGoodValuableScrapTFSC: TradeDeed10k
+      TradeGoodUnionQualitySalvage: TradeDeed15k
+      TradeGoodSilks: TradeDeed10k
+      TradeGoodOrgans: TradeDeed10k
+      TradeGoodDrugs: TradeDeed10k
+      TradeGoodFabrics: TradeDeed4500
+      TradeGoodMiltech: TradeDeed4500
+      TradeGoodAlcohol: TradeDeed4500
+      TradeGoodRice: TradeDeed4500
+      TradeGoodSugar: TradeDeed4500
+      TradeGoodFlour: TradeDeed4500
+      TradeGoodOldParts: TradeDeed4500
+      TradeGoodOldCyber: TradeDeed4500
+      TradeGoodNanoTrasen: TradeDeed4500
+  - type: Sprite
+    sprite: _Crescent/Structures/cargochute.rsi
+    layers:
+    - state: "icon"
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: entity
+  parent: BaseDispenser
+  id: FreeporterCargoChute
+  name: Freeporter cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the ship, accepting export goods.
+  components:
+  - type: Dispenser
+    defaultItem: TradeDeedStub
+    inventory:
+      TradeGoodScrap: TradeDeed6k
+      TradeGoodCommunardScrap: TradeDeed2.5k
+      TradeGoodImperialScrap: TradeDeed2.5k
+      TradeGoodScop: TradeDeed6k
+      TradeGoodUnionVodka: TradeDeed2.5k
+      TradeGoodWine: TradeDeed2.5k
+      TradeGoodAmmo: TradeDeed6k
+      TradeGoodUnionWeapon: TradeDeed2.5k
+      TradeGoodCybernetics: TradeDeed2.5k
+      TradeGoodAlloys: TradeDeed15k
+      TradeGoodUnionBallistic: TradeDeed10k
+      TradeGoodImperialArmor: TradeDeed10k
+      TradeGoodGoodScrap: TradeDeed15k
+      TradeGoodUnionQualitySalvage: TradeDeed10k
+      TradeGoodImperialQualitySalvage: TradeDeed10k
+      TradeGoodSilks: TradeDeed10k
+      TradeGoodFabrics: TradeDeed4500
+      TradeGoodMiltech: TradeDeed4500
+      TradeGoodAlcohol: TradeDeed4500
+      TradeGoodRice: TradeDeed4500
+      TradeGoodSugar: TradeDeed4500
+      TradeGoodFlour: TradeDeed4500
+      TradeGoodOldParts: TradeDeed4500
+      TradeGoodOldCyber: TradeDeed4500
+      TradeGoodNanoTrasen: TradeDeed4500
+  - type: Sprite
+    sprite: _Crescent/Structures/cargochute.rsi
+    layers:
+    - state: "icon"
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+
+- type: entity
+  parent: BaseDispenser
+  id: NewportCargoChute
+  name: Newport cargo turn-in chute
+  description: A machine with piping systems that lead into the bowels of the ship, accepting export goods for trade deeds.
+  components:
+  - type: Dispenser
+    defaultItem: TradeDeedStub
+    inventory:
+      TradeGoodScrapersLootbox: TradeDeed6k
+      TradeGoodCommunardScrap: TradeDeed2.5k
+      TradeGoodImperialScrap: TradeDeed2.5k
+      TradeGoodAntibiotics: TradeDeed6k
+      TradeGoodUnionVodka: TradeDeed2.5k
+      TradeGoodWine: TradeDeed2.5k
+      TradeGoodGunparts: TradeDeed6k
+      TradeGoodUnionWeapon: TradeDeed2.5k
+      TradeGoodCybernetics: TradeDeed2.5k
+      TradeGoodPlasma: TradeDeed15k
+      TradeGoodUnionBallistic: TradeDeed10k
+      TradeGoodImperialArmor: TradeDeed10k
+      TradeGoodValuableScrapTFSC: TradeDeed15k
+      TradeGoodUnionQualitySalvage: TradeDeed10k
+      TradeGoodImperialQualitySalvage: TradeDeed10k
+      TradeGoodOrgans: TradeDeed15k
+      TradeGoodDrugs: TradeDeed15k
+      TradeGoodFabrics: TradeDeed4500
+      TradeGoodMiltech: TradeDeed4500
+      TradeGoodAlcohol: TradeDeed4500
+      TradeGoodRice: TradeDeed4500
+      TradeGoodSugar: TradeDeed4500
+      TradeGoodFlour: TradeDeed4500
+      TradeGoodOldParts: TradeDeed4500
+      TradeGoodOldCyber: TradeDeed4500
+      TradeGoodNanoTrasen: TradeDeed4500
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -347,43 +495,6 @@
 
 - type: entity
   parent: BaseDispenser
-  id: CountsmanCargoChute
-  name: imperial cargo turn-in chute
-  description: A machine with piping systems that lead into the bowels of the ship, accepting export goods for trade deeds. The electronic display informs that the DSM are in need of medical supplies.
-  components:
-  - type: Dispenser
-    defaultItem: TradeDeedStub
-    inventory:
-      TradeGoodAlcohol: TradeDeedHigh
-      TradeGoodGunparts: TradeDeedHigh
-      TradeGoodUnionWeapon: TradeDeedUnique
-      TradeGoodUnionArmor: TradeDeedUnique
-      TradeGoodMiltech: TradeDeedVeryHigh
-      TradeGoodAlloys: TradeDeedExotic
-      TradeGoodGoodScrap: TradeDeedUnique
-      TradeGoodPlasma: TradeDeedVeryHigh
-      TradeGoodNanoTrasen: TradeDeedHigh
-      TradeGoodOldCyber: TradeDeedHigh
-      TradeGoodOldParts: TradeDeedHigh
-      TradeGoodSilks: TradeDeedUnique
-      TradeGoodAmmo: TradeDeedHigh
-      TradeGoodScrap: TradeDeedHigh
-      TradeGoodUnionBallistic: TradeDeedExotic
-      TradeGoodUnionVodka: TradeDeedExotic
-      TradeGoodSugar: TradeDeedHigh
-      TradeGoodRice: TradeDeedHigh
-      TradeGoodFlour: TradeDeedHigh
-  - type: Sprite
-    sprite: _Crescent/Structures/cargochute.rsi
-    layers:
-    - state: "icon"
-  - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#9dc5c9"
-
-- type: entity
-  parent: BaseDispenser
   id: BaseCargoChute
   name: cargo turn-in chute
   description: A machine with piping systems that lead deep into the bowels of the station, accepting trade goods for deeds.
@@ -432,14 +543,14 @@
   - type: Dispenser
     defaultItem: TradeDeedStub
     inventory:
-      TradeGoodGunparts: TradeDeedVeryHigh
-      TradeGoodScop: TradeDeedVeryHigh
-      TradeGoodUnionWeapon: TradeDeedVeryHigh
-      TradeGoodUnionArmor: TradeDeedVeryHigh
+      TradeGoodGunparts: TradeDeedHigh
+      TradeGoodScop: TradeDeedNormal
+      TradeGoodUnionWeapon: TradeDeedHigh
+      TradeGoodUnionArmor: TradeDeedHigh
       TradeGoodFabrics: TradeDeedExotic
       TradeGoodMiltech: TradeDeedVeryHigh
       TradeGoodAlloys: TradeDeedExotic
-      TradeGoodGoodScrap: TradeDeedUnique
+      TradeGoodGoodScrap: TradeDeedHigh
       TradeGoodPlasma: TradeDeedExotic
       TradeGoodWine: TradeDeedExotic
       TradeGoodNanoTrasen: TradeDeedHigh
@@ -450,9 +561,9 @@
       TradeGoodCybernetics: TradeDeedVeryHigh
       TradeGoodUnionBallistic: TradeDeedExotic
       TradeGoodUnionVodka: TradeDeedExotic
-      TradeGoodSugar: TradeDeedHigh
-      TradeGoodRice: TradeDeedHigh
-      TradeGoodFlour: TradeDeedHigh
+      TradeGoodSugar: TradeDeedNormal
+      TradeGoodRice: TradeDeedNormal
+      TradeGoodFlour: TradeDeedNormal
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:

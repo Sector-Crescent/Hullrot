@@ -192,4 +192,129 @@
   outputs:
     SpeedLoaderMagnum: 1
 
+#new shipgun ammo recipies for factory
 
+#Projectiles
+#20mm Screamer Ammo
+- type: factoryRecipe
+  id: FabricateMagazine20mmScreamerRegular
+  name: fabricate 20mm usm drum
+  inputs:
+    Steel: 8
+  outputs:
+    Magazine20mm: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine20mmScreamerGyrostable
+  name: fabricate 20mm gyrostable drum
+  inputs:
+    Steel: 8
+    Uranium: 3
+  outputs:
+    Magazine20mmGyrostable: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine20mmScreamerPlasma
+  name: fabricate 20mm plasma drum
+  inputs:
+    Steel: 8
+    Plasma: 3
+  outputs:
+    Magazine20mmPlasma: 1
+
+#35mm Scout Ammo
+- type: factoryRecipe
+  id: FabricateMagazine35mmScoutRegular
+  name: fabricate 35mmm usm drum
+  inputs:
+    Steel: 10
+  outputs:
+    Magazine35mm: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine35mmScoutGyrostable
+  name: fabricate 35mmm gyrostable drum
+  inputs:
+    Steel: 10
+    Uranium: 5
+  outputs:
+    Magazine35mmGyrostable: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine35mmScoutPlasma
+  name: fabricate 35mmm plasma drum
+  inputs:
+    Steel: 10
+    Plasma: 5
+  outputs:
+    Magazine35mmPlasma: 1
+
+#50mm Whistler Ammo
+- type: factoryRecipe
+  id: FabricateMagazine50mmWhistlerRegular
+  name: fabricate 50mmm usm drum
+  inputs:
+    Steel: 15
+    Plasma: 3
+  outputs:
+    Magazine50mm: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine50mmWhistlerGyrostable
+  name: fabricate 50mmm gyrostable drum
+  inputs:
+    Steel: 15
+    Plasma: 3
+    Uranium: 8
+  outputs:
+    Magazine50mmGyrostable: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine50mmWhistlerPlasma
+  name: fabricate 50mmm plasma drum
+  inputs:
+    Steel: 15
+    Plasma: 13
+  outputs:
+    Magazine50mmPlasma: 1
+
+#88mm Corpus Ammo
+- type: factoryRecipe
+  id: FabricateMagazine88mmFlakRegular
+  name: fabricate 88mmm usm drum
+  inputs:
+    Steel: 25
+    Uranium: 3
+  outputs:
+    MagazineCorpus: 1
+
+#90mm Gistum Ammo
+- type: factoryRecipe
+  id: FabricateMagazine90mmRegular
+  name: fabricate 90mmm regular shell clip
+  inputs:
+    Steel: 20
+    Uranium: 3
+    Plasma: 3
+  outputs:
+    MagazineGistum: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine90mmGyrostable
+  name: fabricate 90mmm gyrostable shell clip
+  inputs:
+    Steel: 20
+    Uranium: 13
+    Plasma: 3
+  outputs:
+    MagazineGistumGyrostable: 1
+
+- type: factoryRecipe
+  id: FabricateMagazine90mmPlasma
+  name: fabricate 90mmm plasma shell clip
+  inputs:
+    Steel: 20
+    Uranium: 3
+    Plasma: 13
+  outputs:
+    MagazineGistumPlasma: 1

@@ -3,9 +3,9 @@
 
 - type: vessel
   id: Caterpillar
-  name: TS Caterpillar
+  name: Caterpillar
   description: |
-    The Caterpillar is a sizable cargo ship that is agile and nimble, but it's cargo bay is entirely exposed to space. Escorts are recommended, since this makes the ship vulnerable to pirate attacks. 
+    The Caterpillar is a sizable cargo ship that is agile and nimble, but it's cargo bay is entirely exposed to space. Escorts are recommended, since this makes the ship vulnerable to pirate attacks.
     MINIMUM CREW: 1x Pilot
   price: 20000
   category: Medium
@@ -24,7 +24,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: industrial
+            state: hauler
         - type: StationNameSetup
           mapNameTemplate: 'Caterpillar {1}'
           nameGenerator:

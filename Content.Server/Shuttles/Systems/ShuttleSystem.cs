@@ -58,7 +58,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedMapSystem _maps = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedSalvageSystem _salvage = default!;
@@ -126,12 +125,19 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
                     UpdateIFFInterface(uid, comp);
                     continue;
                 }
-
-                comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration, 0f, comp.HeatCapacity);
+                // Hullrot edit: Making patch for Custom cloak proportional to speed. If has component, will calculate right, if not, ignore.
+                var grid = Transform(uid).GridUid;
+                if (grid != null && TryComp<IFFCloakSpeedComponent>(uid, out var speedCloakComp) && EntityManager.TryGetComponent(grid, out PhysicsComponent? physicsComponent))
+                {
+                    comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration * speedCloakComp.SpeedMultiplier * physicsComponent.LinearVelocity.Length(), 0f, comp.HeatCapacity);
+                }
+                else
+                {
+                    comp.CurrentHeat = float.Clamp(comp.CurrentHeat + comp.HeatGeneration, 0f, comp.HeatCapacity);
+                }
                 UpdateIFFInterface(uid, comp);
                 if (comp.CurrentHeat != comp.HeatCapacity)
                     continue;
-                var grid = Transform(uid).GridUid;
                 if (grid is null)
                     continue;
                 RemoveIFFFlag(grid.Value, IFFFlags.Hide);
@@ -157,13 +163,13 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         if (HasComp<MapComponent>(ev.EntityUid))
             return;
 
-        //hullrot edit: handling adding lag compensation 
+        //hullrot edit: handling adding lag compensation
         //_sawmill.Debug("GRID INITIALIZED! GRID ID:" + ev.EntityUid.ToString());
 
         // THAT DOESN'T WORK BECAUSE EITHER:
         // 1. THIS ISN'T THE RIGHT GRID ID. FROM WHAT I SAW, THIS GRID ID IS +1 FROM THE GRIDS ADDED TO THE FUCKING STATIONS!!!
         // 2. THIS RUNS BEFORE BECOMESSTATION AND IFFCOMPONENT AND NAMES GET ADDED, FUCKING EVERYTHING UP!
-        // WE ADD THIS TO EVERY GRID, THEN WHEN THE TIMER TICKS DOWN, IF IT 
+        // WE ADD THIS TO EVERY GRID, THEN WHEN THE TIMER TICKS DOWN, IF IT
         //if (!TryComp<BecomesStationComponent>(ev.EntityUid, out var _) || !TryComp<IFFComponent>(ev.EntityUid, out var _) || !(Name(ev.EntityUid) != "grid"))
         //_sawmill.Debug("NEW DEBRIS GRID MADE!");
 

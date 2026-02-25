@@ -70,15 +70,12 @@ namespace Content.Server.Shipyard;
 
 public sealed partial class ShipyardSystem : SharedShipyardSystem
 {
-    [Dependency] private readonly IConfigurationManager _configManager = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly CargoSystem _cargo = default!;
     [Dependency] private readonly DockingSystem _docking = default!;
     [Dependency] private readonly PricingSystem _pricing = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedMapSystem _mapping = default!;
-    [Dependency] private readonly DynamicCodeSystem _gridAcces = default!;
     [Dependency] private readonly AccessSystem _accessSystem = default!;
     [Dependency] private readonly AccessReaderSystem _access = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
@@ -94,7 +91,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly CrescentHelperSystem _crescent = default!;
     [Dependency] private readonly DynamicCodeSystem _codes = default!;
@@ -166,7 +162,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return false;
         }
 
-        var price = _pricing.AppraiseGrid((EntityUid) shuttleGrid, null);
+        var price = ComputeSellValue((EntityUid) shuttleGrid, null);
         var targetGrid = _station.GetLargestGrid(stationData);
 
         if (targetGrid == null) //how are we even here with no station grid
@@ -264,7 +260,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             _station.DeleteStation(shuttleStationUid);
         }
 
-        bill = (int) _pricing.AppraiseGrid(shuttleUid);
+        bill = ComputeSellValue(shuttleUid);
+
+
         _mapManager.DeleteGrid(shuttleUid);
         _sawmill.Info($"Sold shuttle {shuttleUid} for {bill}");
         return true;
@@ -285,11 +283,34 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         if (ShipyardMap != null && _mapManager.MapExists(ShipyardMap.Value))
             return;
-        _mapSystem.CreateMap(out var id);
+        _map.CreateMap(out var id);
         ShipyardMap = id;
 
         _mapManager.SetMapPaused(ShipyardMap.Value, false);
     }
+
+
+    private int ComputeSellValue(EntityUid shuttleUid, ShipyardConsoleUiKey? uiKey = null)
+    {
+        var value = _pricing.AppraiseGrid(shuttleUid);
+
+        // Apply resale multiplier (devaluation)
+        if (TryComp<ShipPriceMultiplierComponent>(shuttleUid, out var mult))
+        {
+            value *= mult.priceMultiplier;
+        }
+
+        // Apply black market / syndicate tax
+        if (uiKey is ShipyardConsoleUiKey.BlackMarket
+            or ShipyardConsoleUiKey.Syndicate)
+        {
+            value -= value * 0.30f;
+        }
+
+        return (int)value;
+    }
+
+
 
     // <summary>
     // Tries to rename a shuttle deed and update the respective components.
@@ -406,6 +427,26 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayDenySound(uid, component);
             return;
         }
+
+        // Apply resale depreciation to purchased ships
+        var priceMult = EnsureComp<ShipPriceMultiplierComponent>(shuttle.Owner);
+        priceMult.priceMultiplier = 0.9f;
+
+        var sellValue = ComputeSellValue(shuttle.Owner, (ShipyardConsoleUiKey)args.UiKey);
+
+
+        RefreshState(
+            uid,
+            bank.Balance,
+            true,
+            name,
+            sellValue,
+            true,
+            (ShipyardConsoleUiKey) args.UiKey
+        );
+
+
+
         EntityUid? shuttleStation = null;
         // setting up any stations if we have a matching game map prototype to allow late joins directly onto the vessel
         if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
@@ -443,8 +484,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         EntityUid product = EntityManager.SpawnAtPosition("ShuttleOwnershipChip", new EntityCoordinates(uid, 0, 0));
         var deedID = EnsureComp<ShuttleDeedComponent>(product);
         AssignShuttleDeedProperties(deedID, shuttle.Owner, name, player);
-        _metadata.SetEntityName(product, $"{MetaData(product).EntityName} - {deedID.ShuttleName} {deedID.ShuttleNameSuffix}");
-        _metadata.SetEntityDescription(product,
+        _metaData.SetEntityName(product, $"{MetaData(product).EntityName} - {deedID.ShuttleName} {deedID.ShuttleNameSuffix}");
+        _metaData.SetEntityDescription(product,
             $"{MetaData(product).EntityDescription} It is owned by {idCardComponent.FullName}.");
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttle.Owner);
         AssignShuttleDeedProperties(deedShuttle, shuttle.Owner, name, player);
@@ -454,10 +495,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
 
 
-
-        int sellValue = 0;
-        if (TryComp<ShuttleDeedComponent>(product, out var deed))
-            sellValue = (int) _pricing.AppraiseGrid((EntityUid) (deed?.ShuttleUid!));
 
         EnsureComp<ShipSpeedByMassAdjusterComponent>(shuttle.Owner);
         if (TryComp<DynamicCodeHolderComponent>(shuttle.Owner, out var shuttleCodes))
@@ -574,7 +611,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         int sellValue = 0;
         if (deed?.ShuttleUid != null)
-            sellValue = (int) _pricing.AppraiseGrid((EntityUid) (deed?.ShuttleUid!));
+            sellValue = ComputeSellValue((EntityUid)deed.ShuttleUid, (ShipyardConsoleUiKey)args.UiKey);
+
 
         if (ShipyardConsoleUiKey.BlackMarket == (ShipyardConsoleUiKey) args.UiKey || ShipyardConsoleUiKey.Syndicate == (ShipyardConsoleUiKey) args.UiKey) // Unhardcode this please
         {
@@ -670,6 +708,37 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
     }
 
+    private void ForceRefreshUi(
+        EntityUid console,
+        EntityUid shuttle,
+        string shipName,
+        ShipyardConsoleUiKey uiKey)
+    {
+        if (!TryComp<ActivatableUIComponent>(console, out var uiComp))
+            return;
+
+        var actors = _ui.GetActors(console, uiKey);
+
+        foreach (var actor in actors)
+        {
+            if (!TryComp<BankAccountComponent>(actor, out var bank))
+                continue;
+
+            var sellValue = ComputeSellValue(shuttle, uiKey);
+
+            RefreshState(
+                console,
+                bank.Balance,
+                true,
+                shipName,
+                sellValue,
+                true,
+                uiKey
+            );
+        }
+    }
+
+
     private void PlayDenySound(EntityUid uid, ShipyardConsoleComponent component)
     {
         _audio.PlayPvs(_audio.GetSound(component.DenySound), uid, AudioParams.Default.WithMaxDistance(0.01f));
@@ -708,15 +777,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
 
             var sellValue = deed?.ShuttleUid != null
-                ? (int)_pricing.AppraiseGrid((EntityUid)deed.ShuttleUid)
+                ? ComputeSellValue((EntityUid) deed.ShuttleUid, (ShipyardConsoleUiKey) uiComp.Key)
                 : 0;
 
-            if (uiComp.Key is ShipyardConsoleUiKey.BlackMarket
-                or ShipyardConsoleUiKey.Syndicate)
-            {
-                var tax = (int)(sellValue * 0.30f);
-                sellValue -= tax;
-            }
 
             var fullName = deed != null ? GetFullName(deed) : null;
             RefreshState(uid, bank.Balance, true, fullName, sellValue, targetId.HasValue, (ShipyardConsoleUiKey)uiComp.Key);
@@ -932,7 +995,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             });
             _shuttle.AddIFFFlag(shuttle.Owner, IFFFlags.IsPlayerShuttle);
             var comp = EnsureComp<ShipPriceMultiplierComponent>(shuttle.Owner);
-            comp.priceMultiplier = 0.25f;
+            comp.priceMultiplier = 0.50f;
 
             // match our IFF faction with our spawner's
             if (TryComp<IFFComponent>(Transform(uid).GridUid, out var stationIFF))
@@ -949,8 +1012,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         EntityUid product = EntityManager.SpawnAtPosition("ShuttleOwnershipChip", new EntityCoordinates(uid, 0, 0));
         var deedID = EnsureComp<ShuttleDeedComponent>(product);
         AssignShuttleDeedProperties(deedID, shuttle.Owner, name,  user);
-        _metadata.SetEntityName(product, $"{MetaData(product).EntityName} - {deedID.ShuttleName} {deedID.ShuttleNameSuffix}");
-        _metadata.SetEntityDescription(product, $"{MetaData(product).EntityDescription} It is owned by {idCardComponent.FullName}.");
+        _metaData.SetEntityName(product, $"{MetaData(product).EntityName} - {deedID.ShuttleName} {deedID.ShuttleNameSuffix}");
+        _metaData.SetEntityDescription(product, $"{MetaData(product).EntityDescription} It is owned by {idCardComponent.FullName}.");
 
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttle.Owner);
         AssignShuttleDeedProperties(deedShuttle, shuttle.Owner, name, user);
@@ -958,9 +1021,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var channel = component.ShipyardChannel;
 
 
-        int sellValue = 0;
-        if (TryComp<ShuttleDeedComponent>(product, out var deed))
-            sellValue = (int) _pricing.AppraiseGrid((EntityUid) (deed?.ShuttleUid!));
+        int sellValue = ComputeSellValue(shuttle.Owner, (ShipyardConsoleUiKey)ui.Key);
+
 
         EnsureComp<ShipSpeedByMassAdjusterComponent>(shuttle.Owner);
         if (TryComp<DynamicCodeHolderComponent>(shuttle.Owner, out var shuttleCodes))

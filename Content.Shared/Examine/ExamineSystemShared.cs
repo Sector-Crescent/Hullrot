@@ -264,10 +264,17 @@ namespace Content.Shared.Examine
 
             var hasDescription = false;
 
-            //Add an entity description if one is declared
+            // Add an entity description if one is declared
             if (!string.IsNullOrEmpty(EntityManager.GetComponent<MetaDataComponent>(entity).EntityDescription))
             {
-                message.AddText(EntityManager.GetComponent<MetaDataComponent>(entity).EntityDescription);
+                try
+                {
+                    message.AddMarkupOrThrow(EntityManager.GetComponent<MetaDataComponent>(entity).EntityDescription);
+                }
+                catch (Exception _)
+                {
+                    message.AddText(EntityManager.GetComponent<MetaDataComponent>(entity).EntityDescription);
+                }
                 hasDescription = true;
             }
 

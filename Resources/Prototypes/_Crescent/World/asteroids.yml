@@ -1,0 +1,237 @@
+- type: entity
+  id: HullrotLowYieldRock
+  parent: BaseDebrisNF
+  name: Low Yield Rock
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorAsteroidSand
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorAsteroidSand:
+          - id: RandomArtifactSpawner20
+            prob: 0.001
+            orGroup: rock
+          - id: WallRock
+            prob: 0.5
+            orGroup: rock
+          - id: WallRockCoal
+            prob: 0.01
+            orGroup: rock
+          - id: WallRockTin
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockQuartz
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockCopper
+            prob: 0.02
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#d67e27"
+
+- type: entity
+  id: HullrotLowYieldSmall
+  parent: HullrotLowYieldRock
+  name: Asteroid Debris Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 35
+
+- type: entity
+  id: HullrotLowYieldLarge
+  parent: HullrotLowYieldRock
+  name: Asteroid Debris Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 58
+
+- type: entity
+  id: HullrotLowYieldLarger
+  parent: HullrotLowYieldRock
+  name: Asteroid Debris Larger
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 96
+
+- type: entity
+  id: HullrotLowYieldLargest
+  parent: HullrotLowYieldRock
+  name: Asteroid Debris Largest
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 300
+
+- type: entity
+  id: HullrotMediumYield
+  parent: BaseDebrisNF
+  name: Medium Yield Rock
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorBasalt
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorBasalt:
+          - id: RandomArtifactSpawner20
+            prob: 0.01
+            orGroup: rock
+          - id: WallRockBasalt
+            prob: 0.5
+            orGroup: rock
+          - id: WallRockBasaltUranium
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockBasaltSilver
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockBasaltGold
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockBasaltArtifactFragment
+            prob: 0.0002
+            orGroup: rock
+          - id: WallRockBasaltCopper
+            prob: 0.07
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#b5b5b5"
+
+- type: entity
+  id: HullrotMediumYieldSmall
+  parent: HullrotMediumYield
+  name: Asteroid Debris Small
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 50
+
+- type: entity
+  id: HullrotMediumYieldMedium
+  parent: HullrotMediumYield
+  name: Asteroid Debris
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 100
+
+- type: entity
+  id: HullrotMediumYieldLarge
+  parent: HullrotMediumYield
+  name: Asteroid Debris
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 12
+      floorPlacements: 150
+
+- type: entity
+  id: HullrotHighYield
+  parent: BaseDebrisNF
+  name: Salvage Chromite Asteroid
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorChromite
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorChromite:
+          - id: WallRockChromite
+            prob: 0.5
+            orGroup: rock
+          - id: WallRockChromitePlasma
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockChromiteArtifactFragment
+            prob: 0.005
+            orGroup: rock
+          - id: WallRockChromiteTungsten
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockChromiteCoal
+            prob: 0.03
+            orGroup: rock
+          - id: WallRockChromiteTin
+            prob: 0.05
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#8178cc"
+
+- type: entity
+  id: HullrotHighYieldSmall
+  parent: HullrotHighYield
+  name: Asteroid Debris Small
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 10
+      floorPlacements: 25
+
+- type: entity
+  id: HullrotHighYieldMedium
+  parent: HullrotHighYield
+  name: Asteroid Debris
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 10
+      floorPlacements: 50
+
+- type: entity
+  id: HullrotHighYieldLarge
+  parent: HullrotHighYield
+  name: Asteroid Debris
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 10
+      floorPlacements: 100
+
+- type: entity
+  id: HullrotHighYieldLarger
+  parent: HullrotHighYield
+  name: Asteroid Debris
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      radius: 10
+      floorPlacements: 200

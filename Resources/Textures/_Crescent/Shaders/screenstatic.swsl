@@ -1,0 +1,19 @@
+uniform highp vec4 rgb_color; // RGB color between 0 and 255
+uniform highp float addition_level; // Number between 0 and 1
+
+highp float noise(highp vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
+}
+
+void fragment() {
+    highp vec2 coord = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
+
+    highp float noisepixel = noise(TIME * coord);
+
+    highp vec4 colorednoise = rgb_color * noisepixel;
+
+    COLOR.xyz = colorednoise.xyz;
+    COLOR.a = addition_level;
+}

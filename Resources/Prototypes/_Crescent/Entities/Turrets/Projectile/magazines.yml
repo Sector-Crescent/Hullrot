@@ -271,7 +271,7 @@
       tags:
         - Cartridge20mm
     proto: Cartridge20mm
-    capacity: 250
+    capacity: 200
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:
@@ -313,7 +313,7 @@
       tags:
         - Cartridge20mmGyrostable
     proto: Bullet20mmGyrostable
-    capacity: 250
+    capacity: 200
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:
@@ -355,7 +355,7 @@
       tags:
         - Cartridge20mmPlasma
     proto: Bullet20mmPlasma
-    capacity: 250
+    capacity: 100
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:
@@ -424,7 +424,16 @@
     size: Normal
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
-    state: base
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
   - type: Tag
     tags:
       - GistumClip
@@ -446,7 +455,16 @@
     size: Normal
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
-    state: base-gyrostable
+    layers:
+    - state: base-gyrostable
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
   - type: Tag
     tags:
       - GistumClip
@@ -468,7 +486,16 @@
     size: Normal
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/gistum.rsi
-    state: base-plasma
+    layers:
+    - state: base-plasma
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
   - type: Tag
     tags:
       - GistumClip

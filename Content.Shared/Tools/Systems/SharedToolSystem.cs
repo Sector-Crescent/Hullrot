@@ -27,7 +27,6 @@ public abstract partial class SharedToolSystem : EntitySystem
     [Dependency] protected readonly ItemToggleSystem ItemToggle = default!;
     [Dependency] private   readonly SharedMapSystem _maps = default!;
     [Dependency] private   readonly SharedPopupSystem _popup = default!;
-    [Dependency] protected readonly SharedSolutionContainerSystem SolutionContainerSystem = default!;
     [Dependency] private   readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private   readonly TileSystem _tiles = default!;
     [Dependency] private   readonly TurfSystem _turfs = default!;

@@ -31,15 +31,15 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 40
-      fireRate: 3
+      projectileSpeed: 80
+      fireRate: 2
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
     - type: BallisticAmmoProvider
       cycleable: false
-      capacity: 12
+      capacity: 18
       fillWithDoAfter: true
       fillDelay: 1
       proto: Cartridge48mmRocket
@@ -78,14 +78,14 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 40
-      fireRate: 4.5
+      projectileSpeed: 80
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
     - type: BallisticAmmoProvider
       cycleable: false
-      capacity: 18
+      capacity: 12
       fillWithDoAfter: true
       fillDelay: 1
       proto: Cartridge48mmRocket
@@ -126,7 +126,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 100
       fireRate: 2
       selectedMode: FullAuto
       availableModes:
@@ -173,7 +173,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 65
+      projectileSpeed: 100
       fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
@@ -181,7 +181,7 @@
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
     - type: BallisticAmmoProvider
       cycleable: false
-      capacity: 8
+      capacity: 6
       fillWithDoAfter: true
       fillDelay: 1.5
       proto: Cartridge60mmRocket
@@ -217,7 +217,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
+      projectileSpeed: 100
       fireRate: 3
       selectedMode: FullAuto
       availableModes:
@@ -225,9 +225,9 @@
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
     - type: BallisticAmmoProvider
       cycleable: false
-      capacity: 10
+      capacity: 7
       fillWithDoAfter: true
-      fillDelay: 0.25
+      fillDelay: 1
       proto: Cartridge60mmRocket
       whitelist:
         tags:
@@ -268,7 +268,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 70
       fireRate: 1.2
       selectedMode: FullAuto
       availableModes:
@@ -320,8 +320,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 2
+      projectileSpeed: 70
+      fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -372,7 +372,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 50
+      projectileSpeed: 70
       fireRate: 0.85
       selectedMode: FullAuto
       availableModes:
@@ -432,7 +432,7 @@
       zeroVisible: true
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 30
+      projectileSpeed: 60
       fireRate: 0.3
       selectedMode: FullAuto
       availableModes:
@@ -487,8 +487,8 @@
       zeroVisible: true
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 30
-      fireRate: 0.8
+      projectileSpeed: 60
+      fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -571,7 +571,7 @@
   id: BaseWeaponTurretPila
   suffix: ShipGun
   name: 30mm 'Pila' minirocket swarmer platform
-  description: A small 
+  description: A small
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Missile/pila.rsi
@@ -597,7 +597,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 25
+      projectileSpeed: 50
       fireRate: 4
       selectedMode: FullAuto
       availableModes:

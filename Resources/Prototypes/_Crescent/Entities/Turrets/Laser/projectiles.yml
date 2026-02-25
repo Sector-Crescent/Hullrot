@@ -4,19 +4,18 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Radiation: 25
         Heat: 35
-        Structural: 30
   - type: ProjectileIFF
     visualType: Circle
     color: Blue
   - type: EmpOnTrigger
-    range: 3
+    range: 5
     energyConsumption: 2500
     disableDuration: 6
   - type: PointLight
@@ -24,7 +23,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 9 #1080
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -36,13 +35,13 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 80
-        Structural: 100
+        Heat: 90
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -51,7 +50,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 14 #2520
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -63,13 +62,13 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 80
-        Structural: 150
+        Heat: 170
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -78,7 +77,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 20
+    lifetime: 22 #3080m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -90,18 +89,19 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 130
-        Structural: 300
+        Heat: 300
+  - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 150
-    intensitySlope: 15
-    totalIntensity: 150
+    maxIntensity: 200
+    intensitySlope: 50
+    totalIntensity: 20000
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -110,7 +110,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 20
+    lifetime: 17 #3400
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:

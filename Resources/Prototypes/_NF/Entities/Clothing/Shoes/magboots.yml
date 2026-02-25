@@ -75,7 +75,7 @@
   components:
   - type: InstantAction
     icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-combat.rsi, state: icon }
-    iconOn: _NF/Clothing/Shoes/Boots/magboots-combat.rsi/icon-on.png
+    iconOn: { sprite: _NF/Clothing/Shoes/Boots/magboots-combat.rsi, state: icon-on }
 
 - type: entity
   id: ActionToggleMagbootsNfsd
@@ -84,7 +84,7 @@
   components:
   - type: InstantAction
     icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi, state: icon }
-    iconOn: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi/icon-on.png
+    iconOn: { sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi, state: icon-on }
 
 - type: entity
   id: ActionToggleMagbootsPirate
@@ -93,7 +93,7 @@
   components:
   - type: InstantAction
     icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi, state: icon }
-    iconOn: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi/icon-on.png
+    iconOn: { sprite: _NF/Clothing/Shoes/Boots/magboots-pirate.rsi, state: icon-on }
 
 - type: entity
   id: ActionToggleMagbootsMercenary
@@ -102,7 +102,7 @@
   components:
   - type: InstantAction
     icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi, state: icon }
-    iconOn: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi/icon-on.png
+    iconOn: { sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi, state: icon-on }
 
 - type: entity
   id: ActionToggleMagbootsGaloshes
@@ -111,4 +111,4 @@
   components:
   - type: InstantAction
     icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-galoshes.rsi, state: icon }
-    iconOn: _NF/Clothing/Shoes/Boots/magboots-galoshes.rsi/icon-on.png
+    iconOn: { sprite: _NF/Clothing/Shoes/Boots/magboots-galoshes.rsi, state: icon-on }

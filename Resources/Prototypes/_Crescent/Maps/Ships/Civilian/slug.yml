@@ -3,7 +3,7 @@
 
 - type: vessel
   id: Slug
-  name: TS Slug
+  name: Slug
   description: |
     Recycled from the remains of a destroyed cargo ship, the Slug now lives it's second life as a salvage ship. It's cargo hold now acting as a salvage bay. Remember to lock your console before leaving the ship unattended.
     MINIMUM CREW: 1x Pilot
@@ -24,7 +24,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: industrial
+            state: civilian
         - type: StationNameSetup
           mapNameTemplate: 'Slug {1}'
           nameGenerator:

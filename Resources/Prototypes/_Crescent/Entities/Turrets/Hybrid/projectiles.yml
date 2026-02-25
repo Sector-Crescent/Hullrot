@@ -5,6 +5,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent # still do not remove
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7" #you have no idea how hard it was to see the previous IFF color
@@ -12,23 +13,19 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 100
+        Structural: 300
         Radiation: 90
   - type: PointLight
     radius: 3.5
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 7 #roughly 560m range
+    lifetime: 10 #1400
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
       - state: infernoshot
   - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent #do not remove
-    mask:
-    - BulletImpassable
-    - Impassable
 
 - type: entity
   id: BulletPlasmaBall
@@ -36,6 +33,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7"
@@ -44,21 +42,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 150
+        Structural: 400
         Radiation: 110
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 150
-    intensitySlope: 15
-    totalIntensity: 150
+    maxIntensity: 220
+    intensitySlope: 45
+    totalIntensity: 800
     maxTileBreak: 6
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 14 #roughly 1,050m range
+    lifetime: 10 #1500
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -70,6 +68,7 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7"
@@ -78,21 +77,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 500
+        Structural: 1000
         Radiation: 120
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 400
-    intensitySlope: 30
-    totalIntensity: 400
+    maxIntensity: 350
+    intensitySlope: 120
+    totalIntensity: 12000
     maxTileBreak: 7
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 21 #roughly 1470m range
+    lifetime: 12 #2160
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:

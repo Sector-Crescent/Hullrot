@@ -16,7 +16,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 600
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -30,20 +30,20 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 4
+      projectileSpeed: 140
+      fireRate: 6
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 45
-      minAngle: 5
-      maxAngle: 15
+      angleDecay: 20
+      minAngle: 12
+      maxAngle: 35
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: .5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -51,8 +51,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaGatling
-      capacity: 60
-      count: 10
+      capacity: 50
+      count: 1
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -77,7 +77,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -91,20 +91,20 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 1.2
+      projectileSpeed: 150
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 25
-      minAngle: 2
-      maxAngle: 8
+      angleDecay: 22
+      minAngle: 12
+      maxAngle: 32
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 3
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -112,8 +112,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaBall
-      capacity: 20
-      count: 10
+      capacity: 25
+      count: 25
     - type: ApcPowerReceiver
       powerLoad: 3500
     - type: HardpointAnchorableOnly
@@ -138,7 +138,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -152,17 +152,20 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
+      projectileSpeed: 180
       fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 30
+      minAngle: 14
+      maxAngle: 35
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 7
+      rechargeCooldown: 10
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -170,8 +173,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaArc
-      capacity: 10
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 5000
     - type: HardpointAnchorableOnly

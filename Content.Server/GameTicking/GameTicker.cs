@@ -42,7 +42,6 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly IBanManager _banManager = default!;
         [Dependency] private readonly IBaseServer _baseServer = default!;
         [Dependency] private readonly IChatManager _chatManager = default!;
-        [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IConsoleHost _consoleHost = default!;
         [Dependency] private readonly IGameMapManager _gameMapManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;

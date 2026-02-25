@@ -6,6 +6,7 @@ using Robust.Shared.Player;
 using Content.Shared.Humanoid;
 using Content.Shared.Abilities.Psionics;
 using Content.Client.Overlays;
+using System.Numerics;
 
 namespace Content.Client.Voidborn;
 

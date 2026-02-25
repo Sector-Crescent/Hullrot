@@ -41,7 +41,6 @@ public sealed partial class ContentAudioSystem
     [Dependency] private readonly IConfigurationManager _configManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IStateManager _state = default!;
     [Dependency] private readonly RulesSystem _rules = default!;
@@ -138,11 +137,11 @@ public sealed partial class ContentAudioSystem
     {
         if (_musicProto == null) //if we don't find any, we play the default track.
         {
-            _musicProto = _proto.Index<AmbientMusicPrototype>("default");
-            _lastBiome = _proto.Index<SpaceBiomePrototype>("default");
+            _musicProto = _protMan.Index<AmbientMusicPrototype>("default");
+            _lastBiome = _protMan.Index<SpaceBiomePrototype>("default");
         }
 
-        SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID);
+        SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);
 
         string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -187,11 +186,11 @@ public sealed partial class ContentAudioSystem
 
         if (_musicProto == null) //if we don't find any, we play the default track.
         {
-            _musicProto = _proto.Index<AmbientMusicPrototype>("default");
-            _lastBiome = _proto.Index<SpaceBiomePrototype>("default");
+            _musicProto = _protMan.Index<AmbientMusicPrototype>("default");
+            _lastBiome = _protMan.Index<SpaceBiomePrototype>("default");
         }
 
-        SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID);
+        SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);
 
         string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -247,11 +246,11 @@ public sealed partial class ContentAudioSystem
 
         if (_musicProto == null) //if we don't find any, we play the default track.
         {
-            _musicProto = _proto.Index<AmbientMusicPrototype>("default");
+            _musicProto = _protMan.Index<AmbientMusicPrototype>("default");
             //_lastBiome = _proto.Index<SpaceBiomePrototype>("default");
         }
 
-        SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID);
+        SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);
 
         string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -323,10 +322,10 @@ public sealed partial class ContentAudioSystem
             combatFactionSuffix = factionComponentString;
 
             //if we find a ambient music prototype for our faction, then pick that one!
-            if (_proto.TryIndex<AmbientMusicPrototype>("combatmode" + combatFactionSuffix, out var factionCombatMusicPrototype))
+            if (_protMan.TryIndex<AmbientMusicPrototype>("combatmode" + combatFactionSuffix, out var factionCombatMusicPrototype))
             {
                 _musicProto = factionCombatMusicPrototype;
-                SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID);
+                SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);
 
                 string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -334,8 +333,8 @@ public sealed partial class ContentAudioSystem
             }
             else //if the faction combat music prototype does not exist, instead fall back to the default.
             {
-                _musicProto = _proto.Index<AmbientMusicPrototype>("combatmodedefault");
-                SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID);
+                _musicProto = _protMan.Index<AmbientMusicPrototype>("combatmodedefault");
+                SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID);
 
                 string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -352,7 +351,7 @@ public sealed partial class ContentAudioSystem
                     if (comp != null)
                     {
                         if (comp.Biome != null)
-                            _lastBiome = _proto.Index<SpaceBiomePrototype>(comp.Biome);
+                            _lastBiome = _protMan.Index<SpaceBiomePrototype>(comp.Biome);
                     }
                 }
             }
@@ -364,13 +363,13 @@ public sealed partial class ContentAudioSystem
             // when combat mode turns off, do we have valid station music to play? if yes, play it. if not, play the biome's music.
             if (_validStationMusic == true)
             {
-                _musicProto = _proto.Index<AmbientMusicPrototype>(_lastStationMusic);
+                _musicProto = _protMan.Index<AmbientMusicPrototype>(_lastStationMusic);
             }
             else
             {
-                _musicProto = _proto.Index<AmbientMusicPrototype>(_lastBiome.ID); //THIS CAN FUCK UP! BECAUSE THE ID MIGHT NOT HAVE MUSIC AND BE A FALLBACK!
+                _musicProto = _protMan.Index<AmbientMusicPrototype>(_lastBiome.ID); //THIS CAN FUCK UP! BECAUSE THE ID MIGHT NOT HAVE MUSIC AND BE A FALLBACK!
             }
-            SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID); //THIS IS WHAT ERRORS!
+            SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID); //THIS IS WHAT ERRORS!
 
             string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 
@@ -414,7 +413,7 @@ public sealed partial class ContentAudioSystem
         List<AmbientMusicPrototype> musictracks = new List<AmbientMusicPrototype>();
 
         bool fallback = true;
-        foreach (var ambience in _proto.EnumeratePrototypes<AmbientMusicPrototype>())
+        foreach (var ambience in _protMan.EnumeratePrototypes<AmbientMusicPrototype>())
         {
             _sawmill.Debug($"logged ambient sound {ambience.ID}");
             musictracks.Add(ambience);
@@ -484,7 +483,7 @@ public sealed partial class ContentAudioSystem
                 if (comp != null)
                 {
                     if (comp.Biome != null)
-                        _lastBiome = _proto.Index<SpaceBiomePrototype>(comp.Biome);
+                        _lastBiome = _protMan.Index<SpaceBiomePrototype>(comp.Biome);
                 }
             }
         }
@@ -496,13 +495,13 @@ public sealed partial class ContentAudioSystem
         // when combat mode turns off, do we have valid station music to play? if yes, play it. if not, play the biome's music.
         if (_validStationMusic == true)
         {
-            _musicProto = _proto.Index<AmbientMusicPrototype>(_lastStationMusic);
+            _musicProto = _protMan.Index<AmbientMusicPrototype>(_lastStationMusic);
         }
         else
         {
-            _musicProto = _proto.Index<AmbientMusicPrototype>(_lastBiome.ID); //THIS CAN FUCK UP! BECAUSE THE ID MIGHT NOT HAVE MUSIC AND BE A FALLBACK!
+            _musicProto = _protMan.Index<AmbientMusicPrototype>(_lastBiome.ID); //THIS CAN FUCK UP! BECAUSE THE ID MIGHT NOT HAVE MUSIC AND BE A FALLBACK!
         }
-        SoundCollectionPrototype soundcol = _proto.Index<SoundCollectionPrototype>(_musicProto.ID); //THIS IS WHAT ERRORS!
+        SoundCollectionPrototype soundcol = _protMan.Index<SoundCollectionPrototype>(_musicProto.ID); //THIS IS WHAT ERRORS!
 
         string path = _random.Pick(soundcol.PickFiles).ToString(); // THIS WILL PICK A RANDOM SOUND. WE MAY WANT TO SPECIFY ONE INSTEAD!!
 

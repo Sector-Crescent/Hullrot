@@ -14,6 +14,21 @@
             Passenger: [ 0, 0 ]
 
 - type: gameMap
+  id: EmptyHullrot
+  mapName: Empty
+  mapPath: /Maps/_Crescent/Test/emptyhullrot.yml
+  minPlayers: 0
+  stations:
+    Empty:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Empty"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ 0, 0 ]
+
+- type: gameMap
   id: Dev
   mapName: Dev
   mapPath: /Maps/Test/dev_map.yml

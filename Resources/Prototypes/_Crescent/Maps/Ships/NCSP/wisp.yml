@@ -1,6 +1,6 @@
 - type: vessel
   id: Wisp
-  name: CS Wisp
+  name: CD Wisp
   description: A repurposed civilian hull, converted into a nimble smuggling shuttle.
   price: 35000
   category: Small
@@ -9,7 +9,7 @@
 
 - type: gameMap
   id: Wisp
-  mapName: 'RC Wisp'
+  mapName: 'CD Wisp'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/wisp.yml
   minPlayers: 0
   stations:
@@ -21,7 +21,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'RC Wisp {1}'
+          mapNameTemplate: 'CD Wisp {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

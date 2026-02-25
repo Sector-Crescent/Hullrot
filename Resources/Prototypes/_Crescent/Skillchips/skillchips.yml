@@ -9,6 +9,35 @@
       layers:
         - state: makeshiftchip
     - type: Skillchip
+      onImplantFunctions:
+      - !type:TraitAddActions
+        actions:
+        - ActionDoorHack
+      onRemoveFunctions:
+      - !type:TraitRemoveActions
+        actions:
+        - ActionDoorHack
+
+
+- type: entity
+  id: ActionDoorHack
+  name: Door Hack
+  description: Breaks open whatever door you target.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 10
+    whitelist:
+      components:
+      - Airlock
+    canTargetSelf: false
+    interactOnMiss: false
+    itemIconStyle: NoItem
+    checkCanInteract: true
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: knock
+    event: !type:DoorHackActionEvent {}
 
 - type: entity
   parent: BaseItem

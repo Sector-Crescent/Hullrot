@@ -136,7 +136,7 @@
   result: MagazineRifleDrum
   completetime: 1
   materials:
-    Steel: 600
+    Steel: 1600
 
 - type: latheRecipe
   id: MagazineRiflePan
@@ -157,7 +157,7 @@
   result: MagazineLightRifleBox
   completetime: 1
   materials:
-    Steel: 9000
+    Steel: 1000
 
 - type: latheRecipe
   id: MagazineHeavyRifleSmall
@@ -445,3 +445,263 @@
     Steel: 600
     Uranium: 600
     Silver: 200
+
+##NEW SHIPGUN RECIPIES##
+
+#Projectiles
+#20mm Screamer Ammo
+- type: latheRecipe
+  id: Screamer20mmRegularRecipe
+  result: Magazine20mm
+  completetime: 2
+  materials:
+    Steel: 1500
+
+- type: latheRecipe
+  id: Screamer20mmGyrostableRecipe
+  result: Magazine20mmGyrostable
+  completetime: 2
+  materials:
+    Steel: 1500
+    Uranium: 500
+
+- type: latheRecipe
+  id: Screamer20mmPlasmaRecipe
+  result: Magazine20mmPlasma
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plasma: 1000
+
+#35mm Scout Ammo
+- type: latheRecipe
+  id: Scout35mmRegularRecipe
+  result: Magazine35mm
+  completetime: 2
+  materials:
+    Steel: 2000
+
+- type: latheRecipe
+  id: Scout35mmGyrostableRecipe
+  result: Magazine35mmGyrostable
+  completetime: 2
+  materials:
+    Steel: 2000
+    Uranium: 1000
+
+- type: latheRecipe
+  id: Scout35mmPlasmaRecipe
+  result: Magazine35mmPlasma
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plasma: 1500
+
+#50mm Whistler Ammo
+- type: latheRecipe
+  id: Whistler50mmRegularRecipe
+  result: Magazine50mm
+  completetime: 2
+  materials:
+    Steel: 3000
+    Plasma: 500
+
+- type: latheRecipe
+  id: Whistler50mmGyrostableRecipe
+  result: Magazine50mmGyrostable
+  completetime: 2
+  materials:
+    Steel: 3000
+    Plasma: 500
+    Uranium: 1500
+
+- type: latheRecipe
+  id: Whistler50mmPlasmaRecipe
+  result: Magazine50mmPlasma
+  completetime: 2
+  materials:
+    Steel: 3000
+    Plasma: 2500
+
+#88mm Corpus Flak Ammo
+- type: latheRecipe
+  id: 88mmFlakRegularRecipe
+  result: MagazineCorpus
+  completetime: 2
+  materials:
+    Steel: 5000
+    Uranium: 500
+
+#90mm Gistum Ammo
+- type: latheRecipe
+  id: Gistum90mmRegularRecipe
+  result: MagazineGistum
+  completetime: 2
+  materials:
+    Steel: 4000
+    Uranium: 500
+    Plasma: 500
+
+- type: latheRecipe
+  id: Gistum90mmGyrostableRecipe
+  result: MagazineGistumGyrostable
+  completetime: 2
+  materials:
+    Steel: 4000
+    Uranium: 2500
+    Plasma: 500
+
+- type: latheRecipe
+  id: Gistum90mmPlasmaRecipe
+  result: MagazineGistumPlasma
+  completetime: 2
+  materials:
+    Steel: 4000
+    Uranium: 500
+    Plasma: 2500
+
+#120mm Pithatis Ammo
+- type: latheRecipe
+  id: Pithatis120mmRegularRecipe
+  result: Cartridge120mm
+  completetime: 2
+  materials:
+    Steel: 1000
+    Uranium: 500
+    Plasma: 500
+
+- type: latheRecipe
+  id: Pithatis120mmGyrostableRecipe
+  result: Cartridge120mmGyrostable
+  completetime: 2
+  materials:
+    Steel: 1000
+    Uranium: 1000
+    Plasma: 500
+
+- type: latheRecipe
+  id: Pithatis120mmPlasmaRecipe
+  result: Cartridge120mmPlasma
+  completetime: 2
+  materials:
+    Steel: 1000
+    Uranium: 500
+    Plasma: 1000
+
+#300mm Pithis Ammo #More like Piss-Is hehehehehehehehe i'm such a fucking chud dude
+- type: latheRecipe
+  id: Pithis300mmRecipe
+  result: Cartridge300mm
+  completetime: 2
+  materials:
+    Steel: 3000
+    Uranium: 1500
+    Plasma: 1500
+
+
+#Missiles
+#48mm Shortbow Ammo
+- type: latheRecipe
+  id: Shortbow48mmRegularRecipe
+  result: Cartridge48mmRocket
+  completetime: 2
+  materials:
+    Steel: 500
+    Plasma: 200
+
+- type: latheRecipe
+  id: Shortbow48mmGorlexRecipe
+  result: Cartridge48mmRocket
+  completetime: 2
+  materials:
+    Steel: 500
+    Plasma: 1000
+
+#60mm Azimuth Ammo
+- type: latheRecipe
+  id: Azimuth60mmRegularRecipe
+  result: Cartridge60mmRocket
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plasma: 500
+
+- type: latheRecipe
+  id: Azimuth60mmGorlexRecipe
+  result: Cartridge60mmRocketGorlex
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plasma: 1500
+
+- type: latheRecipe
+  id: Azimuth60mmNCWLRecipe
+  result: Cartridge60mmRocketNCWL
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plasma: 500
+    Uranium: 1000
+
+- type: latheRecipe
+  id: Azimuth60mmAdvancedRecipe
+  result: Cartridge60mmRocketAdvanced
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plasma: 1500
+    Uranium: 1500
+
+#95mm Arbalest Ammo
+- type: latheRecipe
+  id: Arbalest95mmRegularRecipe
+  result: Cartridge95mmRocket
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plasma: 1000
+
+- type: latheRecipe
+  id: Arbalest95mmNCWLRecipe
+  result: Cartridge95mmRocketNCWL
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plasma: 1000
+    Uranium: 1000
+
+- type: latheRecipe
+  id: Arbalest95mmGorlexRecipe
+  result: Cartridge95mmRocketGSC
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plasma: 2000
+
+#240mm Gargoyle Ammo
+- type: latheRecipe
+  id: Gargoyle240mmRegularRecipe
+  result: Cartridge240mmRocket
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plasma: 2000
+
+- type: latheRecipe
+  id: Gargoyle240mmNCWLRecipe
+  result: Cartridge240mmRocketNCWL
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plasma: 2000
+    Uranium: 1000
+
+#330mm Catapult Ammo
+- type: latheRecipe
+  id: Catapult330mmRegularRecipe
+  result: Cartridge330mmRocket
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plasma: 2000
+    Uranium: 2000

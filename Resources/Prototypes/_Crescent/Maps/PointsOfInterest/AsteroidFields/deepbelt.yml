@@ -1,7 +1,7 @@
 - type: gameMap
   id: Deepbelt
   mapName: 'The "Deepbelt"'
-  mapPath: /Maps/_Crescent/Explorables/deepbelt.yml
+  mapPath: /Maps/_Crescent/POI/defunctminingpost.yml
   minPlayers: 0
   stations:
     Deepbelt:
@@ -10,7 +10,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: asteroid
+            state: asteroids
       components:
         - type: StationNameSetup
           mapNameTemplate: 'The "Deepbelt"'

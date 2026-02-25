@@ -123,4 +123,79 @@
     HeavyMortarCartridge: 1
 
 
+#NEW SHIPGUN AMMO
 
+#Projectiles
+#120mm Pithatis
+- type: factoryRecipe
+  id: 120mmRegularFabrication
+  name: Manufacture 120mm Shell
+  inputs:
+    Steel: 5
+    Plasma: 3
+    Uranium: 3
+  outputs:
+    Cartridge120mm: 1
+
+- type: factoryRecipe
+  id: 120mmGyrostableFabrication
+  name: Manufacture 120mm Gyrostable Shell
+  inputs:
+    Steel: 5
+    Plasma: 5
+    Uranium: 3
+  outputs:
+    Cartridge120mmGyrostable: 1
+
+- type: factoryRecipe
+  id: 120mmPlasmaFabrication
+  name: Manufacture 120mm Plasma Shell
+  inputs:
+    Steel: 5
+    Plasma: 3
+    Uranium: 5
+  outputs:
+    Cartridge120mmPlasma: 1
+
+#300mm Pithis #hahahaha piss-this
+- type: factoryRecipe
+  id: 300mmRegularFabrication
+  name: Manufacture 300mm Shell
+  inputs:
+    Steel: 30
+    Plasma: 15
+    Uranium: 15
+  outputs:
+    Cartridge300mm: 1
+
+#Missile
+#240mm Gargoyle Ammo
+- type: factoryRecipe
+  id: 240mmRegularFabrication
+  name: Manufacture 240mm Regular Missile
+  inputs:
+    Steel: 10
+    Plasma: 10
+  outputs:
+    Cartridge240mmRocket: 1
+
+- type: factoryRecipe
+  id: 240mmNCWLFabrication
+  name: Manufacture 240mm NCWL Missile
+  inputs:
+    Steel: 10
+    Plasma: 10
+    Uranium: 5
+  outputs:
+    Cartridge240mmRocketNCWL: 1
+
+#330mm Catapult Ammo
+- type: factoryRecipe
+  id: 330mmRegularFabrication
+  name: Manufacture 330mm Regular Rocket
+  inputs:
+    Steel: 10
+    Plasma: 10
+    Uranium: 10
+  outputs:
+    Cartridge240mmRocket: 1

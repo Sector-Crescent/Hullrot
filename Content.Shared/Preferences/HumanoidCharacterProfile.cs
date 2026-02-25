@@ -18,7 +18,6 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Preferences;
 
-
 /// Character profile. Looks immutable, but uses non-immutable semantics internally for serialization/code sanity purposes
 [DataDefinition]
 [Serializable, NetSerializable]
@@ -137,6 +136,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     [DataField]
     public string Faction { get; private set; } = "";
 
+    [DataField]
+    public List<string> CharacterFlags { get; private set; } = new();
+
 
     public HumanoidCharacterProfile(
         string name,
@@ -164,7 +166,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         HashSet<string> traitPreferences,
         HashSet<LoadoutPreference> loadoutPreferences,
         long bankWealth,
-        string proFaction
+        string proFaction,
+        List<string> characterFlags
     )
     {
         Name = name;
@@ -193,7 +196,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         _loadoutPreferences = loadoutPreferences;
         BankBalance = bankWealth;
         Faction = proFaction;
-
+        CharacterFlags = characterFlags;
     }
 
     /// <summary>Copy constructor</summary>
@@ -224,7 +227,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             new HashSet<string>(other.TraitPreferences),
             new HashSet<LoadoutPreference>(other.LoadoutPreferences),
             other.BankBalance,
-            other.Faction) { }
+            other.Faction,
+            other.CharacterFlags) { }
 
     /// <summary>
     ///     Get the default humanoid character profile, using internal constant values.
@@ -424,6 +428,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
     public HumanoidCharacterProfile WithFaction(string newFaction) => new(this) { Faction = newFaction };
     public HumanoidCharacterProfile WithBank(long amount) => new(this) { BankBalance = amount };
+    public HumanoidCharacterProfile WithCharacterFlags(List<string> characterFlags) => new(this) { CharacterFlags = characterFlags };
 
 
 public string Summary =>
@@ -456,7 +461,8 @@ public string Summary =>
             && Appearance.MemberwiseEquals(other.Appearance)
             && FlavorText == other.FlavorText
             && Faction == other.Faction
-            && BankBalance == other.BankBalance;
+            && BankBalance == other.BankBalance
+            && CharacterFlags.SequenceEqual(other.CharacterFlags);
     }
 
     public void EnsureValid(ICommonSession session, IDependencyCollection collection)
@@ -669,6 +675,7 @@ public string Summary =>
         hashCode.Add(Customspeciename);
         hashCode.Add(Faction);
         hashCode.Add(BankBalance);
+        hashCode.Add(CharacterFlags);
         return hashCode.ToHashCode();
     }
 

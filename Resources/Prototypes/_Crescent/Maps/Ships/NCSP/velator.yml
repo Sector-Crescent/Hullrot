@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Velator
-  name: NCSP Velator
+  name: CD Velator
   description: A light Syndicate electronic warfare corvette with an onboard saboteur's armory.
   price: 60000
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Velator
-  mapName: 'NCSP Velator'
+  mapName: 'CD Velator'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/velator.yml
   minPlayers: 0
   stations:
@@ -24,7 +24,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'RC Velator {1}'
+          mapNameTemplate: 'CD Velator {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -30,11 +30,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 3.8
-      projectileSpeed: 80
+      fireRate: 8
+      projectileSpeed: 150
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 10
+      minAngle: 6
+      maxAngle: 20
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ItemSlots
       slots:
@@ -55,7 +58,7 @@
             tags:
               - Cartridge20mm
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 2000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -91,8 +94,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 4.3
-      projectileSpeed: 85
+      fireRate: 8
+      projectileSpeed: 150
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -116,7 +119,7 @@
             tags:
               - Cartridge20mm
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 1000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -152,11 +155,14 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 6
+      projectileSpeed: 130
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 6
+      minAngle: 3
+      maxAngle: 12
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ContainerContainer
       containers:
@@ -181,7 +187,7 @@
             tags:
               - Cartridge35mm
     - type: ApcPowerReceiver
-      powerLoad: 1000
+      powerLoad: 2500
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Small
@@ -216,11 +222,14 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
-      fireRate: 1.5
+      projectileSpeed: 100
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 4
+      minAngle: 2
+      maxAngle: 8
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: ContainerContainer
       containers:
@@ -279,8 +288,8 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 65
-      fireRate: 2.2
+      projectileSpeed: 100
+      fireRate: 2.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -345,11 +354,14 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
+      projectileSpeed: 200
       fireRate: 0.5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
+      angleDecay: 4
+      minAngle: 3
+      maxAngle: 8
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
@@ -363,7 +375,7 @@
         tags:
         - Cartridge120mm
     - type: ApcPowerReceiver
-      powerLoad: 3500
+      powerLoad: 2000
     - type: HardpointAnchorableOnly
       class: Ballistic
       size: Medium
@@ -397,12 +409,17 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
-      fireRate: 1.5
-      selectedMode: FullAuto
+      projectileSpeed: 150
+      burstFireRate: 4.5
+      burstCooldown: 1.2
+      selectedMode: Burst
       availableModes:
-        - FullAuto
+        - Burst
+      angleDecay: 3
+      minAngle: 2
+      maxAngle: 6
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
+    - type: MagazineAmmoProvider
     - type: ContainerContainer
       containers:
         ballistic-ammo: !type:Container
@@ -411,7 +428,7 @@
       slots:
         gun_magazine:
           name: Magazine
-          #startingItem: MagazineGistum
+          startingItem: MagazineGistum
           insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
           priority: 2
@@ -442,8 +459,8 @@
       powerLoad: 800
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 2.1
+      projectileSpeed: 150
+      fireRate: 2.8
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -485,11 +502,14 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
-      fireRate: 0.4
+      projectileSpeed: 250
+      fireRate: 0.2
       selectedMode: SemiAuto
       availableModes:
         - SemiAuto
+      angleDecay: 1.5
+      minAngle: 8
+      maxAngle: 18
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
       soundInsert:
@@ -522,14 +542,18 @@
         - state: ncwl-howitzer
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 1.1
+      projectileSpeed: 250
+      fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: ApcPowerReceiver
       powerLoad: 8500
+    - type: BallisticAmmoProvider
+      fillDelay: 3.5
+      cycleable: true
+      capacity: 2
 
 #FLAK
 
@@ -564,8 +588,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
-      fireRate: 0.65
+      projectileSpeed: 100
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto

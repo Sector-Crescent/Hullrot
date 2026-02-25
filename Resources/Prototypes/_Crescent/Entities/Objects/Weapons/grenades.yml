@@ -542,12 +542,12 @@
 
 - type: entity
   name: SHI HG-13M2 Mini-grenade
-  description: A small and weak grenade but still devastating if one explodes point plank. Made by Shinora
+  description: A small thermobaric grenade dealing light damage over a large area. Made by Shinora
   parent: GrenadeBase
   id: HG13M2MiniHandgrenade
   components:
   - type: OnUseTimerTrigger
-    delay: 3.5
+    delay: 2.5
   - type: Item
     size: Tiny
   - type: Sprite
@@ -555,9 +555,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Fragmentation
-    maxIntensity: 25
-    intensitySlope: 100
-    totalIntensity: 250
+    maxIntensity: 10
+    intensitySlope: 4
+    totalIntensity: 400
     canCreateVacuum: false
   - type: TimerTriggerVisuals
     primingSound:
@@ -588,9 +588,10 @@
     maxIntensity: 15
     intensitySlope: 15
     totalIntensity: 450
+    canCreateVacuum: false
   - type: EmpOnTrigger
     range: 2
-    energyConsumption: 2700000
+    energyConsumption: 5000
   - type: DeleteOnTrigger
   - type: TimerTriggerVisuals
     primingSound:
@@ -602,6 +603,39 @@
   - type: EmitSoundOnLand
     sound:
       collection: FlashGrenadeSFX
+
+- type: entity
+  name: SHI HG-19 Smart-EMP-grenade
+  description: An EMP version of the classic HG-17 used in special operations, tuned to match the HG-17 in its performance, made by Shinora.
+  parent: GrenadeBase
+  id: SHIHG19SmartHandgrenadeEMP
+  components:
+  - type: OnUseTimerTrigger
+    delay: 1.5
+    delayOptions: [1, 1.5, 2.5, 3.5, 5]
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Grenades/shi_smart.rsi
+    color: "#bcbdcf"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Electric
+    maxIntensity: 35
+    intensitySlope: 25
+    totalIntensity: 600
+    canCreateVacuum: false
+  - type: EmpOnTrigger
+    range: 3
+    energyConsumption: 5000
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: "/Audio/_Crescent/Weapons/Grenades/trigger2.ogg"
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Grenades/grab1.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: FragGrenadeSFX
 
 - type: entity
   name: SHI HG-17 Smart-grenade

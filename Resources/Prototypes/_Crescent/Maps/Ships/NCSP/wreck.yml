@@ -1,7 +1,7 @@
 
 - type: vessel
   id: Wreck
-  name: RC Wreck
+  name: CD Wreck
   description: An asteroid strapped with a gun.
   price: 26000
   category: Small
@@ -10,7 +10,7 @@
 
 - type: gameMap
   id: Wreck
-  mapName: 'RC Wreck'
+  mapName: 'CD Wreck'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/wreck.yml
   minPlayers: 0
   stations:
@@ -22,7 +22,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: fighter
         - type: StationNameSetup
-          mapNameTemplate: 'RC Wreck {1}'
+          mapNameTemplate: 'CD Wreck {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

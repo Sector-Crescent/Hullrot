@@ -4,7 +4,7 @@
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitImperialWorker
   name: imperial worker hardsuit
-  description: A modular worker's hardsuit, bears the colors of the Kaiser and House Olywir.
+  description: A modular worker's hardsuit, bears the colors of the Kaiserin and House Kircheis.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateworker.rsi
@@ -40,7 +40,7 @@
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitInspector
   name: mk. IV 'ORATEUR' combat hardsuit
-  description: A modular combat hardsuit for the Advocati Compliance Corps. Bears the colors of the Kaiser's administration.
+  description: A modular combat hardsuit for the Advocati Compliance Corps. Bears the colors of the Kaiserin's administration.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/inspector.rsi
@@ -59,7 +59,7 @@
       flatReductions:
         Blunt: 25
         Slash: 25
-        Piercing: 65
+        Piercing: 50
         Heat: 25
         Caustic: 25
   - type: ClothingSpeedModifier
@@ -174,7 +174,7 @@
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitImperialCommand
   name: imperial command hardsuit
-  description: A modular commander's hardsuit, bearing the colors of House Olywir.
+  description: A modular commander's hardsuit, bearing the colors of House Kircheis.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatecommand.rsi
@@ -210,7 +210,7 @@
   parent: [ClothingOuterHardsuitBase,StreeCredRedeemableLow]
   id: ClothingOuterHardsuitImperialSoldier
   name: imperial 'JANNISSARY' mk I combat hardsuit
-  description: A modular soldier's hardsuit, bears the colors of the Kaiser and House Olywir.
+  description: A modular soldier's hardsuit, bears the colors of the Kaiserin and House Kircheis.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatesoldier.rsi
@@ -246,7 +246,7 @@
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitImperialKnight
   name: imperial 'KONIGSCHILD' mk II combat hardsuit
-  description: A modular knight's hardsuit, bears the colors of the Kaiser and House Olywir.
+  description: A modular knight's hardsuit, bears the colors of the Kaiserin and House Kircheis.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateknight.rsi
@@ -411,7 +411,7 @@
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatImperialAdvocatus
   name: advocati coat
-  description: An ornate, durathread-reinforced officer's coat bearing House Olywir colors.
+  description: An ornate, durathread-reinforced officer's coat bearing House Kircheis colors.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/advocatus.rsi

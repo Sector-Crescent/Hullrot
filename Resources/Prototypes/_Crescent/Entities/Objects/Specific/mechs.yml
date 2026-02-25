@@ -36,11 +36,11 @@
       types:
         Blunt: 40
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.25
-    baseSprintSpeed: 2.25
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 2.5
     weightlessFriction: 0.4
-    weightlessAcceleration: 0.33
-    weightlessModifier: 4.5 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.1
+    weightlessModifier: 8 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -107,11 +107,11 @@
         Blunt: 40
         Structural: 90
   - type: MovementSpeedModifier
-    baseWalkSpeed: 0.75
-    baseSprintSpeed: 1.75
-    weightlessFriction: 0
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2
+    weightlessFriction: 0.4
     weightlessAcceleration: 0.1
-    weightlessModifier: 4.75 # 15ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessModifier: 10 # 15ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -136,7 +136,7 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCageUraniumCell
+      - PowerCagePlasmaCell
 
 
 - type: entity
@@ -175,11 +175,11 @@
       types:
         Blunt: 25
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.25
-    baseSprintSpeed: 2
+    baseWalkSpeed: 2.7
+    baseSprintSpeed: 2.7
     weightlessFriction: 0.4
-    weightlessAcceleration: 0.33
-    weightlessModifier: 6 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.2
+    weightlessModifier: 7.5 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -242,11 +242,11 @@
       types:
         Blunt: 25
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.75
-    baseSprintSpeed: 2.75
+    baseWalkSpeed: 3.2
+    baseSprintSpeed: 3.2
     weightlessFriction: 0.4
-    weightlessAcceleration: 0.4
-    weightlessModifier: 4 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.3 #best handling mech in space
+    weightlessModifier: 7 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -313,11 +313,11 @@
   - type: Damageable
     damageModifierSet: HeavyArmorNT
   - type: MovementSpeedModifier
-    baseWalkSpeed: 0.5
-    baseSprintSpeed: 0.95 # not a full 50% nerf for SHI because this poor mech is never used anyway
-    weightlessFriction: 0
-    weightlessAcceleration: 0.1
-    weightlessModifier: 5.5 # 10ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    baseWalkSpeed: 1.8
+    baseSprintSpeed: 1.8
+    weightlessFriction: 0.1
+    weightlessAcceleration: 0.1 #handles still the worst
+    weightlessModifier: 11 # 10ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -343,7 +343,7 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCageUraniumCell
+      - PowerCageBananiumCell
 
 - type: entity
   id: MechDSMPaladin
@@ -385,11 +385,11 @@
         Blunt: 40
         Structural: 90
   - type: MovementSpeedModifier
-    baseWalkSpeed: 0.75
-    baseSprintSpeed: 1.75
+    baseWalkSpeed: 2.1
+    baseSprintSpeed: 2.1
     weightlessFriction: 0
-    weightlessAcceleration: 0.15
-    weightlessModifier: 4.75 # 15ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.15 # handles well for a medium mech
+    weightlessModifier: 9.5 # 15ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -414,11 +414,12 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCageUraniumCell
+      - PowerCagePlasmaCell
 
 - type: entity
   id: PowerCageUraniumCell
   name: charged uranium exosuit powercell
+  description: A tried and tested conventional nuclear powercell used in many applications.
   parent: PowerCageHigh
   suffix: Mech Battery
   components:
@@ -429,6 +430,38 @@
   - type: Battery
     maxCharge: 7500
     startingCharge: 7500
+
+- type: entity
+  id: PowerCagePlasmaCell
+  name: charged plasma exosuit powercell
+  description: An experimental variation of the traditional powercell used for exosuits. Higher power density but much more unstable. Use with caution!
+  parent: PowerCageHigh
+  suffix: Mech Battery
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Specific/mechbattery.rsi
+    layers:
+    - state: battery
+    color: "#e89eff"
+  - type: Battery
+    maxCharge: 17500
+    startingCharge: 17500
+
+- type: entity
+  id: PowerCageBananiumCell
+  name: charged bananium exosuit powercell
+  description: A gilded powercell based on an artifact recovered from the "Hadal fog" features uninteligible engravings which when removed make the cell non-functional.
+  parent: PowerCageHigh
+  suffix: Mech Battery
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Specific/mechbattery.rsi
+    layers:
+    - state: battery
+    color: "#fbff00"
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
 
 - type: entity
   id: MechDSMSepulchre
@@ -470,11 +503,11 @@
         Blunt: 40
         Structural: 90
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.0
-    baseSprintSpeed: 1.25
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2
     weightlessFriction: 0
     weightlessAcceleration: 0.33
-    weightlessModifier: 5.35 # 18ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessModifier: 10 # 18ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF
@@ -537,11 +570,11 @@
       types:
         Blunt: 25
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.25
-    baseSprintSpeed: 2
+    baseWalkSpeed: 2.8
+    baseSprintSpeed: 2.8
     weightlessFriction: 0.4
-    weightlessAcceleration: 0.33
-    weightlessModifier: 6 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.2
+    weightlessModifier: 7.5 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF

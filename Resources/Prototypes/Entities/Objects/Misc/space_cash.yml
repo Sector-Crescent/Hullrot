@@ -158,6 +158,17 @@
 
 - type: entity
   parent: SpaceCash
+  id: SpaceCash15000
+  suffix: 15000
+  components:
+  - type: Icon
+    sprite: _NF/Objects/Economy/cash.rsi # Frontier: use Frontier sprite set
+    state: cash_10000 # Frontier: cash_1000<cash_10000
+  - type: Stack
+    count: 15000
+
+- type: entity
+  parent: SpaceCash
   id: SpaceCash20000
   suffix: 20000
   components:
@@ -166,6 +177,18 @@
     state: cash_10000 # Frontier: cash_1000<cash_10000
   - type: Stack
     count: 20000
+
+
+- type: entity
+  parent: SpaceCash
+  id: SpaceCash25000
+  suffix: 25000
+  components:
+  - type: Icon
+    sprite: _NF/Objects/Economy/cash.rsi # Frontier: use Frontier sprite set
+    state: cash_10000 # Frontier: cash_1000<cash_10000
+  - type: Stack
+    count: 25000
 
 - type: entity
   parent: SpaceCash

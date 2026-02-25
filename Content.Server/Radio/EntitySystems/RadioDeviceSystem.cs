@@ -38,7 +38,6 @@ public sealed class RadioDeviceSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly LanguageSystem _language = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid)> _recentlySent = new();

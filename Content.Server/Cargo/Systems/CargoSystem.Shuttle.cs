@@ -25,6 +25,8 @@ namespace Content.Server.Cargo.Systems;
 
 public sealed partial class CargoSystem
 {
+    [Dependency] private readonly INetConfigurationManager _cfgManager = default!;
+
     /*
      * Handles cargo shuttle / trade mechanics.
      */

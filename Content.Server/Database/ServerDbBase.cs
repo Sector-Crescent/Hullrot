@@ -247,8 +247,8 @@ namespace Content.Server.Database
                     CustomColorTint = l.CustomColorTint, CustomHeirloom = l.CustomHeirloom, Selected = true,
                 }).ToHashSet(),
                 profile.BankBalance,
-                profile.Faction
-
+                profile.Faction,
+                profile.CharacterFlags.ToList()
             );
         }
 
@@ -290,6 +290,7 @@ namespace Content.Server.Database
             profile.Faction = humanoid.Faction;
             profile.BankBalance = humanoid.BankBalance;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
+            profile.CharacterFlags = humanoid.CharacterFlags.ToArray();
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(

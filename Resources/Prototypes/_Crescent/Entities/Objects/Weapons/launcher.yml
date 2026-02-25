@@ -91,12 +91,15 @@
   - type: DamageOtherOnHit
     staminaCost: 14
   - type: Execution
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
 
 - type: entity
   name: SHI LAM-17 84mm
   parent: [BaseWeaponLauncher, BaseGunWieldable,StreeCredRedeemable]
   id: WeaponLauncherDisposableRocket
-  description: A single-shot, throwaway rocket launcher designed by Shinora for combating mechs in the field. Quite compact when folded.
+  description: A single-shot, throwaway rocket launcher designed by Shinora for combating mechs in the field. Fits compactly in a backpack but takes time to ready when needed.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/disposablerpg.rsi
@@ -105,12 +108,18 @@
         map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/disposablerpg.rsi
+    slots:
+    - Back
+    - suitStorage
   - type: GunRequiresWield
   - type: Item
     shape:
-    - 0,0,5,2
+    - 0,0,3,1
+  - type: UseDelay
+    delay: 3 #Time to ready the launcher from the folded state
+  - type: UseDelayBlockShoot
   - type: Gun
-    fireRate: 0.5
+    fireRate: 1
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/rpg_fire.ogg
   - type: BallisticAmmoProvider

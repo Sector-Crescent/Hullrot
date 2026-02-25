@@ -2,7 +2,7 @@
   id: Cartridge48mmRocket
   name: 48mm assault rocket
   description: Luckily not armed. You think.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -25,7 +25,7 @@
   id: Cartridge48mmRocketGorlex
   name: dread gorlex 48mm assault rocket
   description: Luckily not armed. You think. Seems to be a Gorlex Security Consulting-modified warhead.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -50,7 +50,7 @@
   id: Cartridge60mmRocketGorlex
   name: dread gorlex 60mm light missile
   description: Luckily not armed. You think. Seems to be a Gorlex Security Consulting-modified warhead.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -73,7 +73,7 @@
   id: Cartridge60mmRocketNCWL
   name: homeguard-issue 60mm light missile
   description: Luckily not armed. You think. Seems to be a Homeguard Fleet-issue warhead.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -96,7 +96,7 @@
   id: Cartridge60mmRocket
   name: 60mm light missile
   description: Luckily not armed. You think.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -119,7 +119,7 @@
   id: Cartridge60mmRocketAdvanced
   name: advanced 60mm light missile
   description: Luckily not armed. You think. This seems to be an improved design.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -144,7 +144,7 @@
   id: Cartridge95mmRocket
   name: high-explosive 95mm heavy assault missile
   description: Luckily not armed. You think.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -167,7 +167,7 @@
   id: Cartridge95mmRocketNCWL
   name: homeguard-issue 95mm heavy assault missile
   description: Luckily not armed. You think. Seems to be issued by the Homeguard Fleet. Seems to have a bigger fuel bay and heavier armor plating than usual.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -190,7 +190,7 @@
   id: Cartridge95mmRocketGSC
   name: dread gorlex 95mm heavy assault missile
   description: Luckily not armed. You think. Seems to be a Gorlex-modified design. Seems to have upgraded thruster nozzles and a bigger payload, although the tracking module has been degraded and the fuel bay is smaller than usual.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -215,7 +215,7 @@
   id: Cartridge240mmRocket
   name: 240mm heat-seeking heavy torpedo
   description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -239,7 +239,7 @@
   id: Cartridge240mmRocketNCWL
   name: homeguard-issue 240mm heat-seeking heavy torpedo
   description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down. This one seems to be issued by the Union Homeguard, upgraded in all aspects.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:
@@ -265,7 +265,7 @@
   id: Cartridge330mmRocket
   name: 330mm heat-seeking heavy cruise missile
   description: A massive, bulky cruise missile with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down.
-  parent: BaseCartridge
+  parent: MissileBaseCartridge
   components:
   - type: Tag
     tags:

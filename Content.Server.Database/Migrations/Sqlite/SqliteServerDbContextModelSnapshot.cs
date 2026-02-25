@@ -787,6 +787,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("bank_balance");
 
+                    b.Property<string>("CharacterFlags")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("character_flags");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")

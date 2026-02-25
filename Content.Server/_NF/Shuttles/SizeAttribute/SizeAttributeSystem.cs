@@ -5,6 +5,7 @@ using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Systems;
 using Content.Shared.Item.PseudoItem;
 using Content.Shared.Nyanotrasen.Item.PseudoItem;
+using Content.Shared.Sprite;
 
 
 namespace Content.Server.SizeAttribute

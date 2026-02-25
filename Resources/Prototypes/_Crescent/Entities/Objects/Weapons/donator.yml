@@ -796,3 +796,166 @@
     containers:
       item:
       - PlasmaSword
+#@no_originality donor railgun
+- type: entity
+  name: NT-Pattern Enoch Railgun
+  parent: [BaseItem, StreeCredRedeemable, BaseGunWieldable]
+  id: WeaponSpecialRailgunEnoch
+  description: A railgun prototype of Nanotrasen design, reclaimed from the depths of the Boundary's fog. On this one's stock is scratched a phrase, Hence nothing remains except for our regrets.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/enoch.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Large
+    sprite: _Crescent/Objects/Weapons/Guns/enoch.rsi
+    shape:
+    - 0,0,5,2
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: BaseCartridgeRailgun15mm
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRailgun15mm
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    boltClosed: true
+    canRack: false
+    soundBoltClosed: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundBoltOpened: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+    soundRack: /Audio/Weapons/Guns/Cock/revolver_cock.ogg
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/enoch.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+  - type: GunRequiresWield
+  - type: Appearance
+  - type: Gun
+    fireRate: 2
+    projectileSpeed: 45
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/railgun.ogg
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+
+- type: entity
+  name: NT-Pattern Japhet Charge Rifle 6x24mm
+  parent: [BaseWeaponRifle, StreeCredRedeemableLow]
+  id: WeaponJaphetChargeRifle
+  description: A charge rifle prototype of Nanotrasen design, reclaimed from the depths of the Boundary's fog. An orchid is crudely drawn on the side of the rifle's barrel.
+  components:
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/japhet.rsi
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/japhet.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/charged.ogg
+    fireOnDropChance: 0.5
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine6x24mmCharge
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine6x24mm
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge6x24mmCharge
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge6x24mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+
+#Sweet Morningstar @naelmiros donator gun
+- type: entity
+  name: Sweet Morningstar 11mm submachinegun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMorningStar
+  description: Handcrafted modification by Libitina of the legendary WT50. With a sapphire coating on the outside and a ruby heart on the right side. Death has never been so rich or so sweet with this weapon.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 7
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1.5
+    angleDecay: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunTopMounted
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGunTopMounted
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 11
+    zeroVisible: true
+  - type: Appearance

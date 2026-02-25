@@ -5,7 +5,7 @@ trait-description-Dockta = [color = green]
     a mishmash of Solarian Basic, Low Imperial and much from other languages that immigrated to Sector Crescent, integrated to be used
     with aggressive hand gestures to communicate with others in zero-atmosphere, zero-gravity space. [color = red]
     A translator device for this language is available as a T1 research for all factions, and printable at a Pristine Microforge. [/color]
-    
+
 
 trait-name-HighImperial = High Imperial
 trait-description-HighImperial = A language primarily used by the nobility of Old Terra. With influences primarily from European linguistics, High Imperial is considered a dead language today, kept alive only by the small population of devoted Imperial citizenry and nobility.
@@ -26,7 +26,7 @@ trait-description-Kaishago = [color = green]
 trait-name-LowImperial = Low Imperial
 trait-description-LowImperial = [color = green]
     This is the primary language of the DSM faction. All DSM members are able to speak and understand it. [/color]
-    The language spoken in the majority of Mandate space. A butchering of ancient romance languages like French and Romanian, 
+    The language spoken in the majority of Mandate space. A butchering of ancient romance languages like French and Romanian,
     colored in multiple dialects that are still somehow mutually understood. [color = red]
     A translator device for this language is available as a T1 research for all factions, and printable at a Pristine Microforge. [/color]
 
@@ -48,3 +48,8 @@ trait-description-IPMBionicPryarm = PLACEHOLDER
 
 trait-name-SHIBionicEye = SHI Bionic Eye
 trait-description-SHIBionicEye = PLACEHOLDER
+
+character-flag-requirement = You must {$inverted ->
+    [true] not have
+    *[other] have
+} done [color=red]something specific[/color].

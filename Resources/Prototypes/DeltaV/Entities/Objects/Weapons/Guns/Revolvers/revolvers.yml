@@ -28,9 +28,6 @@
   id: WeaponRevolverSnubSecurity
   description: An old and reliable revolver, modified to be more easily concealed. Uses 8.3×33mm ammo.
                The serial number on the handguard marks this gun as belonging to an NT Security Officer.
-  components:
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: snubbed .45
@@ -46,8 +43,6 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: k-38 masterpiece
@@ -80,9 +75,6 @@
   id: WeaponRevolverK38MasterSecurity
   description: A classic, if not outdated, law enforcement firearm. Uses .38 special ammo.
                The serial number on the handguard marks this gun as belonging to an NT Security Officer.
-  components:
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: k-38 masterpiece
@@ -98,8 +90,6 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: fitz special
@@ -132,9 +122,6 @@
   id: WeaponRevolverFitzSecurity
   description: A compact and concealable self defence snub revolver. Uses .38 special ammo.
                The serial number on the handguard marks this gun as belonging to an NT Security Officer.
-  components:
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: fitz special
@@ -150,8 +137,6 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: lucky 37

@@ -284,8 +284,6 @@
             Slash: 15
             Heat: 35
             Structural: 25 # "expertly contained to cut through nearly any material" yet it had no structural damage
-  - type: GuideHelp
-    guides: [ SecurityWeapons ]
 
 - type: entity
   name: double-bladed energy sword
@@ -312,8 +310,8 @@
     activatedDamage:
         types:
             Slash: 25
-            Heat: 35
-            Structural: 75
+            Heat: 50
+            Structural: 150
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
@@ -346,7 +344,7 @@
     size: Small
     sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
   - type: Reflect
-    reflectProb: .35
+    reflectProb: .5
     minReflectProb: .50
     spread: 75
   - type: UseDelay

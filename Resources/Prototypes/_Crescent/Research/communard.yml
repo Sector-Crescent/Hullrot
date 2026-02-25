@@ -64,9 +64,7 @@
   cost: 5000
   recipeUnlocks:
   - VanguardLPC
-  - ZorniyLPC
   - LodkaLPC
-  - CherenzikovLPC
 
 - type: technology
   id: CommunardKrechet
@@ -79,7 +77,7 @@
   cost: 8000
   recipeUnlocks:
   - KrechetLPC
-  
+
 - type: technology
   id: CommunardMolot
   name: research-technology-communard-molot
@@ -91,7 +89,7 @@
   cost: 8000
   recipeUnlocks:
   - MolotLPC
-  
+
 - type: technology
   id: CommunardIvarod
   name: research-technology-communard-ivarod
@@ -103,7 +101,7 @@
   cost: 8000
   recipeUnlocks:
   - IvarodLPC
-  
+
 - type: technology
   id: CommunardHind
   name: research-technology-communard-corvette
@@ -115,7 +113,7 @@
   cost: 8500
   recipeUnlocks:
   - HindLPC
-  
+
 - type: technology
   id: CommunardGargut
   name: research-technology-communard-carrier
@@ -127,18 +125,6 @@
   cost: 8500
   recipeUnlocks:
   - GargutLPC
-  
-- type: technology
-  id: CommunardVanguardMarkTwo
-  name: research-technology-communard-vanguardmktwo
-  icon:
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    state: icon
-  discipline: Communard
-  tier: 2
-  cost: 8000
-  recipeUnlocks:
-  - VanguardMarkTwoLPC
 
 - type: technology
   id: CommunardHeavyInfantry
@@ -166,9 +152,11 @@
     state: lancer
   discipline: Communard
   tier: 2
-  cost: 10000
+  cost: 15000
   recipeUnlocks:
   - LancerFlatpack
+  - WeaponMechSword
+  - WeaponMechCombatLightRifle
 
 - type: technology
   id: CommunardGrenadeLauncher
@@ -226,9 +214,11 @@
     state: bogatyr
   discipline: Communard
   tier: 3
-  cost: 12500
+  cost: 20000
   recipeUnlocks:
   - BogatyrFlatpack
+  - WeaponMechMaul
+  - WeaponMechCombatHeavyRifle
 
 - type: technology
   id: CommunardCommienaut
@@ -254,3 +244,20 @@
   recipeUnlocks:
   - NCWLKukri
   - ClothingBeltSheathNCWLKukri
+
+- type: technology
+  id: NCWLCraftingComponents
+  name: research-technology-communard-craftcomps
+  icon:
+    sprite: _Crescent/Objects/Materials/materials.rsi
+    state: tubeloaderrobotics
+  discipline: Communard
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - BallisticCyclerNCWL
+  - TubeLoaderNCWL
+  - AdvancedMechatronics1Craft
+  - AdvancedElectronics1Craft
+  - LaserLocus1Craft
+  - HardlightGenerator1Craft

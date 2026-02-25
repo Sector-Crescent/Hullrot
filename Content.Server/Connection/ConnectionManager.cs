@@ -242,7 +242,7 @@ namespace Content.Server.Connection
                             ("reason", Loc.GetString("panic-bunker-account-reason-account", ("hours", minHoursAge)))), null);
                 }
 
-                var minOverallHours = _cfg.GetCVar(CCVars.PanicBunkerMinOverallHours);
+                var minOverallHours = _cfg.GetCVar(CCVars.PanicBunkerMinOverallMinutes);
                 var overallTime = ( await _db.GetPlayTimes(e.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
                 var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalHours > minOverallHours;
 
@@ -256,7 +256,7 @@ namespace Content.Server.Connection
                 {
                     return (ConnectionDenyReason.Panic,
                         Loc.GetString("panic-bunker-account-denied-reason",
-                            ("reason", Loc.GetString("panic-bunker-account-reason-overall", ("hours", minOverallHours)))), null);
+                            ("reason", Loc.GetString("panic-bunker-account-reason-overall", ("minutes", minOverallHours)))), null);
                 }
 
                 if (!validAccountAge || !haveMinOverallTime && !bypassAllowed)

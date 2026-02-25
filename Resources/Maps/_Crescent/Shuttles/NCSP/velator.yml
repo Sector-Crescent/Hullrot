@@ -31,8 +31,13 @@ entities:
     - type: MetaData
       name: grid
     - type: Transform
-      pos: -0.5817401,-0.5668977
-      parent: invalid
+    - type: Map
+      mapPaused: True
+
+    - type: GridTree
+
+    - type: Broadphase
+    - type: OccluderTree
     - type: MapGrid
       chunks:
         0,0:

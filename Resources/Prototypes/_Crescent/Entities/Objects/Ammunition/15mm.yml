@@ -39,6 +39,11 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent #it be almost a shipgun speed wise
+  - type: ShipWeaponProjectile
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
   - type: Projectile
     damage:
       types:

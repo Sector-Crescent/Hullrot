@@ -65,7 +65,7 @@ namespace Content.Server.GameTicking
 
                     RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
 
-                    if (firstConnection && _configurationManager.GetCVar(CCVars.AdminNewPlayerJoinSound))
+                    if (firstConnection && _cfg.GetCVar(CCVars.AdminNewPlayerJoinSound))
                         _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/newplayerping.ogg"),
                             Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
                             audioParams: new AudioParams { Volume = -5f });

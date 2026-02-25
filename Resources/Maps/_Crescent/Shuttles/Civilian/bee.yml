@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 11/29/2025 07:07:23
+  time: 01/16/2026 08:32:52
   entityCount: 58
 maps: []
 grids:
@@ -18,8 +18,7 @@ tilemap:
   5: FloorTechMaint
   1: Lattice
   4: Plating
-  0: PlatingBurnt
-  3: PlatingDamaged
+  0: PlatingDamaged
 entities:
 - proto: ""
   entities:
@@ -152,6 +151,7 @@ entities:
             91: 0,5
             94: 0,5
             97: 0,5
+            100: 0,5
         - node:
             id: LatticeEdgeS
           decals:
@@ -177,6 +177,8 @@ entities:
             95: 0,6
             96: 0,5
             98: 0,6
+            99: 0,5
+            101: 0,6
         - node:
             id: LatticeEdgeW
           decals:
@@ -265,7 +267,10 @@ entities:
     - type: ShuttleDeed
       shuttleName: Shuttle BET-725
       shuttleUid: 1
-    - type: SelfDeleteGrid
+    - type: VesselIcon
+      iffIcon:
+        sprite: _Crescent/ShipIcons/ifficons.rsi
+        state: fighter
 - proto: AAAHardpointFixed
   entities:
   - uid: 2
@@ -274,9 +279,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,4.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 30
     - type: Physics
       canCollide: False
 - proto: AirlockShuttle
@@ -348,6 +350,14 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
+- proto: BaseWeaponTurretPila
+  entities:
+  - uid: 30
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,4.5
+      parent: 1
 - proto: BoriaticGeneratorHerculesShuttle
   entities:
   - uid: 15
@@ -359,6 +369,41 @@ entities:
       on: False
     - type: Physics
       bodyType: Static
+- proto: C_ComputerShuttle
+  entities:
+  - uid: 38
+    components:
+    - type: Transform
+      pos: 0.5,1.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        2:
+        - - Group1
+          - Toggle
+        - - Group2
+          - SpaceArtilleryFire
+    - type: NamedModules
+      buttonNames:
+      - Toggle 30mm 'Pila'
+      - Fire 30mm 'Pila'
+      - Module C
+      - Module D
+      - Module E
+    - type: ContainerContainer
+      containers:
+        board: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        disk_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        id_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: CableApcExtension
   entities:
   - uid: 16
@@ -441,41 +486,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,0.5
       parent: 1
-- proto: ComputerShuttle
-  entities:
-  - uid: 30
-    components:
-    - type: Transform
-      pos: 0.5,1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        disk_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        id_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: DeviceLinkSource
-      linkedPorts:
-        2:
-        - - Group1
-          - Toggle
-        - - Group2
-          - SpaceArtilleryFire
-    - type: NamedModules
-      buttonNames:
-      - Toggle Idnas
-      - Fire Idna
-      - Module C
-      - Module D
-      - Module E
 - proto: Gyroscope
   entities:
   - uid: 31
@@ -526,18 +536,6 @@ entities:
     - type: Transform
       pos: 0.5,1.5
       parent: 1
-- proto: ShuttleGunTorpedo
-  entities:
-  - uid: 38
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,4.5
-      parent: 1
-    - type: Battery
-      startingCharge: 19937.412
-    - type: ApcPowerReceiverBattery
-      enabled: True
 - proto: SubstationBasic
   entities:
   - uid: 39
