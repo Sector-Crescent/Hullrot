@@ -1,19 +1,132 @@
-#The "projectile" used for the hullrot lasguns. Original is RedLaser.
-- type: hitscan
-  id: HullrotRedLaser
-  damage:
-    types:
-      Heat: 20 #original was 14 also HEAT DAMAGE IS FUCKED AGAINST ARMOR WHAT
-      Blunt: 25
-  muzzleFlash:
+#the projectile used for hullrot lasguns, i pray this one works
+- type: entity
+  id: InfantryLasboltMedium
+  name: las bolt
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 26
+        Structural: 20
+    harmorPenetration: 15
+    stoppingPower: 1
+    color: "#ff0101"
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque # WWDP allow shooting through windows
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: PointLight
+    radius: 3
+    color: "#ff0101"
+    energy: 1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi #_Crescent/Objects/Weapons/Projectiles/plasma.rsi
+    layers:
+      - state: beam #icon
+    color: "#ff0101"
+    rotation: 90
+  - type: ProjectilePhasePrevent
+
+- type: entity
+  id: InfantryLasboltPistol
+  name: pistol las bolt
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 15
+        Structural: 20
+    harmorPenetration: 15
+    stoppingPower: 1
+    color: "#07ff13"
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque # WWDP allow shooting through windows
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: PointLight
+    radius: 3
+    color: "#07ff13"
+    energy: 1
+  - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_laser
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser
+    layers:
+      - state: beam #icon
+    color: "#07ff13"
+    rotation: 90
+  - type: ProjectilePhasePrevent
+
+- type: entity
+  name : hullrot disabler bolt
+  id: HullrotBulletDisabler
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque # WWDP allow shooting through windows
+  - type: Ammo
+  - type: StaminaDamageOnCollide
+    damage: 20
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    #damage:
+      #types:
+        #Shock: 2 #removed this because it ceases to be non-lethal lmao
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+
+######################
 
 #Energy Cells
 - type: entity
@@ -35,7 +148,8 @@
     sprite: Objects/Power/power_cells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: medium
+      state: small
+      color: "#e5222c"
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
@@ -62,7 +176,111 @@
     rating: 2
   - type: PowerCellVisuals
   - type: Riggable
-  - type: HitscanBatteryAmmoProvider
-    proto: HullrotRedLaser
+  - type: ProjectileBatteryAmmoProvider
+    proto: InfantryLasboltMedium
     fireCost: 27 #should give atleast 40 shots, not too many that it's OP, but high enough that it's got viability as a gun.
+  #- type: HitscanBatteryAmmoProvider
+    #proto: HullrotRedLaser
+    #fireCost: 27 #should give atleast 40 shots, not too many that it's OP, but high enough that it's got viability as a gun.
 
+- type: entity
+  name: Laspistol Power Cell
+  id: laspistolpowercell
+  parent: BaseItem
+  components:
+  - type: Item
+    storedRotation: -90
+  - type: Battery
+    maxCharge: 1080 #same size as a regular high-capacity cell
+    startingCharge: 1080
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
+  - type: Sprite
+    sprite: Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: small
+      color: "#07ff13"
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Extractable
+    juiceSolution:
+      reagents:
+        - ReagentId: Zinc
+          Quantity: 5
+  - type: Tag
+    tags:
+      - PowerCell
+      - EnergygunCell
+  - type: Appearance
+  - type: MachinePart
+    part: PowerCell
+    rating: 2
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: ProjectileBatteryAmmoProvider
+    proto: InfantryLasboltPistol
+    fireCost: 13 #gives it 80 shots, more ammo, but it's weaker than a proper lasgun.
+
+- type: entity
+  name: Disabler Power Cell
+  id: lasgunpowercelldisabler
+  parent: BaseItem
+  components:
+  - type: Item
+    storedRotation: -90
+  - type: Battery
+    maxCharge: 1080 #same size as a regular high-capacity cell
+    startingCharge: 1080
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
+  - type: Sprite
+    sprite: Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: small
+      color: "#22cee5"
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Extractable
+    juiceSolution:
+      reagents:
+        - ReagentId: Zinc
+          Quantity: 5
+  - type: Tag
+    tags:
+      - PowerCell
+      - EnergygunCell
+  - type: Appearance
+  - type: MachinePart
+    part: PowerCell
+    rating: 2
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: ProjectileBatteryAmmoProvider
+    proto: HullrotBulletDisabler
+    fireCost: 27 #should give the battery 40 shots
