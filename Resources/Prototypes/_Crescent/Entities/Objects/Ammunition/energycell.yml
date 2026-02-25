@@ -119,9 +119,9 @@
     damage: 20
   - type: Projectile
     impactEffect: BulletImpactEffectDisabler
-    #damage:
-      #types:
-        #Shock: 2 #removed this because it ceases to be non-lethal lmao
+    damage:
+      types:
+        Shock: 1 #can't remove this because it just makes it deal blunt... which is fucked
     soundHit:
       collection: WeakHit
     forceSound: true
@@ -129,9 +129,12 @@
 ######################
 
 #Energy Cells
+
+#Lasrifle Energy Cell
 - type: entity
-  name: Lasgun Power Cell
-  id: lasgunpowercell
+  name: SHI 90c Las-rifle Power Cell
+  id: lasgunriflepowercell
+  description: The SHI 90c Las-rifle Power Cell is the most ubiquitous weapons-grade power cell in the taypan market today. Able to be used as a regular power cell, in times of need.
   parent: BaseItem
   components:
   - type: Item
@@ -183,9 +186,11 @@
     #proto: HullrotRedLaser
     #fireCost: 27 #should give atleast 40 shots, not too many that it's OP, but high enough that it's got viability as a gun.
 
+#Laspistol Energy Cell
 - type: entity
-  name: Laspistol Power Cell
-  id: laspistolpowercell
+  name: SHI 60c Las-pistol Power Cell
+  id: lasgunpistolpowercell
+  description: The SHI 60c Las-pistol Power Cell is the most ubiquitous weapons-grade power cell in the taypan market today. Able to be used as a regular power cell, in times of need.
   parent: BaseItem
   components:
   - type: Item
@@ -223,7 +228,7 @@
   - type: Tag
     tags:
       - PowerCell
-      - EnergygunCell
+      - PistolEnergygunCell
   - type: Appearance
   - type: MachinePart
     part: PowerCell
@@ -234,9 +239,11 @@
     proto: InfantryLasboltPistol
     fireCost: 13 #gives it 80 shots, more ammo, but it's weaker than a proper lasgun.
 
+#Disabler Energy Cell
 - type: entity
-  name: Disabler Power Cell
+  name: SHI 30c "Yamete" Disabler Power Cell
   id: lasgunpowercelldisabler
+  description: The SHI 30c "Yamete" Disabler Power Cell is a power cell tuned to non-lethal frequencies, for capturing your targets alive. Wish your foes a SHInotastic! ending with this power cell.
   parent: BaseItem
   components:
   - type: Item
@@ -274,7 +281,7 @@
   - type: Tag
     tags:
       - PowerCell
-      - EnergygunCell
+      - DisablerEnergyCell
   - type: Appearance
   - type: MachinePart
     part: PowerCell

@@ -2,8 +2,9 @@
 
 #Lasrifle
 - type: entity
-  name: Las gun
-  id: lasgun
+  name: SHI 90c 'Taiyo' Laser Rifle
+  id: SHIlasgunrifle
+  description: SHI 90c 'Taiyo' Laser Rifle is Shinohara's most generic, reliable, and best selling energy rifle on the market. Able to slot in any power cell to use as it's ammunition.
   parent: BaseItem
   components:
   - type: Sprite
@@ -42,7 +43,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: lasgunpowercell
+        startingItem: lasgunriflepowercell
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         whitelist:
@@ -86,12 +87,13 @@
 
 #Laspistol
 - type: entity
-  name: Las pistol
-  id: laspistol
+  name: SHI 60c 'Hoshi' Laser Pistol
+  id: SHIlasgunpistol
+  description: SHI 60c 'Hoshi' Laser Pistol is Shinohara's most generic, reliable, and best selling energy pistol on the market. Able to slot in any power cell to use as it's ammunition. Unable to use Las-rifle power cells.
   parent: BaseItem
   components:
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/lasgun_generic.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/lasgun_generic_pistol.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -103,19 +105,20 @@
     steps: 5
     zeroVisible: true
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/lasgun_generic.rsi
+    sprite: Objects/Weapons/Guns/Battery/taser.rsi
     quickEquip: false
     slots:
-    - Back
     - suitStorage
+    - Belt
   - type: Item
-    size: Huge
+    size: Small
     shape:
-    - 0,0,4,1
+    - 0,0,1,0
+    - 0,1,0,1
   - type: AmmoCounter
   - type: Gun
     projectileSpeed: 35 #it go pew pew
-    fireRate: 5
+    fireRate: 3 #slower then the regular las rifle
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -126,13 +129,16 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: lasgunpowercell
+        startingItem: lasgunpistolpowercell
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         whitelist:
           tags:
             - PowerCell
             - PowerCellSmall
+            - PistolEnergygunCell
+        blacklist:
+          tags:
             - EnergygunCell
   - type: Appearance
   - type: StaticPrice
@@ -149,18 +155,12 @@
     swapKeys: true
     disableHeavy: true
     animation: WeaponArcThrust
-    wideAnimationRotation: 90
+    wideAnimationRotation: 180
     soundHit:
       collection: MetalThud
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Blunt: 10
   - type: DamageOtherOnHit
     staminaCost: 10
     zeroVisible: true
-  - type: Wieldable
-  - type: GunRequiresWield
   # Shitmed Change
   - type: Cautery
     speed: 0.9
