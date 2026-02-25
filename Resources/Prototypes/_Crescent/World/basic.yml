@@ -577,10 +577,10 @@
 - type: spaceBiome
   id: AsteroidCentralBelt
   priority: 9000
-  minX: -15
-  maxX: 15
-  minY: -15
-  maxY: 15
+  minX: -7
+  maxX: 7
+  minY: -7
+  maxY: 7
   noiseRanges: {}
   chunkComponents:
   - type: DebrisFeaturePlacerController

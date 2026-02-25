@@ -362,6 +362,22 @@
   - type: ShipVoucher
     ship: Lodka
 
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherVasinya
+  name: NCWL 'Vasinya' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a communard corvette-class combat pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 42500
+  - type: ShipVoucher
+    ship: Vasinya
 
 #T0 END
 
@@ -1071,22 +1087,7 @@
   - type: ShipVoucher
     ship: Wisp
 
-- type: entity
-  parent: BaseItem
-  id: ShipVoucherSpriggan
-  name: NCSP 'Spriggan' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a NCSP Spriggan class mining ship. Has to be redeemed at a shipyard console.
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Crescent/Objects/Misc/lpcchip.rsi
-    layers:
-    - state: icon
-  - type: StaticPrice
-    price: 38000
-  - type: ShipVoucher
-    ship: Spriggan
+
 
 - type: entity
   parent: BaseItem
@@ -1847,3 +1848,58 @@
     price: 0 #Don't want this to be free money - it's just for drugrunning
   - type: ShipVoucher
     ship: Beelzebub
+
+#Cyberdawn CD ships
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherCDLungspot
+  name: CD 'Lungspot' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a light escort fighter.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 40000
+  - type: ShipVoucher
+    ship: Lungspot
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherSpriggan
+  name: CD 'Spriggan' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a CD Spriggan class mining ship. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 38000
+  - type: ShipVoucher
+    ship: Spriggan
+
+#IPM
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherFridge
+  name: IPM 'Fridge' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a IPM 'Fridge' Armed Hauler. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 25000
+  - type: ShipVoucher
+    ship: Fridge

@@ -51,6 +51,8 @@
     - BasicMechatronicsFromCombinedScrap
     - BallisticCyclerFromCombinedScrap
     - HardsuitElectronicsFromCombinedScrap
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 - type: entity
   parent: [ BaseMachinePowered, ConstructibleMachine ]
@@ -105,6 +107,8 @@
     - BasicMechatronicsFromCombinedScrap
     - BallisticCyclerFromCombinedScrap
     - HardsuitElectronicsFromCombinedScrap
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #drugs
 
@@ -196,6 +200,8 @@
       - CryostasisBeaker
       - SyringeCryostasis
       - StasisBedMachineCircuitboardBiochemical
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
   - type: Anchorable
     flags:
     - Anchorable
@@ -1435,6 +1441,8 @@
       - WeaponCaseShotgun
       - WeaponCaseGl
       - WeaponCaseAmmo
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
   - type: Machine
     board: MicroforgeCircuitboard
@@ -1470,6 +1478,8 @@
     runningState: base_machine_processing
     staticRecipes:
     - JugBoriaticFuelCraft
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #ship parts
 
@@ -1506,6 +1516,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #organs
 
@@ -1538,6 +1550,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 
 #crates
@@ -1580,6 +1594,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #shi
 
@@ -1620,6 +1636,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #saws
 
@@ -1661,6 +1679,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #indie
 
@@ -1668,7 +1688,7 @@
   parent: BaseLathe
   id: GliessTradeGoodPrinter
   name: Gliess Santo commodity fablathe
-  description: A hacked fablathe preloaded with many commodity patterns. A independent merchant's best friend.
+  description: A hacked fablathe preloaded with many commodity patterns. An independent merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1701,6 +1721,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #ncwl
 
@@ -1741,6 +1763,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #ipm
 
@@ -1779,6 +1803,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #Newport
 
@@ -1786,7 +1812,7 @@
   parent: BaseLathe
   id: NewportTradeGoodPrinter
   name: Newport commodity fablathe
-  description: A cheap fablathe preloaded with many commodity patterns. A independent merchant's best friend.
+  description: A cheap fablathe preloaded with many commodity patterns. An independent merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1821,6 +1847,8 @@
   - type: Anchorable
     flags:
     - Anchorable
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
 #Freeport
 
@@ -1828,7 +1856,7 @@
   parent: BaseLathe
   id: FreeportTradeGoodPrinter
   name: Freeport commodity fablathe
-  description: A hacked fablathe preloaded with many commodity patterns. An shady merchant's best friend.
+  description: A hacked fablathe preloaded with many commodity patterns. A shady merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1862,4 +1890,5 @@
   - type: Anchorable
     flags:
     - Anchorable
-
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
