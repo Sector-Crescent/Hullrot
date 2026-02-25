@@ -1,0 +1,68 @@
+#The "projectile" used for the hullrot lasguns. Original is RedLaser.
+- type: hitscan
+  id: HullrotRedLaser
+  damage:
+    types:
+      Heat: 20 #original was 14 also HEAT DAMAGE IS FUCKED AGAINST ARMOR WHAT
+      Blunt: 25
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_laser
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_laser
+
+#Energy Cells
+- type: entity
+  name: Lasgun Power Cell
+  id: lasgunpowercell
+  parent: BaseItem
+  components:
+  - type: Item
+    storedRotation: -90
+  - type: Battery
+    maxCharge: 1080 #same size as a regular high-capacity cell
+    startingCharge: 1080
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
+  - type: Sprite
+    sprite: Objects/Power/power_cells.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: medium
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Extractable
+    juiceSolution:
+      reagents:
+        - ReagentId: Zinc
+          Quantity: 5
+  - type: Tag
+    tags:
+      - PowerCell
+      - EnergygunCell
+  - type: Appearance
+  - type: MachinePart
+    part: PowerCell
+    rating: 2
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: HitscanBatteryAmmoProvider
+    proto: HullrotRedLaser
+    fireCost: 27 #should give atleast 40 shots, not too many that it's OP, but high enough that it's got viability as a gun.
+
