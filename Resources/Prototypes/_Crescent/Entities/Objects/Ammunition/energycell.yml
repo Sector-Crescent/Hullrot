@@ -8,9 +8,9 @@
   - type: Projectile
     damage:
       types:
-        Heat: 26
+        Heat: 15
         Structural: 20
-    harmorPenetration: 15
+    #harmorPenetration: 15
     stoppingPower: 1
     color: "#ff0101"
   - type: Fixtures
@@ -51,9 +51,9 @@
   - type: Projectile
     damage:
       types:
-        Heat: 15
-        Structural: 20
-    harmorPenetration: 15
+        Heat: 8
+        Structural: 10
+    #harmorPenetration: 15
     stoppingPower: 1
     color: "#07ff13"
   - type: Fixtures
@@ -116,7 +116,7 @@
         - Opaque # WWDP allow shooting through windows
   - type: Ammo
   - type: StaminaDamageOnCollide
-    damage: 20
+    damage: 10
   - type: Projectile
     impactEffect: BulletImpactEffectDisabler
     damage:
