@@ -28,6 +28,12 @@
     autoCycle: false
     proto: ShellShotgun4gBuckshot
   - type: ItemSlots
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponShotgunToz123
+      - WeaponShotgunProletar
+      - WeaponShotgunDoubleBarreledNCWL
 
 - type: entity
   name: NCWL Toz-97 Proletar 12g
@@ -54,6 +60,10 @@
     tags:
     - WeaponShotgunKammerer
   - type: Wieldable
+  - type: ReverseEngineering
+    recipes:
+      - WeaponShotgunProletar
+      - WeaponShotgunDoubleBarreledNCWL
 
 - type: entity
   name: CDT C-12R Tuber 12g
@@ -96,6 +106,9 @@
   - type: DamageOtherOnHit
     staminaCost: 8.0
   - type: Appearance
+  - type: ReverseEngineering
+    recipes:
+      - WeaponShotgunTuberCyberdawn
 
 - type: entity
   name: PTA MOD-1 Twinshot 12g
@@ -244,6 +257,10 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponShotgunBlaster
+      - WeaponShotgunSHIDoubleBarreled4g
 
 - type: entity
   name: SHI M135 Double-Barrel 12g
@@ -277,6 +294,10 @@
         Blunt: 8.5
   - type: DamageOtherOnHit
     staminaCost: 7.5
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponShotgunSHIDoubleBarreled4g
+      - WeaponShotgunBlaster
 
 - type: entity
   name: IRM DA-13 Reno 12g
@@ -295,6 +316,11 @@
   - type: StaticPrice
     price: 1500
   - type: GunRequiresWield #which chuddy didnt include wielding on this..
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponShotgunReno
+      - WeaponShotgunDSMMatusa
 
 - type: entity
   name: NT SPAS-13 12g
@@ -312,6 +338,11 @@
   - type: BallisticAmmoProvider
   - type: StaticPrice
     price: 2500
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponShotgunSpas
+      - WeaponShotgunEnforcer
 
 - type: entity
   name: IRM DA-2 Matusa 12g
@@ -330,7 +361,6 @@
     - suitStorage
   - type: Gun
     fireRate: 2.5
-    damageModifier: 1.25
     shotgunSpreadMultiplier: 3.5
     selectedMode: SemiAuto
     availableModes:
@@ -345,6 +375,9 @@
     whitelist:
       tags:
       - ShellShotgun
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponShotgunDSMMatusa
 
 - type: entity
   name: NCWL Toz-12 Pioneer Double-Barrel 12g
@@ -383,6 +416,10 @@
     whitelist:
       tags:
       - ShellShotgun
+  - type: ReverseEngineering
+    recipes:
+      - WeaponShotgunDoubleBarreledNCWL
+      - WeaponShotgunProletar
 
 - type: entity
   # Don't parent to BaseWeaponShotgun because it differs significantly
@@ -483,6 +520,11 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponShotgunSaiga12NCSP
+      - WeaponShotgunTuberCyberdawn
 
 - type: entity
   name: HGS VAP-16S Haulikko 12g

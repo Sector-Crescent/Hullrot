@@ -45,6 +45,10 @@
             - CartridgeHeavyPistol
   - type: StaticPrice
     price: 250
+  - type: ReverseEngineering
+    recipes:
+      - WeaponPistolAnsemCyberdawn
+      - WeaponPistolViperWoodCyberdawn
 
 - type: entity
   name: SHI M038s Liquidator 11mm
@@ -114,6 +118,9 @@
       path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
   - type: StaticPrice
     price: 750
+  - type: ReverseEngineering
+    recipes:
+      - WeaponPistolComrade
 
 - type: entity
   name: NT MX-32 Lockwell 9x19mm
@@ -259,6 +266,12 @@
             - CartridgeMagnum
   - type: StaticPrice
     price: 1250
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponPistolT91
+      - WeaponRevolverPython
+      - WeaponPistolComrade
 
 - type: entity
   name: SHI M002 Himehabu 9x19mm
@@ -305,6 +318,10 @@
       path: /Audio/_Crescent/Weapons/Guns/pistol_2/pistol_gunshot_1.ogg
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponRevolverArgenti
+      - WeaponPistolComplianceImperial
 
 - type: entity
   name: SHI-25T Shinobi 12mm
@@ -355,6 +372,11 @@
             - CartridgePistolSmart
   - type: StaticPrice
     price: 3500
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponPistolSmartpistolSHI
+      - WeaponPistolMk58
 
 #single use pistols
 
@@ -551,6 +573,11 @@
             - CartridgeMagnum
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponPistolNeoVolker
+      - WeaponRevolverArgenti
+      - WeaponPistolComplianceImperial
 
 - type: Tag
   id: MagazinePistolSmartgun

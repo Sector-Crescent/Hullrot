@@ -460,6 +460,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - LargeBallisticHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -474,6 +478,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - LargeMissileHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -488,6 +496,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - SmallBallisticHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -502,6 +514,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - SmallMissileHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -516,6 +532,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - MediumBallisticHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -530,6 +550,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - MediumMissileHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -544,6 +568,10 @@
     - state: kit
   - type: StaticPrice
     price: 3000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - CarrionFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -558,6 +586,10 @@
     - state: kit
   - type: StaticPrice
     price: 12000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - BogatyrFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -572,6 +604,10 @@
     - state: kit
   - type: StaticPrice
     price: 12000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - LancerFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -586,6 +622,10 @@
     - state: kit
   - type: StaticPrice
     price: 6500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - MarauderFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -600,6 +640,10 @@
     - state: kit
   - type: StaticPrice
     price: 25000
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - GilgameshFlatpack #If you manage to steal this, you deserve it.
 
 - type: entity
   parent: BaseFlatpack
@@ -642,6 +686,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 500
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - MufflerFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -656,6 +704,10 @@
     - state: kit
   - type: StaticPrice
     price: 25000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - PaladinFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -684,6 +736,10 @@
     - state: kit
   - type: StaticPrice
     price: 12000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - WandererFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -824,7 +880,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 500
-
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - FixedHardpointFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -839,6 +898,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 9000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 4
+    recipes:
+      - ShieldEmitterSmallFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -853,6 +916,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 9000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 5
+    recipes:
+      - ShieldEmitterMediumFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -909,6 +976,9 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - HerculesFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -923,6 +993,9 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - EinsteinFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -959,8 +1032,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretSmallArtilleryFlatpack
-  name: 50mm 'Whistler' light autocannon Flatpack
-  description: Parts used to build a 50mm 'Whistler' light autocannon. Activate with a multitool to deploy.
+  name: 50mm 'Striker' light autocannon Flatpack
+  description: Parts used to build a 50mm 'Striker' light autocannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretSmallArtillery
@@ -969,6 +1042,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretSmallArtilleryFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -983,6 +1060,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretMediumMachinegunFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -997,12 +1078,16 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretSmallMachinegunFlatpack
 
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretMediumArtilleryFlatpack
-  name: 120mm 'Pithatis' mono-barreled artillery cannon Flatpack
-  description: Parts used to build a 120mm 'Pithatis' mono-barreled artillery cannon. Activate with a multitool to deploy.
+  name: 120mm 'Anvil' mono-barreled artillery cannon Flatpack
+  description: Parts used to build a 120mm 'Anvil' mono-barreled artillery cannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretMediumArtillery
@@ -1011,12 +1096,16 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretMediumArtilleryFlatpack
 
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretLargeMachinegunFlatpack
-  name: 90mm 'Gistum' tri-barreled repeater cannon Flatpack
-  description: Parts used to build a 90mm 'Gistum' tri-barreled repeater cannon. Activate with a multitool to deploy.
+  name: 90mm 'Resolute' tri-barreled repeater cannon Flatpack
+  description: Parts used to build a 90mm 'Resolute' tri-barreled repeater cannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretLargeMachinegun
@@ -1025,12 +1114,16 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretLargeMachinegunFlatpack
 
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretLargeArtilleryFlatpack
-  name: 300mm 'Pithis' dual-barreled subnuclear battery Flatpack
-  description: Parts used to build a 300mm 'Pithis' dual-barreled subnuclear battery. Activate with a multitool to deploy.
+  name: 300mm 'Leviathan' dual-barreled subnuclear battery Flatpack
+  description: Parts used to build a 300mm 'Leviathan' dual-barreled subnuclear battery. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretLargeArtillery
@@ -1039,6 +1132,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretLargeArtilleryFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -1082,6 +1179,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - BaseWeaponTurretShortbowFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -1096,6 +1197,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - BaseWeaponTurretAzimuthFlatpack
 
 - type: entity
   parent: BaseFlatpack
@@ -1110,6 +1215,10 @@
     - state: ame-part
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - BaseWeaponTurretArbalestFlatpack
 
 - type: entity
   parent: BaseFlatpack

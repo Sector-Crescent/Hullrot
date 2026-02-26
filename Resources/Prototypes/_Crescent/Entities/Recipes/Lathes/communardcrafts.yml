@@ -1,3 +1,4 @@
+# MARK: Uniforms
 
 - type: latheRecipe
   id: ClothingOuterNCWLEVA
@@ -15,37 +16,6 @@
     Plastic: 500
     Cloth: 500
     Glass: 500
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitNCWLInfantry
-  result: ClothingOuterHardsuitNCWLInfantry
-  completetime: 2
-  materials:
-    Steel: 2000
-    HardsuitElectronics: 500
-    Plastic: 500
-    Cloth: 1000
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitNCWLPetya
-  result: ClothingOuterHardsuitNCWLPetya
-  completetime: 2
-  materials:
-    Steel: 2500
-    HardsuitElectronics: 500
-    Tungsten: 1000
-    Durathread: 1000
-
-- type: latheRecipe
-  id: ClothingOuterHardsuitNCWLJuggernaut
-  result: ClothingOuterHardsuitNCWLJuggernaut
-  completetime: 2
-  materials:
-    Steel: 3000
-    HardsuitElectronics: 1000
-    NanotrasenElectronics: 1000
-    Tungsten: 2500
-    Durathread: 1500
 
 - type: latheRecipe
   id: ClothingHeadHatNCWLCapsoft
@@ -105,6 +75,31 @@
     Glass: 250
 
 - type: latheRecipe
+  id: ClothingMaskNCWLGasmask
+  result: ClothingMaskNCWLGasmask
+  completetime: 2
+  materials:
+    Glass: 500
+    Plastic: 1000
+
+- type: latheRecipe
+  id: ClothingBeltNCWLWebbing
+  result: ClothingBeltNCWLWebbing
+  completetime: 2
+  materials:
+    Cloth: 500
+
+# MARK: Armor
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLLightBodyarmor
+  result: ClothingOuterArmorNCWLLightBodyarmor
+  completetime: 2
+  materials:
+    Steel: 1000
+    Durathread: 300
+
+- type: latheRecipe
   id: ClothingHeadHelmetNCWLBasic
   result: ClothingHeadHelmetNCWLBasic
   completetime: 2
@@ -113,12 +108,21 @@
     Plastic: 250
 
 - type: latheRecipe
-  id: ClothingMaskNCWLGasmask
-  result: ClothingMaskNCWLGasmask
+  id: ClothingOuterArmorNCWLHeavyCarapace
+  result: ClothingOuterArmorNCWLHeavyCarapace
   completetime: 2
   materials:
-    Glass: 500
-    Plastic: 1000
+    Steel: 800
+    Tungsten: 400
+    Durathread: 200
+
+- type: latheRecipe
+  id: ClothingHeadHelmetNCWLHeavy
+  result: ClothingHeadHelmetNCWLHeavy
+  completetime: 2
+  materials:
+    Steel: 500
+    Tungsten: 500
 
 - type: latheRecipe
   id: ClothingHeadHelmetNCWLRiot
@@ -129,26 +133,132 @@
     Plastic: 500
 
 - type: latheRecipe
-  id: NCWLLugBaton
-  result: NCWLLugBaton
+  id: ClothingOuterArmorNCWLEngi
+  result: ClothingOuterArmorNCWLEngi
   completetime: 2
   materials:
-    Steel: 1250
+    Steel: 600
+    Cloth: 300
+    Durathread: 300
 
 - type: latheRecipe
-  id: NCWLRiotShield
-  result: NCWLRiotShield
+  id: ClothingOuterArmorNCWLLogi
+  result: ClothingOuterArmorNCWLLogi
   completetime: 2
   materials:
-    Steel: 500
+    Steel: 600
+    Cloth: 300
+    Durathread: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLCarapaceVrachev
+  result: ClothingOuterArmorNCWLCarapaceVrachev
+  completetime: 2
+  materials:
     Plastic: 600
+    Cloth: 300
+    Durathread: 300
 
 - type: latheRecipe
-  id: ClothingBeltNCWLWebbing
-  result: ClothingBeltNCWLWebbing
+  id: ClothingOuterArmorNCWLMedi
+  result: ClothingOuterArmorNCWLMedi
   completetime: 2
   materials:
+    Plastic: 600
+    Cloth: 300
+    Durathread: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLCarapaceDoktor
+  result: ClothingOuterArmorNCWLCarapaceDoktor
+  completetime: 2
+  materials:
+    Steel: 600
+    Plastic: 200
+    Cloth: 300
+    Durathread: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLCarapaceKapitan
+  result: ClothingOuterArmorNCWLCarapaceKapitan
+  completetime: 2
+  materials:
+    Steel: 800
+    Tungsten: 200
+    Durathread: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLCarapace
+  result: ClothingOuterArmorNCWLCarapace
+  completetime: 2
+  materials:
+    Steel: 800
+    Tungsten: 200
+    Durathread: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorNCWLOpremeCarapace
+  result: ClothingOuterArmorNCWLOpremeCarapace
+  completetime: 2
+  materials:
+    SilkFilament: 2000
+    Steel: 800
+    Tungsten: 400
+    Gold: 200
+
+#MARK: Hardsuits
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitNCWLEngi
+  result: ClothingOuterHardsuitNCWLEngi
+  completetime: 2
+  materials:
+    Steel: 1000
+    HardsuitElectronics: 500
     Cloth: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitNCWLMedi
+  result: ClothingOuterHardsuitNCWLMedi
+  completetime: 2
+  materials:
+    Steel: 1000
+    HardsuitElectronics: 500
+    Cloth: 500
+    Plastic: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitNCWLInfantry
+  result: ClothingOuterHardsuitNCWLInfantry
+  completetime: 2
+  materials:
+    Steel: 2000
+    HardsuitElectronics: 500
+    Plastic: 500
+    Cloth: 1000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitNCWLPetya
+  result: ClothingOuterHardsuitNCWLPetya
+  completetime: 2
+  materials:
+    Steel: 2500
+    HardsuitElectronics: 500
+    Tungsten: 1000
+    Durathread: 1000
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitNCWLJuggernaut
+  result: ClothingOuterHardsuitNCWLJuggernaut
+  completetime: 2
+  materials:
+    Steel: 3000
+    HardsuitElectronics: 1000
+    NanotrasenElectronics: 1000
+    Tungsten: 2500
+    Durathread: 1500
+
+# MARK: Weapons
 
 - type: latheRecipe
   id: WeaponPistolComrade
@@ -156,7 +266,7 @@
   completetime: 2
   materials:
     Steel: 1000
-    BallisticCycler: 500
+    BasicMechatronics: 500
 
 - type: latheRecipe
   id: WeaponPistolT91
@@ -185,6 +295,15 @@
     BallisticCycler: 500
 
 - type: latheRecipe
+  id: WeaponRifleNCWLRezerv
+  result: WeaponRifleNCWLRezerv
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plastic: 300
+    BasicMechatronics: 500
+
+- type: latheRecipe
   id: WeaponShotgunProletar
   result: WeaponShotgunProletar
   completetime: 2
@@ -192,6 +311,15 @@
     Steel: 1500
     Plasteel: 300
     BallisticCycler: 500
+
+- type: latheRecipe
+  id: WeaponShotgunDoubleBarreledNCWL
+  result: WeaponShotgunDoubleBarreledNCWL
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plasteel: 200
+    BasicMechatronics: 500
 
 - type: latheRecipe
   id: WeaponShotgunToz123
@@ -221,6 +349,26 @@
     BasicMechatronics: 1000
 
 - type: latheRecipe
+  id: WeaponSniperMolot
+  result: WeaponSniperMolot
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plasteel: 1000
+    Tungsten: 500
+    BallisticCycler: 1000
+
+- type: latheRecipe
+  id: WeaponSubMachineGunMilitant
+  result: WeaponSubMachineGunMilitant
+  completetime: 2
+  materials:
+    Steel: 1500
+    Silver: 300
+    Plastic: 500
+    BallisticCycler: 500
+
+- type: latheRecipe
   id: WeaponSubMachineGunBloodhound
   result: WeaponSubMachineGunBloodhound
   completetime: 2
@@ -246,6 +394,18 @@
     Plastic: 500
     Silver: 300
     TubeLoader: 500
+
+- type: latheRecipe
+  id: WeaponLightMachineGunConscript
+  result: WeaponLightMachineGunConscript
+  completetime: 2
+  materials:
+    Steel: 3500
+    Tungsten: 1000
+    TubeLoader: 500
+    BallisticCycler: 1000
+
+# MARK: Ship LPCs
 
 - type: latheRecipe
   id: VanguardLPC
@@ -337,6 +497,8 @@
     ShipComponents: 4500
     ShipHull: 8000
 
+# MARK: Flatpacks
+
 - type: latheRecipe
   id: LancerFlatpack
   result: LancerFlatpack
@@ -347,7 +509,7 @@
     Gold: 300
     Silver: 500
     Steel: 3000
-    Tungsten: 2000 #added 5 pieces of tungsten, since it's NCWL's lightest/civilain mech.
+    Tungsten: 3000 #added 15 pieces of tungsten, since it's NCWL's lightest/civilain mech and is stronger than DSM's light mech.
 
 - type: latheRecipe
   id: BogatyrFlatpack
@@ -361,29 +523,7 @@
     Steel: 3500
     Tungsten: 3500 #added 10 due to it being NCWL's best mech.
 
-- type: latheRecipe
-  id: NCWLKukri
-  result: NCWLKukri
-  completetime: 2
-  materials:
-    Steel: 1500
-    Tungsten: 1250
-    Plasma: 250
-    NanotrasenElectronics: 1500
-
-- type: latheRecipe
-  id: ClothingBeltSheathNCWLKukri
-  result: ClothingBeltSheathNCWLKukri
-  completetime: 2
-  materials:
-    Cloth: 750
-#- type: latheRecipe
-#  id: NCWLRGD55M13
-#  result: RGD55M13Hendgrenade
-#  completetime: 2
-# materials:
-#   Plasma: 500
-#    Steel: 100
+# MARK:Components
 
 - type: latheRecipe
   id:  BallisticCyclerNCWL
@@ -400,3 +540,46 @@
   materials:
     BasicMechatronics:  1000
     Steel: 2500
+
+# MARK: Melee
+
+- type: latheRecipe
+  id: NCWLLugBaton
+  result: NCWLLugBaton
+  completetime: 2
+  materials:
+    Steel: 1250
+
+- type: latheRecipe
+  id: NCWLRiotShield
+  result: NCWLRiotShield
+  completetime: 2
+  materials:
+    Steel: 500
+    Plastic: 600
+
+- type: latheRecipe
+  id: ClothingBeltSheathNCWLKukri
+  result: ClothingBeltSheathNCWLKukri
+  completetime: 2
+  materials:
+    Cloth: 750
+
+- type: latheRecipe
+  id: NCWLKukri
+  result: NCWLKukri
+  completetime: 2
+  materials:
+    Steel: 1500
+    Tungsten: 1250
+    Plasma: 250
+    NanotrasenElectronics: 1500
+
+#- type: latheRecipe
+#  id: NCWLRGD55M13
+#  result: RGD55M13Hendgrenade
+#  completetime: 2
+# materials:
+#   Plasma: 500
+#    Steel: 100
+

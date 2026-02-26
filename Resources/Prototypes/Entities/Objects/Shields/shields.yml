@@ -408,6 +408,10 @@
                   max: 1
     - type: StaticPrice
       price: 350
+    - type: ReverseEngineering
+      difficulty: 2
+      recipes:
+        - EnergyShield
 
 - type: entity
   name: broken energy shield

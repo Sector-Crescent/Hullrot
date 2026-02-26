@@ -1,7 +1,7 @@
 #screamer
 - type: entity
   id: Cartridge20mm
-  name: cartridge (20mm FMJ USM)
+  name: cartridge (20mm FMJ)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -22,39 +22,17 @@
     price: 1
 
 - type: entity
-  id: Cartridge20mmGyrostable
-  name: cartridge (20mm gyrostable USM)
+  id: Cartridge20mmFrag
+  name: cartridge (20mm Fragmentation)
   parent: BaseCartridge
   components:
   - type: Tag
     tags:
       - Cartridge
-      - Cartridge20mmGyrostable
+      - Cartridge20mmFrag
   - type: CartridgeAmmo
     deleteOnSpawn: false
-    proto: Bullet20mmGyrostable
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/screamer.rsi
-    layers:
-    - state: apds
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-
-- type: entity
-  id: Cartridge20mmPlasma
-  name: cartridge (20mm plasma-core USM)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge20mmPlasma
-  - type: CartridgeAmmo
-    deleteOnSpawn: false
-    proto: Bullet20mmPlasma
+    proto: Bullet20mmFrag
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/screamer.rsi
     layers:
@@ -63,13 +41,35 @@
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
-    price: 15
+    price: 1
 
-#pithatis
+# - type: entity
+#   id: Cartridge20mmPlasma
+#   name: cartridge (20mm plasma-core USM)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge20mmPlasma
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: false
+#     proto: Bullet20mmPlasma
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/screamer.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 15
+
+#Anvil
 
 - type: entity
   id: Cartridge120mm
-  name: cartridge (120mm USM)
+  name: cartridge (120mm High Explosive)
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -79,9 +79,9 @@
     deleteOnSpawn: true
     proto: Bullet120mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
-    - state: apds
+    - state: gyro
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
@@ -89,8 +89,8 @@
     price: 100
 
 - type: entity
-  id: Cartridge120mmPlasma
-  name: cartridge (120mm plasma-core USM)
+  id: Cartridge120mmFlak
+  name: cartridge (120mm Flak)
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -98,9 +98,9 @@
       - Cartridge120mm
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet120mmPlasma
+    proto: Bullet120mmFlak
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
@@ -110,8 +110,8 @@
     price: 125
 
 - type: entity
-  id: Cartridge120mmGyrostable
-  name: cartridge (120mm gyrostable USM)
+  id: Cartridge120mmFlux
+  name: cartridge (120mm Flux Core)
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -119,11 +119,11 @@
       - Cartridge120mm
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet120mmGyrostable
+    proto: Bullet120mmFlux
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     layers:
-    - state: gyro
+    - state: apds
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
@@ -162,15 +162,15 @@
   components:
   - type: ProjectileSpread
     proto: CorpusProjectile
-    count: 3
-    spread: 15
+    count: 4
+    spread: 4
 
-#pithis
+#Leviathan
 
 - type: entity
   id: Cartridge300mm
-  name: cartridge (300mm FMJ USM)
-  description: A full metal jacket artillery shell with a standard explosive payload. Heavy.
+  name: cartridge (300mm High Yield)
+  description: A Standard 300mm shell effective under any circumstance. Heavy.
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -182,7 +182,7 @@
     deleteOnSpawn: true
     proto: Bullet300mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/leviathan.rsi
     layers:
     - state: ap
       map: ["enum.AmmoVisualLayers.Base"]
@@ -194,7 +194,7 @@
 #35mm
 - type: entity
   id: Cartridge35mm
-  name: cartridge (35mm FMJ USM)
+  name: cartridge (35mm Armor Piercing)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -205,7 +205,7 @@
     deleteOnSpawn: true
     proto: Bullet35mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: ap
       map: ["enum.AmmoVisualLayers.Base"]
@@ -215,54 +215,54 @@
     price: 1
 
 - type: entity
-  id: Cartridge35mmGyrostable
-  name: cartridge (35mm gyrostable USM)
+  id: Cartridge35mmHE
+  name: cartridge (35mm High Explosive)
   parent: BaseCartridge
   components:
   - type: Tag
     tags:
       - Cartridge
-      - Cartridge35mmGyrostable
+      - Cartridge35mmHE
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet35mmGyrostable
+    proto: Bullet35mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
-    layers:
-    - state: apds
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-
-- type: entity
-  id: Cartridge35mmPlasma
-  name: cartridge (35mm plasma-core USM)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge35mmPlasma
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet35mmPlasma
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
   - type: StaticPrice
-    price: 15
+    price: 1
 
-# whistler
+# - type: entity
+#   id: Cartridge35mmPlasma
+#   name: cartridge (35mm plasma-core USM)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge35mmPlasma
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet35mmPlasma
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 15
+
+# Striker
 
 - type: entity
   id: Cartridge50mm
-  name: cartridge (50mm FMJ USM)
+  name: cartridge (50mm Armor Piercing)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -273,29 +273,7 @@
     deleteOnSpawn: true
     proto: Bullet50mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
-    layers:
-    - state: ap
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-
-- type: entity
-  id: Cartridge50mmGyrostable
-  name: cartridge (50mm gyrostable USM)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge50mmGyrostable
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet50mmGyrostable
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: apds
       map: ["enum.AmmoVisualLayers.Base"]
@@ -305,19 +283,41 @@
     price: 1
 
 - type: entity
-  id: Cartridge50mmPlasma
-  name: cartridge (50mm plasma-core USM)
+  id: Cartridge50mmHE
+  name: cartridge (50mm High Explosive)
   parent: BaseCartridge
   components:
   - type: Tag
     tags:
       - Cartridge
-      - Cartridge50mmPlasma
+      - Cartridge50mmHE
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet50mmPlasma
+    proto: Bullet50mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/whistler.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
+    layers:
+    - state: ap
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: Cartridge50mmSAPHE
+  name: cartridge (50mm SAPHE)
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge50mmSAPHE
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: Bullet50mmSAPHE
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]
@@ -326,11 +326,11 @@
   - type: StaticPrice
     price: 15
 
-#gistum
+#Resolute
 
 - type: entity
   id: Cartridge90mm
-  name: cartridge (90mm FMJ USM)
+  name: cartridge (90mm APHE)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -341,7 +341,31 @@
     deleteOnSpawn: true
     proto: Bullet90mmBase
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+    scale: 0.75, 0.75
+    layers:
+    - state: gyro
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: Cartridge90mmAP
+  name: cartridge (90mm Armor Piercing)
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge90mm
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: Bullet90mmAP
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+    scale: 0.75, 0.75
     layers:
     - state: apds
       map: ["enum.AmmoVisualLayers.Base"]
@@ -351,8 +375,8 @@
     price: 1
 
 - type: entity
-  id: Cartridge90mmGyrostable
-  name: cartridge (90mm gyrostable USM)
+  id: Cartridge90mmHE
+  name: cartridge (90mm High Explosive)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -361,31 +385,10 @@
       - Cartridge90mm
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: Bullet90mmGyrostable
+    proto: Bullet90mmHE
   - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
-    layers:
-    - state: apds
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
-
-- type: entity
-  id: Cartridge90mmPlasma
-  name: cartridge (90mm plasma-core USM)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge90mm
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet90mmPlasma
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/pithatis.rsi
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+    scale: 0.75, 0.75
     layers:
     - state: heat
       map: ["enum.AmmoVisualLayers.Base"]

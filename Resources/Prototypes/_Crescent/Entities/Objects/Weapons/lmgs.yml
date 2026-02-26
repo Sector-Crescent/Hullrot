@@ -60,6 +60,11 @@
         fontSize: 12
         color: "#ff4f00"
         requireDetailRange: false
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponLightMachineGunCompaktCyberdawn
+      - WeaponLightMachineGunNCSPRPD
 
 - type: entity
   name: C 54 ROW
@@ -195,6 +200,10 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponLightMachineGunConscript
 
 - type: entity
   name: NCSP RPD 7.62x51mm
@@ -246,7 +255,11 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponLightMachineGunNCSPRPD
+      - WeaponLightMachineGunCompaktCyberdawn
 
 - type: entity
   name: IRM DA-12S Dominion 5.56x45mm
@@ -304,6 +317,10 @@
     steps: 3
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponLightMachineGunDSMDominion
 
 - type: entity
   name: HGS GrMG-4 Baum 7.62x51mm

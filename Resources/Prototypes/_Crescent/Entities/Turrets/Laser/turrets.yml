@@ -4,7 +4,7 @@
   parent: BaseTurretShipgun
   id: WeaponTurretCurse
   suffix: Medium Energy
-  name: 300w 'Curse' energized ion bolt cannon
+  name: 300w 'Curse' EMP Projector
   description: A medium energy platform that shoots ionized hardlight that interferes with shuttle electronics.
   components:
     - type: Sprite
@@ -16,7 +16,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -36,14 +36,14 @@
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 5
+      maxAngle: 5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 10
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -51,8 +51,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletCurse
-      capacity: 5
-      count: 5
+      capacity: 8
+      count: 8
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -63,8 +63,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretCurseNavy
   suffix: Medium Energy, Navy
-  name: navy-issue 300w 'Curse' energized ion bolt cannon
-  description: A medium energy platform that shoots ionized hardlight that interferes with shuttle electronics. Seems to be issued by Merchant House Soga.
+  name: Navy 300w 'Mandate' EMP Projector
+  description: A medium energy platform that shoots ionized hardlight that interferes with shuttle electronics. Upgraded electronics give it more sustained fire.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/curse.rsi
@@ -75,7 +75,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2000
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -95,14 +95,14 @@
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 5
+      maxAngle: 5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 10
+      rechargeCooldown: 3
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -110,8 +110,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletCurse
-      capacity: 5
-      count: 5
+      capacity: 10
+      count: 10
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -124,7 +124,7 @@
   parent: BaseTurretShipgun
   id: WeaponTurretRetribution
   suffix: Small Laser
-  name: 200cc 'Retribution' small laser gatling
+  name: 200cc 'Retribution' Pulse Laser
   description: A light energy weapons platform that converts energy into hardlight and flings it at high speeds.
   components:
     - type: Sprite
@@ -136,7 +136,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1200
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -150,8 +150,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 25
+      projectileSpeed: 200
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -163,7 +163,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.5
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -171,10 +171,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 500
-      count: 500
+      capacity: 50
+      count: 50
     - type: ApcPowerReceiver
-      powerLoad: 5000
+      powerLoad: 2500
     - type: HardpointAnchorableOnly
       class: Energy
       size: Small
@@ -183,8 +183,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretRetributionNavy
   suffix: Small Laser, Navy
-  name: navy-issue 200cc 'Retribution' small laser gatling
-  description: A light energy weapons platform that converts energy into hardlight and flings it at high speeds. Seems to be issued by the Imperial Navy.
+  name: Navy 200cc 'Solaris' Pulse Laser
+  description: A light energy weapons platform that converts energy into hardlight and flings it at high speeds. It's upgraded hardlight generator lets it fire faster while its power reserves last.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/retribution.rsi
@@ -195,7 +195,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 1200
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -209,8 +209,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 25
+      projectileSpeed: 200
+      fireRate: 10
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -222,7 +222,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.5
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -230,10 +230,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 500
-      count: 500
+      capacity: 150
+      count: 150
     - type: ApcPowerReceiver
-      powerLoad: 2500
+      powerLoad: 5000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Small
@@ -244,8 +244,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretAbsolution
   suffix: Medium Laser
-  name: 350cc 'Absolution' hardlight cannon
-  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets.
+  name: 350cc 'Glare' Burst Laser
+  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. Fires in compact bursts capable of ablating hull.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
@@ -256,7 +256,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -270,9 +270,10 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
+      projectileSpeed: 200
       burstFireRate: 20
-      burstCooldown: 2
+      burstCooldown: 1
+      shotsPerBurst: 10
       selectedMode: Burst
       availableModes:
         - Burst
@@ -284,7 +285,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -292,8 +293,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 40
-      count: 40
+      capacity: 100
+      count: 100
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -304,8 +305,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretAbsolutionNavy
   suffix: Medium Laser, Navy
-  name: navy-issue 350cc 'Absolution' hardlight cannon
-  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. This one seems to be issued by the Imperial Navy.
+  name: Navy 350cc 'Absolution' Burst Laser
+  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. Fires in even longer bursts but runs dry quicker.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
@@ -316,7 +317,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 1800
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -330,8 +331,10 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
-      fireRate: 3
+      projectileSpeed: 200
+      burstFireRate: 20
+      burstCooldown: 1
+      shotsPerBurst: 20
       selectedMode: Burst
       availableModes:
         - Burst
@@ -343,7 +346,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 0.25
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -351,10 +354,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 40
-      count: 40
+      capacity: 100
+      count: 100
     - type: ApcPowerReceiver
-      powerLoad: 4000
+      powerLoad: 6000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Medium
@@ -365,8 +368,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretDamnation
   suffix: Large Laser
-  name: 600cc 'Damnation' hardlight carronade
-  description: A large energy weapons platform that fires supercharged hardlight bolts that explode on impact.
+  name: 600cc 'Damnation' Carronade
+  description: A large energy weapons platform that fires hardlight bolts that explode on impact.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/damnation.rsi
@@ -377,7 +380,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 800
+            damage: 2600
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -392,7 +395,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 1
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -401,7 +404,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 5
+      rechargeCooldown: 0.75
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -409,10 +412,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 5
-      count: 5
+      capacity: 35
+      count: 35
     - type: ApcPowerReceiver
-      powerLoad: 6000
+      powerLoad: 8000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Large
@@ -421,8 +424,8 @@
   parent: BaseTurretShipgun
   id: WeaponTurretDamnationNavy
   suffix: Large Energy, Navy
-  name: navy-issue 600cc 'Damnation' hardlight carronade
-  description: A large energy weapons platform that fires supercharged hardlight bolts that explode on impact. This one seems to be issued by the Imperial Navy.
+  name: Navy 600cc 'Dominus' Carronade
+  description: A large energy weapons platform that fires supercharged hardlight bolts that explode on impact. Slight upgrades make it better on all fronts compared to its common variant.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/damnation.rsi
@@ -433,7 +436,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 400
+            damage: 2600
           # TODO: Construction graph
           behaviors:
             - !type:ChangeConstructionNodeBehavior
@@ -448,7 +451,7 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 1
+      fireRate: 5
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -457,7 +460,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 5
+      rechargeCooldown: 0.7
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -465,10 +468,10 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 5
-      count: 5
+      capacity: 40
+      count: 40
     - type: ApcPowerReceiver
-      powerLoad: 6000
+      powerLoad: 10000
     - type: HardpointAnchorableOnly
       class: Energy
       size: Large

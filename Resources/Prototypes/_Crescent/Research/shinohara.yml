@@ -65,6 +65,8 @@
   recipeUnlocks:
   - ClothingUniformJumpsuitShinoharaSecurity
   - ClothingOuterArmorShinoharaArmorBulwark
+  - ClothingOuterArmorShinoharaHOSVest
+  - ClothingOuterArmorShinoharaArmor
   - ClothingHeadHatShinoharaNonevaHelm
   - TelescopicBatonSHI
   - SHIKatana
@@ -108,8 +110,12 @@
   recipeUnlocks:
   - ClothingUniformJumpsuitShinoharaHighsec
   - ClothingOuterArmorShinoharaArmorHighsec
+  - ClothingOuterArmorShinoharaArmorHighsecUA
   - ClothingHeadHatShinoharaHelmet
+  - ClothingHeadHatShinoharaHelmetUA
   - ClothingOuterHardsuitHighsec
+  - ClothingOuterHardsuitHighsecUA
+  - ClothingOuterHardsuitHighsecIndependent
 
 - type: technology
   id: ShinoharaDisposableGuns
@@ -138,11 +144,14 @@
   tier: 1
   cost: 2500
   recipeUnlocks:
+  - WeaponRifleSHINimrod
   - WeaponRifleHoundMarksman
+  - WeaponShotgunBlaster
   - WeaponShotgunSHIDoubleBarreled4g
   - WeaponPistolMk58SHI
   - WeaponSubMachineGunMP49
   - WeaponSubMachineGunSabre
+  - WeaponRevolverInspector
   - WeaponRevolverMateba
   - WeaponRifleGoro
 
@@ -171,6 +180,33 @@
   - AutoloomFablatheFlatpack
 
 - type: technology
+  id: ShinoharaCivilianShips
+  name: research-technology-shinohara-civilian-ships
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Corporate
+  tier: 1
+  cost: 3000
+  recipeUnlocks:
+  - BuffaloLPC
+  - GazpachovLPC
+  - ChanchuLPC
+
+- type: technology
+  id: ShinoharaCorpSecShips
+  name: research-technology-shinohara-corpsec-ships
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Corporate
+  tier: 1
+  cost: 6000
+  recipeUnlocks:
+  - NazaarLPC
+  - MusinyaneLPC
+
+- type: technology
   id: ShinoharaAdvancedMaterials
   name: research-technology-shinohara-advancedmaterials
   icon:
@@ -186,6 +222,18 @@
   - HardlightGenerator1
   technologyPrerequisites:
   - ShinoharaBasicFactory
+
+- type: technology
+  id: ShinoharaShieldEmitter
+  name: research-technology-shinohara-emitter
+  icon:
+    sprite: _Crescent/Structures/shieldemittersmall.rsi
+    state: icon
+  discipline: Corporate
+  tier: 2 #I don't get why this was T3 go yell at me later
+  cost: 5000
+  recipeUnlocks:
+  - ShieldEmitterSmallFlatpack
 
 - type: technology
   id: ShinoharaWeaponComponents
@@ -341,16 +389,16 @@
   - CartridgeHammerheadRocket
 
 - type: technology
-  id: ShinoharaShieldEmitter
-  name: research-technology-shinohara-emitter
+  id: ShinoharaMediumShieldEmitter
+  name: research-technology-shinohara-medium-emitter
   icon:
-    sprite: _Crescent/Structures/shieldemittersmall.rsi
+    sprite: _Crescent/Structures/shieldemittermedium.rsi
     state: icon
   discipline: Corporate
   tier: 3
-  cost: 5000
+  cost: 8000
   recipeUnlocks:
-  - ShieldEmitterSmallFlatpack
+  - ShieldEmitterMediumFlatpack #I don't get why a T1 shield was in T3
 
 - type: technology
   id: ShinoharaGilgamesh

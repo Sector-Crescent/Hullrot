@@ -8,6 +8,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecombat.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecombat.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialCombat
+      - ClothingUniformJumpsuitClarizeCombat
 
 - type: entity
   parent: ClothingUniformBase
@@ -19,6 +23,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/clarizecombat.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/clarizecombat.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitClarizeCombat
+      - ClothingUniformJumpsuitImperialCombat
 
 - type: entity
   parent: ClothingUniformBase
@@ -30,6 +38,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/clarizeofficer.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/clarizeofficer.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitClarizeOfficer
+      - ClothingUniformJumpsuitImperialSoldierFormal
 
 - type: entity
   parent: ClothingUniformBase
@@ -41,6 +53,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandatesoldierformal.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandatesoldierformal.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialSoldierFormal
+      - ClothingUniformJumpsuitClarizeOfficer
 
 - type: entity
   parent: ClothingUniformBase
@@ -63,6 +79,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandatedoctor.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandatedoctor.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialDoctor
+      - ClothingUniformJumpsuitClarizeDoctor
 
 - type: entity
   parent: ClothingUniformBase
@@ -74,6 +94,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/clarizemedic.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/clarizemedic.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitClarizeDoctor
+      - ClothingUniformJumpsuitImperialDoctor
 
 - type: entity
   parent: ClothingUniformBase
@@ -96,6 +120,9 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandatefreeholder.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandatefreeholder.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialFreeholder
 
 - type: entity
   parent: ClothingUniformBase
@@ -118,6 +145,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandateadjutantcasual.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandateadjutantcasual.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialNobleMale
+      - ClothingUniformJumpsuitImperialNobleFemale
 
 - type: entity
   parent: ClothingUniformBase
@@ -129,6 +160,10 @@
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecourtier.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecourtier.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitImperialNobleFemale
+      - ClothingUniformJumpsuitImperialNobleMale
 
 - type: entity
   parent: ClothingUniformBase

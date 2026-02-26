@@ -167,6 +167,10 @@
   components:
     - type: Implanter
       implant: StorageImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - StorageImplanter
 
 - type: entity
   id: FreedomImplanter
@@ -175,6 +179,10 @@
   components:
     - type: Implanter
       implant: FreedomImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - FreedomImplanter
 
 - type: entity
   id: UplinkImplanter
@@ -191,6 +199,10 @@
   components:
     - type: Implanter
       implant: EmpImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - EmpImplanter
 
 - type: entity
   id: ScramImplanter
@@ -199,6 +211,10 @@
   components:
     - type: Implanter
       implant: ScramImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - ScramImplanter
 
 - type: entity
   id: DnaScramblerImplanter
@@ -207,6 +223,10 @@
   components:
     - type: Implanter
       implant: DnaScramblerImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - DnaScramblerImplanter
 
 #Nuclear Operative/Special implanters
 
@@ -217,6 +237,11 @@
   components:
     - type: Implanter
       implant: MicroBombImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - MicroBombImplanter
+        - MacroBombImplanter
 
 - type: entity
   id: MacroBombImplanter
@@ -225,6 +250,11 @@
   components:
     - type: Implanter
       implant: MacroBombImplant
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - MacroBombImplanter
+        - MicroBombImplanter
 
 - type: entity
   id: DeathRattleImplanter
@@ -241,6 +271,10 @@
   components:
   - type: Implanter
     implant: DeathAcidifierImplant
+  - type: ReverseEngineering
+    difficulty: 3
+    recipes:
+      - DeathAcidifierImplanter
 
 # Security and Command implanters
 

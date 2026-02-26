@@ -23,6 +23,11 @@
     - type: HideLayerClothing
       slots:
       - Snout
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - ClothingMaskGasVoiceChameleonCyberdawn
+        - ClothingBackpackChameleonFillCyberdawn
 
 - type: entity
   parent: ClothingMaskGasChameleon
@@ -39,6 +44,11 @@
           type: ChameleonBoundUserInterface
         enum.VoiceMaskUIKey.Key:
           type: VoiceMaskBoundUserInterface
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - ClothingMaskGasVoiceChameleonCyberdawn
+        - ClothingBackpackChameleonFillCyberdawn
 
 - type: entity
   parent: ClothingMaskBase

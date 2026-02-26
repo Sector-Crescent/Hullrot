@@ -52,6 +52,17 @@
         visible: false
   - type: UseDelay
     delay: 1
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - HypoInterdyne
+      - CartridgeEphedrineInterdyne
+      - CartridgeTirizeneInterdyne
+      - CartridgeBicaridineInterdyne
+      - CartridgeSalineInterdyne
+      - CartridgeDermalineInterdyne
+      - CartridgePuncturaseInterdyne
+      - CartridgeAtropineInterdyne
 
 - type: entity
   name: medical cartridge autoinjector

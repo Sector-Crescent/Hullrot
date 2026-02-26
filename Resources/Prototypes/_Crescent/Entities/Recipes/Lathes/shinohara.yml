@@ -1,4 +1,4 @@
-# Going to try to sort this shit
+# Going to try to sort this shit (thanks)
 
 # MARK: Uniforms
 - type: latheRecipe
@@ -75,6 +75,15 @@
     Steel: 750
 
 - type: latheRecipe
+  id: ClothingOuterArmorShinoharaHOSVest
+  result: ClothingOuterArmorShinoharaHOSVest
+  completetime: 2
+  materials:
+    Durathread: 500
+    Steel: 500
+    Tungsten: 200
+
+- type: latheRecipe
   id: ClothingOuterArmorShinoharaArmorHighsec
   result: ClothingOuterArmorShinoharaArmorHighsec
   completetime: 2
@@ -84,13 +93,33 @@
     Tungsten: 500
 
 - type: latheRecipe
+  id: ClothingOuterArmorShinoharaArmorHighsecUA
+  result: ClothingOuterArmorShinoharaArmorHighsecUA
+  completetime: 2
+  materials:
+    Durathread: 1000
+    Steel: 800
+    Silver: 200
+    Tungsten: 500
+
+- type: latheRecipe
   id: ClothingHeadHatShinoharaHelmet
   result: ClothingHeadHatShinoharaHelmet
   completetime: 2
   materials:
     Durathread: 500
     Steel: 500
-    Tungsten: 250
+    Tungsten: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatShinoharaHelmetUA
+  result: ClothingHeadHatShinoharaHelmetUA
+  completetime: 2
+  materials:
+    Durathread: 500
+    Steel: 400
+    Silver: 100
+    Tungsten: 200
 
 - type: latheRecipe
   id: ClothingOuterArmorShinoharaArmorBulwark
@@ -119,6 +148,27 @@
   materials:
     Durathread: 1500
     Steel: 2500
+    Tungsten: 500
+    HardsuitElectronics: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitHighsecIndependent
+  result: ClothingOuterHardsuitHighsecIndependent
+  completetime: 2
+  materials:
+    Durathread: 1500
+    Steel: 2500
+    Tungsten: 500
+    HardsuitElectronics: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitHighsecUA
+  result: ClothingOuterHardsuitHighsecUA
+  completetime: 2
+  materials:
+    Durathread: 1500
+    Steel: 2500
+    Silver: 500
     Tungsten: 500
     HardsuitElectronics: 500
 
@@ -232,13 +282,22 @@
     AdvancedElectronics: 500
 
 - type: latheRecipe
+  id: WeaponShotgunBlaster
+  result: WeaponShotgunBlaster
+  completetime: 2
+  materials:
+    Steel: 2000
+    Plastic: 1000
+    BasicMechatronics: 1000
+
+- type: latheRecipe
   id: WeaponShotgunSHIDoubleBarreled4g
   result: WeaponShotgunSHIDoubleBarreled4g
   completetime: 2
   materials:
     Steel: 2500
-    Silver: 1000
-    BallisticCycler: 500
+    Plastic: 1000
+    BasicMechatronics: 500
 
 - type: latheRecipe
   id: WeaponPistolMk58SHI
@@ -263,9 +322,10 @@
   result: WeaponRevolverMateba
   completetime: 2
   materials:
-    Steel: 1500
+    Steel: 1000
     Plastic: 500
-    Silver: 1000
+    Silver: 300
+    BasicMechatronics: 500
 
 - type: latheRecipe
   id: WeaponRevolverInspector
@@ -275,6 +335,15 @@
     Steel: 1500
     Plastic: 500
     Silver: 500
+
+- type: latheRecipe
+  id: WeaponRifleSHINimrod
+  result: WeaponRifleSHINimrod
+  completetime: 2
+  materials:
+    Steel: 2500
+    Plastic: 1000
+    BasicMechatronics: 1000
 
 - type: latheRecipe
   id: WeaponRifleHoundMarksman
@@ -303,7 +372,7 @@
   materials:
     Steel: 3000
     Plastic: 1500
-    TubeLoader: 500
+    BallisticCycler: 500
 
 - type: latheRecipe
   id: WeaponLightMachineGunL6
@@ -531,6 +600,71 @@
     Plasma: 1000
     AdvancedMechatronics: 1000
 
+# MARK: Ship LPCs
+
+- type: latheRecipe
+  id: BuffaloLPC
+  result: ShipVoucherBuffalo
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 1000
+    ShipHull: 2500
+
+- type: latheRecipe
+  id: GazpachovLPC
+  result: ShipVoucherGazpachov
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 2500
+    ShipHull: 2000
+
+- type: latheRecipe
+  id: ChanchuLPC
+  result: ShipVoucherChanchu
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 2000
+    ShipComponents: 3000
+    ShipHull: 9500
+
+- type: latheRecipe
+  id: NazaarLPC
+  result: ShipVoucherNazaar
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 1000
+    ShipHull: 1500
+
+- type: latheRecipe
+  id: MusinyaneLPC
+  result: ShipVoucherMusinyane
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 3500
+    ShipComponents: 4500
+    ShipHull: 5000
+
+- type: latheRecipe
+  id: FleaLPC
+  result: ShipVoucherFlea
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1500
+    ShipComponents: 8000
+    ShipHull: 1500
+
+- type: latheRecipe
+  id: FujinLPC
+  result: ShipVoucherFujin
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 5000
+    ShipComponents: 6000
+    ShipHull: 7000
+
 # MARK: Flatpacks
 
 - type: latheRecipe
@@ -559,24 +693,6 @@
   materials:
     Steel: 3000
     Gold: 1000
-
-- type: latheRecipe
-  id: FleaLPC
-  result: ShipVoucherFlea
-  completetime: 1
-  materials:
-    StarshipEngineComponents: 1500
-    ShipComponents: 8000
-    ShipHull: 1500
-
-- type: latheRecipe
-  id: FujinLPC
-  result: ShipVoucherFujin
-  completetime: 1
-  materials:
-    StarshipEngineComponents: 5000
-    ShipComponents: 6000
-    ShipHull: 7000
 
 - type: latheRecipe
   id: VariableCommodityFabricatorFlatpack
@@ -712,6 +828,17 @@
     HardlightGenerator: 3000
 
 - type: latheRecipe
+  id: ShieldEmitterMediumFlatpack
+  result: ShieldEmitterMediumFlatpack
+  completetime: 2
+  materials:
+    AdvancedMechatronics: 2500
+    Silver: 3000
+    Gold: 2000
+    Steel: 5000
+    HardlightGenerator: 5000
+
+- type: latheRecipe
   id: SlugthrowerFlatpack
   result: SlugthrowerFlatpack
   completetime: 2
@@ -719,18 +846,6 @@
     BasicMechatronics: 1500
     Silver: 1000
     Steel: 2000
-
-
-- type: latheRecipe
-  id: FixedHardpointFlatpack
-  result: FixedHardpointFlatpack
-  completetime: 2
-  materials:
-    BasicMechatronics: 500
-    BasicElectronics: 500
-    Gold: 500
-    Silver: 500
-    Steel: 1000
 
 #MARK:Components
 
@@ -883,6 +998,8 @@
     Plasma: 500
     Steel: 750
 
+#MARK: Explosives
+
 - type: latheRecipe
   id: GrenadeSHIHG17Smart
   result: SHIHG17SmartHandgrenade
@@ -917,7 +1034,6 @@
     Plasma: 100
     Steel: 100
 
-
 - type: latheRecipe
   id: HG13M2MiniHandgrenade
   result: HG13M2MiniHandgrenade
@@ -925,7 +1041,8 @@
   materials:
     Plasma: 250
     Steel: 100
-#mark cases
+
+# MARK: Cases
 
 - type: latheRecipe
   id: WeaponCaseRifle

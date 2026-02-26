@@ -130,6 +130,10 @@
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRevolverInspector
+      - WeaponRevolverMateba
 
 - type: entity
   name: SHI M003 Inspector .327
@@ -166,6 +170,10 @@
     fireRate: 3
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/revolver_1/revolver_gunshot_2.ogg
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRevolverMateba
+      - WeaponRevolverInspector
 
 - type: entity
   name: NCWL T-43 Python .45
@@ -187,6 +195,13 @@
       params:
         volume: 2.25
     fireOnDropChance: 0.3
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponRevolverPython
+      - WeaponPistolT91
+      - WeaponPistolComrade
+
 
 - type: entity
   name: NCWL T-43 Python .327

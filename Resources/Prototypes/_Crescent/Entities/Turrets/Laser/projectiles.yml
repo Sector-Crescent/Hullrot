@@ -10,14 +10,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 35
+        Heat: 75
   - type: ProjectileIFF
     visualType: Circle
     color: Blue
   - type: EmpOnTrigger
-    range: 5
-    energyConsumption: 2500
-    disableDuration: 6
+    range: 4
+    energyConsumption: 3500
+    disableDuration: 10
   - type: PointLight
     radius: 3.5
     color: blue
@@ -41,7 +41,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 90
+        Heat: 100
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -50,7 +50,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 14 #2520
+    lifetime: 14 #2800
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -68,7 +68,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 170
+        Heat: 250
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -77,7 +77,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 22 #3080m
+    lifetime: 16 #3200m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -95,13 +95,13 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 300
+        Heat: 200
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 200
+    maxIntensity: 100
     intensitySlope: 50
-    totalIntensity: 20000
+    totalIntensity: 1000
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -110,7 +110,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 17 #3400
+    lifetime: 18 #3600m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:

@@ -10,6 +10,9 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndiecombat.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicate
 
 - type: entity
   parent: ClothingUniformBase
@@ -23,6 +26,11 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/ipm_uniform.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicateInterdyne
+      - ClothingUniformJumpsuitSyndicateInterdyneScrubs
+      - ClothingUniformJumpsuitSyndicateInterdyneWhiteUniform
 
 - type: entity
   parent: ClothingUniformBase
@@ -36,6 +44,11 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/ipm_scrubs.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicateInterdyneScrubs
+      - ClothingUniformJumpsuitSyndicateInterdyne
+      - ClothingUniformJumpsuitSyndicateInterdyneWhiteUniform
 
 - type: entity
   parent: ClothingUniformBase
@@ -62,6 +75,11 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/ipm_white.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicateInterdyneWhiteUniform
+      - ClothingUniformJumpsuitSyndicateInterdyneScrubs
+      - ClothingUniformJumpsuitSyndicateInterdyne
 
 - type: entity
   parent: ClothingUniformBase
@@ -73,6 +91,9 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndiejumpsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndiejumpsuit.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicateSaws
 
 - type: entity
   parent: ClothingUniformBase
@@ -95,6 +116,9 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndieofficer.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndieofficer.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingUniformJumpsuitSyndicateOfficer
 
 - type: entity
   parent: ClothingUniformBase
@@ -106,6 +130,7 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndieregular.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/Uniform/syndieregular.rsi
+
 
 - type: entity
   parent: ClothingUniformBase
@@ -139,7 +164,7 @@
     sprite: _Crescent/Clothing/Syndicate/Uniform/cyberdawnsecurity.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/Uniform/cyberdawnsecurity.rsi
- 
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSyndicateBunnysuit

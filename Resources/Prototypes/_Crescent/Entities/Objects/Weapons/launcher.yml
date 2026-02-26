@@ -34,6 +34,10 @@
     proto: Cartridge40mmFrag
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponLauncherGM94
 
 - type: entity
   name: SHI MGL-6 Milkor 40mm
@@ -94,6 +98,11 @@
   - type: HeldSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponLauncherMilkor
+
 
 - type: entity
   name: SHI LAM-17 84mm
@@ -135,6 +144,9 @@
         fontSize: 12
         color: "#1aff00"
         requireDetailRange: false
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponLauncherDisposableRocket
 
 - type: entity
   name: PTA M-32 Commando 44mm
@@ -229,6 +241,10 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponLauncherM320
 
 - type: entity
   name: PTA M-5 Carl Gustaf 84mm #This one is alright, not many people use rocket launchers.
@@ -314,6 +330,13 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponLauncherRPGNSCP
+      - WeaponLCartridgeRPGSmall
+      - WeaponLauncherRocketCyberdawn
+      - WeaponCartridgeRPGLarge
 
 - type: entity
   name: NSCP RPG-7
@@ -352,6 +375,13 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponLauncherRocketCyberdawn
+      - WeaponCartridgeRPGLarge
+      - WeaponLauncherRPGNSCP
+      - WeaponLCartridgeRPGSmall
 
 - type: entity
   name: PTA 10AX Chinalake 40mm #Lower mag capacity and fire rate than SHI MGL. Its more portable.

@@ -49,6 +49,13 @@
     zeroVisible: true
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponRifleUnderdogCyberdawn
+      - WeaponRifleMayflower
+      - WeaponRifleAkCyberdawn
+      - WeaponRifleKrinkovCyberdawn
 
 - type: entity
   name: IRM DA-1R Muster 5.56x45mm
@@ -103,6 +110,10 @@
     whitelist:
       tags:
       - CartridgeRifle
+  - type: ReverseEngineering
+    recipes:
+      - WeaponRifleNCWLRezerv
+      - WeaponRifleFAL
 
 - type: entity
   parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
@@ -135,6 +146,11 @@
     whitelist:
       tags:
       - CartridgeRifle
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRifleSHINimrod
+      - WeaponRifleHoundMarksman
+      - WeaponRifleGoro
 
 - type: entity
   parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
@@ -222,6 +238,11 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponRifleDSMLegionnaire
+      - WeaponRifleMiller
 
 - type: entity
   name: PTA T4-Pro Vintorez 9x39mm
@@ -395,6 +416,12 @@
   - type: Appearance
   - type: StaticPrice
     price: 2500
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponRifleNCWLBatanya
+      - WeaponRifleFAL
+      - WeaponRifleNCWLRezerv
 
 - type: entity
   name: SHI M55 Goro 7.62x51mm
@@ -457,6 +484,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 2500
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRifleGoro
+      - WeaponRifleSHINimrod
+      - WeaponRifleHoundMarksman
 
 
 - type: entity
@@ -567,6 +599,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 3500
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRifleMiller
+      - WeaponRifleHunter
 
 - type: entity
   name: NCWL MK-2 Falin 5.56x45mm
@@ -621,7 +657,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
-
+  - type: ReverseEngineering
+    recipes:
+      - WeaponRifleFAL
+      - WeaponRifleNCWLRezerv
 
 - type: entity
   name: NCSP AKS-74U Krinkov 5.56x45mm
@@ -682,6 +721,10 @@
     price: 800
   - type: Contraband
     value: 3
+  - type: ReverseEngineering
+    recipes:
+      - WeaponRifleKrinkovCyberdawn
+      - WeaponRifleAkCyberdawn
 
 - type: entity
   name: PTA 3AX Halyad 12.7x99mm
@@ -796,12 +839,17 @@
   - type: Appearance
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponRifleHoundMarksman
+      - WeaponRifleGoro
+      - WeaponRifleSHINimrod
 
 - type: entity
-  name: HP M17-SA Hunter 7.62x51mm
+  name: R-15 Hunter 7.62x51mm
   parent: [BaseWeaponRifleDMR, StreeCredRedeemable]
   id: WeaponRifleHunter
-  description: A marksman's rifle of foreign make, repurposed as a mainline battle carbine amongst the predators of this Sector.
+  description: An exceptionally cheap carbine styled after antiquated rifles. Usually found equipped amongst the desperate and ill-supplied.
   components:
   - type: Item
     shape:
@@ -816,7 +864,7 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/hunter.rsi
   - type: Gun
-    fireRate: 5.5
+    fireRate: 4
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/M16/rifle_gunshot_2.ogg
     selectedMode: SemiAuto
@@ -851,6 +899,9 @@
   - type: Appearance
   - type: StaticPrice
     price: 2000
+  - type: ReverseEngineering
+    recipes:
+      - WeaponRifleHunter
 
 - type: entity
   name: NCSP AK-379M Mayflower 7.62x51mm
@@ -904,6 +955,13 @@
     price: 1500
   - type: Contraband
     value: 3
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponRifleMayflower
+      - WeaponRifleUnderdogCyberdawn
+      - WeaponRifleAkCyberdawn
+      - WeaponRifleKrinkovCyberdawn
 
 - type: entity
   name: SHI M335 Barghest 12.7x99mm
@@ -967,6 +1025,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponRifleBarghest
+      - WeaponSniperHristov
 
 - type: entity
   name: NCSP SVD 12.7x99mm
@@ -1023,6 +1086,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponRifleSVDMarksmanNCSP
+      - WeaponSniperAK60Cyberdawn
 
 - type: entity
   name: HGS ZoG-44 Hund 5.56x45mm

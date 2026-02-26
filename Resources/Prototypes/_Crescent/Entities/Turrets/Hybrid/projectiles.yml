@@ -13,14 +13,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 300
-        Radiation: 90
+        Structural: 320
+        Radiation: 80
   - type: PointLight
     radius: 3.5
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1400
+    lifetime: 10 #1500
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -42,21 +42,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 400
-        Radiation: 110
+        Structural: 230
+        Radiation: 120
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 220
+    maxIntensity: 220 #about 3 rounds to break plastit and has a 3x3ish explosion
     intensitySlope: 45
-    totalIntensity: 800
+    totalIntensity: 900
     maxTileBreak: 6
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1500
+    lifetime: 12 #2100
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -77,21 +77,21 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 1000
-        Radiation: 120
+        Structural: 2300
+        Radiation: 200
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 350
+    maxIntensity: 350 #2 hits breaks plastit wider range and more effective
     intensitySlope: 120
-    totalIntensity: 12000
-    maxTileBreak: 7
+    totalIntensity: 5000
+    maxTileBreak: 12
   - type: PointLight
     radius: 3.5
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 12 #2160
+    lifetime: 15 #2850
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:

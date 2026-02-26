@@ -35,6 +35,9 @@
     clothingPrototype: ClothingHeadHelmetHardsuitHEV
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterHardsuitHEV
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
@@ -69,6 +72,13 @@
     clothingPrototype: ClothingHeadHelmetHardsuitCorpsec
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsecIndependent
+      - ClothingOuterHardsuitHEV
 
 - type: entity
   parent: ClothingOuterHardsuitHighsec
@@ -84,6 +94,13 @@
     clothingPrototype: ClothingHeadHelmetHardsuitCorpsecUA
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecIndependent
+      - ClothingOuterHardsuitHEV
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
@@ -128,6 +145,13 @@
     price: 5000
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - ClothingOuterHardsuitSHIJuggernaut
+      - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsecIndependent
 
 - type: entity
   parent: [ClothingOuterArmorBasic, StreeCredRedeemable]
@@ -169,6 +193,13 @@
     clothingPrototype: ClothingHeadHelmetHardsuitSHISpeedsuit
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - ClothingOuterHardsuitSHISpeedsuit
+      - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsecIndependent
 
 #armor
 
@@ -199,6 +230,13 @@
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: GroupExamine
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - ClothingOuterArmorShinoharaHOSVest
+      - ClothingOuterArmorShinoharaArmor
+      - ClothingOuterArmorShinoharaArmorHighsec
+      - ClothingOuterArmorShinoharaArmorHighsecUA
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -229,6 +267,13 @@
   - type: GroupExamine
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorShinoharaArmor
+      - ClothingOuterArmorShinoharaArmorHighsec
+      - ClothingOuterArmorShinoharaArmorHighsecUA
+      - ClothingOuterArmorShinoharaArmorBulwark
+      - ClothingOuterArmorShinoharaHOSVest
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -259,6 +304,13 @@
   - type: GroupExamine
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorShinoharaArmorHighsec
+      - ClothingOuterArmorShinoharaArmorHighsecUA
+      - ClothingOuterArmorShinoharaArmorBulwark
+      - ClothingOuterArmorShinoharaHOSVest
+      - ClothingOuterArmorShinoharaArmor
 
 - type: entity
   parent: ClothingOuterArmorShinoharaArmorHighsec
@@ -272,6 +324,13 @@
     sprite: _Crescent/Clothing/SHI/OuterClothing/highsec_ua.rsi
   - type: ClothingAddFaction
     faction: SHI
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorShinoharaArmorHighsecUA
+      - ClothingOuterArmorShinoharaArmorBulwark
+      - ClothingOuterArmorShinoharaHOSVest
+      - ClothingOuterArmorShinoharaArmor
+      - ClothingOuterArmorShinoharaArmorHighsec
 
 #clothes
 

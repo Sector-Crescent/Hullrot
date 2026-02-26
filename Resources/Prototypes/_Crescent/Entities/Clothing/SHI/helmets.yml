@@ -181,6 +181,11 @@
         Piercing: 0.85
         Heat: 0.85
         Caustic: 0.85
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingHeadHatShinoharaHelmet
+      - ClothingHeadHatShinoharaHelmetUA
+      - ClothingHeadHatShinoharaNonevaHelm
 
 - type: entity
   parent: ClothingHeadHatShinoharaHelmet
@@ -196,6 +201,11 @@
     sprite: _Crescent/Clothing/SHI/Head/highsec_ua.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/SHI/Head/highsec_ua.rsi
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingHeadHatShinoharaHelmetUA
+      - ClothingHeadHatShinoharaNonevaHelm
+      - ClothingHeadHatShinoharaHelmet
 
 - type: entity
   parent: ClothingHeadBase

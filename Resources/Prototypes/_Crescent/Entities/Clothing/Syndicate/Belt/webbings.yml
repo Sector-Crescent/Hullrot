@@ -10,6 +10,9 @@
     sprite: _Crescent/Clothing/Syndicate/Belt/syn_webbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingBeltSyndicateWebbing
 
 - type: entity
   parent: ClothingBeltNfsdWebbing
@@ -23,3 +26,6 @@
     sprite: _Crescent/Clothing/Syndicate/Belt/int_webbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingBeltSyndicateWebbingInterdyne

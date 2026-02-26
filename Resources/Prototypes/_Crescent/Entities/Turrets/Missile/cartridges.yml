@@ -1,6 +1,6 @@
 - type: entity
   id: Cartridge48mmRocket
-  name: 48mm assault rocket
+  name: 48mm Missile
   description: Luckily not armed. You think.
   parent: MissileBaseCartridge
   components:
@@ -23,7 +23,7 @@
 
 - type: entity
   id: Cartridge48mmRocketGorlex
-  name: dread gorlex 48mm assault rocket
+  name: Gorlex 48mm Missile
   description: Luckily not armed. You think. Seems to be a Gorlex Security Consulting-modified warhead.
   parent: MissileBaseCartridge
   components:
@@ -48,7 +48,7 @@
 
 - type: entity
   id: Cartridge60mmRocketGorlex
-  name: dread gorlex 60mm light missile
+  name: Gorlex 60mm Rocket
   description: Luckily not armed. You think. Seems to be a Gorlex Security Consulting-modified warhead.
   parent: MissileBaseCartridge
   components:
@@ -71,7 +71,7 @@
 
 - type: entity
   id: Cartridge60mmRocketNCWL
-  name: homeguard-issue 60mm light missile
+  name: Homeguard 60mm Rocket
   description: Luckily not armed. You think. Seems to be a Homeguard Fleet-issue warhead.
   parent: MissileBaseCartridge
   components:
@@ -94,7 +94,7 @@
 
 - type: entity
   id: Cartridge60mmRocket
-  name: 60mm light missile
+  name: 60mm Rocket
   description: Luckily not armed. You think.
   parent: MissileBaseCartridge
   components:
@@ -117,8 +117,8 @@
 
 - type: entity
   id: Cartridge60mmRocketAdvanced
-  name: advanced 60mm light missile
-  description: Luckily not armed. You think. This seems to be an improved design.
+  name: SHI 60mm Missile
+  description: Luckily not armed. You think. Reduced payload but fitted with a seeker.
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -142,7 +142,7 @@
 
 - type: entity
   id: Cartridge95mmRocket
-  name: high-explosive 95mm heavy assault missile
+  name: 95mm Medium Missile
   description: Luckily not armed. You think.
   parent: MissileBaseCartridge
   components:
@@ -165,7 +165,7 @@
 
 - type: entity
   id: Cartridge95mmRocketNCWL
-  name: homeguard-issue 95mm heavy assault missile
+  name: Homeguard 95mm Medium Missile
   description: Luckily not armed. You think. Seems to be issued by the Homeguard Fleet. Seems to have a bigger fuel bay and heavier armor plating than usual.
   parent: MissileBaseCartridge
   components:
@@ -188,7 +188,7 @@
 
 - type: entity
   id: Cartridge95mmRocketGSC
-  name: dread gorlex 95mm heavy assault missile
+  name: Gorlex 95mm Medium Missile
   description: Luckily not armed. You think. Seems to be a Gorlex-modified design. Seems to have upgraded thruster nozzles and a bigger payload, although the tracking module has been degraded and the fuel bay is smaller than usual.
   parent: MissileBaseCartridge
   components:
@@ -213,8 +213,8 @@
 
 - type: entity
   id: Cartridge240mmRocket
-  name: 240mm heat-seeking heavy torpedo
-  description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down.
+  name: 240mm Torpedo
+  description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow but hard to shoot down.
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -237,8 +237,8 @@
 
 - type: entity
   id: Cartridge240mmRocketNCWL
-  name: homeguard-issue 240mm heat-seeking heavy torpedo
-  description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down. This one seems to be issued by the Union Homeguard, upgraded in all aspects.
+  name: Homeguard 240mm Torpedo
+  description: A massive, bulky torpedo with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow but hard to shoot down. This one seems to be issued by the Union Homeguard, upgraded in all aspects.
   parent: MissileBaseCartridge
   components:
   - type: Tag
@@ -263,8 +263,8 @@
 
 - type: entity
   id: Cartridge330mmRocket
-  name: 330mm heat-seeking heavy cruise missile
-  description: A massive, bulky cruise missile with an inbuilt tracking and course correction system. It's slow speed allows it to phase through deflector bubbles. Slow and easy to shoot down.
+  name: 330mm Cruise Missile
+  description: A massive, bulky hypersonic cruise missile with an inbuilt tracking and course correction system. You wouldnt wanna be on the receiving end.
   parent: MissileBaseCartridge
   components:
   - type: Tag

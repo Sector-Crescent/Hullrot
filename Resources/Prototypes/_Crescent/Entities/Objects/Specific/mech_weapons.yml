@@ -125,6 +125,11 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatTaikotyo
+      - WeaponMechGustaf
 
 - type: entity
   id: WeaponMechSword
@@ -152,6 +157,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponMechSword
+      - WeaponMechMaul
 
 - type: entity
   id: WeaponMechPlasmaSword
@@ -179,6 +188,12 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechPlasmaSword
+      - WeaponMechSword
+      - WeaponMechMaul
 
 - type: entity
   id: WeaponMechMaul
@@ -205,7 +220,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
-
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponMechMaul
+      - WeaponMechSword
 
 - type: entity
   id: WeaponMechCombatLightRifle
@@ -237,6 +255,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatLightRifle
 
 
 - type: entity
@@ -368,6 +390,12 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatHeavyRifle
+      - WeaponMechCombatLightRifle
+      - WeaponMechCombatAutocannon
 
 - type: entity
   id: WeaponMechCombatAutocannon
@@ -398,6 +426,12 @@
   - type: Tag
     tags:
     - SiegeMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatAutocannon
+      - WeaponMechCombatHeavyRifle
+      - WeaponMechCombatLightRifle
 
 - type: entity
   id: WeaponMechCombatAutoshotgun
@@ -427,6 +461,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatAutoshotgun
 
 - type: entity
   id: WeaponMechCombatAutopuntgun
@@ -458,6 +496,11 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatAutopuntgun
+      - WeaponMechCombatAutoshotgun
 
 - type: entity
   id: WeaponMechCombatGrenadeLauncher
@@ -518,6 +561,11 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatPlasmaRifle
+      - WeaponMechCombatPlasmaCannon
 
 - type: entity
   id: WeaponMechCombatImperialSMG
@@ -546,6 +594,9 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponMechCombatImperialSMG
 
 - type: entity
   id: WeaponMechCombatImperialAutolaser
@@ -573,6 +624,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatImperialAutolaser
 
 - type: hitscan
   id: LumenLaser
@@ -618,6 +673,11 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatPlasmaCannon
+      - WeaponMechCombatPlasmaRifle
 
 - type: entity
   id: WeaponMechCombatCarlGustaf
@@ -647,3 +707,8 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechGustaf
+      - WeaponMechCombatTaikotyo

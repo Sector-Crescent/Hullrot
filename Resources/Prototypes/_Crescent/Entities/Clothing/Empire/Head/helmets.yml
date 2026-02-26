@@ -238,6 +238,11 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHatClarizeBeret
+      - ClothingHeadHatImperialBeret
+      - ClothingHeadHatImperialPeakedCap
 
 - type: entity
   parent: ClothingHeadBase
@@ -271,6 +276,11 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHatImperialBeret
+      - ClothingHeadHatImperialPeakedCap
+      - ClothingHeadHatClarizeBeret
 
 - type: entity
   parent: ClothingHeadBase
@@ -329,6 +339,12 @@
     - Hair
     - Snout
   - type: IdentityBlocker
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHelmetImperialTrooperHelmet
+      - ClothingOuterArmorImperialTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
+      - ClothingOuterArmorClarizianTrooperArmor
 
 - type: entity
   parent: ClothingHeadBase
@@ -357,6 +373,12 @@
     - Hair
     - Snout
   - type: IdentityBlocker
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHelmetClarizianTrooperHelmet
+      - ClothingOuterArmorClarizianTrooperArmor
+      - ClothingHeadHelmetImperialTrooperHelmet
+      - ClothingOuterArmorImperialTrooperArmor
 
 - type: entity
   parent: ClothingHeadBase
@@ -385,6 +407,14 @@
     - Hair
     - Snout
   - type: IdentityBlocker
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHelmetImperialKnightCommanderHelmet
+      - ClothingOuterArmorImperialArmorPrestige
+      - ClothingHeadHelmetImperialTrooperHelmet
+      - ClothingOuterArmorImperialTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
+      - ClothingOuterArmorClarizianTrooperArmor
 
 - type: entity
   parent: ClothingHeadBase
@@ -414,6 +444,9 @@
     - Hair
     - Snout
   - type: IdentityBlocker
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHelmetImperialWorkerHelmet
 
 - type: entity
   parent: ClothingHeadEVAHelmetBase
@@ -450,6 +483,11 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingHeadHatImperialPeakedCap
+      - ClothingHeadHatImperialBeret
+      - ClothingHeadHatClarizeBeret
 
 - type: entity
   parent: ClothingHeadBase

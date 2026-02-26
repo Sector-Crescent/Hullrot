@@ -9,6 +9,7 @@
   tier: 1
   cost: 600
   recipeUnlocks:
+  - ClothingUniformJumpsuitImperialCombat
   - ClothingMaskImperialCombatGasmask
   - ClothingOuterCoatImperialParade
   - ClothingUniformJumpsuitImperialDoctor
@@ -32,6 +33,7 @@
   cost: 1000
   recipeUnlocks:
   - ClothingHeadHatImperialHat
+  - ClothingHeadHatImperialBeret
   - ClothingUniformJumpsuitImperialNobleMale
   - ClothingUniformJumpsuitImperialNobleFemale
   - ClothingUniformJumpsuitImperialSoldierFormal
@@ -40,6 +42,7 @@
   - ClothingNeckCloakImperialGovernor
   - ClothingOuterHardsuitImperialWorker
   - ClothingNeckImperialGreatcoat
+  - ClothingNeckCloakImperialCapelet
 
 - type: technology
   id: BasicImperialArmor
@@ -99,6 +102,20 @@
   - WeaponRevolverArgenti
 
 - type: technology
+  id: SurplusImperialRifling
+  name: research-technology-imperial-surplusrifling
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/hunter.rsi
+    state: icon
+  discipline: Imperial
+  tier: 1
+  cost: 3000
+  recipeUnlocks:
+  - WeaponSubMachineGunBeetle
+  - WeaponRifleHunter
+  - WeaponShotgunDSMMatusa
+
+- type: technology
   id: ImperialCarrion
   name: research-technology-imperial-carrion
   icon:
@@ -125,6 +142,18 @@
   recipeUnlocks:
   - WeaponMechCombatImperialSMG
   - WeaponMechCombatImperialAutolaser
+
+- type: technology
+  id: ImperialRedemptor
+  name: research-technology-imperial-redemptor
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Imperial
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - RedemptorLPC
 
 - type: technology
   id: ImperialCovetor
@@ -198,6 +227,7 @@
   recipeUnlocks:
   - ClothingBeltSheathDSMRapier
   - ClothingBeltSheathDSMSabre
+  - ClothingBeltSheathKhopesh
   - DSMRapier
   - DSMSabre
   - DSMZweihander
@@ -206,7 +236,7 @@
 
 - type: technology
   id: ImperialSunesis
-  name: research-technology-imperial-sunesis
+  name: research-technology-imperial-scribes
   icon:
     sprite: _Crescent/Objects/Misc/lpcchip.rsi
     state: icon
@@ -215,6 +245,8 @@
   cost: 8000
   recipeUnlocks:
   - SunesisLPC
+  - PraxisLPC
+  - GnosisLPC
 
 - type: technology
   id: ImperialNemesis
@@ -268,6 +300,7 @@
   - WeaponRifleDSMLegionnaire
   - WeaponPistolNeoVolker
   - WeaponLightMachineGunDSMDominion
+  - WeaponSniperImperator
   - WeaponShotgunReno
 
 
@@ -307,6 +340,18 @@
   cost: 8000
   recipeUnlocks:
   - WeaponLauncherM320
+
+- type: technology
+  id: ImperialVibrokhopesh
+  name: research-technology-imperial-vibrokhopesh
+  icon:
+    sprite: _Crescent/Objects/Weapons/Melee/vibrokhopesh.rsi
+    state: icon
+  discipline: Imperial
+  tier: 3
+  cost: 8000
+  recipeUnlocks:
+  - SRMKhopesh
 
 - type: technology
   id: ImperialTriumphant
