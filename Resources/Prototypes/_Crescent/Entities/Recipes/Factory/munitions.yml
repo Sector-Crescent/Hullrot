@@ -129,7 +129,7 @@
 #120mm Anvil
 - type: factoryRecipe
   id: 120mmRegularFabrication
-  name: Manufacture 120mm Shell
+  name: Manufacture 120mm HE Shell
   inputs:
     Steel: 5
     Plasma: 3
@@ -139,21 +139,20 @@
 
 - type: factoryRecipe
   id: 120mmGyrostableFabrication
-  name: Manufacture 120mm Gyrostable Shell
+  name: Manufacture 120mm Flux Shell
   inputs:
     Steel: 5
-    Plasma: 5
-    Uranium: 3
+    Plasma: 1
+    Uranium: 5
   outputs:
     Cartridge120mmFlux: 1
 
 - type: factoryRecipe
   id: 120mmPlasmaFabrication
-  name: Manufacture 120mm Plasma Shell
+  name: Manufacture 120mm Flak Shell
   inputs:
-    Steel: 5
-    Plasma: 3
-    Uranium: 5
+    Steel: 10
+    Plasma: 5
   outputs:
     Cartridge120mmFlak: 1
 
@@ -172,7 +171,7 @@
 #240mm Gargoyle Ammo
 - type: factoryRecipe
   id: 240mmRegularFabrication
-  name: Manufacture 240mm Regular Missile
+  name: Manufacture 240mm Torpedo
   inputs:
     Steel: 10
     Plasma: 10
@@ -181,7 +180,7 @@
 
 - type: factoryRecipe
   id: 240mmNCWLFabrication
-  name: Manufacture 240mm NCWL Missile
+  name: Manufacture 240mm NCWL Torpedo
   inputs:
     Steel: 10
     Plasma: 10
@@ -192,7 +191,7 @@
 #330mm Catapult Ammo
 - type: factoryRecipe
   id: 330mmRegularFabrication
-  name: Manufacture 330mm Regular Rocket
+  name: Manufacture 330mm Missile
   inputs:
     Steel: 10
     Plasma: 10

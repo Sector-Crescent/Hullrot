@@ -198,7 +198,7 @@
 #20mm Screamer Ammo
 - type: factoryRecipe
   id: FabricateMagazine20mmScreamerRegular
-  name: fabricate 20mm usm drum
+  name: fabricate 20mm drum
   inputs:
     Steel: 8
   outputs:
@@ -206,17 +206,17 @@
 
 - type: factoryRecipe
   id: FabricateMagazine20mmScreamerGyrostable
-  name: fabricate 20mm gyrostable drum
+  name: fabricate 20mm frag drum
   inputs:
     Steel: 8
-    Uranium: 3
+    Plasma: 3
   outputs:
     Magazine20mmFrag: 1
 
 #35mm Scout Ammo
 - type: factoryRecipe
   id: FabricateMagazine35mmScoutRegular
-  name: fabricate 35mmm usm drum
+  name: fabricate 35mmm AP drum
   inputs:
     Steel: 10
   outputs:
@@ -224,10 +224,10 @@
 
 - type: factoryRecipe
   id: FabricateMagazine35mmScoutGyrostable
-  name: fabricate 35mmm gyrostable drum
+  name: fabricate 35mmm HE drum
   inputs:
     Steel: 10
-    Uranium: 5
+    Plasma: 5
   outputs:
     Magazine35mmHE: 1
 
@@ -236,7 +236,7 @@
 #50mm Striker Ammo
 - type: factoryRecipe
   id: FabricateMagazine50mmStrikerRegular
-  name: fabricate 50mmm usm drum
+  name: fabricate 50mmm AP drum
   inputs:
     Steel: 15
     Plasma: 3
@@ -245,27 +245,27 @@
 
 - type: factoryRecipe
   id: FabricateMagazine50mmStrikerGyrostable
-  name: fabricate 50mmm gyrostable drum
+  name: fabricate 50mmm HE drum
   inputs:
     Steel: 15
-    Plasma: 3
-    Uranium: 8
+    Plasma: 13
   outputs:
     Magazine50mmHE: 1
 
 - type: factoryRecipe
   id: FabricateMagazine50mmStrikerPlasma
-  name: fabricate 50mmm plasma drum
+  name: fabricate 50mmm SAPHE drum
   inputs:
     Steel: 15
-    Plasma: 13
+    Plasma: 3
+    Uranium: 8
   outputs:
-    Magazine50mmPlasma: 1
+    Magazine50mmSAPHE: 1
 
 #88mm Corpus Ammo
 - type: factoryRecipe
   id: FabricateMagazine88mmFlakRegular
-  name: fabricate 88mmm usm drum
+  name: fabricate 88mmm box
   inputs:
     Steel: 25
     Uranium: 3
@@ -275,7 +275,7 @@
 #90mm Resolute Ammo
 - type: factoryRecipe
   id: FabricateMagazine90mmRegular
-  name: fabricate 90mmm regular shell clip
+  name: fabricate 90mmm APHE shell clip
   inputs:
     Steel: 20
     Uranium: 3
@@ -285,7 +285,7 @@
 
 - type: factoryRecipe
   id: FabricateMagazine90mmGyrostable
-  name: fabricate 90mmm gyrostable shell clip
+  name: fabricate 90mmm AP shell clip
   inputs:
     Steel: 20
     Uranium: 13
@@ -295,7 +295,7 @@
 
 - type: factoryRecipe
   id: FabricateMagazine90mmPlasma
-  name: fabricate 90mmm plasma shell clip
+  name: fabricate 90mmm HE shell clip
   inputs:
     Steel: 20
     Uranium: 3

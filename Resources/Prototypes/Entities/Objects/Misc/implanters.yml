@@ -53,6 +53,8 @@
           implantOnly:
             True: {state: broken}
             False: {state: implanter0}
+    - type: StaticPrice
+      price: 2500
 
 - type: entity
   id: Implanter

@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/22/2026 13:42:21
+  time: 02/26/2026 22:59:38
   entityCount: 1022
 maps: []
 grids:
@@ -498,6 +498,11 @@ entities:
             1575: -5,-18
             1578: -4,-21
             1581: -3,-22
+            1613: 7,-6
+            1621: -5,-6
+            1635: -5,-18
+            1638: -4,-21
+            1641: -3,-22
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -627,6 +632,11 @@ entities:
             1584: 5,-22
             1587: 6,-21
             1590: 7,-18
+            1616: 7,-6
+            1624: -5,-6
+            1644: 5,-22
+            1647: 6,-21
+            1650: 7,-18
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -802,6 +812,13 @@ entities:
             1559: -5,-6
             1567: -4,-5
             1572: -1,1
+            1593: 0,1
+            1598: 2,1
+            1606: 6,-5
+            1611: 7,-6
+            1619: -5,-6
+            1627: -4,-5
+            1632: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -977,6 +994,13 @@ entities:
             1555: 7,-6
             1563: -5,-6
             1569: -4,-5
+            1595: 0,1
+            1600: 2,1
+            1603: 3,1
+            1608: 6,-5
+            1615: 7,-6
+            1623: -5,-6
+            1629: -4,-5
         - node:
             id: LatticeEdgeE
           decals:
@@ -1226,6 +1250,16 @@ entities:
             1573: -5,-18
             1576: -4,-21
             1579: -3,-22
+            1592: 0,1
+            1597: 2,1
+            1605: 6,-5
+            1610: 7,-6
+            1618: -5,-6
+            1626: -4,-5
+            1631: -1,1
+            1633: -5,-18
+            1636: -4,-21
+            1639: -3,-22
         - node:
             id: LatticeEdgeN
           decals:
@@ -1429,6 +1463,14 @@ entities:
             1582: 5,-22
             1585: 6,-21
             1588: 7,-18
+            1612: 7,-6
+            1620: -5,-6
+            1634: -5,-18
+            1637: -4,-21
+            1640: -3,-22
+            1642: 5,-22
+            1645: 6,-21
+            1648: 7,-18
         - node:
             id: LatticeEdgeS
           decals:
@@ -1640,6 +1682,14 @@ entities:
             1557: -5,-6
             1565: -4,-5
             1570: -1,1
+            1591: 0,1
+            1596: 2,1
+            1601: 3,1
+            1604: 6,-5
+            1609: 7,-6
+            1617: -5,-6
+            1625: -4,-5
+            1630: -1,1
         - node:
             id: LatticeEdgeW
           decals:
@@ -1889,6 +1939,16 @@ entities:
             1583: 5,-22
             1586: 6,-21
             1589: 7,-18
+            1594: 0,1
+            1599: 2,1
+            1602: 3,1
+            1607: 6,-5
+            1614: 7,-6
+            1622: -5,-6
+            1628: -4,-5
+            1643: 5,-22
+            1646: 6,-21
+            1649: 7,-18
         - node:
             angle: 6.283185307179586 rad
             color: '#52B4E996'
@@ -2057,19 +2117,12 @@ entities:
       - 163
     - type: Physics
       canCollide: False
-- proto: AAAHardpointSmallBallistic
+- proto: AAAHardpointMediumBallistic
   entities:
-  - uid: 4
-    components:
-    - type: Transform
-      pos: 8.5,-14.5
-      parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 5
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
+      rot: 1.5707963267948966 rad
       pos: 9.5,-7.5
       parent: 1
     - type: Physics
@@ -2079,13 +2132,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 7.5,-4.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 7
-    components:
-    - type: Transform
-      pos: -5.5,-14.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -2100,8 +2146,24 @@ entities:
   - uid: 9
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: -1.5707963267948966 rad
       pos: -6.5,-7.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+- proto: AAAHardpointSmallBallistic
+  entities:
+  - uid: 4
+    components:
+    - type: Transform
+      pos: 8.5,-14.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 7
+    components:
+    - type: Transform
+      pos: -5.5,-14.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -2909,7 +2971,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 141
+  - uid: 151
     components:
     - type: Transform
       parent: 138
@@ -2932,7 +2994,7 @@ entities:
       parent: 1
 - proto: ButchCleaver
   entities:
-  - uid: 142
+  - uid: 153
     components:
     - type: Transform
       parent: 138
@@ -5004,22 +5066,22 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 149
-          - 146
-          - 147
-          - 145
-          - 143
-          - 144
-          - 150
-          - 148
-          - 154
-          - 153
-          - 142
-          - 151
-          - 139
-          - 140
-          - 141
           - 152
+          - 141
+          - 140
+          - 139
+          - 151
+          - 142
+          - 153
+          - 154
+          - 148
+          - 150
+          - 144
+          - 143
+          - 145
+          - 147
+          - 146
+          - 149
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -5300,13 +5362,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 148
-    components:
-    - type: Transform
-      parent: 138
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
   - uid: 149
     components:
     - type: Transform
@@ -5315,6 +5370,13 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
   - uid: 150
+    components:
+    - type: Transform
+      parent: 138
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 152
     components:
     - type: Transform
       parent: 138
@@ -6884,7 +6946,7 @@ entities:
     - type: InsideEntityStorage
 - proto: KitchenKnife
   entities:
-  - uid: 151
+  - uid: 142
     components:
     - type: Transform
       parent: 138
@@ -6915,7 +6977,7 @@ entities:
       parent: 1
 - proto: MaterialCotton
   entities:
-  - uid: 152
+  - uid: 141
     components:
     - type: Transform
       parent: 138
@@ -7070,7 +7132,7 @@ entities:
       parent: 1
 - proto: PillCanisterDylovene
   entities:
-  - uid: 153
+  - uid: 154
     components:
     - type: Transform
       parent: 138
@@ -7628,7 +7690,7 @@ entities:
       parent: 1
 - proto: RollingPin
   entities:
-  - uid: 154
+  - uid: 148
     components:
     - type: Transform
       parent: 138

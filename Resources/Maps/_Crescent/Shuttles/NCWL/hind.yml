@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 02/09/2026 06:30:01
-  entityCount: 696
+  time: 02/27/2026 03:13:01
+  entityCount: 706
 maps: []
 grids:
 - 1
@@ -292,12 +292,18 @@ entities:
             544: -4,-7
             547: -3,-10
             550: -2,-11
-            602: -11,2
-            607: -11,3
-            628: -10,-2
-            632: -4,-7
-            635: -3,-10
-            638: -2,-11
+            596: -11,2
+            601: -11,3
+            622: -10,-2
+            626: -4,-7
+            629: -3,-10
+            632: -2,-11
+            678: -11,2
+            683: -11,3
+            704: -10,-2
+            708: -4,-7
+            711: -3,-10
+            714: -2,-11
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -324,12 +330,18 @@ entities:
             556: 3,-10
             559: 4,-7
             563: 10,-2
-            586: 11,2
-            591: 11,3
-            641: 2,-11
-            644: 3,-10
-            647: 4,-7
-            651: 10,-2
+            583: 11,2
+            588: 11,3
+            635: 2,-11
+            638: 3,-10
+            641: 4,-7
+            645: 10,-2
+            665: 11,2
+            670: 11,3
+            717: 2,-11
+            720: 3,-10
+            723: 4,-7
+            727: 10,-2
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -360,14 +372,22 @@ entities:
             531: -4,7
             534: -2,11
             537: -1,13
-            600: -11,2
-            605: -11,3
-            610: -11,4
-            613: -8,4
-            616: -7,6
-            619: -4,7
-            622: -2,11
-            625: -1,13
+            594: -11,2
+            599: -11,3
+            604: -11,4
+            607: -8,4
+            610: -7,6
+            613: -4,7
+            616: -2,11
+            619: -1,13
+            676: -11,2
+            681: -11,3
+            686: -11,4
+            689: -8,4
+            692: -7,6
+            695: -4,7
+            698: -2,11
+            701: -1,13
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -403,9 +423,17 @@ entities:
             572: 4,7
             575: 7,6
             578: 8,4
-            585: 11,2
-            590: 11,3
-            594: 11,4
+            582: 11,2
+            587: 11,3
+            591: 11,4
+            648: 1,13
+            651: 2,11
+            654: 4,7
+            657: 7,6
+            660: 8,4
+            664: 11,2
+            669: 11,3
+            673: 11,4
         - node:
             id: LatticeEdgeE
           decals:
@@ -453,18 +481,30 @@ entities:
             542: -4,-7
             545: -3,-10
             548: -2,-11
-            599: -11,2
-            604: -11,3
-            609: -11,4
-            612: -8,4
-            615: -7,6
-            618: -4,7
-            621: -2,11
-            624: -1,13
-            626: -10,-2
-            630: -4,-7
-            633: -3,-10
-            636: -2,-11
+            593: -11,2
+            598: -11,3
+            603: -11,4
+            606: -8,4
+            609: -7,6
+            612: -4,7
+            615: -2,11
+            618: -1,13
+            620: -10,-2
+            624: -4,-7
+            627: -3,-10
+            630: -2,-11
+            675: -11,2
+            680: -11,3
+            685: -11,4
+            688: -8,4
+            691: -7,6
+            694: -4,7
+            697: -2,11
+            700: -1,13
+            702: -10,-2
+            706: -4,-7
+            709: -3,-10
+            712: -2,-11
         - node:
             id: LatticeEdgeN
           decals:
@@ -520,20 +560,34 @@ entities:
             557: 4,-7
             560: 7,-7
             561: 10,-2
-            583: 11,2
-            588: 11,3
-            601: -11,2
-            606: -11,3
-            627: -10,-2
-            629: -7,-7
-            631: -4,-7
-            634: -3,-10
-            637: -2,-11
-            639: 2,-11
-            642: 3,-10
-            645: 4,-7
-            648: 7,-7
-            649: 10,-2
+            580: 11,2
+            585: 11,3
+            595: -11,2
+            600: -11,3
+            621: -10,-2
+            623: -7,-7
+            625: -4,-7
+            628: -3,-10
+            631: -2,-11
+            633: 2,-11
+            636: 3,-10
+            639: 4,-7
+            642: 7,-7
+            643: 10,-2
+            662: 11,2
+            667: 11,3
+            677: -11,2
+            682: -11,3
+            703: -10,-2
+            705: -7,-7
+            707: -4,-7
+            710: -3,-10
+            713: -2,-11
+            715: 2,-11
+            718: 3,-10
+            721: 4,-7
+            724: 7,-7
+            725: 10,-2
         - node:
             id: LatticeEdgeS
           decals:
@@ -594,17 +648,33 @@ entities:
             570: 4,7
             573: 7,6
             576: 8,4
-            582: 11,2
-            587: 11,3
-            592: 11,4
-            598: -11,2
-            603: -11,3
-            608: -11,4
-            611: -8,4
-            614: -7,6
-            617: -4,7
-            620: -2,11
-            623: -1,13
+            579: 11,2
+            584: 11,3
+            589: 11,4
+            592: -11,2
+            597: -11,3
+            602: -11,4
+            605: -8,4
+            608: -7,6
+            611: -4,7
+            614: -2,11
+            617: -1,13
+            646: 1,13
+            649: 2,11
+            652: 4,7
+            655: 7,6
+            658: 8,4
+            661: 11,2
+            666: 11,3
+            671: 11,4
+            674: -11,2
+            679: -11,3
+            684: -11,4
+            687: -8,4
+            690: -7,6
+            693: -4,7
+            696: -2,11
+            699: -1,13
         - node:
             id: LatticeEdgeW
           decals:
@@ -657,13 +727,25 @@ entities:
             571: 4,7
             574: 7,6
             577: 8,4
-            584: 11,2
-            589: 11,3
-            593: 11,4
-            640: 2,-11
-            643: 3,-10
-            646: 4,-7
-            650: 10,-2
+            581: 11,2
+            586: 11,3
+            590: 11,4
+            634: 2,-11
+            637: 3,-10
+            640: 4,-7
+            644: 10,-2
+            647: 1,13
+            650: 2,11
+            653: 4,7
+            656: 7,6
+            659: 8,4
+            663: 11,2
+            668: 11,3
+            672: 11,4
+            716: 2,-11
+            719: 3,-10
+            722: 4,-7
+            726: 10,-2
         - node:
             color: '#FFFFFFFF'
             id: TechCornerS
@@ -1063,7 +1145,7 @@ entities:
       canCollide: False
 - proto: AAAHardpointSmallMissile
   entities:
-  - uid: 6
+  - uid: 5
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1071,7 +1153,7 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 7
+  - uid: 6
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1079,7 +1161,7 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 8
+  - uid: 7
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1087,7 +1169,7 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 90
+  - uid: 8
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -1525,14 +1607,38 @@ entities:
     - type: Transform
       pos: 11.5,0.5
       parent: 1
+  - uid: 698
+    components:
+    - type: Transform
+      pos: 11.5,4.5
+      parent: 1
+  - uid: 699
+    components:
+    - type: Transform
+      pos: -10.5,3.5
+      parent: 1
+  - uid: 700
+    components:
+    - type: Transform
+      pos: 11.5,3.5
+      parent: 1
+  - uid: 701
+    components:
+    - type: Transform
+      pos: -10.5,4.5
+      parent: 1
 - proto: BaseWeaponTurretAzimuth
   entities:
-  - uid: 5
+  - uid: 90
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -10.5,0.5
       parent: 1
+    - type: PointCannon
+      linkedConsoleIds:
+      - 381
+      linkedConsoleId: 381
   - uid: 91
     components:
     - type: Transform
@@ -1549,6 +1655,10 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 11.5,0.5
       parent: 1
+    - type: PointCannon
+      linkedConsoleIds:
+      - 381
+      linkedConsoleId: 381
   - uid: 93
     components:
     - type: Transform
@@ -1654,7 +1764,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 105
+  - uid: 107
     components:
     - type: Transform
       parent: 102
@@ -1663,7 +1773,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 106
+  - uid: 108
     components:
     - type: Transform
       parent: 102
@@ -3127,11 +3237,15 @@ entities:
     - type: TargetingConsole
       cannonGroups:
         all:
-        - 91
         - 93
-        60mm 'Azimuth' rapid-fire LML system:
+        - 92
         - 91
+        - 90
+        60mm 'Azimuth' Rocket Pod:
         - 93
+        - 92
+        - 91
+        - 90
 - proto: ConveyorBelt
   entities:
   - uid: 382
@@ -3171,7 +3285,7 @@ entities:
     - type: InsideEntityStorage
 - proto: DrinkBeerCan
   entities:
-  - uid: 107
+  - uid: 105
     components:
     - type: Transform
       parent: 102
@@ -3180,7 +3294,7 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-  - uid: 108
+  - uid: 106
     components:
     - type: Transform
       parent: 102
@@ -3938,18 +4052,6 @@ entities:
       parent: 1
 - proto: Railing
   entities:
-  - uid: 485
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -9.5,4.5
-      parent: 1
-  - uid: 486
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,4.5
-      parent: 1
   - uid: 487
     components:
     - type: Transform
@@ -3986,8 +4088,44 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-3.5
       parent: 1
+  - uid: 697
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,2.5
+      parent: 1
+  - uid: 703
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,3.5
+      parent: 1
+  - uid: 705
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -10.5,2.5
+      parent: 1
+  - uid: 706
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -10.5,3.5
+      parent: 1
 - proto: RailingCorner
   entities:
+  - uid: 485
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,4.5
+      parent: 1
+  - uid: 486
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,4.5
+      parent: 1
   - uid: 493
     components:
     - type: Transform
@@ -3998,6 +4136,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -10.5,0.5
+      parent: 1
+  - uid: 702
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -10.5,4.5
+      parent: 1
+  - uid: 704
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,4.5
       parent: 1
 - proto: RailingCornerSmall
   entities:

@@ -1,4 +1,41 @@
 - type: entity
+  id: BulletKineticShuttle #Exhumer
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: chronobolt
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 30
+        Structural: 35
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 25
+    intensitySlope: 15
+    totalIntensity: 500
+    maxTileBreak: 5
+  - type: Ammo
+    muzzleFlash: HitscanEffect
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: PointLight
+    radius: 2.5
+    color: white
+    energy: 0.5
+  - type: GatheringProjectile
+  - type: ShipWeaponProjectile
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+
+- type: entity
   id: Bullet20mmBase
   name: 20mm FMJ projectile
   description: Uh oh.
@@ -150,7 +187,7 @@
     maxIntensity: 15
     intensitySlope: 10
     totalIntensity: 350
-    maxTileBreak: 0
+    maxTileBreak: 5
   - type: PointLight
     radius: 3.5
     color: orange
