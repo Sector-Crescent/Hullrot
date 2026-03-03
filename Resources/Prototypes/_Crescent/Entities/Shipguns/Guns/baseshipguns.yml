@@ -85,3 +85,14 @@
   - type: NoRotateOnMove
   - type: PointCannon
   - type: TurretIFF
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: ApcPowerReceiverBattery
+    batteryRechargeRate: 1000
+  - type: SpaceArtillery
+    powerChargeRate: 1000
+    powerUsePassive: 0
+    powerUseActive: 100
+    isArmed: true
+    isPowerRequiredToFire: true

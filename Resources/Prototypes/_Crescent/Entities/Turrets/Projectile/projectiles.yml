@@ -1,41 +1,4 @@
 - type: entity
-  id: BulletKineticShuttle #Exhumer
-  parent: BaseBullet
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    noRot: false
-    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
-    layers:
-    - state: chronobolt
-      shader: unshaded
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 30
-        Structural: 35
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 25
-    intensitySlope: 15
-    totalIntensity: 500
-    maxTileBreak: 5
-  - type: Ammo
-    muzzleFlash: HitscanEffect
-  - type: TimedDespawn
-    lifetime: 1.5
-  - type: PointLight
-    radius: 2.5
-    color: white
-    energy: 0.5
-  - type: GatheringProjectile
-  - type: ShipWeaponProjectile
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-
-- type: entity
   id: Bullet20mmBase
   name: 20mm FMJ projectile
   description: Uh oh.
@@ -47,7 +10,6 @@
     visualType: Circle
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 50
@@ -76,7 +38,6 @@
     visualType: Circle
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 10
@@ -112,7 +73,6 @@
 #     color: White
 #   - type: ShipWeaponProjectile
 #   - type: Projectile
-#     ignoreWeaponGrid: true
 #     damage:
 #       types:
 #         Structural: 5
@@ -147,7 +107,6 @@
     visualType: Circle
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 300
@@ -176,7 +135,6 @@
     visualType: Circle
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 25
@@ -187,7 +145,7 @@
     maxIntensity: 15
     intensitySlope: 10
     totalIntensity: 350
-    maxTileBreak: 5
+    maxTileBreak: 0
   - type: PointLight
     radius: 3.5
     color: orange
@@ -212,7 +170,6 @@
 #     visualType: Circle
 #     color: White
 #   - type: Projectile
-#     ignoreWeaponGrid: true
 #     damage:
 #       types:
 #         Structural: 10
@@ -250,7 +207,6 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 400
@@ -278,7 +234,6 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 50
@@ -313,7 +268,6 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 150
@@ -350,7 +304,6 @@
   - type: ShipWeaponProjectile
   - type: ProjectilePhasePrevent
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 300
@@ -385,7 +338,6 @@
   - type: ShipWeaponProjectile
   - type: ProjectilePhasePrevent
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 2000
@@ -413,7 +365,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 1300
@@ -449,7 +400,6 @@
     visualType: Diamond
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 350
@@ -484,7 +434,6 @@
     visualType: Diamond
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 750
@@ -517,7 +466,6 @@
     visualType: Diamond
     color: White
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 250
@@ -551,7 +499,6 @@
   components:
   - type: ProjectilePhasePrevent
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 1000
@@ -587,7 +534,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 100

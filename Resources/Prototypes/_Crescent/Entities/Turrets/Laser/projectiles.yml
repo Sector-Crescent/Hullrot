@@ -1,4 +1,41 @@
 - type: entity
+  id: BulletKineticShuttle #Exhumer
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: chronobolt
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 30
+        Structural: 35
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 25
+    intensitySlope: 15
+    totalIntensity: 500
+    maxTileBreak: 500
+  - type: Ammo
+    muzzleFlash: HitscanEffect
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: PointLight
+    radius: 2.5
+    color: white
+    energy: 0.5
+  - type: GatheringProjectile
+  - type: ShipWeaponProjectile
+  - type: ProjectileIFF
+    visualType: Circle
+    color: White
+
+- type: entity
   id: BulletCurse
   name: ion ray
   parent: BaseBulletTrigger
@@ -7,7 +44,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 75
@@ -38,7 +74,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 100
@@ -65,7 +100,6 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
-    ignoreWeaponGrid: true
     damage:
       types:
         Heat: 250
