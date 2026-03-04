@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/30/2026 13:35:29
+  time: 03/04/2026 09:52:00
   entityCount: 355
 maps: []
 grids:
@@ -28,7 +28,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: grid
+      name: Shuttle MV-764
     - type: Transform
       pos: -0.5,-0.59375
       parent: invalid
@@ -115,6 +115,11 @@ entities:
             830: -11,-1
             833: -5,-2
             836: -2,-3
+            860: 2,4
+            913: -2,4
+            927: -11,-1
+            930: -5,-2
+            933: -2,-3
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -159,6 +164,11 @@ entities:
             839: 2,-3
             842: 5,-2
             845: 11,-1
+            863: 2,4
+            916: -2,4
+            936: 2,-3
+            939: 5,-2
+            942: 11,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -267,6 +277,19 @@ entities:
             805: -5,9
             814: -2,4
             825: -1,4
+            848: 0,4
+            853: 1,4
+            858: 2,4
+            866: 2,5
+            869: 3,7
+            872: 4,9
+            890: -11,0
+            893: -9,1
+            896: -8,4
+            899: -6,8
+            902: -5,9
+            911: -2,4
+            922: -1,4
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -375,6 +398,19 @@ entities:
             818: -2,4
             822: -2,5
             827: -1,4
+            850: 0,4
+            855: 1,4
+            862: 2,4
+            875: 5,9
+            878: 6,8
+            881: 8,4
+            884: 9,1
+            887: 11,0
+            905: -4,9
+            908: -3,7
+            915: -2,4
+            919: -2,5
+            924: -1,4
         - node:
             id: LatticeEdgeE
           decals:
@@ -506,6 +542,22 @@ entities:
             828: -11,-1
             831: -5,-2
             834: -2,-3
+            847: 0,4
+            852: 1,4
+            857: 2,4
+            865: 2,5
+            868: 3,7
+            871: 4,9
+            889: -11,0
+            892: -9,1
+            895: -8,4
+            898: -6,8
+            901: -5,9
+            910: -2,4
+            921: -1,4
+            925: -11,-1
+            928: -5,-2
+            931: -2,-3
         - node:
             id: LatticeEdgeN
           decals:
@@ -573,6 +625,14 @@ entities:
             837: 2,-3
             840: 5,-2
             843: 11,-1
+            859: 2,4
+            912: -2,4
+            926: -11,-1
+            929: -5,-2
+            932: -2,-3
+            934: 2,-3
+            937: 5,-2
+            940: 11,-1
         - node:
             id: LatticeEdgeS
           decals:
@@ -744,6 +804,27 @@ entities:
             812: -2,4
             820: -2,5
             823: -1,4
+            846: 0,4
+            851: 1,4
+            856: 2,4
+            864: 2,5
+            867: 3,7
+            870: 4,9
+            873: 5,9
+            876: 6,8
+            879: 8,4
+            882: 9,1
+            885: 11,0
+            888: -11,0
+            891: -9,1
+            894: -8,4
+            897: -6,8
+            900: -5,9
+            903: -4,9
+            906: -3,7
+            909: -2,4
+            917: -2,5
+            920: -1,4
         - node:
             id: LatticeEdgeW
           decals:
@@ -875,6 +956,22 @@ entities:
             838: 2,-3
             841: 5,-2
             844: 11,-1
+            849: 0,4
+            854: 1,4
+            861: 2,4
+            874: 5,9
+            877: 6,8
+            880: 8,4
+            883: 9,1
+            886: 11,0
+            904: -4,9
+            907: -3,7
+            914: -2,4
+            918: -2,5
+            923: -1,4
+            935: 2,-3
+            938: 5,-2
+            941: 11,-1
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -1105,6 +1202,13 @@ entities:
         sprite: _Crescent/ShipIcons/ifficons.rsi
         state: fighter
     - type: SelfDeleteGrid
+    - type: IFF
+      relations: {}
+      color: '#F6CE9C9C'
+      flags: IsPlayerShuttle
+    - type: ShuttleDeed
+      shuttleName: Shuttle MV-764
+      shuttleUid: 1
 - proto: AAAHardpointFixed
   entities:
   - uid: 2
@@ -1417,6 +1521,9 @@ entities:
     - type: Transform
       pos: 0.5,-1.5
       parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 183
 - proto: BoriaticGeneratorEinsteinShuttle
   entities:
   - uid: 58
@@ -2077,8 +2184,8 @@ entities:
       parent: 1
     - type: NamedModules
       buttonNames:
-      - Toggle "Starburst" 150cc Plasma Gatling
-      - Empty Module
+      - Toggle 'Starburst' 150cc Plasma Gatling
+      - Toggle Blast Door
       - Empty Module
       - Empty Module
       - Empty Module
@@ -2089,6 +2196,9 @@ entities:
           - Toggle
         2:
         - - Group1
+          - Toggle
+        57:
+        - - Group2
           - Toggle
     - type: ContainerContainer
       containers:
@@ -3186,10 +3296,22 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,4.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 1000
+    - type: Battery
+      startingCharge: 344.61734
+    - type: ApcPowerReceiverBattery
+      enabled: True
   - uid: 355
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,4.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 1000
+    - type: Battery
+      startingCharge: 344.61734
+    - type: ApcPowerReceiverBattery
+      enabled: True
 ...
