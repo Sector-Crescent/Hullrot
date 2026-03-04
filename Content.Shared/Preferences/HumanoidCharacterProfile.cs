@@ -18,6 +18,14 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Preferences;
 
+[Serializable, NetSerializable]
+public sealed class PersistentItemProfile
+{
+    [DataField] public required string ItemData;
+    [DataField] public bool SpawnOnJoin = false;
+    [DataField] public bool Sticky = false;
+}
+
 /// Character profile. Looks immutable, but uses non-immutable semantics internally for serialization/code sanity purposes
 [DataDefinition]
 [Serializable, NetSerializable]
@@ -139,6 +147,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     [DataField]
     public List<string> CharacterFlags { get; private set; } = new();
 
+    [DataField]
+    public List<PersistentItemProfile> ItemStorage { get; private set; } = new();
 
     public HumanoidCharacterProfile(
         string name,
@@ -167,7 +177,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         HashSet<LoadoutPreference> loadoutPreferences,
         long bankWealth,
         string proFaction,
-        List<string> characterFlags
+        List<string> characterFlags,
+        List<PersistentItemProfile> itemStorage
     )
     {
         Name = name;
@@ -197,6 +208,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         BankBalance = bankWealth;
         Faction = proFaction;
         CharacterFlags = characterFlags;
+        ItemStorage = itemStorage;
     }
 
     /// <summary>Copy constructor</summary>
@@ -228,7 +240,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             new HashSet<LoadoutPreference>(other.LoadoutPreferences),
             other.BankBalance,
             other.Faction,
-            other.CharacterFlags) { }
+            other.CharacterFlags,
+            other.ItemStorage) { }
 
     /// <summary>
     ///     Get the default humanoid character profile, using internal constant values.
@@ -429,7 +442,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     public HumanoidCharacterProfile WithFaction(string newFaction) => new(this) { Faction = newFaction };
     public HumanoidCharacterProfile WithBank(long amount) => new(this) { BankBalance = amount };
     public HumanoidCharacterProfile WithCharacterFlags(List<string> characterFlags) => new(this) { CharacterFlags = characterFlags };
-
+    public HumanoidCharacterProfile WithItemStorage(List<PersistentItemProfile> itemStorage) => new(this) { ItemStorage = itemStorage };
 
 public string Summary =>
         Loc.GetString(
@@ -462,7 +475,8 @@ public string Summary =>
             && FlavorText == other.FlavorText
             && Faction == other.Faction
             && BankBalance == other.BankBalance
-            && CharacterFlags.SequenceEqual(other.CharacterFlags);
+            && CharacterFlags.SequenceEqual(other.CharacterFlags)
+            && ItemStorage.SequenceEqual(other.ItemStorage);
     }
 
     public void EnsureValid(ICommonSession session, IDependencyCollection collection)
@@ -676,6 +690,7 @@ public string Summary =>
         hashCode.Add(Faction);
         hashCode.Add(BankBalance);
         hashCode.Add(CharacterFlags);
+        hashCode.Add(ItemStorage);
         return hashCode.ToHashCode();
     }
 

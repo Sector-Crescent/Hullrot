@@ -248,7 +248,13 @@ namespace Content.Server.Database
                 }).ToHashSet(),
                 profile.BankBalance,
                 profile.Faction,
-                profile.CharacterFlags.ToList()
+                profile.CharacterFlags.ToList(),
+                profile.ItemStorage.Select(i => new PersistentItemProfile()
+                {
+                    ItemData = i.ItemData,
+                    SpawnOnJoin = i.SpawnOnJoin,
+                    Sticky = i.Sticky
+                }).ToList()
             );
         }
 
@@ -291,6 +297,10 @@ namespace Content.Server.Database
             profile.BankBalance = humanoid.BankBalance;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
             profile.CharacterFlags = humanoid.CharacterFlags.ToArray();
+
+            profile.ItemStorage.Clear();
+            profile.ItemStorage.AddRange(humanoid.ItemStorage
+                .Select(l => new PersistentItem { ItemData = l.ItemData, SpawnOnJoin = l.SpawnOnJoin, Sticky = l.Sticky }));
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(

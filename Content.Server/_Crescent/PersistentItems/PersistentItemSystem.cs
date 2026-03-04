@@ -1,32 +1,22 @@
-using System.Threading;
-using Content.Server.Database;
-using Content.Server.Preferences.Managers;
-using Content.Server.GameTicking;
-using Content.Shared.Bank.Components;
-using Content.Shared.Preferences;
-using Robust.Shared.GameStates;
-using Robust.Shared.Network;
-using Content.Server.Cargo.Components;
-using Content.Shared.Preferences.Loadouts;
-using Content.Shared.Mind;
 using System.Diagnostics.CodeAnalysis;
+using Content.Server.Preferences.Managers;
+using Content.Shared._Crescent.PersistentItems;
+using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.Preferences;
+using Robust.Shared.Network;
 
-namespace Content.Server._Crescent.CharacterFlags;
+namespace Content.Server._Crescent.PersistentItems;
 
-public sealed partial class CharacterFlagSystem : EntitySystem
+/// <summary>
+/// :)
+/// </summary>
+public sealed class PersistentItemStorageSystem : SharedPersistentItemStorageSystem
 {
     [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
-    private ISawmill _log = default!;
-
-    public override void Initialize()
-    {
-        base.Initialize();
-        _log = Logger.GetSawmill("jerryraisestheyellowflag");
-    }
 
     // this is so fucking evil
-    public void SetCharacterFlags(EntityUid playeruid, List<string> flags)
+    public void SetCharacterStoredItems(EntityUid playeruid, List<PersistentItemProfile> storedItems)
     {
         // get entity netuserid if it has a player attached
         if (!TryComp<MindContainerComponent>(playeruid, out var mindContComp) || !TryComp<MindComponent>(mindContComp.Mind, out var netComp))
@@ -46,15 +36,14 @@ public sealed partial class CharacterFlagSystem : EntitySystem
             return;
         }
 
-        var newProfile = profile.WithCharacterFlags(flags);
+        var newProfile = profile.WithItemStorage(storedItems);
 
         _prefsManager.SetProfileNoChecks((NetUserId) user, index, newProfile);
-        _log.Info($"Character {profile.Name} saved");
     }
 
-    public bool GetCharacterFlags(EntityUid playeruid, [NotNullWhen(true)] out List<string>? flags)
+    public bool GetCharacterStoredItems(EntityUid playeruid, [NotNullWhen(true)] out List<PersistentItemProfile>? storedItems)
     {
-        flags = new List<string>();
+        storedItems = new List<PersistentItemProfile>();
 
         // get entity netuserid if it has a player attached
         if (!TryComp<MindContainerComponent>(playeruid, out var mindContComp) || !TryComp<MindComponent>(mindContComp.Mind, out var netComp))
@@ -73,7 +62,7 @@ public sealed partial class CharacterFlagSystem : EntitySystem
             return false;
         }
 
-        flags = profile.CharacterFlags;
+        storedItems = profile.ItemStorage;
         return true;
     }
 }
