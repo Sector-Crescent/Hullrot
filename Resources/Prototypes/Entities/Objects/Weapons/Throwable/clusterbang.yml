@@ -27,9 +27,6 @@
   - type: ScatteringGrenade
   - type: OnUseTimerTrigger
     delay: 3
-  - type: Tag
-    tags:
-    - HandGrenade
   - type: Fixtures
     fixtures:
       fix1:
@@ -49,8 +46,8 @@
   components:
   - type: ScatteringGrenade
     whitelist:
-      tags:
-      - GrenadeFlashBang
+      components:
+      - OnUseTimerTrigger
     distance: 6
     velocity: 6
   - type: ClusterGrenadeVisuals
@@ -73,8 +70,8 @@
       map: ["enum.TriggerVisualLayers.Base"]
   - type: ScatteringGrenade
     whitelist:
-      tags:
-      - GrenadeFlashBang
+      components:
+      - OnUseTimerTrigger
     fillPrototype: GrenadeFlashBang
     distance: 6
     velocity: 6
