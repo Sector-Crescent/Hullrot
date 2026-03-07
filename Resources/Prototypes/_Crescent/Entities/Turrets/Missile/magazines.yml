@@ -2,7 +2,7 @@
   id: Magazine48mmRocket
   name: 48mm loading box
   description: A munitions drum designed to ease loading of 48mm rocket systems. Comes 6 rockets to a box.
-  parent: BaseItem
+  parent: BaseAmmoProvider
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
@@ -60,6 +60,7 @@
   parent: Magazine48mmRocket
   components:
     - type: BallisticAmmoProvider
+      fillDelay: 1
       whitelist:
         tags:
           - CartridgeAzimuth
@@ -72,6 +73,7 @@
   parent: Magazine48mmRocket
   components:
     - type: BallisticAmmoProvider
+      fillDelay: 1
       whitelist:
         tags:
           - CartridgeAzimuth
@@ -91,6 +93,7 @@
   parent: Magazine48mmRocket
   components:
     - type: BallisticAmmoProvider
+      fillDelay: 1
       whitelist:
         tags:
           - CartridgeAzimuth
@@ -110,6 +113,7 @@
   parent: Magazine48mmRocket
   components:
     - type: BallisticAmmoProvider
+      fillDelay: 1
       whitelist:
         tags:
           - CartridgeAzimuth
