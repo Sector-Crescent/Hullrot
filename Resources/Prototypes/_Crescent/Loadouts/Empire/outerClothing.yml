@@ -16,3 +16,17 @@
         - RitterDSM
         - LevymanDSM
         - TemplarDSM
+
+- type: loadout
+  id: LoadoutOuterArmorDSMImperialNullweavePsion
+  category: Outer
+  cost: 0
+  items:
+    - ClothingOuterHardsuitImperialNullweavePsion
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - ScribeDSM
+        - ArchmaesterDSM

@@ -455,7 +455,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: PelletShotgunSpread4g
-    fireCost: 75 #100 shots on a light mechs
+    fireCost: 100 #75 shots on a light mechs
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -490,7 +490,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutopuntgunPelletSpread
-    fireCost: 100
+    fireCost: 250 # 70 shots or 35 bursts on a medium mech
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -540,7 +540,7 @@
   components:
   - type: Battery
     maxCharge: 400
-    startingCharge: 450
+    startingCharge: 400
   - type: Sprite
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: plasmarifle
@@ -555,7 +555,7 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitPlasmaBoltLight
-    fireCost: 125
+    fireCost: 50 # 150 shots or 50 bursts from a light mech
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
@@ -697,8 +697,8 @@
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/rpg_fire.ogg
   - type: Battery
-    maxCharge: 750
-    startingCharge: 750
+    maxCharge: 1250
+    startingCharge: 1250
   - type: ProjectileBatteryAmmoProvider
     proto: Projectile84mmRecoillessHEAT
     fireCost: 1250 #6 shots from a light mech

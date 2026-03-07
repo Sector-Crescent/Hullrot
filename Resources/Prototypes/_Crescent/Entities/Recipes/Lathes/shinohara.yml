@@ -142,6 +142,24 @@
 #MARK: Hardsuits
 
 - type: latheRecipe
+  id: ClothingOuterHardsuitMetrocop
+  result: ClothingOuterHardsuitMetrocop
+  completetime: 2
+  materials:
+    Durathread: 2000
+    Steel: 500
+    HardsuitElectronics: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitCombine
+  result: ClothingOuterHardsuitCombine
+  completetime: 2
+  materials:
+    Durathread: 4000
+    Steel: 1000
+    HardsuitElectronics: 500
+
+- type: latheRecipe
   id: ClothingOuterHardsuitHighsec
   result: ClothingOuterHardsuitHighsec
   completetime: 2

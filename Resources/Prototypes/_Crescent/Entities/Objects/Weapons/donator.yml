@@ -65,7 +65,7 @@
   name: NCWL-AR02 Porodschok 5.56x45mm
   parent: [BaseWeaponRifle, StreeCredRedeemableLow]
   id: PorodschokDonator
-  description: A high-end Communard rifle, used to be produced in a Chengridz-based foundry. Recalled from production after Imperial sabotage. Only a few of these actually remain.
+  description: A high-end communard assault rifle, manufactured in small numbers for liquidator forces. These rifles are built with pristine rifling, and the bakelite furniture comes in light grey instead of the standard brown.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/porodshok.rsi
@@ -124,7 +124,7 @@
   parent: WeaponCasePorodshok
   name: Chengridz factory 553 "AR02 Porodschok" case
   suffix: Donor - Porodshok
-  description: Chengridz Factory 553 weapon case containing a rare, high-end Communard rifle. That has ben recalled after Imperial sabotage at the plant.
+  description: A weapon case shipped directly from Chengridz Factory 553, containing a high end assault rifle. This thing is probably worth more than whatever ship you currently fly.
   components:
   - type: StorageFill
     contents:
@@ -419,7 +419,7 @@
   id: CaseAR2PulseRifle
   parent: WeaponCasePulseRifle
   name: Wu-Tan Industries AR-2 case
-  suffix: Donor - Kingpin
+  suffix: Donor - Pulser
   description: A Wu-Tan Industries weapon case containing a AR-2 Pulse rifle
   components:
   - type: StorageFill

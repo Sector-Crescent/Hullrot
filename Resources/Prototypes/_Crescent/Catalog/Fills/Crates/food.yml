@@ -1,0 +1,14 @@
+- type: entity
+  id: CrateFoodScopBricks
+  parent: CratePlastic
+  name: Scop Crate (Ready to eat)
+  description: A crate full of Scop nutrient bricks, ready for consumption
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodSnackNutribrick
+      amount: 10
+    - id: FoodPSB
+      amount: 20
+    - id: DrinkWaterBottleFull
+      amount: 10

@@ -360,6 +360,19 @@
     Tungsten: 1000
 
 - type: latheRecipe
+  id: ClothingOuterHardsuitImperialJuggernaut
+  result: ClothingOuterHardsuitImperialJuggernaut
+  completetime: 2
+  materials:
+    HardsuitElectronics: 1000
+    Gold: 500
+    Steel: 1000
+    Durathread: 500
+    Tungsten: 1500
+    HardlightGenerator: 2000
+    NanotrasenElectronics: 1000
+
+- type: latheRecipe
   id: ClothingOuterHardsuitImperialNullweavePsion
   result: ClothingOuterHardsuitImperialNullweavePsion
   completetime: 2
@@ -667,8 +680,8 @@
     ShipHull: 1000
 
 - type: latheRecipe
-  id: VorunaLPC
-  result: ShipVoucherVoruna
+  id: KhanLPC
+  result: ShipVoucherKhan
   completetime: 1
   materials:
     StarshipEngineComponents: 1000
@@ -683,6 +696,15 @@
     StarshipEngineComponents: 1000
     ShipComponents: 1000
     ShipHull: 1500
+
+- type: latheRecipe
+  id: RaiderLPC
+  result: ShipVoucherRaider
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4000
+    ShipComponents: 4500
+    ShipHull: 5000
 
 - type: latheRecipe
   id: TriumphantLPC

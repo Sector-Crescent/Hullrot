@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 02/27/2026 04:06:37
-  entityCount: 1068
+  time: 02/28/2026 09:20:45
+  entityCount: 1067
 maps: []
 grids:
 - 1
@@ -383,6 +383,14 @@ entities:
             1112: -9,-2
             1118: -2,-12
             1124: 5,-12
+            1170: -9,-11
+            1176: -9,-2
+            1182: -2,-12
+            1188: 5,-12
+            1234: -9,-11
+            1240: -9,-2
+            1246: -2,-12
+            1252: 5,-12
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -435,6 +443,14 @@ entities:
             1121: 2,-12
             1127: 9,-11
             1133: 9,-2
+            1179: -5,-12
+            1185: 2,-12
+            1191: 9,-11
+            1197: 9,-2
+            1243: -5,-12
+            1249: 2,-12
+            1255: 9,-11
+            1261: 9,-2
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -519,6 +535,20 @@ entities:
             1095: -4,13
             1100: -3,14
             1109: -9,-5
+            1136: 2,14
+            1142: 4,13
+            1153: -7,10
+            1156: -5,13
+            1159: -4,13
+            1164: -3,14
+            1173: -9,-5
+            1200: 2,14
+            1206: 4,13
+            1217: -7,10
+            1220: -5,13
+            1223: -4,13
+            1228: -3,14
+            1237: -9,-5
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -603,6 +633,20 @@ entities:
             1097: -4,13
             1103: -2,14
             1130: 9,-5
+            1139: 3,14
+            1144: 4,13
+            1147: 5,13
+            1150: 7,10
+            1161: -4,13
+            1167: -2,14
+            1194: 9,-5
+            1203: 3,14
+            1208: 4,13
+            1211: 5,13
+            1214: 7,10
+            1225: -4,13
+            1231: -2,14
+            1258: 9,-5
         - node:
             id: LatticeEdgeE
           decals:
@@ -734,6 +778,28 @@ entities:
             1110: -9,-2
             1116: -2,-12
             1122: 5,-12
+            1135: 2,14
+            1141: 4,13
+            1152: -7,10
+            1155: -5,13
+            1158: -4,13
+            1163: -3,14
+            1168: -9,-11
+            1172: -9,-5
+            1174: -9,-2
+            1180: -2,-12
+            1186: 5,-12
+            1199: 2,14
+            1205: 4,13
+            1216: -7,10
+            1219: -5,13
+            1222: -4,13
+            1227: -3,14
+            1232: -9,-11
+            1236: -9,-5
+            1238: -9,-2
+            1244: -2,-12
+            1250: 5,-12
         - node:
             id: LatticeEdgeN
           decals:
@@ -833,6 +899,22 @@ entities:
             1123: 5,-12
             1125: 9,-11
             1131: 9,-2
+            1169: -9,-11
+            1175: -9,-2
+            1177: -5,-12
+            1181: -2,-12
+            1183: 2,-12
+            1187: 5,-12
+            1189: 9,-11
+            1195: 9,-2
+            1233: -9,-11
+            1239: -9,-2
+            1241: -5,-12
+            1245: -2,-12
+            1247: 2,-12
+            1251: 5,-12
+            1253: 9,-11
+            1259: 9,-2
         - node:
             id: LatticeEdgeS
           decals:
@@ -964,6 +1046,30 @@ entities:
             1101: -2,14
             1107: -9,-5
             1128: 9,-5
+            1134: 2,14
+            1137: 3,14
+            1140: 4,13
+            1145: 5,13
+            1148: 7,10
+            1151: -7,10
+            1154: -5,13
+            1157: -4,13
+            1162: -3,14
+            1165: -2,14
+            1171: -9,-5
+            1192: 9,-5
+            1198: 2,14
+            1201: 3,14
+            1204: 4,13
+            1209: 5,13
+            1212: 7,10
+            1215: -7,10
+            1218: -5,13
+            1221: -4,13
+            1226: -3,14
+            1229: -2,14
+            1235: -9,-5
+            1256: 9,-5
         - node:
             id: LatticeEdgeW
           decals:
@@ -1095,6 +1201,28 @@ entities:
             1126: 9,-11
             1129: 9,-5
             1132: 9,-2
+            1138: 3,14
+            1143: 4,13
+            1146: 5,13
+            1149: 7,10
+            1160: -4,13
+            1166: -2,14
+            1178: -5,-12
+            1184: 2,-12
+            1190: 9,-11
+            1193: 9,-5
+            1196: 9,-2
+            1202: 3,14
+            1207: 4,13
+            1210: 5,13
+            1213: 7,10
+            1224: -4,13
+            1230: -2,14
+            1242: -5,-12
+            1248: 2,-12
+            1254: 9,-11
+            1257: 9,-5
+            1260: 9,-2
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -1504,6 +1632,7 @@ entities:
     - type: ShuttleDeed
       shuttleName: Shuttle ALP-720
       shuttleUid: 1
+    - type: SelfDeleteGrid
 - proto: AAAHardpointFixed
   entities:
   - uid: 2
@@ -1550,49 +1679,9 @@ entities:
       - 535
     - type: Physics
       canCollide: False
-- proto: AAAHardpointMediumBallistic
+- proto: AAAHardpointSmallBallistic
   entities:
   - uid: 6
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,13.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 7
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,11.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 8
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,11.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 9
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,8.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 10
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,11.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 11
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -1600,11 +1689,43 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 1068
+  - uid: 7
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,11.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 8
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,8.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 10
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,13.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 11
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -7.5,8.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 107
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,11.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -1638,7 +1759,7 @@ entities:
       pos: 0.5,-7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20606.201
+      secondsUntilStateChange: -20813.236
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1649,7 +1770,7 @@ entities:
       pos: 1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20595.002
+      secondsUntilStateChange: -20802.037
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1660,7 +1781,7 @@ entities:
       pos: -3.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20588.803
+      secondsUntilStateChange: -20795.838
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1671,7 +1792,7 @@ entities:
       pos: 4.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20586.035
+      secondsUntilStateChange: -20793.07
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1682,7 +1803,7 @@ entities:
       pos: -3.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20594.469
+      secondsUntilStateChange: -20801.504
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1693,7 +1814,7 @@ entities:
       pos: 4.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20595.469
+      secondsUntilStateChange: -20802.504
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1704,7 +1825,7 @@ entities:
       pos: 5.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20596.168
+      secondsUntilStateChange: -20803.203
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1715,7 +1836,7 @@ entities:
       pos: -4.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20594.002
+      secondsUntilStateChange: -20801.037
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1738,7 +1859,7 @@ entities:
       pos: -6.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20574.87
+      secondsUntilStateChange: -20781.904
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1749,7 +1870,7 @@ entities:
       pos: 7.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20576.568
+      secondsUntilStateChange: -20783.604
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1760,7 +1881,7 @@ entities:
       pos: -3.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20602.102
+      secondsUntilStateChange: -20809.137
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1771,7 +1892,7 @@ entities:
       pos: 4.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20602.635
+      secondsUntilStateChange: -20809.67
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1782,7 +1903,7 @@ entities:
       pos: 3.5,4.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20577.402
+      secondsUntilStateChange: -20784.438
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1793,7 +1914,7 @@ entities:
       pos: -2.5,4.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20575.936
+      secondsUntilStateChange: -20782.97
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1804,7 +1925,7 @@ entities:
       pos: 3.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20576.969
+      secondsUntilStateChange: -20784.004
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1815,7 +1936,7 @@ entities:
       pos: -2.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20575.535
+      secondsUntilStateChange: -20782.57
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1841,7 +1962,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -20610.402
+      secondsUntilStateChange: -20817.438
       state: Opening
   - uid: 37
     components:
@@ -1852,7 +1973,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -20611.035
+      secondsUntilStateChange: -20818.07
       state: Opening
 - proto: AmeController
   entities:
@@ -2077,6 +2198,11 @@ entities:
       parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
+  - uid: 9
+    components:
+    - type: Transform
+      pos: -4.5,13.5
+      parent: 1
   - uid: 74
     components:
     - type: Transform
@@ -2241,11 +2367,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,13.5
-      parent: 1
-  - uid: 107
-    components:
-    - type: Transform
-      pos: -4.5,13.5
       parent: 1
   - uid: 108
     components:
@@ -4567,14 +4688,14 @@ entities:
     - type: TargetingConsole
       cannonGroups:
         all:
-        - 110
-        - 111
         - 112
+        - 111
+        - 110
         - 113
         Homeguard 95mm 'Warden' Medium Missile System:
-        - 110
-        - 111
         - 112
+        - 111
+        - 110
         - 113
 - proto: ConveyorBelt
   entities:
@@ -4743,7 +4864,7 @@ entities:
       pos: 4.5,10.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -20532.469
+      secondsUntilStateChange: -20739.504
       state: Closing
   - uid: 555
     components:
@@ -8154,49 +8275,9 @@ entities:
     - type: Transform
       pos: 2.5,5.5
       parent: 1
-- proto: WeaponTurretSmallArtillery
+- proto: WeaponTurretMediumMachinegun
   entities:
   - uid: 1060
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,11.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 1061
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.5,8.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 1062
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -8216,27 +8297,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 1063
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,13.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 1064
+  - uid: 1061
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -8256,11 +8317,71 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 1065
+  - uid: 1062
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,13.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+  - uid: 1063
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.5,8.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+  - uid: 1064
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,13.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+  - uid: 1065
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,11.5
       parent: 1
     - type: ContainerContainer
       containers:

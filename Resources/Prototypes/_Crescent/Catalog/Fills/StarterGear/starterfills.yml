@@ -382,3 +382,147 @@
         - id: SuperCapacitorStockPart
         - id: SuperCapacitorStockPart
         - id: SuperCapacitorStockPart
+
+# erts
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltNCWLPouches
+  id: ClothingBeltNCWLPouchesHomeguardConscript
+  components: 
+    - type: StorageFill
+      contents: 
+        - id: SpeedLoaderRifle
+        - id: SpeedLoaderRifle
+        - id: SpeedLoaderRifle
+        - id: SpeedLoaderRifle
+        - id: SpeedLoaderRifle
+        - id: SpeedLoaderRifle
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltNCWLPouches
+  id: ClothingBeltNCWLPouchesSpetsnazSMG
+  components: 
+    - type: StorageFill
+      contents: 
+       - id: MagazineCaselessRifleUranium
+       - id: MagazineCaselessRifleUranium
+       - id: MagazineCaselessRifleUranium
+       - id: MagazineCaselessRifleUranium
+       - id: KaiserAutoinjector
+       - id: KaiserAutoinjector
+       - id: MechaniteAutoinjector
+       - id: MechaniteAutoinjector
+       - id: CrowbarRed
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltNCWLPouches
+  id: ClothingBeltNCWLPouchesSpetsnazRifleman
+  components: 
+    - type: StorageFill
+      contents: 
+       - id: MagazineLightRifleUranium
+       - id: MagazineLightRifleUranium
+       - id: MagazineLightRifleUranium
+       - id: MagazineLightRifleUranium
+       - id: KaiserAutoinjector
+       - id: KaiserAutoinjector
+       - id: MechaniteAutoinjector
+       - id: MechaniteAutoinjector
+       - id: CrowbarRed
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltNCWLPouches
+  id: ClothingBeltNCWLPouchesHomeguardConscriptSMG
+  components: 
+    - type: StorageFill
+      contents: 
+        - id: MagazinePistolSubMachineGun
+        - id: MagazinePistolSubMachineGun
+        - id: MagazinePistolSubMachineGun
+        
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltAssault
+  id: ClothingBeltBeltAssaultShieldLevymenRifleman
+  components:
+    - type: StorageFill
+      contents:
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        - id: SpeedLoaderLightRifle
+        
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltAssault
+  id: ClothingBeltBeltAssaultShieldLevymenSMG
+  components:
+    - type: StorageFill
+      contents:
+        - id: MagazinePistolSubMachineGunHeavy
+        - id: MagazinePistolSubMachineGunHeavy
+        - id: MagazinePistolSubMachineGunHeavy
+        
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltAssault
+  id: ClothingBeltBeltAssaultShieldSpecopsRifleman
+  components:
+    - type: StorageFill
+      contents:
+        - id: MagazineRifleUranium
+        - id: MagazineRifleUranium
+        - id: MagazineRifleUranium
+        - id: MagazineRifleUranium
+        - id: KaiserAutoinjector
+        - id: KaiserAutoinjector
+        - id: MechaniteAutoinjector
+        - id: MechaniteAutoinjector
+        - id: CrowbarRed
+        
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltAssault
+  id: ClothingBeltBeltAssaultShieldSpecopsShotgun
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxShotgunUranium
+        - id: BoxShotgunUranium
+        - id: KaiserAutoinjector
+        - id: KaiserAutoinjector
+        - id: MechaniteAutoinjector
+        - id: MechaniteAutoinjector
+        - id: CrowbarRed
+        
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackDSM
+  id: ClothingBackpackDSMConscript
+  components:
+    - type: StorageFill
+      contents:
+        - id: CrowbarRed
+        - id: FoodPSB
+        - id: FoodPSB
+        - id: DrinkMREFlask
+         
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackNCWL
+  id: ClothingBackpackNCWLConscript
+  components:
+    - type: StorageFill
+      contents:
+        - id: CrowbarRed
+        - id: FoodPSB
+        - id: FoodPSB
+        - id: DrinkMREFlask

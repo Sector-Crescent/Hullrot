@@ -323,12 +323,23 @@
   id: Crate48mmAmmo
   parent: N14CrateAluminium
   name: 48mm HE 'Shortbow' Rocket Crate
-  description: 24 HE rockets for the 'Shortbow' weapon platform.
+  description: 10 HE missile magazines for the 'Shortbow' weapon platform.
   components:
   - type: StorageFill
     contents:
-      - id: Cartridge48mmRocket
-        amount: 24
+      - id: Magazine48mmRocket
+        amount: 10
+
+- type: entity
+  id: Crate48mmAmmoGorlex
+  parent: N14CrateAluminium
+  name: Gorlex 48mm HE 'Shortbow' Rocket Crate
+  description: 10 HE missile magazines for the 'Shortbow' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine48mmRocketGorlex
+        amount: 10
 
 - type: entity
   id: Crate50mmAmmo
@@ -367,23 +378,45 @@
   id: Crate60mmAmmo
   parent: N14CrateAluminium
   name: 60mm HE 'Azimuth' Rocket Crate
-  description: 12 HE rockets for the 'Azimuth' weapon platform.
+  description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
   components:
   - type: StorageFill
     contents:
-      - id: Cartridge60mmRocket
-        amount: 12
+      - id: Magazine60mm
+        amount: 6
 
 - type: entity
   id: Crate60mmAmmoAdvanced
   parent: N14CrateAluminium
   name: 60mm HE 'Azimuth' Advanced Missile Crate
-  description: 12 HE missiles for the 'Azimuth' weapon platform.
+  description: 6 HE missile magazines for the 'Azimuth' weapon platform.
   components:
   - type: StorageFill
     contents:
-      - id: Cartridge60mmRocketAdvanced
-        amount: 12
+      - id: Magazine60mmSHI
+        amount: 6
+
+- type: entity
+  id: Crate60mmAmmoNCWL
+  parent: N14CrateAluminium
+  name: Homeguard 60mm HE 'Azimuth' Rocket Crate
+  description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine60mmNCWL
+        amount: 6
+
+- type: entity
+  id: Crate60mmAmmoGorlex
+  parent: N14CrateAluminium
+  name: Gorlex 60mm HE 'Azimuth' Rocket Crate
+  description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Magazine60mmGorlex
+        amount: 6
 
 - type: entity
   id: Crate88mmAmmo

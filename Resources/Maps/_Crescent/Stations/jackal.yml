@@ -14728,7 +14728,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 21.511517,-25.536291
       parent: 1
-- proto: Cartridge48mmRocketGorlex
+- proto: Magazine48mmRocketGorlex
   entities:
   - uid: 1523
     components:
@@ -15017,7 +15017,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Cartridge60mmRocketGorlex
+- proto: Magazine60mmGorlex
   entities:
   - uid: 1566
     components:
@@ -23109,7 +23109,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Magazine50mmSAPHE  
+- proto: Magazine50mmSAPHE
   entities:
   - uid: 1946
     components:

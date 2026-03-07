@@ -93,89 +93,6 @@
       group: LoadoutSmokes
 
 # Instruments
-- type: loadout
-  id: LoadoutItemMicrophoneInstrument
-  category: Items
-  cost: 0
-  items:
-    - MicrophoneInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemKalimbaInstrument
-  category: Items
-  cost: 0
-  items:
-    - KalimbaInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemTrumpetInstrument
-  category: Items
-  cost: 0
-  items:
-    - TrumpetInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemElectricGuitar
-  category: Items
-  cost: 0
-  items:
-    - ElectricGuitarInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemBassGuitar
-  category: Items
-  cost: 0
-  items:
-    - BassGuitarInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemRockGuitar
-  category: Items
-  cost: 0
-  items:
-    - RockGuitarInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
 
 - type: loadout
   id: LoadoutItemAcousticGuitar
@@ -220,39 +137,11 @@
         - Musician
 
 - type: loadout
-  id: LoadoutItemAccordion
-  category: Items
-  cost: 0
-  items:
-    - AccordionInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
   id: LoadoutItemFlute
   category: Items
   cost: 0
   items:
     - FluteInstrument
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutInstrumentsAny
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Musician
-
-- type: loadout
-  id: LoadoutItemOcarina
-  category: Items
-  cost: 0
-  items:
-    - OcarinaInstrument
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutInstrumentsAny
@@ -284,13 +173,6 @@
   canBeHeirloom: true
   items:
     - CrowbarRed
-
-- type: loadout
-  id: LoadoutItemFireExtinguisher
-  category: Items
-  cost: 0
-  items:
-    - FireExtinguisher
 
 - type: loadout
   id: LoadoutItemFlashlightLantern
@@ -376,16 +258,6 @@
   items:
     - BoxSurvivalSlots # 'rot & goob
   requirements:
-    - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Security
-         - Medical
-         - Engineering
-    - !type:CharacterJobRequirement
-       inverted: true
-       jobs:
-         - Clown
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -487,25 +359,11 @@
     - CrayonBox
 
 - type: loadout
-  id: LoadoutItemBarberScissors
-  category: Items
-  cost: 0
-  items:
-    - BarberScissors
-
-- type: loadout
   id: LoadoutHandLabeler
   category: Items
   cost: 0
   items:
     - HandLabeler
-
-- type: loadout
-  id: LoadoutItemHandheldStationMap
-  category: Items
-  cost: 0
-  items:
-    - HandheldStationMap
 
 - type: loadout
   id: LoadoutItemLantern
@@ -538,13 +396,6 @@
   customColorTint: true
   items:
     - DrinkVacuumFlask
-
-- type: loadout
-  id: LoadoutItemAACTablet
-  category: Items
-  cost: 0
-  items:
-    - AACTablet
 
 - type: loadout
   id: LoadoutItemCaneBlind
@@ -588,11 +439,3 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutWritables
-
-- type: loadout
-  id: HandheldCrewMonitor
-  category: Items
-  cost: 3
-  canBeHeirloom: false
-  items:
-    - HandheldCrewMonitor

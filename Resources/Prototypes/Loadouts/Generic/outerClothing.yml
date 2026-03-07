@@ -558,13 +558,3 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter
-
-- type: loadout
-  id: ClothingOuterCoatExpensive
-  category: Outer
-  cost: 3
-  items:
-    - ClothingOuterCoatExpensive
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter

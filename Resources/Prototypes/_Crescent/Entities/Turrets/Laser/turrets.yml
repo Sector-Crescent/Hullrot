@@ -217,19 +217,19 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 5
+      fireRate: 6
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 0.1
+      maxAngle: 0.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.33
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -237,8 +237,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 50
-      count: 50
+      capacity: 60
+      count: 60
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -276,13 +276,13 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 10
+      fireRate: 6
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 0.1
+      maxAngle: 0.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
         params:
@@ -296,8 +296,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 150
-      count: 150
+      capacity: 30
+      count: 30
     - type: ApcPowerReceiver
       powerLoad: 5000
     - type: HardpointAnchorableOnly
@@ -337,15 +337,15 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      burstFireRate: 20
+      burstFireRate: 20 #6.67 effective RPS
       burstCooldown: 1
       shotsPerBurst: 10
       selectedMode: Burst
       availableModes:
         - Burst
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 0.1
+      maxAngle: 0.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -359,8 +359,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 100
-      count: 100
+      capacity: 60
+      count: 60
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -372,7 +372,7 @@
   id: WeaponTurretAbsolutionNavy
   suffix: Medium Laser, Navy
   name: Navy 350cc 'Absolution' Burst Laser
-  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. Fires in even longer bursts but runs dry quicker.
+  description: A medium laser weapons platform that creates hardlight bolts and flings them at targets. Has a faster pulse rate resulting in increased rate of fire.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
@@ -398,15 +398,15 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      burstFireRate: 20
+      burstFireRate: 40 #8 effective RPS
       burstCooldown: 1
-      shotsPerBurst: 20
+      shotsPerBurst: 10
       selectedMode: Burst
       availableModes:
         - Burst
       angleDecay: 0
-      minAngle: 0
-      maxAngle: 0
+      minAngle: 0.1
+      maxAngle: 0.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -420,8 +420,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 100
-      count: 100
+      capacity: 80
+      count: 80
     - type: ApcPowerReceiver
       powerLoad: 6000
     - type: HardpointAnchorableOnly
@@ -461,7 +461,9 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 4
+      fireRate: 2.5
+      minAngle: 0.1
+      maxAngle: 0.1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -478,8 +480,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 35
-      count: 35
+      capacity: 25
+      count: 25
     - type: ApcPowerReceiver
       powerLoad: 8000
     - type: HardpointAnchorableOnly
@@ -517,7 +519,9 @@
     - type: Gun
       fireOnDropChance: 0
       projectileSpeed: 200
-      fireRate: 5
+      minAngle: 0.1
+      maxAngle: 0.1
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -534,8 +538,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 40
-      count: 40
+      capacity: 30
+      count: 30
     - type: ApcPowerReceiver
       powerLoad: 10000
     - type: HardpointAnchorableOnly

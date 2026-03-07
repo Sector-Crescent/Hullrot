@@ -1696,34 +1696,36 @@
     idleState: icon
     runningState: building
     staticRecipes:
-    - BioGenMilk
-    - BioGenMilkSoy #Gem
-    - BioGenEthanol
-    - BioGenCream
-    - BioGenBlackpepper
-    - BioGenEnzyme
-    - BioGenFlour
-    - BioGenSugar
-    - BioGenMonkeyCube
-    - BioGenKoboldCube
-    - CowCube
-    - GoatCube
+    #- BioGenMilk
+    #- BioGenMilkSoy #Gem
+    #- BioGenEthanol
+    #- BioGenCream
+    #- BioGenBlackpepper
+    #- BioGenEnzyme
+    #- BioGenFlour
+    #- BioGenSugar
+    #- BioGenMonkeyCube
+    #- BioGenKoboldCube
+    #- CowCube
+    #- GoatCube
     - MothroachCube
-    - MouseCube
-    - BioGenMaterialCloth1
-    - BioGenMaterialCardboard1
-    - BioGenPaper
-    - BioGenPaperRolling1
-    - BioGenCandle
+    #- MouseCube
+    #- BioGenMaterialCloth1
+    #- BioGenMaterialCardboard1
+    #- BioGenPaper
+    #- BioGenPaperRolling1
+    #- BioGenCandle
     - BioGenPlantBGone
     - BioGenWeedKiller
     - BioGenPestKiller
     - BioGenLeft4Zed
     - BioGenEZNutrient
     - BioGenRobustHarvest
-    - BioGenBoozeVendRestock
-    - BioGenCondimentsRestock
-    - BioGenChefVendRestock
+    #- BioGenBoozeVendRestock
+    #- BioGenCondimentsRestock
+    #- BioGenChefVendRestock
+    - BioGenFoodNutribrick
+    - BioGenFoodPSB
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]

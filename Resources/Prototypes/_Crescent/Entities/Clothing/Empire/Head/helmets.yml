@@ -214,6 +214,35 @@
         Caustic: 0.9
 
 - type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitImperialJuggernaut
+  categories: [ HideSpawnMenu ]
+  name: experimental imperial hardsuit helmet
+  description: A hardsuit helmet built with an uneven-eyed design, utilizing newly freed space to provide vital transcripts of communication and active biometric readings for the user. Accuracy loss is acceptable for the Kaiser's blessing.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Crescent/Clothing/Empire/Head/mandatejuggernauthelmet.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/Empire/Head/mandatejuggernauthelmet.rsi
+  - type: PointLight
+    radius: 6
+    color: "#ffffed"
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.9
+        Caustic: 0.9
+
+- type: entity
   parent: ClothingHeadHelmetHardsuitImperialSoldier
   id: ClothingHeadHelmetHardsuitImperialCoronet
   categories: [ HideSpawnMenu ]

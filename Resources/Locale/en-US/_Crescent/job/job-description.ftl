@@ -164,3 +164,14 @@ job-description-unionfall-dsm-officer = Lead small squads. Ensure cohesion. List
 job-description-unionfall-dsm-doctor = Keep your fellow men alive.
 job-description-unionfall-dsm-rifleman = Be the rank and file. Pilot fighters and ultralights. Listen to your superiors.
 job-description-unionfall-dsm-cadet = Listen to your superiors. Keep your head down and learn.
+
+# event roles
+job-description-ncwl-conscript-event = Conscript from the NCWL ground forces militia. Armed with a semi automatic rifle and a dream.
+job-description-ncwl-conscript-event-SMG = Conscript from the NCWL ground forces militia. Armed with an SMG and a dream.
+job-description-ncwl-spetsnaz-event-SMG = Operator from the 109th Chengridz Special Operations Forces. Given the best equipment the Union has to offer. Let no one stand in your way.
+job-description-ncwl-spetsnaz-event = Operator from the 209th Chengridz Special Operations Forces. Given the best equipment the Union has to offer. Let your aim be true.
+job-description-ncwl-spetsnaz-event-kapitan = Commissioned officer from the 209th Chengridz Special Operations Forces. Given the best equipment and the best men the Union has to offer. Let your way of life prove righteous. 
+job-description-dsm-conscript-event = Conscript from the Imperial Shield Ground Forces. Armed with a semi automatic rifle and the strongest of loyalties.
+job-description-dsm-conscript-event-SMG = Conscript from the Imperial Shield Ground Forces. Armed with an SMG and the strongest of loyalties.
+job-description-dsm-specops-event = Kommando from the 4th Imperial Shield's special operating forces. Given access to the most advanced stockpiled equipment. Bring honor to your house.
+job-description-dsm-specops-event-shotgun = Kommando from the 4th Imperial Shield's special operating forces. Given access to the most advanced stockpiled equipment. Bring civility to the scum in your path.

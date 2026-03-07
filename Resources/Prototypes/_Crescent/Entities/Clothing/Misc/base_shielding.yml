@@ -75,3 +75,73 @@
     autoRecharge: true
     autoRechargeRate: 5
   - type: RechargeableBlocking
+
+- type: entity
+  abstract: true
+  id: EnergyShieldClothingEmpire
+  components:
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/ebladeon.ogg
+    soundDeactivate:
+      path: /Audio/Weapons/ebladeoff.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+    onUse: false
+    onActivate: true
+  - type: PointLight
+    enabled: false
+    radius: 1.4
+    energy: 2
+    color: "#ffe46ccf"
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      interpolate: Linear
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ItemTogglePointLight
+  - type: UseDelay
+    delay: 0.5
+  - type: Blocking
+    # Shield resistances. Active does nothing w/ action disabled.
+    passiveBlockModifier:
+      coefficients:
+        Blunt: 1.0
+        Slash: 1.0
+        Piercing: 1.0
+        Heat: 3.0
+    activeBlockModifier:
+      coefficients:
+        Blunt: 0.1
+        Slash: 0.1
+        Piercing: 0.1
+        Heat: 0.1
+    passiveBlockFraction: 1.0
+    activeBlockFraction: 1.0
+    isClothing: true
+    blockAction: false
+  - type: Damageable
+    damageContainer: Shield
+    # Shield HP
+  - type: Battery
+    maxCharge: 150
+    startingCharge: 150
+    # Shield recharge rate
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+  - type: RechargeableBlocking

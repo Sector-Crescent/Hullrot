@@ -1,0 +1,41 @@
+# Author Info
+# Discord: @rubeebee (hi!)
+
+- type: vessel
+  id: Psoglav
+  name: NCWL Psoglav
+  description: |
+    A communard mining carrier, converted from the scrappy cockroach- it's been given a third life as a combat capable mining barge for the league.
+    LOADOUT: 2x SHI 250c "Exhumer" kinetic Pulser, 7x Homeguard 20mm "Warthog" autocannons, 1x 88mm "Stormreign" Flak Array
+  price: 98000
+  category: Large
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/psoglav.yml
+
+- type: gameMap
+  id: Psoglav
+  mapName: 'NCWL Psoglav'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/psoglav.yml
+  minPlayers: 0
+  stations:
+    Psoglav:
+      stationProto: StandardCrescentStation
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: large_industrial
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Psoglav {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
+        - type: VesselDescription
+          description: Rickety, rusty, and borderline derelict. It'll last a few more trips. 
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            WorkerNCWL: [ 3, 3 ]
+

@@ -2,6 +2,62 @@
 
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitMetrocop
+  categories: [ HideSpawnMenu ]
+  name: SHI-WTI OTA-1 "Metrocop" ballistic helmet
+  description: A underarmored combat hardsuit helmet with a built in gasmask.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Crescent/Clothing/SHI/Head/metrocop.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/SHI/Head/metrocop.rsi
+  - type: PointLight
+    radius: 6
+    color: "#4ba5ff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Radiation: 0.95
+        Caustic: 0.95
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitCombine
+  categories: [ HideSpawnMenu ]
+  name: SHI-WTI OTA-3 "Combine" ballistic helmet
+  description: A underarmored combat hardsuit helmet with a built in gasmask.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Crescent/Clothing/SHI/Head/combine.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/SHI/Head/combine.rsi
+  - type: PointLight
+    radius: 6
+    color: "#4ba5ff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.90
+        Heat: 0.90
+        Radiation: 0.90
+        Caustic: 0.90
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitHEV
   categories: [ HideSpawnMenu ]
   name: shinohara hazardous environment suit helmet

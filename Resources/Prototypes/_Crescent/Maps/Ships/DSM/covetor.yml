@@ -17,7 +17,7 @@
   minPlayers: 0
   stations:
     Covetor:
-      stationProto: StandardCrescentCivilianVessel
+      stationProto: StandardCrescentStation
       components:
         - type: VesselIcon
           iffIcon:
@@ -30,3 +30,9 @@
             prefixCreator: '14'
         - type: VesselDesignation
           designation: vessel-designation-salvage
+        - type: VesselDescription
+          description: A freeholder's home away from home. Bring glory and treasure to the mandate.
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            FreeholderDSM: [ 3, 3 ]

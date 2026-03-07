@@ -1,0 +1,28 @@
+# Author Info
+# Discord: @eveerregeweenenblooommm
+
+- type: vessel
+  id: Nova
+  name: NCWL Nova
+  description: An ultralight communard autocannon platform.
+  price: 10000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/nova.yml
+
+- type: gameMap
+  id: Nova
+  mapName: 'NCWL Nova'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/nova.yml
+  minPlayers: 0
+  stations:
+    Nova:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Nova {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: ultralight

@@ -10,6 +10,7 @@
     visualType: Circle
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 50
@@ -38,6 +39,7 @@
     visualType: Circle
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 10
@@ -107,6 +109,7 @@
     visualType: Circle
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 300
@@ -135,6 +138,7 @@
     visualType: Circle
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 25
@@ -207,6 +211,7 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 400
@@ -234,6 +239,7 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 50
@@ -268,6 +274,7 @@
     color: White
   - type: ShipWeaponProjectile
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 150
@@ -304,6 +311,7 @@
   - type: ShipWeaponProjectile
   - type: ProjectilePhasePrevent
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 300
@@ -338,6 +346,7 @@
   - type: ShipWeaponProjectile
   - type: ProjectilePhasePrevent
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 2000
@@ -365,6 +374,7 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 1300
@@ -400,6 +410,7 @@
     visualType: Diamond
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 350
@@ -434,6 +445,7 @@
     visualType: Diamond
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 750
@@ -466,6 +478,7 @@
     visualType: Diamond
     color: White
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 250
@@ -499,6 +512,7 @@
   components:
   - type: ProjectilePhasePrevent
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 1000
@@ -534,6 +548,7 @@
   - type: ProjectilePhasePrevent
   - type: ShipWeaponProjectile
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Structural: 100

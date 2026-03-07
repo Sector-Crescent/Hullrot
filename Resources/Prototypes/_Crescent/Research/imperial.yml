@@ -260,7 +260,7 @@
   recipeUnlocks:
   - NemesisLPC
   - JanissaryLPC
-  - VorunaLPC
+  - KhanLPC
   - PerigaleLPC
 
 - type: technology
@@ -303,7 +303,6 @@
   - WeaponSniperImperator
   - WeaponShotgunReno
 
-
 - type: technology
   id: ImperialPlasmaMechGuns
   name: research-technology-imperial-plasmamechguns
@@ -328,6 +327,18 @@
   cost: 9000
   recipeUnlocks:
   - WeaponPlasmaRifleSeethe
+
+- type: technology
+  id: ImperialJuggernaut
+  name: research-technology-imperial-juggernautarmor
+  icon:
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatejuggernaut.rsi
+    state: icon
+  discipline: Imperial
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitImperialJuggernaut
 
 - type: technology
   id: ImperialBomb
@@ -376,6 +387,18 @@
   cost: 12000
   recipeUnlocks:
   - SuzerainLPC
+
+- type: technology
+  id: ImperialRaider
+  name: research-technology-imperial-raider
+  icon:
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    state: icon
+  discipline: Imperial
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - RaiderLPC
 
 - type: technology
   id: DSMCraftComps

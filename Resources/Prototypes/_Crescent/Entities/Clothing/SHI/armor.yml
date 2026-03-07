@@ -1,5 +1,98 @@
 #hardsuits
 
+- type: entity
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  id: ClothingOuterHardsuitMetrocop
+  name: SHI-WTI OTA-1 "Metrocop" security softsuit
+  description: A softsuit padded with durathread soft plates. Not commonly seen due to its lack of protection but is very durable.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
+  - type: Clothing
+    equipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/puton.ogg
+    unequipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/takeoff.ogg
+    sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: DegradeableArmor
+    armorMaxHealth: 2000 # this is its gimick that its got high health but shit protection
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 15
+        Slash: 15
+        Piercing: 35
+        Heat: 15
+        Caustic: 15
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMetrocop
+  - type: ClothingAddFaction
+    faction: SHI
+#  - type: ReverseEngineering # i dont know how this works dawg
+#    recipes:
+#      - ClothingOuterHardsuitHEV
+#      - ClothingOuterHardsuitMetrocop
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: CombineSuit
+      params:
+        volume: -5
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  id: ClothingOuterHardsuitCombine
+  name: SHI-WTI OTA-3 "Combine" combat hardsuit
+  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments,
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi
+  - type: Clothing
+    equipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/puton.ogg
+    unequipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/takeoff.ogg
+    sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: DegradeableArmor
+    armorMaxHealth: 1000 # armor stats same as CMM patrol suit
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 20
+        Slash: 20
+        Piercing: 60
+        Heat: 15
+        Caustic: 15
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCombine
+  - type: ClothingAddFaction
+    faction: SHI
+#  - type: ReverseEngineering # i dont know how this works dawg
+#    difficulty: 3
+#    recipes:
+#      - ClothingOuterHardsuitHighsec
+#      - ClothingOuterHardsuitHighsecUA
+#      - ClothingOuterHardsuitHighsecIndependent
+#      - ClothingOuterHardsuitHEV
+#      - ClothingOuterHardsuitCombine
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: CombineSuit
+      params:
+        volume: -5
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -83,7 +176,7 @@
 - type: entity
   parent: ClothingOuterHardsuitHighsec
   id: ClothingOuterHardsuitHighsecUA
-  name: SHI UA SVBT-2 combat hardsuit
+  name: SHI-UA SVBT-2 combat hardsuit
   description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere. Customized by the subsidiary group United Arsenal.
   components:
   - type: Sprite

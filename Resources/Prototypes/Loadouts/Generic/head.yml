@@ -26,18 +26,6 @@
       group: LoadoutHead
 
 - type: loadout
-  id: LoadoutHeadHatCowboyWhite
-  category: Head
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  items:
-    - ClothingHeadHatCowboyWhite
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutHead
-
-- type: loadout
   id: LoadoutHeadHatCowboyBountyHunter
   category: Head
   cost: 0
@@ -84,33 +72,6 @@
   canBeHeirloom: true
   items:
     - ClothingHeadBandSkull
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutHead
-
-
-- type: loadout
-  id: LoadoutHeadRastaHat
-  category: Head
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingHeadRastaHat
-  requirements:
-    - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Security
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutHead
-
-- type: loadout
-  id: LoadoutHeadFez
-  category: Head
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingHeadHatFez
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutHead
@@ -233,30 +194,6 @@
   customColorTint: true
   items:
     - ClothingHeadHatHijabColorable
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutHead
-
-- type: loadout
-  id: LoadoutHeadTurbanColorable
-  category: Head
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  items:
-    - ClothingHeadHatTurbanColorable
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutHead
-
-- type: loadout
-  id: LoadoutHeadKippahColorable
-  category: Head
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  items:
-    - ClothingHeadHatKippahColorable
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutHead

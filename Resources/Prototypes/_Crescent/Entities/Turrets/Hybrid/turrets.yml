@@ -92,15 +92,15 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 175
-      fireRate: 5
+      projectileSpeed: 180
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 22
+      angleDecay: 20
       minAngle: 3
       maxAngle: 12
-      angleIncrease: 4.5
+      angleIncrease: 5.5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -114,8 +114,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaBall
-      capacity: 75
-      count: 75
+      capacity: 60
+      count: 60
     - type: ApcPowerReceiver
       powerLoad: 3500
     - type: HardpointAnchorableOnly
@@ -154,12 +154,12 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 190
-      fireRate: 2
+      projectileSpeed: 220
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
-      angleDecay: 5
+      angleDecay: 2
       minAngle: 1
       maxAngle: 9
       angleIncrease: 3
@@ -168,7 +168,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 5
+      rechargeCooldown: 4
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -176,8 +176,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaArc
-      capacity: 28
-      count: 28
+      capacity: 15
+      count: 15
     - type: ApcPowerReceiver
       powerLoad: 5000
     - type: HardpointAnchorableOnly
