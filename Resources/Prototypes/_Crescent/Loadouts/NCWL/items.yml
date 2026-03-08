@@ -35,3 +35,27 @@
       - MVDOfficerNCWL
       - MVDGruntNCWL
       - FleetkapitanNCWL
+
+#iff beacons
+- type: loadout
+  id: LoadoutItemIFFNCWL
+  category: Items
+  cost: 1
+  items:
+    - ClothingNeckIFFNCWL
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+      - CommandantNCWL
+      - KommissarNCWL
+      - MVDOfficerNCWL
+      - MVDGruntNCWL
+      - FleetkapitanNCWL
+      - PartisanNCWL
+      - DirectorNCWL
+      - DoctorNCWL
+      - WorkerOverbossNCWL
+      - DockhandNCWL
+      - IndustryTaskmasterNCWL
+      - ArtificerNCWL
+      - WorkerNCWL

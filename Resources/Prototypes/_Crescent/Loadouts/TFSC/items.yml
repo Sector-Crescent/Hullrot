@@ -1,0 +1,22 @@
+#IFF beacons
+- type: loadout
+  id: LoadoutItemIFFTFSC
+  category: Items
+  cost: 1
+  items:
+    - ClothingNeckIFFTFSC
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - TraumasecNCSP
+        - ForemanNCSP
+        - InfanteerNCSP
+        - IntelligenceOfficerNCSP
+        - LieutenantNCSP
+        - OperativeNCSP
+        - CyberdawnTechNCSP
+        - RingleaderNCSP
+        - RipperdocNCSP
+        - ShipbreakerNCSP
+        - TechnicianNCSP
+        - CoordinatorNCSP

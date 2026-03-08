@@ -1,0 +1,30 @@
+#IFF beacons
+- type: loadout
+  id: LoadoutItemIFFDSM
+  category: Items
+  cost: 1
+  items:
+    - ClothingNeckIFFDSM
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - AdjutantDSM
+        - AdvocatusDSM
+        - ArchmaesterDSM
+        - ForemanDSM
+        - FreeholderDSM
+        - GovernorDSM
+        - KnightDSM
+        - RitterDSM
+        - LaborDSM
+        - LevymanDSM
+        - CourtierDSM
+        - ScribeDSM
+        - SurgeonDSM
+        - TemplarDSM
+        - WealthDSM
+        - AcolyteSRM
+        - HunterSRM
+        - MontagneSRM
+        - OverseerSRM
+        - TenderSRM

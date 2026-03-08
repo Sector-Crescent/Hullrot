@@ -1,0 +1,16 @@
+#IFF beacons
+- type: loadout
+  id: LoadoutItemIFFSHI
+  category: Items
+  cost: 1
+  items:
+    - ClothingNeckIFFSHI
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoardSHI
+        - ExecutiveSHI
+        - BoardHRSHI
+        - CorpsecSHI
+        - MedtechSHI
+        - EmployeeSHI
