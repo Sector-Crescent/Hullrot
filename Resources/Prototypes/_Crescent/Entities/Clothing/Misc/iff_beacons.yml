@@ -1,3 +1,6 @@
+# wearable IFF beacons, for hullrot
+
+#NCWL
 - type: entity
   parent: ClothingNeckIFFNeutral
   id: ClothingNeckIFFNCWL
@@ -21,3 +24,118 @@
   - type: PointLight
     radius: 3
     color: "#c87d32"
+  - type: ProjectileIFF
+    visualType: Circle
+    color: "#c87d32"
+
+#DSM
+- type: entity
+  parent: ClothingNeckIFFNeutral
+  id: ClothingNeckIFFDSM
+  name: DSM shoulder light & IFF strobe
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    layers:
+    - state: icon-off
+    - state: icon-on
+      color: "#cc7be0"
+      shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#cc7be0"
+        shader: unshaded
+  - type: PointLight
+    radius: 3
+    color: "#cc7be0"
+  - type: ProjectileIFF
+    visualType: Circle
+    color: "#cc7be0"
+
+#TFSC
+- type: entity
+  parent: ClothingNeckIFFNeutral
+  id: ClothingNeckIFFTFSC
+  name: TFSC shoulder light & IFF strobe
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    layers:
+    - state: icon-off
+    - state: icon-on
+      color: "#d11d1d"
+      shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#d11d1d"
+        shader: unshaded
+  - type: PointLight
+    radius: 3
+    color: "#d11d1d"
+  - type: ProjectileIFF
+    visualType: Circle
+    color: "#d11d1d"
+
+#SHI
+- type: entity
+  parent: ClothingNeckIFFNeutral
+  id: ClothingNeckIFFSHI
+  name: SHI shoulder light & IFF strobe
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    layers:
+    - state: icon-off
+    - state: icon-on
+      color: "#d9d9d9"
+      shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#d9d9d9"
+        shader: unshaded
+  - type: PointLight
+    radius: 3
+    color: "#d9d9d9"
+  - type: ProjectileIFF
+    visualType: Circle
+    color: "#d9d9d9"
+
+#Indies/Neutral
+- type: entity
+  parent: ClothingNeckIFFNeutral
+  id: ClothingNeckIFFGeneric
+  name: Generic shoulder light & IFF strobe
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    layers:
+    - state: icon-off
+    - state: icon-on
+      color: "#ffffff"
+      shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#ffffff"
+        shader: unshaded
+  - type: PointLight
+    radius: 3
+    color: "#ffffff"
+  - type: ProjectileIFF
+    visualType: Circle
+    color: "#ffffff"
