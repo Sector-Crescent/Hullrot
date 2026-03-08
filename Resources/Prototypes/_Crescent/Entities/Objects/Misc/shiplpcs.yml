@@ -824,6 +824,26 @@
     recipes:
       - FujinLPC
 
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherJeonu
+  name: CSEC 'Jeonu' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a CorpSec Jeonu-class corvette pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Jeonu
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - JeonuLPC
+
 #ncsp
 
 - type: entity

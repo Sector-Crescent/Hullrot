@@ -1,0 +1,29 @@
+- type: vessel
+  id: jeonu
+  name: SHI Jeonu
+  description: A CorpSec corvette intended for heavier escort duties, its boilerplate design template is offset by a forward-focused armament.
+  price: 35000
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/SHI/jeonu.yml
+
+- type: gameMap
+  id: jeonu
+  mapName: 'SHI Jeonu'
+  mapPath: /Maps/_Crescent/Shuttles/SHI/jeonu.yml
+  minPlayers: 0
+  stations:
+    gazpachov:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Jeonu {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-patrol
