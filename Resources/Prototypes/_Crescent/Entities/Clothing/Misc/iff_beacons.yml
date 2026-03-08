@@ -1,0 +1,23 @@
+- type: entity
+  parent: ClothingNeckIFFNeutral
+  id: ClothingNeckIFFNCWL
+  name: NCWL shoulder light & IFF strobe
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    layers:
+    - state: icon-off
+    - state: icon-on
+      color: "#c87d32"
+      shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#c87d32"
+        shader: unshaded
+  - type: PointLight
+    radius: 3
+    color: "#c87d32"
