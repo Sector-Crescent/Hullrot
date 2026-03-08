@@ -30,6 +30,9 @@
     sprite: _Crescent/Clothing/Empire/Feet/mandatefancyboots.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Feet/mandatefancyboots.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingShoesBootsImperialLongboots
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -64,3 +67,7 @@
     state: icon
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Feet/mandatemagboots.rsi
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - ClothingShoesBootsMagDSM

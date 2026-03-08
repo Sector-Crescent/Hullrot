@@ -49,6 +49,12 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponSubMachineGunMilitant
+      - WeaponSubMachineGunBloodhound
+      - WeaponSubMachineGunNCWLWatchdog
 
 - type: entity
   name: NCWL DS1 Watchdog 9x19mm
@@ -76,6 +82,9 @@
   - type: Appearance
   - type: StaticPrice
     price: 600
+  - type: ReverseEngineering
+    recipes:
+      - WeaponSubMachineGunNCWLWatchdog
 
 - type: entity
   name: NCWL Partisan 9x19mm
@@ -177,13 +186,19 @@
       steps: 1
       zeroVisible: true
     - type: Appearance
+    - type: ReverseEngineering
+      difficulty: 2
+      recipes:
+        - WeaponSubMachineGunBloodhound
+        - WeaponSubMachineGunMilitant
+        - WeaponSubMachineGunNCWLWatchdog
 
 #DSM
 - type: entity
   name: IRM DA-20 Talon 11mm
   parent: [BaseWeaponSubMachineGun, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponSubMachineGunC20rHullrot
-  description: A slick submachinegun produced by Olywir Armaments for the Imperial Navy. Sees little use in the hands of actual troopers due to the cost of manufacturing.
+  description: A slick submachinegun produced by Olywir Armaments for the Imperial Navy. Mostly used by pointmen and naval personnel.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/talon.rsi
@@ -232,6 +247,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponSubMachineGunC20rImperial
+      - WeaponSubMachineGunBeetle
 
 - type: entity
   name: IRM Arbiter 9x19mm
@@ -315,6 +334,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponSubMachineGunMP49
+      - WeaponSubMachineGunSabre
 
 - type: entity
   name: SHI M221s Phantom 6mm
@@ -368,6 +391,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponSubMachineGunSabre
+      - WeaponSubMachineGunMP49
 
 - type: entity
   name: NT WT50 Sabre 11mm
@@ -420,6 +447,13 @@
     steps: 11
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponSubMachineGunWt550Hullrot
+      - WeaponSubMachineGunSabre
+      - WeaponSubMachineGunMP49
+
 
 #TFSC
 - type: entity
@@ -475,6 +509,11 @@
   - type: GunWieldBonus
     minAngle: -19
     maxAngle: -16
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponSubMachineGunCorsairCyberdawn
+      - WeaponSubMachineGunAtreidesCyberdawn
 
 - type: entity
   name: NCSP SR-2MP Atreides 9x19mm
@@ -499,6 +538,9 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering
+    recipes:
+      - WeaponSubMachineGunAtreidesCyberdawn
 
 - type: entity
   name: C-20R ROW
@@ -743,10 +785,10 @@
 
 #SRM
 - type: entity
-  name: HP Mak-11 Beetle 9x19mm
+  name: MP-111 Beetle 9x19mm
   parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
   id: WeaponSubMachineGunBeetle
-  description: A crude weapon manufactured by the Hunter's Pride merchant's guild. Intended as nothing more than cheap armament to stuff into the hands of expendable fodder.
+  description: A crude but compact weapon often manufactured in frontier systems. Usually ends up in the hands of conscripted militias or soldiers receiving armory budget cuts.
   components:
   - type: StaticPrice
     price: 1000
@@ -760,8 +802,9 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
   - type: Item
+    size: Small
     shape:
-    - 0,0,2,1
+    - 0,0,1,1
   - type: Gun
     minAngle: 2
     maxAngle: 20
@@ -796,6 +839,9 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponSubMachineGunBeetle
 
 #ATH
 - type: entity

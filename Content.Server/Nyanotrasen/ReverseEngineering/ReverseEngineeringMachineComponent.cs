@@ -71,7 +71,7 @@ public sealed partial class ReverseEngineeringMachineComponent : Component
 
     public int Progress = 0;
 
-    public TimeSpan AnalysisDuration = TimeSpan.FromSeconds(30);
+    public TimeSpan AnalysisDuration = TimeSpan.FromSeconds(10); /// Modified for SectorCrescent gameplay
 
     public FormattedMessage? CachedMessage;
 

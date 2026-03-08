@@ -35,6 +35,10 @@
     price: 2500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterHardsuitImperialWorker
+      - ClothingOuterHardsuitClarizianWorker
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -107,6 +111,10 @@
     price: 2500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterHardsuitClarizianWorker
+      - ClothingOuterHardsuitImperialWorker
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -169,6 +177,12 @@
     price: 2500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterHardsuitClarize
+      - ClothingOuterHardsuitClarizianWorker
+      - ClothingOuterHardsuitImperialSoldier
+      - ClothingOuterHardsuitImperialWorker
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -241,6 +255,13 @@
     price: 4500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - ClothingOuterHardsuitImperialSoldier
+      - ClothingOuterHardsuitImperialWorker
+      - ClothingOuterHardsuitClarize
+      - ClothingOuterHardsuitClarizianWorker
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
@@ -277,6 +298,12 @@
     price: 6000
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - ClothingOuterHardsuitImperialKnight
+      - ClothingOuterHardsuitImperialSoldier
+      - ClothingOuterHardsuitImperialWorker
 
 - type: entity
   parent: ClothingOuterHardsuitImperialSoldier
@@ -290,6 +317,50 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatecoronet.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitImperialCoronet
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, EnergyShieldClothingEmpire, StreeCredRedeemable]
+  id: ClothingOuterHardsuitImperialJuggernaut
+  name: imperial 'VALKYRE' mk III combat hardsuit #Damn you SHI for taking Gilgamesh
+  description: An acceptable replica of hardsuit worn during the Empire's second great expansion, distributed amongst only the most respected and esteemed ranks. Perfectly representing the Kaiser's divine protection thanks to it's “Shield of Faith” deflector module, capable of absorbing bullet impacts.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatejuggernaut.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatejuggernaut.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: DegradeableArmor
+    armorMaxHealth: 750
+    armorType: Metallic
+    armorRepair: PlasteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 20
+        Slash: 20
+        Piercing: 50
+        Heat: 20
+        Caustic: 25
+  - type: ClothingSpeedModifier #mildly better than other jugsuits, but far worse protection than a T2
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: HeldSpeedModifier
+  - type: Reflect
+    spread: 270
+    reflectProb: 0.05
+    innate: true
+    reflects:
+      - Energy
+      - NonEnergy
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitImperialJuggernaut
+  - type: StaticPrice
+    price: 9000
+  - type: ClothingAddFaction
+    faction: DSM
 
 # armor
 
@@ -321,6 +392,12 @@
     price: 1500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterArmorImperialTrooperArmor
+      - ClothingHeadHelmetImperialTrooperHelmet
+      - ClothingOuterArmorClarizianTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -349,6 +426,12 @@
     price: 1500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterArmorClarizianTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
+      - ClothingOuterArmorImperialTrooperArmor
+      - ClothingHeadHelmetImperialTrooperHelmet
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -378,6 +461,14 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterArmorImperialArmorPrestige
+      - ClothingHeadHelmetImperialKnightCommanderHelmet
+      - ClothingOuterArmorImperialTrooperArmor
+      - ClothingHeadHelmetImperialTrooperHelmet
+      - ClothingOuterArmorClarizianTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
 
 #coats
 
@@ -484,6 +575,9 @@
     price: 2000
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterCoatImperialGovernor
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -499,6 +593,10 @@
     price: 1000
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterCoatImperialParade
+      - ClothingOuterCoatClarizianOfficer
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -514,6 +612,10 @@
     price: 1000
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingOuterCoatClarizianOfficer
+      - ClothingOuterCoatImperialParade
 
 - type: entity
   parent: ClothingOuterEVASuitBase
@@ -573,6 +675,11 @@
     price: 2000
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - ClothingOuterCoatImperialRitter
+      - ClothingOuterHardsuitImperialWorker
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -609,3 +716,7 @@
     price: 2500
   - type: ClothingAddFaction
     faction: DSM
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - ClothingOuterHardsuitImperialNullweavePsion

@@ -58,6 +58,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponSniperHristov
+      - WeaponRifleBarghest
 
 - type: entity
   name: IRM AVR-H Imperator 15.2x169mm
@@ -118,6 +123,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 2000
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponSniperImperator
+      - WeaponSniperDSMLegax
 
 - type: entity
   name: NCWL PTRD-94 Molot 15.2x169mm
@@ -178,6 +188,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 2000
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponSniperMolot
+      - WeaponSniperNCWLNovomosin
 
 - type: entity
   name: NCSP AK-60 15.2x169mm
@@ -238,6 +253,11 @@
   - type: Appearance
   - type: StaticPrice
     price: 2000
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - WeaponSniperAK60Cyberdawn
+      - WeaponRifleSVDMarksmanNCSP
 
 - type: entity
   name: PTA AC-8 Spear 15.2x169mm

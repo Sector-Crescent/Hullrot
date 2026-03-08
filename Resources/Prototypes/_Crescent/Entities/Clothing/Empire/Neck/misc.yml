@@ -30,6 +30,9 @@
      sprite: _Crescent/Clothing/Empire/Neck/mandategovernorcape.rsi
    - type: Clothing
      sprite: _Crescent/Clothing/Empire/Neck/mandategovernorcape.rsi
+   - type: ReverseEngineering # Sector Crescent
+     recipes:
+       - ClothingNeckCloakImperialGovernor
 
 - type: entity
   parent: ClothingNeckBase
@@ -63,6 +66,9 @@
      sprite: _Crescent/Clothing/Empire/Neck/mandatecapelet.rsi
    - type: Clothing
      sprite: _Crescent/Clothing/Empire/Neck/mandatecapelet.rsi
+   - type: ReverseEngineering # Sector Crescent
+     recipes:
+       - ClothingNeckCloakImperialCapelet
 
 - type: entity
   parent: ClothingNeckBase
@@ -74,3 +80,6 @@
     sprite: _Crescent/Clothing/Empire/Neck/mandategreatcoat.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Neck/mandategreatcoat.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingNeckImperialGreatcoat

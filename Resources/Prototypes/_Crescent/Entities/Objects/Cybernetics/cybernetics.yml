@@ -40,6 +40,10 @@
         - description: examine-dermal-armor-message
           fontSize: 12
           requireDetailRange: true
+    - type: ReverseEngineering # SectorCrescent
+      difficulty: 4
+      recipes:
+        - CyberneticsDermalArmor
 
 - type: entity
   id: CyberneticsBloodPump
@@ -74,6 +78,10 @@
               Airloss: -0.15
               Toxin: -0.15
               Genetic: -0.15
+    - type: ReverseEngineering # SectorCrescent
+      difficulty: 3
+      recipes:
+        - CyberneticsBloodPumpInterdyne
 
 - type: entity
   id: CyberneticsHiggsDisplacer
@@ -167,6 +175,11 @@
     - type: BodyPart
       onAdd:
         - type: MantisBlade
+    - type: ReverseEngineering # SectorCrescent
+      difficulty: 3
+      recipes:
+        - CyberneticsMantisBladeLeft
+        - CyberneticsMantisBladeRight
 
 - type: entity
   id: CyberneticsMantisBladeRight
@@ -181,6 +194,11 @@
     - type: BodyPart
       onAdd:
         - type: MantisBlade
+    - type: ReverseEngineering # SectorCrescent
+      difficulty: 3
+      recipes:
+        - CyberneticsMantisBladeRight
+        - CyberneticsMantisBladeLeft
 
 - type: entity
   parent: BaseCyberneticEyes
@@ -202,6 +220,9 @@
       sprite: _Crescent/Objects/Misc/cybernetics.rsi
       layers:
         - state: interdyneoptics
+    - type: ReverseEngineering # SectorCrescent
+      recipes:
+        - InterdyneOpticsInterdyne
 
 - type: entity
   parent: BaseCyberneticEyes
@@ -223,6 +244,9 @@
       sprite: _Crescent/Objects/Misc/cybernetics.rsi
       layers:
         - state: shinoharaoptics
+    - type: ReverseEngineering # SectorCrescent
+      recipes:
+        - ShinoharaOptics
 
 - type: entity
   id: CyberneticsAdrenal
@@ -250,6 +274,10 @@
       groups:
         - id: Alcohol
           rateModifier: 0.7 #Removes alcohol pretty quickly.
+    - type: ReverseEngineering # Sector Crescent
+      difficulty: 4
+      recipes:
+        - CyberneticsAdrenalInterdyne
 
 - type: entity
   id: CyberneticsPainEditor
@@ -280,6 +308,10 @@
       groups:
         - id: Alcohol
           rateModifier: 0.3 #Removes alcohol moderately fast.
+    - type: ReverseEngineering # Sector Crescent
+      difficulty: 2
+      recipes:
+        - CyberneticsPainEditorInterdyne
 
 - type: entity
   parent: LeftArmCybernetic
@@ -294,6 +326,10 @@
   - type: Sprite
     sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
     state: "iconpry"
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - CrowbarLeftArmInterdyne
+      - CrowbarRightArmInterdyne
 
 - type: entity
   parent: RightArmCybernetic
@@ -308,7 +344,11 @@
   - type: Sprite
     sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
     state: "iconpry"
-    
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - CrowbarRightArmInterdyne
+      - CrowbarLeftArmInterdyne
+
 - type: entity
   parent: HullrotCyberneticBase
   id: SkillshardSlot

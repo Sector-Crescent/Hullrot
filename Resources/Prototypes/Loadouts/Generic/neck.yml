@@ -157,29 +157,6 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutNeck
 
-- type: loadout
-  id: LoadoutNeckScapular
-  category: Neck
-  cost: 0
-  exclusive: true
-  items:
-    - ClothingNeckScapular
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutNeck
-
-- type: loadout
-  id: LoadoutNeckTallit
-  category: Neck
-  cost: 0
-  exclusive: true
-  customColorTint: true
-  items:
-    - ClothingNeckTallit
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutNeck
-
 # Bedsheets
 - type: loadout
   id: LoadoutNeckBedsheetCosmos

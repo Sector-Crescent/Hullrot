@@ -68,6 +68,17 @@
 #LPCS
 
 - type: listing
+  id: StoreListingGSCSinn
+  name: GSC Sinn LPC.
+  description: The Sinn-class cruiser is an abominable, missile-toting, heavily armored brick of a vessel. Great firepower, obscene ammo requirements.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherSinn
+  cost:
+    PlunderGSC: 40
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
   id: StoreListingGSCEradicator
   name: GSC Eradicator LPC.
   description: A converted Courageous-class cruiser with an IFF signature obfuscator welded on.
@@ -90,6 +101,17 @@
   - StoreCategoryGSCLPC
 
 - type: listing
+  id: StoreListingGSCOuroboros
+  name: GSC Ouroboros LPC.
+  description: An improved template fulfilling the same role as the Hornets Nest-class carrier, still capable of launching ultralight swarms.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherOuroboros
+  cost:
+    PlunderGSC: 30
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
   id: StoreListingGSCCleaver
   name: GSC Cleaver LPC.
   description: The Reaver's older brother.
@@ -108,6 +130,83 @@
   productEntity: ShipVoucherBodybag
   cost:
     PlunderGSC: 20
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCCorvax
+  name: GSC Corvax LPC.
+  description: A converted fuel freighter modified into a reliable artillery corvette.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherCorvax
+  cost:
+    PlunderGSC: 10
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCReaver
+  name: GSC Reaver LPC.
+  description: The staple vessel of Gorlex Security Consulting. High speed, acceptable armaments, and has room for personal modifications.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherReaver
+  cost:
+    PlunderGSC: 4
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCItch
+  name: GSC Itch LPC.
+  description: A Cyberdawn Technologies IFF-cloaked fighter pattern licensed to GSC after some effective bargaining techniques.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherItch
+  cost:
+    PlunderGSC: 4
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCPiranha
+  name: GSC Piranha LPC.
+  description: A classic Gorlex ultralight, fated to either die in less than a minute or managed to sink a capital-class. Good in groups.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherPiranha
+  cost:
+    PlunderGSC: 3
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCScuttlefish
+  name: GSC Scuttlefish LPC.
+  description: A lightly moderized Gorlex ultralight, sporting two easily loaded missile launchers. Don't get caught by a stray shot.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherScuttlefish
+  cost:
+    PlunderGSC: 3
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSC
+  name: GSC Gnat LPC.
+  description: A rapid-fire lead spewing ultralight. Enough said.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherGnat
+  cost:
+    PlunderGSC: 3
+  categories:
+  - StoreCategoryGSCLPC
+
+- type: listing
+  id: StoreListingGSCTick
+  name: GSC Tick LPC.
+  description: An experimental variant upon the Gnat-class ultralight, mounted with two rapid firing laser PDs instead of ballistics.
+  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
+  productEntity: ShipVoucherTick
+  cost:
+    PlunderGSC: 3
   categories:
   - StoreCategoryGSCLPC
 
@@ -242,10 +341,10 @@
 
 - type: listing
   id: StoreListingGSCZhongyao
-  name: NCSP mk. III "Shanlin" tacsuit
+  name: NCSP mk.IV "Zhongyao" tacsuit
   description: An advanced tacsuit manufactured by Cyberdawn Technologies and provided to GSC at a discount.
-  icon: { sprite: /Textures/_Impstation/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
-  productEntity: ClothingOuterHardsuitSyndie
+  icon: { sprite: /Textures/_Impstation/Clothing/OuterClothing/Hardsuits/syndicate_agent.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitSyndieMedic
   cost:
     PlunderGSC: 20
   categories:

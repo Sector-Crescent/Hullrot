@@ -1,4 +1,3 @@
-
 - type: cargoProduct
   id: FoodMREGeneric
   icon:
@@ -18,3 +17,14 @@
 #   cost: 750
 #   category: cargoproduct-category-name-food
 #   group:
+
+# The Scopbrick Crate
+#- type: cargoProduct
+#  id: FoodScopCrate
+#  icon:
+#    sprite: Objects/Consumable/Food/snacks.rsi
+#    state: nutribrick
+#  product: CrateFoodScopBricks
+#  cost: 1000
+#  category: cargoproduct-category-name-food
+#  group: generic

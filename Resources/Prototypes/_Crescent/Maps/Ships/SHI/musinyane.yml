@@ -1,7 +1,7 @@
 - type: vessel
   id: Musinyane
   name: SHI Musinyane
-  description: A CorpSec patrol corvette.
+  description: A CorpSec light cruiser intended to be manned by a crew of three to four persons.
   price: 75000
   category: Medium
   group: None
@@ -19,7 +19,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: corvette
+            state: cruiser
         - type: StationNameSetup
           mapNameTemplate: 'SHI Musinyane {1}'
           nameGenerator:

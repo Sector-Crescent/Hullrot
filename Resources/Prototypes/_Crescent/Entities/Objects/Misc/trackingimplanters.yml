@@ -9,6 +9,7 @@
       radioChannel: "Common"
     - type: TriggerOnMobstateChange
       mobState:
+      - Critical
       - Dead
     - type: EmitSoundOnTrigger
       sound:
@@ -30,6 +31,7 @@
       radioChannel: "Interdyne"
     - type: TriggerOnMobstateChange
       mobState:
+      - Critical
       - Dead
     - type: EmitSoundOnTrigger
       sound:
@@ -58,6 +60,7 @@
       radioChannel: "Nfsd"
     - type: TriggerOnMobstateChange
       mobState:
+      - Critical
       - Dead
     - type: EmitSoundOnTrigger
       sound:
@@ -86,6 +89,7 @@
       radioChannel: "SHI"
     - type: TriggerOnMobstateChange
       mobState:
+      - Critical
       - Dead
     - type: EmitSoundOnTrigger
       sound:
@@ -114,6 +118,7 @@
     radioChannel: "Imperial"
   - type: TriggerOnMobstateChange
     mobState:
+    - Critical
     - Dead
   - type: EmitSoundOnTrigger
     sound:
@@ -141,6 +146,7 @@
     radioChannel: "EmpireCiv"
   - type: TriggerOnMobstateChange
     mobState:
+    - Critical
     - Dead
   - type: EmitSoundOnTrigger
     sound:
@@ -169,6 +175,7 @@
     radioChannel: "NCWL"
   - type: TriggerOnMobstateChange
     mobState:
+    - Critical
     - Dead
   - type: EmitSoundOnTrigger
     sound:

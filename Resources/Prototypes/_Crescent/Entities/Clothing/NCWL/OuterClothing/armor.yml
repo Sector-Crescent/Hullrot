@@ -30,6 +30,10 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLCarapace
+      - ClothingOuterArmorNCWLCarapaceKapitan
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
@@ -62,6 +66,11 @@
     price: 1000
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLOpremeCarapace
+      - ClothingOuterArmorNCWLCarapaceKapitan
+      - ClothingOuterArmorNCWLCarapace
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -95,6 +104,13 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLHeavyCarapace
+      - ClothingHeadHelmetNCWLHeavy
+      - ClothingHeadHelmetNCWLRiot
+      - ClothingOuterArmorNCWLLightBodyarmor
+      - ClothingHeadHelmetNCWLBasic
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -127,6 +143,10 @@
     price: 800
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLCarapaceKapitan
+      - ClothingOuterArmorNCWLCarapace
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -160,6 +180,11 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLCarapaceDoktor
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingOuterArmorNCWLMedi
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -193,6 +218,10 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLLightBodyarmor
+      - ClothingHeadHelmetNCWLBasic
 
 ## ncwl revamp clothing
 
@@ -228,6 +257,10 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLEngi
+      - ClothingOuterArmorNCWLLogi
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
@@ -261,6 +294,10 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLEngi
+      - ClothingOuterArmorNCWLLogi
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
@@ -294,6 +331,11 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingOuterArmorNCWLMedi
+      - ClothingOuterArmorNCWLCarapaceDoktor
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
@@ -327,6 +369,11 @@
   - type: AllowSuitStorage
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorNCWLMedi
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingOuterArmorNCWLCarapaceDoktor
 
 ## mvd
 
@@ -390,6 +437,11 @@
     price: 2000
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterHardsuitNCWLMedi
+      - ClothingOuterHardsuitNCWLEngi
+      - ClothingOuterHardsuitNCWLInfantry
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -427,7 +479,11 @@
     price: 2000
   - type: ClothingAddFaction
     faction: NCWL
-
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterHardsuitNCWLEngi
+      - ClothingOuterHardsuitNCWLMedi
+      - ClothingOuterHardsuitNCWLInfantry
 
 ## hardsuits
 
@@ -467,6 +523,11 @@
     price: 2000
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterHardsuitNCWLInfantry
+      - ClothingOuterHardsuitNCWLEngi
+      - ClothingOuterHardsuitNCWLMedi
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
@@ -504,6 +565,13 @@
     price: 2000
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - ClothingOuterHardsuitNCWLPetya
+      - ClothingOuterHardsuitNCWLInfantry
+      - ClothingOuterHardsuitNCWLEngi
+      - ClothingOuterHardsuitNCWLMedi
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
@@ -548,6 +616,12 @@
     price: 5000
   - type: ClothingAddFaction
     faction: NCWL
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - ClothingOuterHardsuitNCWLJuggernaut
+      - ClothingOuterHardsuitNCWLPetya
+      - ClothingOuterHardsuitNCWLInfantry
 
 ##softsuits
 

@@ -1,4 +1,3 @@
-
 - type: entity
   id: NCWLMothershipComputer
   parent: BaseMothershipComputer
@@ -8,11 +7,9 @@
     shuttles:
     - Vanguard
     - Lodka
-    - Ivarod
-    - Stern
-    - Gargut
     - Hind
     - Vasinya
+    - Psoglav
 
 - type: entity
   id: NCWLLightCarrierComputer
@@ -22,6 +19,8 @@
   - type: ShipyardListing
     shuttles:
     - HornetDrone
+    - Rapier
+    - Nova
 
 - type: entity
   id: DSMLightCarrierComputer
@@ -31,6 +30,8 @@
   - type: ShipyardListing
     shuttles:
     - ValorDrone
+    - Khan
+    - Perigale
 
 - type: entity
   id: JackalMothershipComputer
@@ -60,8 +61,7 @@
     - Covetor
     - Gnosis
     - Praxis
-    - Laelaps
-    #- Dragoon
+    - Praetorian
 
 - type: entity
   id: NemesisMothershipComputer
@@ -73,7 +73,6 @@
     - Redemptor
     - Imparator
     - Perigale
-    - Voruna
 
 - type: entity
   id: UnionfallNemesisMothershipComputer
@@ -292,3 +291,21 @@
   - type: ShipyardListing
     shuttles:
     - Caravan
+
+- type: entity
+  id: PsoglavMothershipComputer
+  parent: BaseMothershipComputer
+  name: psoglav internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Cog
+
+- type: entity
+  id: CovetorMothershipComputer
+  parent: BaseMothershipComputer
+  name: covetor internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Peasant

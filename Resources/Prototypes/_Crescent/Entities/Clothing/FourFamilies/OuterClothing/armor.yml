@@ -33,6 +33,12 @@
     clothingPrototype: ClothingHeadHelmetHardsuitDraugr
   - type: StaticPrice
     price: 1000
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - ClothingOuterHardsuitDraugr
+      - ClothingOuterHardsuitIzdari
+      - ClothingOuterHardsuitThukker
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -100,7 +106,13 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitIzdari
   - type: StaticPrice
-    price: 1000
+    price: 700
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - ClothingOuterHardsuitIzdari
+      - ClothingOuterHardsuitThukker
+      - ClothingOuterHardsuitDraugr
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -134,7 +146,14 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitThukker
   - type: StaticPrice
-    price: 1000
+    price: 500
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - ClothingOuterHardsuitThukker
+      - ClothingOuterHardsuitIzdari
+      - ClothingOuterHardsuitDraugr
+
 
 - type: entity
   parent: ClothingOuterEVASuitBase
@@ -181,6 +200,13 @@
   - type: GroupExamine
   - type: StaticPrice
     price: 250
+  - type: ReverseEngineering
+    recipes: 
+      - ClothingOuterArmorServileAlseik
+      - ClothingHeadHatServile
+      - ClothingOuterArmorDraugrAlseik
+      - ClothingHeadHatDraugr
+
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
@@ -210,7 +236,13 @@
     damageCoefficient: 0.90
   - type: GroupExamine
   - type: StaticPrice
-    price: 250
+    price: 500
+  - type: ReverseEngineering
+    recipes: 
+      - ClothingOuterArmorDraugrAlseik
+      - ClothingHeadHatDraugr
+      - ClothingOuterArmorServileAlseik
+      - ClothingHeadHatServile
 
 - type: entity
   parent: ClothingOuterBaseLarge

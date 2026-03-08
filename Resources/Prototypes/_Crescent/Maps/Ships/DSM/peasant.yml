@@ -1,0 +1,32 @@
+- type: vessel
+  id: Peasant
+  name: DSM Peasant
+  description: |
+    An imperial mining drone, usually seen manned by freeholders and workers in service of their house.
+    LOADOUT: 2x SHI 250c "Exhumer" kinetic Pulser
+    MINIMUM CREW: 1x Miner
+  price: 20000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/peasant.yml
+
+- type: gameMap
+  id: Peasant
+  mapName: 'DSM Peasant'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/peasant.yml
+  minPlayers: 0
+  stations:
+    Peasant:
+      stationProto: StandardCrescentCivilianVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: miner
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Covetor {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining

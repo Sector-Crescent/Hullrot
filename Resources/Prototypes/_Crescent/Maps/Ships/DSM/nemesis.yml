@@ -17,7 +17,7 @@
   minPlayers: 0
   stations:
     Nemesis:
-      stationProto: StandardCrescentVessel
+      stationProto: StandardCrescentStation
       components:
         - type: VesselIcon
           iffIcon:
@@ -29,4 +29,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: VesselDesignation
-        
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            LevymanDSM: [ 4, 4 ]

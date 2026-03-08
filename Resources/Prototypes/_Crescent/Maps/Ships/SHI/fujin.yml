@@ -1,7 +1,7 @@
 - type: vessel
   id: Fujin
   name: SHI Fujin
-  description: The CSEC Fujin is a light destroyer containing impressive frontal arrarment.
+  description: The CSEC Fujin is a battlecruiser containing impressive frontal armament.
   price: 90000
   category: Medium
   group: None
@@ -19,7 +19,7 @@
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: cruiser
+            state: battlecruiser
         - type: StationNameSetup
           mapNameTemplate: 'SHI Fujin {1}'
           nameGenerator:

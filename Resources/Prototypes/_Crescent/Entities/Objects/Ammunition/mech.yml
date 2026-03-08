@@ -147,9 +147,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 125
+    maxIntensity: 100
     intensitySlope: 50
-    totalIntensity: 900 #2 shots jugs and light mechs
+    totalIntensity: 600 #Consistently 3-shots Bogatyrs
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5

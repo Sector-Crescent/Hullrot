@@ -759,6 +759,10 @@
     charges: 20
   - type: AutoRecharge
     rechargeDuration: 10
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - RCDRecharging
 
 - type: entity
   id: RCDExperimental

@@ -1,0 +1,153 @@
+# MARK: Uniforms
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitBeltrunner
+  result: ClothingUniformJumpsuitBeltrunner
+  completetime: 2
+  materials:
+    Cloth: 500
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitAntiquarianFamilies
+  result: ClothingUniformJumpsuitAntiquarianFamilies
+  completetime: 2
+  materials:
+    SilkFilament: 7500 #Look I saw the perfect excuse
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitTechminer
+  result: ClothingUniformJumpsuitTechminer
+  completetime: 2
+  materials:
+    Cloth: 500
+    Steel: 100
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitServile
+  result: ClothingUniformJumpsuitServile
+  completetime: 2
+  materials:
+    Cloth: 500
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitDraugr
+  result: ClothingUniformJumpsuitDraugr
+  completetime: 2
+  materials:
+    Cloth: 300
+    Durathread: 200
+
+# MARK: Armor
+
+- type: latheRecipe
+  id: ClothingOuterArmorServileAlseik
+  result: ClothingOuterArmorServileAlseik
+  completetime: 2
+  materials:
+    Durathread: 700
+    Cloth: 500
+    Steel: 500
+
+- type: latheRecipe
+  id: ClothingHeadHatServile
+  result: ClothingHeadHatServile
+  completetime: 2
+  materials:
+    Durathread: 300
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingOuterArmorDraugrAlseik
+  result: ClothingOuterArmorDraugrAlseik
+  completetime: 2
+  materials:
+    Durathread: 800
+    Cloth: 400
+    Steel: 1000
+    Gold: 100
+
+- type: latheRecipe
+  id: ClothingHeadHatDraugr
+  result: ClothingHeadHatDraugr
+  completetime: 2
+  materials:
+    Durathread: 300
+    Cloth: 200
+    Steel: 200
+
+# MARK: Hardsuits
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitThukker
+  result: ClothingOuterHardsuitThukker
+  completetime: 2
+  materials:
+    Cloth: 500
+    Steel: 1000
+    HardsuitElectronics: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitIzdari
+  result: ClothingOuterHardsuitIzdari
+  completetime: 2
+  materials:
+    Durathread: 500
+    Steel: 1500
+    HardsuitElectronics: 500
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitDraugr
+  result: ClothingOuterHardsuitDraugr
+  completetime: 2
+  materials:
+    Durathread: 1000
+    Steel: 2500
+    Silver: 200
+    Tungsten: 500
+    HardsuitElectronics: 500
+
+# MARK: Ship LPCs
+
+- type: latheRecipe
+  id: BeelzebubLPC
+  result: ShipVoucherTAPBeelzebub
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 4000
+    ShipHull: 1500
+
+# MARK: Melee
+
+- type: latheRecipe
+  id: EnergySwordFamilies
+  result: EnergySwordFamilies
+  completetime: 2
+  materials:
+    AdvancedElectronics: 1000
+    Steel: 500
+    Silver: 300
+    HardlightGenerator: 1000
+    Plasma: 500
+
+- type: latheRecipe
+  id: Plashammer
+  result: Plashammer
+  completetime: 2
+  materials:
+    AdvancedElectronics: 500
+    Steel: 1500
+    Tungsten: 1500
+    Plasma: 3000
+
+- type: latheRecipe
+  id: PlasHalberd
+  result: PlasHalberd
+  completetime: 2
+  materials:
+    AdvancedElectronics: 2000
+    AdvancedMechatronics: 1000
+    Steel: 1500
+    Tungsten: 1000
+    HardlightGenerator: 2000
+    Plasma: 1500

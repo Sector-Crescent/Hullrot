@@ -123,33 +123,34 @@ namespace Content.Server.Preferences.Managers
             var session = _playerManager.GetSessionById(userId);
 
             profile.EnsureValid(session, _dependencies);
+
             // hullrot edit
-            if (profile is HumanoidCharacterProfile humanProfile)
+            if (profile is HumanoidCharacterProfile)
             {
                 if (!curPrefs.Characters.ContainsKey(slot))
                 {
-                    profile = humanProfile.WithBank(HumanoidCharacterProfile.DefaultBalance);
+                    profile = ((HumanoidCharacterProfile) profile).WithBank(HumanoidCharacterProfile.DefaultBalance);
                 }
                 else if (curPrefs.Characters[slot] is HumanoidCharacterProfile humanoidEditingTarget)
                 {
                     // you cheat like a king! gg! - SPCR
-                    if (humanoidEditingTarget.Faction != "" && humanProfile.Faction != humanoidEditingTarget.Faction)
+                    if (humanoidEditingTarget.Faction != "" && ((HumanoidCharacterProfile) profile).Faction != humanoidEditingTarget.Faction)
                     {
                         _sawmill.Info(
                             $"{session.Name} has tried to modify a locked character's faction. They are using a modified client!");
-                        profile = humanProfile.WithFaction(humanoidEditingTarget.Faction);
+                        profile = ((HumanoidCharacterProfile) profile).WithFaction(humanoidEditingTarget.Faction);
                     }
 
                     // ha ha ha ha
-                    if (humanoidEditingTarget.BankBalance != humanProfile.BankBalance)
+                    if (humanoidEditingTarget.BankBalance != ((HumanoidCharacterProfile) profile).BankBalance)
                     {
-                        if(humanProfile.BankBalance > humanoidEditingTarget.BankBalance)
+                        if (((HumanoidCharacterProfile) profile).BankBalance > humanoidEditingTarget.BankBalance)
                             _sawmill.Info($"{session.Name} has tried to give their character money. They are using a modified client!");
-                        profile = humanProfile.WithBank(humanoidEditingTarget.BankBalance);
+                        profile = ((HumanoidCharacterProfile) profile).WithBank(humanoidEditingTarget.BankBalance);
                     }
 
                     // prevent client from changing flags on a slot. fuck you
-                    profile = humanProfile.WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
+                    profile = ((HumanoidCharacterProfile) profile).WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
                 }
             }
 
@@ -158,8 +159,6 @@ namespace Content.Server.Preferences.Managers
             {
                 [slot] = profile
             };
-
-
 
             prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor);
 
