@@ -13,13 +13,29 @@
                     MaxWidth="300"
                     Margin="5 5 5 5"
                     Orientation="Vertical">
+
+            <!-- Cannons status -->
+            <BoxContainer HorizontalAlignment="Left"
+                        MinWidth="295"
+                        MaxWidth="295"
+                        MinHeight="75"
+                        MaxHeight="75"
+                        Orientation="Vertical">
+                <controls:StripeBack>
+                    <Label Text="Cannon status" HorizontalAlignment="Center" />
+                </controls:StripeBack>
+                <PanelContainer VerticalExpand="False" HorizontalExpand="True">
+                <Button Name="RefreshButton" Access="Public" Text="{Loc admin-logs-refresh}"
+                        StyleClasses="ButtonSquare" Margin="2 2 2 2"/>
+                </PanelContainer>
+            </BoxContainer>
             
             <!-- Ammo status -->
             <BoxContainer HorizontalAlignment="Left"
                         MinWidth="295"
                         MaxWidth="295"
-                        MinHeight="395"
-                        MaxHeight="395"
+                        MinHeight="320"
+                        MaxHeight="320"
                         Orientation="Vertical">
                 <controls:StripeBack>
                     <Label Text="Ammo status" HorizontalAlignment="Center" />

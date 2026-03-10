@@ -16,11 +16,14 @@ public sealed partial class TargetingConsoleWindow : FancyWindow, IComputerWindo
 {
     public ShuttleNavControl Radar => NavRadar;
     public Action<string>? OnCannonGroupChange;
+    public Action? OnServerRefresh;
 
     public TargetingConsoleWindow()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
+
+        RefreshButton.OnPressed += _ => OnServerRefresh?.Invoke();
     }
 
     public void UpdateState(TargetingConsoleBoundUserInterfaceState state)

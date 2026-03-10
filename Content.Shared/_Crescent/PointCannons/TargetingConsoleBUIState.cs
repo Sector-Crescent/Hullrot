@@ -38,6 +38,12 @@ public sealed class TargetingConsoleFireMessage : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
+public sealed class FireControlConsoleRefreshServerMessage : BoundUserInterfaceMessage
+{
+
+}
+
+[Serializable, NetSerializable]
 public sealed class TargetingConsoleGroupChangedMessage : BoundUserInterfaceMessage
 {
     public string GroupName;

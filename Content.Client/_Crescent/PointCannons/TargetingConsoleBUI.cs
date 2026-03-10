@@ -60,6 +60,8 @@ public sealed class TargetingConsoleBoundUserInterface : BoundUserInterface
         _window.OpenCentered();
         _window.OnClose += Close;
 
+        _window.OnServerRefresh += OnRefreshServer;
+
         _window.Radar.OnRadarClick += (coords) =>
         {
             _coords = _formSys.ToMapCoordinates(coords).Position;
@@ -102,5 +104,10 @@ public sealed class TargetingConsoleBoundUserInterface : BoundUserInterface
 
         _controlled = consoleState.ControlledCannons;
         _window?.UpdateState(consoleState);
+    }
+
+    private void OnRefreshServer()
+    {
+        SendMessage(new FireControlConsoleRefreshServerMessage());
     }
 }
