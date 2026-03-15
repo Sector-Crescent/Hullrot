@@ -41,6 +41,7 @@ namespace Content.Server.Preferences.Managers
         public void Init()
         {
             _netManager.RegisterNetMessage<MsgPreferencesAndSettings>();
+            _netManager.RegisterNetMessage<MsgUpdatePreferences>();
             _netManager.RegisterNetMessage<MsgSelectCharacter>(HandleSelectCharacterMessage);
             _netManager.RegisterNetMessage<MsgUpdateCharacter>(HandleUpdateCharacterMessage);
             _netManager.RegisterNetMessage<MsgDeleteCharacter>(HandleDeleteCharacterMessage);
@@ -161,6 +162,11 @@ namespace Content.Server.Preferences.Managers
             };
 
             prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor);
+
+            // Fire a prefs update message
+            var msg = new MsgUpdatePreferences();
+            msg.Preferences = prefsData.Prefs;
+            _netManager.ServerSendMessage(msg, session.Channel);
 
             if (ShouldStorePrefs(session.Channel.AuthType))
                 await _db.SaveCharacterSlotAsync(userId, profile, slot);
