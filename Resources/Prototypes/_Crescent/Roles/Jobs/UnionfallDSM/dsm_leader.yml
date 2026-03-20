@@ -9,9 +9,7 @@
     - !type:CharacterSpeciesRequirement
       species:
         - Human
-    - !type:CharacterWhitelistRequirement
-    - !type:CharacterOverallTimeRequirement
-      min: 20000
+        
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
