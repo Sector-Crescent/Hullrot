@@ -1,0 +1,37 @@
+# Author Info
+# Discord: @rubeebee (hi!)
+
+- type: vessel
+  id: Cog
+  name: NCWL Cog
+  description: |
+    Made from recycled materials recycled from derelicts, this is the cheapest mining vessel in the sector, fielded by communards.
+    LOADOUT: 2x SHI 250c "Exhumer" kinetic Pulser
+  price: 20000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/cog.yml
+
+- type: gameMap
+  id: Cog
+  mapName: 'NCWL Cog'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/cog.yml
+  minPlayers: 0
+  stations:
+    Cog:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: miner
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Cog {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining
+        - type: VesselDescription
+          description: A manned mining drone, the AI has been replaced by organic robots; humanoids.
+

@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/22/2026 12:56:51
+  time: 02/28/2026 09:51:29
   entityCount: 836
 maps: []
 grids:
@@ -271,6 +271,18 @@ entities:
             345: 2,19
             350: 3,21
             373: -2,0
+            388: 4,0
+            394: 8,0
+            411: 1,17
+            416: 2,19
+            421: 3,21
+            444: -2,0
+            459: 4,0
+            465: 8,0
+            482: 1,17
+            487: 2,19
+            492: 3,21
+            515: -2,0
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -299,6 +311,18 @@ entities:
             360: 7,21
             365: 8,19
             370: 9,17
+            385: 2,0
+            391: 6,0
+            403: 12,0
+            431: 7,21
+            436: 8,19
+            441: 9,17
+            456: 2,0
+            462: 6,0
+            474: 12,0
+            502: 7,21
+            507: 8,19
+            512: 9,17
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -331,6 +355,20 @@ entities:
             353: 5,22
             376: -2,7
             379: -1,8
+            382: 0,14
+            409: 1,17
+            414: 2,19
+            419: 3,21
+            424: 5,22
+            447: -2,7
+            450: -1,8
+            453: 0,14
+            480: 1,17
+            485: 2,19
+            490: 3,21
+            495: 5,22
+            518: -2,7
+            521: -1,8
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -363,6 +401,20 @@ entities:
             359: 7,21
             364: 8,19
             369: 9,17
+            397: 10,14
+            400: 11,8
+            406: 12,7
+            426: 5,22
+            430: 7,21
+            435: 8,19
+            440: 9,17
+            468: 10,14
+            471: 11,8
+            477: 12,7
+            497: 5,22
+            501: 7,21
+            506: 8,19
+            511: 9,17
         - node:
             id: LatticeEdgeE
           decals:
@@ -406,6 +458,26 @@ entities:
             371: -2,0
             375: -2,7
             378: -1,8
+            381: 0,14
+            386: 4,0
+            392: 8,0
+            408: 1,17
+            413: 2,19
+            418: 3,21
+            423: 5,22
+            442: -2,0
+            446: -2,7
+            449: -1,8
+            452: 0,14
+            457: 4,0
+            463: 8,0
+            479: 1,17
+            484: 2,19
+            489: 3,21
+            494: 5,22
+            513: -2,0
+            517: -2,7
+            520: -1,8
         - node:
             id: LatticeEdgeN
           decals:
@@ -457,6 +529,30 @@ entities:
             362: 8,19
             367: 9,17
             372: -2,0
+            383: 2,0
+            387: 4,0
+            389: 6,0
+            393: 8,0
+            401: 12,0
+            410: 1,17
+            415: 2,19
+            420: 3,21
+            428: 7,21
+            433: 8,19
+            438: 9,17
+            443: -2,0
+            454: 2,0
+            458: 4,0
+            460: 6,0
+            464: 8,0
+            472: 12,0
+            481: 1,17
+            486: 2,19
+            491: 3,21
+            499: 7,21
+            504: 8,19
+            509: 9,17
+            514: -2,0
         - node:
             id: LatticeEdgeS
           decals:
@@ -512,6 +608,32 @@ entities:
             366: 9,17
             374: -2,7
             377: -1,8
+            380: 0,14
+            395: 10,14
+            398: 11,8
+            404: 12,7
+            407: 1,17
+            412: 2,19
+            417: 3,21
+            422: 5,22
+            427: 7,21
+            432: 8,19
+            437: 9,17
+            445: -2,7
+            448: -1,8
+            451: 0,14
+            466: 10,14
+            469: 11,8
+            475: 12,7
+            478: 1,17
+            483: 2,19
+            488: 3,21
+            493: 5,22
+            498: 7,21
+            503: 8,19
+            508: 9,17
+            516: -2,7
+            519: -1,8
         - node:
             id: LatticeEdgeW
           decals:
@@ -555,6 +677,26 @@ entities:
             358: 7,21
             363: 8,19
             368: 9,17
+            384: 2,0
+            390: 6,0
+            396: 10,14
+            399: 11,8
+            402: 12,0
+            405: 12,7
+            425: 5,22
+            429: 7,21
+            434: 8,19
+            439: 9,17
+            455: 2,0
+            461: 6,0
+            467: 10,14
+            470: 11,8
+            473: 12,0
+            476: 12,7
+            496: 5,22
+            500: 7,21
+            505: 8,19
+            510: 9,17
         - node:
             color: '#EFB34196'
             id: WarnLineE
@@ -717,27 +859,11 @@ entities:
       canCollide: False
 - proto: AAAHardpointSmallBallistic
   entities:
-  - uid: 3
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,13.5
-      parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 4
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 10.5,16.5
-      parent: 1
-    - type: Physics
-      canCollide: False
-  - uid: 5
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 13.5,6.5
+      pos: 0.5,16.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -749,7 +875,7 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 7
+  - uid: 8
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -757,11 +883,27 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-  - uid: 8
+  - uid: 831
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 0.5,16.5
+      pos: -0.5,13.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 834
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,16.5
+      parent: 1
+    - type: Physics
+      canCollide: False
+  - uid: 835
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 13.5,6.5
       parent: 1
     - type: Physics
       canCollide: False
@@ -5619,49 +5761,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,20.5
       parent: 1
-- proto: WeaponTurretSmallArtillery
+- proto: WeaponTurretMediumMachinegun
   entities:
-  - uid: 831
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,16.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 832
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,16.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 833
+  - uid: 3
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -5681,11 +5783,11 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 834
+  - uid: 5
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 13.5,6.5
+      pos: 0.5,16.5
       parent: 1
     - type: ContainerContainer
       containers:
@@ -5701,7 +5803,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 835
+  - uid: 7
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -5721,11 +5823,51 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-  - uid: 836
+  - uid: 832
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,16.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+  - uid: 833
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,13.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        gun_magazine: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        gun_chamber: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+  - uid: 836
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 13.5,6.5
       parent: 1
     - type: ContainerContainer
       containers:

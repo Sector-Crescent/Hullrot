@@ -30,6 +30,7 @@ crescent-rank-archmaester = Archmaester
 crescent-rank-advocatus = Advocati
 crescent-rank-templar = Knight Templar
 crescent-rank-freeholder = Freeholder
+crescent-rank-dsm-conscript = Fyrdman
 
 # dsm-conscript
 crescent-rank-dsm-captain = Grand Steward
@@ -58,6 +59,7 @@ crescent-rank-ncwl-faction-leader = General Major
 crescent-rank-ncwl-home-leader = Kommissar
 crescent-rank-ncwl-mvd-officer = Colonel
 crescent-rank-ncwl-mvd-grunt = Komrade
+crescent-rank-ncwl-spetsnaz = Operator
 crescent-rank-ncwl-home-squad-lead = Kapitan
 crescent-rank-ncwl-home-soldat = Partisan
 crescent-rank-ncwl-engi-leader = Overseer
@@ -66,6 +68,7 @@ crescent-rank-ncwl-medi-leader = Director
 crescent-rank-ncwl-medi-worker = Sanitar
 crescent-rank-ncwl-logi-leader = Coordinator
 crescent-rank-ncwl-worker = Comrade
+crescent-rank-ncwl-conscript = Conscript
 
 
 # syn

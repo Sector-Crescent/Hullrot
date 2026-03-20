@@ -41,6 +41,10 @@
       settings: default
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgSyndicateMedicalBattery
+  - type: ReverseEngineering
+    difficulty: 3
+    recipes:
+      - ReinforcementFlatpackSyndicateCyborgMedical
 
 - type: entity
   parent: ReinforcementRadioSyndicate
@@ -63,3 +67,7 @@
       settings: default
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgSyndicateSaboteurBattery
+  - type: ReverseEngineering
+    difficulty: 3
+    recipes:
+      - ReinforcementFlatpackSyndicateCyborgSaboteur

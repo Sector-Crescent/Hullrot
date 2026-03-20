@@ -1,20 +1,22 @@
 - type: vendingMachineInventory
   id: SustenanceInventory
   startingInventory:
-    DrinkMREFlask: 3
-    FoodSnackNutribrick: 5
-    FoodSnackMREBrownie: 5
-    FoodCondimentPacketKetchup: 5
-    FoodCondimentPacketPepper: 5
-    FoodCondimentPacketSalt: 5
-    ReagentTinPowderedMilkSoy: 2
-    ReagentTinPowderedJuiceOrange: 1
-    FoodBowlBig: 3
-    FoodPlateTin: 1
-    ForkPlastic: 3
-    SpoonPlastic: 3
-    KnifePlastic: 3
-  emaggedInventory:
+    DrinkMREFlask: 10
+    FoodSnackNutribrick: 20
+    FoodSnackMREBrownie: 20
+    FoodPSB: 20
+    # NO MORE SLOP ITEMS! WE JUST GET FOOD!
+    #FoodCondimentPacketKetchup: 5
+    #FoodCondimentPacketPepper: 5
+    #FoodCondimentPacketSalt: 5
+    #ReagentTinPowderedMilkSoy: 2
+    #ReagentTinPowderedJuiceOrange: 1
+    #FoodBowlBig: 3
+    #FoodPlateTin: 1
+    #ForkPlastic: 3
+    #SpoonPlastic: 3
+    #KnifePlastic: 3
+  emaggedInventory: #idk who bothers emagging these???
     KitchenKnife: 2
     SpaceMedipen: 3
     ClothingMaskBreath: 3

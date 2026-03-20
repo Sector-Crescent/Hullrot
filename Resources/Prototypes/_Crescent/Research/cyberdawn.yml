@@ -18,6 +18,22 @@
   - ClothingOuterHardsuitCybersun
 
 - type: technology
+  id: CyberdawnReverseEngi
+  name: research-technology-cyberdawn-reverse-engineering
+  icon:
+    sprite: Nyanotrasen/Structures/Machines/reverse_engineering.rsi
+    state: open
+  discipline: Cyberdawn
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ReverseEngineeringMachineCircuitboard
+  - AdvancedCapacitorStockPart
+  - AdvancedMatterBinStockPart
+  - NanoManipulatorStockPart
+  - RPED
+
+- type: technology
   id: CyberdawnBasicBallistics
   name: research-technology-cyberdawn-basicballistics
   icon:
@@ -27,10 +43,12 @@
   tier: 1
   cost: 6000
   recipeUnlocks:
+  - WeaponShotgunTuberCyberdawn
   - WeaponSubMachineGunAtreidesCyberdawn
   - WeaponRifleAkCyberdawn
   - WeaponRifleKrinkovCyberdawn
   - WeaponPistolViperWoodCyberdawn
+  - WeaponPistolAnsemCyberdawn
 
 - type: technology
   id: CyberdawnT1Infiltration
@@ -60,6 +78,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
+  - SprigganLPC
   - VelatorLPC
   - TaipanLPC
   - WispLPC
@@ -96,9 +115,27 @@
   cost: 9000
   recipeUnlocks:
   - WeaponShotgunSaiga12NCSP
+  - WeaponSubMachineGunCorsairCyberdawn
   - WeaponLightMachineGunNCSPRPD
+  - WeaponLightMachineGunCompaktCyberdawn
   - WeaponRifleMayflower
+  - WeaponRifleUnderdogCyberdawn
   - WeaponRifleSVDMarksmanNCSP
+  - WeaponSniperAK60Cyberdawn
+
+- type: technology
+  id: CyberdawnLancer
+  name: research-technology-cyberdawn-marauder
+  icon:
+    sprite: _Crescent/Objects/Specific/mecha.rsi
+    state: marauder
+  discipline: Cyberdawn
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - MarauderFlatpack
+  - WeaponMechSword
+  - WeaponMechCombatLightRifle
 
 - type: technology
   id: CDTAdvancedFirearmcomponents
@@ -239,6 +276,8 @@
   recipeUnlocks:
   - WeaponLCartridgeRPGSmall
   - WeaponLauncherRPGNSCP
+  - WeaponCartridgeRPGLarge
+  - WeaponLauncherRocketCyberdawn
 
 - type: technology
   id: ESwordDouble

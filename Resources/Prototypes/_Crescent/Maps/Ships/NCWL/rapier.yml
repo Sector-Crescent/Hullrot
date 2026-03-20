@@ -4,8 +4,8 @@
 - type: vessel
   id: Rapier
   name: NCWL Rapier
-  description: An ultralight communard converted torpedo bomber.
-  price: 11000
+  description: An ultralight communard converted bomber.
+  price: 10000
   category: Small
   group: None
   path: /Maps/_Crescent/Shuttles/NCWL/rapier.yml
@@ -25,4 +25,4 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: VesselDesignation
-          designation: vessel-designation-torpedo-bomber
+          designation: ultralight

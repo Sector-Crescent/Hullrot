@@ -260,3 +260,25 @@
   completetime: 10
   materials:
     Biomass: 200
+
+- type: latheRecipe
+  id: BioGenFoodNutribrick
+  result: FoodSnackNutribrick
+  category: Food
+  icon:
+    sprite: Objects/Consumable/Food/snacks.rsi
+    state: nutribrick
+  completetime: 10
+  materials:
+    Biomass: 15
+
+- type: latheRecipe
+  id: BioGenFoodPSB
+  result: FoodPSB
+  category: Food
+  icon:
+    sprite: Nyanotrasen/Objects/Consumable/Food/ration.rsi
+    state: psb
+  completetime: 10
+  materials:
+    Biomass: 10

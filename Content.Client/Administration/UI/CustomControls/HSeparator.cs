@@ -7,19 +7,28 @@ namespace Content.Client.Administration.UI.CustomControls;
 
 public sealed class HSeparator : Control
 {
-    private static readonly Color SeparatorColor = Color.FromHex("#3D4059");
+    private PanelContainer _panel;
 
-    public HSeparator(Color color)
+    public static readonly Color DefaultSeparatorColor = Color.FromHex("#3D4059");
+
+    public Color Color
     {
-        AddChild(new PanelContainer
+        get => ((StyleBoxFlat)_panel.PanelOverride!).BackgroundColor;
+        set => ((StyleBoxFlat)_panel.PanelOverride!).BackgroundColor = value;
+    }
+
+    public HSeparator()
+    {
+        _panel = new PanelContainer
         {
             PanelOverride = new StyleBoxFlat
             {
-                BackgroundColor = color,
-                ContentMarginBottomOverride = 2, ContentMarginLeftOverride = 2
+                BackgroundColor = DefaultSeparatorColor,
+                ContentMarginBottomOverride = 2,
+                ContentMarginLeftOverride = 2
             }
-        });
-    }
+        };
 
-    public HSeparator() : this(SeparatorColor) { }
+        AddChild(_panel);
+    }
 }

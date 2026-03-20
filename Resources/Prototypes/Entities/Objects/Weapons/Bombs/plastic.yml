@@ -106,6 +106,8 @@
     maxIntensity: 30
     canCreateVacuum: false
   - type: ExplodeOnTrigger
+  - type: StaticPrice
+    price: 3000
 
 - type: entity
   name: breaching charge

@@ -32,6 +32,7 @@ namespace Content.Client.Lobby
         public void Initialize()
         {
             _netManager.RegisterNetMessage<MsgPreferencesAndSettings>(HandlePreferencesAndSettings);
+            _netManager.RegisterNetMessage<MsgUpdatePreferences>(UpdatePreferences);
             _netManager.RegisterNetMessage<MsgUpdateCharacter>();
             _netManager.RegisterNetMessage<MsgSelectCharacter>();
             _netManager.RegisterNetMessage<MsgDeleteCharacter>();
@@ -117,6 +118,13 @@ namespace Content.Client.Lobby
         {
             Preferences = message.Preferences;
             Settings = message.Settings;
+
+            OnServerDataLoaded?.Invoke();
+        }
+
+        public void UpdatePreferences(MsgUpdatePreferences message)
+        {
+            Preferences = message.Preferences;
 
             OnServerDataLoaded?.Invoke();
         }

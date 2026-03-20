@@ -266,6 +266,12 @@
     temperature: 700
   - type: StaticPrice
     price: 3333
+  - type: ReverseEngineering
+    difficulty: 4
+    recipes:
+      - EnergySwordFamilies
+      - Plashammer
+      - PlasHalberd
 
 - type: entity
   name: SCHK-1 plasma-bladed halberd
@@ -313,6 +319,12 @@
     delay: 1
   - type: IgniteOnMeleeHit
     fireStacks: 1
+  - type: ReverseEngineering
+    difficulty: 4
+    recipes:
+      - PlasHalberd
+      - Plashammer
+      - EnergySwordFamilies
 
 - type: entity
   name: SCHK-3 charge warhammer
@@ -345,6 +357,12 @@
   - type: DisarmMalus #harder to shake firm grip
   - type: IgniteOnMeleeHit
     fireStacks: 10 #BURN ALIVE ONCE ARMOR FAILS
+  - type: ReverseEngineering
+    difficulty: 4
+    recipes:
+      - Plashammer
+      - EnergySwordFamilies
+      - PlasHalberd
 
 - type: entity
   name: SHI-30J Paperwork
@@ -438,6 +456,10 @@
     delay: 1
   - type: IgniteOnMeleeHit
     fireStacks: 1
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - ImperialPsionBoundlightStaff
 
 #- type: entity
 #  name: HGS VAP-31X Pulssiase beam rifle
@@ -516,6 +538,10 @@
   - type: ProjectileBatteryAmmoProvider
     proto: InfantryPlasmaBoltMedium
     fireCost: 35 # 60 shots, can't reload in the field
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - WeaponPlasmaRifleSeethe
 
 - type: entity
   id: InfantryPlasmaBoltMedium

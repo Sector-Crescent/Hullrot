@@ -2,21 +2,21 @@
 # Discord: originally @fleshangel
 
 - type: vessel
-  id: Clementine
-  name: NCWL Clementine
+  id: Chelubey
+  name: NCWL Chelubey
   description: The antiquated Flagship of the Union fleet in Taypan.
   price: 600000
   category: Large
   group: None
-  path: /Maps/_Crescent/Shuttles/NCWL/clementine.yml
+  path: /Maps/_Crescent/Shuttles/NCWL/chelubey.yml
 
 - type: gameMap
-  id: Clementine
-  mapName: 'NCWL Dear Clementine'
-  mapPath: /Maps/_Crescent/Shuttles/NCWL/clementine.yml
+  id: Chelubey
+  mapName: 'NCWL Dear Chelubey'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/chelubey.yml
   minPlayers: 0
   stations:
-    Clementine:
+    Chelubey:
       stationProto: StandardCrescentVessel
       components:
         - type: VesselIcon
@@ -24,7 +24,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: capital
         - type: StationNameSetup
-          mapNameTemplate: 'NCWL Dear Clementine {1}'
+          mapNameTemplate: 'NCWL Dear Chelubey {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

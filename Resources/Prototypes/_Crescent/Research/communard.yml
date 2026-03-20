@@ -20,7 +20,10 @@
   - ClothingMaskNCWLBalaclava
   - ClothingEyesGlassesNCWL
   - ClothingBeltNCWLWebbing
+  - ClothingOuterArmorNCWLLightBodyarmor
   - ClothingHeadHelmetNCWLBasic
+  - ClothingOuterHardsuitNCWLEngi
+  - ClothingOuterHardsuitNCWLMedi
   - ClothingMaskNCWLGasmask
 
 - type: technology
@@ -35,7 +38,28 @@
   recipeUnlocks:
   - NCWLLugBaton
   - NCWLRiotShield
+  - ClothingOuterArmorNCWLHeavyCarapace
+  - ClothingHeadHelmetNCWLHeavy
   - ClothingHeadHelmetNCWLRiot
+
+- type: technology
+  id: ArmoredCommunardClothes
+  name: research-technology-armored-communard-clothes
+  icon:
+    sprite: _Crescent/Clothing/NCWL/OuterClothing/opremecoat.rsi
+    state: icon
+  discipline: Communard
+  tier: 1
+  cost: 1500
+  recipeUnlocks:
+  - ClothingOuterArmorNCWLEngi
+  - ClothingOuterArmorNCWLLogi
+  - ClothingOuterArmorNCWLCarapaceVrachev
+  - ClothingOuterArmorNCWLMedi
+  - ClothingOuterArmorNCWLCarapaceDoktor
+  - ClothingOuterArmorNCWLCarapaceKapitan
+  - ClothingOuterArmorNCWLCarapace
+  - ClothingOuterArmorNCWLOpremeCarapace
 
 - type: technology
   id: CommunardInfantry
@@ -51,6 +75,7 @@
   - WeaponPistolComrade
   - WeaponSubMachineGunNCWLWatchdog
   - ClothingOuterHardsuitNCWLInfantry
+  - WeaponShotgunDoubleBarreledNCWL
   - WeaponShotgunProletar
 
 - type: technology
@@ -137,12 +162,15 @@
   cost: 8500
   recipeUnlocks:
   - WeaponSubMachineGunBloodhound
+  - WeaponSubMachineGunMilitant
   - WeaponRifleNCWLBatanya
   - WeaponPistolT91
   - WeaponRevolverPython
   - ClothingOuterHardsuitNCWLPetya
   - WeaponShotgunToz123
   - WeaponSniperNCWLNovomosin
+  - WeaponSniperMolot
+  - WeaponLightMachineGunConscript
 
 - type: technology
   id: CommunardLancer

@@ -10,6 +10,13 @@
     sprite: _Crescent/Clothing/FourFamilies/Uniform/techminer.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering
+    recipes:
+      - ClothingUniformJumpsuitTechminer
+      - ClothingUniformJumpsuitDraugr
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitAntiquarianFamilies
 
 - type: entity
   parent: ClothingUniformBase
@@ -49,6 +56,13 @@
     sprite: _Crescent/Clothing/FourFamilies/Uniform/servileuniform.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering
+    recipes:
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitDraugr
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitTechminer
+      - ClothingUniformJumpsuitAntiquarianFamilies
 
 - type: entity
   parent: ClothingUniformBase
@@ -62,6 +76,13 @@
     sprite: _Crescent/Clothing/FourFamilies/Uniform/draugruniform.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering
+    recipes:
+      - ClothingUniformJumpsuitDraugr
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitTechminer
+      - ClothingUniformJumpsuitAntiquarianFamilies
 
 - type: entity
   parent: ClothingUniformBase
@@ -75,6 +96,13 @@
     sprite: _Crescent/Clothing/FourFamilies/Uniform/izdaribeltrunner.rsi
   - type: StaticPrice
     price: 100
+  - type: ReverseEngineering
+    recipes:
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitAntiquarianFamilies
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitDraugr
+      - ClothingUniformJumpsuitTechminer
 
 - type: entity
   parent: ClothingUniformBase
@@ -88,6 +116,13 @@
     sprite: _Crescent/Clothing/FourFamilies/Uniform/izdariantiquarian.rsi
   - type: StaticPrice
     price: 5000
+  - type: ReverseEngineering
+    recipes:
+      - ClothingUniformJumpsuitAntiquarianFamilies
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitDraugr
+      - ClothingUniformJumpsuitTechminer
 
 - type: entity
   parent: ClothingUniformBase

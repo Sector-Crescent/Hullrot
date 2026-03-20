@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/22/2025 02:33:56
+  time: 02/22/2026 14:44:10
   entityCount: 272
 maps: []
 grids:
@@ -194,6 +194,14 @@ entities:
             806: -3,0
             814: -2,1
             822: -1,1
+            842: 5,1
+            850: 6,1
+            864: -1,-6
+            874: 0,-7
+            880: 5,-6
+            892: -3,0
+            900: -2,1
+            908: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -270,6 +278,14 @@ entities:
             796: 5,-6
             817: -2,1
             825: -1,1
+            845: 5,1
+            853: 6,1
+            856: 7,0
+            866: -1,-6
+            877: 4,-7
+            882: 5,-6
+            903: -2,1
+            911: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -355,6 +371,15 @@ entities:
             809: -3,2
             812: -2,1
             820: -1,1
+            828: 0,4
+            831: 1,6
+            840: 5,1
+            848: 6,1
+            869: -1,-2
+            885: 5,-2
+            895: -3,2
+            898: -2,1
+            906: -1,1
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -440,6 +465,15 @@ entities:
             801: 5,-2
             816: -2,1
             824: -1,1
+            834: 3,6
+            837: 4,4
+            844: 5,1
+            852: 6,1
+            859: 7,2
+            871: -1,-2
+            887: 5,-2
+            902: -2,1
+            910: -1,1
         - node:
             id: LatticeEdgeE
           decals:
@@ -578,6 +612,21 @@ entities:
             808: -3,2
             811: -2,1
             819: -1,1
+            827: 0,4
+            830: 1,6
+            839: 5,1
+            847: 6,1
+            860: -2,-6
+            861: -2,-2
+            862: -1,-6
+            868: -1,-2
+            872: 0,-7
+            878: 5,-6
+            884: 5,-2
+            890: -3,0
+            894: -3,2
+            897: -2,1
+            905: -1,1
         - node:
             id: LatticeEdgeN
           decals:
@@ -671,6 +720,16 @@ entities:
             805: -3,0
             813: -2,1
             821: -1,1
+            841: 5,1
+            849: 6,1
+            854: 7,0
+            863: -1,-6
+            873: 0,-7
+            875: 4,-7
+            879: 5,-6
+            891: -3,0
+            899: -2,1
+            907: -1,1
         - node:
             id: LatticeEdgeS
           decals:
@@ -782,6 +841,18 @@ entities:
             807: -3,2
             810: -2,1
             818: -1,1
+            826: 0,4
+            829: 1,6
+            832: 3,6
+            835: 4,4
+            838: 5,1
+            846: 6,1
+            857: 7,2
+            867: -1,-2
+            883: 5,-2
+            893: -3,2
+            896: -2,1
+            904: -1,1
         - node:
             id: LatticeEdgeW
           decals:
@@ -920,6 +991,21 @@ entities:
             803: 6,-2
             815: -2,1
             823: -1,1
+            833: 3,6
+            836: 4,4
+            843: 5,1
+            851: 6,1
+            855: 7,0
+            858: 7,2
+            865: -1,-6
+            870: -1,-2
+            876: 4,-7
+            881: 5,-6
+            886: 5,-2
+            888: 6,-6
+            889: 6,-2
+            901: -2,1
+            909: -1,1
         - node:
             color: '#FFFFFFFF'
             id: TechE
@@ -2123,7 +2209,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ComputerComms
+- proto: ComputerIFF
   entities:
   - uid: 191
     components:
@@ -2131,6 +2217,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 1.5,3.5
       parent: 1
+    - type: IFFConsole
+      allowColorChange: True
 - proto: ComputerShuttle
   entities:
   - uid: 192
@@ -2391,7 +2479,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: Battery
-      startingCharge: 7144.4023
+      startingCharge: 6352.177
     - type: ApcPowerReceiverBattery
       enabled: True
   - uid: 218
@@ -2403,7 +2491,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: Battery
-      startingCharge: 7140.7393
+      startingCharge: 6348.5137
     - type: ApcPowerReceiverBattery
       enabled: True
 - proto: SignalButton

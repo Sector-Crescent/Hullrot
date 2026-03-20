@@ -125,6 +125,11 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatTaikotyo
+      - WeaponMechGustaf
 
 - type: entity
   id: WeaponMechSword
@@ -152,6 +157,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponMechSword
+      - WeaponMechMaul
 
 - type: entity
   id: WeaponMechPlasmaSword
@@ -179,6 +188,12 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechPlasmaSword
+      - WeaponMechSword
+      - WeaponMechMaul
 
 - type: entity
   id: WeaponMechMaul
@@ -205,7 +220,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
-
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponMechMaul
+      - WeaponMechSword
 
 - type: entity
   id: WeaponMechCombatLightRifle
@@ -237,6 +255,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatLightRifle
 
 
 - type: entity
@@ -368,6 +390,12 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatHeavyRifle
+      - WeaponMechCombatLightRifle
+      - WeaponMechCombatAutocannon
 
 - type: entity
   id: WeaponMechCombatAutocannon
@@ -398,6 +426,12 @@
   - type: Tag
     tags:
     - SiegeMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatAutocannon
+      - WeaponMechCombatHeavyRifle
+      - WeaponMechCombatLightRifle
 
 - type: entity
   id: WeaponMechCombatAutoshotgun
@@ -421,12 +455,16 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: PelletShotgunSpread4g
-    fireCost: 75 #100 shots on a light mechs
+    fireCost: 100 #75 shots on a light mechs
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatAutoshotgun
 
 - type: entity
   id: WeaponMechCombatAutopuntgun
@@ -452,12 +490,17 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitAutopuntgunPelletSpread
-    fireCost: 100
+    fireCost: 250 # 70 shots or 35 bursts on a medium mech
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatAutopuntgun
+      - WeaponMechCombatAutoshotgun
 
 - type: entity
   id: WeaponMechCombatGrenadeLauncher
@@ -497,7 +540,7 @@
   components:
   - type: Battery
     maxCharge: 400
-    startingCharge: 450
+    startingCharge: 400
   - type: Sprite
     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
     state: plasmarifle
@@ -512,12 +555,17 @@
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: ExosuitPlasmaBoltLight
-    fireCost: 125
+    fireCost: 50 # 150 shots or 50 bursts from a light mech
   - type: Appearance
   - type: AmmoCounter
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatPlasmaRifle
+      - WeaponMechCombatPlasmaCannon
 
 - type: entity
   id: WeaponMechCombatImperialSMG
@@ -546,6 +594,9 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponMechCombatImperialSMG
 
 - type: entity
   id: WeaponMechCombatImperialAutolaser
@@ -573,6 +624,10 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - WeaponMechCombatImperialAutolaser
 
 - type: hitscan
   id: LumenLaser
@@ -618,6 +673,11 @@
   - type: Tag
     tags:
     - MediumMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechCombatPlasmaCannon
+      - WeaponMechCombatPlasmaRifle
 
 - type: entity
   id: WeaponMechCombatCarlGustaf
@@ -637,8 +697,8 @@
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/non_collection/rpg_fire.ogg
   - type: Battery
-    maxCharge: 750
-    startingCharge: 750
+    maxCharge: 1250
+    startingCharge: 1250
   - type: ProjectileBatteryAmmoProvider
     proto: Projectile84mmRecoillessHEAT
     fireCost: 1250 #6 shots from a light mech
@@ -647,3 +707,8 @@
   - type: Tag
     tags:
     - ScoutMechEquipment
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponMechGustaf
+      - WeaponMechCombatTaikotyo

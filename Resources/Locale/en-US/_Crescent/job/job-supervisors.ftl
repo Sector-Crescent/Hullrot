@@ -5,6 +5,7 @@ job-supervisors-ncwl-partisan = To your Fleetkapitan first, then the Kommissar, 
 job-supervisors-ncwl-unionized = To your Union Representative, the Kommissar and General Major.
 job-supervisors-ncwl-worker = To the Unions, then the Kommissar and General Major.
 job-supervisors-ncwl-mvd = To the Chengridz Central Committee and by extension the Kommissar.
+job-supervisors-ncwl-ert = To your squad leader, and commanding officer.
 job-supervisors-ncsp = NCSP High Command
 job-supervisors-imperial = House Kircheis
 job-supervisors-shi = Shinohara Corporate Command

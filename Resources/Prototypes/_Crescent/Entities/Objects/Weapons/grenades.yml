@@ -569,6 +569,14 @@
   - type: EmitSoundOnLand
     sound:
       collection: FragGrenadeSFX
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - HG13M2MiniHandgrenade
+      - GrenadeSHIHG17Smart
+      - SHIHG19SmartHandgrenadeEMP
+      - SHIHG7FlashbangHandgrenade
+      - SHIHG3TearGasHandgrenade
 
 - type: entity
   name: SHI HG-23 Electromagnetic grenade
@@ -636,6 +644,14 @@
   - type: EmitSoundOnLand
     sound:
       collection: FragGrenadeSFX
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - SHIHG19SmartHandgrenadeEMP
+      - GrenadeSHIHG17Smart
+      - HG13M2MiniHandgrenade
+      - SHIHG7FlashbangHandgrenade
+      - SHIHG3TearGasHandgrenade
 
 - type: entity
   name: SHI HG-17 Smart-grenade
@@ -665,6 +681,14 @@
   - type: EmitSoundOnLand
     sound:
       collection: FragGrenadeSFX
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - GrenadeSHIHG17Smart
+      - SHIHG19SmartHandgrenadeEMP
+      - HG13M2MiniHandgrenade
+      - SHIHG7FlashbangHandgrenade
+      - SHIHG3TearGasHandgrenade
 
 - type: entity
   name: SHI HG-3 CS Gas grenade
@@ -696,6 +720,14 @@
   - type: EmitSoundOnLand
     sound:
       collection: SmokeGrenadeSFX
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - SHIHG3TearGasHandgrenade
+      - SHIHG19SmartHandgrenadeEMP
+      - HG13M2MiniHandgrenade
+      - SHIHG7FlashbangHandgrenade
+      - GrenadeSHIHG17Smart
 
 - type: entity
   name: SHI HG-07 Flashbang
@@ -725,3 +757,11 @@
   - type: EmitSoundOnLand
     sound:
       collection: FlashGrenadeSFX
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 2
+    recipes:
+      - SHIHG7FlashbangHandgrenade
+      - SHIHG19SmartHandgrenadeEMP
+      - HG13M2MiniHandgrenade
+      - SHIHG3TearGasHandgrenade
+      - GrenadeSHIHG17Smart

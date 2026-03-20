@@ -459,19 +459,11 @@
 
 - type: latheRecipe
   id: Screamer20mmGyrostableRecipe
-  result: Magazine20mmGyrostable
+  result: Magazine20mmFrag
   completetime: 2
   materials:
     Steel: 1500
     Uranium: 500
-
-- type: latheRecipe
-  id: Screamer20mmPlasmaRecipe
-  result: Magazine20mmPlasma
-  completetime: 2
-  materials:
-    Steel: 1500
-    Plasma: 1000
 
 #35mm Scout Ammo
 - type: latheRecipe
@@ -483,23 +475,17 @@
 
 - type: latheRecipe
   id: Scout35mmGyrostableRecipe
-  result: Magazine35mmGyrostable
+  result: Magazine35mmHE
   completetime: 2
   materials:
     Steel: 2000
     Uranium: 1000
 
-- type: latheRecipe
-  id: Scout35mmPlasmaRecipe
-  result: Magazine35mmPlasma
-  completetime: 2
-  materials:
-    Steel: 2000
-    Plasma: 1500
 
-#50mm Whistler Ammo
+
+#50mm Striker Ammo
 - type: latheRecipe
-  id: Whistler50mmRegularRecipe
+  id: Striker50mmRegularRecipe
   result: Magazine50mm
   completetime: 2
   materials:
@@ -507,8 +493,8 @@
     Plasma: 500
 
 - type: latheRecipe
-  id: Whistler50mmGyrostableRecipe
-  result: Magazine50mmGyrostable
+  id: Striker50mmGyrostableRecipe
+  result: Magazine50mmHE
   completetime: 2
   materials:
     Steel: 3000
@@ -516,8 +502,8 @@
     Uranium: 1500
 
 - type: latheRecipe
-  id: Whistler50mmPlasmaRecipe
-  result: Magazine50mmPlasma
+  id: Striker50mmPlasmaRecipe
+  result: Magazine50mmSAPHE
   completetime: 2
   materials:
     Steel: 3000
@@ -532,10 +518,10 @@
     Steel: 5000
     Uranium: 500
 
-#90mm Gistum Ammo
+#90mm Resolute Ammo
 - type: latheRecipe
-  id: Gistum90mmRegularRecipe
-  result: MagazineGistum
+  id: Resolute90mmRegularRecipe
+  result: MagazineResolute
   completetime: 2
   materials:
     Steel: 4000
@@ -543,8 +529,8 @@
     Plasma: 500
 
 - type: latheRecipe
-  id: Gistum90mmGyrostableRecipe
-  result: MagazineGistumGyrostable
+  id: Resolute90mmGyrostableRecipe
+  result: MagazineResoluteAP
   completetime: 2
   materials:
     Steel: 4000
@@ -552,17 +538,17 @@
     Plasma: 500
 
 - type: latheRecipe
-  id: Gistum90mmPlasmaRecipe
-  result: MagazineGistumPlasma
+  id: Resolute90mmPlasmaRecipe
+  result: MagazineResoluteHE
   completetime: 2
   materials:
     Steel: 4000
     Uranium: 500
     Plasma: 2500
 
-#120mm Pithatis Ammo
+#120mm Anvil Ammo
 - type: latheRecipe
-  id: Pithatis120mmRegularRecipe
+  id: Anvil120mmRegularRecipe
   result: Cartridge120mm
   completetime: 2
   materials:
@@ -571,8 +557,8 @@
     Plasma: 500
 
 - type: latheRecipe
-  id: Pithatis120mmGyrostableRecipe
-  result: Cartridge120mmGyrostable
+  id: Anvil120mmGyrostableRecipe
+  result: Cartridge120mmFlux
   completetime: 2
   materials:
     Steel: 1000
@@ -580,17 +566,17 @@
     Plasma: 500
 
 - type: latheRecipe
-  id: Pithatis120mmPlasmaRecipe
-  result: Cartridge120mmPlasma
+  id: Anvil120mmPlasmaRecipe
+  result: Cartridge120mmFlak
   completetime: 2
   materials:
     Steel: 1000
     Uranium: 500
     Plasma: 1000
 
-#300mm Pithis Ammo #More like Piss-Is hehehehehehehehe i'm such a fucking chud dude
+#300mm Leviathan Ammo #More like Piss-Is hehehehehehehehe i'm such a fucking chud dude
 - type: latheRecipe
-  id: Pithis300mmRecipe
+  id: Leviathan300mmRecipe
   result: Cartridge300mm
   completetime: 2
   materials:

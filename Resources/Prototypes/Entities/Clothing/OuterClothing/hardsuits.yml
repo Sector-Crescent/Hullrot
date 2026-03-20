@@ -145,15 +145,28 @@
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Radiation: 0.3 #salv is supposed to have radiation hazards in the future
-        Caustic: 0.8
+      coefficients: #now uses hullrot armor system. yay.
+        #Blunt: 0.9
+        #Slash: 0.9
+        #Piercing: 0.9
+        Radiation: 0.2 #80% rad resistance. Useful for civilian use. Hullrot change
+        #Caustic: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: DegradeableArmor
+    armorMaxHealth: 500
+    armorType: Metallic
+    armorRepair: SteelPlate
+    initialModifiers:
+      flatReductions:
+        Blunt: 20
+        Slash: 20
+        Piercing: 20
+        Heat: 15
+        Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.8
+    walkModifier: 1
+    sprintModifier: 1
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSpatio
@@ -675,6 +688,11 @@
     - Hardsuit
     - WhitelistChameleon
     - HidesHarpyWings
+  - type: ReverseEngineering
+    difficulty: 3
+    recipes:
+      - ClothingOuterHardsuitSyndieMedicCyberdawn
+      - ClothingOuterHardsuitCybersun
 
 #Syndicate Elite Hardsuit
 - type: entity

@@ -303,6 +303,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         OnRadarMouseMove?.Invoke(returned);
         OnRadarMouseMoveRelative?.Invoke(RelativeAngleFromFace(returned));
+        MouseUIPosition = args.RelativePosition;
     }
 
     private EntityCoordinates RelativePositionToEntityCoords(Vector2 pos)
@@ -329,7 +330,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var gridRotation = _transform.GetWorldRotation(_coordinates.Value.EntityId);
         if (keepWorldAligned)
             gridRotation = Angle.Zero;
-        MousePosition = gridRotation.RotateVec(relativePos) + _transform.ToMapCoordinates(_coordinates.Value).Position;
         return _coordinates.Value.Offset(relativePos);
     }
 
@@ -445,32 +445,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         var ourWorldMatrix = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
         Matrix3x2.Invert(ourWorldMatrix, out var ourWorldMatrixInvert);
-
-        var vert = (MousePosition - mapPos.Position) ;
-        // position compensation
-        if (LastWorldCoordinates != Vector2.Zero)
-        {
-            MousePosition += mapPos.Position - LastWorldCoordinates;
-        }
-        // rotational compensation
-        if (LastRotation != Angle.Zero)
-        {
-            MousePosition = mapPos.Position + (ourEntRot - LastRotation).RotateVec(MousePosition - mapPos.Position);
-        }
-
-        LastRotation = ourEntRot;
-
-        vert.Y = -vert.Y;
-        vert = rot.RotateVec(vert);
-        vert = ScalePosition(vert);
-        MouseUIPosition = vert;
-        if(updateTicker > 10)
-            OnRadarMouseMove?.Invoke(PureRelativePositionWithoutSetter(vert));
-        LastWorldCoordinates = mapPos.Position;
-        //vert = (Angle.FromDegrees(180) - ourEntRot).RotateVec(vert);
-        //Logger.Debug($"{vert.X} , {vert.Y}");
-
-        handle.DrawCircle(vert, 5f, Color.White, false);
         if (!keepWorldAligned)
         {
             var northRot = ourEntRot + _rotation.Value;
@@ -540,7 +514,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         drawJob.viewAABB = viewAABB;
         drawJob.ShowDocks = ShowDocks;
         drawJob.ShowIFF = ShowIFF;
-        drawJob.MousePositionOnUi = vert;
         drawJob.closeGrids.Clear();
         _parMan.ProcessNow(drawJob, _grids.Count);
 
@@ -649,10 +622,12 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             }
             else
             {
-                UIPos = (-drawJob.rot).RotateVec(_transform.GetWorldPosition(uid) - drawJob.mapPos.Position);
-                UIPos.Y *= -1;
-                UIPos = ScalePosition(UIPos);
-                UIPos.X -= labelDimensions.X/2;
+                var radarCenter = new Vector2(PixelWidth / 2f, PixelHeight / 2f);
+                var worldPos = _transform.GetWorldPosition(uid);
+                var local = Vector2.Transform(worldPos, drawJob.selfWorldMatrixInvert);
+                local.Y = -local.Y;
+                UIPos = ScalePosition(local);
+                UIPos.X -= labelDimensions.X / 2f;
             }
             UIPos = new Vector2(
                 Math.Clamp(UIPos.X, 5f, PixelWidth - labelDimensions.X),

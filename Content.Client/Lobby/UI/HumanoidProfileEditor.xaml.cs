@@ -491,12 +491,12 @@ namespace Content.Client.Lobby.UI
 
             #endregion Jobs
 
-            #region Antags
+            //#region Antags
 
-            Antags.Orphan();
-            CTabContainer.AddTab(Antags, Loc.GetString("humanoid-profile-editor-antags-tab"));
+            //Antags.Orphan();
+            //CTabContainer.AddTab(Antags, Loc.GetString("humanoid-profile-editor-antags-tab"));
 
-            #endregion Antags
+            //#endregion Antags
 
             #region Traits
 

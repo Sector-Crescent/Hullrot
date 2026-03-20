@@ -1,5 +1,5 @@
 - type: entity
-  name: IRM Acolyte .20
+  name: IRM Acolyte 7.62x51mm
   parent: BaseWeaponRevolver
   id: WeaponRevolverArgenti
   description: A Hunter's beloved sidearm.
@@ -15,11 +15,15 @@
         - CartridgeRifle
         - SpeedLoaderRifleHeavy
     capacity: 8
-    proto: CartridgeRifle
+    proto: CartridgeRifle # WHY IS THIS THING CHAMBERED IN 7.62???
     chambers: [ True, True, True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null, null, null ]
   - type: StaticPrice
     price: 200
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - WeaponRevolverArgenti
+      - WeaponPistolComplianceImperial
 
 - type: entity
   parent: WeaponRevolverArgenti

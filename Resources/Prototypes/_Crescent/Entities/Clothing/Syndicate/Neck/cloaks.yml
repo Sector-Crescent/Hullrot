@@ -8,6 +8,9 @@
     sprite: _Crescent/Clothing/Syndicate/Neck/ringleadercloak.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/Neck/ringleadercloak.rsi
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingNeckCloakRingleader
 
 - type: entity
   parent: ClothingNeckBase
@@ -19,3 +22,7 @@
      sprite: _Crescent/Clothing/Syndicate/Neck/hedgeknightcapelet.rsi
    - type: Clothing
      sprite: _Crescent/Clothing/Syndicate/Neck/hedgeknightcapelet.rsi
+   - type: ReverseEngineering # Sector Crescent
+     recipes:
+       - ClothingNeckCloakHedgeknightCapelet
+       - ClothingNeckCloakImperialCapelet

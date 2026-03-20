@@ -1,30 +1,30 @@
 - type: vessel
-  id: Voruna
-  name: DSM Voruna
+  id: Khan
+  name: DSM Khan
   description: |
-    An imperial ultralight fighter armed with a single heavy plasma blaster.
-    LOADOUT: 1x 800c "Rimward" Hybrid Plasma Blaster
+    An imperial ultralight fighter armed with two plasma gattlings.
+    LOADOUT: 2x 150cc Plasma Gattlings
     MINIMUM CREW: 1x Pilot
-  price: 15000
+  price: 10000
   category: Small
   group: None
-  path: /Maps/_Crescent/Shuttles/DSM/voruna.yml
+  path: /Maps/_Crescent/Shuttles/DSM/khan.yml
 
 - type: gameMap
-  id: Voruna
-  mapName: 'DSM Voruna'
-  mapPath: /Maps/_Crescent/Shuttles/DSM/voruna.yml
+  id: Khan
+  mapName: 'DSM Khan'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/khan.yml
   minPlayers: 0
   stations:
-    Voruna:
+    Khan:
       stationProto: StandardCrescentVessel
       components:
         - type: VesselIcon
           iffIcon:
             sprite: _Crescent/ShipIcons/ifficons.rsi
-            state: fighter
+            state: ultralight
         - type: StationNameSetup
-          mapNameTemplate: 'DSM Voruna {1}'
+          mapNameTemplate: 'DSM Khan {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

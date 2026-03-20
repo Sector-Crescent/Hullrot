@@ -21,6 +21,11 @@
         Piercing: 0.9
         Heat: 0.9
         Caustic: 0.9
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingHeadHatShinoharaNonevaHelm
+      - ClothingHeadHatShinoharaHelmet
+      - ClothingHeadHatShinoharaHelmetUA
 
 - type: entity
   parent: ClothingHeadHelmetBasic
@@ -165,6 +170,13 @@
   - type: ExplosionResistance
     damageCoefficient: 0.80
   - type: GroupExamine
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - ClothingOuterArmorShinoharaArmorBulwark
+      - ClothingOuterArmorShinoharaHOSVest
+      - ClothingOuterArmorShinoharaArmor
+      - ClothingOuterArmorShinoharaArmorHighsec
+      - ClothingOuterArmorShinoharaArmorHighsecUA
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -227,8 +239,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
   id: ClothingOuterHardsuitHighsecIndependent
-  name: SHI SVBT-2 combat hardsuit
-  description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere.
+  name: freelance SVBT-2 combat hardsuit
+  description: A modular combat hardsuit developed by Shinohara Heavy Industries. Sold to elite mercs and corporate deathsquads everywhere. The internal IFF has been swapped from SHI standards, for safety reasons.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/corpsecinde.rsi
@@ -255,3 +267,10 @@
     sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCorpsec
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsecIndependent
+      - ClothingOuterHardsuitHEV

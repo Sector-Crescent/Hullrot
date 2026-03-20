@@ -8,6 +8,22 @@
     - type: NpcFactionMember
       factions:
         - NCSPFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 400 #we removed the instant destruction threshold for now, eB don't forget this!
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrustersyn.rsi
       layers:
@@ -30,6 +46,22 @@
   parent: Thruster
   suffix: NCSP, Smuggler
   components:
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 400
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrustersyn.rsi
       layers:
@@ -55,6 +87,22 @@
     - type: NpcFactionMember
       factions:
         - CMMFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: CMMFighterCircuitBoard
 
@@ -66,6 +114,22 @@
     - type: NpcFactionMember
       factions:
         - DSMFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrusterempire.rsi
       layers:
@@ -93,6 +157,22 @@
     - type: NpcFactionMember
       factions:
         - SHIFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: SHIFighterCircuitBoard
 
@@ -104,6 +184,22 @@
     - type: NpcFactionMember
       factions:
         - NCWLFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicReinforcedPlast
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrusterncwl.rsi
       layers:
@@ -129,6 +225,22 @@
     - type: NpcFactionMember
       factions:
         - SRMFighter
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: SRMFighterCircuitBoard
 
@@ -140,6 +252,22 @@
     - type: NpcFactionMember
       factions:
         - NCSPWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 400
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrustersyn.rsi
       layers:
@@ -165,6 +293,22 @@
     - type: NpcFactionMember
       factions:
         - NCWLWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicReinforcedPlast
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrusterncwl.rsi
       layers:
@@ -190,6 +334,22 @@
     - type: NpcFactionMember
       factions:
         - CMMWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: CMMWarshipCircuitBoard
 
@@ -201,6 +361,22 @@
     - type: NpcFactionMember
       factions:
         - SHIWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: SHIWarshipCircuitBoard
 
@@ -212,6 +388,22 @@
     - type: NpcFactionMember
       factions:
         - DSMWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Sprite
       sprite: _Crescent/Structures/thrusterempire.rsi
       layers:
@@ -237,5 +429,21 @@
     - type: NpcFactionMember
       factions:
         - SRMWarship
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
     - type: Machine
       board: SRMWarshipCircuitBoard

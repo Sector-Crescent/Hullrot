@@ -65,7 +65,7 @@
   name: NCWL-AR02 Porodschok 5.56x45mm
   parent: [BaseWeaponRifle, StreeCredRedeemableLow]
   id: PorodschokDonator
-  description: A high-end Communard rifle, used to be produced in a Chengridz-based foundry. Recalled from production after Imperial sabotage. Only a few of these actually remain.
+  description: A high-end communard assault rifle, manufactured in small numbers for liquidator forces. These rifles are built with pristine rifling, and the bakelite furniture comes in light grey instead of the standard brown.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/porodshok.rsi
@@ -124,7 +124,7 @@
   parent: WeaponCasePorodshok
   name: Chengridz factory 553 "AR02 Porodschok" case
   suffix: Donor - Porodshok
-  description: Chengridz Factory 553 weapon case containing a rare, high-end Communard rifle. That has ben recalled after Imperial sabotage at the plant.
+  description: A weapon case shipped directly from Chengridz Factory 553, containing a high end assault rifle. This thing is probably worth more than whatever ship you currently fly.
   components:
   - type: StorageFill
     contents:
@@ -270,6 +270,10 @@
     sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+  - type: ReverseEngineering
+    difficulty: 3
+    recipes:
+      - WeaponSpecialKingpinCyberdawn
 
 - type: construction
   name: C-8X 27mmR autocannon
@@ -415,7 +419,7 @@
   id: CaseAR2PulseRifle
   parent: WeaponCasePulseRifle
   name: Wu-Tan Industries AR-2 case
-  suffix: Donor - Kingpin
+  suffix: Donor - Pulser
   description: A Wu-Tan Industries weapon case containing a AR-2 Pulse rifle
   components:
   - type: StorageFill
@@ -467,6 +471,12 @@
     magState: mag
     steps: 2
     zeroVisible: false
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 3
+    recipes:
+      - WeaponLauncherHammerhead
+      - CartridgeHammerheadRocket
+      - WeaponLauncherDisposableRocket
 
 # @Tomahawk101 (Tomahawk101) donor gun
 - type: entity
@@ -640,6 +650,10 @@
     shape:
       - 0,0,2,1
     sprite: _Crescent/Objects/Weapons/plasmacutter.rsi
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 3
+    recipes:
+      - WeaponDonorPlasmaCutter
 
 - type: hitscan
   id: PlasmaCutterBolt
@@ -904,5 +918,58 @@
   - type: MagazineVisuals
     magState: mag
     steps: 3
+    zeroVisible: true
+  - type: Appearance
+
+#Sweet Morningstar @naelmiros donator gun
+- type: entity
+  name: Sweet Morningstar 11mm submachinegun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMorningStar
+  description: Handcrafted modification by Libitina of the legendary WT50. With a sapphire coating on the outside and a ruby heart on the right side. Death has never been so rich or so sweet with this weapon.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 7
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1.5
+    angleDecay: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunTopMounted
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGunTopMounted
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHeavyPistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHeavyPistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 11
     zeroVisible: true
   - type: Appearance

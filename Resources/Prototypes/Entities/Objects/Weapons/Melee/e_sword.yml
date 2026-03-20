@@ -103,6 +103,10 @@
       path: /Audio/Weapons/eblade1.ogg
       params:
         variation: 0.250
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - EnergySword
 
 - type: entity
   name: antique energy sword
@@ -210,6 +214,10 @@
     - NoPaint
   - type: DisarmMalus
     malus: 0
+  - type: ReverseEngineering
+    difficulty: 2
+    recipes:
+      - EnergyDagger
 
 - type: entity
   parent: BaseItem
@@ -358,3 +366,7 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
+  - type: ReverseEngineering
+    difficulty: 4
+    recipes:
+      - EnergySwordDouble

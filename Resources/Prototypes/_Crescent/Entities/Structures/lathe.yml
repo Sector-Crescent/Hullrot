@@ -189,7 +189,6 @@
       - CartridgePuncturaseInterdyne
       - CartridgeAtropineInterdyne
       - SyringeCase
-      - InterdyneOptics
       - MothroachCubeBiochemical
       - CowCubeBiochemical
       - GoatCubeBiochemical
@@ -219,7 +218,7 @@
 
 - type: entity
   id: PristineMicroforge
-  parent: BaseLathe
+  parent: [BaseLathe, BaseMaterialSiloUtilizer]
   name: pristine microforge
   description: Used to print equipment discovered through techdisks, or researched.
   components:
@@ -229,6 +228,7 @@
     canEjectStoredMaterials: true
     whitelist:
       tags:
+      - DrugComponent
       - Sheet
       - CraftMaterials
       - Ingot
@@ -523,6 +523,7 @@
       - RPED
       - WeaponParticleDecelerator
       - HoloprojectorField
+      # CDT start
       - ClothingUniformJumpsuitSyndicateSuitCyberdawn #CDT
       - ClothingUniformJumpsuitSyndicateLabCyberdawn
       - ClothingUniformJumpsuitSyndicateSoldierCyberdawn
@@ -531,9 +532,11 @@
       - ClothingOuterHardsuitCybersun
       - ClothingHeadHatPatriarch
       - WeaponSubMachineGunAtreidesCyberdawn
+      - WeaponSubMachineGunCorsairCyberdawn
       - WeaponRifleAkCyberdawn
       - WeaponRifleKrinkovCyberdawn
       - WeaponPistolViperWoodCyberdawn
+      - WeaponPistolAnsemCyberdawn
       - PowerSinkCyberdawn
       - MufflerFlatpack
       - RadioJammerCyberdawn
@@ -545,22 +548,30 @@
       - SyndicateBombCyberdawn
       - StealthBoxCyberdawn
       - WeaponLightMachineGunNCSPRPD
+      - WeaponLightMachineGunCompaktCyberdawn
+      - WeaponRifleUnderdogCyberdawn
       - WeaponRifleMayflower
       - WeaponRifleSVDMarksmanNCSP
+      - WeaponSniperAK60Cyberdawn
+      - WeaponShotgunTuberCyberdawn
       - WeaponShotgunSaiga12NCSP
       - WeaponLauncherRPGNSCP
       - WeaponLCartridgeRPGSmall
+      - WeaponLauncherRocketCyberdawn
+      - WeaponCartridgeRPGLarge
       - DnaScramblerImplanter
       - EmpImplanter
       - FreedomImplanter
-      - DeathacidifierImplanter
+      - DeathAcidifierImplanter
       - StorageImplanter
       - MicroBombImplanter
       - MacroBombImplanter
       - ScramImplanter
+      - EnergyShield
       - EnergyDagger
       - EnergySword
       - EnergySwordDouble
+      - MarauderFlatpack
       - BallisticCycler1Craft
       - TubeLoader1Craft
       - LaserLocus1Craft
@@ -575,22 +586,149 @@
       - ClothingEyesThermalVisionGogglesCyberdawn
       - ReinforcementFlatpackSyndicateCyborgMedical
       - ReinforcementFlatpackSyndicateCyborgSaboteur
+      - SprigganLPC
       - VelatorLPC
       - TaipanLPC
       - WispLPC
       - WreckLPC
+      # CDT end
+      # TFSC start
+      - ClothingUniformJumpsuitSyndicateInterdyne #IPM Clothing
+      - ClothingUniformJumpsuitSyndicateInterdyneScrubs
+      - ClothingUniformJumpsuitSyndicateInterdyneWhiteUniform
+      - ClothingHeadHatSyndicateInterdyne
+      - ClothingHeadHatSyndicateInterdyneBeret
+      - ClothingMaskSyndicateFacemask
+      - ClothingMaskBreathMedicalSecurity
+      - ClothingOuterArmorSyndicateApron
+      - ClothingHeadHelmetSyndicateBasicInterdyne
+      - ClothingOuterArmorSyndicateArmorvestInterdyne
+      - ClothingBeltSyndicateWebbingInterdyne
+      - ClothingOuterHardsuitTraumasec
+      - ClothingOuterHardsuitCoordinator
+      - ClothingUniformJumpsuitSyndicate #GSC clothing
+      - ClothingUniformJumpsuitSyndicateOfficer
+      - ClothingHeadHatSyndicateArmaments
+      - ClothingHeadHatSyndicateOfficer
+      - ClothingOuterArmorSyndicateLieutenant
+      - ClothingOuterArmorSyndicateRingmaster
+      - ClothingHandsGlovesCombat
+      - ClothingMaskGasSyndicate
+      - ClothingNeckScarfSyndicateShemagh
+      - ClothingNeckCloakHedgeknightCapelet
+      - ClothingNeckCloakRingleader
+      - ClothingHeadHelmetSyndicateBasic
+      - ClothingOuterArmorSyndicateArmorvest
+      - ClothingBeltSyndicateWebbing
+      - ClothingOuterHardsuitSyndicateBG
+      - ClothingOuterHardsuitSyndicateSellsword
+      - ClothingUniformJumpsuitSyndicateSaws #SAW clothing
+      - ClothingOuterArmorSyndicateForeman
+      - ClothingHeadHatHardhatSyndicate
+      - ClothingHeadHatHardhatSyndicateForeman
+      - ClothingOuterHardsuitRamzi
+      - ClothingOuterHardsuitSyndieDonator
+      - HerculesFlatpack #Actual stuff
+      - EinsteinFlatpack
+      - FixedHardpointFlatpack
+      - LargeBallisticHardpointFlatpack
+      - MediumBallisticHardpointFlatpack
+      - SmallBallisticHardpointFlatpack
+      - LargeMissileHardpointFlatpack
+      - MediumMissileHardpointFlatpack
+      - SmallMissileHardpointFlatpack
+      - WeaponTurretSmallMachinegunFlatpack
+      - WeaponTurretMediumMachinegunFlatpack
+      - WeaponTurretSmallArtilleryFlatpack
+      - WeaponTurretMediumArtilleryFlatpack
+      - WeaponTurretLargeMachinegunFlatpack
+      - WeaponTurretLargeArtilleryFlatpack
+      - BaseWeaponTurretShortbowFlatpack
+      - BaseWeaponTurretAzimuthFlatpack
+      - BaseWeaponTurretArbalestFlatpack
+      - WeaponDonorPlasmaCutter
+      - RCDRecharging
+      - KineticMachete
+      - BreachingHammer
+      - DefibrillatorSyndicate
+      - OmnimedToolSyndieInterdyne
+      - HypoInterdyne
+      - CartridgeEphedrineInterdyne
+      - CartridgeTirizeneInterdyne
+      - CartridgeBicaridineInterdyne
+      - CartridgeSalineInterdyne
+      - CartridgeDermalineInterdyne
+      - CartridgePuncturaseInterdyne
+      - CartridgeAtropineInterdyne
+      - CyberneticsPainEditorInterdyne
+      - CyberneticsAdrenalInterdyne
+      - CyberneticsBloodPumpInterdyne
+      - InterdyneOpticsInterdyne
+      - CrowbarLeftArmInterdyne
+      - CrowbarRightArmInterdyne
+      - FridgeLPC
+      - MeatwagonLPC
+      - MatabeleLPC
+      - HarpyLPC
+      - HulkLPC
+      - GnatLPC
+      - TickLPC
+      - PiranhaLPC
+      - ScuttlefishLPC
+      - ItchLPC
+      - ReaverLPC
+      - CorvaxLPC
+      - CleaverLPC
+      - BodybagLPC
+      - OuroborosLPC
+      - WolfLPC
+      - BoSinnLPC
+      - EradicatorLPC
+      - RockchipperLPC
+      - ShantyLPC
+      - MercuryMK2LPC
+      - ScabrakLPC
+      - ThanapodLPC
+      - HyenaLPC
+      - GeodeLPC
+      - CaracalLPC
+      - RokhLPC
+      - AmadeusLPC
+      # TFSC end
+      # TAP start
+      - ClothingUniformJumpsuitBeltrunner
+      - ClothingUniformJumpsuitAntiquarianFamilies
+      - ClothingUniformJumpsuitTechminer
+      - ClothingUniformJumpsuitServile
+      - ClothingUniformJumpsuitDraugr
+      - ClothingOuterArmorServileAlseik
+      - ClothingHeadHatServile
+      - ClothingOuterArmorDraugrAlseik
+      - ClothingHeadHatDraugr
+      - ClothingOuterHardsuitThukker
+      - ClothingOuterHardsuitIzdari
+      - ClothingOuterHardsuitDraugr
+      - EnergySwordFamilies
+      - PlasHalberd
+      - Plashammer
+      - BeelzebubLPC
+      # TAP end
+      # DSM start
       - ClothingMaskImperialCombatGasmask
       - ClothingOuterCoatImperialParade
       - ClothingUniformJumpsuitImperialDoctor
       - ClothingUniformJumpsuitImperialFreeholder
       - ClothingHandsGlovesImperialWorkerGloves
       - ClothingShoesBootsImperialLongboots
+      - ClothingShoesBootsMagDSM
       - ClothingHandsGlovesImperialLonggloves
       - ClothingHeadHelmetImperialWorkerHelmet
       - ClothingHeadHatImperialPeakedCap
       - ClothingOuterCoatImperialSoftsuit
       - ClothingHeadHelmetImperialEVA
       - ClothingHeadHatImperialHat
+      - ClothingHeadHatImperialBeret
+      - ClothingUniformJumpsuitImperialCombat
       - ClothingUniformJumpsuitImperialNobleMale
       - ClothingUniformJumpsuitImperialNobleFemale
       - ClothingUniformJumpsuitImperialSoldierFormal
@@ -605,6 +743,16 @@
       - ClothingHeadHelmetImperialKnightCommanderHelmet
       - ClothingOuterArmorImperialArmorPrestige
       - ClothingOuterHardsuitImperialKnight
+      - ClothingOuterHardsuitImperialJuggernaut
+      - ClothingOuterCoatClarizianOfficer
+      - ClothingUniformJumpsuitClarizeCombat
+      - ClothingUniformJumpsuitClarizeDoctor
+      - ClothingUniformJumpsuitClarizeOfficer
+      - ClothingHeadHatClarizeBeret
+      - ClothingOuterArmorClarizianTrooperArmor
+      - ClothingHeadHelmetClarizianTrooperHelmet
+      - ClothingOuterHardsuitClarizianWorker
+      - ClothingOuterHardsuitClarize
       - ClothingOuterHardsuitImperialNullweavePsion
       - ImperialPsionBoundlightStaff
       - CarrionFlatpack
@@ -620,6 +768,8 @@
       - TorturerLPC
       - MagnateLPC
       - SunesisLPC
+      - PraxisLPC
+      - GnosisLPC
       - ClothingBeltSheathDSMRapier
       - ClothingBeltSheathDSMSabre
       - DSMRapier
@@ -635,6 +785,8 @@
       - WeaponMechCombatPlasmaRifle
       - WeaponMechCombatPlasmaCannon
       - WeaponLightMachineGunDSMDominion
+      - WeaponSniperImperator
+      - WeaponShotgunDSMMatusa
       - WeaponShotgunReno
       - WeaponSniperDSMLegax
       - WeaponRifleDSMLegionnaire
@@ -651,8 +803,11 @@
       - SuzerainLPC
       - NemesisLPC
       - JanissaryLPC
-      - VorunaLPC
+      - KhanLPC
       - PerigaleLPC
+      - RaiderLPC
+      # DSM end
+      # NCWL start
       - ClothingHeadHelmetNCWLEVA
       - ClothingOuterNCWLEVA
       - ClothingHeadHatNCWLCapsoft
@@ -665,14 +820,28 @@
       - ClothingEyesGlassesNCWL
       - ClothingMaskNCWLGasmask
       - ClothingBeltNCWLWebbing
+      - ClothingOuterArmorNCWLEngi
+      - ClothingOuterArmorNCWLLogi
+      - ClothingOuterArmorNCWLCarapaceVrachev
+      - ClothingOuterArmorNCWLMedi
+      - ClothingOuterArmorNCWLCarapaceDoktor
+      - ClothingOuterArmorNCWLCarapaceKapitan
+      - ClothingOuterArmorNCWLCarapace
+      - ClothingOuterArmorNCWLOpremeCarapace
+      - ClothingOuterArmorNCWLLightBodyarmor
+      - ClothingOuterArmorNCWLHeavyCarapace
       - ClothingHeadHelmetNCWLBasic
+      - ClothingHeadHelmetNCWLHeavy
       - ClothingHeadHelmetNCWLRiot
       - NCWLRiotShield
       - NCWLLugBaton
       - WeaponRifleFAL
+      - WeaponRifleNCWLRezerv
       - WeaponPistolComrade
       - WeaponSubMachineGunNCWLWatchdog
       - ClothingOuterHardsuitNCWLInfantry
+      - ClothingOuterHardsuitNCWLMedi
+      - ClothingOuterHardsuitNCWLEngi
       - VanguardLPC
       - LodkaLPC
       - MolotLPC
@@ -684,9 +853,13 @@
       - BogatyrLPC
       - SunderLPC
       - WeaponSubMachineGunBloodhound
+      - WeaponSubMachineGunMilitant
       - WeaponRifleNCWLBatanya
+      - WeaponShotgunDoubleBarreledNCWL
       - WeaponShotgunToz123
       - WeaponSniperNCWLNovomosin
+      - WeaponSniperMolot
+      - WeaponLightMachineGunConscript
       - WeaponShotgunProletar
       - WeaponPistolT91
       - WeaponRevolverPython
@@ -697,6 +870,7 @@
       - ClothingOuterHardsuitNCWLJuggernaut
       - NCWLKukri
       - ClothingBeltSheathNCWLKukri
+      # NCWL end
       - ClothingUniformJumpsuitExecutiveShinoharaSuit
       - ClothingUniformJumpsuitShinoharaLogistics
       - ClothingOuterShinoharaVest
@@ -707,6 +881,8 @@
       - ShipyardManufactorumFlatpack
       - ScrapRefinerFlatpack
       - ClothingUniformJumpsuitShinoharaSecurity
+      - ClothingOuterArmorShinoharaHOSVest
+      - ClothingOuterArmorShinoharaArmor
       - ClothingOuterArmorShinoharaArmorBulwark
       - ClothingHeadHatShinoharaNonevaHelm
       - TelescopicBatonSHI
@@ -719,15 +895,23 @@
       - WeaponMechGustaf
       - ClothingUniformJumpsuitShinoharaHighsec
       - ClothingOuterArmorShinoharaArmorHighsec
+      - ClothingOuterArmorShinoharaArmorHighsecUA
       - ClothingHeadHatShinoharaHelmet
+      - ClothingHeadHatShinoharaHelmetUA
       - ClothingOuterHardsuitHighsec
+      - ClothingOuterHardsuitHighsecUA
+      - ClothingOuterHardsuitHighsecIndependent
+      - ClothingOuterHardsuitMetrocop
+      - ClothingOuterHardsuitCombine
       - WeaponPistolBlastpopRed
       - WeaponPistolBlastpopPurple
       - WeaponPistolBlastpopGray
       - WeaponPistolBlastpopGreen
       - WeaponPistolBlastpopGold
       - WeaponPistolBlastpopBlue
+      - WeaponRifleSHINimrod
       - WeaponRifleHoundMarksman
+      - WeaponShotgunBlaster
       - WeaponShotgunSHIDoubleBarreled4g
       - WeaponPistolMk58SHI
       - WeaponSubMachineGunMP49
@@ -738,7 +922,6 @@
       - WeaponSniperHristov
       - VariableCommodityFabricatorFlatpack
       - AutoloomFablatheFlatpack
-      - FixedHardpointFlatpack
       - SlugthrowerFlatpack
       - ExhumerFlatpack
       - PlasmaRepeaterFlatpack
@@ -779,6 +962,7 @@
       - WeaponMechCombatTaikotyo
       - WeaponLauncherHammerhead
       - ShieldEmitterSmallFlatpack
+      - ShieldEmitterMediumFlatpack
       - GilgameshFlatpack
       - BallisticFablatheFlatpack
       - CyberneticsDermalArmor
@@ -787,6 +971,11 @@
       - SHIShiverBlade
       - ClothingOuterHardsuitSHIJuggernaut
       - ClothingOuterHardsuitSHISpeedsuit
+      - GazpachovLPC
+      - BuffaloLPC
+      - ChanchuLPC
+      - NazaarLPC
+      - MusinyaneLPC
       - FleaLPC
       - FujinLPC
       - MetempsychoticMachineCircuitboard
@@ -1435,6 +1624,8 @@
       - WeaponCaseShotgun
       - WeaponCaseGl
       - WeaponCaseAmmo
+  - type: MaterialStorageMagnetPickup
+    magnetEnabled: True
 
   - type: Machine
     board: MicroforgeCircuitboard
@@ -1668,7 +1859,7 @@
   parent: BaseLathe
   id: GliessTradeGoodPrinter
   name: Gliess Santo commodity fablathe
-  description: A hacked fablathe preloaded with many commodity patterns. A independent merchant's best friend.
+  description: A hacked fablathe preloaded with many commodity patterns. An independent merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1786,7 +1977,7 @@
   parent: BaseLathe
   id: NewportTradeGoodPrinter
   name: Newport commodity fablathe
-  description: A cheap fablathe preloaded with many commodity patterns. A independent merchant's best friend.
+  description: A cheap fablathe preloaded with many commodity patterns. An independent merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1828,7 +2019,7 @@
   parent: BaseLathe
   id: FreeportTradeGoodPrinter
   name: Freeport commodity fablathe
-  description: A hacked fablathe preloaded with many commodity patterns. An shady merchant's best friend.
+  description: A hacked fablathe preloaded with many commodity patterns. A shady merchant's best friend. # Note for future contributors: Take grammar lessons if you're not originally from any english-speaking country
   components:
   - type: Sprite
     sprite: _Crescent/Structures/cratefab.rsi
@@ -1862,4 +2053,3 @@
   - type: Anchorable
     flags:
     - Anchorable
-

@@ -232,6 +232,10 @@
         Blunt: 9
   - type: DamageOtherOnHit
     staminaCost: 8.0
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - WeaponShotgunEnforcer
+      - WeaponShotgunBlaster
 
 - type: entity
   parent: WeaponShotgunEnforcer

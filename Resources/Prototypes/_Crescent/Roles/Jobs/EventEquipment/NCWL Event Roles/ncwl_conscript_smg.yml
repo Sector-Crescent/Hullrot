@@ -1,0 +1,65 @@
+- type: job
+  id: ReinforcementNCWLConscriptSMG
+  name: job-name-ncwl-conscript-event-SMG
+  description: job-description-ncwl-conscript-event-SMG
+  playTimeTracker: JobHomeguardSoldatNCWL
+  weight: 97
+  startingGear: ReinforcementNCWLSMGConscriptGear
+  alwaysUseSpawner: true
+  requireAdminNotify: false
+  icon: "JobIconNCWLHomeguardSoldat"
+  supervisors: job-supervisors-ncwl-partisan
+  canBeAntag: false
+  requirements:
+    - !type:FactionRequirement
+      factionID: "NCWL"
+    - !type:CharacterOverallTimeRequirement
+      min: 1000
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Blindness
+        - Pacifist
+        - WheelchairBound
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-ncwl-home-conscript
+      - type: HullrotFaction
+        faction: NCWL
+      - type: LanguageAdder
+        addSpoken:
+          - Dockta
+        addUnderstood:
+          - Dockta
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - NCWLGeneral
+  - NCWLJail
+  - NCWLArmory
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+
+- type: startingGear
+  id: ReinforcementNCWLSMGConscriptGear
+  equipment:
+    shoes: ClothingShoesBootsCombat
+    jumpsuit: ClothingUniformJumpsuitNCWL
+    id: NCWLHomeguardSoldatPDA
+    outerClothing: ClothingOuterHardsuitNCWLInfantry
+    pocket1: DoubleEmergencyOxygenTankFilled
+    back: ClothingBackpackNCWLConscript
+    gloves: ClothingHandsGlovesCombat
+    mask: ClothingMaskNCWLBalaclava
+    ears: ClothingHeadsetNCWL
+    belt: ClothingBeltNCWLPouchesHomeguardConscriptSMG
+    suitstorage: WeaponSubMachineGunNCWLWatchdog

@@ -65,6 +65,9 @@
     - PetWearable
     - WhitelistChameleon
     - SyndicateBreathMask
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingMaskGasSyndicate
 
 - type: entity
   parent: ClothingMaskGas
@@ -175,6 +178,9 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - ClothingMaskBreathMedicalSecurity
 
 - type: entity
   parent: ClothingMaskPullableBase
