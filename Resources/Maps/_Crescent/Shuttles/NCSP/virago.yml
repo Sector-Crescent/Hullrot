@@ -700,6 +700,13 @@ entities:
         2:
         - - Group1
           - Toggle
+    - type: NamedModules
+      buttonNames:
+      - Fire 50mm cannon
+      - Empty Module
+      - Empty Module
+      - Empty Module
+      - Empty Module
 - proto: CrateAluminium
   entities:
   - uid: 57
@@ -834,7 +841,7 @@ entities:
         10:
         - - Pressed
           - Toggle
-- proto: SmallGyroscope
+- proto: Gyroscope
   entities:
   - uid: 73
     components:
