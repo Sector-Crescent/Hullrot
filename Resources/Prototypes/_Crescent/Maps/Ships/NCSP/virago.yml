@@ -1,0 +1,31 @@
+# Author info:
+# i don't give a shit about attribution have this ship for free geg
+
+- type: vessel
+  id: Virago
+  name: GSC Virago
+  description: A stealth fighter with basic boarding provisions and an electronic warfare suite.
+  price: 25000 #itch parity
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/virago.yml
+
+- type: gameMap
+  id: Virago
+  mapName: 'GSC Virago'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/virago.yml
+  minPlayers: 0
+  stations:
+    Virago:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
+        - type: StationNameSetup
+          mapNameTemplate: 'GSC Virago {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
