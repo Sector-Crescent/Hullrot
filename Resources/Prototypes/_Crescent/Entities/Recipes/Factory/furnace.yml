@@ -1,0 +1,63 @@
+- type: factoryRecipe
+  id: CharcoalFromWood
+  name: Wood to Charcoal
+  inputs:
+    Sugarcane: 1
+  outputs:
+    HullrotCharcoal: 1
+
+- type: factoryRecipe
+  id: FurnaceGold
+  name: Gold
+  inputs:
+    GoldOre: 1
+  outputs:
+    IngotGold: 1
+
+- type: factoryRecipe
+  id: FurnacePlasma
+  name: Plasma
+  inputs:
+    PlasmaOre: 1
+  outputs:
+    SheetPlasma: 1
+
+- type: factoryRecipe
+  id: FurnaceGlass
+  name: Glass
+  inputs:
+    SpaceQuartzUnprocessed: 1
+  outputs:
+    SheetGlass: 1
+
+- type: factoryRecipe
+  id: FurnaceUranium
+  name: Uranium
+  inputs:
+    UraniumOre: 1
+  outputs:
+    SheetUranium: 1
+
+- type: factoryRecipe
+  id: FurnaceTungsten
+  name: Tungsten
+  inputs:
+    TungstenOre: 1
+  outputs:
+    IngotTungsten: 1
+
+- type: factoryRecipe
+  id: FurnaceSilver
+  name: Silver
+  inputs:
+    SilverOre: 1
+  outputs:
+    IngotSilver: 1
+
+- type: factoryRecipe
+  id: FurnaceIron
+  name: Iron
+  inputs:
+    IronOre: 1
+  outputs:
+    IngotIron: 1

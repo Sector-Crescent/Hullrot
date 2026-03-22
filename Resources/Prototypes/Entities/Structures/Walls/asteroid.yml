@@ -810,6 +810,28 @@
         - state: rock_salt
 
 - type: entity
+  id: WallRockSulfur
+  parent: WallRock
+  description: An ore vein rich with sulfur.
+  suffix: Sulfur
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
+    - type: Sprite
+      layers:
+        - state: rock
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_west
+        - state: rock_salt
+
+- type: entity
   id: WallRockBluespace
   parent: WallRock
   description: A rock wall. What's that sticking out of it?
@@ -1193,6 +1215,28 @@
     - type: OreVein
       oreChance: 1.0
       currentOre: OreSalt
+    - type: Sprite
+      layers:
+        - state: rock_wall
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_wall_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_wall_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_wall_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_wall_west
+        - state: rock_salt
+
+- type: entity
+  id: WallRockBasaltSulfur
+  parent: WallRockBasalt
+  description: An ore vein rich with sulfur.
+  suffix: Sulfur
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1604,6 +1648,28 @@
         - state: rock_salt
 
 - type: entity
+  id: WallRockSnowSulfur
+  parent: WallRockSnow
+  description: An ore vein rich with sulfur.
+  suffix: Salt
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
+    - type: Sprite
+      layers:
+        - state: rock_snow
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_snow_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_snow_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_snow_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_snow_west
+        - state: rock_salt
+
+- type: entity
   id: WallRockSnowBluespace
   parent: WallRockSnow
   description: A rock wall. What's that sticking out of it?
@@ -1986,6 +2052,28 @@
     - type: OreVein
       oreChance: 1.0
       currentOre: OreSalt
+    - type: Sprite
+      layers:
+        - state: rock_sand
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_sand_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_sand_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_sand_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_sand_west
+        - state: rock_salt
+
+- type: entity
+  id: WallRockSandSulfur
+  parent: WallRockSand
+  description: An ore vein rich with sulfur.
+  suffix: Sulfur
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
     - type: Sprite
       layers:
         - state: rock_sand
@@ -2397,6 +2485,28 @@
         - state: rock_salt
 
 - type: entity
+  id: WallRockChromiteSulfur
+  parent: WallRockChromite
+  description: An ore vein rich with sulfur.
+  suffix: Sulfur
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
+    - type: Sprite
+      layers:
+        - state: rock_chromite
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_chromite_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_chromite_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_chromite_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_chromite_west
+        - state: rock_salt
+
+- type: entity
   id: WallRockChromiteBluespace
   parent: WallRockChromite
   description: A rock wall. What's that sticking out of it?
@@ -2780,6 +2890,28 @@
     - type: OreVein
       oreChance: 1.0
       currentOre: OreSalt
+    - type: Sprite
+      layers:
+        - state: rock_andesite
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_andesite_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_andesite_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_andesite_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_andesite_west
+        - state: rock_salt
+
+- type: entity
+  id: WallRockAndesiteSulfur
+  parent: WallRockAndesite
+  description: An ore vein rich with sulfur.
+  suffix: Salt
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: SulfurOre
     - type: Sprite
       layers:
         - state: rock_andesite

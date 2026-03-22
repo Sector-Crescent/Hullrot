@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "",
+  "copyright": "Made for the Hullrot Project. All rights reserved. Do not modify, relicense, redistribute, use, or publish.",
+  "source": "",
+  "size": {
+    "x": 64,
+    "y": 48
+  },
+    "states": [
+    {
+        "name": "energeticmillinactive"
+    },
+    {
+        "name": "energeticmillactive",
+        "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

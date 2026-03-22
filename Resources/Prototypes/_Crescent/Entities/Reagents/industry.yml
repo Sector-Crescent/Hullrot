@@ -1,0 +1,79 @@
+- type: material
+  id: Carbon
+  name: materials-carbon
+  unit: materials-unit-piece
+  icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
+  color: "#030000e8"
+  price: 0
+
+- type: material
+  id: Gunpowder
+  name: materials-Gunpowder
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: blackpowder }
+  color: "#030000"
+  price: 0
+
+- type: material
+  id: OrdnanceCompound
+  name: materials-ordnanceCompound
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: highexplosive }
+  color: "#ff0080"
+  price: 0
+
+- type: material
+  id: StructuralComposite
+  name: materials-structuralcomposite
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Materials/ingots.rsi, state: structural }
+  color: "#030000"
+  price: 0
+
+- type: material
+  id: BallisticSteel
+  name: materials-ballisticsteel
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Materials/ingots.rsi, state: ferric }
+  color: "#030000"
+  price: 0
+
+- type: material
+  id: HeavyOrdnanceSteel
+  name: materials-heavyordnancesteel
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Materials/ingots.rsi, state: ordnance }
+  color: "#030000"
+  price: 0
+
+- type: material
+  id: LightGaugeCasing
+  name: materials-lightgaugecasing
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: infantrybox }
+  color: "#ffffff"
+  price: 0
+
+- type: material
+  id: MediumGaugeCasing
+  name: materials-mediumgaugecasing
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: autocannonbox }
+  color: "#ffffff"
+  price: 0
+
+- type: material
+  id: LargeGaugeCasing
+  name: materials-largegaugecasing
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: artillerybox }
+  color: "#ffffff"
+  price: 0
+
+- type: material
+  id: CompositeCasing
+  name: materials-compositecasing
+  unit: materials-unit-piece
+  icon: { sprite: _Crescent/Objects/Industry.rsi, state: missilebox }
+  color: "#ffffff"
+  price: 0

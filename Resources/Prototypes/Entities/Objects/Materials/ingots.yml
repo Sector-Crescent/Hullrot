@@ -152,3 +152,40 @@
     state: tungsten_1
   - type: Stack
     count: 1
+
+- type: entity
+  parent: IngotBase
+  id: IngotIron
+  name: pig iron bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Iron: 100
+  - type: Stack
+    stackType: Iron
+    baseLayer: base
+    layerStates:
+    - iron
+    - iron_2
+    - iron_3
+  - type: Sprite
+    state: iron_3
+    layers:
+    - state: iron_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: tungsten
+  - type: Appearance
+
+- type: entity
+  parent: IngotIron
+  id: IngotIron1
+  name: pig iron bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: iron_1
+  - type: Stack
+    count: 1

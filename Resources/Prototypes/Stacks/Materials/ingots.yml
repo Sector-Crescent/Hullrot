@@ -18,3 +18,10 @@
   icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: tungsten_1 }
   spawn: IngotTungsten1
   maxCount: 30
+
+- type: stack
+  id: Iron
+  name: pig iron
+  icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: iron }
+  spawn: IngotIron1
+  maxCount: 30

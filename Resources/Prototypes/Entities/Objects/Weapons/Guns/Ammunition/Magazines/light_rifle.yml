@@ -104,6 +104,14 @@
     proto: CartridgeLightRifleShrapnel
 
 - type: entity
+  id: MagazineLightRifleBoxEmpty
+  name: "100-round box magazine (5.56x45mm Imperial)"
+  parent: MagazineLightRifleBox
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
   id: MagazineLightRifle
   name: "30-round magazine (5.56x45mm Imperial)"
   parent: BaseMagazineLightRifle
@@ -113,7 +121,7 @@
 
 - type: entity
   id: MagazineLightRifleEmpty
-  name: "30-round magazine (5.56x45mm Imperial any)"
+  name: "30-round magazine (5.56x45mm Imperial)"
   suffix: empty
   parent: MagazineLightRifle
   components:

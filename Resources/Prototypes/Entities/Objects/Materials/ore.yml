@@ -334,7 +334,7 @@
           Quantity: 0.1
   - type: PhysicalComposition
     materialComposition:
-      Coal: 500
+      Carbon: 500
 
 - type: entity
   parent: Coal
@@ -445,5 +445,43 @@
   id: TungstenOre1
   suffix: Single
   components:
+  - type: Sprite
+    state: tungsten
   - type: Stack
     count: 1
+
+- type: entity
+  parent: OreBase
+  id: SulfurOre
+  name: sulfur ore
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: SulfurOre
+    count: 30
+  - type: Sprite
+    sprite: /Textures/_Nuclear14/Objects/Misc/materials.rsi
+    state: sulfur
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawSulfur: 100
+  - type: Extractable
+    grindableSolutionName: sulfurore
+  - type: SolutionContainerManager
+    solutions:
+      sulfurore:
+        reagents:
+        - ReagentId: Sulfur
+          Quantity: 10
+  - type: Tag
+    tags:
+    - RawMaterial
+
+- type: entity
+  id: SulfurOre1
+  parent: SulfurOre
+  suffix: Single
+  components:
+    - type: Stack
+      count: 1

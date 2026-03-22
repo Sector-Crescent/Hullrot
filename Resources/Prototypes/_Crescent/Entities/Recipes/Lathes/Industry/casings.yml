@@ -1,0 +1,31 @@
+- type: latheRecipe
+  id: SmallGaugeCasings
+  result: SmallGaugeCasings
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: MediumGaugeCasings
+  result: MediumGaugeCasings
+  completetime: 4
+  materials:
+    Steel: 60
+    BallisticSteel: 40
+
+- type: latheRecipe
+  id: LargeGaugeCasings
+  result: LargeGaugeCasings
+  completetime: 6
+  materials:
+    Steel: 120
+    StructuralComposite: 10
+    BallisticSteel: 40
+
+- type: latheRecipe
+  id: CompositeCasing
+  result: CompositeCasing
+  completetime: 10
+  materials:
+    HeavyOrdnanceSteel: 50
+    Steel: 150

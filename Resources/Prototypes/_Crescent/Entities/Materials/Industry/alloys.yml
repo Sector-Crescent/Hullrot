@@ -1,0 +1,124 @@
+- type: entity
+  parent: IngotBase
+  id: BallisticSteel
+  name: ballistic steel alloy
+  description: A copper-bound steel alloy optimized for mass production.
+  suffix: 30
+  components:
+  - type: Stack
+    stackType: BallisticSteel
+    baseLayer: base
+    layerStates:
+    - ferric
+    - ferric2
+    - ferric3
+  - type: Tag
+    tags:
+    - CraftMaterials
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ingots.rsi
+    state: ferric3
+    layers:
+    - state: ferric3
+      map: ["base"]
+  - type: Item
+    heldPrefix: ferric
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      BallisticSteel: 100
+  - type: Appearance
+
+- type: entity
+  id: BallisticSteel1
+  parent: BallisticSteel
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
+  - type: Sprite
+    state: ferric
+
+- type: entity
+  parent: OreBase
+  id: StructuralComposite
+  name: titanium-reinforced structural composite
+  description: A titanium-reinforced tungsten alloy designed for high-stress hulls and military grade armor.
+  suffix: 30
+  components:
+  - type: Stack
+    stackType: StructuralComposite
+    baseLayer: base
+    layerStates:
+    - structural
+    - structural2
+    - structural3
+  - type: Tag
+    tags:
+    - CraftMaterials
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ingots.rsi
+    state: structural3
+    layers:
+    - state: structural3
+      map: ["base"]
+  - type: Item
+    sprite: _Crescent/Objects/Materials/ingots.rsi
+    size: Normal
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      StructuralComposite: 100
+  - type: Appearance
+
+- type: entity
+  id: StructuralComposite1
+  parent: StructuralComposite
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
+  - type: Sprite
+    state: Structural
+
+- type: entity
+  parent: OreBase
+  id: HeavyOrdnanceSteel
+  name: heavy ordnance steel alloy
+  description: tungsten-reinforced steel alloy designed primarily for high-stress artillery casings
+  suffix: 30
+  components:
+  - type: Stack
+    stackType: HeavyOrdnanceSteel
+    baseLayer: base
+    layerStates:
+    - ordnance
+    - ordnance2
+    - ordnance3
+  - type: Tag
+    tags:
+    - CraftMaterials
+  - type: Sprite
+    sprite: _Crescent/Objects/Materials/ingots.rsi
+    state: ordnance3
+    layers:
+    - state: ordnance3
+      map: ["base"]
+  - type: Item
+    sprite: _Crescent/Objects/Materials/ingots.rsi
+    size: Normal
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      HeavyOrdnanceSteel: 100
+  - type: Appearance
+
+- type: entity
+  id: HeavyOrdnanceSteel1
+  parent: HeavyOrdnanceSteel
+  suffix: Single
+  components:
+    - type: Stack
+      count: 1
+    - type: Sprite
+      state: Ordnance
