@@ -1,0 +1,111 @@
+# 9x19mm
+- type: latheRecipe
+  id: MagazineBoxPistol
+  result: MagazineBoxPistol
+  completetime: .5
+  category: Ammo
+  materials:
+    LightGaugeCasing: 10
+    Gunpowder: 10
+    Steel: 10
+
+# 11mm
+- type: latheRecipe
+  id: MagazineBoxHeavyPistol
+  result: MagazineBoxHeavyPistol
+  completetime: .5
+  category: Ammo
+  materials:
+    LightGaugeCasing: 15
+    Gunpowder: 15
+    Steel: 20
+
+# .327
+- type: latheRecipe
+  id: MagazineBoxMagnum
+  result: MagazineBoxMagnum
+  completetime: .5
+  category: Ammo
+  materials:
+    LightGaugeCasing: 12
+    Gunpowder: 12
+    Steel: 20
+
+# 5.56
+- type: latheRecipe
+  id: MagazineBoxLightRifle
+  result: MagazineBoxLightRifle
+  completetime: 2
+  category: Ammo
+  materials:
+    LightGaugeCasing: 20
+    Gunpowder: 20
+    Steel: 35
+
+# 7.62
+- type: latheRecipe
+  id: MagazineBoxRifleBig
+  result: MagazineBoxRifleBig
+  completetime: 3
+  category: Ammo
+  materials:
+    LightGaugeCasing: 35
+    Gunpowder: 35
+    Steel: 50
+
+# 12.7x99mm
+- type: latheRecipe
+  id: MagazineBoxHeavyRifle
+  result: MagazineBoxHeavyRifle
+  completetime: 5
+  category: Ammo
+  materials:
+    LightGaugeCasing: 60
+    Gunpowder: 60
+    Steel: 100
+
+# 15.2x169mm
+- type: latheRecipe
+  id: MagazineBoxAntiMaterielBig
+  result: MagazineBoxAntiMaterielBig
+  completetime: 10
+  category: Ammo
+  materials:
+    LightGaugeCasing: 100
+    Gunpowder: 120
+    Steel: 140
+
+# 12g
+- type: latheRecipe
+  id: BoxLethalshot
+  result: BoxLethalshot
+  completetime: 2
+  category: Ammo
+  materials:
+    LightGaugeCasing: 25
+    Gunpowder: 25
+    Steel: 40
+
+# 4g
+- type: latheRecipe
+  id: BoxLethalshot4g
+  result: BoxLethalshot4g
+  completetime: 3
+  category: Ammo
+  materials:
+    LightGaugeCasing: 70
+    Gunpowder: 70
+    Steel: 120
+
+- type: latheRecipe
+  id: BoxShotgunSlug4g
+  result: BoxShotgunSlug4g
+  completetime: 5
+  category: Ammo
+  materials:
+    LightGaugeCasing: 100
+    Gunpowder: 80
+    Tungsten: 40
+
+
+#to do add ap and frag ammo

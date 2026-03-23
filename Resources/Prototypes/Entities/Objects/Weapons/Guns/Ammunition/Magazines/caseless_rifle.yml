@@ -37,6 +37,14 @@
     sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
 
 - type: entity
+  id: BaseMagazineCaselessRifleEmpty
+  name: "30-round magazine (9x39mm caseless)"
+  parent: BaseMagazineCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
   id: BaseMagazineCaselessRifleShort
   name: "20-round caseless rifle short magazine (9x39mm caseless)"
   parent: BaseMagazineCaselessRifle

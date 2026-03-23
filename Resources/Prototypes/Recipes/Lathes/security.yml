@@ -384,15 +384,6 @@
   materials:
     Steel: 720
 
-# .35 Pistol Magazines
-- type: latheRecipe
-  id: MagazinePistolEmpty
-  result: MagazinePistolEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 25
-
 - type: latheRecipe
   id: MagazinePistol
   result: MagazinePistol
@@ -446,14 +437,6 @@
     Steel: 145
 
 - type: latheRecipe
-  id: MagazinePistolSubMachineGunEmpty
-  result: MagazinePistolSubMachineGunEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 30
-
-- type: latheRecipe
   id: MagazinePistolSubMachineGun
   result: MagazinePistolSubMachineGun
   category: Ammo
@@ -498,28 +481,12 @@
     Steel: 300
 
 - type: latheRecipe
-  id: MagazinePistolSubMachineGunTopMountedEmpty
-  result: MagazinePistolSubMachineGunTopMountedEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 30
-
-- type: latheRecipe
   id: MagazinePistolSubMachineGunTopMounted
   result: MagazinePistolSubMachineGunTopMounted
   category: Ammo
   completetime: 5
   materials:
     Steel: 300
-
-- type: latheRecipe
-  id: MagazineBoxPistol
-  result: MagazineBoxPistol
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 600
 
 - type: latheRecipe
   id: MagazineBoxPistolRubber
@@ -537,14 +504,6 @@
   completetime: 5
   materials:
     Steel: 600
-
-- type: latheRecipe
-  id: MagazineBoxMagnum
-  result: MagazineBoxMagnum
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 240
 
 - type: latheRecipe
   id: MagazineBoxMagnumShrapnel
@@ -684,14 +643,6 @@
     Steel: 565
 
 - type: latheRecipe
-  id: MagazineMagnumEmpty
-  result: MagazineMagnumEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 30
-
-- type: latheRecipe
   id: MagazineMagnum
   result: MagazineMagnum
   category: Ammo
@@ -813,28 +764,12 @@
     Plastic: 600
 
 - type: latheRecipe
-  id: MagazineBoxLightRifle
-  result: MagazineBoxLightRifle
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 900
-
-- type: latheRecipe
   id: MagazineBoxLightRifleShrapnel
   result: MagazineBoxLightRifleShrapnel
   category: Ammo
   completetime: 5
   materials:
     Steel: 900
-
-- type: latheRecipe
-  id: BoxLethalshot
-  result: BoxLethalshot
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 320
 
 - type: latheRecipe
   id: BoxBeanbag
@@ -888,14 +823,6 @@
     Plastic: 600
 
 - type: latheRecipe
-  id: SpeedLoaderMagnumEmpty
-  result: SpeedLoaderMagnumEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 50
-
-- type: latheRecipe
   id: SpeedLoaderMagnum
   result: SpeedLoaderMagnum
   category: Ammo
@@ -938,14 +865,6 @@
   materials:
     Steel: 50
     Plastic: 150
-
-- type: latheRecipe
-  id: MagazineShotgunEmpty
-  result: MagazineShotgunEmpty
-  category: Ammo
-  completetime: 5
-  materials:
-    Steel: 50
 
 - type: latheRecipe
   id: MagazineShotgun

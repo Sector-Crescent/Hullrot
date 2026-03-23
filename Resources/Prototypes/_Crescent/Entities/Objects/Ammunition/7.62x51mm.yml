@@ -39,13 +39,13 @@
 
 - type: entity
   id: MagazineRifleDrumEmpty
-  name: "80-round drum magazine (7.62x51mm USM any)"
+  name: "80-round drum magazine (7.62x51mm USM)"
   suffix: empty
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider
     proto: null
-      
+
 - type: entity
   id: MagazineRifleDrum
   name: "80-round drum magazine (7.62x51mm USM)"
@@ -129,13 +129,13 @@
 
 - type: entity
   id: MagazineRiflePanEmpty
-  name: "47-round pan magazine (7.62x51mm USM any)"
+  name: "47-round pan magazine (7.62x51mm USM)"
   suffix: empty
   parent: BaseMagazineRiflePan
   components:
   - type: BallisticAmmoProvider
     proto: null
-      
+
 - type: entity
   id: MagazineRiflePan
   name: "47-round pan magazine (7.62x51mm USM)"

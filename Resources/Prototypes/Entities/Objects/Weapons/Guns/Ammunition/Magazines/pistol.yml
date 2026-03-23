@@ -147,7 +147,7 @@
 
 - type: entity
   id: MagazinePistolSubMachineGunTopMountedEmpty
-  name: 50-round top-mounted magazine (11mm PSTF auto any)
+  name: 50-round top-mounted magazine (11mm PSTF auto)
   parent: MagazinePistolSubMachineGunTopMounted
   components:
   - type: BallisticAmmoProvider
@@ -163,7 +163,7 @@
 
 - type: entity
   id: MagazinePistolEmpty
-  name: 18-round pistol magazine (9x19mm PSTF auto any)
+  name: 18-round pistol magazine (9x19mm PSTF auto)
   suffix: empty
   parent: MagazinePistol
   components:
@@ -212,7 +212,7 @@
 
 - type: entity
   id: MagazinePistolHighCapacityEmpty
-  name: 26-round extended pistol magazine (9x19mm PSTF auto any)
+  name: 26-round extended pistol magazine (9x19mm PSTF auto)
   suffix: empty
   parent: BaseMagazinePistolHighCapacity
   components:
@@ -261,7 +261,7 @@
 
 - type: entity
   id: MagazinePistolSubMachineGunEmpty
-  name: 35-round SMG magazine (9x19mm PSTF auto any)
+  name: 35-round SMG magazine (9x19mm PSTF auto)
   suffix: empty
   parent: BaseMagazinePistolSubMachineGun
   components:

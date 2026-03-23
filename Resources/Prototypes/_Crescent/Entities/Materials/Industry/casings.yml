@@ -1,0 +1,84 @@
+- type: entity
+  id: BaseCasing
+  parent: BaseItem
+  name: basecasing
+  description: base casing
+  components:
+  - type: Item
+    size: Normal
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Casings
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Material
+
+- type: entity
+  id: SmallGaugeCasings
+  parent: BaseCasing
+  name: small gauge casing crate
+  description: A standardized crate of small-arms cartridge casings. Designed to support a wide range of infantry calibers, from sidearms to shotguns. Intended for use in automated ammunition assembly systems.
+  suffix: Casings
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Industry.rsi
+    layers:
+    - state: infantrybox
+  - type: PhysicalComposition
+    materialComposition:
+      LightGaugeCasing: 250
+
+- type: entity
+  id: MediumGaugeCasings
+  parent: BaseCasing
+  name: medium gauge casing crate
+  description: A standardized crate of autocannon cartridge casings. Designed to support a wide range of autocannon calibers, from rotary cannons to low-calibre artillery. Intended for use in automated ammunition assembly systems.
+  suffix: Casings
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Industry.rsi
+    layers:
+    - state: autocannonbox
+  - type: PhysicalComposition
+    materialComposition:
+      MediumGaugeCasing: 200
+
+- type: entity
+  id: LargeGaugeCasings
+  parent: BaseCasing
+  name: large gauge casing crate
+  description: A standardized crate of artillery cartridge casings. Designed to support a wide range of artillery calibers. Intended for use in automated ammunition assembly systems.
+  suffix: Casings
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Industry.rsi
+    layers:
+    - state: artillerybox
+  - type: PhysicalComposition
+    materialComposition:
+      LargeGaugeCasing: 150
+
+- type: entity
+  id: CompositeCasing
+  parent: BaseCasing
+  name: composite casing crate
+  description: A standardized crate of missile shell casings. Designed to support a wide range of missile and torpedo calibers, from torpedos to heavy missiles. Intended for use in automated ammunition assembly systems.
+  suffix: Casings
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Industry.rsi
+    layers:
+    - state: missilebox
+  - type: PhysicalComposition
+    materialComposition:
+      CompositeCasing: 100

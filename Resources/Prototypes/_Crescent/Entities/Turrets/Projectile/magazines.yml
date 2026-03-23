@@ -430,3 +430,17 @@
   - type: Tag
     tags:
       - ResoluteClip
+
+- type: entity
+  id: Magazine90mmEmpty
+  name: 90mm clip
+  description: An loading clip designed for use with 90mm artillery systems
+  parent: MagazineResolute
+  components:
+  - type: MultiHandedItem
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge90mm
+    proto: null

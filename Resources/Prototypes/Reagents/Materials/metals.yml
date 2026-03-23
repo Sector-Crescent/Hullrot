@@ -46,3 +46,11 @@
   unit: materials-unit-bar
   icon: { sprite: Objects/Materials/ingots.rsi, state: tungsten_1 }
   price: 0.5
+
+- type: material
+  id: Iron
+  stackEntity: IngotIron1
+  name: materials-iron
+  unit: materials-unit-bar
+  icon: { sprite: Objects/Materials/ingots.rsi, state: iron }
+  price: 0.5

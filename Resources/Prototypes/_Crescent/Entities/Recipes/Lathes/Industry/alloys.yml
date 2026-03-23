@@ -1,0 +1,33 @@
+- type: latheRecipe
+  id: AlloySteel
+  result: SheetSteel1
+  completetime: 1
+  materials:
+    Iron: 100
+    Carbon: 20
+
+- type: latheRecipe
+  id: BallisticSteel
+  result: BallisticSteel1
+  completetime: 2
+  materials:
+    Steel: 100
+    Copper: 50
+    Carbon: 20
+
+- type: latheRecipe
+  id: StructuralComposite
+  result: StructuralComposite1
+  completetime: 4
+  materials:
+    Steel: 200
+    RefinedScrapTitanium: 100
+    Tungsten: 50
+
+- type: latheRecipe
+  id: HeavyOrdnanceSteel
+  result: HeavyOrdnanceSteel1
+  completetime: 3
+  materials:
+    Steel: 25
+    Tungsten: 100
