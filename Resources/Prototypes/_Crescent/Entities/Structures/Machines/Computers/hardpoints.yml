@@ -51,7 +51,7 @@
   - type: CollideOnAnchor
   placement:
     mode: SnapgridCenter
-  
+
 
 - type: entity
   id: AAAHardpointSmallBallistic
@@ -228,3 +228,48 @@
   - type: Rotatable
   - type: ExtensionCableReceiver
 
+- type: entity
+  id: AAAHardpointFixedSmall
+  parent: AAAHardpointFixed
+  name: Hardpoint Fixed/Small
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Small
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: small
+
+- type: entity
+  id: AAAHardpointFixedMedium
+  parent: AAAHardpointFixed
+  name: Hardpoint Fixed/Medium
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Medium
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: medium
+
+
+- type: entity
+  id: AAAHardpointFixedLarge
+  parent: AAAHardpointFixed
+  name: Hardpoint Fixed/Large
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Large
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: large

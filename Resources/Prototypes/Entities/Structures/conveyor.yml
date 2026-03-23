@@ -12,8 +12,8 @@
   - type: Transform
     anchored: true
   - type: Sprite
-    sprite: Structures/conveyor.rsi
-    state: conveyor_started_cw
+    sprite: _Crescent/Structures/Industry/conveyorbelt.rsi
+    state: conveyor_stopped_cw
     drawdepth: HighFloorObjects
   - type: ApcPowerReceiver
   - type: ExtensionCableReceiver

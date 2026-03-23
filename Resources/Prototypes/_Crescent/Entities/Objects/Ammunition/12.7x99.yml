@@ -34,6 +34,14 @@
     proto: BulletHeavyRifle
 
 - type: entity
+  id: MagazineHeavyRifleEmpty
+  name: 16-round heavy magazine (12.7×99mm USM)
+  parent: MagazineHeavyRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: Null
+
+- type: entity
   id: MagazineHeavyRifleBoxmag
   name: "50-round box magazine (12.7x99mm USM)"
   parent: BaseItem
@@ -71,6 +79,14 @@
     sound: /Audio/_Crescent/Weapons/Interact/big_mag_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/big_mag_drop.ogg
+
+- type: entity
+  id: MagazineHeavyRifleBoxmagEmpty
+  name: "50-round box magazine (12.7x99mm USM)"
+  parent: MagazineHeavyRifleBoxmag
+  components:
+  - type: BallisticAmmoProvider
+    proto: Null
 
 - type: entity
   abstract: true

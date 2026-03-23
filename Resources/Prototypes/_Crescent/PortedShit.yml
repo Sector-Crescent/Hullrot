@@ -223,6 +223,15 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
+  id: MagazineMagnumSubEmpty
+  suffix: Submachinegun
+  name: 25-round extended pistol magazine (.327 Imperial magnum)
+  parent: MagazineMagnumSub
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
   id: SpeedLoaderRifleHeavy
   name: "speed loader (5.56x45mm)"
   parent: BaseSpeedLoaderHeavyRifle

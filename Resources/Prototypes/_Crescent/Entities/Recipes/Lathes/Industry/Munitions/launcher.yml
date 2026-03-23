@@ -1,0 +1,255 @@
+# 40mm
+- type: latheRecipe
+  id: Cartridge40mmFrag
+  result: Cartridge40mmFrag
+  completetime: 1
+  materials:
+    MediumGaugeCasing: 10
+    Gunpowder: 25
+    Steel: 10
+    BallisticSteel: 20
+
+- type: latheRecipe
+  id: Cartridge40mmCan
+  result: Cartridge40mmCan
+  completetime: 1
+  materials:
+    MediumGaugeCasing: 10
+    Gunpowder: 30
+    Steel: 30
+
+- type: latheRecipe
+  id: Cartridge40mmHEDP
+  result: Cartridge40mmHEDP
+  completetime: 2
+  materials:
+    MediumGaugeCasing: 10
+    OrdnanceCompound: 25
+    Tungsten: 15
+    Steel: 5
+
+- type: latheRecipe
+  id: Cartridge40mmSmoke
+  result: Cartridge40mmSmoke
+  completetime: 1
+  materials:
+    MediumGaugeCasing: 10
+    Gunpowder: 30
+    RawSulfur: 25
+
+- type: latheRecipe
+  id: Cartridge40mmThermobaric
+  result: Cartridge40mmThermobaric
+  completetime: 2
+  materials:
+    MediumGaugeCasing: 10
+    OrdnanceCompound: 50
+    Steel: 10
+
+- type: latheRecipe
+  id: Cartridge40mmEMP
+  result: Cartridge40mmEMP
+  completetime: 2
+  materials:
+    MediumGaugeCasing: 10
+    OrdnanceCompound: 20
+    Steel: 5
+    Copper: 20
+
+# 48mm
+- type: latheRecipe
+  id: Cartridge48mmRocket
+  result: Cartridge48mmRocket
+  completetime: 2
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 20
+    OrdnanceCompound: 50
+    Steel: 20
+
+- type: latheRecipe
+  id: Cartridge48mmRocketGorlex
+  result: Cartridge48mmRocketGorlex
+  completetime: 2
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 20
+    OrdnanceCompound: 95
+    Steel: 15
+
+# 60mm
+- type: latheRecipe
+  id: Cartridge60mmRocket
+  result: Cartridge60mmRocket
+  completetime: 3
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 35
+    OrdnanceCompound: 60
+    Steel: 40
+
+- type: latheRecipe  #need to work on factional variant recipes
+  id: Cartridge60mmRocketGorlex
+  result: Cartridge60mmRocketGorlex
+  completetime: 3
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 35
+    OrdnanceCompound: 80
+    Steel: 40
+
+- type: latheRecipe
+  id: Cartridge60mmRocketNCWL
+  result: Cartridge60mmRocketNCWL
+  completetime: 3
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 35
+    OrdnanceCompound: 60
+    Steel: 40
+
+- type: latheRecipe
+  id: Cartridge60mmRocketAdvanced
+  result: Cartridge60mmRocketAdvanced
+  completetime: 3
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 35
+    OrdnanceCompound: 60
+    Steel: 60
+
+# 70mm / RPG-7 Rockets
+- type: latheRecipe
+  id: CartridgeRPG7Heat
+  result: CartridgeRPG7Heat
+  completetime: 4
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 60
+    Tungsten: 40
+    Steel: 10
+
+- type: latheRecipe
+  id: CartridgeRPG7Tandem
+  result: CartridgeRPG7Tandem
+  completetime: 5
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 50
+    Steel: 10
+    Tungsten: 60
+
+- type: latheRecipe
+  id: CartridgeRPG7Thermobaric
+  result: CartridgeRPG7Thermobaric
+  completetime: 4
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 80
+    Steel: 5
+
+- type: latheRecipe
+  id: CartridgeRPG7Emp
+  result: CartridgeRPG7Emp
+  completetime: 6
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 40
+    Steel: 5
+    Copper: 40
+
+- type: latheRecipe
+  id: CartridgeRPG7Frag
+  result: CartridgeRPG7Frag
+  completetime: 6
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 40
+    Steel: 10
+    BallisticSteel: 40
+
+# 80mm / RPG-2 Rockets
+- type: latheRecipe
+  id: CartridgeRPG2Heat
+  result: CartridgeRPG2Heat
+  completetime: 5
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 40
+    Tungsten: 30
+    Steel: 10
+
+- type: latheRecipe
+  id: CartridgeRPG2Frag
+  result: CartridgeRPG2Frag
+  completetime: 5
+  materials:
+    MediumGaugeCasing: 50
+    OrdnanceCompound: 60
+    Steel: 40
+
+# 95mm
+- type: latheRecipe
+  id: Cartridge95mmRocket
+  result: Cartridge95mmRocket
+  completetime: 6
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 60
+    OrdnanceCompound: 60
+    Steel: 40
+
+- type: latheRecipe
+  id: Cartridge95mmRocketNCWL
+  result: Cartridge95mmRocketNCWL
+  completetime: 6
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 60
+    OrdnanceCompound: 60
+    Steel: 40
+
+- type: latheRecipe
+  id: Cartridge95mmRocketGSC
+  result: Cartridge95mmRocketGSC
+  completetime: 6
+  category: Missiles
+  materials:
+    MediumGaugeCasing: 60
+    OrdnanceCompound: 60
+    Steel: 40
+
+# 240mm
+- type: latheRecipe
+  id: Cartridge240mmRocket
+  result: Cartridge240mmRocket
+  completetime: 8
+  category: Missiles
+  materials:
+    CompositeCasing: 20
+    OrdnanceCompound: 120
+    Steel: 80
+
+- type: latheRecipe
+  id: Cartridge240mmRocketNCWL
+  result: Cartridge240mmRocketNCWL
+  completetime: 8
+  category: Missiles
+  materials:
+    CompositeCasing: 20
+    OrdnanceCompound: 100
+    Copper: 60
+    Steel: 40
+
+# 330mm
+- type: latheRecipe
+  id: Cartridge330mmRocket
+  result: Cartridge330mmRocket
+  completetime: 12
+  category: Missiles
+  materials:
+    CompositeCasing: 40
+    OrdnanceCompound: 180
+    Steel: 100
+
+#to do look at missile casing costs

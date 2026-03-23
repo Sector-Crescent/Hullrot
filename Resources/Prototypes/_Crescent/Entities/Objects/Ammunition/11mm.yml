@@ -126,3 +126,11 @@
     sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
+
+- type: entity
+  id: MagazinePistolSubMachineGunHeavyEmpty
+  name: 25-round SMG magazine (11mm PSTF auto)
+  parent: MagazinePistolSubMachineGunHeavy
+  components:
+  - type: BallisticAmmoProvider
+    proto: null

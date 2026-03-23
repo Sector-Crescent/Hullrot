@@ -45,3 +45,11 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMateriel
+
+- type: entity
+  id: MagazineAntiMaterielEmpty
+  name: "6-round magazine (15.2x169mm)"
+  parent: BaseMagazineAntiMateriel
+  components:
+  - type: BallisticAmmoProvider
+    proto: null

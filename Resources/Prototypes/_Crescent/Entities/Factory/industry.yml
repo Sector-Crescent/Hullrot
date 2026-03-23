@@ -1,0 +1,29 @@
+- type: entity
+  id: BlastFurnace
+  parent: BaseMachinePowered
+  name: industrial blast furnace
+  description: Uses advanced metallurgy patterns to smelt plasma and steel alloy into durable plasteel and plastitanium. PLAAACEHOLDER
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/Industry/blastfurnace.rsi
+    snapCardinals: true
+    layers:
+    - state: blastfurnaceactive
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#db480d"
+  - type: Factory
+    sound:
+      collection: Welder
+      params:
+        variation: 0.125
+    recipes:
+      - CharcoalFromWood
+      - FurnaceGold
+      - FurnacePlasma
+      - FurnaceSilver
+      - FurnaceTungsten
+      - FurnaceGlass
+      - FurnaceUranium
+      - FurnaceIron
