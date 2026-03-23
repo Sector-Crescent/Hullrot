@@ -1,9 +1,0 @@
-- type: entity
-  id: ActionBaseToggleMagboots
-  name: Toggle Magboots
-  description: Toggles the magboots on and off.
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: InstantAction
-    itemIconStyle: NoItem
-    event: !type:ToggleMagbootsEvent
