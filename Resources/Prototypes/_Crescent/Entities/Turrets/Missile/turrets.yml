@@ -42,8 +42,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 12
-      fillWithDoAfter: true
-      fillDelay: 0.5
+      fillWithDoAfter: false
       proto: Cartridge48mmRocket
       whitelist:
         tags:
@@ -90,8 +89,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 18
-      fillWithDoAfter: true
-      fillDelay: 1
+      fillWithDoAfter: false
       proto: Cartridge48mmRocket
       whitelist:
         tags:
@@ -139,8 +137,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 6
-      fillWithDoAfter: true
-      fillDelay: 1
+      fillWithDoAfter: false
       proto: Cartridge60mmRocket
       whitelist:
         tags:
@@ -186,8 +183,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 6
-      fillWithDoAfter: true
-      fillDelay: 1
+      fillWithDoAfter: false
       proto: Cartridge60mmRocket
       whitelist:
         tags:
@@ -230,8 +226,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 6
-      fillWithDoAfter: true
-      fillDelay: 1
+      fillWithDoAfter: false
       proto: Cartridge60mmRocket
       whitelist:
         tags:
@@ -281,8 +276,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 5
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocket
       whitelist:
         tags:
@@ -333,8 +327,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 8
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocketGSC
       whitelist:
         tags:
@@ -385,8 +378,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 4
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocketNCWL
       whitelist:
         tags:
@@ -443,8 +435,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     - type: BallisticAmmoProvider
-      fillWithDoAfter: true
-      fillDelay: 3
+      fillWithDoAfter: false
       cycleable: false
       capacity: 4
       proto: Cartridge240mmRocket
@@ -501,8 +492,7 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     - type: BallisticAmmoProvider
-      fillWithDoAfter: true
-      fillDelay: 3
+      fillWithDoAfter: false
       cycleable: false
       capacity: 4
       proto: Cartridge240mmRocketNCWL
@@ -562,7 +552,7 @@
       cycleable: false
       capacity: 3
       fillWithDoAfter: true
-      fillDelay: 6
+      fillDelay: 2
       proto: Cartridge95mmRocketNCWL
       whitelist:
         tags:
