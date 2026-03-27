@@ -1,0 +1,111 @@
+- type: entity
+  parent: ColMarTechBase
+  id: ColMarTechEquipmentNCWL
+  name: ColMarTech automated marine equipment rack
+  description: An automated rack hooked up to a colossal storage of Marine Rifleman standard-issue equipment.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/syndicatearmory.rsi
+  - type: CMAutomatedVendor
+    sections:
+    - name: Class Kit
+      choices: { CMClass: 1 }
+      entries:
+      - id: CMVendorBundleRiflemanApparelNCWL
+        name: базовый набор ЛРНП
+        recommended: true
+    - name: Armor kit
+      choices: { CMArmour: 1 }
+      entries:
+      - id: ClothingOuterHardsuitNCWLInfantry
+        name: скафандр ЛРНП
+        recommended: true    
+      - id: ClothingOuterArmorNCWLHeavyCarapace
+        name: бронежилет ЛРНП
+    - name: Weapon kits
+      choices: { CMWeapon: 1 }
+      entries:
+      - id: WeaponRifleFAL
+        name: НКВЛ МК-2 Фалин 5.56x45 мм
+        recommended: true    
+      - id: WeaponShotgunProletar
+        name: НКВЛ Тоз-97 Пролетарий 12 кал
+      - id: WeaponSubMachineGunNCWLWatchdog
+        name: НКВЛ ДС1 Страж 9x19mm
+    - name: Utilities
+      choices: { CMUtilities: 2 }
+      entries:
+      - id: ExGrenade
+        name: разрывная граната 
+      - id: EmpGrenade
+        name: ЭМИ Граната
+      - id: BreachingCharge
+        name: Прорывной заряд
+      - id: HandHeldMassScannerEE
+        name: портативный сканер масс
+        recommended: true   
+    - name: Ammo
+      choices: { CMAmmo: 2 }
+      entries:
+      - id: MagazinePistolSubMachineGun
+        name: 35-зарядный магазин для пистолета-пулемета (9x19 мм PSTF auto)
+      - id: MagazineLightRifle
+        name: 30-зарядный магазин (5,56x45 мм)
+      - id: MagazineShotgun
+        name: 10-зарядный магазин (12 калибр)
+
+- type: entity
+  parent: ColMarTechBase
+  id: ColMarTechEquipmentDSM
+  name: ColMarTech automated marine equipment rack
+  description: An automated rack hooked up to a colossal storage of Marine Rifleman standard-issue equipment.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/syndicatearmory.rsi
+  - type: CMAutomatedVendor
+    sections:
+    - name: Class Kit
+      choices: { CMClass: 1 }
+      entries:
+      - id: CMVendorBundleRiflemanApparelDSM
+        name: базовый набор БМС
+        recommended: true
+    - name: Armor kit
+      choices: { CMArmour: 1 }
+      entries:
+      - id: ClothingOuterHardsuitImperialSoldier
+        name: скафандр БМС
+        recommended: true    
+      - id: ClothingOuterArmorImperialTrooperArmor
+        name: бронежилет БМС
+    - name: Weapon kits
+      choices: { CMWeapon: 1 }
+      entries:
+      - id: WeaponShotgunReno
+        name: БМС ДА-13 Рено 12 кал.
+      - id: WeaponRifleMiller
+        name: БМС ДА-8 Миллер 5.56x45 мм
+        recommended: true
+      - id: WeaponSubMachineGunBeetle
+        name: ХП Мак-11 Жук 9x19 мм
+    - name: Utilities
+      choices: { CMUtilities: 2 }
+      entries:
+      - id: ExGrenade
+        name: разрывная граната
+      - id: EmpGrenade
+        name: ЭМИ Граната
+      - id: BreachingCharge
+        name: Прорывной заряд
+      - id: HandHeldMassScannerEE
+        name: портативный сканер масс
+        recommended: true 
+    - name: Ammo
+      choices: { CMAmmo: 2 }
+      entries:
+      - id: MagazinePistolSubMachineGun
+        name: 35-зарядный магазин для пистолета-пулемета (9x19 мм PSTF auto)
+      - id: MagazineLightRifle
+        name: 30-зарядный магазин (5,56x45 мм)
+      - id: MagazineShotgun
+        name: 10-зарядный магазин (12 калибр)

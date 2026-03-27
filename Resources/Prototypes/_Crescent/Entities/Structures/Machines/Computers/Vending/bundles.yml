@@ -1,0 +1,35 @@
+- type: entity
+  id: CMVendorBundleRiflemanApparelNCWL
+  name: base gear NCWL
+  description: base gear NCWL
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite:  _Crescent/Structures/syndicatearmory.rsi
+    state: "off"
+  - type: CMVendorBundle
+    bundle:
+    - ClothingHandsGlovesCombat
+    - ClothingMaskNCWLBalaclava
+    - HandheldGPSBasic
+    - DoubleEmergencyOxygenTankFilled
+    - JetpackBlackFilled
+    - ClothingShoesBootsMagNCWL
+
+- type: entity
+  id: CMVendorBundleRiflemanApparelDSM
+  name: base gear dsm
+  description: base gear NCWL
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite:  _Crescent/Structures/syndicatearmory.rsi
+    state: "off"
+  - type: CMVendorBundle
+    bundle:
+    - ClothingHandsGlovesImperialLonggloves
+    - ClothingMaskImperialCombatGasmask
+    - HandheldGPSBasic
+    - DoubleEmergencyOxygenTankFilled
+    - JetpackBlackFilled
+    - ClothingShoesBootsMagDSM
