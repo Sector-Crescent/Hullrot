@@ -1,0 +1,34 @@
+# Author Info
+# Discord: @ialoveni
+#
+- type: vessel
+  id: Shitbird
+  name: GSC Shitbird
+  description: A no good, horrible, joke of a ship that never should've seen the light of day.
+  price: 12500 #12000 appraisegrid
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCSP/shitbird.yml
+
+- type: gameMap
+  id: Shitbird
+  mapName: 'GSC Shitbird'
+  mapPath: /Maps/_Crescent/Shuttles/NCSP/shitbird.yml
+  minPlayers: 0
+  stations:
+    Tick:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: ultralight
+        - type: StationNameSetup
+          mapNameTemplate: 'GSC Shitbird {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-fighter
+        - type: VesselDescription
+          description: A no good, horrible, joke of a ship that never should've seen the light of day.

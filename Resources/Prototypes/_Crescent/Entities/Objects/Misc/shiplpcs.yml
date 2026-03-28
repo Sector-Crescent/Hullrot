@@ -905,6 +905,23 @@
 
 - type: entity
   parent: BaseItem
+  id: ShipVoucherShitbird
+  name: GSC 'Shitbird' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a ship that ought to not exist. Has to be redeemed at a shipyard console, but should you?
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Shitbird
+
+- type: entity
+  parent: BaseItem
   id: ShipVoucherOuroboros
   name: GSC 'Ouroboros' pattern LPC fabprint disk
   description: An LPC fabprint disk loaded with a Gorlex Security Consulting Ouroboros-class stealth carrier pattern. Has to be redeemed at a shipyard console.
