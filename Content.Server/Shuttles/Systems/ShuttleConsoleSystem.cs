@@ -14,7 +14,6 @@ using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Access.Components; // Frontier
 using Content.Shared.ActionBlocker;
 using Content.Shared.Alert;
-using Content.Shared._Crescent.CCvars;
 using Content.Shared.Crescent.Radar;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
@@ -32,7 +31,6 @@ using Content.Shared.Shuttles.UI.MapObjects;
 using Content.Shared.Timing;
 using Robust.Server.GameObjects;
 using Robust.Shared.Collections;
-using Robust.Shared.Configuration; // hullrot
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Utility;
@@ -68,21 +66,15 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     [Dependency] private readonly IPrototypeManager _manager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly _Lavaland.Shuttles.Systems.DockingConsoleSystem _dockingConsole = default!; // Lavaland Change: FTL
-    [Dependency] private readonly IConfigurationManager _cfg = default!; // hullrot: console ratelimits
 
     private EntityQuery<MetaDataComponent> _metaQuery;
     private EntityQuery<TransformComponent> _xformQuery;
 
     private readonly HashSet<Entity<ShuttleConsoleComponent>> _consoles = new();
 
-    private float _accumulatedFrameTime;
-    private float _uiTps;
-
     public override void Initialize()
     {
         base.Initialize();
-
-        Subs.CVar(_cfg, CrescentCVars.ShuttleConsoleUiTps, (float val) => { _uiTps = val; }, true);
 
         _metaQuery = GetEntityQuery<MetaDataComponent>();
         _xformQuery = GetEntityQuery<TransformComponent>();
@@ -769,20 +761,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
         var toRemove = new ValueList<(EntityUid, PilotComponent)>();
         var query = EntityQueryEnumerator<PilotComponent>();
-
-        _accumulatedFrameTime += frameTime; // Hullrot - console ratelimiting
-        float targetTime = _uiTps > 0 ? 1.0f / _uiTps : 0.1f;
-
-        if (_accumulatedFrameTime >= targetTime)
-        {
-            RefreshBulletStateForConsoles();
-            _accumulatedFrameTime -= targetTime;
-            
-            // no lag spikes
-            if (_accumulatedFrameTime > targetTime) 
-                _accumulatedFrameTime = 0;
-        }
-
+        RefreshBulletStateForConsoles();
         CheckAutoAnchor(frameTime); // Hullrot - Auto Anchor
 
         while (query.MoveNext(out var uid, out var comp))
