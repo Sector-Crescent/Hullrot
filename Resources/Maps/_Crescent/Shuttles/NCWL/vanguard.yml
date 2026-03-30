@@ -4,7 +4,7 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 03/29/2026 19:14:38
+  time: 03/30/2026 05:12:09
   entityCount: 235
 maps: []
 grids:
@@ -142,6 +142,7 @@ entities:
             14: -5,-2
             102: -5,-2
             123: -5,-2
+            144: -5,-2
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -149,6 +150,7 @@ entities:
             18: 5,-2
             99: 5,-2
             120: 5,-2
+            141: 5,-2
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -159,6 +161,8 @@ entities:
             94: -2,6
             112: -4,4
             115: -2,6
+            133: -4,4
+            136: -2,6
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -169,6 +173,8 @@ entities:
             88: 4,4
             106: 2,6
             109: 4,4
+            127: 2,6
+            130: 4,4
         - node:
             id: LatticeEdgeE
           decals:
@@ -181,6 +187,9 @@ entities:
             111: -4,4
             114: -2,6
             121: -5,-2
+            132: -4,4
+            135: -2,6
+            142: -5,-2
         - node:
             id: LatticeEdgeN
           decals:
@@ -199,6 +208,11 @@ entities:
             118: 5,-2
             122: -5,-2
             124: -3,-5
+            137: 0,-5
+            138: 3,-5
+            139: 5,-2
+            143: -5,-2
+            145: -3,-5
         - node:
             id: LatticeEdgeS
           decals:
@@ -214,6 +228,10 @@ entities:
             107: 4,4
             110: -4,4
             113: -2,6
+            125: 2,6
+            128: 4,4
+            131: -4,4
+            134: -2,6
         - node:
             id: LatticeEdgeW
           decals:
@@ -226,6 +244,9 @@ entities:
             105: 2,6
             108: 4,4
             119: 5,-2
+            126: 2,6
+            129: 4,4
+            140: 5,-2
         - node:
             color: '#FFFFFFFF'
             id: TechCornerE
@@ -1456,8 +1477,8 @@ entities:
   - uid: 171
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,-3.5
+      rot: 1.5707963267948966 rad
+      pos: -3.5,-3.5
       parent: 1
   - uid: 172
     components:
@@ -1468,8 +1489,8 @@ entities:
   - uid: 173
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,-3.5
+      rot: -1.5707963267948966 rad
+      pos: 4.5,-3.5
       parent: 1
   - uid: 174
     components:
@@ -1810,7 +1831,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: Battery
-      startingCharge: 673.1268
+      startingCharge: 126.28553
     - type: ApcPowerReceiverBattery
       enabled: True
   - uid: 235
@@ -1836,7 +1857,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: Battery
-      startingCharge: 670.79315
+      startingCharge: 123.95223
     - type: ApcPowerReceiverBattery
       enabled: True
 ...
