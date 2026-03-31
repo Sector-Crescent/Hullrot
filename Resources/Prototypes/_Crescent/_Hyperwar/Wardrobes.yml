@@ -1002,61 +1002,60 @@
 - type: vendingMachineInventory
   id: NCWLConscriptAmmoInventory
   startingInventory:
-    WeaponSniperNCWLNovomosin: 100
-    WeaponPistolComrade: 20
+    WeaponSniperNCWLNovomosin: 20
     BoxSpeedLoaderRifle: 50
-    MagazinePistolSubMachineGun: 12
-    BoxRoundsAntiMateriel: 1
-    BoxLethalshot: 10
-    MagazineMagnum: 12
+    WeaponAntimaterielNCWLHayha: 2
+    WeaponHPSterilizerFlamethrower: 2
+    BoxRoundsAntiMateriel: 5
+    WeaponPistolComrade: 30
     MagazinePistol: 50
+    MagazineMagnum: 12
+    CombatKnife: 50
 
 - type: vendingMachineInventory
   id: DSMConscriptAmmoInventory
   startingInventory:
-    WeaponSniperDSMLegax: 100
-    WeaponPistolComplianceImperial: 20
+    WeaponSniperDSMLegax: 20
     MagazineBoxLightRifleSurplus: 50
-    MagazinePistolSubMachineGun: 12
-    BoxRoundsAntiMateriel: 1
-    BoxLethalshot: 10
-    MagazineMagnum: 12
+    WeaponAntimaterielDSMLeveller: 2
+    BoxRoundsAntiMateriel: 5
+    WeaponHPSterilizerFlamethrower: 2
+    WeaponPistolComplianceImperial: 30
     MagazinePistol: 50
+    MagazineMagnum: 12
+    CombatKnife: 50
+    
 
 - type: vendingMachineInventory
   id: NCWLConscriptGearInventory
   startingInventory:
-    C4: 100
-    JetpackBlackFilled: 100
-    GrenadeFlashBang: 5
-    DoubleEmergencyOxygenTankFilled: 100
-    ClothingHeadHelmetNCWLBasic: 100
-    ClothingOuterArmorNCWLHeavyCarapace: 100
+    C4: 50
+    JetpackBlackFilled: 50
+    GrenadeFlashBang: 50
+    DoubleEmergencyOxygenTankFilled: 50
+    HandHeldMassScannerEE: 50
 
 - type: vendingMachineInventory
   id: DSMConscriptGearInventory
   startingInventory:
-    C4: 100
-    JetpackBlackFilled: 10
-    GrenadeFlashBang: 5
-    DoubleEmergencyOxygenTankFilled: 100
-    ClothingHeadHelmetImperialTrooperHelmet: 100
-    ClothingOuterArmorImperialTrooperArmor: 100
+    C4: 50
+    JetpackBlackFilled: 50
+    GrenadeFlashBang: 50
+    DoubleEmergencyOxygenTankFilled: 50
+    HandHeldMassScannerEE: 50
 
 - type: vendingMachineInventory
   id: NCWLConscriptShipInventory
   startingInventory:
-    ShipVoucherUnionfallLodka: 2
-    ShipVoucherUnionfallVanguard: 4
-    ShipVoucherUnionfallAegis: 2
-    ShipVoucherUnionfallBroadsword: 20
-    ShipVoucherUnionfallKhopesh: 20
+    ShipVoucherUnionfallVanguard: 2
+    ShipVoucherUnionfallAegis: 1
+    ShipVoucherUnionfallBroadsword: 2
+    ShipVoucherUnionfallKhopesh: 2
 
 - type: vendingMachineInventory
   id: DSMConscriptShipInventory
   startingInventory:
     ShipVoucherUnionfallIbis: 2
-    ShipVoucherUnionfallSaintsfall: 2
-    ShipVoucherUnionfallImparator: 2
-    ShipVoucherUnionfallConquest: 20
-    ShipVoucherUnionfallValor: 20
+    ShipVoucherUnionfallImparator: 1
+    ShipVoucherUnionfallConquest: 2
+    ShipVoucherUnionfallValor: 2

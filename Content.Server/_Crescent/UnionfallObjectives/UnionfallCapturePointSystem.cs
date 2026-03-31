@@ -41,16 +41,11 @@ public sealed class UnionfallCapturePointSystem : EntitySystem
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("audio.ambience");
     }
 
-    private void OnComponentInit(EntityUid uid, UnionfallCapturePointComponent component, ComponentInit args)
-    {
-        TimeSpan graceTime = TimeSpan.FromSeconds(component.GracePeriod);
-        Timer.Spawn(TimeSpan.FromMinutes(1), () => AnnouncementWarStart(graceTime));
-        Timer.Spawn(graceTime * 0.25, () => AnnouncementWarPeriodic(graceTime - graceTime * 0.25));
-        Timer.Spawn(graceTime * 0.50, () => AnnouncementWarPeriodic(graceTime - graceTime * 0.50));
-        Timer.Spawn(graceTime * 0.75, () => AnnouncementWarPeriodic(graceTime - graceTime * 0.75));
-        Timer.Spawn(graceTime - TimeSpan.FromMinutes(1), AnnouncementWarAlmost);
-        Timer.Spawn(graceTime, AnnouncementWarGraceOver); // TODO: turn this into a cool 10 second countdown
-    }
+private void OnComponentInit(EntityUid uid, UnionfallCapturePointComponent component, ComponentInit args)
+{
+    // Announcement timer'ları buradan kaldırıldı.
+    // Tüm announcement'lar UnionfallAnnouncerSystem üzerinden yönetiliyor.
+}
 
     public override void Update(float frameTime)
     {

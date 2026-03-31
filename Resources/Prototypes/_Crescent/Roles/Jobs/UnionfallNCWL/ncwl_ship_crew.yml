@@ -6,8 +6,7 @@
   requirements:
     - !type:FactionRequirement
       factionID: "NCWL"
-    - !type:CharacterOverallTimeRequirement
-      min: 1000
+      
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -87,15 +86,18 @@
     head: ClothingHeadHatNCWLBeret
     belt: ClothingBeltAssaultFilledCrew #drips better
     pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: WeaponPistolT91
     back: ClothingBackpackNCWL
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitNCWLEngi
     eyes: ClothingEyesHudSecurity
-    suitstorage: WeaponPistolT91
+    suitstorage: JetpackBlackFilled
+
   inhand:
-    - BookUnionfallNCWLGuide
-    - JetpackBlackFilled
+    - UnionfallNCWLCadetNote
+
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolT91
+     - ClothingMaskNCWLGasmask
+     - HandHeldMassScannerEE
+     - CrowbarRed

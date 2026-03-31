@@ -10,8 +10,7 @@
   requirements:
     - !type:FactionRequirement
       factionID: "DSM"
-    - !type:CharacterOverallTimeRequirement
-      min: 1000
+
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -49,7 +48,7 @@
     head: ClothingHeadHatImperialSurgeon
     neck: ClothingNeckIFFCyan
     jumpsuit: ClothingUniformJumpsuitImperialSurgeon
-    outerClothing: ClothingOuterHardsuitImperialWorker
+    outerClothing: ClothingOuterCoatAuthorityChirurgeon
     shoes: ClothingShoesBootsMagDSM
     belt: ClothingBeltAssaultFilledMedic
     eyes: ClothingEyesHudMedSec
@@ -61,19 +60,17 @@
     suitstorage: WeaponPistolNeoVolker
     back: ClothingBackpackSatchelMedical
   inhand:
-    - BookUnionfallDSMGuide
-    - JetpackBlackFilled
+    - UnionfallDSMCadetNote
   storage:
     back:
-      - DefibrillatorCompact
-      - BoxMRE
-      - MedkitCombatFilled
-      - OmnizineChemistryBottle
-      - Bloodpack
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CartridgePuncturase
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - DefibrillatorCompact
+    - MedkitCombatFilled
+    - OmnizineChemistryBottle
+    - Bloodpack
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CartridgePuncturase
+    - CrowbarRed
+    - HandHeldMassScannerEE

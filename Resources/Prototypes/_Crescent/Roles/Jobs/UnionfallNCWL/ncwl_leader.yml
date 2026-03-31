@@ -7,8 +7,7 @@
     - !type:FactionRequirement
       factionID: "NCWL"
     - !type:CharacterWhitelistRequirement
-    - !type:CharacterOverallTimeRequirement
-      min: 20000
+
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -85,21 +84,20 @@
     id: NCWLFactionLeaderPDA
     ears: ClothingHeadsetNCWL
     shoes: ClothingShoesBootsMagNCWL
-    outerClothing: ClothingOuterArmorNCWLOpremeCarapace
+    outerClothing: ClothingOuterHardsuitNCWLPetya
     head: ClothingHeadHatNCWLBeretAdmiral
     belt: ClothingBeltNCWLPouchesFilledKommissar
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: SyndicateWhistle
+    pocket2: Whistle
     back: ClothingBackpackNCWL
     suitstorage: WeaponSniperNCWLNovomosin
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesNCWL
   inhand:
-    - ClothingOuterHardsuitNCWLPetya
     - JetpackBlackFilled
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolT91
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskNCWLGasmask
+    - WeaponPistolT91
+    - CrowbarRed
+    - HandHeldMassScannerEE

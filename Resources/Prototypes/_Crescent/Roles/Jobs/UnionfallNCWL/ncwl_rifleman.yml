@@ -10,8 +10,7 @@
   requirements:
     - !type:FactionRequirement
       factionID: "NCWL"
-    - !type:CharacterOverallTimeRequirement
-      min: 1000
+
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -64,12 +63,14 @@
     suitstorage: WeaponSniperNCWLNovomosin
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesNCWL
+
   inhand:
-    - BookUnionfallNCWLGuide
+    - UnionfallNCWLCadetNote
     - JetpackBlackFilled
+    
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolComrade
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskNCWLGasmask
+    - WeaponPistolComrade
+    - CrowbarRed
+    - HandHeldMassScannerEE

@@ -6,8 +6,7 @@
   requirements:
     - !type:FactionRequirement
       factionID: "DSM"
-    - !type:CharacterOverallTimeRequirement
-      min: 1000
+
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -85,14 +84,16 @@
     id: LevymanPDA
     belt: ClothingBeltAssaultFilledCrew
     pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: WeaponPistolNeoVolker
     ears: ClothingHeadsetEmpire
     eyes: ClothingEyesHudSecurity
     outerClothing: ClothingOuterHardsuitImperialWorker
-    suitstorage: WeaponPistolNeoVolker
+    suitstorage: JetpackBlackFilled
   inhand:
-    - BookUnionfallDSMGuide
-    - JetpackBlackFilled
+    - UnionfallDSMCadetNote
+    
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolNeoVolker
+    - ClothingMaskImperialCombatGasmask
+    - HandHeldMassScannerEE
+    - CrowbarRed

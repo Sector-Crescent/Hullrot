@@ -50,7 +50,7 @@
   equipment:
     neck: ClothingNeckIFFOrange
     jumpsuit: ClothingUniformJumpsuitNCWL
-    outerClothing: ClothingOuterHardsuitNCWLInfantry
+    outerClothing: ClothingOuterCoatTrench
     shoes: ClothingShoesBootsMagNCWL
     belt: ClothingBeltNCWLPouchesFilledRifleman
     back: ClothingBackpackNCWL
@@ -58,15 +58,18 @@
     pocket2: ExGrenade
     ears: ClothingHeadsetNCWL
     id: NCWLHomeguardSoldatPDA
-    suitstorage: WeaponSniperNCWLNovomosin
+    suitstorage: JetpackBlackFilled
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesNCWL
   inhand:
-    - BookUnionfallNCWLGuide
-    - JetpackBlackFilled
+    - UnionfallNCWLCadetNote
+    
   storage:
     back:
-      - BoxMRE
-      - WeaponPistolComrade
-      - CrowbarRed
-      - HandHeldMassScannerEE
+    - ClothingMaskNCWLGasmask
+    - VoidsuitKitNCWL
+    - WeaponPistolComrade
+    - CrowbarRed
+    - HandHeldMassScannerEE
+
+    
