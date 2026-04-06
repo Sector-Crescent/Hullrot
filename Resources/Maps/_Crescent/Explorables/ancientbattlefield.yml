@@ -291,13 +291,6 @@ entities:
     - type: Transform
       pos: 4.5,0.5
       parent: 1
-- proto: BiomeScrapyardSource
-  entities:
-  - uid: 69
-    components:
-    - type: Transform
-      pos: 0.39098454,0.5533301
-      parent: 1
 - proto: N14WallScrapBlueSlantedIndestructible
   entities:
   - uid: 41
@@ -446,4 +439,11 @@ entities:
       parent: 1
     - type: WarpPoint
       location: Ancient Battlefield
+- proto: BiomeScrapyardSource
+  entities:
+  - uid: 69
+    components:
+    - type: Transform
+      pos: 0.39098454,0.5533301
+      parent: 1
 ...

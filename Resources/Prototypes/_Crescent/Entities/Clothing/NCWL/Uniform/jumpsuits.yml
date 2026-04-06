@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWL
-  name: homeguard fatigues
-  description: Built for the NCWL's Homeguard - combat turtleneck and fatigues for the proletariat warrior.
+  name: Homeguard Fatigues
+  description: A simple orange-brown turtleneck, with a pair of black cargo trousers. Makes you feel more like a laborer than a soldier.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwlbase.rsi
@@ -12,8 +12,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLMedic
-  name: homeguard combat medic fatigues
-  description: Built for the NCWL's Homeguard - combat turtleneck and fatigues for the proletariat combat medic.
+  name: Homeguard Combat Medic Fatigues
+  description: A variation of the standard fatigues, now with white. Intended to express that the wearer is a combat medic.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwlmedic.rsi
@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLArtificer
-  name: homeguard artificer fatigues
-  description: Built for the NCWL's Homeguard - combat turtleneck and fatigues for the proletariat combat medic.
+  name: Homeguard Artificer Fatigues
+  description: A robust turtleneck, paired with a pair of thick overalls. Built by and for the proletariat. 
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwlengi.rsi
@@ -34,8 +34,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLKommissar
-  name: kommissar's turtleneck
-  description: Built for the NCWL's Homeguard - combat turtleneck and fatigues for the kommissar.
+  name: Homeguard Officer's Turtleneck
+  description: A stiff turtleneck and pants, built for the officers of the Union. 
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwlkommissar.rsi
@@ -58,8 +58,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLTelnikSleeved
-  name: communard telnik
-  description: A telnik. Write a better description later.
+  name: Worker's Telnyashka
+  description: A simple, orange striped, telnik, with a pair of cargo pants. Perfect for off-duty work.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwltelniksleeved.rsi
@@ -69,8 +69,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLTelnikSleeveless
-  name: communard telnik (sleeveless)
-  description: A telnik. Write a better description later.
+  name: Worker's Telnyashka (Sleeveless)
+  description: A simple, orange striped, telnik, with a pair of cargo pants. Perfect for off-duty work. This one doesn't have sleeves.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwltelniksleeveless.rsi
@@ -80,8 +80,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNCWLTrainee
-  name: worker's jumpsuit
-  description: A jumpsuit. Write a better description later.
+  name: Worker's Jumpsuit
+  description: A basic jumpsuit, often worn by newly admitted workers and soldiers. Mind the chafing.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Uniform/ncwltrainee.rsi

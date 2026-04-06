@@ -184,6 +184,67 @@
       class: Energy
       size: Medium
 
+#scourer
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretSmallLaserPD
+  suffix: Small Point Defense Laser
+  name: 250cc 'Scourer' Diffusion Laser
+  description: A light energy weapons platform that converts energy into masses of hardlight and flings them at high speeds. This model uses a 'scattergun' profile to mete out effective point defense at the cost of comparitively weak projectiles.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Laser/scourer.rsi
+      drawdepth: Mobs
+      layers:
+        - state: scourer
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 1200
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 180
+      fireRate: 20
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 0
+      minAngle: 0.1
+      maxAngle: 0.1
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+        params:
+          variation: 0.12
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 0.5
+      rechargeSound:
+        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+        params:
+          pitch: 1.2
+          variation: 0.08
+    - type: BasicEntityAmmoProvider
+      proto: BulletScourer
+      capacity: 200
+      count: 200
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+    - type: HardpointAnchorableOnly
+      class: Energy
+      size: Small
+
 #retribution
 
 - type: entity
@@ -216,11 +277,13 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 200
-      fireRate: 6
-      selectedMode: FullAuto
+      projectileSpeed: 180
+      burstFireRate: 20
+      burstCooldown: .2
+      shotsPerBurst: 3
+      selectedMode: Burst
       availableModes:
-        - FullAuto
+        - Burst
       angleDecay: 0
       minAngle: 0.1
       maxAngle: 0.1
@@ -237,8 +300,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 60
-      count: 60
+      capacity: 400
+      count: 400
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly

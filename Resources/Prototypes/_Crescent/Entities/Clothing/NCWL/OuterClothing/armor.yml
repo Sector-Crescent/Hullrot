@@ -73,29 +73,32 @@
       - ClothingOuterArmorNCWLCarapace
 
 - type: entity
-  parent: ClothingOuterBaseLarge
+  parent: [ClothingOuterBaseLarge, ClothingArmorInsert]
   id: ClothingOuterArmorNCWLHeavyCarapace
-  name: communard's heavy carapace
-  description: A steel-beaten juggernaut's carapace in communard orange.
+  name: 2B11 Heavy Aramid Carapace
+  description: A simple carrier vest, constructed out of aramid fibres. This one is a variation of the 2B10, and has added pauldrons and a lap protector, for extra protection even without an armor insert. A tag on the inside reads "If yellow fibres are visible, do not use,".
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/heavy.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/heavy.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: DegradeableArmor
     armorMaxHealth: 1000
     armorType: Metallic
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 25
-        Slash: 25
-        Piercing: 45
         Heat: 25
         Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: GroupExamine
@@ -185,26 +188,29 @@
       - ClothingOuterArmorNCWLCarapaceDoktor
       - ClothingOuterArmorNCWLCarapaceVrachev
       - ClothingOuterArmorNCWLMedi
-
+      
 - type: entity
-  parent: ClothingOuterBaseLarge
+  parent: [ClothingOuterBaseLarge, ClothingArmorInsert]
   id: ClothingOuterArmorNCWLLightBodyarmor
-  name: communard's light bulletproof carapace
-  description: A simple kevlar durathread carapace with no additional shoulder or arm protection.
+  name: 2B10 Aramid Carapace
+  description: A simple aramid vest in communard brown, designed in the early days of NCWL independence. While it is an aging design, it holds inserts, and protects soldiers. A tag on the inside reads "If yellow fibres are visible, do not use,".
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/light.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/light.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: DegradeableArmor
     armorMaxHealth: 800
     armorType: Metallic
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 10
-        Piercing: 30
         Heat: 10
         Caustic: 10
   - type: ClothingSpeedModifier
@@ -222,6 +228,7 @@
     recipes:
       - ClothingOuterArmorNCWLLightBodyarmor
       - ClothingHeadHelmetNCWLBasic
+
 
 ## ncwl revamp clothing
 
@@ -402,15 +409,21 @@
 ## hardsuits ncwl revamp
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitNCWLMedi
-  name: NCWL Mk.0 "SANITAR" medical hardsuit
-  description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
+  name: 2B20D 'SANITAR' Medical Hardsuit
+  description: A variation of the 2B20 hardsuit, designed for union combat medics. The white makes you easily identified as a medical worker, for better or worse.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/infanteermedsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/infanteermedsuit.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -422,14 +435,14 @@
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 35
-        Heat: 15
-        Caustic: 15
+        Blunt: 5
+        Slash: 5
+        Piercing: 5
+        Heat: 5
+        Caustic: 5
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLMedi
@@ -446,13 +459,19 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitNCWLEngi
-  name: NCWL Mk.0 "EVERYMAN" civilian hardsuit
-  description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
+  name: 2B20C 'EVERMAN' Civilian Hardsuit
+  description: A very lightly armored, bulky hardsuit, built off of the classic 2B20 design. The design committee essentially just ripped everything out, and put in micrometeorite protection. Despite the design, the helmet will NOT protect your eyes.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/salvagehardsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/salvagehardsuit.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -464,14 +483,14 @@
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 35
-        Heat: 15
-        Caustic: 15
+        Blunt: 5
+        Slash: 5
+        Piercing: 5
+        Heat: 5
+        Caustic: 5
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLEngi
@@ -488,15 +507,21 @@
 ## hardsuits
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableLow]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableLow, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitNCWLInfantry
-  name: NCWL Mk.I "INFANTEER" hardsuit
-  description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
+  name: 2B20 'INFANTEER' Combat Hardsuit
+  description: An aging, time tested hardsuit design first put into production immediately after the revolution for the newly established Homeguard. Built out of steel, aramid fibres, and a small liner of ballistic gel, this hardsuit can protect even the weakest of the proletariat.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/infantryhardsuit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/infantryhardsuit.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -508,14 +533,14 @@
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 20
-        Slash: 15
-        Piercing: 45
-        Heat: 5
-        Caustic: 5
+        Blunt: 10
+        Slash: 10
+        Piercing: 15
+        Heat: 30
+        Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLInfantry
@@ -530,15 +555,21 @@
       - ClothingOuterHardsuitNCWLMedi
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitNCWLPetya
-  name: NCWL Mk.II "PETYA" combat hardsuit
-  description: An armored hardsuit of communard design. Comes with ballistic gel and kevlar padding. Spaceworthy.
+  name: 2B29 'PETYA' Combat Hardsuit
+  description: The next generation combat hardsuit, developed by the Homeguard Utilities Committee in Chengridz. This hardsuit features better built in protection, increased comfort, and a rudimentary HUD. While the 2B29 has already replaced the 2B20 in Chengridz, fringe systems like Taypan are only issued it in small numbers.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/commieheavy.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/commieheavy.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -550,14 +581,14 @@
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 25
-        Slash: 25
-        Piercing: 60
-        Heat: 10
-        Caustic: 25
+        Blunt: 10
+        Slash: 10
+        Piercing: 20
+        Heat: 30
+        Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.70
+    sprintModifier: 0.70
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLPetya
@@ -574,34 +605,40 @@
       - ClothingOuterHardsuitNCWLMedi
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh, ClothingArmorInsertHardsuitJugg]
   id: ClothingOuterHardsuitNCWLJuggernaut
-  name: NCWL MK.III "HADES" juggernaut hardsuit
-  description: A heavily armored, spaceworthy hardsuit commonly worn by Homeguard Liquidation teams. Just looking at this makes you want to kick some ass.
+  name: 2B30 'HADES' Heavy Combat Hardsuit
+  description: An enormous, heavily armored suit designed to protect the wearer from damn near anything. The hardsuit itself provides surprisingly high protection, and can carry either two compact plates, or one full sized plate. Unsurprisingly, this comes at that cost of mobility. Kick ass, take names.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/commienaut.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/NCWL/OuterClothing/commienaut.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.4
   - type: DegradeableArmor
-    armorMaxHealth: 3000
-    armorType: Ceramic
+    armorMaxHealth: 750
+    armorType: Metallic
     armorRepair: HomelandAlloy
     initialModifiers:
       flatReductions:
-        Blunt: 35
-        Slash: 25
-        Piercing: 90
+        Blunt: 15
+        Slash: 15
+        Piercing: 30
         Heat: 35
-        Caustic: 25
+        Caustic: 35
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.5
+    sprintModifier: 0.5
   - type: HeldSpeedModifier
   - type: Reflect
     spread: 270
@@ -628,8 +665,8 @@
 - type: entity
   parent: ClothingOuterEVASuitBase
   id: ClothingOuterNCWLEVA
-  name: union EVA suit
-  description: A spaceworthy suit for the working man. Comes in communard colors.
+  name: 6U11 EVA Suit
+  description: A simple, brown and black aramid EVA suit, designed for emergencies or workers who do not often see EVA work. 
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/softsuit.rsi

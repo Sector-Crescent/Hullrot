@@ -14,8 +14,8 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "http://cdn-ss14.erisws.com:8992/"
-FORK_ID = "hullrot"
+ROBUST_CDN_URL = "https://cdn.sector-crescent.space/"
+FORK_ID = "space.sector-crescent.hullrot"
 
 def main():
     session = requests.Session()
