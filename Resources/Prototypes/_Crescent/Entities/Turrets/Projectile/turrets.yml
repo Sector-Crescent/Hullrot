@@ -1,3 +1,70 @@
+#15mm harvester
+
+- type: entity
+  parent: BaseTurretShipgun
+  id: WeaponTurretSmallBulletPD
+  suffix: Point Defense, Small Ballistics
+  name: 15mm 'Harvester' Revolver Cannon
+  description: A dated yet still potent point defense system that served as the progenitor for the 'Starburst' weapons platform. It's modern applications outside of it's keen point defense role are negligible.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Turrets/Projectile/harvester.rsi
+      drawdepth: Mobs
+      layers:
+        - state: harvester
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 1200
+          # TODO: Construction graph
+          behaviors:
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+          ents: []
+    - type: Gun
+      fireOnDropChance: 0
+      projectileSpeed: 180
+      fireRate: 20
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      angleDecay: 1
+      minAngle: 0.4
+      maxAngle: 2.8
+      angleIncrease: 0.15
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: Magazine15mm
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - Magazine15mm
+        gun_chamber:
+          name: Chamber
+          startingItem: Cartridge15mm
+          priority: 1
+          whitelist:
+            tags:
+              - Cartridge15mm
+    - type: ApcPowerReceiver
+      powerLoad: 2000
+    - type: HardpointAnchorableOnly
+      class: Ballistic
+      size: Small
+    - type: MagazineAmmoProvider
+
 #20mm screamer
 
 - type: entity
@@ -30,15 +97,15 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      fireRate: 6
-      projectileSpeed: 140
+      fireRate: 10
+      projectileSpeed: 160
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       angleDecay: 1
       minAngle: 2
       maxAngle: 4.5
-      angleIncrease: 0.25
+      angleIncrease: 0.75
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ItemSlots
       slots:
@@ -67,7 +134,7 @@
 
 - type: entity
   parent: BaseTurretShipgun
-  id: WeaponTurretSmallMachinegunNCWL
+  id: WeaponTurretSmallMachinegunNCWL #DONTUSE
   suffix: Machinegun, Small Ballistics
   name: Homeguard 20mm 'Warthog' Rotary Cannon
   description: A light and reliable gatling system based on the 20mm 'Screamer' for both point defense and offensive purposes. It's relatively low fire rate negates overheating. It's large magazine doesnt require frequent loading. Upgraded with a heavier barrel for better accuracy and features internal reinforcements.
@@ -224,15 +291,16 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 120
-      fireRate: 3
-      selectedMode: FullAuto
+      projectileSpeed: 140
+      burstFireRate: 20
+      shotsPerBurst: 2
+      burstCooldown: 0.15
+      selectedMode: Burst
       availableModes:
-        - FullAuto
-      angleDecay: 1
-      minAngle: 2.5
-      maxAngle: 5.5
-      angleIncrease: 0.5
+        - Burst
+      angleDecay: 2
+      minAngle: 1
+      maxAngle: 5
       soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
     - type: ContainerContainer
       containers:
@@ -290,8 +358,8 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 120
-      fireRate: 3
+      projectileSpeed: 107
+      fireRate: 8
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -358,15 +426,15 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
+      projectileSpeed: 125
       fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       angleDecay: 0.5
       minAngle: 1.5
-      maxAngle: 3
-      angleIncrease: 0.25
+      maxAngle: 5
+      angleIncrease: 1
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: ContainerContainer
       containers:
@@ -495,7 +563,7 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 200
+      projectileSpeed: 150
       fireRate: 0.3
       selectedMode: FullAuto
       availableModes:

@@ -272,8 +272,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 160
-      fireRate: 1.2
+      projectileSpeed: 60
+      fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -281,8 +281,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 5
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocket
       whitelist:
         tags:
@@ -324,7 +323,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
+      projectileSpeed: 115
       fireRate: 1.5
       selectedMode: FullAuto
       availableModes:
@@ -333,8 +332,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 8
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocketGSC
       whitelist:
         tags:
@@ -385,8 +383,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 4
-      fillWithDoAfter: true
-      fillDelay: 2
+      fillWithDoAfter: false
       proto: Cartridge95mmRocketNCWL
       whitelist:
         tags:
@@ -436,15 +433,14 @@
       zeroVisible: true
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 120
-      fireRate: 0.25
+      projectileSpeed: 60
+      fireRate: 0.1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     - type: BallisticAmmoProvider
-      fillWithDoAfter: true
-      fillDelay: 3
+      fillWithDoAfter: false
       cycleable: false
       capacity: 4
       proto: Cartridge240mmRocket
@@ -494,15 +490,14 @@
       zeroVisible: true
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 110
+      projectileSpeed: 100
       fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     - type: BallisticAmmoProvider
-      fillWithDoAfter: true
-      fillDelay: 3
+      fillWithDoAfter: false
       cycleable: false
       capacity: 4
       proto: Cartridge240mmRocketNCWL
@@ -552,8 +547,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 200
-      fireRate: 0.35
+      projectileSpeed: 60
+      fireRate: 0.1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -561,8 +556,7 @@
     - type: BallisticAmmoProvider
       cycleable: false
       capacity: 3
-      fillWithDoAfter: true
-      fillDelay: 6
+      fillWithDoAfter: false
       proto: Cartridge95mmRocketNCWL
       whitelist:
         tags:

@@ -1,0 +1,181 @@
+#All of the MRE components that can spawn in the NCWL Ration Packs. 
+#Bases
+- type: entity
+  abstract: true
+  parent: FoodTinBase
+  id: NcwlRationComponentBase
+  name: NCWL Ration Can
+  description: A ration can, manufactured by the NCWL
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+  - type: Openable
+    openableByHand: true
+    sound:
+      path: /Audio/Items/can_open3.ogg
+  - type: Item
+    size: Small
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: NwclRationComponentTrashBase
+  name: Emtpy Ration Can
+  description: An empty ration can, manufactured by the NCWL
+  components:
+  - type: Item
+    size: Small
+
+#Mains
+- type: entity
+  name: Ration Can (Menu 1, Mothroach Chunks in Fat)
+  parent: NcwlRationComponentBase
+  id: RationComponentNcwlMainMoth
+  description: A large can with a red label and the NCWL Homeguard crest. This one contains chunks of mothroach meat, suspended in liquid fat. The Homeguard Committee in Chengridz denies all claims that anything other than breast meat is used for these rations.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - meaty
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/ncwlrationmoth.rsi
+      state: icon
+    - type: Item
+    - type: Food
+      trash:
+      - NcwlRationComponentTrashMoth
+ 
+- type: entity
+  name: Ration Can (Menu 2, Soy Protein Chunks, Beef Flavor)
+  parent: NcwlRationComponentBase
+  id: RationComponentNcwlMainSoybeef
+  description: A large can with a red and green label, with the NCWL Homeguard crest. This one contains lumps of soy protein, with a bunch of artificial beef flavor. Unlike Imperial soy rations, the Homeguard Committee has made zero attempt to replicate the texture of real beef.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - falsemeat
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoybeef.rsi
+      state: icon
+    - type: Item
+    - type: Food
+      trash:
+      - NcwlRationComponentTrashSoybeef
+      
+- type: entity
+  name: Ration Can (Menu 3, Lard with Protein)
+  parent: NcwlRationComponentBase
+  id: RationComponentNcwlMainLard
+  description: A large can with a blue label and the NCWL Homeguard crest. This one contains large pieces of lard, fortified with protein powder. The lard is made very poorly, and the protein powder leaves it grainy. Best chase this with something.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - metallic
+        - tingly
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/ncwlrationlard.rsi
+      state: icon
+    - type: Item
+    - type: Food
+      trash:
+      - NcwlRationComponentTrashLard
+      
+- type: entity
+  name: Ration Can (Menu 4, Soy Balls in Sauce)
+  parent: NcwlRationComponentBase
+  id: RationComponentNcwlMainSoyballs
+  description: A large can with a red label and the NCWL Homeguard crest. This one contains imitation meatballs, made out of soy protein, and a generous helping of some kind of sauce. You really hit the jackpot.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - meaty
+        - metallic
+        - oily
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoyballs.rsi
+      state: icon
+    - type: Item
+    - type: Food
+      trash:
+      - NcwlRationComponentTrashLard
+
+- type: entity
+  name: Ration Can (Menu 5, Vegetable Soup)
+  parent: NcwlRationComponentBase
+  id: RationComponentNcwlMainSoup
+  description: A large can with a red and yellow label, with the NCWL Homeguard crest. This one contains a thin soup, made with vegetable broth, carrots, potatoes, and peas. You can thank the board in Malpais for this one.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - meaty
+        - metallic
+        - oily
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoup.rsi
+      state: icon
+    - type: Item
+    - type: Food
+      trash:
+      - NcwlRationComponentTrashSoup
+#Trash
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: NcwlRationComponentTrashMoth
+  name: Empty Ration Can (Menu 1, Mothroach Chunks in Fat)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ncwlrationmoth.rsi
+    state: trash
+  - type: Item
+  
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: NcwlRationComponentTrashSoybeef
+  name: Empty Ration Can (Menu 2, Soy Protein Chunks, Beef Flavor)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoybeef.rsi
+    state: trash
+  - type: Item
+  
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: NcwlRationComponentTrashLard
+  name: Empty Ration Can (Menu 3, Lard with Protein)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ncwlrationlard.rsi
+    state: trash
+  - type: Item
+  
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: NcwlRationComponentTrashSoyballs
+  name: Empty Ration Can (Menu 4, Soy Balls in Sauce)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoyballs.rsi
+    state: trash
+  - type: Item
+  
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: NcwlRationComponentTrashSoup
+  name: Empty Ration Can (Menu 5, Vegetable Soup)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoup.rsi
+    state: trash
+  - type: Item

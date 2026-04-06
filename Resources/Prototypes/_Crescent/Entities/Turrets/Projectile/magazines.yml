@@ -1,3 +1,46 @@
+#harvester
+- type: entity
+  id: Magazine15mm
+  name: 15mm Light Ordnance drum
+  description: A munitions drum designed for older generation 15mm autocannons. Contains standard 'armor-piercing' rounds. Nowadays only truly effective against lightly armored missiles and the occasional boarder.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+    - Magazine15mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge15mm
+    proto: Cartridge15mm
+    capacity: 250
+    soundRack:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        variation: 0.05
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+      params:
+        variation: 0.05
+  - type: Item
+    size: Large
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/harvester.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
 #vulcan
 - type: entity
   id: Magazine35mm

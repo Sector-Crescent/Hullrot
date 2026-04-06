@@ -26,45 +26,49 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
 
     private void PreventCollide(Entity<RequireProjectileTargetComponent> ent, ref PreventCollideEvent args)
     {
-        if (args.Cancelled)
-            return;
-
-        if (!ent.Comp.Active)
+        if (args.Cancelled || !ent.Comp.Active)
             return;
 
         var other = args.OtherEntity;
-        if (TryComp(other, out ProjectileComponent? projectile) &&
-            CompOrNull<TargetedProjectileComponent>(other)?.Target != ent)
+
+        if (!Exists(ent) || !Exists(other))
+            return;
+
+        if (!TryComp(other, out ProjectileComponent? projectile))
+            return;
+
+        var targeted = CompOrNull<TargetedProjectileComponent>(other);
+        if (targeted?.Target == ent)
+            return;
+
+        var shooter = projectile.Shooter;
+        if (!shooter.HasValue || shooter.Value == EntityUid.Invalid || !Exists(shooter.Value))
         {
-            // Prevents shooting out of while inside of crates
-            var shooter = projectile.Shooter;
-            if (!shooter.HasValue)
-                return;
-
-
-            if (!_container.IsEntityOrParentInContainer(shooter.Value))
-            {
-                var hitChance = _cfgManager.GetCVar(CCVars.ProneMobHitChance);
-
-                // Check if this entity is a mob capable of going prone
-                // Skip if false or hit chance is 0
-                if (hitChance > 0 && HasComp<StandingStateComponent>(ent))
-                {
-                    // TODO: Replace with RandomPredicted once the engine PR is merged
-                    var seed = SharedRandomExtensions.HashCodeCombine(new() { (int) _timing.CurTick.Value, GetNetEntity(other).Id });
-                    var rand = new System.Random(seed);
-
-                    if (hitChance < 100 && hitChance <= rand.Next(100))
-                    {
-                        args.Cancelled = true;
-                    }
-                }
-            }
-            else
-            {
-                args.Cancelled = true;
-            }
+            args.Cancelled = true;
+            return;
         }
+
+        if (_container.IsEntityOrParentInContainer(shooter.Value))
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        var hitChance = _cfgManager.GetCVar(CCVars.ProneMobHitChance);
+
+        if (hitChance <= 0 || !HasComp<StandingStateComponent>(ent))
+            return;
+
+        var seed = SharedRandomExtensions.HashCodeCombine(new()
+        {
+            (int) _timing.CurTick.Value,
+            GetNetEntity(other).Id
+        });
+
+        var rand = new System.Random(seed);
+
+        if (hitChance < 100 && hitChance <= rand.Next(100))
+            args.Cancelled = true;
     }
 
     private void SetActive(Entity<RequireProjectileTargetComponent> ent, bool value)

@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBeltNfsdWebbing
   id: ClothingBeltNCWLWebbing
-  name: homeguard webbing
-  description: Built for the NCWL's Homeguard - synthread webbings woven with combat pouches.
+  name: 1W5 Webbing Gear
+  description: A generic set of suspenders, combined with a belt, and adorned with all kinds of pouches. Carries all your magazines and other gear.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Belt/ncwl_webbing.rsi
@@ -14,8 +14,8 @@
 - type: entity
   parent: ClothingBeltNfsdWebbing
   id: ClothingBeltNCWLPouches
-  name: homeguard drop pouches
-  description: Built for the NCWL's Homeguard - light synthread webbing with pouches. Intended for engineers and drop-troopers.
+  name: 1W8 Drop Pouches
+  description: A large bundle of load bearing pouches, suspended off the shoulders. Carries gear just the same as webbing gear, with a little less security.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Belt/ncwl_droppouches.rsi

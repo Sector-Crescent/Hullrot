@@ -3,8 +3,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitMetrocop
-  name: SHI-WTI OTA-1 "Metrocop" security softsuit
-  description: A softsuit padded with durathread soft plates. Not commonly seen due to its lack of protection but is very durable.
+  name: SHI-WTI CMP-1 "Metropolis" security softsuit
+  description: A softsuit padded with durathread soft plates. very effective against low-power rounds and buckshot but weak against rifle rounds. Commony used by peace enforcers in mega cities.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
@@ -41,15 +41,15 @@
 #      - ClothingOuterHardsuitMetrocop
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: CombineSuit
+      collection: MetrocopSuit
       params:
-        volume: -5
+        volume: -7 # dawg this shit loud and i cant be bothered to make it quieter
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
   id: ClothingOuterHardsuitCombine
   name: SHI-WTI OTA-3 "Combine" combat hardsuit
-  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments,
+  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi

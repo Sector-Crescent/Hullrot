@@ -415,55 +415,50 @@
     gameMapsByID:
       PortBalreska:
         gameMapID: PortBalreska
-        posX: 0
-        posY: -8000
+        posX: -4250
+        posY: -8450
         IFFColor: Orange
         IFFFaction: NCWL
-#      Dochenskaya:
-#        gameMapID: Dochenskaya
-#        posX: -9000
-#        posY: 0
-#        IFFColor: IndianRed
-#        IFFFaction: TFSC
-#      GliessSanto:
-#        gameMapID: GliessSanto
-#        posX: 7000
-#        posY: -1000
-#        IFFColor: White
-      Tatsumoto:
-        gameMapID: Tatsumoto
-        posX: 7000
-        posY: 1000
-        IFFColor: White
-        IFFFaction: SHI
-      Countsman:
-        gameMapID: Countsman
-        posX: 0
-        posY: 8000
-        IFFColor: Purple
-        IFFFaction: DSM
-#      TribalHideout:
-#        gameMapID: TribalHideout
-#        posX: 8000
-#        posY: 0
-#        IFFColor: White
-#        IFFFaction: TAP
-#      Jackal:
-#        gameMapID: Jackal
-#        posX: -8000
-#         posY: 1000
-#        IFFColor: IndianRed
-#        IFFFaction: TFSC
-      Dawnbreaker:
-        gameMapID: Dawnbreaker
-        posX: -8000
-        posY: -1000
+      Dochenskaya:
+        gameMapID: Dochenskaya
+        posX: -11000
+        posY: 1500
         IFFColor: IndianRed
         IFFFaction: TFSC
-      Graveyard:
-        gameMapID: Graveyard
-        posX: -5500
-        posY: 5500
+      Tatsumoto:
+        gameMapID: Tatsumoto
+        posX: 8000
+        posY: -245
+        IFFColor: White
+        IFFFaction: SHI
+      KalDominus:
+        gameMapID: KalDominus
+        posX: 4450
+        posY: 8250
+        IFFColor: Purple
+        IFFFaction: DSM
+      TribalHideout:
+        gameMapID: TribalHideout
+        posX: 6940
+        posY: -9200
+        IFFColor: White
+        IFFFaction: TAP
+      Jackal:
+        gameMapID: Jackal
+        posX: -8500
+        posY: 3000
+        IFFColor: IndianRed
+        IFFFaction: TFSC
+      Dawnbreaker:
+        gameMapID: Dawnbreaker
+        posX: -9270
+        posY: -450
+        IFFColor: IndianRed
+        IFFFaction: TFSC
+#      Graveyard:
+#        gameMapID: Graveyard
+#        posX: -5500
+#        posY: 5500
       #StrandedShip:
         #gameMapID: StrandedShip
         #posX: 4275
@@ -500,26 +495,26 @@
         posY: 0
       Taypan1AsteroidBelt:
         gameMapID: Taypan1AsteroidBelt
-        posX: 5500
-        posY: 5500
+        posX: 7000
+        posY: 4500
       Taypan2AsteroidBelt:
         gameMapID: Taypan2AsteroidBelt
+        posX: -4500
+        posY: -3500
+      Graveyard:
+        gameMapID: Graveyard
+        posX: 3920
+        posY: -5550
+      Hayes:
+        gameMapID: Hayes
+        posX: -7320
+        posY: 120
+        IFFColor: IndianRed
+        IFFFaction: TFSC
+      AncientBattlefield:
+        gameMapID: AncientBattlefield
         posX: -5500
-        posY: -5500
-      TribalScrapyard:
-        gameMapID: TribalScrapyard
-        posX: 5500
-        posY: -5500
-#      Hayes:
-#        gameMapID: Hayes
-#        posX: -7000
-#        posY: 0
-#        IFFColor: IndianRed
-#        IFFFaction: TFSC
-      #AncientBattlefield:
-        #gameMapID: AncientBattlefield
-        #posX: -5500
-        #posY: 5500
+        posY: 6500
 
 
 ### Low Pop Alternate Modes ###
@@ -545,8 +540,8 @@
         posY: -8000
         IFFColor: Orange
         IFFFaction: NCWL
-      Countsman:
-        gameMapID: Countsman
+      KalDominus:
+        gameMapID: KalDominus
         posX: 0
         posY: 8000
         IFFColor: Purple

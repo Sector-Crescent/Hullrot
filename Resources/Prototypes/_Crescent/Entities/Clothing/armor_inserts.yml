@@ -1,0 +1,453 @@
+#Bases 
+
+- type: entity
+  abstract: true
+  id: ClothingArmorInsert
+  components:
+  - type: ArmorPlateHolder
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,3
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+
+- type: entity
+  abstract: true
+  id: ClothingArmorInsertHardsuit
+  components:
+  - type: ArmorPlateHolder
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,2
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+        
+- type: entity
+  abstract: true
+  id: ClothingArmorInsertHardsuitJugg
+  components:
+  - type: ArmorPlateHolder
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,3
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+        
+#Hardsuit inserts - First generation
+#Hardened steel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateSteelInsertHardsuit
+  name: Compact Steel Insert
+  description: A compacted version of the regular steel ballistic inserts seen in most infantry combat. While it can still withstand several hits, its durability and general protectiveness is lacking, however it fits in most hardsuits, allowing for spaceworthy ballistic protection.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: steel
+  - type: Item
+    size: Small
+    shape: 
+    - 0,0,2,2
+  - type: ArmorPlateItem
+    maxDurability: 60
+    walkSpeedModifier: 0.9
+    sprintSpeedModifier: 0.9
+    staminaDamageMultiplier: 0.4
+    damageMultipliers:
+      Piercing: 0.7
+      Blunt: 0.6
+    absorptionRatios:
+      Piercing: 0.8
+      Blunt: 0.6
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Basic ceramic plate
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateCeramicInsertBasicHardsuit
+  name: Compact Alumina Insert
+  description: A compact armor insert, using a similar construction method to the full sized alumina inserts. This one uses fewer layers, and has smaller dimensions. This makes it incredibly fragile, but it can still fully absorb a few projectiles, which will save your life.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: ceramic
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,2,2
+  - type: ArmorPlateItem
+    maxDurability: 140
+    walkSpeedModifier: 1
+    sprintSpeedModifier: 1
+    staminaDamageMultiplier: 0.6
+    damageMultipliers:
+      Piercing: 2
+      Blunt: 2
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 140
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Hardsuit inserts - Second generation
+# Tempered plasteel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlatePlasteelInsertHardsuit
+  name: Compact Plasteel Insert
+  description: A highly advanced plate insert, made out of tempered plasteel and aramid fibres. Despite being small in size, the incredibly durable material allows for relatively high projectile protection, allowing for those in hardsuits to fare reasonably well against firearms.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: plasteel
+  - type: Item
+    size: Small
+    shape: 
+    - 0,0,2,2
+  - type: ArmorPlateItem
+    maxDurability: 150
+    walkSpeedModifier: 0.8
+    sprintSpeedModifier: 0.8
+    staminaDamageMultiplier: 0.4
+    damageMultipliers:
+      Piercing: 0.9
+      Blunt: 0.8
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Advanced ceramic
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateCeramicInsertAdvancedHardsuit
+  name: Compact Boron Carbide Insert
+  description: An advanced armor insert, made of numerous boron carbide tiles, adhered to a polymer backing by a hard glue. Boron carbide allows the same protection as alumina, while also being lighter and more durable. The cost of this durability, is that getting shot will knock you on your ass. This one is significantly smaller than the regular ones.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: PCK
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 150
+    walkSpeedModifier: 1
+    sprintSpeedModifier: 1
+    staminaDamageMultiplier: 1
+    damageMultipliers:
+      Piercing: 1.5
+      Blunt: 1.5
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+            
+# Infantry inserts - First generation
+# Hardened steel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateSteelInsert
+  name: Steel Insert
+  description: An incredibly basic armor plate, designed to be inserted into a vest or carrier. This one uses a core of hardened steel, adhered to a composite backing. This will withstand several impacts to the same spot, at the cost of minor spalling.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: steel
+  - type: Item
+    size: Small
+    shape: 
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 100
+    walkSpeedModifier: 0.7
+    sprintSpeedModifier: 0.7
+    staminaDamageMultiplier: 0.4
+    damageMultipliers:
+      Piercing: 0.7
+      Blunt: 0.6
+    absorptionRatios:
+      Piercing: 0.8
+      Blunt: 0.8
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Stabproof Plate
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateKevlarInsert
+  name: Stabproof Insert
+  description: A fairly thin "plate", made out of several dozen layers of aramid fibres. While it is specifically designed to defend against melee weapons, the aramid fibres are able to partially defend against some smaller bullets.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: plastic
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 200
+    walkSpeedModifier: 1
+    sprintSpeedModifier: 1
+    staminaDamageMultiplier: 0.8
+    absorptionRatios:
+      Piercing: 0.1
+      Blunt: 1
+      Slash: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Basic Ceramic Plate
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateCeramicInsertBasic
+  name: Alumina Insert
+  description: An armor insert, comprised of several dozen Alumina hextiles, held to a plastic backer by a polymer glue, and wrapped in aramid fibres. Rather than stopping a bullet with hardness, the ceramic tiles are designed to shatter when hit, fully absorbing the force of the round. While this plate will completely absorb damage from a projectile, it breaks much faster.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: ceramic
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 250
+    walkSpeedModifier: 0.9
+    sprintSpeedModifier: 0.9
+    staminaDamageMultiplier: 0.7
+    damageMultipliers:
+      Piercing: 3
+      Blunt: 3
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Infantry Inserts - Second Generation
+# Tempered plasteel
+- type: entity
+  parent: BaseItem
+  id: ArmorPlatePlasteelInsert
+  name: Plasteel Insert
+  description: An advanced trauma plate built out of a solid sheet of plasteel. While the plasteel construction only provides slightly better protection that regular steel, it is significantly more durable, and can withstand many impacts. Consumers report that sustained impacts are likely to severely impair balance.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: plasteel
+  - type: Item
+    size: Small
+    shape: 
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 300
+    walkSpeedModifier: 0.7
+    sprintSpeedModifier: 0.7
+    staminaDamageMultiplier: 0.4
+    damageMultipliers:
+      Piercing: 0.9
+      Blunt: 0.8
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125
+
+# Advanced ceramic plate
+- type: entity
+  parent: BaseItem
+  id: ArmorPlateCeramicInsertAdvanced
+  name: Boron Carbide Insert
+  description: An advanced armor insert, made of numerous boron carbide tiles, adhered to a polymer backing by a hard glue. Boron carbide allows the same protection as alumina, while also being lighter and more durable. The cost of this durability, is that getting shot will knock you on your ass.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: PCK
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,3,3
+  - type: ArmorPlateItem
+    maxDurability: 350
+    walkSpeedModifier: 1
+    sprintSpeedModifier: 1
+    staminaDamageMultiplier: 0.6
+    damageMultipliers:
+      Piercing: 2
+      Blunt: 2
+    absorptionRatios:
+      Piercing: 1
+      Blunt: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior 
+        sound:
+          path: /Audio/_Crescent/armor_break.ogg
+          params:
+            volume: 5
+            variation: 0.125

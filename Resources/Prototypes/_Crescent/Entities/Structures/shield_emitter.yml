@@ -1,5 +1,5 @@
 # GUIDE:
-# T1 - 7500 HP - 30 SEC COOLDOWN 
+# T1 - 7500 HP - 30 SEC COOLDOWN
 # T2 - 15000 HP - 60 SEC COOLDOWN
 # T3 - 30000 HP - 120 SEC COOLDOWN
 # TODO: DSM-SPECIFIC T0 SHIELD WITH 3500 HP AND 20 SECOND COOLDOWN
@@ -111,7 +111,7 @@
   name: NT-630 'Bulwark' deflector emitter
   description: A complicated array of machinery - guzzles power and maintains a bubble deflector shield around the mother vessel. Overheats with too much use.
   components:
-  - type: ShipShieldEmitter 
+  - type: ShipShieldEmitter
     damageLimit: 15000
     healPerSecond: 100
     damageExp: 1.0
@@ -153,7 +153,7 @@
   description: A shield emitter reverse-engineered by SHI from ancient blueprints. Outputs a weak but fast-recharging bubble shield around a vessel.
   components:
   - type: ShipShieldEmitter
-    damageLimit: 7500
+    damageLimit: 1000
     healPerSecond: 50
     damageExp: 1.0
     powerDraw: 5000
