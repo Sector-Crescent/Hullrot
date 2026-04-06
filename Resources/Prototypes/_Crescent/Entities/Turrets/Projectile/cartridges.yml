@@ -1,3 +1,26 @@
+#harvester
+- type: entity
+  id: Cartridge15mm
+  name: cartridge (15mm FMJ)
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge15mm
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: Bullet15mmBase
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/harvester.rsi
+    layers:
+    - state: ap
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
 #screamer
 - type: entity
   id: Cartridge20mm

@@ -13,14 +13,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 320
+        Structural: 250
         Radiation: 80
   - type: PointLight
     radius: 3.5
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1500
+    lifetime: 10 #1000
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:

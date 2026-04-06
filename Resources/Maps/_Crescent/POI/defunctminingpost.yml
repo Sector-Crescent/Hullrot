@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 02/08/2026 19:37:00
-  entityCount: 4085
+  entityCount: 4086
 maps: []
 grids:
 - 1
@@ -30740,6 +30740,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,1.5
       parent: 1
+    - type: WarpPoint
+      location: Defunct Mining Outpost
 - proto: WaterCooler
   entities:
   - uid: 3988
@@ -31348,5 +31350,33 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-0.5
+      parent: 1
+- proto: DeepWildBiomeSource
+  entities:
+  - uid: 4086
+    components:
+    - type: Transform
+      pos: -0.94167554,8.267071
+      parent: 1
+- proto: DeadspaceSource
+  entities:
+  - uid: 4087
+    components:
+    - type: Transform
+      pos: -0.94167554,8.267071
+      parent: 1
+- proto: BiomeAsteroidFieldSource
+  entities:
+  - uid: 4088
+    components:
+    - type: Transform
+      pos: -0.94167554,8.267071
+      parent: 1
+- proto: TaypaniAbyssSource
+  entities:
+  - uid: 4089
+    components:
+    - type: Transform
+      pos: -0.94167554,8.267071
       parent: 1
 ...

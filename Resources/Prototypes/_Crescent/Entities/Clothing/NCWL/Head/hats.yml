@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLBeret
-  name: homeguard officer's beret
-  description: An officer's beret in NCWL colors. Has the golden communard insignia on the front.
+  name: 6U15 Officer's Beret
+  description: A simple orange beret, adorned with a golden pin depicting the NCWL crest. Only available to Homeguard officers.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlberet.rsi
@@ -12,8 +12,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLBeretAdmiral
-  name: administrator's peaked cap
-  description: An officer's cap in high-ranking NCWL colors. Has the golden communard insignia on the front.
+  name: 6U13 Peaked Cap
+  description: A peaked cap, with a solid brim, fashioned in Chengridz Grey. Only available to high ranking Homeguard officers, or bureaucrats.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlofficerberet.rsi
@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLTanker
-  name: flight technician's cap
-  description: A communard cap favored often by fighter jockeys and hangar techs.
+  name: 6U7 Padded Hat
+  description: A large, thick, padded piece of headgear, often worn by mech pilots and cargo workers. They no longer strongly muffle sound, unlike the ancient helmets they were designed after.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwltanker.rsi
@@ -34,8 +34,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLCapsoft
-  name: homeguard cap
-  description: A patrol cap in communard colors.
+  name: 6U1 Patrol Cap
+  description: A perfectly simple patrol cap, in communard orange. A tag on the inside reads, "Manufactured in Chengridz Reallignment Facility #6,", whatever that means.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlcap.rsi
@@ -45,8 +45,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLCapsoftMedical
-  name: homeguard combat medic's cap
-  description: A combat medic's patrol cap in sterile colors.
+  name: 6U1M Patrol Cap
+  description: A variant of the 6U1, colored white and adorned with a cross. You figure this hat is probably for a medic.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlmedcap.rsi
@@ -56,8 +56,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLKommissarHat
-  name: kommissar's peaked cap
-  description: The kommissar's beloved hat. He doesn't go anywhere without it.
+  name: 6U12 Homeguard Peaked Cap
+  description: A simple yet authoritative peaked cap in communard orange, issued to high ranking Homeguard officers. This one looks well used, and probably belongs to someone very important.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlpeakedcap.rsi
@@ -67,8 +67,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatNCWLBeretMedi
-  name: director's beret
-  description: An officer's beret in NCWL colors. Has the golden communard insignia on the front.
+  name: 6U15M Officer's Beret
+  description: A simple white beret, adorned with a golden pin depicting the NCWL crest. Issued specifically to medical directors of the Vrachev Medical Union.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/vrachevberet.rsi
@@ -78,8 +78,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatMVDHat
-  name: mvd officer's peaked cap
-  description: A red peaked cap with a shine that would make a proletariat weep.
+  name: 6U20 Peaked Cap
+  description: A red peaked cap, constructed out of real leather. You might as well put yourself in handcuffs if you see someone wearing this.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/mvdpeakedcap.rsi

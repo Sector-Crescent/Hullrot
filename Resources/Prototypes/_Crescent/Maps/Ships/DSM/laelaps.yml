@@ -16,6 +16,10 @@
     Laelaps:
       stationProto: StandardCrescentVessel
       components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: cruiser
         - type: StationNameSetup
           mapNameTemplate: 'DSM Laelaps {1}'
           nameGenerator:

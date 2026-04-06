@@ -1,0 +1,41 @@
+- type: entity
+  parent: LightTubeCrystalRed
+  name: red light tube
+  description: A utilitarian light for the rigors of space combat while being easy on the eyes.
+  id: ShuttleLightRedTube
+  components:
+  - type: LightBulb
+    color: "#5C0F0F"
+    lightEnergy: 3
+    lightRadius: 8
+    lightSoftness: 0.5
+    BurningTemperature: 350
+    PowerUse: 100
+
+- type: entity
+  parent: BaseLightTube
+  name: shuttle light tube
+  description: A high power high energy bulb for the depths of space. Salty.
+  id: ShuttleLightTube
+  components:
+  - type: LightBulb
+    color: "#B87411"
+    lightEnergy: 1
+    lightRadius: 5
+    lightSoftness: 0.9
+    BurningTemperature: 350
+    PowerUse: 100
+
+- type: entity
+  parent: BaseLightbulb
+  name: shuttle light bulb
+  description: A high power high energy bulb for the depths of space. Salty.
+  id: ShuttleLightBulb
+  components:
+  - type: LightBulb
+    color: "#4d3009"
+    lightEnergy: 2
+    lightRadius: 5
+    lightSoftness: 0.9
+    BurningTemperature: 350
+    PowerUse: 100
