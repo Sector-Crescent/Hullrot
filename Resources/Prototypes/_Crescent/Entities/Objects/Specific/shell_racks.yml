@@ -1,0 +1,87 @@
+# Melee weapon racks
+- type: entity
+  id: ShellRackBase
+  parent: WeaponRackBase
+  name: shell rack
+  description: Effectively a pallet with mounting for shells and missiles.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _NF/Structures/Furniture/Armory/melee_weapon_racks.rsi
+    snapCardinals: true
+    layers:
+    - state: base_generic_meleerack
+#    - state: locked
+#      map: [ locked ]
+#    - state: unlocked
+#      map: [ unlocked ]
+  - type: Appearance
+  - type: EntityStorageVisuals
+  - type: ItemSlots
+    slots:
+      weapon1_slot:
+        name: stored shell
+        whitelist:
+          tags:
+            - Missile
+        insertOnInteract: true
+        priority: 8
+      weapon2_slot:
+        name: stored shell
+        whitelist:
+          tags:
+            - Missile
+        insertOnInteract: true
+        priority: 7
+      weapon3_slot:
+        name: stored shell
+        whitelist:
+          tags:
+            - Missile
+        insertOnInteract: true
+        priority: 6
+      weapon4_slot:
+        name: stored shell
+        whitelist:
+          tags:
+            - Missile
+        insertOnInteract: true
+        priority: 5
+      weapon5_slot:
+        name: stored shell
+        whitelist:
+          tags:
+            - Missile
+        insertOnInteract: true
+        priority: 4
+  - type: ItemMapper
+    mapLayers:
+      weapon_generic_melee1:
+        minCount: 1
+        whitelist:
+          tags:
+            - Missile
+      weapon_generic_melee2:
+        minCount: 2
+        whitelist:
+          tags:
+            - Missile
+      weapon_generic_melee3:
+        minCount: 3
+        whitelist:
+          tags:
+            - Missile
+      weapon_generic_melee4:
+        minCount: 4
+        whitelist:
+          tags:
+            - Missile
+      weapon_generic_melee5:
+        minCount: 5
+        whitelist:
+          tags:
+            - Missile
+    sprite: _NF/Structures/Furniture/Armory/melee_weapon_racks.rsi
+  - type: Construction
+    graph: WeaponRackConstructionGraph
+    node: MeleeRackNode
