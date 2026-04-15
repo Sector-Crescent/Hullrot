@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 03/30/2026 02:28:27
-  entityCount: 751
+  time: 03/30/2026 23:25:40
+  entityCount: 748
 maps: []
 grids:
 - 1
@@ -1270,7 +1270,6 @@ entities:
             id: WarnFullGreyscale
           decals:
             979: -3,7
-            1054: 3,7
         - node:
             color: '#EFB34196'
             id: WarnLineE
@@ -1730,21 +1729,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,8.5
       parent: 1
-  - uid: 749
-    components:
-    - type: Transform
-      pos: -8.5,3.5
-      parent: 1
-  - uid: 750
-    components:
-    - type: Transform
-      pos: 9.5,3.5
-      parent: 1
-  - uid: 751
-    components:
-    - type: Transform
-      pos: 0.5,10.5
-      parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
   - uid: 40
@@ -2188,8 +2172,8 @@ entities:
     - type: NamedModules
       buttonNames:
       - Fire 240mm 'Gargoyle' Torpedo
-      - Toggle 35mm 'Scout' Autocannons
-      - Module C
+      - Toggle Port-Mounted Autocannon
+      - Fire Starboard-Mounted Cannon
       - Toggle Gargoyle Blast Door
       - Module E
     - type: ContainerContainer
@@ -5762,7 +5746,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: Battery
-      startingCharge: 290.45398
+      startingCharge: 61.11979
     - type: ApcPowerReceiverBattery
       enabled: True
   - uid: 744

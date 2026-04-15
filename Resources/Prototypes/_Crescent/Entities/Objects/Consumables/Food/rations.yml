@@ -1,0 +1,88 @@
+#All the Hullrot ration packs
+- type: entity
+  parent: BaseStorageItem
+  id: DsmRationPack
+  name: Imperial Army Ration Package
+  description: A standard, ready to eat, ration pack utilized by the Imperial Army. These contain one meal worth of food, and have an essentially infinite shelf life. 
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    state: dsmrationclosed
+  - type: Item
+    size: Small
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    maxItemSize: Small
+  - type: StorageFill
+    contents:
+    - id: RationComponentMainSoyBeef
+      orGroup: main
+    - id: RationComponentMainMothroach
+      orGroup: main
+    - id: RationComponentMainPilaf
+      orGroup: main
+    - id: RationComponentMainTofu
+      orGroup: main
+    - id: RationComponentMainEggs
+      orGroup: main
+    - id: RationComponentMainBeans
+      orGroup: main
+    - id: RationComponentSideBrickWater
+      orGroup: side
+    - id: RationComponentSideBrickChocolate
+      orGroup: side
+    - id: RationComponentSideBrickCoffee
+      orGroup: side
+    - id: RationComponentSideBrickCranberry
+      orGroup: side2
+    - id: RationComponentSideBrickApple
+      orGroup: side2
+    - id: RationComponentSideBrickVanilla
+      orGroup: side2
+      
+- type: entity
+  parent: BaseStorageItem
+  id: NcwlRationPack
+  name: NCWL Homeguard Ration
+  description: A cobbled together ration pack in use by the NCWL Homeguard. Contains two meals (One can, two PSBs) 
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    state: ncwlrationclosed
+  - type: Item
+    size: Small
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    maxItemSize: Small
+  - type: StorageFill
+    contents:
+    - id: RationComponentNcwlMainMoth
+      orGroup: main
+    - id: RationComponentNcwlMainSoybeef
+      orGroup: main
+    - id: RationComponentNcwlMainLard
+      orGroup: main
+    - id: RationComponentNcwlMainSoyballs
+      orGroup: main
+    - id: RationComponentNcwlMainSoup
+      orGroup: main
+    - id: RationComponentNcwlMainMoth
+      orGroup: main2
+    - id: RationComponentNcwlMainSoybeef
+      orGroup: main2
+    - id: RationComponentNcwlMainLard
+      orGroup: main2
+    - id: RationComponentNcwlMainSoyballs
+      orGroup: main2
+    - id: RationComponentNcwlMainSoup
+      orGroup: main2
+    - id: FoodPSB
+      orGroup: side
+    - id: FoodPSB
+      orGroup: side2
+    - id: FoodPSB
+      orGroup: side3
+    - id: FoodPSB
+      orGroup: side4
