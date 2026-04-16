@@ -10856,14 +10856,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 8.5,2.5
       parent: 1
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 1458
     components:
     - type: Transform
       pos: 3.4690394,4.154174
       parent: 1
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 1459
     components:
@@ -10900,7 +10900,7 @@ entities:
           - Reverse
         - - Middle
           - Off
-- proto: VendingMachineEngivend
+- proto: VendingMachineCrescentEngivend
   entities:
   - uid: 1464
     components:
@@ -10914,7 +10914,7 @@ entities:
     - type: Transform
       pos: -0.5,-11.5
       parent: 1
-- proto: VendingMachineYouTool
+- proto: VendingMachineCrescentYouTool
   entities:
   - uid: 1469
     components:

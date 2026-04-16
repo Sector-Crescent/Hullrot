@@ -9993,7 +9993,7 @@ entities:
     - type: Transform
       pos: 3.6869948,-9.058815
       parent: 1
-- proto: Multitool
+- proto: CrescentMultitool
   entities:
   - uid: 705
     components:
@@ -11113,7 +11113,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.5,-1.5
       parent: 1
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 703
     components:
@@ -11122,7 +11122,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 704
     components:

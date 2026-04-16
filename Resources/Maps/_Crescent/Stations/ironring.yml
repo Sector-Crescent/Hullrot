@@ -22700,7 +22700,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: ClosetToolFilled
+- proto: ClosetToolCrescentFilled
   entities:
   - uid: 2091
     components:
@@ -23317,7 +23317,7 @@ entities:
     - type: Transform
       pos: 14.5,-16.5
       parent: 1
-- proto: CrowbarRed
+- proto: CrescentCrowbar
   entities:
   - uid: 2136
     components:
@@ -33180,7 +33180,7 @@ entities:
           - 3568
           - 3569
           - 3565
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 3641
     components:
@@ -33192,7 +33192,7 @@ entities:
     - type: Transform
       pos: -12.250386,-13.823688
       parent: 1
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 3468
     components:
@@ -33364,7 +33364,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -13.5,4.5
       parent: 1
-- proto: VendingMachineEngivend
+- proto: VendingMachineCrescentEngivend
   entities:
   - uid: 3649
     components:
@@ -33421,7 +33421,7 @@ entities:
     - type: Transform
       pos: 4.5,13.5
       parent: 1
-- proto: VendingMachineYouTool
+- proto: VendingMachineCrescentYouTool
   entities:
   - uid: 3657
     components:
@@ -35890,7 +35890,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WelderMini
+- proto: CrescentWelderMini
   entities:
   - uid: 4093
     components:

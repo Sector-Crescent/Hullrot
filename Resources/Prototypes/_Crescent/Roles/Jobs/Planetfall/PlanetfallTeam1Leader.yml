@@ -1,0 +1,94 @@
+- type: job
+  id: PlanetfallTeam1Leader
+  name: job-name-planetfall-team1-leader
+  description: job-description-planetfall-team1-leader
+  playTimeTracker: ConscriptDSM
+  requirements:
+    - !type:CharacterWhitelistRequirement
+    - !type:CharacterOverallTimeRequirement
+      min: 20000
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Blindness
+        - Pacifist
+        - WheelchairBound
+  weight: 9
+  startingGear: PlanetfallT1LeaderGear
+  alwaysUseSpawner: true
+  icon: "JobIconPFT1lead"
+  requireAdminNotify: true
+  supervisors: job-supervisors-pf
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-PFLeader
+      - type: HullrotFaction
+        faction: DSM
+      - type: LanguageAdder
+        addSpoken:
+          - Tradeband
+        addUnderstood:
+          - Tradeband
+  access:
+  - EmergencyShuttleRepealAll
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Frontier # Frontier
+  - Cryogenics
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Mail # Frontier
+  - Medical
+  - Mercenary # Frontier
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - StationTrafficController # Frontier
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - Command
+  - Service
+  - Empire
+
+#testshit
+- type: startingGear
+  id: PlanetfallT1LeaderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitShinoharaHOS
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesCombat
+    id: HighsecPDA
+    ears: ClothingHeadsetShinohara
+    pocket1: WeaponPistolLiquidator
+    back: ClothingBackpackSHISatchel
+    head: ClothingHeadHatShinoharaBeretHOS
+    mask: ClothingMaskSHIHOSMask
+    outerClothing: ClothingOuterArmorShinoharaHOSVest
+    belt: ClothingBeltSecurityFilled
+    eyes: ClothingEyesHudSecurity
+  storage:
+    belt:
+      - Flash
+      - Tourniquet

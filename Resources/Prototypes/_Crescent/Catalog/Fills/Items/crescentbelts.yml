@@ -1,0 +1,27 @@
+- type: entity
+  id: ClothingBeltUtilityCrescentFilled
+  parent: ClothingBeltUtility
+  suffix: Crescent, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrescentCrowbar
+      - id: CrescentWrench
+      - id: CrescentScrewdriver
+      - id: CrescentWirecutter
+      - id: CrescentMiniWelder
+      - id: CrescentNetworkConfigurator
+
+- type: entity
+  id: ClothingBeltUtilityCrescentEngineering
+  parent: ClothingBeltUtility
+  suffix: Crescent, Engineering
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrescentCrowbar
+      - id: CrescentWrench
+      - id: CrescentScrewdriver
+      - id: CrescentWirecutter
+      - id: CrescentWelder
+      - id: CrescentMultitool

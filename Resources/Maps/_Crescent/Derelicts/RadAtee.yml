@@ -4975,7 +4975,7 @@ entities:
     - type: Transform
       pos: 1.5,-1.5
       parent: 1
-- proto: Multitool
+- proto: CrescentMultitool
   entities:
   - uid: 543
     components:
@@ -5293,7 +5293,7 @@ entities:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
-- proto: Screwdriver
+- proto: CrescentScrewdriver
   entities:
   - uid: 544
     components:
@@ -5472,7 +5472,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.5,-5.5
       parent: 1
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 542
     components:
@@ -6095,7 +6095,7 @@ entities:
     - type: Transform
       pos: 8.5,-4.5
       parent: 1
-- proto: Wrench
+- proto: CrescentWrench
   entities:
   - uid: 848
     components:
