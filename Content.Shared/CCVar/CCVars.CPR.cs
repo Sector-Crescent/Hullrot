@@ -43,12 +43,12 @@ public sealed partial class CCVars
     ///     Curiously, it's also not possible for **shared** systems to set variable timespans. Which is where this system lives.
     /// </remarks>
     public static readonly CVarDef<float> CPRRotReductionMultiplier =
-        CVarDef.Create("cpr.rot_reduction_multiplier", 1f, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("cpr.rot_reduction_multiplier", 2f, CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     By default, CPR heals airloss by 1 point for every second spent performing CPR. Just like above, this directly multiplies the healing amount.
     ///     Set it to 2 to get 6 points of airloss healing for every 3 seconds of CPR.
     /// </summary>
     public static readonly CVarDef<float> CPRAirlossReductionMultiplier =
-        CVarDef.Create("cpr.airloss_reduction_multiplier", 1f, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("cpr.airloss_reduction_multiplier", 2f, CVar.REPLICATED | CVar.SERVER);
 }

@@ -1,29 +1,29 @@
 # Tier 1
-- type: technology
-  id: BasicMachinesElectronics
-  name: research-technology-basic-electronics
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: television
-  discipline: Electronics
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - SurveillanceCameraRouterCircuitboard
-  - SurveillanceCameraWirelessRouterCircuitboard
-  - SurveillanceWirelessCameraMovableCircuitboard
-  - SurveillanceWirelessCameraAnchoredCircuitboard
-  - SurveillanceCameraMonitorCircuitboard
-  - SurveillanceWirelessCameraMonitorCircuitboard
-  - TelecomServerCircuitboard
-  - ComputerTelevisionCircuitboard
-  - SynthesizerInstrument
-  - DawInstrumentMachineCircuitboard
-  - MassMediaCircuitboard
-  - JukeboxCircuitBoard
-  - FatExtractorMachineCircuitboard
-  - BiofabricatorMachineCircuitboard
-  - BiomassReclaimerMachineCircuitboard
+# - type: technology
+#   id: BasicMachinesElectronics
+#   name: research-technology-basic-electronics
+#   icon:
+#     sprite: Structures/Machines/computers.rsi
+#     state: television
+#   discipline: Electronics
+#   tier: 1
+#   cost: 5000
+#   recipeUnlocks:
+#   - SurveillanceCameraRouterCircuitboard
+#   - SurveillanceCameraWirelessRouterCircuitboard
+#   - SurveillanceWirelessCameraMovableCircuitboard
+#   - SurveillanceWirelessCameraAnchoredCircuitboard
+#   - SurveillanceCameraMonitorCircuitboard
+#   - SurveillanceWirelessCameraMonitorCircuitboard
+#   - TelecomServerCircuitboard
+#   - ComputerTelevisionCircuitboard
+#   - SynthesizerInstrument
+#   - DawInstrumentMachineCircuitboard
+#   - MassMediaCircuitboard
+#   - JukeboxCircuitBoard
+#   - FatExtractorMachineCircuitboard
+#   - BiofabricatorMachineCircuitboard
+#   - BiomassReclaimerMachineCircuitboard
 
 - type: technology
   id: Translators
@@ -54,33 +54,33 @@
   - WeakLaserLocus1Electronics
   - HardsuitElectronics1Electronics
 
-- type: technology
-  id: BasicXenoArcheologyElectronics
-  name: research-technology-basic-xenoarcheology
-  icon:
-    sprite: Structures/Machines/artifact_analyzer.rsi
-    state: display
-  discipline: Electronics
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - NodeScanner
-  - AnalysisComputerCircuitboard
-  - ArtifactAnalyzerMachineCircuitboard
-  - TechDiskComputerCircuitboard
+# - type: technology
+#   id: BasicXenoArcheologyElectronics
+#   name: research-technology-basic-xenoarcheology
+#   icon:
+#     sprite: Structures/Machines/artifact_analyzer.rsi
+#     state: display
+#   discipline: Electronics
+#   tier: 1
+#   cost: 5000
+#   recipeUnlocks:
+#   - NodeScanner
+#   - AnalysisComputerCircuitboard
+#   - ArtifactAnalyzerMachineCircuitboard
+#   - TechDiskComputerCircuitboard
 
-- type: technology
-  id: CivilianSelfDefenseElectronics
-  name: research-technology-electronics-defense
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/civilian-disabler.rsi
-    state: base
-  discipline: Electronics
-  tier: 1
-  cost: 8000
-  recipeUnlocks:
-  - WeaponCivilianDisabler
-  - WeaponEnergyGunMini
+# - type: technology
+#   id: CivilianSelfDefenseElectronics
+#   name: research-technology-electronics-defense
+#   icon:
+#     sprite: Objects/Weapons/Guns/Battery/civilian-disabler.rsi
+#     state: base
+#   discipline: Electronics
+#   tier: 1
+#   cost: 8000
+#   recipeUnlocks:
+#   - WeaponCivilianDisabler
+#   - WeaponEnergyGunMini
 
 - type: technology
   id: NightVisionTechElectronics
@@ -94,18 +94,18 @@
   recipeUnlocks:
   - ClothingEyesNightVisionGoggles
 
-- type: technology
-  id: OgreWeaponsElectronics
-  name: research-technology-electronics-terminus
-  icon:
-    sprite: Objects/Weapons/Melee/terminus.rsi
-    state: icon
-  discipline: Electronics
-  tier: 2
-  cost: 15000
-  recipeUnlocks:
-  - Terminus
-  - ClothingOuterHardsuitShanlinUnpainted
+# - type: technology
+#   id: OgreWeaponsElectronics
+#   name: research-technology-electronics-terminus
+#   icon:
+#     sprite: Objects/Weapons/Melee/terminus.rsi
+#     state: icon
+#   discipline: Electronics
+#   tier: 2
+#   cost: 15000
+#   recipeUnlocks:
+#   - Terminus
+#   - ClothingOuterHardsuitShanlinUnpainted
 
 - type: technology
   id: SpaceScanningElectronics
@@ -119,30 +119,30 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
 
-- type: technology
-  id: AdvancedPartsElectronics
-  name: research-technology-advanced-parts
-  icon:
-    sprite: Objects/Misc/stock_parts.rsi
-    state: advanced_matter_bin
-  discipline: Electronics
-  tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - AdvancedCapacitorStockPart
-  - AdvancedMatterBinStockPart
-  - NanoManipulatorStockPart
-  - RPED
+# - type: technology
+#   id: AdvancedPartsElectronics
+#   name: research-technology-advanced-parts
+#   icon:
+#     sprite: Objects/Misc/stock_parts.rsi
+#     state: advanced_matter_bin
+#   discipline: Electronics
+#   tier: 3
+#   cost: 10000
+#   recipeUnlocks:
+#   - AdvancedCapacitorStockPart
+#   - AdvancedMatterBinStockPart
+#   - NanoManipulatorStockPart
+#   - RPED
 
-- type: technology
-  id: DeterrenceTechnologiesElectronics
-  name: research-technology-deterrence
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
-    state: base
-  discipline: Electronics
-  tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - WeaponParticleDecelerator
-  - HoloprojectorField
+# - type: technology
+#   id: DeterrenceTechnologiesElectronics
+#   name: research-technology-deterrence
+#   icon:
+#     sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+#     state: base
+#   discipline: Electronics
+#   tier: 3
+#   cost: 10000
+#   recipeUnlocks:
+#   - WeaponParticleDecelerator
+#   - HoloprojectorField
