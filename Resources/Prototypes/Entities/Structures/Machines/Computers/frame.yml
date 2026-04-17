@@ -37,7 +37,7 @@
         sound:
           collection: GlassBreak
       - !type:ChangeConstructionNodeBehavior
-        node: monitorBroken
+        node: electronicsDestroyed
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: InteractionVerbs
@@ -62,9 +62,20 @@
         enum.ConstructionVisuals.Layer:
           frameUnsecured: { state: 0 }
           boardUnsecured: { state: 1 }
-          missingWires: { state: 2 }
+          electronicsRepairing: { state: 2}
+          missingWires: { state: 3 }
           monitorMissing: { state: 3 }
+          electronicsDestroyed: { state: 3 }
           monitorUnsecured: { state: 4 }
+          electronicsRepaired: { state: 4}
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
 
 - type: entity
   parent: BaseStructureComputer

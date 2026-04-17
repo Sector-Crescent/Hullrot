@@ -1227,29 +1227,29 @@
         #- LensXrayRecipe
         # NEW SHIPGUN AMMO RECIPIES START
         - Screamer20mmRegularRecipe
-        - Screamer20mmGyrostableRecipe
+        # - Screamer20mmGyrostableRecipe
         - Scout35mmRegularRecipe
-        - Scout35mmGyrostableRecipe
+        # - Scout35mmGyrostableRecipe
         - Striker50mmRegularRecipe
-        - Striker50mmGyrostableRecipe
-        - Striker50mmPlasmaRecipe
+        # - Striker50mmGyrostableRecipe
+        # - Striker50mmPlasmaRecipe
         - 88mmFlakRegularRecipe
         - Resolute90mmRegularRecipe
-        - Resolute90mmGyrostableRecipe
-        - Resolute90mmPlasmaRecipe
+        # - Resolute90mmGyrostableRecipe
+        # - Resolute90mmPlasmaRecipe
         #- Anvil120mmRegularRecipe #shellfab
         #- Anvil120mmGyrostableRecipe #shellfab
         #- Anvil120mmPlasmaRecipe #shellfab
         #- Leviathan300mmRecipe #shellfab
         - Shortbow48mmRegularRecipe
-        - Shortbow48mmGorlexRecipe
+        # - Shortbow48mmGorlexRecipe
         - Azimuth60mmRegularRecipe
-        - Azimuth60mmGorlexRecipe
-        - Azimuth60mmNCWLRecipe
-        - Azimuth60mmAdvancedRecipe
+        # - Azimuth60mmGorlexRecipe
+        # - Azimuth60mmNCWLRecipe
+        # - Azimuth60mmAdvancedRecipe
         - Arbalest95mmRegularRecipe
-        - Arbalest95mmNCWLRecipe
-        - Arbalest95mmGorlexRecipe
+        # - Arbalest95mmNCWLRecipe
+        # - Arbalest95mmGorlexRecipe
         #- Gargoyle240mmRegularRecipe #shellfab
         #- Gargoyle240mmNCWLRecipe #shellfab
         #- Catapult330mmRegularRecipe #shellfab
@@ -1757,27 +1757,27 @@
     runningState: building
     defaultProductionAmount: 10
     staticRecipes:
-    - BluespaceCrystal
-    - NormalityCrystal
+    # - BluespaceCrystal
+    # - NormalityCrystal
     - SheetSteel
     - SheetGlass1
     - SheetRGlass
     - SheetPlasma1
-    - SheetPGlass1
-    - SheetRPGlass1
+    # - SheetPGlass1
+    # - SheetRPGlass1
     - SheetUranium1
     - IngotGold1
     - IngotSilver1
-    - MaterialBananium1
-    - N14IngotLead1
+    # - MaterialBananium1
+    # - N14IngotLead1
     - IngotCopper1
-    - N14IngotAluminium1
+    # - N14IngotAluminium1
     - IngotTungsten1
     # Additional recipes
     - SheetPlasteel1
-    - SheetUGlass1
-    - SheetRUGlass1
-    - MaterialDiamond
+    # - SheetUGlass1
+    # - SheetRUGlass1
+    # - MaterialDiamond
   - type: MaterialStorageMagnetPickup # Delta V - Summary: Adds magnet pull from Frontier
     magnetEnabled: True
     range: 0.30 # Delta V - End Magnet Pull

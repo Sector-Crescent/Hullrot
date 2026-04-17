@@ -320,6 +320,8 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
+            - tool: Welding
+              doAfter: 4
 
         - to: shuttleWall #Nyano
           completed:

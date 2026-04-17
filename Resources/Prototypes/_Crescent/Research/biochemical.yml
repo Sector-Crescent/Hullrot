@@ -7,7 +7,7 @@
     state: scalpel
   discipline: Biochemical
   tier: 1
-  cost: 2500
+  cost: 500
   recipeUnlocks:
   - Scalpel
   - Retractor
@@ -19,19 +19,19 @@
   - ClothingHandsGlovesNitrile
   - ClothingMaskSterile
 
-- type: technology
-  id: BiochemicalLivestockCubes
-  name: research-technology-biochemical-livestockcubes
-  icon:
-    sprite: Objects/Misc/monkeycube.rsi
-    state: cube
-  discipline: Biochemical
-  tier: 1
-  cost: 1500
-  recipeUnlocks:
-  - MothroachCubeBiochemical
-  - CowCubeBiochemical
-  - GoatCubeBiochemical
+# - type: technology
+#   id: BiochemicalLivestockCubes
+#   name: research-technology-biochemical-livestockcubes
+#   icon:
+#     sprite: Objects/Misc/monkeycube.rsi
+#     state: cube
+#   discipline: Biochemical
+#   tier: 1
+#   cost: 1500
+#   recipeUnlocks:
+#   - MothroachCubeBiochemical
+#   - CowCubeBiochemical
+#   - GoatCubeBiochemical
 
 - type: technology
   id: BiochemicalBasicMedical
@@ -41,7 +41,7 @@
     state: ointment
   discipline: Biochemical
   tier: 1
-  cost: 2500
+  cost: 500
   recipeUnlocks:
   - Brutepack
   - Ointment
@@ -50,21 +50,21 @@
   - HandheldHealthAnalyzer
   - BodyBag
 
-- type: technology
-  id: BiochemicalBasicChem
-  name: research-technology-biochemical-basicchemical
-  icon:
-    sprite: Objects/Specific/Chemistry/jug.rsi
-    state: jug
-  discipline: Biochemical
-  tier: 1
-  cost: 1500
-  recipeUnlocks:
-  - Beaker
-  - LargeBeaker
-  - Dropper
-  - Jug
-  - Syringe
+# - type: technology
+#   id: BiochemicalBasicChem
+#   name: research-technology-biochemical-basicchemical
+#   icon:
+#     sprite: Objects/Specific/Chemistry/jug.rsi
+#     state: jug
+#   discipline: Biochemical
+#   tier: 1
+#   cost: 1500
+#   recipeUnlocks:
+#   - Beaker
+#   - LargeBeaker
+#   - Dropper
+#   - Jug
+#   - Syringe
 
 - type: technology
   id: BiochemicalDefibrillator
@@ -74,23 +74,23 @@
     state: icon
   discipline: Biochemical
   tier: 2
-  cost: 5000
+  cost: 500
   recipeUnlocks:
   - Defibrillator
 
-- type: technology
-  id: StasisBiochemical
-  name: research-technology-biochemical-stasis
-  icon:
-    sprite: Structures/Machines/stasis_bed.rsi
-    state: icon
-  discipline: Biochemical
-  tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - CryostasisBeaker
-  - SyringeCryostasis
-  - StasisBedMachineCircuitboardBiochemical
+# - type: technology
+#   id: StasisBiochemical
+#   name: research-technology-biochemical-stasis
+#   icon:
+#     sprite: Structures/Machines/stasis_bed.rsi
+#     state: icon
+#   discipline: Biochemical
+#   tier: 3
+#   cost: 10000
+#   recipeUnlocks:
+#   - CryostasisBeaker
+#   - SyringeCryostasis
+#   - StasisBedMachineCircuitboardBiochemical
 
 - type: technology
   id: HypoBiochemical
@@ -100,7 +100,7 @@
     state: hypo
   discipline: Biochemical
   tier: 3
-  cost: 15000
+  cost: 5000
   recipeUnlocks:
   - SyringeCase # Morphine
   - CartridgeAtropine

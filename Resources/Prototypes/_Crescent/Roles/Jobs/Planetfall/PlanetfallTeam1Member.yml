@@ -1,0 +1,54 @@
+- type: job
+  id: PlanetfallTeam1Member
+  name: job-name-planetfall-team1-member
+  description: job-description-planetfall-team1-member
+  playTimeTracker: ConscriptDSM
+  weight: 2
+  startingGear: PlanetfallT1MemberGear
+  alwaysUseSpawner: true
+  icon: "JobIconPFT1member"
+  requirements:
+    - !type:CharacterOverallTimeRequirement
+      min: 0
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - WheelchairBound
+  requireAdminNotify: false
+  supervisors: job-supervisors-pf
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-PFMember
+      - type: HullrotFaction
+        faction: DSM
+      - type: LanguageAdder
+        addSpoken:
+          - Tradeband
+        addUnderstood:
+          - Tradeband
+  access:
+  - Command
+  - Maintenance
+  - Service
+  - External
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - Empire
+
+- type: startingGear
+  id: PlanetfallT1MemberGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitShinoharaSecurity
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesCombat
+    id: CorpsecPDA
+    ears: ClothingHeadsetShinohara
+    pocket1: WeaponPistolLiquidator
+    back: ClothingBackpackSHISatchel
+    head: ClothingHeadHatShinoharaBeretUA
+    belt: ClothingBeltSecurityFilled
+    eyes: ClothingEyesHudSecurity
