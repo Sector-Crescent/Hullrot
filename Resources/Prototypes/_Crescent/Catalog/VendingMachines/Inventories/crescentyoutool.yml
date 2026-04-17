@@ -1,0 +1,22 @@
+- type: vendingMachineInventory
+  id: YouToolCrescentInventory
+  startingInventory:
+    CableApcStack: 8
+    CableMVStack: 8
+    CableHVStack: 8
+    CrescentCrowbar: 8
+    CrescentMiniWelder: 8
+    CrescentWirecutter: 8
+    CrescentWrench: 8
+    CrescentScrewdriver: 8
+    CrescenttrayScanner: 8
+    CrescentNetworkConfigurator: 4
+    GasAnalyzer: 4
+    ClothingHandsGlovesColorYellowBudget: 4
+    SprayPainter: 4
+    CrescentMultitool: 8
+  # Some engineer forgot to take the multitool out the youtool when working on it, happens.
+  contrabandInventory:
+    AccessConfigurator: 1
+  emaggedInventory:
+    ClothingHandsGlovesColorYellow: 1

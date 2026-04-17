@@ -1,0 +1,1959 @@
+- type: entity
+  name: SHI-BA Wirecutter
+  parent: BaseItem
+  id: CrescentWirecutter
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a wirecutter for cutting wires.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wirecutter_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wirecutter_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/wirecutter_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - PlantSampleTaker
+    - Wirecutter
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/wirecutter.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 0
+    range: 1.5
+    damage:
+      types:
+        Slash: 10
+        Structural: 5
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 20
+        Structural: 10
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Cutting
+    useSound:
+      path: /Audio/Items/wirecutter.ogg
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/wirecutter.rsi
+  - type: ToolTileCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 30
+  # Shitmed Change
+  - type: Retractor
+    speed: 0.35
+  - type: Hemostat
+    speed: 0.6
+  - type: SurgeryTool
+    startSound:
+      path: /Audio/Items/wirecutter.ogg
+      params:
+        variation: 0.125
+    endSound:
+      path: /Audio/Items/wirecutter.ogg
+      params:
+        variation: 0.125
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 18
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-BA Screwdriver
+  parent: BaseItem
+  id: CrescentScrewdriver
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a screwdriver for screwing.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/screwdriver_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/screwdriver_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/screwdriver_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Screwdriver
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/screwdriver.rsi
+    state: icon
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/screwdriver.rsi
+    storedSprite:
+      sprite: _Crescent/Objects/Tools/New_Tools/screwdriver.rsi
+      state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    damage:
+      types:
+        Piercing: 10
+        Structural: 5
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: ThrowingAngle
+    angle: 270
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    removalTime: 1
+  - type: EmbedPassiveDamage
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 2
+    useSound:
+      collection: Screwdriver
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 30
+  # Shitmed Change
+  - type: Retractor
+    speed: 0.45
+  - type: Tending
+    speed: 0.65
+  - type: SurgeryTool
+    startSound:
+      collection: Screwdriver
+    endSound:
+      path: /Audio/Medical/Surgery/retractor2.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 12
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-BA Wrench
+  parent: BaseItem
+  id: CrescentWrench
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a wrench for tightening bolts.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wrench_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wrench_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/wrench_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Wrench
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/wrench.rsi
+    storedSprite:
+      sprite: _Crescent/Objects/Tools/New_Tools/wrench.rsi
+      state: icon
+  - type: Sharp
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    damage:
+      types:
+        Blunt: 10
+        Structural: 5
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 20
+        Structural: 10
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Anchoring
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/ratchet.ogg
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 17
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-BA Crowbar
+  parent: BaseItem
+  id: CrescentCrowbar
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a crowbar for prying.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Crowbar
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/crowbar.rsi
+    state: icon
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/crowbar.rsi
+    size: Small
+    storedSprite:
+      sprite: _Crescent/Objects/Tools/New_Tools/crowbar.rsi
+      state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    damage:
+      types:
+        Blunt: 20
+        Structural: 5
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 35
+        Structural: 10
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Prying
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+  - type: Prying
+  # Shitmed Change
+  - type: Tweezers
+    speed: 0.55
+  - type: SurgeryTool
+    startSound: /Audio/Items/crowbar.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 28
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-DK Halligan Bar
+  parent: BaseItem
+  id: CrescentHalliganBar
+  description: Released along side the Type-80 the SHI-DK Halligan Bar is often used by mercanaries and security personnel for its versatility in prying, breaching and general utility.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Crowbar
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
+    state: icon
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
+    size: Huge
+    storedSprite:
+      sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
+      state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    damage:
+      types:
+        Blunt: 30
+        Structural: 20
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 30
+        Structural: 30
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Prying
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+  - type: Prying
+  # Shitmed Change
+  - type: Tweezers
+    speed: 0.55
+  - type: SurgeryTool
+    startSound: /Audio/Items/crowbar.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 28
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: NCWL MPL-80 "Willy Jack"
+  parent: BaseItem
+  id: CrescentWillyBar
+  description: Based off the SHI-DK Halligan bar the MPL-80 features a wrench and a more blunted hammer head. The MPL-80 earned the name "Willy Jack" after a Kommisar accidentally hit themselves in the groin with it during its reveal.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/crowbar_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Crowbar
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/willyjack.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,1,3
+    storedSprite:
+      sprite: _Crescent/Objects/Tools/New_Tools/willyjack.rsi
+      state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.5
+    damage:
+      types:
+        Blunt: 35
+        Structural: 35
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 50
+        Structural: 50
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Prying
+      - Anchoring
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+  - type: Prying
+  # Shitmed Change
+  - type: Tweezers
+    speed: 0.55
+  - type: SurgeryTool
+    startSound: /Audio/Items/crowbar.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 28
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+
+- type: entity
+  name: SHI-BA Multitool
+  parent: BaseItem
+  id: CrescentMultitool
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Multitool for pulsing and linking wires.
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/multitool_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/multitool_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/multitool_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/multitool.rsi
+    layers:
+    - state: icon
+    - state: green-unlit
+      shader: unshaded
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 6
+    heavyRateModifier: 2
+    heavyRangeModifier: 1.25
+    heavyDamageBaseModifier: 3
+    maxTargets: 1
+    angle: 10
+  - type: DamageOtherOnHit
+  - type: Item
+  - type: Tool
+    qualities:
+      - Pulsing
+  - type: NetworkConfigurator
+  - type: ActivatableUI
+    key: enum.NetworkConfiguratorUiKey.List
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.NetworkConfiguratorUiKey.List:
+        type: NetworkConfiguratorBoundUserInterface
+      enum.NetworkConfiguratorUiKey.Configure:
+        type: NetworkConfiguratorBoundUserInterface
+      enum.NetworkConfiguratorUiKey.Link:
+        type: NetworkConfiguratorBoundUserInterface
+  - type: Tag
+    tags:
+      - Multitool
+      - DoorElectronicsConfigurator
+  - type: PhysicalComposition
+    materialComposition:
+      Aluminum: 50
+      Plastic: 50
+      Circuitry: 25
+  - type: StaticPrice
+    price: 56
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 11
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-BA Network Configurator
+  parent: BaseItem
+  id: CrescentNetworkConfigurator
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Network Configurator for configuring and linking devices.
+  components:
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Items/multitool_drop.ogg
+    - type: Sprite
+      sprite: _Crescent/Objects/Tools/New_Tools/linker.rsi
+      layers:
+        - state: icon
+        - state: green-unlit
+          shader: unshaded
+    - type: Item
+      size: Small
+    - type: NetworkConfigurator
+    - type: ActivatableUI
+      key: enum.NetworkConfiguratorUiKey.List
+      inHandsOnly: true
+    - type: Tag
+      tags:
+        - DoorElectronicsConfigurator
+    - type: UserInterface
+      interfaces:
+        enum.NetworkConfiguratorUiKey.List:
+          type: NetworkConfiguratorBoundUserInterface
+        enum.NetworkConfiguratorUiKey.Configure:
+          type: NetworkConfiguratorBoundUserInterface
+        enum.NetworkConfiguratorUiKey.Link:
+          type: NetworkConfiguratorBoundUserInterface
+    - type: StaticPrice
+      price: 56
+    - type: GuideHelp
+      guides:
+        - NetworkConfigurator
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 12
+          mask:
+          - ItemMask
+          restitution: 0.3
+          friction: 0.2
+
+#Power tools
+#Later on these should switch probably switch damage when changing the tool behavior.
+- type: entity
+  name: SHI-BA 2-in-1 Electric Drill
+  parent: BaseItem
+  id: CrescentPowerDrill
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a power drill for screwing and anchoring.
+  components:
+  - type: Tag
+    tags:
+    - Powerdrill
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/drill.rsi
+    state: drill_screw
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/drill.rsi
+    size: Normal
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 2.5
+    useSound: /Audio/Items/drill_use.ogg
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/drill.rsi
+          state: drill_screw
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/drill.rsi
+          state: drill_bolt
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 300
+      Plastic: 50
+      Circuitry: 50
+#  - type: DynamicPrice
+#    price: 100
+  - type: StaticPrice
+    price: 100
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    attackRate: 1.25
+    range: 1.4
+    damage:
+      types:
+        Piercing: 14
+    heavyRateModifier: 1.25
+    maxTargets: 1
+    angle: 20
+    soundHit:
+      path: "/Audio/Items/drill_hit.ogg"
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 8
+    staminaCost: 7.5
+    soundHit:
+      collection: MetalThud
+  - type: ReverseEngineering # Nyano
+    difficulty: 2
+    recipes:
+      - PowerDrill
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 45
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  id: CrescentRCD
+  parent: BaseItem
+  name: SHI-BA RCD
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Rapid Construction Device for quickly constructing structures. Requires compressed matter cartridges to function (sold separately).
+  components:
+  - type: RCD
+    availablePrototypes:
+    - WallSolid
+    - FloorSteel
+    - Plating
+    - Catwalk
+    - Grille
+    - Window
+    - WindowDirectional
+    - WindowReinforcedDirectional
+    - ReinforcedWindow
+    - Airlock
+    - AirlockGlass
+    - Firelock
+    - TubeLight
+    - BulbLight
+    - LVCable
+    - MVCable
+    - HVCable
+    - CableTerminal
+    - Deconstruct
+  - type: LimitedCharges
+    maxCharges: 30
+    charges: 30
+  - type: UseDelay
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/RCD.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 400
+      Plastic: 100
+      Circuitry: 50
+  - type: StaticPrice
+    price: 100
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    key: enum.RcdUiKey.Key
+  - type: ReverseEngineering # Nyano
+    difficulty: 3
+    recipes:
+      - RCD
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 65
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  id: CrescentRPD
+  parent: CrescentRCD
+  name: SHI-BA RPDD
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Rapid Pipe Delivery Device for atmosphere related work. Requires compressed matter cartridges to function (sold separately).
+  components:
+  - type: Tag
+    tags:
+      - RPD
+  - type: RCD
+    isRpd: true
+    availablePrototypes:
+    - PipeFourway
+    - PipeStraight
+    - PipeBend
+    - PipeTJunction
+    - OutletInjector
+    - ManualValve
+    - VolumetricPump
+    - PressurePump
+    - VentScrubber
+    - PressureValve
+    - DualPortVent
+    - VentGas
+    - VentPassive
+    - MixerGas
+    - Radiator
+    - SignalValve
+    - CanisterPort
+    - FilterGas
+    - Deconstruct
+  - type: LimitedCharges
+    maxCharges: 50
+    charges: 50
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/RPD.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500
+      Plastic: 150
+      Circuitry: 50
+  - type: StaticPrice
+    price: 100
+  - type: ReverseEngineering # Nyano
+    difficulty: 3
+    recipes:
+      - RPD
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 65
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  id: CrescentRCDEmpty
+  parent: CrescentRCD
+  suffix: Empty
+  components:
+  - type: LimitedCharges
+    charges: 0
+  - type: RCD
+    availablePrototypes:
+    - WallSolid
+    - FloorSteel
+    - Plating
+    - Catwalk
+    - Grille
+    - Window
+    - WindowDirectional
+    - WindowReinforcedDirectional
+    - ReinforcedWindow
+    - Airlock
+    - AirlockGlass
+    - Firelock
+
+- type: entity
+  id: CrescentRPDEmpty
+  parent: CrescentRPD
+  suffix: Empty
+  components:
+  - type: LimitedCharges
+    charges: 0
+  - type: Tag
+    tags:
+      - RPD
+  - type: RCD
+    isRpd: true
+    availablePrototypes:
+    - PipeFourway
+    - PipeStraight
+    - PipeBend
+    - PipeTJunction
+    - OutletInjector
+    - ManualValve
+    - VolumetricPump
+    - PressurePump
+    - VentScrubber
+    - PressureValve
+    - DualPortVent
+    - VentGas
+    - VentPassive
+    - MixerGas
+    - Radiator
+    - SignalValve
+    - CanisterPort
+    - FilterGas
+    - Deconstruct
+
+- type: entity
+  name: SHI-BA HandyMan
+  parent: BaseItem
+  id: CrescentHandyMan
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a multitool that includes a wirecutter, screwdriver and a knife.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
+    state: Handyman-screw
+  - type: Item
+    size: Normal
+    sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
+  - type: Tag
+    tags:
+    - Multitool
+  - type: Prying
+    enabled: false
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 2
+    useSound:
+      collection: Screwdriver
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    attackRate: 1
+    range: 1.75
+    damage:
+      types:
+        Slash: 10
+    bluntStaminaDamageFactor: 2
+    heavyDamageBaseModifier: 1.25
+    heavyStaminaCost: 5
+    angle: 120
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    staminaCost: 8.5
+  - type: ThrowingAngle
+    angle: 45
+  - type: ToolTileCompatible
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
+          state: Handyman-screw
+          useSound:
+            collection: Screwdriver
+        changeSound:
+          path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
+          state: Handyman-cutters
+        useSound:
+          path: /Audio/Items/wirecutter.ogg
+        changeSound:
+          path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
+          state: Handyman-knife
+        useSound:
+          path: /Audio/Items/wirecutter.ogg
+        changeSound:
+          path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
+#Other
+- type: entity
+  name: MPL-50 Shovel
+  parent: BaseItem
+  id: CrescentShovel
+  description: A shovel with the NCWL's signature orange stripe painted on the handle.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/shovel.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    attackRate: 1
+    range: 1.75
+    damage:
+      types:
+        Blunt: 16
+    bluntStaminaDamageFactor: 2
+    heavyDamageBaseModifier: 1.25
+    heavyStaminaCost: 5
+    angle: 120
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    staminaCost: 8.5
+  - type: ThrowingAngle
+    angle: 45
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,1,3
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Wood: 50
+  - type: StaticPrice
+    price: 25
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        blunt: 35
+  # Delta V: Adds tool quality for digging
+  - type: Tool
+    qualities:
+      - Digging
+    useSound:
+      path: /Audio/Nyanotrasen/Items/shovel_dig.ogg
+  - type: EarthDigging
+  - type: Shovel
+
+- type: entity
+  name: SHI-BA T-Ray scanner
+  parent: BaseItem
+  id: CrescenttrayScanner
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This device is built to emit terahertz radiation to detect wires beneath walls and floors.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/t-ray.rsi
+    layers:
+    - state: "t-ray-off"
+      map: ["base"]
+  - type: TrayScanner
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/t-ray.rsi
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.TrayScannerVisual.Visual:
+        base:
+          On: { state: "t-ray-on" }
+          Off: { state: "t-ray-off" }
+  - type: PhysicalComposition
+    materialComposition:
+      Aluminum: 300
+      Glass: 100
+      Circuitry: 25
+  - type: StaticPrice
+    price: 60
+
+- type: entity
+  name: NCWL MPL-55 Pickaxe
+  parent: BaseItem
+  id: CrescentPickaxe
+  description: A pickaxe with the NCWL's signature orange stripe painted on the handle.
+  components:
+  - type: Tag
+    tags:
+    - Pickaxe
+    - ItemPickaxe
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/pickaxe.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1
+    range: 1.6
+    wideAnimationRotation: -135
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+      params:
+        volume: -3
+    damage:
+      types:
+        Blunt: 5
+        Piercing: 20
+        Structural: 10
+    bluntStaminaDamageFactor: 2.0
+    heavyDamageBaseModifier: 1.25
+    maxTargets: 5
+    angle: 80
+  - type: DamageOtherOnHit
+    staminaCost: 5
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 5
+        Piercing: 20 # hullrot change, +20 piercing damage when wielded. fun.
+        Structural: 20
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,0
+    - 1,1,1,2
+    sprite: _Crescent/Objects/Tools/New_Tools/pickaxe.rsi
+  - type: UseDelay
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  name: NCWL Jaws Of Life
+  parent: BaseItem
+  id: CrescentJawsOfLife
+  description: A device that prys open objects with its powered claws. Can also be used to cut certain materials.
+  components:
+  - type: Tag
+    tags:
+    - JawsOfLife
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/jaws.rsi
+    state: jawsoflife-pry
+  - type: Item
+    size: Normal
+  - type: ToolTileCompatible
+  - type: Tool
+    qualities:
+      - Prying
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: Prying
+    pryPowered: true
+    speedModifier: 3
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: ToolForcePowered
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Prying
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/jaws.rsi
+          state: jawsoflife-pry
+        useSound: /Audio/Items/jaws_pry.ogg
+        changeSound: /Audio/Items/change_jaws.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: _Crescent/Objects/Tools/New_Tools/jaws.rsi
+          state: jawsoflife-cutter
+        useSound: /Audio/Items/jaws_cut.ogg
+        changeSound: /Audio/Items/change_jaws.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    range: 1.65
+    damage:
+      types:
+        Blunt: 20
+        Slash: 8
+    bluntStaminaDamageFactor: 2.0
+    heavyRateModifier: 1.75
+    heavyDamageBaseModifier: 1.5
+    heavyStaminaCost: 2.5
+    maxTargets: 1
+    angle: 20
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    staminaCost: 7
+  - type: ThrowingAngle
+    angle: 90
+  - type: ReverseEngineering # Delta
+    difficulty: 3
+    recipes:
+      - JawsOfLife
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 155
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: NCWL Ratnik Flashlight
+  parent: FlashlightLantern
+  id: CrescentFlashlight
+  description: A basic flashlight with a hardened case and long battery life.
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableLightVisuals
+    inhandVisuals:
+      left:
+      - state: inhand-left-light
+        shader: unshaded
+      right:
+      - state: inhand-right-light
+        shader: unshaded
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/flashlight.rsi
+    layers:
+      - state: flashlight
+      - state: flashlight-overlay
+        shader: unshaded
+        visible: false
+        map: [ "light" ]
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1.25
+    damage:
+      types:
+        Blunt: 10
+    bluntStaminaDamageFactor: 2.5
+    heavyRateModifier: 2
+    heavyRangeModifier: 1.2
+    heavyDamageBaseModifier: 1.25
+    maxTargets: 1
+    angle: 20
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    sprite: _Crescent/Objects/Tools/New_Tools/flashlight.rsi
+  - type: PointLight
+    enabled: false
+    radius: 8
+
+
+- type: entity
+  name: NCWL MPL-60 Breaching Saw
+  parent: BaseItem
+  id: CrescentBreachingSaw
+  description: A basic handheld table saw designed for shipbreaking. Incredibly effcient at cutting through walls and doors.
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wirecutter_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/SimpleStation14/Items/Handling/wirecutter_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/wirecutter_drop.ogg
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - PlantSampleTaker
+    - Wirecutter
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/breachingsaw.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 0
+    attackRate: 0.2
+    range: 1.5
+    damage:
+      types:
+        Slash: 10
+        Structural: 20
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 2
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      path: /Audio/Items/drill_hit.ogg
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 20
+        Structural: 30
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Tool
+    qualities:
+      - Cutting
+    useSound:
+      path: /Audio/Items/drill_hit.ogg
+  - type: Item
+    size: Huge
+    shape:
+      - 0,0,3,3
+  - type: ToolTileCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 30
+  # Shitmed Change
+  - type: Retractor
+    speed: 0.35
+  - type: Hemostat
+    speed: 0.6
+  - type: SurgeryTool
+    startSound:
+      path: /Audio/Items/drill_hit.ogg
+      params:
+        variation: 0.125
+    endSound:
+      path: /Audio/Items/drill_hit.ogg
+      params:
+        variation: 0.125
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 18
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  id: CrescentJackhammer
+  parent: BaseItem
+  name: NCWL MPL-65 Jackhammer
+  description: An unnessecarily powerful jackhammer originally designed for shipbreaking, found more use with homeguard teams using it to breach into rooms quickly.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/jackhammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.5 #2 seconds
+    wideAnimationRotation: 0
+    range: 3
+    damage:
+      types:
+        Blunt: 25
+        Structural: 200
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 1
+    heavyRateModifier: 1.25
+    clickPartDamageMultiplier: 1.5
+    maxTargets: 3
+    bluntStaminaDamageFactor: 1.5
+    angle: 90
+    soundHit:
+      path: /Audio/_Crescent/Weapons/Jackhammerhit01.ogg
+    animation: WeaponArcThrust
+  - type: MeleeThrowOnHit
+    speed: 10
+    lifetime: 0.25
+  - type: KnockdownOnHit
+    duration: 1
+  - type: MultiHandedItem
+  - type: Item
+    size: Huge
+    shape:
+      - 0,0,3,3
+
+- type: entity
+  name: SHI-BA Welder
+  parent: BaseItem
+  id: CrescentWelder
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Welder. Shinohara reminds you that oculine and eye replacement cybernetics are sold at the nearest branch.
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/welder_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/welder.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: Tag
+    tags:
+    - WeldingTool
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Small
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+            Heat: 9
+  - type: ItemToggleDamageOtherOnHit
+    activatedDamage:
+      types:
+        Heat: 8
+        Blunt: 9
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleHot
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    damage:
+      types:
+        Blunt: 9 #i mean... i GUESS you could use it like that
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 100
+        maxVol: 100
+  - type: Tool
+    speedModifier: 2
+    useSound:
+      collection: Welder
+    qualities: Welding
+  - type: Welder
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: orange
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 200
+  - type: StaticPrice
+    price: 40
+  - type: IgnitionSource
+    temperature: 700
+  - type: WeldingHealing # Same as Brutepack - Estacao Pirata IPCs
+    damageContainers:
+      - Silicon
+    damage:
+      types:
+        Blunt: -15
+        Piercing: -15
+        Slash: -15
+  # Shitmed Change
+  - type: Cautery
+    speed: 0.7
+  - type: SurgeryTool
+    startSound:
+      collection: Welder
+    endSound:
+      collection: WelderOff
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 80
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: SHI-BA Mini Welder
+  parent: BaseItem
+  id: CrescentMiniWelder
+  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a mini welder, half the fuel capacity of the standard model. Shinohara reminds you that oculine and eye replacement cybernetics are sold at the nearest branch.
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/welder_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/miniwelder.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: Tag
+    tags:
+    - WeldingTool
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+            Heat: 9
+  - type: ItemToggleDamageOtherOnHit
+    activatedDamage:
+      types:
+        Heat: 8
+        Blunt: 9
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleHot
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    damage:
+      types:
+        Blunt: 9 #i mean... i GUESS you could use it like that
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 50
+        maxVol: 50
+  - type: Tool
+    speedModifier: 2
+    useSound:
+      collection: Welder
+    qualities: Welding
+  - type: Welder
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: orange
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 200
+  - type: StaticPrice
+    price: 40
+  - type: IgnitionSource
+    temperature: 700
+  - type: WeldingHealing # Same as Brutepack - Estacao Pirata IPCs
+    damageContainers:
+      - Silicon
+    damage:
+      types:
+        Blunt: -15
+        Piercing: -15
+        Slash: -15
+  # Shitmed Change
+  - type: Cautery
+    speed: 0.7
+  - type: SurgeryTool
+    startSound:
+      collection: Welder
+    endSound:
+      collection: WelderOff
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 80
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+
+- type: entity
+  name: NCWL MPL-95 Large Welder
+  parent: BaseItem
+  id: CrescentLargeWelder
+  description: A large welder hooked up to two 250u welding fuel tanks. The writing on the tanks remind you that any damage to the eyes are to be reported to a superior. Burns hotter then the average welder.
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/welder_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/largewelder.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: Tag
+    tags:
+    - WeldingTool
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Huge
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+            Heat: 9
+  - type: ItemToggleDamageOtherOnHit
+    activatedDamage:
+      types:
+        Heat: 20
+        Blunt: 20
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleHot
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    damage:
+      types:
+        Blunt: 20 #i mean... i GUESS you could use it like that
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 500
+        maxVol: 500
+  - type: Tool
+    speedModifier: 5
+    useSound:
+      collection: Welder
+    qualities: Welding
+  - type: Welder
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: orange
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 200
+  - type: StaticPrice
+    price: 40
+  - type: IgnitionSource
+    temperature: 1600
+  - type: WeldingHealing # Same as Brutepack - Estacao Pirata IPCs
+    damageContainers:
+      - Silicon
+    damage:
+      types:
+        Blunt: -15
+        Piercing: -15
+        Slash: -15
+  # Shitmed Change
+  - type: Cautery
+    speed: 0.7
+  - type: SurgeryTool
+    startSound:
+      collection: Welder
+    endSound:
+      collection: WelderOff
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 80
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+
+- type: entity
+  name: NCWL MPL-90 Blowtorch
+  parent: BaseItem
+  id: CrescentBlowtorch
+  description: A blowtorch attached to a 250u welding fuel tank. The writing on the tanks remind you that any damage to the eyes are to be reported to a superior. Burns hotter then the average welder.
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/welder_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Objects/Tools/New_Tools/blowtorch.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: Tag
+    tags:
+    - WeldingTool
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Normal
+    shape:
+      - 0,0,1,3
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+            Heat: 9
+  - type: ItemToggleDamageOtherOnHit
+    activatedDamage:
+      types:
+        Heat: 20
+        Blunt: 20
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleHot
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    damage:
+      types:
+        Blunt: 20 #i mean... i GUESS you could use it like that
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 250
+        maxVol: 250
+  - type: Tool
+    speedModifier: 5
+    useSound:
+      collection: Welder
+    qualities: Welding
+  - type: Welder
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: orange
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 200
+  - type: StaticPrice
+    price: 40
+  - type: IgnitionSource
+    temperature: 1600
+  - type: WeldingHealing # Same as Brutepack - Estacao Pirata IPCs
+    damageContainers:
+      - Silicon
+    damage:
+      types:
+        Blunt: -15
+        Piercing: -15
+        Slash: -15
+  # Shitmed Change
+  - type: Cautery
+    speed: 0.7
+  - type: SurgeryTool
+    startSound:
+      collection: Welder
+    endSound:
+      collection: WelderOff
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 80
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2

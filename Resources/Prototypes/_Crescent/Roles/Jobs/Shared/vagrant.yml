@@ -1,0 +1,45 @@
+- type: job
+  id: Vagrant
+  name: job-name-vagrant
+  description: job-description-vagrant
+  playTimeTracker: JobVagrant
+  weight: 10
+  startingGear: VagrantGear
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-hire
+  requirements:
+    - !type:FactionRequirement
+      inverted: true
+      factionID: "SRM"
+    - !type:CharacterOverallTimeRequirement
+      min: 90
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Voidborn
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: crescent-rank-ind-spacer
+      - type: HullrotFaction
+        faction: IND
+      - type: LanguageAdder
+        addSpoken:
+          - LowImperial
+        addUnderstood:
+          - LowImperial
+
+- type: startingGear
+  id: VagrantGear
+  equipment:
+    id: SpacerPDA
+    jumpsuit: ClothingUniformJumpsuitMilitaryColorBrown
+    back: JetpackBlackFilled
+    shoes: ClothingShoesBootsCombat
+    satchel: ClothingBackpackSatchelFilled
+    duffelbag: ClothingBackpackDuffelFilled
+    pocket1: DoubleEmergencyOxygenTankFilled
+    pocket2: RadioHandheld

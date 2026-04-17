@@ -9061,7 +9061,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Multitool
+- proto: CrescentMultitool
   entities:
   - uid: 1349
     components:
@@ -10731,7 +10731,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 4.5,-3.5
       parent: 1
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 1350
     components:
@@ -10740,7 +10740,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 1348
     components:

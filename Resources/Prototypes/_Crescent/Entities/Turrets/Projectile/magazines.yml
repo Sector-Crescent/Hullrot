@@ -85,49 +85,6 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: Magazine35mmHE
-  name: 35mm High Explosive drum
-  description: A munitions drum designed for 35mm autocannons. Contains High Explosive projectiles. Effective against light targets and infantry.
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - Magazine35mm
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge35mmHE
-    proto: Bullet35mmHE
-    capacity: 80
-    soundRack:
-      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-      params:
-        variation: 0.05
-    soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-      params:
-        variation: 0.05
-  - type: Item
-    size: Large
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-    layers:
-    - state: base-plasma
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.7, 0.7
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
-
 
 #Striker
 
@@ -174,91 +131,91 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: Magazine50mmHE
-  name: 50mm High Explosive drum
-  description: A munitions drum designed for 50mm repeater cannons. This one contains High Explosive projectiles. Effective against light targets and infantry.
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - Magazine50mm
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge50mmHE
-    proto: Bullet50mmHE
-    capacity: 120
-    soundRack:
-      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-      params:
-        variation: 0.05
-    soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-      params:
-        variation: 0.05
-  - type: Item
-    size: Large
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-    layers:
-    - state: base-gyrostable
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.9, 0.9
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
+# - type: entity
+#   id: Magazine50mmHE
+#   name: 50mm High Explosive drum
+#   description: A munitions drum designed for 50mm repeater cannons. This one contains High Explosive projectiles. Effective against light targets and infantry.
+#   parent: BaseItem
+#   components:
+#   - type: Tag
+#     tags:
+#     - Magazine50mm
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge50mmHE
+#     proto: Bullet50mmHE
+#     capacity: 120
+#     soundRack:
+#       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+#       params:
+#         variation: 0.05
+#     soundInsert:
+#       path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+#       params:
+#         variation: 0.05
+#   - type: Item
+#     size: Large
+#   - type: ContainerContainer
+#     containers:
+#       ballistic-ammo: !type:Container
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
+#     layers:
+#     - state: base-gyrostable
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#     scale: 0.9, 0.9
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 2
+#     zeroVisible: false
+#   - type: Appearance
 
-- type: entity
-  id: Magazine50mmSAPHE
-  name: 50mm SAPHE drum
-  description: A munitions drum designed for 50mm cannons. Contains Semi-Armor Piercing High Explosive projectiles. Effective against most targets.
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - Magazine50mm
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge50mmSAPHE
-    proto: Bullet50mmSAPHE
-    capacity: 120
-    soundRack:
-      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-      params:
-        variation: 0.05
-    soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-      params:
-        variation: 0.05
-  - type: Item
-    size: Large
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-    layers:
-    - state: base-plasma
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.9, 0.9
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
+# - type: entity
+#   id: Magazine50mmSAPHE
+#   name: 50mm SAPHE drum
+#   description: A munitions drum designed for 50mm cannons. Contains Semi-Armor Piercing High Explosive projectiles. Effective against most targets.
+#   parent: BaseItem
+#   components:
+#   - type: Tag
+#     tags:
+#     - Magazine50mm
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge50mmSAPHE
+#     proto: Bullet50mmSAPHE
+#     capacity: 120
+#     soundRack:
+#       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+#       params:
+#         variation: 0.05
+#     soundInsert:
+#       path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+#       params:
+#         variation: 0.05
+#   - type: Item
+#     size: Large
+#   - type: ContainerContainer
+#     containers:
+#       ballistic-ammo: !type:Container
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
+#     layers:
+#     - state: base-plasma
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#     scale: 0.9, 0.9
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 2
+#     zeroVisible: false
+#   - type: Appearance
 
 
 #screamer
@@ -306,48 +263,48 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: Magazine20mmFrag
-  name: 20mm Fragmentation drum
-  description: A munitions drum designed for 20mm gatling cannons. Contains dedicated anti-personnel rounds that deal degligible damage to hull.
-  parent: BaseItem
-  components:
-  - type: Tag
-    tags:
-    - Magazine20mm
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge20mmFrag
-    proto: Bullet20mmFrag
-    capacity: 200
-    soundRack:
-      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-      params:
-        variation: 0.05
-    soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-      params:
-        variation: 0.05
-  - type: Item
-    size: Large
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
-    layers:
-    - state: base-plasma
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.75, 0.75
-  - type: MagazineVisuals
-    magState: mag
-    steps: 2
-    zeroVisible: false
-  - type: Appearance
+# - type: entity
+#   id: Magazine20mmFrag
+#   name: 20mm Fragmentation drum
+#   description: A munitions drum designed for 20mm gatling cannons. Contains dedicated anti-personnel rounds that deal degligible damage to hull.
+#   parent: BaseItem
+#   components:
+#   - type: Tag
+#     tags:
+#     - Magazine20mm
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge20mmFrag
+#     proto: Bullet20mmFrag
+#     capacity: 200
+#     soundRack:
+#       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+#       params:
+#         variation: 0.05
+#     soundInsert:
+#       path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+#       params:
+#         variation: 0.05
+#   - type: Item
+#     size: Large
+#   - type: ContainerContainer
+#     containers:
+#       ballistic-ammo: !type:Container
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
+#     layers:
+#     - state: base-plasma
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#     scale: 0.75, 0.75
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 2
+#     zeroVisible: false
+#   - type: Appearance
 
 #corpus
 
@@ -408,82 +365,82 @@
     tags:
       - ResoluteClip
 
-- type: entity
-  id: MagazineResoluteAP
-  name: 90mm Armor Piercing clip
-  description: Three 5 round clips bundled together for with the mighty Resolute autocannon. Contains Armor-Piercing shells effective against heavily armored targets.
-  parent: BaseItem
-  components:
-  - type: MultiHandedItem
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge90mm
-    proto: Cartridge90mmAP
-    capacity: 15
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
-    layers:
-    - state: base-gyrostable
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.75, 0.75
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
-  - type: Tag
-    tags:
-      - ResoluteClip
+# - type: entity
+#   id: MagazineResoluteAP
+#   name: 90mm Armor Piercing clip
+#   description: Three 5 round clips bundled together for with the mighty Resolute autocannon. Contains Armor-Piercing shells effective against heavily armored targets.
+#   parent: BaseItem
+#   components:
+#   - type: MultiHandedItem
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge90mm
+#     proto: Cartridge90mmAP
+#     capacity: 15
+#   - type: Item
+#     size: Normal
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
+#     layers:
+#     - state: base-gyrostable
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#     scale: 0.75, 0.75
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 6
+#     zeroVisible: false
+#   - type: Appearance
+#   - type: Tag
+#     tags:
+#       - ResoluteClip
 
-- type: entity
-  id: MagazineResoluteHE
-  name: 90mm High Explosive clip
-  description: Three 5 round clips bundled together for with the mighty Resolute autocannon. Contains High Explosive shells most effective against light targets.
-  parent: BaseItem
-  components:
-  - type: MultiHandedItem
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge90mm
-    proto: Cartridge90mmHE
-    capacity: 15
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
-    layers:
-    - state: base-plasma
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-    scale: 0.75, 0.75
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
-  - type: Tag
-    tags:
-      - ResoluteClip
+# - type: entity
+#   id: MagazineResoluteHE
+#   name: 90mm High Explosive clip
+#   description: Three 5 round clips bundled together for with the mighty Resolute autocannon. Contains High Explosive shells most effective against light targets.
+#   parent: BaseItem
+#   components:
+#   - type: MultiHandedItem
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge90mm
+#     proto: Cartridge90mmHE
+#     capacity: 15
+#   - type: Item
+#     size: Normal
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
+#     layers:
+#     - state: base-plasma
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#     scale: 0.75, 0.75
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 6
+#     zeroVisible: false
+#   - type: Appearance
+#   - type: Tag
+#     tags:
+#       - ResoluteClip
 
-- type: entity
-  id: Magazine90mmEmpty
-  name: 90mm clip
-  description: An loading clip designed for use with 90mm artillery systems
-  parent: MagazineResolute
-  components:
-  - type: MultiHandedItem
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - Cartridge90mm
-    proto: null
+# - type: entity
+#   id: Magazine90mmEmpty
+#   name: 90mm clip
+#   description: An loading clip designed for use with 90mm artillery systems
+#   parent: MagazineResolute
+#   components:
+#   - type: MultiHandedItem
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - Cartridge90mm
+#     proto: null

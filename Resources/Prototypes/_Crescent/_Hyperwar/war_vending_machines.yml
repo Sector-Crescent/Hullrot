@@ -198,6 +198,34 @@
 
 - type: entity
   parent: [BaseStructureUnanchorable, VendingMachine]
+  id: PangtaiWarVendory
+  name: Pang Tai corporate war vendor
+  description: Corporate fueled war in the name of profit. No refunds.
+  components:
+  - type: VendingMachine
+    pack: PangtaiWarInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    globalPriceMod: 0
+  - type: Advertise
+    pack: WarVendAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Speech
+  - type: Sprite
+    sprite: _Crescent/Structures/armory.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: entity
+  parent: [BaseStructureUnanchorable, VendingMachine]
   id: SolarianWarVendory
   name: central solarian authoritat war vendor
   description: Bring Taypan into the fold. Glory to the 43rd Battlegroup and Sol.

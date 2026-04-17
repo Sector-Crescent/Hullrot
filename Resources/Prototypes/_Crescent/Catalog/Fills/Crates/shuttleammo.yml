@@ -286,16 +286,16 @@
       - id: Magazine20mm
         amount: 10
 
-- type: entity
-  id: Crate20mmAmmoGyrostable
-  parent: N14CrateAluminium
-  name: 20mm Fragmentation 'Screamer' Ammo Crate
-  description: 10 boxes of anti-personnel Fragmentation ammunition for the 'Screamer' weapon platform. Not effective against ships.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine20mmFrag
-        amount: 10
+# - type: entity
+#   id: Crate20mmAmmoGyrostable
+#   parent: N14CrateAluminium
+#   name: 20mm Fragmentation 'Screamer' Ammo Crate
+#   description: 10 boxes of anti-personnel Fragmentation ammunition for the 'Screamer' weapon platform. Not effective against ships.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine20mmFrag
+#         amount: 10
 
 - type: entity
   id: Crate35mmAmmo
@@ -308,16 +308,16 @@
       - id: Magazine35mm
         amount: 10
 
-- type: entity
-  id: Crate35mmAmmoGyrostable
-  parent: N14CrateAluminium
-  name: 35mm HE 'Scout' Ammo Crate
-  description: 10 boxes of high explosive ammunition for the 'Scout' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine35mmHE
-        amount: 10
+# - type: entity
+#   id: Crate35mmAmmoGyrostable
+#   parent: N14CrateAluminium
+#   name: 35mm HE 'Scout' Ammo Crate
+#   description: 10 boxes of high explosive ammunition for the 'Scout' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine35mmHE
+#         amount: 10
 
 - type: entity
   id: Crate48mmAmmo
@@ -330,16 +330,16 @@
       - id: Magazine48mmRocket
         amount: 10
 
-- type: entity
-  id: Crate48mmAmmoGorlex
-  parent: N14CrateAluminium
-  name: Gorlex 48mm HE 'Shortbow' Rocket Crate
-  description: 10 HE missile magazines for the 'Shortbow' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine48mmRocketGorlex
-        amount: 10
+# - type: entity
+#   id: Crate48mmAmmoGorlex
+#   parent: N14CrateAluminium
+#   name: Gorlex 48mm HE 'Shortbow' Rocket Crate
+#   description: 10 HE missile magazines for the 'Shortbow' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine48mmRocketGorlex
+#         amount: 10
 
 - type: entity
   id: Crate50mmAmmo
@@ -352,27 +352,27 @@
       - id: Magazine50mm
         amount: 10
 
-- type: entity
-  id: Crate50mmAmmoPlasma
-  parent: N14CrateAluminium
-  name: 50mm SAPHE 'Striker' Ammo Crate
-  description: 10 boxes of semi-armor piercing high explosive ammunition for the 'Striker' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine50mmSAPHE
-        amount: 10
+# - type: entity
+#   id: Crate50mmAmmoPlasma
+#   parent: N14CrateAluminium
+#   name: 50mm SAPHE 'Striker' Ammo Crate
+#   description: 10 boxes of semi-armor piercing high explosive ammunition for the 'Striker' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine50mmSAPHE
+#         amount: 10
 
-- type: entity
-  id: Crate50mmAmmoGyrostable
-  parent: N14CrateAluminium
-  name: 50mm HE 'Striker' Ammo Crate
-  description: 10 boxes of high explosive ammunition for the 'Striker' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine50mmHE
-        amount: 10
+# - type: entity
+#   id: Crate50mmAmmoGyrostable
+#   parent: N14CrateAluminium
+#   name: 50mm HE 'Striker' Ammo Crate
+#   description: 10 boxes of high explosive ammunition for the 'Striker' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine50mmHE
+#         amount: 10
 
 - type: entity
   id: Crate60mmAmmo
@@ -385,38 +385,38 @@
       - id: Magazine60mm
         amount: 6
 
-- type: entity
-  id: Crate60mmAmmoAdvanced
-  parent: N14CrateAluminium
-  name: 60mm HE 'Azimuth' Advanced Missile Crate
-  description: 6 HE missile magazines for the 'Azimuth' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine60mmSHI
-        amount: 6
+# - type: entity
+#   id: Crate60mmAmmoAdvanced
+#   parent: N14CrateAluminium
+#   name: 60mm HE 'Azimuth' Advanced Missile Crate
+#   description: 6 HE missile magazines for the 'Azimuth' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine60mmSHI
+#         amount: 6
 
-- type: entity
-  id: Crate60mmAmmoNCWL
-  parent: N14CrateAluminium
-  name: Homeguard 60mm HE 'Azimuth' Rocket Crate
-  description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine60mmNCWL
-        amount: 6
+# - type: entity
+#   id: Crate60mmAmmoNCWL
+#   parent: N14CrateAluminium
+#   name: Homeguard 60mm HE 'Azimuth' Rocket Crate
+#   description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine60mmNCWL
+#         amount: 6
 
-- type: entity
-  id: Crate60mmAmmoGorlex
-  parent: N14CrateAluminium
-  name: Gorlex 60mm HE 'Azimuth' Rocket Crate
-  description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Magazine60mmGorlex
-        amount: 6
+# - type: entity
+#   id: Crate60mmAmmoGorlex
+#   parent: N14CrateAluminium
+#   name: Gorlex 60mm HE 'Azimuth' Rocket Crate
+#   description: 6 HE rocket magazines for the 'Azimuth' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Magazine60mmGorlex
+#         amount: 6
 
 - type: entity
   id: Crate88mmAmmo
@@ -440,27 +440,27 @@
       - id: MagazineResolute
         amount: 6
 
-- type: entity
-  id: Crate90mmAmmoPlasma
-  parent: N14CrateAluminium
-  name: 90mm HE 'Resolute' Ammo Crate
-  description: 6 clips of PC ammunition for the 'Resolute' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: MagazineResoluteHE
-        amount: 6
+# - type: entity
+#   id: Crate90mmAmmoPlasma
+#   parent: N14CrateAluminium
+#   name: 90mm HE 'Resolute' Ammo Crate
+#   description: 6 clips of PC ammunition for the 'Resolute' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: MagazineResoluteHE
+#         amount: 6
 
-- type: entity
-  id: Crate90mmAmmoGyrostable
-  parent: N14CrateAluminium
-  name: 90mm AP 'Resolute' Ammo Crate
-  description: 6 clips of armor-piercing ammunition for the 'Resolute' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: MagazineResoluteAP
-        amount: 6
+# - type: entity
+#   id: Crate90mmAmmoGyrostable
+#   parent: N14CrateAluminium
+#   name: 90mm AP 'Resolute' Ammo Crate
+#   description: 6 clips of armor-piercing ammunition for the 'Resolute' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: MagazineResoluteAP
+#         amount: 6
 
 - type: entity
   id: Crate95mmAmmo
@@ -484,27 +484,27 @@
       - id: Cartridge120mm
         amount: 20
 
-- type: entity
-  id: Crate120mmAmmoPlasma
-  parent: N14CrateAluminium
-  name: 120mm Flak 'Anvil' artillery Shell Crate
-  description: 20 shells of Flak ammunition for the 'Anvil' weapon platform. Proximity fuse makes it effective against missiles.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Cartridge120mmFlak
-        amount: 20
+# - type: entity
+#   id: Crate120mmAmmoPlasma
+#   parent: N14CrateAluminium
+#   name: 120mm Flak 'Anvil' artillery Shell Crate
+#   description: 20 shells of Flak ammunition for the 'Anvil' weapon platform. Proximity fuse makes it effective against missiles.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Cartridge120mmFlak
+#         amount: 20
 
-- type: entity
-  id: Crate120mmAmmoGyrostable
-  parent: N14CrateAluminium
-  name: 120mm Flux 'Anvil' Shell Crate
-  description: 20 shells of flux-core ammunition for the 'Anvil' weapon platform.
-  components:
-  - type: StorageFill
-    contents:
-      - id: Cartridge120mmFlux
-        amount: 20
+# - type: entity
+#   id: Crate120mmAmmoGyrostable
+#   parent: N14CrateAluminium
+#   name: 120mm Flux 'Anvil' Shell Crate
+#   description: 20 shells of flux-core ammunition for the 'Anvil' weapon platform.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: Cartridge120mmFlux
+#         amount: 20
 
 - type: entity
   id: Crate240mmAmmo

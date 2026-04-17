@@ -12,20 +12,20 @@
   - BasicMechatronics1Mechatronics
   - PlastitaniumFibreAlloy1Mechatronics
 
-- type: technology
-  id: SalvageEquipmentMechatronics
-  name: research-technology-salvage-equipment
-  icon:
-    sprite: Objects/Tools/handdrill.rsi
-    state: handdrill
-  discipline: Mechatronics
-  tier: 1
-  cost: 3500
-  recipeUnlocks:
-  - MiningDrill
-  - BorgModuleMining
-  - MechEquipmentDrill
-  - ClothingMaskWeldingGas
+# - type: technology
+#   id: SalvageEquipmentMechatronics
+#   name: research-technology-salvage-equipment
+#   icon:
+#     sprite: Objects/Tools/handdrill.rsi
+#     state: handdrill
+#   discipline: Mechatronics
+#   tier: 1
+#   cost: 3500
+#   recipeUnlocks:
+#   - MiningDrill
+#   - BorgModuleMining
+#   - MechEquipmentDrill
+#   - ClothingMaskWeldingGas
 
 - type: technology
   id: AdvancedPowercellsMechatronics
@@ -42,68 +42,68 @@
   - TurboItemRechargerCircuitboard
   - SMESAdvancedMachineCircuitboard
 
-- type: technology
-  id: MechanicalCompressionMechatronics
-  name: research-technology-mechanical-compression
-  icon:
-    sprite: Structures/Machines/flatpacker.rsi
-    state: base
-  discipline: Mechatronics
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - FlatpackerMachineCircuitboard
+# - type: technology
+#   id: MechanicalCompressionMechatronics
+#   name: research-technology-mechanical-compression
+#   icon:
+#     sprite: Structures/Machines/flatpacker.rsi
+#     state: base
+#   discipline: Mechatronics
+#   tier: 1
+#   cost: 10000
+#   recipeUnlocks:
+#   - FlatpackerMachineCircuitboard
 
-- type: technology
-  id: PowerGenerationMechatronics
-  name: research-technology-power-generation
-  icon:
-    sprite: Structures/Power/Generation/portable_generator.rsi
-    state: portgen0
-  discipline: Mechatronics
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - PortableGeneratorPacmanMachineCircuitboard
-  - PortableGeneratorSuperPacmanMachineCircuitboard
-  - PortableGeneratorJrPacmanMachineCircuitboard
-  - PowerComputerCircuitboard #the actual solar panel itself should be in here
-  - SolarControlComputerCircuitboard
-  - SolarTrackerElectronics
-  - EmitterCircuitboard
+# - type: technology
+#   id: PowerGenerationMechatronics
+#   name: research-technology-power-generation
+#   icon:
+#     sprite: Structures/Power/Generation/portable_generator.rsi
+#     state: portgen0
+#   discipline: Mechatronics
+#   tier: 1
+#   cost: 7500
+#   recipeUnlocks:
+#   - PortableGeneratorPacmanMachineCircuitboard
+#   - PortableGeneratorSuperPacmanMachineCircuitboard
+#   - PortableGeneratorJrPacmanMachineCircuitboard
+#   - PowerComputerCircuitboard #the actual solar panel itself should be in here
+#   - SolarControlComputerCircuitboard
+#   - SolarTrackerElectronics
+#   - EmitterCircuitboard
 
-- type: technology
-  id: AtmosphericTechMechatronics
-  name: research-technology-atmospheric-tech
-  icon:
-    sprite: Structures/Piping/Atmospherics/thermomachine.rsi
-    state: freezerOff
-  discipline: Mechatronics
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - ThermomachineFreezerMachineCircuitBoard
-  - GasRecyclerMachineCircuitboard
-  - AlertsComputerCircuitboard
+# - type: technology
+#   id: AtmosphericTechMechatronics
+#   name: research-technology-atmospheric-tech
+#   icon:
+#     sprite: Structures/Piping/Atmospherics/thermomachine.rsi
+#     state: freezerOff
+#   discipline: Mechatronics
+#   tier: 1
+#   cost: 7500
+#   recipeUnlocks:
+#   - ThermomachineFreezerMachineCircuitBoard
+#   - GasRecyclerMachineCircuitboard
+#   - AlertsComputerCircuitboard
 
-- type: technology
-  id: Mechatronics
-  name: research-technology-ripley-aplu
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: ripley
-  discipline: Mechatronics
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - RipleyHarness
-  - RipleyLArm
-  - RipleyRArm
-  - RipleyLLeg
-  - RipleyRLeg
-  - RipleyCentralElectronics
-  - RipleyPeripheralsElectronics
-  - MechEquipmentGrabber
+# - type: technology
+#   id: Mechatronics
+#   name: research-technology-ripley-aplu
+#   icon:
+#     sprite: Objects/Specific/Mech/mecha.rsi
+#     state: ripley
+#   discipline: Mechatronics
+#   tier: 1
+#   cost: 10000
+#   recipeUnlocks:
+#   - RipleyHarness
+#   - RipleyLArm
+#   - RipleyRArm
+#   - RipleyLLeg
+#   - RipleyRLeg
+#   - RipleyCentralElectronics
+#   - RipleyPeripheralsElectronics
+#   - MechEquipmentGrabber
 
 #tier 2
 
@@ -120,8 +120,6 @@
     - WelderExperimental
     - PowerDrill
     - JawsOfLife
-    - BorgModuleAdvancedTool
-    - BorgModuleRCD
 
 - type: technology
   id: BasicWeaponsMechatronics
@@ -143,48 +141,48 @@
   - MagazineLightRifleShrapnel
 
 
-- type: technology
-  id: MassExcavationMechatronics
-  name: research-technology-excavation
-  icon:
-    sprite: Objects/Tools/handdrilldiamond.rsi
-    state: handdrill
-  discipline: Mechatronics
-  tier: 2
-  cost: 12500
-  recipeUnlocks:
-    - OreBagOfHolding
-    - MiningDrillDiamond
-    - MechEquipmentDrillDiamond
+# - type: technology
+#   id: MassExcavationMechatronics
+#   name: research-technology-excavation
+#   icon:
+#     sprite: Objects/Tools/handdrilldiamond.rsi
+#     state: handdrill
+#   discipline: Mechatronics
+#   tier: 2
+#   cost: 12500
+#   recipeUnlocks:
+#     - OreBagOfHolding
+#     - MiningDrillDiamond
+#     - MechEquipmentDrillDiamond
 
-- type: technology
-  id: Ripley2Mechatronics
-  name: research-technology-ripley-mkii
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: ripleymkii
-  discipline: Mechatronics
-  tier: 2
-  cost: 8000
-  recipeUnlocks:
-  - RipleyMKIIHarness
-  - RipleyUpgradeKit
-  technologyPrerequisites:
-  - RipleyAPLU
+# - type: technology
+#   id: Ripley2Mechatronics
+#   name: research-technology-ripley-mkii
+#   icon:
+#     sprite: Objects/Specific/Mech/mecha.rsi
+#     state: ripleymkii
+#   discipline: Mechatronics
+#   tier: 2
+#   cost: 8000
+#   recipeUnlocks:
+#   - RipleyMKIIHarness
+#   - RipleyUpgradeKit
+#   technologyPrerequisites:
+#   - RipleyAPLU
 
 #tier 3
 
-- type: technology
-  id: BluespaceStorageMechatronics
-  name: research-technology-bluespace-storage
-  icon:
-    sprite: Clothing/Back/Backpacks/holding.rsi
-    state: holding
-  discipline: Mechatronics
-  tier: 3
-  cost: 20000
-  recipeUnlocks:
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
-  softCapContribution: 1.5
+# - type: technology
+#   id: BluespaceStorageMechatronics
+#   name: research-technology-bluespace-storage
+#   icon:
+#     sprite: Clothing/Back/Backpacks/holding.rsi
+#     state: holding
+#   discipline: Mechatronics
+#   tier: 3
+#   cost: 20000
+#   recipeUnlocks:
+#   - ClothingBackpackHolding
+#   - ClothingBackpackSatchelHolding
+#   - ClothingBackpackDuffelHolding
+#   softCapContribution: 1.5

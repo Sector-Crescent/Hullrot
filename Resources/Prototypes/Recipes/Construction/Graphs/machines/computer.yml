@@ -140,3 +140,55 @@
           steps:
             - tool: Prying
               doAfter: 2
+
+    - node: electronicsDestroyed
+      entity: ComputerFrame
+      actions:
+        - !type:SetAnchor { }
+        - !type:AppearanceChange
+      edges:
+        - to: electronicsRepairing
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Cutting
+        - to: electronicsRepaired
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Cable
+              amount: 5
+        - to: computer
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: electronicsRepairing
+      entity: ComputerFrame
+      actions:
+        - !type:SetAnchor { }
+        - !type:AppearanceChange
+      edges:
+        - to: electronicsRepaired
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Cable
+              amount: 5
+
+    - node: electronicsRepaired
+      entity: ComputerFrame
+      actions:
+        - !type:SetAnchor { }
+        - !type:AppearanceChange
+      edges:
+        - to: computer
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 2

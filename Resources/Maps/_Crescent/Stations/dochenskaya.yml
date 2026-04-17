@@ -40105,7 +40105,7 @@ entities:
     - type: Transform
       pos: 6.5,22.5
       parent: 1
-- proto: ClosetFireFilled
+- proto: ClosetFireCrescentFilled
   entities:
   - uid: 1544
     components:
@@ -40117,7 +40117,7 @@ entities:
     - type: Transform
       pos: -5.5,22.5
       parent: 1
-- proto: ClosetMaintenanceFilledRandom
+- proto: ClosetMaintenance
   entities:
   - uid: 1546
     components:
@@ -45677,7 +45677,7 @@ entities:
     - type: Transform
       pos: -11.5,38.5
       parent: 1
-- proto: Screwdriver
+- proto: CrescentScrewdriver
   entities:
   - uid: 2407
     components:
@@ -46947,7 +46947,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -12.5,22.5
       parent: 1
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 2571
     components:
@@ -46961,7 +46961,7 @@ entities:
     - type: Transform
       pos: 10.475063,38.91012
       parent: 1
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 2573
     components:
@@ -46973,7 +46973,7 @@ entities:
     - type: Transform
       pos: 9.481008,18.509909
       parent: 1
-- proto: ToolboxSyndicateFilled
+- proto: ToolboxSyndicateCrescentFilled
   entities:
   - uid: 2575
     components:
@@ -47242,7 +47242,7 @@ entities:
     - type: Transform
       pos: -10.5,22.5
       parent: 1
-- proto: VendingMachineEngivend
+- proto: VendingMachineCrescentEngivend
   entities:
   - uid: 2588
     components:
@@ -47285,7 +47285,7 @@ entities:
     - type: Transform
       pos: 2.5,40.5
       parent: 1
-- proto: VendingMachineYouTool
+- proto: VendingMachineCrescentYouTool
   entities:
   - uid: 2595
     components:
@@ -49751,7 +49751,7 @@ entities:
           showEnts: False
           occludes: True
           ent: 1336
-- proto: Welder
+- proto: CrescentWelder
   entities:
   - uid: 3011
     components:
@@ -49824,7 +49824,7 @@ entities:
     - type: Transform
       pos: 4.5,4.5
       parent: 1
-- proto: Wrench
+- proto: CrescentWrench
   entities:
   - uid: 3022
     components:

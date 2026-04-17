@@ -37,21 +37,21 @@
     zeroVisible: false
   - type: Appearance
 
-- type: entity
-  id: Magazine48mmRocketGorlex
-  name: Gorlex 48mm loading box
-  description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been painted red.
-  parent: Magazine48mmRocket
-  components:
-    - type: Sprite
-      layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-        color: "#990000"
-      - state: mag-1
-        map: ["enum.GunVisualLayers.Mag"]
-    - type: BallisticAmmoProvider
-      proto: Cartridge48mmRocketGorlex
+# - type: entity
+#   id: Magazine48mmRocketGorlex
+#   name: Gorlex 48mm loading box
+#   description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been painted red.
+#   parent: Magazine48mmRocket
+#   components:
+#     - type: Sprite
+#       layers:
+#       - state: base
+#         map: ["enum.GunVisualLayers.Base"]
+#         color: "#990000"
+#       - state: mag-1
+#         map: ["enum.GunVisualLayers.Mag"]
+#     - type: BallisticAmmoProvider
+#       proto: Cartridge48mmRocketGorlex
 
 - type: entity
   id: Magazine60mm
@@ -65,59 +65,59 @@
           - CartridgeAzimuth
       proto: Cartridge60mmRocket
 
-- type: entity
-  id: Magazine60mmGorlex
-  name: Gorlex 60mm loading box
-  description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been painted red.
-  parent: Magazine48mmRocket
-  components:
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-          - CartridgeAzimuth
-      proto: Cartridge60mmRocketGorlex
-    - type: Sprite
-      layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-        color: "#990000"
-      - state: mag-1
-        map: ["enum.GunVisualLayers.Mag"]
+# - type: entity
+#   id: Magazine60mmGorlex
+#   name: Gorlex 60mm loading box
+#   description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been painted red.
+#   parent: Magazine48mmRocket
+#   components:
+#     - type: BallisticAmmoProvider
+#       whitelist:
+#         tags:
+#           - CartridgeAzimuth
+#       proto: Cartridge60mmRocketGorlex
+#     - type: Sprite
+#       layers:
+#       - state: base
+#         map: ["enum.GunVisualLayers.Base"]
+#         color: "#990000"
+#       - state: mag-1
+#         map: ["enum.GunVisualLayers.Mag"]
 
-- type: entity
-  id: Magazine60mmNCWL
-  name: Homeguard 60mm loading box
-  description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been expertly painted a shade of communard orange.
-  parent: Magazine48mmRocket
-  components:
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-          - CartridgeAzimuth
-      proto: Cartridge60mmRocketNCWL
-    - type: Sprite
-      layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-        color: "#ffab10"
-      - state: mag-1
-        map: ["enum.GunVisualLayers.Mag"]
+# - type: entity
+#   id: Magazine60mmNCWL
+#   name: Homeguard 60mm loading box
+#   description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. This one has been expertly painted a shade of communard orange.
+#   parent: Magazine48mmRocket
+#   components:
+#     - type: BallisticAmmoProvider
+#       whitelist:
+#         tags:
+#           - CartridgeAzimuth
+#       proto: Cartridge60mmRocketNCWL
+#     - type: Sprite
+#       layers:
+#       - state: base
+#         map: ["enum.GunVisualLayers.Base"]
+#         color: "#ffab10"
+#       - state: mag-1
+#         map: ["enum.GunVisualLayers.Mag"]
 
-- type: entity
-  id: Magazine60mmSHI
-  name: SHI 60mm loading box
-  description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. For the downside of being painted Shinohara grey this one comes with guided missiles.
-  parent: Magazine48mmRocket
-  components:
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-          - CartridgeAzimuth
-      proto: Cartridge60mmRocketAdvanced
-    - type: Sprite
-      layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-        color: "#8b8b8b"
-      - state: mag-1
-        map: ["enum.GunVisualLayers.Mag"]
+# - type: entity
+#   id: Magazine60mmSHI
+#   name: SHI 60mm loading box
+#   description: A munitions drum designed to ease loading of 60mm rocket systems. Comes 6 rockets to a box. For the downside of being painted Shinohara grey this one comes with guided missiles.
+#   parent: Magazine48mmRocket
+#   components:
+#     - type: BallisticAmmoProvider
+#       whitelist:
+#         tags:
+#           - CartridgeAzimuth
+#       proto: Cartridge60mmRocketAdvanced
+#     - type: Sprite
+#       layers:
+#       - state: base
+#         map: ["enum.GunVisualLayers.Base"]
+#         color: "#8b8b8b"
+#       - state: mag-1
+#         map: ["enum.GunVisualLayers.Mag"]

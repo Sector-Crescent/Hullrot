@@ -19,10 +19,8 @@
     - !type:CharacterLogicOrRequirement
       requirements:
         - !type:CharacterSpeciesRequirement
-          inverted: true
           species:
-            - IPC
-            - Oni
+            - Moth
 
 - type: trait
   id: PsionicInsulation
@@ -78,10 +76,9 @@
     - !type:CharacterLogicOrRequirement
       requirements:
         - !type:CharacterSpeciesRequirement
-          inverted: true
           species:
-            - IPC
-            - Oni
+            - Moth
+
 
 - type: trait
   id: Biomancer
@@ -106,10 +103,8 @@
     - !type:CharacterLogicOrRequirement
       requirements:
         - !type:CharacterSpeciesRequirement
-          inverted: true
           species:
-            - IPC
-            - Oni
+            - Moth
 
 - type: trait
   id: Pyromancer
@@ -134,7 +129,5 @@
     - !type:CharacterLogicOrRequirement
       requirements:
         - !type:CharacterSpeciesRequirement
-          inverted: true
           species:
-            - IPC
-            - Oni
+            - Moth

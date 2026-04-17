@@ -8,7 +8,7 @@ public sealed partial class CCVars
     ///     Link to Discord server to show in the launcher.
     /// </summary>
     public static readonly CVarDef<string> InfoLinksDiscord =
-        CVarDef.Create("infolinks.discord", "", CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("infolinks.discord", "https://discord.gg/u7TjjXXu73", CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     Link to website to show in the launcher.
@@ -38,7 +38,7 @@ public sealed partial class CCVars
     ///     Link to Patreon. Not shown in the launcher currently.
     /// </summary>
     public static readonly CVarDef<string> InfoLinksPatreon =
-        CVarDef.Create("infolinks.patreon", "", CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("infolinks.patreon", "https://www.patreon.com/c/evergreenBloom", CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     Link to the bug report form.
