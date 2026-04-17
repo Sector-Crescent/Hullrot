@@ -1,0 +1,30 @@
+- type: gameMap
+  id: IronRing
+  mapName: 'Iron Ring'
+  mapPath: /Maps/_Crescent/Stations/ironring.yml
+  minPlayers: 0
+  stations:
+    IronRing:
+      stationProto: StandardCrescentStation
+      gridComponents:
+        - type: BlockShipWeaponProjectileGrid
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: outpost
+        - type: StationNameSetup
+          mapNameTemplate: 'Iron Ring'
+        - type: VesselDesignation
+          designation: vessel-designation-headquarters
+        - type: VesselDescription
+          description: Once a major living habitat for the miners of taypan, now it's a desolate hub for the scum and dregs of the sector.
+        #- type: VesselMusic
+          #ambientMusicPrototype: CountsmanMusic
+        - type: Grammar
+          attributes:
+            proper: true
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Vagrant: [ 3, 3 ]

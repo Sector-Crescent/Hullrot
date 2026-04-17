@@ -376,14 +376,6 @@
   materials:
     Steel: 1500
 
-- type: latheRecipe
-  id: Screamer20mmGyrostableRecipe
-  result: Magazine20mmFrag
-  completetime: 2
-  materials:
-    Steel: 1500
-    Uranium: 500
-
 #35mm Scout Ammo
 - type: latheRecipe
   id: Scout35mmRegularRecipe
@@ -392,13 +384,13 @@
   materials:
     Steel: 2000
 
-- type: latheRecipe
-  id: Scout35mmGyrostableRecipe
-  result: Magazine35mmHE
-  completetime: 2
-  materials:
-    Steel: 2000
-    Uranium: 1000
+# - type: latheRecipe
+#   id: Scout35mmGyrostableRecipe
+#   result: Magazine35mmHE
+#   completetime: 2
+#   materials:
+#     Steel: 2000
+#     Uranium: 1000
 
 
 
@@ -410,23 +402,6 @@
   materials:
     Steel: 3000
     Plasma: 500
-
-- type: latheRecipe
-  id: Striker50mmGyrostableRecipe
-  result: Magazine50mmHE
-  completetime: 2
-  materials:
-    Steel: 3000
-    Plasma: 500
-    Uranium: 1500
-
-- type: latheRecipe
-  id: Striker50mmPlasmaRecipe
-  result: Magazine50mmSAPHE
-  completetime: 2
-  materials:
-    Steel: 3000
-    Plasma: 2500
 
 #88mm Corpus Flak Ammo
 - type: latheRecipe
@@ -447,23 +422,23 @@
     Uranium: 500
     Plasma: 500
 
-- type: latheRecipe
-  id: Resolute90mmGyrostableRecipe
-  result: MagazineResoluteAP
-  completetime: 2
-  materials:
-    Steel: 4000
-    Uranium: 2500
-    Plasma: 500
+# - type: latheRecipe
+#   id: Resolute90mmGyrostableRecipe
+#   result: MagazineResoluteAP
+#   completetime: 2
+#   materials:
+#     Steel: 4000
+#     Uranium: 2500
+#     Plasma: 500
 
-- type: latheRecipe
-  id: Resolute90mmPlasmaRecipe
-  result: MagazineResoluteHE
-  completetime: 2
-  materials:
-    Steel: 4000
-    Uranium: 500
-    Plasma: 2500
+# - type: latheRecipe
+#   id: Resolute90mmPlasmaRecipe
+#   result: MagazineResoluteHE
+#   completetime: 2
+#   materials:
+#     Steel: 4000
+#     Uranium: 500
+#     Plasma: 2500
 
 #120mm Anvil Ammo
 - type: latheRecipe
@@ -474,24 +449,6 @@
     Steel: 1000
     Uranium: 500
     Plasma: 500
-
-- type: latheRecipe
-  id: Anvil120mmGyrostableRecipe
-  result: Cartridge120mmFlux
-  completetime: 2
-  materials:
-    Steel: 1000
-    Uranium: 1000
-    Plasma: 500
-
-- type: latheRecipe
-  id: Anvil120mmPlasmaRecipe
-  result: Cartridge120mmFlak
-  completetime: 2
-  materials:
-    Steel: 1000
-    Uranium: 500
-    Plasma: 1000
 
 #300mm Leviathan Ammo #More like Piss-Is hehehehehehehehe i'm such a fucking chud dude
 - type: latheRecipe
@@ -514,14 +471,6 @@
     Steel: 500
     Plasma: 200
 
-- type: latheRecipe
-  id: Shortbow48mmGorlexRecipe
-  result: Cartridge48mmRocket
-  completetime: 2
-  materials:
-    Steel: 500
-    Plasma: 1000
-
 #60mm Azimuth Ammo
 - type: latheRecipe
   id: Azimuth60mmRegularRecipe
@@ -530,32 +479,6 @@
   materials:
     Steel: 1000
     Plasma: 500
-
-- type: latheRecipe
-  id: Azimuth60mmGorlexRecipe
-  result: Cartridge60mmRocketGorlex
-  completetime: 2
-  materials:
-    Steel: 1000
-    Plasma: 1500
-
-- type: latheRecipe
-  id: Azimuth60mmNCWLRecipe
-  result: Cartridge60mmRocketNCWL
-  completetime: 2
-  materials:
-    Steel: 1000
-    Plasma: 500
-    Uranium: 1000
-
-- type: latheRecipe
-  id: Azimuth60mmAdvancedRecipe
-  result: Cartridge60mmRocketAdvanced
-  completetime: 2
-  materials:
-    Steel: 1000
-    Plasma: 1500
-    Uranium: 1500
 
 #95mm Arbalest Ammo
 - type: latheRecipe
@@ -566,23 +489,6 @@
     Steel: 1500
     Plasma: 1000
 
-- type: latheRecipe
-  id: Arbalest95mmNCWLRecipe
-  result: Cartridge95mmRocketNCWL
-  completetime: 2
-  materials:
-    Steel: 1500
-    Plasma: 1000
-    Uranium: 1000
-
-- type: latheRecipe
-  id: Arbalest95mmGorlexRecipe
-  result: Cartridge95mmRocketGSC
-  completetime: 2
-  materials:
-    Steel: 1500
-    Plasma: 2000
-
 #240mm Gargoyle Ammo
 - type: latheRecipe
   id: Gargoyle240mmRegularRecipe
@@ -591,15 +497,6 @@
   materials:
     Steel: 2000
     Plasma: 2000
-
-- type: latheRecipe
-  id: Gargoyle240mmNCWLRecipe
-  result: Cartridge240mmRocketNCWL
-  completetime: 2
-  materials:
-    Steel: 2000
-    Plasma: 2000
-    Uranium: 1000
 
 #330mm Catapult Ammo
 - type: latheRecipe

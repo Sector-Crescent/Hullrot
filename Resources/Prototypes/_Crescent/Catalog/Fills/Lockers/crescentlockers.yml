@@ -1,0 +1,90 @@
+- type: entity
+  id: ClosetToolCrescentFilled
+  parent: ClosetTool
+  suffix: Crescent, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrescentScrewdriver
+        prob: 0.7
+      - id: CrescentWrench
+        prob: 0.7
+      - id: CrescentMiniWelder
+        prob: 0.7
+      - id: CrescentCrowbar
+        prob: 0.7
+      - id: CrescentWirecutter
+        prob: 0.7
+      - id: CrescentMultitool
+        prob: 0.2
+      - id: CrescenttrayScanner
+        prob: 0.7
+      - id: GasAnalyzer
+        prob: 0.7
+      - id: ClothingBeltUtility
+        prob: 0.2
+      - id: ClothingHandsGlovesColorYellow
+        prob: 0.05
+      - id: ClothingOuterJacketInsulated
+        prob: 0.05
+      - id: ClothingHeadHatHardhatRed
+        prob: 0.4
+      - id: CableApcStack
+        prob: 0.3
+      - id: CableApcStack
+        prob: 0.3
+      - id: CableApcStack
+        prob: 0.3
+      - id: SprayPainter
+        prob: 0.7
+
+- type: entity
+  id: LockerElectricalSuppliesCrescentFilled
+  suffix: Crescent, Filled
+  parent: LockerElectricalSupplies
+  components:
+  - type: StorageFill
+    contents:
+      - id: ToolboxElectricalCrescentFilled
+        prob: 0.7
+      - id: FirelockElectronics
+        prob: 0.05
+      - id: APCElectronics
+        prob: 0.1
+      - id: CableMVStack
+        prob: 0.2
+      - id: CableApcStack
+        prob: 0.3
+
+- type: entity
+  id: LockerWeldingSuppliesCrescentFilled
+  suffix: Crescent, Filled
+  parent: LockerWeldingSupplies
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHeadHatWelding
+      - id: ClothingHeadHatWelding
+      - id: ClothingHeadHatWelding
+        prob: 0.5
+      - id: CrescentWelder
+      - id: CrescentWelder
+      - id: WelderMini
+        orGroup: thirdWelder
+      - id: CrescentWelder
+        prob: 0.33
+        orGroup: thirdWelder
+
+- type: entity
+  id: ClosetFireCrescentFilled
+  parent: ClosetFire
+  suffix: Crescent, Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterSuitFire
+    - id: ClothingHeadHelmetFire
+    - id: ClothingMaskGas
+    - id: OxygenTankFilled
+    - id: CrescentCrowbar
+    - id: FireExtinguisher

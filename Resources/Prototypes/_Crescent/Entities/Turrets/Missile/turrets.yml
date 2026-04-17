@@ -31,13 +31,11 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
-      burstCooldown: 2.5
-      shotsPerBurst: 4
-      burstFireRate: 8
-      selectedMode: Burst
+      projectileSpeed: 80
+      fireRate: 2
+      selectedMode: FullAuto
       availableModes:
-        - Burst
+        - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
     - type: BallisticAmmoProvider
       cycleable: false
@@ -66,37 +64,6 @@
       drawdepth: Mobs
       layers:
         - state: shortbow-tfsc
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 1200
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 140
-      burstCooldown: 2.5
-      shotsPerBurst: 6
-      burstFireRate: 8
-      selectedMode: Burst
-      availableModes:
-        - Burst
-    - type: BallisticAmmoProvider
-      cycleable: false
-      capacity: 18
-      fillWithDoAfter: true
-      fillDelay: 1
-      proto: Cartridge48mmRocket
-      whitelist:
-        tags:
-        - CartridgeShortbow
-
 #azimuth
 
 - type: entity
@@ -175,25 +142,6 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 170
-      fireRate: 1.75
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-    - type: BallisticAmmoProvider
-      cycleable: false
-      capacity: 6
-      fillWithDoAfter: true
-      fillDelay: 1
-      proto: Cartridge60mmRocket
-      whitelist:
-        tags:
-        - CartridgeAzimuth
-    - type: ApcPowerReceiver
-      powerLoad: 1500
 
 - type: entity
   parent: BaseWeaponTurretAzimuth
@@ -207,37 +155,6 @@
       drawdepth: Mobs
       layers:
         - state: tfsc-azimuth
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 1800
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 190
-      fireRate: 3
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-    - type: BallisticAmmoProvider
-      cycleable: false
-      capacity: 6
-      fillWithDoAfter: true
-      fillDelay: 1
-      proto: Cartridge60mmRocket
-      whitelist:
-        tags:
-        - CartridgeAzimuth
-    - type: ApcPowerReceiver
-      powerLoad: 1500
 
 #arbalest
 
@@ -304,44 +221,6 @@
       drawdepth: Mobs
       layers:
         - state: arbalest-tfsc
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 2800
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: ProjectileIFF
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 115
-      fireRate: 1.5
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-    - type: BallisticAmmoProvider
-      cycleable: false
-      capacity: 8
-      fillWithDoAfter: false
-      proto: Cartridge95mmRocketGSC
-      whitelist:
-        tags:
-        - CartridgeArbalest
-    - type: ApcPowerReceiver
-      powerLoad: 4000
-    - type: HardpointAnchorableOnly
-      class: Missile
-      size: Medium
 
 - type: entity
   parent: BaseTurretShipgun
@@ -367,32 +246,6 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: ProjectileIFF
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 150
-      fireRate: 1
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-    - type: BallisticAmmoProvider
-      cycleable: false
-      capacity: 4
-      fillWithDoAfter: false
-      proto: Cartridge95mmRocketNCWL
-      whitelist:
-        tags:
-        - CartridgeArbalest
-    - type: ApcPowerReceiver
-      powerLoad: 3000
-    - type: HardpointAnchorableOnly
-      class: Missile
-      size: Medium
 
 #gargoyle
 
@@ -479,36 +332,6 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: ProjectileIFF
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: MagazineVisuals
-      magState: mag
-      steps: 4
-      zeroVisible: true
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 100
-      fireRate: 0.2
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
-    - type: BallisticAmmoProvider
-      fillWithDoAfter: false
-      cycleable: false
-      capacity: 4
-      proto: Cartridge240mmRocketNCWL
-      whitelist:
-        tags:
-        - CartridgeGargoyle
-    - type: ApcPowerReceiver
-      powerLoad: 3500
-    - type: HardpointAnchorableOnly
-      class: Missile
-      size: Medium
 
 #catapult
 
@@ -557,7 +380,7 @@
       cycleable: false
       capacity: 3
       fillWithDoAfter: false
-      proto: Cartridge95mmRocketNCWL
+      proto: Cartridge330mmRocket
       whitelist:
         tags:
         - CartridgeCatapult

@@ -56,41 +56,41 @@
       - state: base-projectile
   - type: ShipWeaponProjectile
 
-- type: entity
-  id: Bullet20mmFrag # DONTUSE
-  name: 20mm fragmentation projectile
-  description: Uh oh.
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 10
-        Piercing: 40
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Fragmentation #basically a small grenade
-    maxIntensity: 5
-    intensitySlope: 3
-    totalIntensity: 100
-    maxTileBreak: 0
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 3 #501
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
+# - type: entity
+#   id: Bullet20mmFrag # DONTUSE
+#   name: 20mm fragmentation projectile
+#   description: Uh oh.
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Circle
+#     color: White
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 10
+#         Piercing: 40
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Fragmentation #basically a small grenade
+#     maxIntensity: 5
+#     intensitySlope: 3
+#     totalIntensity: 100
+#     maxTileBreak: 0
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 3 #501
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
+#   - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet35mmBase
@@ -121,41 +121,41 @@
       - state: base-projectile
   - type: ShipWeaponProjectile
 
-- type: entity
-  id: Bullet35mmHE
-  name: 35mm High Explosive projectile #DONTUSE
-  description: Uh oh.
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Circle
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 25
-        Piercing: 75
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 15
-    intensitySlope: 10
-    totalIntensity: 350
-    maxTileBreak: 0
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 15 #1800
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
-  - type: ShipWeaponProjectile
+# - type: entity
+#   id: Bullet35mmHE
+#   name: 35mm High Explosive projectile #DONTUSE
+#   description: Uh oh.
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Circle
+#     color: White
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 25
+#         Piercing: 75
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 15
+#     intensitySlope: 10
+#     totalIntensity: 350
+#     maxTileBreak: 0
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 15 #1800
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
+#   - type: ShipWeaponProjectile
 
 #50mm
 
@@ -187,75 +187,75 @@
     layers:
       - state: base-projectile
 
-- type: entity
-  id: Bullet50mmHE #DONTUSE
-  name: 50mm High Explosive projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 50
-        Piercing: 50
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 25
-    intensitySlope: 15
-    totalIntensity: 500
-    maxTileBreak: 0
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 10 #1500
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
+# - type: entity
+#   id: Bullet50mmHE #DONTUSE
+#   name: 50mm High Explosive projectile
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Square
+#     color: White
+#   - type: ShipWeaponProjectile
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 50
+#         Piercing: 50
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 25
+#     intensitySlope: 15
+#     totalIntensity: 500
+#     maxTileBreak: 0
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 10 #1500
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
 
-- type: entity
-  id: Bullet50mmSAPHE #DONTUSE
-  name: 50mm SAPHE projectile
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 150
-        Piercing: 150
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 45
-    intensitySlope: 50
-    totalIntensity: 300
-    maxTileBreak: 0
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 10 #1500
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
-    layers:
-      - state: base-projectile
+# - type: entity
+#   id: Bullet50mmSAPHE #DONTUSE
+#   name: 50mm SAPHE projectile
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Square
+#     color: White
+#   - type: ShipWeaponProjectile
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 150
+#         Piercing: 150
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 45
+#     intensitySlope: 50
+#     totalIntensity: 300
+#     maxTileBreak: 0
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 10 #1500
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
+#     layers:
+#       - state: base-projectile
 
 #Resolute DONTUSE
 
@@ -294,33 +294,33 @@
     layers:
       - state: base-projectile
 
-- type: entity
-  id: Bullet90mmAP
-  name: 90mm Armor Piercing shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectileIFF
-    visualType: Square
-    color: White
-  - type: ShipWeaponProjectile
-  - type: ProjectilePhasePrevent
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 2000
-        Piercing: 500
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: TimedDespawn
-    lifetime: 20 #3000m
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/mortarcasing.rsi
-    layers:
-      - state: base-projectile
+# - type: entity
+#   id: Bullet90mmAP
+#   name: 90mm Armor Piercing shell
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectileIFF
+#     visualType: Square
+#     color: White
+#   - type: ShipWeaponProjectile
+#   - type: ProjectilePhasePrevent
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 2000
+#         Piercing: 500
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: TimedDespawn
+#     lifetime: 20 #3000m
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/mortarcasing.rsi
+#     layers:
+#       - state: base-projectile
 
 - type: entity
   id: Bullet90mmBase
@@ -394,75 +394,75 @@
     energy: 0.5
   - type: ShipWeaponProjectile
 
-- type: entity
-  id: Bullet120mmFlux
-  name: 120mm Flux-core Armor Piercing shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Diamond
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 750
-        Piercing: 250
-  - type: TimedDespawn
-    lifetime: 10 #2000m
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
-    layers:
-      - state: base-projectile
-  - type: ExplodeOnTrigger
-  - type: EmpOnTrigger
-    range: 4
-    energyConsumption: 4500 #IPCs hate this... (nap time)
-    disableDuration: 4
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: ShipWeaponProjectile
+# - type: entity
+#   id: Bullet120mmFlux
+#   name: 120mm Flux-core Armor Piercing shell
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Diamond
+#     color: White
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 750
+#         Piercing: 250
+#   - type: TimedDespawn
+#     lifetime: 10 #2000m
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+#     layers:
+#       - state: base-projectile
+#   - type: ExplodeOnTrigger
+#   - type: EmpOnTrigger
+#     range: 4
+#     energyConsumption: 4500 #IPCs hate this... (nap time)
+#     disableDuration: 4
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: ShipWeaponProjectile
 
-- type: entity
-  id: Bullet120mmFlak
-  name: 120mm Flak shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ProjectilePhasePrevent
-  - type: ProjectileIFF
-    visualType: Diamond
-    color: White
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Structural: 250
-        Piercing: 250
-  - type: TimedDespawn
-    lifetime: 10 #2000m
-  - type: Sprite
-    sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
-    layers:
-      - state: base-projectile
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 100
-    intensitySlope: 5
-    totalIntensity: 5000
-    maxTileBreak: 1
-  - type: ProximityFuse
-    maxRange: 5
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: ShipWeaponProjectile
+# - type: entity
+#   id: Bullet120mmFlak
+#   name: 120mm Flak shell
+#   parent: BaseBulletTrigger
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: ProjectilePhasePrevent
+#   - type: ProjectileIFF
+#     visualType: Diamond
+#     color: White
+#   - type: Projectile
+#     ignoreWeaponGrid: true
+#     damage:
+#       types:
+#         Structural: 250
+#         Piercing: 250
+#   - type: TimedDespawn
+#     lifetime: 10 #2000m
+#   - type: Sprite
+#     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+#     layers:
+#       - state: base-projectile
+#   - type: ExplodeOnTrigger
+#   - type: Explosive
+#     explosionType: Default
+#     maxIntensity: 100
+#     intensitySlope: 5
+#     totalIntensity: 5000
+#     maxTileBreak: 1
+#   - type: ProximityFuse
+#     maxRange: 5
+#   - type: PointLight
+#     radius: 3.5
+#     color: orange
+#     energy: 0.5
+#   - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet300mmBase

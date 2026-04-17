@@ -821,6 +821,18 @@
       - state: passenger
 
 - type: entity
+  id: SpawnPointVagrant
+  parent: SpawnPointJobBase
+  name: Vagrant
+  components:
+  - type: SpawnPoint
+    job_id: Vagrant
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
   id: SpawnPointDockhand
   parent: SpawnPointJobBase
   name: Dockhand
@@ -1294,3 +1306,75 @@
       - state: green
       - state: passenger
 
+#planetfall
+- type: entity
+  id: SpawnPointConscriptPFT1Leader
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam1Leader
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam1Leader
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointConscriptPFT2Leader
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam2Leader
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam2Leader
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointConscriptPFT1SubLeader
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam1SubLeader
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam1SubLeader
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointConscriptPFT2SubLeader
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam2SubLeader
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam2SubLeader
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointConscriptPFT1Member
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam1Member
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam1Member
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: entity
+  id: SpawnPointConscriptPFT2Member
+  parent: SpawnPointJobBase
+  name: PlanetfallTeam2Member
+  components:
+  - type: SpawnPoint
+    job_id: PlanetfallTeam2Member
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger

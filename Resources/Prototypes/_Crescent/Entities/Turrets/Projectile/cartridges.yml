@@ -44,27 +44,27 @@
   - type: StaticPrice
     price: 1
 
-- type: entity
-  id: Cartridge20mmFrag
-  name: cartridge (20mm Fragmentation)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge20mmFrag
-  - type: CartridgeAmmo
-    deleteOnSpawn: false
-    proto: Bullet20mmFrag
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/screamer.rsi
-    layers:
-    - state: heat
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
+# - type: entity
+#   id: Cartridge20mmFrag
+#   name: cartridge (20mm Fragmentation)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge20mmFrag
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: false
+#     proto: Bullet20mmFrag
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/screamer.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 1
 
 # - type: entity
 #   id: Cartridge20mmPlasma
@@ -111,47 +111,47 @@
   - type: StaticPrice
     price: 100
 
-- type: entity
-  id: Cartridge120mmFlak
-  name: cartridge (120mm Flak)
-  parent: MissileBaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge120mm
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet120mmFlak
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
-    layers:
-    - state: heat
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 125
+# - type: entity
+#   id: Cartridge120mmFlak
+#   name: cartridge (120mm Flak)
+#   parent: MissileBaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge120mm
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet120mmFlak
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 125
 
-- type: entity
-  id: Cartridge120mmFlux
-  name: cartridge (120mm Flux Core)
-  parent: MissileBaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge120mm
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet120mmFlux
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
-    layers:
-    - state: apds
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 125
+# - type: entity
+#   id: Cartridge120mmFlux
+#   name: cartridge (120mm Flux Core)
+#   parent: MissileBaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge120mm
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet120mmFlux
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+#     layers:
+#     - state: apds
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 125
 
 #flak - corpus
 
@@ -237,27 +237,27 @@
   - type: StaticPrice
     price: 1
 
-- type: entity
-  id: Cartridge35mmHE
-  name: cartridge (35mm High Explosive)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge35mmHE
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet35mmHE
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
-    layers:
-    - state: heat
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
+# - type: entity
+#   id: Cartridge35mmHE
+#   name: cartridge (35mm High Explosive)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge35mmHE
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet35mmHE
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 1
 
 # - type: entity
 #   id: Cartridge35mmPlasma
@@ -305,49 +305,49 @@
   - type: StaticPrice
     price: 1
 
-- type: entity
-  id: Cartridge50mmHE
-  name: cartridge (50mm High Explosive)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge50mmHE
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet50mmHE
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
-    layers:
-    - state: ap
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
+# - type: entity
+#   id: Cartridge50mmHE
+#   name: cartridge (50mm High Explosive)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge50mmHE
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet50mmHE
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
+#     layers:
+#     - state: ap
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 1
 
-- type: entity
-  id: Cartridge50mmSAPHE
-  name: cartridge (50mm SAPHE)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge50mmSAPHE
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet50mmSAPHE
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
-    layers:
-    - state: heat
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 15
+# - type: entity
+#   id: Cartridge50mmSAPHE
+#   name: cartridge (50mm SAPHE)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge50mmSAPHE
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet50mmSAPHE
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/striker.rsi
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 15
 
 #Resolute
 
@@ -374,48 +374,48 @@
   - type: StaticPrice
     price: 1
 
-- type: entity
-  id: Cartridge90mmAP
-  name: cartridge (90mm Armor Piercing)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge90mm
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet90mmAP
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
-    scale: 0.75, 0.75
-    layers:
-    - state: apds
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 1
+# - type: entity
+#   id: Cartridge90mmAP
+#   name: cartridge (90mm Armor Piercing)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge90mm
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet90mmAP
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+#     scale: 0.75, 0.75
+#     layers:
+#     - state: apds
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 1
 
-- type: entity
-  id: Cartridge90mmHE
-  name: cartridge (90mm High Explosive)
-  parent: BaseCartridge
-  components:
-  - type: Tag
-    tags:
-      - Cartridge
-      - Cartridge90mm
-  - type: CartridgeAmmo
-    deleteOnSpawn: true
-    proto: Bullet90mmHE
-  - type: Sprite
-    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
-    scale: 0.75, 0.75
-    layers:
-    - state: heat
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-  - type: StaticPrice
-    price: 15
+# - type: entity
+#   id: Cartridge90mmHE
+#   name: cartridge (90mm High Explosive)
+#   parent: BaseCartridge
+#   components:
+#   - type: Tag
+#     tags:
+#       - Cartridge
+#       - Cartridge90mm
+#   - type: CartridgeAmmo
+#     deleteOnSpawn: true
+#     proto: Bullet90mmHE
+#   - type: Sprite
+#     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
+#     scale: 0.75, 0.75
+#     layers:
+#     - state: heat
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: SpentAmmoVisuals
+#   - type: StaticPrice
+#     price: 15

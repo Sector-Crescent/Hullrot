@@ -190,11 +190,47 @@
 
 - type: entity
   parent: N14DecorConcreteBarrier
-  id: N14DecorConcreteBarrierDamaged
+  id: N14DecorConcreteBarrierDamaged1
   components:
   - type: Sprite
     layers:
     - state: concrete_barrier_1
+      map: [ "body" ]
+
+- type: entity
+  parent: N14DecorConcreteBarrier
+  id: N14DecorConcreteBarrierDamaged2
+  components:
+  - type: Sprite
+    layers:
+    - state: concrete_barrier_2
+      map: [ "body" ]
+
+- type: entity
+  parent: N14DecorConcreteBarrier
+  id: N14DecorConcreteBarrierDamaged3
+  components:
+  - type: Sprite
+    layers:
+    - state: concrete_barrier_3
+      map: [ "body" ]
+
+- type: entity
+  parent: N14DecorConcreteBarrier
+  id: N14DecorConcreteBarrierDamaged4
+  components:
+  - type: Sprite
+    layers:
+    - state: concrete_barrier_4
+      map: [ "body" ]
+
+- type: entity
+  parent: N14DecorConcreteBarrier
+  id: N14DecorConcreteBarrierDamaged5
+  components:
+  - type: Sprite
+    layers:
+    - state: concrete_barrier_5
       map: [ "body" ]
 
 - type: entity
@@ -207,11 +243,18 @@
     layers:
     - state: concrete_barrier_alt
       map: [ "body" ]
-  - type: RandomSprite
-    available:
-      - body:
-          concrete_barrier_alt: ""
-          concrete_barrier_alt_1: ""
+
+- type: entity
+  parent: N14DecorConcreteBarrier
+  id: N14DecorConcreteBarrierStriped1
+  name: concrete barrier
+  description: an old concrete barrier for stopping traffic.
+  components:
+  - type: Sprite
+    layers:
+    - state: concrete_barrier_alt_1
+      map: [ "body" ]
+
 
 - type: entity
   parent: N14DecorConcreteBarrier

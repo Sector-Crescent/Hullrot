@@ -19,7 +19,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 700
+        damage: 1000
       behaviors:
       - !type:PlaySoundBehavior #Nyano
         sound:
@@ -37,14 +37,13 @@
         sound:
           collection: MetalSlam
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: reinforcedGirder
       - !type:SpawnEntitiesBehavior
           spawn:
             SteelScrap1:
               min: 2
               max: 4
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
+
   - type: IconSmooth
     key: walls
     base: reinf_over

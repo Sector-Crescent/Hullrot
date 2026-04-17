@@ -14253,7 +14253,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,-15.5
       parent: 1
-- proto: RCD
+- proto: CrescentRCD
   entities:
   - uid: 1125
     components:
@@ -15126,14 +15126,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 11.5,3.5
       parent: 1
-- proto: ToolboxElectricalFilled
+- proto: ToolboxElectricalCrescentFilled
   entities:
   - uid: 1725
     components:
     - type: Transform
       pos: 12.338103,-14.6765
       parent: 1
-- proto: ToolboxMechanicalFilled
+- proto: ToolboxMechanicalCrescentFilled
   entities:
   - uid: 1726
     components:
