@@ -43985,13 +43985,6 @@ entities:
     - type: Transform
       pos: -9.5,24.5
       parent: 1
-- proto: MarauderFlatpack
-  entities:
-  - uid: 2122
-    components:
-    - type: Transform
-      pos: 13.429619,20.572702
-      parent: 1
 - proto: MechaniteAutoinjector
   entities:
   - uid: 2123
@@ -49607,20 +49600,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponMechCombatAutoshotgun
-  entities:
-  - uid: 2992
-    components:
-    - type: Transform
-      pos: 12.532752,19.763376
-      parent: 1
-- proto: WeaponMechCombatGrenadeLauncher
-  entities:
-  - uid: 2993
-    components:
-    - type: Transform
-      pos: 12.665426,21.327589
-      parent: 1
 - proto: WeaponPistolViperWood
   entities:
   - uid: 2994

@@ -176996,18 +176996,6 @@ entities:
       linearDamping: 0
       canCollide: True
     - type: ActionsContainer
-- proto: LancerFlatpack
-  entities:
-  - uid: 4965
-    components:
-    - type: Transform
-      pos: 37,18
-      parent: 1
-  - uid: 4966
-    components:
-    - type: Transform
-      pos: 37,-17
-      parent: 1
 - proto: Lighter
   entities:
   - uid: 4967
@@ -205796,18 +205784,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: WeaponMechCombatLightRifle
-  entities:
-  - uid: 10111
-    components:
-    - type: Transform
-      pos: 37,-16
-      parent: 1
-  - uid: 10112
-    components:
-    - type: Transform
-      pos: 37,19
-      parent: 1
 - proto: WeaponMechIndustrialKineticAccelerator
   entities:
   - uid: 10113
