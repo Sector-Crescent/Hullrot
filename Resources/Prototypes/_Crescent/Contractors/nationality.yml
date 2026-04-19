@@ -26,19 +26,19 @@
         - Sign
   passportPrototype: NCWLPassport
 
-- type: nationality
-  id: Clarizian
-  nameKey: nationality_name_clarizian
-  descriptionKey: nationality_description_clarizian
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Sign
-        - Clarizian
-      languagesUnderstood:
-        - Sign
-        - Clarizian
-  passportPrototype: ClarizianPassport
+# - type: nationality
+#   id: Clarizian
+#   nameKey: nationality_name_clarizian
+#   descriptionKey: nationality_description_clarizian
+#   functions:
+#     - !type:TraitModifyLanguages
+#       languagesSpoken:
+#         - Sign
+#         - Clarizian
+#       languagesUnderstood:
+#         - Sign
+#         - Clarizian
+#   passportPrototype: ClarizianPassport
 
 - type: nationality
   id: Coalition
@@ -52,16 +52,16 @@
         - Sign
   passportPrototype: CoalitionPassport
 
-- type: nationality
-  id: Authority
-  nameKey: nationality_name_authority
-  descriptionKey: nationality_description_authority
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Sign
-        - SolBasic
-      languagesUnderstood:
-        - Sign
-        - SolBasic
-  passportPrototype: AuthorityPassport
+# - type: nationality
+#   id: Authority
+#   nameKey: nationality_name_authority
+#   descriptionKey: nationality_description_authority
+#   functions:
+#     - !type:TraitModifyLanguages
+#       languagesSpoken:
+#         - Sign
+#         - SolBasic
+#       languagesUnderstood:
+#         - Sign
+#         - SolBasic
+#   passportPrototype: AuthorityPassport

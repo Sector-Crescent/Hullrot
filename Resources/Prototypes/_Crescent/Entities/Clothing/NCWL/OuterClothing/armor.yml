@@ -97,8 +97,8 @@
         Heat: 25
         Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 1
+    sprintModifier: 1
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: GroupExamine
@@ -188,7 +188,7 @@
       - ClothingOuterArmorNCWLCarapaceDoktor
       - ClothingOuterArmorNCWLCarapaceVrachev
       - ClothingOuterArmorNCWLMedi
-      
+
 - type: entity
   parent: [ClothingOuterBaseLarge, ClothingArmorInsert]
   id: ClothingOuterArmorNCWLLightBodyarmor
@@ -428,7 +428,7 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.97
   - type: DegradeableArmor
     armorMaxHealth: 750
     armorType: Metallic
@@ -441,8 +441,8 @@
         Heat: 5
         Caustic: 5
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 1
+    sprintModifier: 1
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLMedi
@@ -476,7 +476,7 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.97
   - type: DegradeableArmor
     armorMaxHealth: 750
     armorType: Metallic
@@ -489,8 +489,8 @@
         Heat: 5
         Caustic: 5
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 1
+    sprintModifier: 1
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLEngi
@@ -526,7 +526,7 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.95
   - type: DegradeableArmor
     armorMaxHealth: 750
     armorType: Metallic
@@ -539,8 +539,8 @@
         Heat: 30
         Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 1
+    sprintModifier: 1
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLInfantry
@@ -587,8 +587,8 @@
         Heat: 30
         Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.70
-    sprintModifier: 0.70
+    walkModifier: 0.97
+    sprintModifier: 0.97
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNCWLPetya
@@ -637,8 +637,8 @@
         Heat: 35
         Caustic: 35
   - type: ClothingSpeedModifier
-    walkModifier: 0.5
-    sprintModifier: 0.5
+    walkModifier: 0.6
+    sprintModifier: 0.6
   - type: HeldSpeedModifier
   - type: Reflect
     spread: 270
@@ -666,7 +666,7 @@
   parent: ClothingOuterEVASuitBase
   id: ClothingOuterNCWLEVA
   name: 6U11 EVA Suit
-  description: A simple, brown and black aramid EVA suit, designed for emergencies or workers who do not often see EVA work. 
+  description: A simple, brown and black aramid EVA suit, designed for emergencies or workers who do not often see EVA work.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/OuterClothing/softsuit.rsi

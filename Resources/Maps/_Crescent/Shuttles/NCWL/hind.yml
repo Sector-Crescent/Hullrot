@@ -4,7 +4,7 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 03/30/2026 23:25:40
+  time: 04/17/2026 19:24:10
   entityCount: 748
 maps: []
 grids:
@@ -29,7 +29,7 @@ entities:
     - type: MetaData
       name: grid
     - type: Transform
-      pos: -0.5,-0.4765625
+      pos: 49.5,49.523438
       parent: invalid
     - type: MapGrid
       chunks:
@@ -436,6 +436,12 @@ entities:
             1031: -4,-7
             1034: -3,-10
             1037: -2,-11
+            1066: 9,4
+            1077: -9,4
+            1097: -10,-2
+            1101: -4,-7
+            1104: -3,-10
+            1107: -2,-11
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -505,6 +511,12 @@ entities:
             1043: 3,-10
             1046: 4,-7
             1053: 10,-2
+            1069: 9,4
+            1080: -9,4
+            1110: 2,-11
+            1113: 3,-10
+            1116: 4,-7
+            1123: 10,-2
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -563,6 +575,12 @@ entities:
             1017: -4,8
             1020: -2,11
             1025: -10,-2
+            1064: 9,4
+            1075: -9,4
+            1083: -9,5
+            1087: -4,8
+            1090: -2,11
+            1095: -10,-2
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -621,6 +639,12 @@ entities:
             1002: 9,5
             1009: -9,4
             1052: 10,-2
+            1057: 2,11
+            1060: 4,8
+            1068: 9,4
+            1072: 9,5
+            1079: -9,4
+            1122: 10,-2
         - node:
             id: LatticeEdgeE
           decals:
@@ -720,6 +744,15 @@ entities:
             1029: -4,-7
             1032: -3,-10
             1035: -2,-11
+            1063: 9,4
+            1074: -9,4
+            1082: -9,5
+            1086: -4,8
+            1089: -2,11
+            1094: -10,-2
+            1099: -4,-7
+            1102: -3,-10
+            1105: -2,-11
         - node:
             id: LatticeEdgeN
           decals:
@@ -881,6 +914,20 @@ entities:
             1047: 7,-7
             1048: 10,-4
             1050: 10,-2
+            1065: 9,4
+            1076: -9,4
+            1092: -10,-4
+            1096: -10,-2
+            1098: -7,-7
+            1100: -4,-7
+            1103: -3,-10
+            1106: -2,-11
+            1108: 2,-11
+            1111: 3,-10
+            1114: 4,-7
+            1117: 7,-7
+            1118: 10,-4
+            1120: 10,-2
         - node:
             id: LatticeEdgeS
           decals:
@@ -1022,6 +1069,20 @@ entities:
             1021: -1,13
             1023: -10,-2
             1049: 10,-2
+            1054: 1,13
+            1055: 2,11
+            1058: 4,8
+            1061: 7,7
+            1062: 9,4
+            1070: 9,5
+            1073: -9,4
+            1081: -9,5
+            1084: -7,7
+            1085: -4,8
+            1088: -2,11
+            1091: -1,13
+            1093: -10,-2
+            1119: 10,-2
         - node:
             id: LatticeEdgeW
           decals:
@@ -1121,6 +1182,15 @@ entities:
             1042: 3,-10
             1045: 4,-7
             1051: 10,-2
+            1056: 2,11
+            1059: 4,8
+            1067: 9,4
+            1071: 9,5
+            1078: -9,4
+            1109: 2,-11
+            1112: 3,-10
+            1115: 4,-7
+            1121: 10,-2
         - node:
             angle: 3.141592653589793 rad
             color: '#EFB34196'
@@ -1496,11 +1566,9 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       links:
-      - 109
+      - 744
     - type: Physics
       canCollide: False
-- proto: AAAHardpointFixedSmall
-  entities:
   - uid: 3
     components:
     - type: Transform
@@ -1509,7 +1577,7 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       links:
-      - 109
+      - 744
     - type: Physics
       canCollide: False
   - uid: 4
@@ -1520,7 +1588,7 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       links:
-      - 109
+      - 744
     - type: Physics
       canCollide: False
 - proto: AAAHardpointSmallBallistic
@@ -1994,10 +2062,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,8.5
       parent: 1
-    - type: PointCannon
-      linkedConsoleIds:
-      - 433
-      linkedConsoleId: 433
     - type: ContainerContainer
       containers:
         ballistic-ammo: !type:Container
@@ -2025,7 +2089,7 @@ entities:
       parent: 1
     - type: DeviceLinkSink
       links:
-      - 109
+      - 744
   - uid: 93
     components:
     - type: Transform
@@ -2034,6 +2098,7 @@ entities:
     - type: DeviceLinkSink
       links:
       - 543
+      - 744
   - uid: 94
     components:
     - type: Transform
@@ -2066,6 +2131,7 @@ entities:
     - type: DeviceLinkSink
       links:
       - 544
+      - 744
 - proto: BlastDoorOpen
   entities:
   - uid: 98
@@ -2150,32 +2216,44 @@ entities:
       parent: 1
 - proto: C_ComputerTabletopShuttle
   entities:
-  - uid: 109
+  - uid: 744
     components:
     - type: Transform
       pos: -0.5,3.5
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        3:
-        - - Group2
-          - Toggle
-        4:
-        - - Group2
-          - Toggle
         2:
         - - Group1
+          - Toggle
+        - - Group2
+          - SpaceArtilleryFire
+        4:
+        - - Group3
+          - Toggle
+        - - Group4
+          - SpaceArtilleryFire
+        3:
+        - - Group3
+          - Toggle
+        - - Group4
           - SpaceArtilleryFire
         92:
-        - - Group4
+        - - Group5
+          - Toggle
+        97:
+        - - Group5
+          - Toggle
+        93:
+        - - Group5
           - Toggle
     - type: NamedModules
       buttonNames:
-      - Fire 240mm 'Gargoyle' Torpedo
-      - Toggle Port-Mounted Autocannon
-      - Fire Starboard-Mounted Cannon
-      - Toggle Gargoyle Blast Door
-      - Module E
+      - Fire 240mm "Gargoyle" LRM System
+      - Toggle 240mm "Gargoyle" LRM System
+      - Fire 120mm "Anvil" Artillery Cannons
+      - Empty Module
+      - Empty Module
     - type: ContainerContainer
       containers:
         board: !type:Container
@@ -3847,12 +3925,6 @@ entities:
     - type: Transform
       pos: 1.5,3.5
       parent: 1
-    - type: TargetingConsole
-      cannonGroups:
-        all:
-        - 91
-        240mm 'Gargoyle' Torpedo Launcher:
-        - 91
 - proto: ConveyorBelt
   entities:
   - uid: 434
@@ -5721,61 +5793,29 @@ entities:
     - type: Transform
       pos: 0.5,0.5
       parent: 1
-- proto: WeaponTurretMediumMachinegun
+- proto: WeaponTurretMediumArtillery
   entities:
+  - uid: 109
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,6.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
   - uid: 743
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,6.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: ApcPowerReceiver
-      powerLoad: 1000
-    - type: Battery
-      startingCharge: 61.11979
-    - type: ApcPowerReceiverBattery
-      enabled: True
-  - uid: 744
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,6.5
-      parent: 1
-    - type: PointCannon
-      linkedConsoleId: 433
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        gun_magazine: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        gun_chamber: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: WeaponTurretSmallBulletPD
+- proto: WeaponTurretSmallMachinegun
   entities:
   - uid: 745
     components:

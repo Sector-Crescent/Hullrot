@@ -22,8 +22,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-ind-spacer
       - type: HullrotFaction
         faction: IND
       - type: LanguageAdder
@@ -37,9 +35,21 @@
   equipment:
     id: SpacerPDA
     jumpsuit: ClothingUniformJumpsuitMilitaryColorBrown
-    back: JetpackBlackFilled
     shoes: ClothingShoesBootsCombat
-    satchel: ClothingBackpackSatchelFilled
-    duffelbag: ClothingBackpackDuffelFilled
+    ears: ClothingHeadsetGrey
+    gloves: ClothingHandsGlovesCombat
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: RadioHandheld
+    belt: ClothingBeltTacticalRig
+    back: ClothingBackpackFilled
+  storage:
+    belt:
+      - CrescentScrewdriver
+      - CrescentCrowbar
+      - CrescentWrench
+      - CrescentWirecutter
+      # - CrescentWelder #if itll be needed oneday uncomment this
+      - CombatKnife
+      - HandHeldMassScannerEE
+      - JetpackBlueFilled
+

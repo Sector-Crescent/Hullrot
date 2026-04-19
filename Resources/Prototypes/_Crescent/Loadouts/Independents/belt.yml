@@ -7,6 +7,10 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutBelt
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Vagrant
 
 - type: loadout
   id: LoadoutBeltSheathMacheteIndependent
@@ -17,3 +21,4 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutBelt
+

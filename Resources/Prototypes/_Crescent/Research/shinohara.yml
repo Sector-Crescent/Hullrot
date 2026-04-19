@@ -86,19 +86,19 @@
   recipeUnlocks:
   - ShinoharaOptics
 
-- type: technology
-  id: ShinoharaBasicMechGuns
-  name: research-technology-shinohara-basicmechguns
-  icon:
-    sprite: _Crescent/Objects/Specific/mechaweapons.rsi
-    state: rifle
-  discipline: Corporate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - WeaponMechCombatAutoshotgun
-  - WeaponMechCombatLightRifle
-  - WeaponMechSword
+# - type: technology
+#   id: ShinoharaBasicMechGuns
+#   name: research-technology-shinohara-basicmechguns
+#   icon:
+#     sprite: _Crescent/Objects/Specific/mechaweapons.rsi
+#     state: rifle
+#   discipline: Corporate
+#   tier: 1
+#   cost: 5000
+#   recipeUnlocks:
+#   - WeaponMechCombatAutoshotgun
+#   - WeaponMechCombatLightRifle
+#   - WeaponMechSword
 
 - type: technology
   id: ShinoharaHighsec
@@ -206,7 +206,7 @@
   cost: 6000
   recipeUnlocks:
   - NazaarLPC
-  - MusinyaneLPC
+  # - MusinyaneLPC
 
 - type: technology
   id: ShinoharaAdvancedMaterials

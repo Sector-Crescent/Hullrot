@@ -1,7 +1,7 @@
 - type: gameMap
   id: TribalHideout
   mapName: 'Tribal Hideout'
-  mapPath: /Maps/_Crescent/Stations/tribalhideout.yml
+  mapPath: /Maps/_Crescent/Stations/ruinedtribaloutpost.yml
   minPlayers: 0
   stations:
     TribalHideout:
@@ -19,4 +19,4 @@
         - type: StationJobs
           overflowJobs: []
           availableJobs:
-            Vagrant: [ 3, 3 ]
+            Vagrant: [ 3, 3]

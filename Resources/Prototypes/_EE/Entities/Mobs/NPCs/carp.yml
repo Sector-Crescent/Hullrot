@@ -4,16 +4,6 @@
   id: MobCarpGoldfish
   description: A domesticated variety of space carp, much smaller but no less aggressive.
   components:
-    - type: GhostRole
-      allowMovement: true
-      allowSpeech: true
-      makeSentient: true
-      name: ghost-role-information-space-goldfish-name
-      description: ghost-role-information-space-goldfish-description
-      rules: ghost-role-information-freeagent-rules
-      mindRoles:
-      - MindRoleGhostRoleFreeAgent
-    - type: GhostTakeoverAvailable
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Carps/goldfish.rsi

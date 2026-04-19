@@ -23,45 +23,45 @@
   name: LPCs
   priority: 14
 
-- type: storeCategory
-  id: StoreCategoryGSCMech
-  name: Mech & Mech Weapons
-  priority: 16
+# - type: storeCategory
+#   id: StoreCategoryGSCMech
+#   name: Mech & Mech Weapons
+#   priority: 16
 
 #MECHS
 
-- type: listing
-  id: StoreListingGSCMechBlade
-  name: SHI LvR-200 exosuit-mounted plasteel blade.
-  description: A repurposed fighter wing commissioned from SAW in accordance with Shinohara schematics.
-  icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
-  productEntity: WeaponMechSword
-  cost:
-    PlunderGSC: 10
-  categories:
-  - StoreCategoryGSCMech
+# - type: listing
+#   id: StoreListingGSCMechBlade
+#   name: SHI LvR-200 exosuit-mounted plasteel blade.
+#   description: A repurposed fighter wing commissioned from SAW in accordance with Shinohara schematics.
+#   icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
+#   productEntity: WeaponMechSword
+#   cost:
+#     PlunderGSC: 10
+#   categories:
+#   - StoreCategoryGSCMech
 
-- type: listing
-  id: StoreListingGSCMechWeapon30mm
-  name: SHI 'Rupture' 30mm ballistic rifle.
-  description: Stolen from a Shinohara production facility several years ago.
-  icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
-  productEntity: WeaponMechCombatLightRifle
-  cost:
-    PlunderGSC: 10
-  categories:
-  - StoreCategoryGSCMech
+# - type: listing
+#   id: StoreListingGSCMechWeapon30mm
+#   name: SHI 'Rupture' 30mm ballistic rifle.
+#   description: Stolen from a Shinohara production facility several years ago.
+#   icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
+#   productEntity: WeaponMechCombatLightRifle
+#   cost:
+#     PlunderGSC: 10
+#   categories:
+#   - StoreCategoryGSCMech
 
-- type: listing
-  id: StoreListingGSCMech
-  name: GSC T-97 Marauder.
-  description: A relic of the pre-collapse organization. Light, deadly, painted red.
-  icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
-  productEntity: MarauderFlatpack
-  cost:
-    PlunderGSC: 30
-  categories:
-  - StoreCategoryGSCMech
+# - type: listing
+#   id: StoreListingGSCMech
+#   name: GSC T-97 Marauder.
+#   description: A relic of the pre-collapse organization. Light, deadly, painted red.
+#   icon: { sprite: /Textures/Objects/Devices/flatpack.rsi, state: kit }
+#   productEntity: MarauderFlatpack
+#   cost:
+#     PlunderGSC: 30
+#   categories:
+#   - StoreCategoryGSCMech
 
 #MECHS END
 

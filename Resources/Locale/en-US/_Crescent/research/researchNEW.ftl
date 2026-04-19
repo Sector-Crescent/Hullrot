@@ -119,6 +119,7 @@ research-technology-imperial-magnate = Imperial Fire Support Vessel
 research-technology-imperial-craftcomps = Imperial Weapon Components
 research-technology-imperial-raider = Imperial Troop Transport
 research-technology-imperial-baserosterships = Standard Imperial Ships
+research-technology-imperial-baserosterinfantry = Standard Imperial Infantry Gear
 
 # NCWL
 research-technology-communard-clothes = Communard Clothes

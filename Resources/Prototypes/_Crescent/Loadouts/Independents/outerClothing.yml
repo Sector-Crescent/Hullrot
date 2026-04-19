@@ -1,0 +1,145 @@
+- type: loadout
+  id: LoadoutOuterArmorVagrantHardsuitFishbed
+  category: Outer
+  cost: 8
+  customColorTint: true
+  items:
+    - ClothingOuterHardsuitFishbed
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantHardsuitCenobite
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitCenobite
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantFishbedSilver
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitFishbedSilver
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantFishbedGold
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitFishbedGold
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantFishbedColonial
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitFishbedColonial
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantFishbedNLF
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitFishbedNLF
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantCenobiteVerdant
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitCenobiteVerdant
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantCenobiteRed
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitCenobiteRed
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantDraugr
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitDraugr
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantIzdari
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitIzdari
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant
+
+- type: loadout
+  id: LoadoutOuterArmorVagrantThukker
+  category: Outer
+  cost: 8
+  items:
+    - ClothingOuterHardsuitThukker
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant

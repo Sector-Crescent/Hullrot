@@ -10,6 +10,7 @@
     - state: chronobolt
       shader: unshaded
   - type: Projectile
+    ignoreWeaponGrid: true
     damage:
       types:
         Blunt: 30
