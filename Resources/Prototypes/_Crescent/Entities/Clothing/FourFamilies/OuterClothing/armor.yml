@@ -15,20 +15,18 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
+  - type: DegradeableArmor # I am completely winging this. This is complete dogshit. Thankfully, 'abysmal dogshit' is all that's being asked of me.
+    armorMaxHealth: 100
+    armorType: Plastic
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 35
-        Slash: 35
-        Piercing: 50
-        Heat: 20
-        Caustic: 5
+        Blunt: 15
+        Slash: 15
+        Piercing: 36
   - type: ClothingSpeedModifier
-    walkModifier: 0.90
-    sprintModifier: 0.90
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitDraugr
   - type: StaticPrice
@@ -56,19 +54,17 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
+    armorMaxHealth: 100
+    armorType: Plastic
+    armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 35
-        Slash: 35
-        Piercing: 75
-        Heat: 55
-        Caustic: 25
+        Blunt: 15
+        Slash: 15
+        Piercing: 36
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitArabet
   - type: StaticPrice
@@ -90,19 +86,17 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
+    armorMaxHealth: 100
+    armorType: Plastic
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 35
-        Slash: 25
-        Piercing: 35
-        Heat: 10
-        Caustic: 25
+        Blunt: 15
+        Slash: 15
+        Piercing: 36
   - type: ClothingSpeedModifier
-    walkModifier: 0.90
-    sprintModifier: 0.90
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitIzdari
   - type: StaticPrice
@@ -130,19 +124,17 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
+    armorMaxHealth: 100
+    armorType: Plastic
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 10
-        Slash: 10
-        Piercing: 20
-        Heat: 10
-        Caustic: 25
+        Blunt: 15
+        Slash: 15
+        Piercing: 36
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitThukker
   - type: StaticPrice
@@ -201,7 +193,7 @@
   - type: StaticPrice
     price: 250
   - type: ReverseEngineering
-    recipes: 
+    recipes:
       - ClothingOuterArmorServileAlseik
       - ClothingHeadHatServile
       - ClothingOuterArmorDraugrAlseik
@@ -238,7 +230,7 @@
   - type: StaticPrice
     price: 500
   - type: ReverseEngineering
-    recipes: 
+    recipes:
       - ClothingOuterArmorDraugrAlseik
       - ClothingHeadHatDraugr
       - ClothingOuterArmorServileAlseik

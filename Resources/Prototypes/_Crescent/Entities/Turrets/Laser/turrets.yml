@@ -137,52 +137,6 @@
       drawdepth: Mobs
       layers:
         - state: curse-dsm
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 2000
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 120
-      fireRate: .5
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      angleDecay: 0
-      minAngle: 5
-      maxAngle: 5
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
-        params:
-          variation: 0.12
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 3
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.2
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletCurse
-      capacity: 10
-      count: 10
-    - type: ApcPowerReceiver
-      powerLoad: 2500
-    - type: HardpointAnchorableOnly
-      class: Energy
-      size: Medium
 
 #scourer
 
@@ -292,7 +246,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.33
+      rechargeCooldown: 0.5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -300,8 +254,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletRetribution
-      capacity: 400
-      count: 400
+      capacity: 200
+      count: 200
     - type: ApcPowerReceiver
       powerLoad: 2500
     - type: HardpointAnchorableOnly
@@ -320,52 +274,40 @@
       drawdepth: Mobs
       layers:
         - state: retribution-dsm
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 1200
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 200
-      fireRate: 6
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      angleDecay: 0
-      minAngle: 0.1
-      maxAngle: 0.1
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
-        params:
-          variation: 0.12
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.2
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletRetribution
-      capacity: 30
-      count: 30
-    - type: ApcPowerReceiver
-      powerLoad: 5000
-    - type: HardpointAnchorableOnly
-      class: Energy
-      size: Small
+    # - type: ContainerContainer
+    #   containers:
+    #     ballistic-ammo: !type:Container
+    #       ents: []
+    # - type: Gun
+    #   fireOnDropChance: 0
+    #   projectileSpeed: 200
+    #   fireRate: 6
+    #   selectedMode: FullAuto
+    #   availableModes:
+    #     - FullAuto
+    #   angleDecay: 0
+    #   minAngle: 0.1
+    #   maxAngle: 0.1
+    #   soundGunshot:
+    #     path: /Audio/Weapons/Guns/Gunshots/laserturret.ogg
+    #     params:
+    #       variation: 0.12
+    # - type: RechargeBasicEntityAmmo
+    #   rechargeCooldown: 0.25
+    #   rechargeSound:
+    #     path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+    #     params:
+    #       pitch: 1.2
+    #       variation: 0.08
+    # - type: BasicEntityAmmoProvider
+    #   proto: BulletRetribution
+    #   capacity: 30
+    #   count: 30
+    # - type: ApcPowerReceiver
+    #   powerLoad: 5000
+    # - type: HardpointAnchorableOnly
+    #   class: Energy
+    #   size: Small
 
 #absolution
 
@@ -414,7 +356,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
+      rechargeCooldown: 0.6
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -422,8 +364,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletAbsolution
-      capacity: 60
-      count: 60
+      capacity: 50
+      count: 50
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -442,54 +384,6 @@
       drawdepth: Mobs
       layers:
         - state: absolution-dsm
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 1800
-          # TODO: Construction graph
-          behaviors:
-            - !type:ChangeConstructionNodeBehavior
-              node: machineFrame
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MetalGlassBreak
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 200
-      burstFireRate: 40 #8 effective RPS
-      burstCooldown: 1
-      shotsPerBurst: 10
-      selectedMode: Burst
-      availableModes:
-        - Burst
-      angleDecay: 0
-      minAngle: 0.1
-      maxAngle: 0.1
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
-        params:
-          variation: 0.12
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.25
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.5
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletAbsolution
-      capacity: 80
-      count: 80
-    - type: ApcPowerReceiver
-      powerLoad: 6000
-    - type: HardpointAnchorableOnly
-      class: Energy
-      size: Medium
 
 #damnation
 
@@ -575,36 +469,3 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 200
-      minAngle: 0.1
-      maxAngle: 0.1
-      fireRate: 3
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
-        params:
-          variation: 0.12
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.7
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.2
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletDamnation
-      capacity: 30
-      count: 30
-    - type: ApcPowerReceiver
-      powerLoad: 10000
-    - type: HardpointAnchorableOnly
-      class: Energy
-      size: Large

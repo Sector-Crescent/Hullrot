@@ -12,3 +12,43 @@
   canBeHeirloom: true
   items:
     - CrescentCrowbar
+
+- type: loadout
+  id: LoadoutItemsClothingBackpackDuffelSurgeryFilled
+  category: Items
+  cost: 4
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackDuffelSurgeryFilled
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - DoctorNCWL
+        - DirectorNCWL
+        - RipperdocNCSP
+        - TraumasecNCSP
+        - CoordinatorNCSP
+        - SurgeonDSM
+        - MedtechSHI
+        - PhysicianCMM
+        - TenderSRM
+
+- type: loadout
+  id: LoadoutItemsClothingBackpackDuffelSurgeryAdvancedFilled
+  category: Items
+  cost: 6
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackDuffelSurgeryAdvancedFilled
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - DoctorNCWL
+        - DirectorNCWL
+        - RipperdocNCSP
+        - TraumasecNCSP
+        - CoordinatorNCSP
+        - SurgeonDSM
+        - MedtechSHI
+        - PhysicianCMM
+        - TenderSRM

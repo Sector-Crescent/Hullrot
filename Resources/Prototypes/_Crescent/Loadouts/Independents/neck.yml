@@ -1,0 +1,13 @@
+- type: loadout
+  id: LoadoutNeckClothingNeckScarfCMMCloak
+  category: Neck
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingNeckScarfCMMCloak
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck
+    - !type:CharacterJobRequirement
+      jobs:
+        - Vagrant

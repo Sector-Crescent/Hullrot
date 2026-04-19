@@ -410,6 +410,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         DrawBacking(handle);
         DrawCircles(handle);
+        DrawZoneCircles(handle); // Ratgore zones
 
         // No data
         if (_coordinates == null || _rotation == null)
@@ -789,6 +790,47 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         }
     }
 
+    // Rat-start
+    private void DrawZoneCircles(DrawingHandleScreen handle)
+    {
+        if (_coordinates == null || _rotation == null)
+            return;
+
+        var xformQuery = EntManager.GetEntityQuery<TransformComponent>();
+        if (!xformQuery.TryGetComponent(_coordinates.Value.EntityId, out var xform)
+            || xform.MapID == MapId.Nullspace)
+        {
+            return;
+        }
+
+        var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
+        var (_, ourEntRot, ourEntMatrix) = _transform.GetWorldPositionRotationMatrix(_coordinates.Value.EntityId);
+        var rot = ourEntRot + _rotation.Value;
+        
+        if (keepWorldAligned)
+        {
+            ourEntRot = Angle.Zero;
+            rot = Angle.Zero;
+            ourEntMatrix = Matrix3Helpers.CreateTransform(mapPos.Position, Angle.Zero);
+        }
+
+        var offset = _coordinates.Value.Position;
+        var posMatrix = Matrix3Helpers.CreateTransform(offset, _rotation.Value);
+        var ourWorldMatrix = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
+        Matrix3x2.Invert(ourWorldMatrix, out var ourWorldMatrixInvert);
+
+        var mapCenterWorld = Vector2.Zero;
+
+        var mapCenterUI = Vector2.Transform(mapCenterWorld, ourWorldMatrixInvert);
+        mapCenterUI.Y = -mapCenterUI.Y; 
+
+        var uiCenter = ScalePosition(mapCenterUI);
+
+        handle.DrawCircle(uiCenter, 650 * MinimapScale, new Color(255, 0, 0, 50), false);
+        handle.DrawCircle(uiCenter, 3950 * MinimapScale, new Color(0, 255, 0, 50), false);
+        handle.DrawCircle(uiCenter, 4350 * MinimapScale, new Color(0, 255, 0, 50), false);
+    }
+    // Rat-end
 
     private Vector2 InverseScalePosition(Vector2 value)
     {

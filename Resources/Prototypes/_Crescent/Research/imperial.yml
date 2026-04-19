@@ -16,7 +16,24 @@
   - PraetorianLPC
   - GnosisLPC
 
+- type: technology
+  id: BaseRosterImperialInfantry
+  name: research-technology-imperial-baserosterinfantry
+  icon:
+    sprite: _Crescent/Clothing/Empire/Head/mandatehelmet.rsi
+    state: icon
+  discipline: Imperial
+  tier: 1
+  cost: 0
+  recipeUnlocks:
+  - ClothingHeadHelmetImperialTrooperHelmet
+  - ClothingOuterArmorImperialTrooperArmor
+  - ClothingOuterHardsuitImperialSoldier
+  - WeaponRifleMiller
+  - WeaponSubMachineGunC20rImperial
 #putarmorplate
+
+
 # Tier 1
 - type: technology
   id: BasicImperialClothes
@@ -74,19 +91,19 @@
 #   - ClothingNeckImperialGreatcoat
 #   - ClothingNeckCloakImperialCapelet
 
-- type: technology
-  id: BasicImperialArmor
-  name: research-technology-imperial-basicarmor
-  icon:
-    sprite: _Crescent/Clothing/Empire/Head/mandatehelmet.rsi
-    state: icon
-  discipline: Imperial
-  tier: 1
-  cost: 3000
-  recipeUnlocks:
-  - ClothingHeadHelmetImperialTrooperHelmet
-  - ClothingOuterArmorImperialTrooperArmor
-  - ClothingOuterHardsuitImperialSoldier
+# - type: technology
+#   id: BasicImperialArmor
+#   name: research-technology-imperial-basicarmor
+#   icon:
+#     sprite: _Crescent/Clothing/Empire/Head/mandatehelmet.rsi
+#     state: icon
+#   discipline: Imperial
+#   tier: 1
+#   cost: 3000
+#   recipeUnlocks:
+#   - ClothingHeadHelmetImperialTrooperHelmet
+#   - ClothingOuterArmorImperialTrooperArmor
+#   - ClothingOuterHardsuitImperialSoldier
 
 - type: technology
   id: AdvancedImperialArmor
@@ -125,8 +142,8 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - WeaponRifleMiller
-  - WeaponSubMachineGunC20rImperial
+  # - WeaponRifleMiller
+  # - WeaponSubMachineGunC20rImperial
   - WeaponSniperDSMLegax
   - WeaponPistolComplianceImperial
   - WeaponRevolverArgenti

@@ -92,7 +92,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
+      projectileSpeed: 100
       fireRate: 4
       selectedMode: FullAuto
       availableModes:
@@ -106,7 +106,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 1
+      rechargeCooldown: .5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -114,8 +114,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletPlasmaBall
-      capacity: 60
-      count: 60
+      capacity: 30
+      count: 30
     - type: ApcPowerReceiver
       powerLoad: 3500
     - type: HardpointAnchorableOnly

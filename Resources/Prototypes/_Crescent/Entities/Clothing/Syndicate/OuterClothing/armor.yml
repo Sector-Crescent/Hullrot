@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitRamzi
   name: LUGNUT mk.I combat technician's hardsuit
   description: A modular hardsuit, bears the colors of the Shipfitters and Astronautics Workers Union of the Syndicate.
@@ -10,6 +10,12 @@
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicateramzi.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicateramzi.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -21,15 +27,12 @@
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 10
-        Slash: 10
-        Piercing: 35
         Heat: 15
         Caustic: 15
         Radiation: 35
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.97
+    sprintModifier: 0.97
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitRamzi
   - type: StaticPrice
@@ -43,7 +46,7 @@
       - ClothingOuterHardsuitRamzi
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitSyndieDonator
   name: UNIONIZER modified combat technician's hardsuit
   description: A modular hardsuit, bears the colors of the Shipfitters and Astronautics Workers Union of the Syndicate. Hard-worn and modified after many years of use.
@@ -52,6 +55,12 @@
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatedonator.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatedonator.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -63,15 +72,12 @@
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 45
         Heat: 15
         Caustic: 15
         Radiation: 35
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.95
+    sprintModifier: 0.95
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetSyndieDonator
   - type: StaticPrice
@@ -87,7 +93,7 @@
       - ClothingOuterHardsuitRamzi
 
 - type: entity
-  parent: ClothingOuterHardsuitRamzi
+  parent: [ClothingOuterHardsuitRamzi, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitCybersun
   name: RONIN mk.III modular hardsuit
   description: A modular hardsuit, bears the colors of Cybersun Technologies of the Syndicate.
@@ -96,6 +102,12 @@
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatecybersun.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatecybersun.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCybersunSuit
   - type: Contraband
@@ -106,9 +118,6 @@
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 45
         Heat: 15
         Caustic: 15
   - type: ClothingAddFaction
@@ -118,7 +127,7 @@
       - ClothingOuterHardsuitCybersun
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitSyndicateBG
   name: BULWARK mk.II frontliner hardsuit
   description: A modular hardsuit painted in the colors of the Syndicate. Bulky nanokevlar pads the light titanium skeleton, shielding flimsy electronics and the fleshy operator underneath.
@@ -127,6 +136,12 @@
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatesbg.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/syndicatesbg.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -138,9 +153,6 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
-        Blunt: 25
-        Slash: 15
-        Piercing: 90
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
@@ -163,7 +175,7 @@
       - ClothingOuterHardsuitSyndicateBG
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitTraumasec
   name: interdyne traumasec hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for Interdyne TraumaSec officers.
@@ -183,9 +195,6 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
-        Blunt: 20
-        Slash: 20
-        Piercing: 50
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier
@@ -202,7 +211,7 @@
       - ClothingOuterHardsuitTraumasec
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitCoordinator
   name: interdyne coordinator hardsuit
   description: A modular hardsuit produced by Shinohara Heavy Industries, made for Interdyne coordinators.
@@ -211,6 +220,12 @@
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/coordinator_suit.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Syndicate/OuterClothing/coordinator_suit.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -222,9 +237,6 @@
     armorRepair: NTCeramic
     initialModifiers:
       flatReductions:
-        Blunt: 20
-        Slash: 20
-        Piercing: 70
         Heat: 15
         Caustic: 15
   - type: ClothingSpeedModifier

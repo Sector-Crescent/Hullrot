@@ -187,18 +187,6 @@
   parent: MobCarp
   components:
     - type: Absorbable
-    - type: GhostRole
-      allowMovement: true
-      allowSpeech: true
-      makeSentient: true
-      name: ghost-role-information-sentient-carp-name
-      description: ghost-role-information-sentient-carp-description
-      rules: ghost-role-information-space-dragon-summoned-carp-rules
-      mindRoles:
-      - MindRoleGhostRoleTeamAntagonist
-      raffle:
-        settings: short
-    - type: GhostTakeoverAvailable
     - type: HTN
       rootTask:
         task: DragonCarpCompound

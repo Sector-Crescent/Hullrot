@@ -1,4 +1,4 @@
-#Bases 
+#Bases
 
 - type: entity
   abstract: true
@@ -47,7 +47,7 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
-        
+
 - type: entity
   abstract: true
   id: ClothingArmorInsertHardsuitJugg
@@ -71,7 +71,7 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
-        
+
 #Hardsuit inserts - First generation
 #Hardened steel
 - type: entity
@@ -85,12 +85,12 @@
     state: steel
   - type: Item
     size: Small
-    shape: 
+    shape:
     - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 60
-    walkSpeedModifier: 0.9
-    sprintSpeedModifier: 0.9
+    walkSpeedModifier: 0.95
+    sprintSpeedModifier: 0.95
     staminaDamageMultiplier: 0.4
     damageMultipliers:
       Piercing: 0.7
@@ -108,7 +108,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -150,7 +150,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -170,12 +170,12 @@
     state: plasteel
   - type: Item
     size: Small
-    shape: 
+    shape:
     - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 150
-    walkSpeedModifier: 0.8
-    sprintSpeedModifier: 0.8
+    walkSpeedModifier: 0.92
+    sprintSpeedModifier: 0.92
     staminaDamageMultiplier: 0.4
     damageMultipliers:
       Piercing: 0.9
@@ -193,7 +193,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -235,13 +235,13 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
             volume: 5
             variation: 0.125
-            
+
 # Infantry inserts - First generation
 # Hardened steel
 - type: entity
@@ -255,12 +255,12 @@
     state: steel
   - type: Item
     size: Small
-    shape: 
+    shape:
     - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 100
-    walkSpeedModifier: 0.7
-    sprintSpeedModifier: 0.7
+    walkSpeedModifier: 0.9
+    sprintSpeedModifier: 0.9
     staminaDamageMultiplier: 0.4
     damageMultipliers:
       Piercing: 0.7
@@ -278,7 +278,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -318,7 +318,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -360,7 +360,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -380,12 +380,12 @@
     state: plasteel
   - type: Item
     size: Small
-    shape: 
+    shape:
     - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 300
-    walkSpeedModifier: 0.7
-    sprintSpeedModifier: 0.7
+    walkSpeedModifier: 0.85
+    sprintSpeedModifier: 0.85
     staminaDamageMultiplier: 0.4
     damageMultipliers:
       Piercing: 0.9
@@ -403,7 +403,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:
@@ -445,7 +445,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior 
+      - !type:PlaySoundBehavior
         sound:
           path: /Audio/_Crescent/armor_break.ogg
           params:

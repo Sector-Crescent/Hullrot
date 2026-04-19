@@ -27,8 +27,8 @@
         Heat: 10
         Caustic: 10
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.97
+    sprintModifier: 0.97
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitImperialWorker
   - type: StaticPrice
@@ -67,8 +67,8 @@
         Heat: 25
         Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 0.90
-    sprintModifier: 0.90
+    walkModifier: 0.95
+    sprintModifier: 0.95
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitInspector
   - type: StaticPrice
@@ -247,8 +247,8 @@
         Heat: 30
         Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 0.95
+    sprintModifier: 0.95
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitImperialSoldier
   - type: StaticPrice
@@ -290,8 +290,8 @@
         Heat: 30
         Caustic: 30
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.97
+    sprintModifier: 0.97
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitImperialKnight
   - type: StaticPrice
@@ -309,7 +309,7 @@
   parent: ClothingOuterHardsuitImperialSoldier
   id: ClothingOuterHardsuitImperialCoronet
   name: MECS Typ 1 'CORONET' Modified Hardsuit
-  description: A personalized MECS Typ 1 hardsuit, used by Madame Valkenrath-Zehring in many campaigns in the Taypan system. It has now had its electronic guts scooped out, and the helmet removed. The paint is kept pristine by the museum keeper on Kal Surezai. 
+  description: A personalized MECS Typ 1 hardsuit, used by Madame Valkenrath-Zehring in many campaigns in the Taypan system. It has now had its electronic guts scooped out, and the helmet removed. The paint is kept pristine by the museum keeper on Kal Surezai.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatecoronet.rsi
@@ -440,7 +440,7 @@
   parent: [ClothingOuterBaseLarge, ClothingArmorInsert]
   id: ClothingOuterArmorImperialArmorPrestige
   name: SASIT Typ 2 Vest
-  description: A variation of the Typ 1 SASIT, with a small amount of flourish to indicate that the wearer is minor nobility. Said flourish includes a gold stripe, and a short half skirt. 
+  description: A variation of the Typ 1 SASIT, with a small amount of flourish to indicate that the wearer is minor nobility. Said flourish includes a gold stripe, and a short half skirt.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandatearmorprestige.rsi

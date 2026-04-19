@@ -109,16 +109,16 @@
   roles:
   #- RingleaderNCSP
   #- LieutenantNCSP
-  #- InfanteerNCSP
-  #- TechnicianNCSP
-  #- CoordinatorNCSP
-  #- RipperdocNCSP
-  #- TraumasecNCSP
+  - InfanteerNCSP
+  - TechnicianNCSP
+  - CoordinatorNCSP
+  - RipperdocNCSP
+  - TraumasecNCSP
   - OperativeNCSP
   - IntelligenceOfficerNCSP
   - CyberdawnTechNCSP
-  #- ForemanNCSP
-  #- ShipbreakerNCSP
+  - ForemanNCSP
+  - ShipbreakerNCSP
   editorHidden: false
 
 - type: department
@@ -280,3 +280,26 @@
   - PlanetfallTeam2SubLeader
   - PlanetfallTeam2Leader
   editorHidden: true
+
+- type: department
+  id: SectorIndependents
+  description: department-independent-description
+  color: "#5e5858"
+  weight: 10
+  roles:
+  - PlanetfallTeam1Leader
+  - PlanetfallTeam1SubLeader
+  - PlanetfallTeam1Member
+  - PlanetfallTeam2Member
+  - PlanetfallTeam2SubLeader
+  - PlanetfallTeam2Leader
+  editorHidden: true
+
+- type: department
+  id: Independents
+  description: department-Independent-description
+  color: "#374b4e"
+  weight: 10
+  roles:
+  - Vagrant
+  editorHidden: false
