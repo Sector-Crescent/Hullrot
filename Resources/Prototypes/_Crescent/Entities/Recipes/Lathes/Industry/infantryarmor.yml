@@ -1,0 +1,81 @@
+#hardsuitplates
+- type: latheRecipe
+  id: ArmorPlateSteelInsertHardsuitCraft
+  result: ArmorPlateSteelInsertHardsuit
+  category: ArmorPlates
+  completetime: 3
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: ArmorPlateCeramicInsertBasicHardsuitCraft
+  result: ArmorPlateCeramicInsertBasicHardsuit
+  category: ArmorPlates
+  completetime: 4
+  materials:
+    Steel: 100
+    Durathread: 300
+
+- type: latheRecipe
+  id: ArmorPlatePlasteelInsertHardsuitCraft
+  result: ArmorPlatePlasteelInsertHardsuit
+  category: ArmorPlates
+  completetime: 6
+  materials:
+    Steel: 200
+    Plasma: 150
+
+- type: latheRecipe
+  id: ArmorPlateCeramicInsertAdvancedHardsuitCraft
+  result: ArmorPlateCeramicInsertAdvancedHardsuit
+  category: ArmorPlates
+  completetime: 7
+  materials:
+    Steel: 300
+    Plasma: 150
+    Tungsten: 100
+
+#vestplates
+- type: latheRecipe
+  id: ArmorPlateSteelInsertCraft
+  result: ArmorPlateSteelInsert
+  category: ArmorPlates
+  completetime: 4
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  id: ArmorPlateKevlarInsertCraft
+  result: ArmorPlateKevlarInsert
+  category: ArmorPlates
+  completetime: 3
+  materials:
+    Steel: 300
+    Cloth: 300 #placeholderfor durathread bc need to make that producable
+
+- type: latheRecipe
+  id: ArmorPlateCeramicInsertBasicCraft
+  result: ArmorPlateCeramicInsertBasic
+  category: ArmorPlates
+  completetime: 5
+  materials:
+    Tungsten: 300
+    Steel: 100
+
+- type: latheRecipe
+  id: ArmorPlatePlasteelInsertCraft
+  result: ArmorPlatePlasteelInsert
+  category: ArmorPlates
+  completetime: 7
+  materials:
+    Steel: 300
+    Plasma: 200
+
+- type: latheRecipe
+  id: ArmorPlateCeramicInsertAdvancedCraft
+  result: ArmorPlateCeramicInsertAdvanced
+  category: ArmorPlates
+  completetime: 8
+  materials:
+    Plasma: 200
+    Tungsten: 150

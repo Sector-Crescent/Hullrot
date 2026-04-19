@@ -166,13 +166,13 @@
       species:
         - Plasmaman
 
-- type: loadout
-  id: LoadoutItemsEmergencyCrowbar
-  category: Items
-  cost: 0
-  canBeHeirloom: true
-  items:
-    - CrowbarRed
+# - type: loadout
+#   id: LoadoutItemsEmergencyCrowbar
+#   category: Items
+#   cost: 0
+#   canBeHeirloom: true
+#   items:
+#     - CrowbarRed
 
 - type: loadout
   id: LoadoutItemFlashlightLantern
@@ -226,15 +226,15 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutWritables
 
-- type: loadout
-  id: LoadoutPen
-  category: Items
-  cost: 0
-  items:
-    - Pen
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutWritables
+# - type: loadout
+#   id: LoadoutPen
+#   category: Items
+#   cost: 0
+#   items:
+#     - Pen
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: LoadoutWritables
 
 # Food and drink
 
@@ -343,13 +343,13 @@
       group: LoadoutMedkits
 
  # 5 zillion ghostroles, more people will take them if theyre less common.
-- type: loadout
-  id: LoadoutItemPAI
-  category: Items
-  cost: 1
-  canBeHeirloom: true
-  items:
-    - PersonalAI
+# - type: loadout
+#   id: LoadoutItemPAI
+#   category: Items
+#   cost: 1
+#   canBeHeirloom: true
+#   items:
+#     - PersonalAI
 
 - type: loadout
   id: LoadoutItemCrayonBox
