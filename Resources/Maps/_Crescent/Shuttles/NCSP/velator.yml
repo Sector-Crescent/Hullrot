@@ -63,7 +63,7 @@ entities:
     - type: SpreaderGrid
     - type: SelfDeleteGrid
     - type: Shuttle
-      baseMaxLinearVelocity: 45
+      baseMaxLinearVelocity: 50
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -637,7 +637,7 @@ entities:
     - type: Transform
       pos: 3.5,-8.5
       parent: 1
-- proto: BaseWeaponTurretArbalest
+- proto: BaseWeaponTurretGargoyle
   entities:
   - uid: 22
     components:
@@ -770,7 +770,7 @@ entities:
           ent: null
     - type: NamedModules
       buttonNames:
-      - Toggle EMP projector
+      - Toggle plasma projector
       - Toggle missile launcher
       - Fire missile launcher
       - Empty Module
@@ -2388,7 +2388,7 @@ entities:
     - type: Transform
       pos: 2.5,-3.5
       parent: 1
-- proto: WeaponTurretCurse
+- proto: WeaponTurretStarburst
   entities:
   - uid: 300
     components:
