@@ -15,8 +15,8 @@
     Blunt: 0.2
     Slash: 0.1
     Piercing: 0.1
-    Shock: 1.0
-    Heat: 0.089
+    Shock: 0.25
+    Heat: 0.25
     Structural: 0.25
   flatReductions:
     Blunt: 10
@@ -30,29 +30,27 @@
     Blunt: 0.5
     Slash: 0.1
     Piercing: 0.2
-    Heat: 0.1
-    Shock: 1.2
+    Heat: 0.5
+    Shock: 0.5
     Structural: 0.5
   flatReductions:
     Blunt: 10
     Slash: 10
     Piercing: 10
-    Structural: 10
 
 - type: damageModifierSet #Solid, Shuttle and Reinforced Shuttle Wall
   id: StructuralMetallic
   coefficients:
-    Blunt: 0.5
+    Blunt: 1.0
     Slash: 0.1
-    Piercing: 0.5
-    Shock: 1.5
-    Heat: 0.13
+    Piercing: 0.1
+    Shock: 1.0
+    Heat: 1.0
     Structural: 1.0
   flatReductions:
     Blunt: 10
     Slash: 10
     Piercing: 10
-    Structural: 10
 
 - type: damageModifierSet
   id: Rock

@@ -8,3 +8,5 @@ department-TAP = Taypani-Atyrian Pact
 department-ATH = Central Sol Authority
 department-NCWL-W = NCWL Homeguard Remnants
 department-DSM-W = DSM Penal Division
+department-pf = Planetfall Teams
+department-Independents = Independents

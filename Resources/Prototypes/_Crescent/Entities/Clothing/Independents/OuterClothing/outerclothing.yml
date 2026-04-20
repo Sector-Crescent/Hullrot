@@ -25,8 +25,8 @@
         Heat: 15
         Caustic: 25
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitIndependentsEVA
   - type: StaticPrice
@@ -48,19 +48,17 @@
   - type: ExplosionResistance
     damageCoefficient: 0.6
   - type: DegradeableArmor
-    armorMaxHealth: 600
-    armorType: Metallic
-    armorRepair: PlasteelPlate
+    armorMaxHealth: 100
+    armorType: Plastic
+    armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
         Blunt: 15
         Slash: 15
-        Piercing: 40
-        Heat: 25
-        Caustic: 15
+        Piercing: 36
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitFishbed
   - type: StaticPrice
@@ -76,25 +74,6 @@
     sprite: _Crescent/Clothing/Independents/OuterClothing/cenobite.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Independents/OuterClothing/cenobite.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.5
-    lowPressureMultiplier: 1000
-  - type: ExplosionResistance
-    damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Ceramic
-    armorRepair: NTCeramic
-    initialModifiers:
-      flatReductions:
-        Blunt: 25
-        Slash: 20
-        Piercing: 75
-        Heat: 15
-        Caustic: 15
-  - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCenobite
   - type: StaticPrice

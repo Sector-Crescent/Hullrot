@@ -11,7 +11,7 @@
   supervisors: job-supervisors-srm-hunters
   canBeAntag: false
   requirements:
-    - !type:CharacterWhitelistRequirement
+    #- !type:CharacterWhitelistRequirement
     - !type:CharacterOverallTimeRequirement
       min: 43200
     - !type:FactionRequirement

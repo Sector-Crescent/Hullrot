@@ -40,7 +40,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22 # 22 x 8 = 174
+        Blunt: 18 # 22 x 8 = 174
 
 - type: entity
   id: PelletShotgunSpread
@@ -49,7 +49,7 @@
   components:
   - type: ProjectileSpread
     proto: PelletShotgun
-    count: 8
+    count: 5
     spread: 12.5
 
 - type: entity

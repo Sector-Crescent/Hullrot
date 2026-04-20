@@ -61,10 +61,12 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 100
+          damage: 250
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
+          - !type:ChangeConstructionNodeBehavior
+            node: electronicsDestroyed
 
 - type: entity
   parent: [BaseStructureComputerTabletop, C_ComputerShuttle]

@@ -1,5 +1,5 @@
 # GUIDE:
-# T1 - 7500 HP - 30 SEC COOLDOWN 
+# T1 - 7500 HP - 30 SEC COOLDOWN
 # T2 - 15000 HP - 60 SEC COOLDOWN
 # T3 - 30000 HP - 120 SEC COOLDOWN
 # TODO: DSM-SPECIFIC T0 SHIELD WITH 3500 HP AND 20 SECOND COOLDOWN
@@ -111,7 +111,7 @@
   name: NT-630 'Bulwark' deflector emitter
   description: A complicated array of machinery - guzzles power and maintains a bubble deflector shield around the mother vessel. Overheats with too much use.
   components:
-  - type: ShipShieldEmitter 
+  - type: ShipShieldEmitter
     damageLimit: 15000
     healPerSecond: 100
     damageExp: 1.0
@@ -147,13 +147,54 @@
     powerLoad: 20000
 
 - type: entity
+  id: ShieldEmitterMedSmall
+  parent: ShieldEmitter
+  name: NT-455 'Buckler' deflector emitter
+  description: A bulkier shield emitter reverse-engineered by SHI from ancient blueprints. Outputs a bubble shield of mediocre strength around a vessel but is prone to overheating after soaking too much damage.
+  components:
+  - type: ShipShieldEmitter
+    damageLimit: 2000
+    healPerSecond: 80
+    damageExp: 1.0
+    powerDraw: 12500
+    unpoweredBonus: 2.5
+    damageOverloadTimePunishment: 45 # 50 * 2.5 * 60 = 7500. will be fully healed when its done being punished
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.25,-0.05,0.25,1.6"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 800
+  - type: Sprite
+    noRot: true
+    sprite: _Crescent/Structures/shieldemittermedsmall.rsi
+    layers:
+    - state: icon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ApcPowerReceiver
+    powerLoad: 12500
+
+- type: entity
   id: ShieldEmitterSmall
   parent: ShieldEmitter
   name: NT-280 'Errant' deflector emitter
   description: A shield emitter reverse-engineered by SHI from ancient blueprints. Outputs a weak but fast-recharging bubble shield around a vessel.
   components:
   - type: ShipShieldEmitter
-    damageLimit: 7500
+    damageLimit: 1000
     healPerSecond: 50
     damageExp: 1.0
     powerDraw: 5000

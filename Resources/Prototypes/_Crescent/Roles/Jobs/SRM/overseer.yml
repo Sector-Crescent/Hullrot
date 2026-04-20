@@ -11,7 +11,7 @@
   supervisors: job-supervisors-srm-overseer
   canBeAntag: false
   requirements:
-    - !type:CharacterWhitelistRequirement
+    #- !type:CharacterWhitelistRequirement
     - !type:FactionRequirement
       factionID: "SRM"
     - !type:CharacterSpeciesRequirement

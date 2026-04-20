@@ -1,0 +1,274 @@
+#All of the MRE components that can spawn in the DSM Ration Packs. 
+#Bases
+- type: entity
+  parent: FoodBase
+  id: RationComponentBaseMain
+  abstract: true
+  components:
+  - type: Food
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 40
+  - type: Item
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    size: Small
+    
+- type: entity
+  parent: FoodBase
+  id: RationComponentBaseSide
+  abstract: true
+  components:
+  - type: Food
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+  - type: Item
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    size: Small
+#Mains    
+- type: entity
+  name: Ration Component (Menu 1, Soy Patty, Beef Flavored)
+  parent: RationComponentBaseMain
+  id: RationComponentMainSoyBeef
+  description: A squishy rectangular "patty", made out of soy protein, and cheaply altered to taste like beef. 
+  components:
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - falsemeat
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+
+- type: entity
+  name: Ration Component (Menu 2, BBQ Mothroach Filet)
+  parent: RationComponentBaseMain
+  id: RationComponentMainMothroach
+  description: A grainy chunk of horribly overcooked mothroach meat, drenched in a generous amount of BBQ sauce flavored sludge. Is the fancy clothing really worth it?
+  components:
+    - type: FlavorProfile
+      flavors:
+        - metallic
+        - sweet
+        - meaty
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+
+- type: entity
+  name: Ration Component (Menu 3, Rice Pilaf)
+  parent: RationComponentBaseMain
+  id: RationComponentMainPilaf
+  description: A gelatinous brick, supposedly made of rice. You're pretty sure pilaf is supposed to be savory, but this just tastes like wallpaper paste.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - nutriment
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+
+- type: entity
+  name: Ration Component (Menu 4, Stewed Tofu)
+  parent: RationComponentBaseMain
+  id: RationComponentMainTofu
+  description: A thick goopy soup, filled with small cubes of tofu. The broth tastes like pure salt, and the tofu is completely raw.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - salty
+        - slimy
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+
+- type: entity
+  name: Ration Component (Menu 5, Cilbir)
+  parent: RationComponentBaseMain
+  id: RationComponentMainEggs
+  description: A thick glob of reconstituted egg, in a bath of strong garlicky yogurt. Tastes okay if you eat it with your eyes closed.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - oily
+        - chalky
+        - garlic
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+      
+- type: entity
+  name: Ration Component (Menu 6, Beans in Savory Sauce)
+  parent: RationComponentBaseMain
+  id: RationComponentMainBeans
+  description: A shitload of kidney beans in a savory sauce, with the consistency of olive oil. Don't eat this one before long trips.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - savory
+        - chalky
+        - salty
+    - type: Sprite
+      state: dsmrationcompmainclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompMainTrash
+#Sides
+- type: entity
+  name: Ration Component (Side 1, Water Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickWater
+  description: A brick of nutrients, made to taste like purified water. 
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - water
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+
+- type: entity
+  name: Ration Component (Side 2, Chocolate Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickChocolate
+  description: A brick of nutrients, made to taste like chocolate. 
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - chocolate
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+
+- type: entity
+  name: Ration Component (Side 3, Coffee Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickCoffee
+  description: A brick of nutrients, made to taste like fresh brewed coffee.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - coffee
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+
+- type: entity
+  name: Ration Component (Side 4, Cranberry Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickCranberry
+  description: A brick of nutrients, made to taste like ripe cranberries.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - sour
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+
+- type: entity
+  name: Ration Component (Side 5, Apple Cinnamon Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickApple
+  description: A brick of nutrients, made to taste like apples cooked in cinnamon.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - sweet
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+
+- type: entity
+  name: Ration Component (Side 6, Vanilla Flavored Sustenance Bar)
+  parent: RationComponentBaseSide
+  id: RationComponentSideBrickVanilla
+  description: A brick of nutrients, made to taste like vanilla.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - nutriment
+        - sweet
+        - chalky
+    - type: Sprite
+      state: dsmrationcompsideclosed
+    - type: Item
+    - type: Food
+      trash:
+      - RationCompSideTrash
+#Trash
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: RationCompMainTrash
+  name: Empty Ration Main Component
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    state: dsmrationcompmainopen
+  - type: Item
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: RationCompSideTrash
+  name: Empty Ration Side Component
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Consumables/Food/ration.rsi
+    state: dsmrationcompsideopen
+  - type: Item

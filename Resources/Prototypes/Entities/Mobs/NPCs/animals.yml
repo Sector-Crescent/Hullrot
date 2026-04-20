@@ -666,15 +666,6 @@
   components:
   - type: Singer
     proto: HarpySinger
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    allowMovement: true
-    name: ghost-role-information-squackroach-name
-    description: ghost-role-information-squackroach-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
   - type: Fixtures
     fixtures:
       fix1:
@@ -686,7 +677,6 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
-  - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: Harpy
     speechSounds: Harpy
@@ -1435,11 +1425,6 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
-  - type: GhostRole
-    prob: 0.25
-    name: ghost-role-information-kangaroo-name
-    description: ghost-role-information-kangaroo-description
-  - type: GhostTakeoverAvailable
   - type: Vocal
     sounds:
       Unsexed: Kangaroo
@@ -1646,12 +1631,6 @@
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-primate
   - type: AlwaysRevolutionaryConvertible
-  - type: GhostRole
-    prob: 0.05
-    makeSentient: true
-    name: ghost-role-information-monkey-name
-    description: ghost-role-information-monkey-description
-  - type: GhostTakeoverAvailable
   - type: Clumsy
     gunShootFailDamage:
       types:
@@ -1687,18 +1666,6 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
-  - type: GhostRole
-    prob: 0.05
-    makeSentient: true
-    name: ghost-role-information-monkey-name
-    description: ghost-role-information-monkey-description
-    rules: ghost-role-information-syndicate-reinforcement-rules
-    mindRoles:
-    # This is for syndicate monkeys that randomly gain sentience, thus have no summoner to team with
-    - MindRoleGhostRoleSoloAntagonist
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
 
@@ -1784,14 +1751,8 @@
     - id: FoodMeat
       amount: 2
   - type: AlwaysRevolutionaryConvertible
-  - type: GhostTakeoverAvailable
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-kobold
-  - type: GhostRole
-    prob: 0.1
-    makeSentient: true
-    name: ghost-role-information-kobold-name
-    description: ghost-role-information-kobold-description
   - type: RandomBark
     barkMultiplier: 0.65
     barkType: kobold
@@ -1872,16 +1833,6 @@
   components:
   - type: Body
     prototype: Mouse
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    allowMovement: true
-    name: ghost-role-information-mouse-name
-    description: ghost-role-information-mouse-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
-  - type: GhostTakeoverAvailable
   - type: Speech
     speechSounds: Squeak
     speechVerb: SmallMob
@@ -2724,16 +2675,6 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-  - type: GhostRole
-    makeSentient: true
-    name: ghost-role-information-giant-spider-name
-    description: ghost-role-information-giant-spider-description
-    rules: ghost-role-information-giant-spider-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
-    raffle:
-      settings: short
-  - type: GhostTakeoverAvailable
 
 - type: entity
   name: tarantula
@@ -3364,17 +3305,6 @@
         Base: syndicat
       Dead:
         Base: syndicat_dead
-  - type: GhostRole
-    prob: 1
-    name: ghost-role-information-SyndiCat-name
-    allowMovement: true
-    description: ghost-role-information-SyndiCat-description
-    rules: ghost-role-information-SyndiCat-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
   - type: AutoImplant
     implants:
     - MicroBombImplant
@@ -3651,13 +3581,6 @@
   id: MobHamster
   description: A cute, fluffy, robust hamster.
   components:
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    allowMovement: true
-    name: ghost-role-information-hamster-name
-    description: ghost-role-information-hamster-description
-  - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Squeak

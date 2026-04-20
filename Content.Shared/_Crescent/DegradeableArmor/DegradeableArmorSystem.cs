@@ -87,7 +87,7 @@ public sealed class DegradeableArmorSystem : EntitySystem
             return;
         }
 
-        args.Handled = _toolSystem.UseTool(args.Used, args.User, owner.Owner, 15, "Welding", new ArmorRepairDoAfterEvent(), 50);
+//        args.Handled = _toolSystem.UseTool(args.Used, args.User, owner.Owner, 15, "Welding", new ArmorRepairDoAfterEvent(), 50);
 
     }
 

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+      "copyright": "sprites provided by @WillyBillyGilly and @miket, licensed under CC-BY-SA 3.0",
+	"size": { "x": 32, "y": 32 },
+	"states": [
+		{ "name": "t-ray-on" , "delays": [[0.5, 0.5]]},
+		{ "name": "t-ray-off" },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}

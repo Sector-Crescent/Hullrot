@@ -118,6 +118,8 @@ research-technology-imperial-torturer = Imperial Stealth Bomber
 research-technology-imperial-magnate = Imperial Fire Support Vessel
 research-technology-imperial-craftcomps = Imperial Weapon Components
 research-technology-imperial-raider = Imperial Troop Transport
+research-technology-imperial-baserosterships = Standard Imperial Ships
+research-technology-imperial-baserosterinfantry = Standard Imperial Infantry Gear
 
 # NCWL
 research-technology-communard-clothes = Communard Clothes
@@ -142,7 +144,7 @@ research-technology-communard-bogatyr = Communard Battle Mech
 research-technology-communard-commienaut = Communard Juggernaut Suit
 research-technology-communard-vibrokukri = Communard Chengridz Vibrokukri
 research-technology-communard-craftcomps = Communard Weapon Components
-
+research-technology-communard-baserosterships = Standard Communard Ships
 # SHI
 research-technology-shinohara-clothes = Corporate Uniforms
 research-technology-shinohara-security = Corporate Security

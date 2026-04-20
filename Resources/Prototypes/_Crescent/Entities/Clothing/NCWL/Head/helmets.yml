@@ -2,8 +2,8 @@
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: ClothingHeadHelmetNCWLBasic
-  name: homeguard ballistic helmet
-  description: A kevlar-plated nanoweave infantry helmet. Standard issue for communards.
+  name: 2B5 Combat Helmet
+  description: The standard issue, low cut, combat helmet employed by the Union. Comes with flared sides to fit your communication equipment, and ample padding for comfort. For best results, apply to head.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlhelmet.rsi
@@ -17,8 +17,8 @@
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: ClothingHeadHelmetNCWLHeavy
-  name: homeguard heavy-plate helmet
-  description: A kevlar-plated nanoweave juggernaut helmet. Standard issue for communards.
+  name: 2B8 Heavy Combat Helmet
+  description: An incredibly heavy helmet, constructed entirely out of solid plasteel, rather than ballistic fibre. The faceplate is rated to stop smaller rifle rounds. Commonly worn by juggernauts, but is only issued on request.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlheavyhelmet.rsi
@@ -43,8 +43,8 @@
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: ClothingHeadHelmetNCWLRiot
-  name: homeguard enforcer helm
-  description: The tinted polyplast visor protects a League enforcer's eyes from thrown objects, harsh blows, and most shrapnel. The fit is very “one-size-fits-all,” however, and the helm is rather uncomfortable for non-baseline members of the League. Ventilation is poor by design; discomfort keeps the Enforcer alert. A faded slogan stamped inside the liner reads; “Pain is clarity.” Offers protection from bricks, clubs, and ideologically-weak thoughts.
+  name: 2B5P Riot Helmet
+  description: A variation of the standard 2B5 helmet, with the brim removed, and a plastic face visor added. The helmet retains most of its protective ability, but the visor will really only protect you from a brick. 
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlhelmetriot.rsi
@@ -75,8 +75,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitNCWLMedi
   categories: [ HideSpawnMenu ]
-  name: homeguard "SANITAR" hardsuit helmet
-  description: Spaceworthy protection for your fragile skull. A communard design.
+  name: 2B20D Helmet
+  description: The helmet to the 2B20D hardsuit. Protects the head from impacts and projectiles.
   components:
   - type: BreathMask
   - type: Sprite
@@ -103,8 +103,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitNCWLEngi
   categories: [ HideSpawnMenu ]
-  name: worker's league "EVERYMAN" hardsuit helmet
-  description: Spaceworthy protection for your fragile skull. A communard design.
+  name: 2B20C Helmet
+  description: The helmet to the 2B20C hardsuit. Protects the head from impacts and projectiles.
   components:
   - type: BreathMask
   - type: EyeProtection
@@ -134,8 +134,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitNCWLInfantry
   categories: [ HideSpawnMenu ]
-  name: homeguard infanteer's hardsuit helmet
-  description: Spaceworthy protection for your fragile skull. A communard design.
+  name: 2B20 Helmet
+  description: The helmet to the 2B20 hardsuit. Protects the head from impacts and projectiles.
   components:
   - type: BreathMask
   - type: Sprite
@@ -162,8 +162,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitNCWLPetya
   categories: [ HideSpawnMenu ]
-  name: homeguard heavy hardsuit helmet
-  description: Spaceworthy protection for your fragile skull. A communard design.
+  name: 2B29 Helmet
+  description: The helmet to the 2B29 hardsuit. Features an incredibly basic HUD that essentially serves zero purpose. Protects the head from impacts and projectiles. 
   components:
   - type: BreathMask
   - type: Sprite
@@ -181,8 +181,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitNCWLJuggernaut
   categories: [ HideSpawnMenu ]
-  name: homeguard juggernaut's hardsuit helmet
-  description: Spaceworthy protection for your fragile skull. A communard design.
+  name: 2B30 Helmet
+  description: The helmet to the 2B30 hardsuit. Protects the head from impacts and projectiles.
   components:
   - type: BreathMask
   - type: Sprite

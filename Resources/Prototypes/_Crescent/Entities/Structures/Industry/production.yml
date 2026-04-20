@@ -43,7 +43,7 @@
     - BaseMagazineCaselessRifleEmpty
     - SpeedLoaderMagnumEmpty
     - MagazineRocketEmpty
-    - Magazine90mmEmpty
+    # - Magazine90mmEmpty
 
 - type: entity
   parent: BaseLathe
@@ -202,12 +202,8 @@
     - BoxShotgunSlug4g
     - MagazineBoxAntiMaterielBig
     - Magazine20mm
-    - Magazine20mmFrag
     - Magazine35mm
-    - Magazine35mmHE
     - Magazine50mm
-    - Magazine50mmHE
-    - Magazine50mmSAPHE
 
 - type: entity
   parent: BaseLathe
@@ -237,11 +233,11 @@
     runningState: ammolargeactive
     staticRecipes:
     - Cartridge90mm
-    - Cartridge90mmAP
-    - Cartridge90mmHE
+    # - Cartridge90mmAP
+    # - Cartridge90mmHE
     - Cartridge120mm
-    - Cartridge120mmFlux
-    - Cartridge120mmFlak
+    # - Cartridge120mmFlux
+    # - Cartridge120mmFlak
     - Cartridge300mm
     - Cartridge48mmRocket
     - Cartridge60mmRocket

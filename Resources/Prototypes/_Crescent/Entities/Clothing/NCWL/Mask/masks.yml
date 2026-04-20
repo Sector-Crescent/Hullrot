@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingMaskBreathMedical
   id: ClothingMaskNCWLBalaclava
-  name: military balaclava
-  description: A durathread combat balaclava, similar to the one used in the liquidation units of the first corporate war.
+  name: Worker's Balaclava
+  description: A basic black balaclava, intended to keep the face warm in cold environments. 
   components:
   - type: Item
     size: Tiny
@@ -14,8 +14,8 @@
 - type: entity
   parent: ClothingMaskGasSyndicate
   id: ClothingMaskNCWLGasmask
-  name: homeguard gas mask
-  description: A kevlar durathread weave enhanced gas mask, a new piece of kit within the Homeguard.
+  name: GP-1 Gas Mask
+  description: A polymer gasmask, with polarized glass lenses. You're not too sure if this thing really seals, but it's what you've got.
   components:
   - type: Item
     size: Small

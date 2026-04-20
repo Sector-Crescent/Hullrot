@@ -11,7 +11,7 @@
   supervisors: job-supervisors-ath
   canBeAntag: false
   requirements:
-    - !type:CharacterWhitelistRequirement
+    #- !type:CharacterWhitelistRequirement
     - !type:FactionRequirement
       factionID: "ATH"
     - !type:CharacterSpeciesRequirement

@@ -4,3 +4,51 @@
   cost: 6
   items:
     - Boombox
+
+- type: loadout
+  id: LoadoutItemsCrescentCrowbar
+  category: Items
+  cost: 0
+  canBeHeirloom: true
+  items:
+    - CrescentCrowbar
+
+- type: loadout
+  id: LoadoutItemsClothingBackpackDuffelSurgeryFilled
+  category: Items
+  cost: 4
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackDuffelSurgeryFilled
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - DoctorNCWL
+        - DirectorNCWL
+        - RipperdocNCSP
+        - TraumasecNCSP
+        - CoordinatorNCSP
+        - SurgeonDSM
+        - MedtechSHI
+        - PhysicianCMM
+        - TenderSRM
+
+- type: loadout
+  id: LoadoutItemsClothingBackpackDuffelSurgeryAdvancedFilled
+  category: Items
+  cost: 6
+  canBeHeirloom: true
+  items:
+    - ClothingBackpackDuffelSurgeryAdvancedFilled
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - DoctorNCWL
+        - DirectorNCWL
+        - RipperdocNCSP
+        - TraumasecNCSP
+        - CoordinatorNCSP
+        - SurgeonDSM
+        - MedtechSHI
+        - PhysicianCMM
+        - TenderSRM

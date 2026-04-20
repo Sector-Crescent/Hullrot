@@ -183,16 +183,16 @@
   categories:
   - StoreCategorySAW
 
-- type: listing
-  id: StoreListingSAWPlasmaCutter
-  name: SAW Plasma Cutter
-  description: This compact cutter fires bolts of ionized plasma that cut easily through most surfaces, making it a cheap but versatile mining tool. This one has been haphazardly modified to work as a self defense tool.
-  icon: { sprite: /Textures/_Crescent/Objects/Weapons/plasmacutter.rsi, state: icon }
-  productEntity: WeaponDonorPlasmaCutter
-  cost:
-    ScrapSAW: 30
-  categories:
-  - StoreCategorySAW
+# - type: listing
+#   id: StoreListingSAWPlasmaCutter
+#   name: SAW Plasma Cutter
+#   description: This compact cutter fires bolts of ionized plasma that cut easily through most surfaces, making it a cheap but versatile mining tool. This one has been haphazardly modified to work as a self defense tool.
+#   icon: { sprite: /Textures/_Crescent/Objects/Weapons/plasmacutter.rsi, state: icon }
+#   productEntity: WeaponDonorPlasmaCutter
+#   cost:
+#     ScrapSAW: 30
+#   categories:
+#   - StoreCategorySAW
 
 # SHIP FLATPACKS
 
@@ -413,17 +413,6 @@
   description: A product of one particularly drunk foreman seeing a Bogatyr-class ship, and then asking if it could mine. Shockingly good platform for weaponization.
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherScabrak
-  cost:
-    ScrapSAW: 30
-  categories:
-  - StoreCategorySAWships
-
-- type: listing
-  id: StoreListingSAWThanapod
-  name: SAW Thanapod LPC
-  description: A Shipfitters original design of a cruiser-sized mining barge.
-  icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
-  productEntity: ShipVoucherThanapod
   cost:
     ScrapSAW: 30
   categories:

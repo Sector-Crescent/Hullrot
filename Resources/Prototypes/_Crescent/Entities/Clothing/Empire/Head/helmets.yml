@@ -2,8 +2,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitImperialWorker
   categories: [ HideSpawnMenu ]
-  name: imperial worker's hardsuit helmet
-  description: A miner's hardsuit helmet with internal pressurization systems and a scanning hud for nearby ore and minerals.
+  name: CEVAS Helmet
+  description: The brainbucket that comes built in with the CEVAS hardsuit. Has a pretty bright light so you can look pirates in the eye before they gun you down.
   components:
   - type: BreathMask
   - type: EyeProtection
@@ -125,8 +125,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitImperialCommand
   categories: [ HideSpawnMenu ]
-  name: imperial command hardsuit helmet
-  description: An Imperial hardsuit helmet with internal pressurization systems and sturdy armor plating.
+  name: ICHS Helmet
+  description: The helmet to the ICHS. Has extra padding for added user comfort.
   components:
   - type: BreathMask
   - type: Sprite
@@ -159,8 +159,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitImperialSoldier
   categories: [ HideSpawnMenu ]
-  name: imperial soldier's hardsuit helmet
-  description: A combat hardsuit helmet with internal pressurization systems and an inbuilt tracker system for ballistics.
+  name: MECS Typ 1 Helmet
+  description: The helmet to the MECS Typ 1 hardsuit. Features a basic ammunition counter and several flashlights.
   components:
   - type: BreathMask
   - type: Sprite
@@ -188,8 +188,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitImperialKnight
   categories: [ HideSpawnMenu ]
-  name: imperial knight's hardsuit helmet
-  description: A combat hardsuit helmet with internal pressurization systems and an inbuilt tracker system for ballistics.
+  name: MECS Typ 2 Helmet
+  description: The helmet to the MECS Typ 2 suit. Comes with the same features as the Typ 1, but with a better suspension system.
   components:
   - type: BreathMask
   - type: Sprite
@@ -217,8 +217,8 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitImperialJuggernaut
   categories: [ HideSpawnMenu ]
-  name: experimental imperial hardsuit helmet
-  description: A hardsuit helmet built with an uneven-eyed design, utilizing newly freed space to provide vital transcripts of communication and active biometric readings for the user. Accuracy loss is acceptable for the Kaiser's blessing.
+  name: ESACH Helmet
+  description: The helmet to the ESACH, which is comfortable but significantly less advanced. Essentially identical to the MECS Typ 2 helmet.
   components:
   - type: BreathMask
   - type: Sprite
@@ -277,7 +277,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatAdvocatus
   name: advocati peaked cap
-  description: A peaked cap, stamped with the Kircheis Eagle of office.
+  description: A peaked cap, stamped with the Olywir Eagle of office.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Head/advocati.rsi
@@ -344,8 +344,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetImperialTrooperHelmet
-  name: imperial helmet
-  description: A sturdy helmet to enforce the Kaiserin's will.
+  name: HPS Typ 1 Helmet
+  description: A sturdy ballistic helmet, made of steel and aramid fibre. This one has a white stripe, indicating that the wearer is a commoner.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Head/mandatehelmet.rsi
@@ -412,8 +412,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetImperialKnightCommanderHelmet
-  name: prestigous imperial helmet
-  description: A sturdy helmet to enforce the Kaiserin's will. Comes with paint-of-gold to signify rank and status.
+  name: HPS Typ 2 Helmet
+  description: The Mandate's standard issue combat helmet, with a golden trim to indicate the wearers status as minor nobility.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Head/mandatecommanderhelmet.rsi
@@ -448,8 +448,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetImperialWorkerHelmet
-  name: foreman's worker helmet
-  description: A flimsy steel helmet for a Mandate worker.
+  name: Imperial Hardhat
+  description: A thin steel helmet, with a cheap suspension system, designed to protect the wearer from falling objects and light blows. 
   components:
   - type: EyeProtection
   - type: Sprite
@@ -481,7 +481,7 @@
   parent: ClothingHeadEVAHelmetBase
   id: ClothingHeadHelmetImperialEVA
   name: imperial voidsuit helmet
-  description: An imperial voidsuit helmet. Designed for EVA.
+  description: A cheap purple "helmet", made with synthcotton. The polycarbonate visor fogs up easily.
   components:
   - type: BreathMask
   - type: Sprite

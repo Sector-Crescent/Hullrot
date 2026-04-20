@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialCombat
-  name: imperial fatigues
-  description: A sleek onepiece bodysuit with Imperial livery.
+  name: Imperial Combat Uniform
+  description: A sleek black bodysuit, that conforms to your body. Designed to be used in any environment, and chaff heavily to keep the masses in line.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecombat.rsi
@@ -46,8 +46,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialSoldierFormal
-  name: formal shirt and slacks
-  description: A formal shirt and slacks for Imperial soldiers.
+  name: Imperial Army Formal Uniform
+  description: A basic pair of purple slacks, paired with a white dress shirt. Perfect for marching in giant lines at parades.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatesoldierformal.rsi
@@ -72,8 +72,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialDoctor
-  name: doctor's jumpsuit
-  description: A doctor's jumpsuit with Imperial livery.
+  name: Imperial Doctor's Uniform
+  description: A sterile, multipiece white uniform, with purple livery. The outer layer is slick, allowing blood to drip right off.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatedoctor.rsi
@@ -113,8 +113,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialFreeholder
-  name: freeholder's jumpsuit
-  description: An Imperial citizen's jumpsuit with a biotracker embedded at the wrist.
+  name: Imperial Laborer's Uniform
+  description: A cheap as dirt uniform, designed to be used by various kinds of physical laborers, and other unsightly "citizens". Has a robust biotracker in the wrist.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatefreeholder.rsi
@@ -138,8 +138,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialNobleMale
-  name: noble's shirt and slacks
-  description: A noble's elegant shirt and slacks, of genuine black and white mothsilk.
+  name: Noble's Dress Uniform
+  description: A beautifully crafted dress shirt paired with form fitting black slacks, made with genuine mothsilk.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandateadjutantcasual.rsi
@@ -153,8 +153,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialNobleFemale
-  name: noble's shirt and pleated skirt
-  description: A noble's elegant shirt and skirt, of genuine black and white mothsilk.
+  name: Noble's Dress Uniform.
+  description: A beautifully crafted dress shirt paired with a flowing skirt, hemmed below the knee, made with genuine mothsilk.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatecourtier.rsi
@@ -168,8 +168,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitImperialSurgeon
-  name: imperial scribe's surgeon scrubs
-  description: Sterile scrubs in Olywir purple.
+  name: Imperial Surgeon's Scrubs
+  description: A thin pair of purple scrubs, designed for surgery.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/Empire/Uniform/mandatesurgeon.rsi

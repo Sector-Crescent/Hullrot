@@ -139,6 +139,23 @@
 
 - type: entity
   parent: BaseItem
+  id: ShipVoucherPraetorian
+  name: DSM 'Praetorian' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Praetorian-class destroyer. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Praetorian
+
+- type: entity
+  parent: BaseItem
   id: ShipVoucherRaider
   name: DSM 'Raider' pattern LPC fabprint disk
   description: An LPC fabprint disk loaded with an Imperial Raider-class cloaked troop transport. Has to be redeemed at a shipyard console.
@@ -445,6 +462,23 @@
     price: 2500
   - type: ShipVoucher
     ship: Vasinya
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherStraznik
+  name: NCWL 'Straznik' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a communard corvette-class combat pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Straznik
 
 - type: entity
   parent: BaseItem
