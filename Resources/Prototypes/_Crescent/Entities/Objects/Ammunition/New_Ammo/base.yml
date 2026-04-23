@@ -1,0 +1,224 @@
+- type: entity
+  id: CrescentBaseCartridge
+  name: Cartridge
+  parent: BaseCartridgeRifle
+  abstract: True
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+  - type: StaticPrice
+    price: 100
+  - type: EmitSoundOnLand
+    sound:
+      collection: MediumBulletBounce
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MediumBulletBounce
+
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBox
+  id: CrescentBaseAmmoBox
+  name: ammunition box
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_556x45mm
+    proto: CrescentCartridge_556x45mm
+    capacity: 60
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Intermediary.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  id: CrescentBaseMagazine
+  name: "30-round magazine"
+  parent: BaseItem
+  abstract: True
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/5.56x45_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/mag_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
+
+- type: entity
+  id: CrescentBaseSpeedLoader
+  name: "speed loader"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - SpeedLoaderPistol
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 6
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Pistol/pistol_speed_loader.rsi
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+
+
+- type: entity
+  name: Over Engineered Piece Of Shit
+  parent: BaseWeaponRifle
+  id: CrescentDebugRifle
+  description: yeah fuck it give it all the calibers it even accepts crowbars! wont shoot it doe
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/akms.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    shape:
+    - 0,0,5,1
+  - type: Gun
+    fireRate: 5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/AK_74/rifle_gunshot_1.ogg
+    fireOnDropChance: 0.5
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Over Engineered Piece Of Shit Number 2
+  parent: BaseItem
+  id: CrescentDebugRevolver
+  description: Accepts Anything, Magnum Rounds Prefered
+  abstract: False
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/deckard.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-2
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: AmmoCounter
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 1.5
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/revolver_1/revolver_gunshot_2.ogg
+    fireOnDropChance: 0.5
+  - type: UseDelay
+    delay: 0.66
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    proto: CartridgeMagnum
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 500
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 7
+    swapKeys: true
+    disableHeavy: true
+    animation: WeaponArcThrust
+    wideAnimationRotation: 135
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    staminaCost: 5
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg

@@ -1,0 +1,318 @@
+# 18.5Ga
+
+- type: entity
+  id: CrescentCartridge_185Ga
+  name: Cartridge (18.5Ga)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - ShellShotgun
+    - Cartridge
+    - CrescentCartridge_185Ga
+  - type: CartridgeAmmo
+    proto: CrescentBullet_185Ga
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/18.5Ga.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_185Ga
+  name: bullet (18.5Ga)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  id: Crescent185gaPelletShotgunSpread
+  categories: [ HideSpawnMenu ]
+  parent: CrescentBullet_185Ga
+  components:
+  - type: ProjectileSpread
+    proto: CrescentBullet_185Ga
+    count: 5
+    spread: 12.5
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_185Ga
+  name: ammunition box (18.5Ga)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_185Ga
+  name: "10-round magazine (18.5Ga)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_185Ga
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
+    capacity: 5
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+- type: entity
+  id: CrescentBoxMagazine185Ga
+  name: "20-round magazine (18.5Ga)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentBoxMagazine_185Ga
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
+    capacity: 20
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_Drum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+- type: entity
+  id: CrescentSpeedLoader185Ga
+  name: "Speedloader (18.5Ga)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: SpeedLoader
+  - type: Tag
+    tags:
+      - CrescentSpeedLoader_185Ga
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_185Ga
+    proto: CrescentCartridge_185Ga
+    capacity: 4
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/18.5Ga_SpdLdr.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+
+
+# 12Ga
+
+- type: entity
+  id: CrescentCartridge_12Ga
+  name: Cartridge (12Ga)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - ShellShotgun
+    - Cartridge
+    - CrescentCartridge_12Ga
+  - type: CartridgeAmmo
+    proto: Crescent12gPelletShotgunSpread
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/12Ga.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_12Ga
+  name: bullet (12Ga)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  id: Crescent12gPelletShotgunSpread
+  categories: [ HideSpawnMenu ]
+  parent: CrescentBullet_12Ga
+  components:
+  - type: ProjectileSpread
+    proto: CrescentBullet_12Ga
+    count: 5
+    spread: 12.5
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_12Ga
+  name: ammunition box (12Ga)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    proto: CrescentCartridge_12Ga
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_12Ga
+  name: "10-round magazine (12Ga)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_12Ga
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    proto: CrescentCartridge_12Ga
+    capacity: 10
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/12Ga_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+# 4Ga
+
+- type: entity
+  id: CrescentCartridge_4Ga
+  name: Cartridge (4Ga)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - ShellShotgun
+    - Cartridge
+    - CrescentCartridge_4Ga
+  - type: CartridgeAmmo
+    proto: Crescent4GaPelletShotgunSpread
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/4Ga.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_4Ga
+  name: bullet (4Ga)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # crazy how its justified this time
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  id: Crescent4GaPelletShotgunSpread
+  categories: [ HideSpawnMenu ]
+  parent: CrescentBullet_12Ga
+  components:
+  - type: ProjectileSpread
+    proto: CrescentBullet_4Ga
+    count: 4
+    spread: 12.5
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_4Ga
+  name: ammunition box (4Ga)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_4Ga
+    proto: CrescentCartridge_4Ga
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Shotgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false

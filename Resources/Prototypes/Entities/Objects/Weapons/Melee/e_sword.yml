@@ -38,7 +38,6 @@
         variation: 0.125
     activatedDamage:
         types:
-            Slash: 15
             Heat: 25
             Structural: 50 # its a damn laser sword, let people star wars their way through walls
   - type: ItemToggleDamageOtherOnHit
@@ -58,14 +57,15 @@
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1.15
-    range: 1.6
+    range: 1.5
     damage:
       types:
         Blunt: 2.5
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
-    clickPartDamageMultiplier: 1.25
+    clickPartDamageMultiplier: 1.5
     maxTargets: 3
+    angle: 60
   - type: DamageOtherOnHit
   - type: Item
     size: Small
@@ -317,9 +317,8 @@
         variation: 0.250
     activatedDamage:
         types:
-            Slash: 25
             Heat: 50
-            Structural: 150
+            Structural: 60
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg

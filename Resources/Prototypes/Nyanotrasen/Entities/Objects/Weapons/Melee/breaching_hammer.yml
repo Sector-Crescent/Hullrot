@@ -12,27 +12,27 @@
     shape:
       - 0,0,3,3
   - type: MeleeWeapon
+    angle: 100
     attackRate: 1.5
     range: 1.75
     damage:
       types:
-        Blunt: 25
-        Structural: 50
+        Blunt: 75
+        Structural: 150
     heavyDamageBaseModifier: 1
-    heavyStaminaCost: 14
+    heavyStaminaCost: 35
     heavyRateModifier: 1.167 # 1.75 attack rate with 1.5 base
-    clickPartDamageMultiplier: 1.25
-    maxTargets: 4
+    maxTargets: 1
     soundHit:
       path: /Audio/Nyanotrasen/Weapons/club.ogg
-  - type: DamageOtherOnHit
-    staminaCost: 14
+  # - type: DamageOtherOnHit
+  #   staminaCost: 14
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 45
-        Structural: 100
+        Blunt: 50
+        Structural: 150
   - type: Tool
     qualities:
       - Prying

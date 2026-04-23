@@ -806,7 +806,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
         var (_, ourEntRot, ourEntMatrix) = _transform.GetWorldPositionRotationMatrix(_coordinates.Value.EntityId);
         var rot = ourEntRot + _rotation.Value;
-        
+
         if (keepWorldAligned)
         {
             ourEntRot = Angle.Zero;
@@ -822,13 +822,13 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var mapCenterWorld = Vector2.Zero;
 
         var mapCenterUI = Vector2.Transform(mapCenterWorld, ourWorldMatrixInvert);
-        mapCenterUI.Y = -mapCenterUI.Y; 
+        mapCenterUI.Y = -mapCenterUI.Y;
 
         var uiCenter = ScalePosition(mapCenterUI);
 
-        handle.DrawCircle(uiCenter, 650 * MinimapScale, new Color(255, 0, 0, 50), false);
-        handle.DrawCircle(uiCenter, 3950 * MinimapScale, new Color(0, 255, 0, 50), false);
-        handle.DrawCircle(uiCenter, 4350 * MinimapScale, new Color(0, 255, 0, 50), false);
+        handle.DrawCircle(uiCenter, 11500 * MinimapScale, new Color(255, 0, 0, 50), false);
+        // handle.DrawCircle(uiCenter, 3950 * MinimapScale, new Color(0, 255, 0, 50), false);
+        // handle.DrawCircle(uiCenter, 4350 * MinimapScale, new Color(0, 255, 0, 50), false);
     }
     // Rat-end
 

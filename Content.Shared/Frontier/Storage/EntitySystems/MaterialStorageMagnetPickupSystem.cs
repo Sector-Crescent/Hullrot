@@ -18,7 +18,7 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedMaterialStorageSystem _storage = default!;
 
-    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(1);
+    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(15);
 
     private EntityQuery<PhysicsComponent> _physicsQuery;
 
@@ -39,7 +39,7 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
 
     private void OnMagnetMapInit(EntityUid uid, MaterialStorageMagnetPickupComponent component, MapInitEvent args)
     {
-        component.NextScan = _timing.CurTime + TimeSpan.FromSeconds(1); // Need to add 1 sec to fix a weird time bug with it that make it never start the magnet
+        component.NextScan = _timing.CurTime + ScanDelay;
     }
 
     // Frontier, used to add the magnet toggle to the context menu
@@ -81,12 +81,10 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var comp, out var storage, out var xform))
         {
-            if (comp.NextScan < currentTime)
+            if (comp.NextScan > currentTime)
                 continue;
+            comp.NextScan = currentTime + ScanDelay;
 
-            comp.NextScan += ScanDelay;
-
-            // Frontier - magnet disabled
             if (!comp.MagnetEnabled)
                 continue;
 
@@ -94,10 +92,10 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
 
             foreach (var near in _lookup.GetEntitiesInRange(uid, comp.Range, LookupFlags.Dynamic | LookupFlags.Sundries))
             {
-                if (!_physicsQuery.TryGetComponent(near, out var physics) || physics.BodyStatus != BodyStatus.OnGround)
+                if (near == parentUid)
                     continue;
 
-                if (near == parentUid)
+                if (!_physicsQuery.TryGetComponent(near, out var physics) || physics.BodyStatus != BodyStatus.OnGround)
                     continue;
 
                 _storage.TryInsertMaterialEntity(uid, near, uid, storage);

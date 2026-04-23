@@ -1,0 +1,538 @@
+# 7.62x54
+
+- type: entity
+  id: CrescentCartridge_762x54
+  name: Cartridge (7.62x54mm)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CrescentCartridge_762x54
+  - type: CartridgeAmmo
+    proto: CrescentBullet_762x54
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/7.62x54.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_762x54
+  name: bullet (7.62x54mm)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_762x54
+  name: ammunition box (7.62x54mm)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x54
+    proto: CrescentCartridge_762x54
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Fullsize.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_762x54
+  name: "6-round magazine (7.62x54mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_762x54
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x54
+    proto: CrescentCartridge_762x54
+    capacity: 6
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/7.62x54_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: CrescentBoxMagazine_762x54
+  name: "100-round magazine (7.62x54mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentBoxMagazine_762x54
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x54
+    proto: CrescentCartridge_762x54
+    capacity: 100
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/7.62x54_Box.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: CrescentClip_762x54
+  name: "Clip (7.62x54mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: SpeedLoader
+  - type: Tag
+    tags:
+      - CrescentClip_762x54
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x54
+    proto: CrescentCartridge_762x54
+    capacity: 4
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/7.62x54_Clip.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+# 7.62x51
+
+- type: entity
+  id: CrescentCartridge_762x51
+  name: Cartridge (7.62x51mm)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CrescentCartridge_762x51
+  - type: CartridgeAmmo
+    proto: CrescentBullet_762x51
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/7.62x51.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_762x51
+  name: bullet (7.62x51mm)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_762x51
+  name: ammunition box (7.62x51mm)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x51
+    proto: CrescentCartridge_762x51
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Fullsize.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_762x51
+  name: "30-round magazine (7.62x51mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_762x51
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x51
+    proto: CrescentCartridge_762x51
+    capacity: 30
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/7.62x51_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: CrescentBoxMagazine_762x51
+  name: "100-round magazine (7.62x51mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentBoxMagazine_762x51
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_762x51
+    proto: CrescentCartridge_762x51
+    capacity: 100
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/7.62x51_Box.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+# 12.7x55
+
+- type: entity
+  id: CrescentCartridge_127x55
+  name: Cartridge (12.7x55mm)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CrescentCartridge_127x55
+  - type: CartridgeAmmo
+    proto: CrescentBullet_127x55
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/12.7x55.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_127x55
+  name: bullet (12.7x55mm)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_127x55
+  name: ammunition box (12.7x55mm)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_127x55
+    proto: CrescentCartridge_127x55
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Fullsize.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_127x55
+  name: "10-round magazine (12.7x55mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_127x55
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_127x55
+    proto: CrescentCartridge_127x55
+    capacity: 10
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/12.7x55_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: CrescentSpeedLoader_127x55
+  name: "Speedloader (12.7x55mm)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: SpeedLoader
+  - type: Tag
+    tags:
+      - CrescentSpeedLoader_127x55
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_127x55
+    proto: CrescentCartridge_127x55
+    capacity: 4
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/12.7x55_SpdLdr.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+# .277
+
+- type: entity
+  id: CrescentCartridge_277
+  name: Cartridge (.277mm)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CrescentCartridge_277
+  - type: CartridgeAmmo
+    proto: CrescentBullet_277
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/.277.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_277
+  name: bullet (.277)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_277
+  name: ammunition box (.277)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_277
+    proto: CrescentCartridge_277
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Fullsize.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_277
+  name: "30-round magazine (.277)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_277
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_277
+    proto: CrescentCartridge_277
+    capacity: 30
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/.277_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+
+# 8.2x60
+
+- type: entity
+  id: CrescentCartridge_82x60
+  name: Cartridge (8.2x60)
+  parent: CrescentBaseCartridge
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CrescentCartridge_82x60
+  - type: CartridgeAmmo
+    proto: CrescentBullet_82x60
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/8.2x60.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: CrescentBullet_82x60
+  name: bullet (8.2x60)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000 # i just hit the juckport
+    harmorPenetration: 30
+    stoppingPower: 4
+
+- type: entity
+  abstract: False
+  parent: CrescentBaseAmmoBox
+  id: CrescentAmmoBox_82x60
+  name: ammunition box (8.2x60)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_82x60
+    proto: CrescentCartridge_82x60
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Boxes/Fullsize.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+
+- type: entity
+  id: CrescentMagazine_82x60
+  name: "5-round magazine (8.2x60)"
+  parent: CrescentBaseMagazine
+  abstract: False
+  components:
+  - type: Tag
+    tags:
+      - CrescentMagazine_82x60
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CrescentCartridge_82x60
+    proto: CrescentCartridge_82x60
+    capacity: 5
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Magazine/8.2x60_Mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false

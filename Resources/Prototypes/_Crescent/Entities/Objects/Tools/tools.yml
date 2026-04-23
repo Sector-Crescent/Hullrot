@@ -28,26 +28,19 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: 0
-    range: 1.5
+    range: 1
     damage:
       types:
         Slash: 10
-        Structural: 5
     heavyDamageBaseModifier: 1
-    heavyStaminaCost: 10
-    heavyRateModifier: 1.25
+    heavyStaminaCost: 1
+    heavyRateModifier: 1
     clickPartDamageMultiplier: 1.5
-    maxTargets: 3
+    maxTargets: 1
     bluntStaminaDamageFactor: 1.5
     angle: 90
     soundHit:
       collection: MetalThud
-  - type: Wieldable
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Slash: 20
-        Structural: 10
   - type: DamageOtherOnHit
     staminaCost: 10
   - type: Tool
@@ -63,20 +56,6 @@
       Steel: 100
   - type: StaticPrice
     price: 30
-  # Shitmed Change
-  - type: Retractor
-    speed: 0.35
-  - type: Hemostat
-    speed: 0.6
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/Items/wirecutter.ogg
-      params:
-        variation: 0.125
-    endSound:
-      path: /Audio/Items/wirecutter.ogg
-      params:
-        variation: 0.125
   - type: Fixtures
     fixtures:
       fix1:
@@ -123,11 +102,10 @@
       state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    range: 1.5
+    range: 1
     damage:
       types:
         Piercing: 10
-        Structural: 5
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
@@ -212,18 +190,19 @@
       state: icon
   - type: Sharp
   - type: MeleeWeapon
+    attackRate: 0.8
     wideAnimationRotation: -135
-    range: 1.5
+    range: 1
     damage:
       types:
-        Blunt: 10
-        Structural: 5
-    heavyDamageBaseModifier: 1
-    heavyStaminaCost: 10
-    heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
-    maxTargets: 3
-    bluntStaminaDamageFactor: 1.5
+        Blunt: 20
+        Structural: 20
+    heavyDamageBaseModifier: 1.2
+    heavyStaminaCost: 20
+    heavyRateModifier: 1
+    clickPartDamageMultiplier: 1
+    maxTargets: 1
+    bluntStaminaDamageFactor: .5
     angle: 90
     soundHit:
       collection: MetalThud
@@ -231,10 +210,9 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 20
-        Structural: 10
-  - type: DamageOtherOnHit
-    staminaCost: 10
+        Blunt: 8
+  # - type: DamageOtherOnHit
+  #   staminaCost: 10
   - type: Tool
     qualities:
       - Anchoring
@@ -293,17 +271,16 @@
       state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    range: 1.5
+    range: 1
     damage:
       types:
         Blunt: 20
-        Structural: 5
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
-    maxTargets: 3
-    bluntStaminaDamageFactor: 1.5
+    clickPartDamageMultiplier: 1
+    maxTargets: 1
+    bluntStaminaDamageFactor: .5
     angle: 90
     soundHit:
       collection: MetalThud
@@ -311,8 +288,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 35
-        Structural: 10
+        Blunt: 5
   - type: DamageOtherOnHit
     staminaCost: 10
   - type: Tool
@@ -380,17 +356,17 @@
       state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    range: 1.5
+    range: 1.2
     damage:
       types:
-        Blunt: 30
+        Blunt: 15
         Structural: 20
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
-    maxTargets: 3
-    bluntStaminaDamageFactor: 1.5
+    clickPartDamageMultiplier: 1
+    maxTargets: 1
+    bluntStaminaDamageFactor: 1
     angle: 90
     soundHit:
       collection: MetalThud
@@ -398,7 +374,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 30
+        Blunt: 10
         Structural: 30
   - type: DamageOtherOnHit
     staminaCost: 10
@@ -468,17 +444,17 @@
       state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    range: 1.5
+    range: 1.2
     damage:
       types:
-        Blunt: 35
+        Blunt: 20
         Structural: 35
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
-    maxTargets: 3
-    bluntStaminaDamageFactor: 1.5
+    clickPartDamageMultiplier: 1
+    maxTargets: 1
+    bluntStaminaDamageFactor: .8
     angle: 90
     soundHit:
       collection: MetalThud
@@ -486,7 +462,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 50
+        Blunt: 10
         Structural: 50
   - type: DamageOtherOnHit
     staminaCost: 10
@@ -547,8 +523,8 @@
       types:
         Blunt: 6
     heavyRateModifier: 2
-    heavyRangeModifier: 1.25
-    heavyDamageBaseModifier: 3
+    heavyRangeModifier: 1
+    heavyDamageBaseModifier: 1
     maxTargets: 1
     angle: 10
   - type: DamageOtherOnHit
@@ -693,7 +669,7 @@
   - type: MeleeWeapon
     wideAnimationRotation: -90
     attackRate: 1.25
-    range: 1.4
+    range: 1
     damage:
       types:
         Piercing: 14
@@ -702,13 +678,6 @@
     angle: 20
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 8
-    staminaCost: 7.5
-    soundHit:
-      collection: MetalThud
   - type: ReverseEngineering # Nyano
     difficulty: 2
     recipes:
@@ -932,18 +901,18 @@
   - type: MeleeWeapon
     wideAnimationRotation: 45
     attackRate: 1
-    range: 1.75
+    range: 1
     damage:
       types:
         Slash: 10
-    bluntStaminaDamageFactor: 2
+    bluntStaminaDamageFactor: 1
     heavyDamageBaseModifier: 1.25
     heavyStaminaCost: 5
     angle: 120
     soundHit:
       collection: MetalThud
-  - type: DamageOtherOnHit
-    staminaCost: 8.5
+  # - type: DamageOtherOnHit
+  #   staminaCost: 8.5
   - type: ThrowingAngle
     angle: 45
   - type: ToolTileCompatible
@@ -987,18 +956,19 @@
   - type: MeleeWeapon
     wideAnimationRotation: 45
     attackRate: 1
-    range: 1.75
+    range: 1.4
     damage:
       types:
         Blunt: 16
-    bluntStaminaDamageFactor: 2
-    heavyDamageBaseModifier: 1.25
-    heavyStaminaCost: 5
+    bluntStaminaDamageFactor: 0.8
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 10
+    maxTargets: 1
     angle: 120
     soundHit:
       collection: MetalThud
-  - type: DamageOtherOnHit
-    staminaCost: 8.5
+  # - type: DamageOtherOnHit
+  #   staminaCost: 8.5
   - type: ThrowingAngle
     angle: 45
   - type: Item
@@ -1069,7 +1039,7 @@
     state: icon
   - type: MeleeWeapon
     attackRate: 1
-    range: 1.6
+    range: 1.4
     wideAnimationRotation: -135
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
@@ -1077,21 +1047,21 @@
         volume: -3
     damage:
       types:
-        Blunt: 5
         Piercing: 20
         Structural: 10
-    bluntStaminaDamageFactor: 2.0
     heavyDamageBaseModifier: 1.25
-    maxTargets: 5
+    heavyStaminaCost: 25
+    heavyRateModifier: 1
+    maxTargets: 1
     angle: 80
-  - type: DamageOtherOnHit
-    staminaCost: 5
+  # - type: DamageOtherOnHit
+  #   staminaCost: 5
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
         Blunt: 5
-        Piercing: 20 # hullrot change, +20 piercing damage when wielded. fun.
+        Piercing: 10 # hullrot change, +20 piercing damage when wielded. fun.
         Structural: 20
   - type: Item
     size: Normal
@@ -1145,21 +1115,18 @@
   - type: MeleeWeapon
     wideAnimationRotation: 90
     attackRate: 1
-    range: 1.65
+    range: 1
     damage:
       types:
         Blunt: 20
         Slash: 8
-    bluntStaminaDamageFactor: 2.0
-    heavyRateModifier: 1.75
-    heavyDamageBaseModifier: 1.5
+    heavyRateModifier: 1
+    heavyDamageBaseModifier: 1
     heavyStaminaCost: 2.5
     maxTargets: 1
     angle: 20
     soundHit:
       collection: MetalThud
-  - type: DamageOtherOnHit
-    staminaCost: 7
   - type: ThrowingAngle
     angle: 90
   - type: ReverseEngineering # Delta
@@ -1213,9 +1180,9 @@
     damage:
       types:
         Blunt: 10
-    bluntStaminaDamageFactor: 2.5
-    heavyRateModifier: 2
-    heavyRangeModifier: 1.2
+    bluntStaminaDamageFactor: 1
+    heavyRateModifier: 1
+    heavyRangeModifier: 1
     heavyDamageBaseModifier: 1.25
     maxTargets: 1
     angle: 20
@@ -1259,17 +1226,16 @@
   - type: MeleeWeapon
     wideAnimationRotation: 0
     attackRate: 0.2
-    range: 1.5
+    range: 1
     damage:
       types:
-        Slash: 10
+        Slash: 25
         Structural: 20
     heavyDamageBaseModifier: 1
-    heavyStaminaCost: 2
+    heavyStaminaCost: 5
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
-    maxTargets: 3
-    bluntStaminaDamageFactor: 1.5
+    clickPartDamageMultiplier: 1
+    maxTargets: 1
     angle: 90
     soundHit:
       path: /Audio/Items/drill_hit.ogg
@@ -1277,10 +1243,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Slash: 20
         Structural: 30
-  - type: DamageOtherOnHit
-    staminaCost: 10
   - type: Tool
     qualities:
       - Cutting
@@ -1334,18 +1297,17 @@
   - type: MeleeWeapon
     attackRate: 1.5 #2 seconds
     wideAnimationRotation: 0
-    range: 3
+    range: 1.2
     damage:
       types:
         Blunt: 25
-        Structural: 200
+        Structural: 100
     heavyDamageBaseModifier: 1
-    heavyStaminaCost: 1
+    heavyStaminaCost: 35
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
     maxTargets: 3
     bluntStaminaDamageFactor: 1.5
-    angle: 90
+    angle: 50
     soundHit:
       path: /Audio/_Crescent/Weapons/Jackhammerhit01.ogg
     animation: WeaponArcThrust
@@ -1419,7 +1381,7 @@
       collection: MetalThud
     activatedDamage:
         types:
-            Heat: 9
+            Heat: 15
   - type: ItemToggleDamageOtherOnHit
     activatedDamage:
       types:
@@ -1457,8 +1419,8 @@
       Welder:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 100
-        maxVol: 100
+          Quantity: 200
+        maxVol: 200
   - type: Tool
     speedModifier: 2
     useSound:
@@ -1608,8 +1570,8 @@
       Welder:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 50
-        maxVol: 50
+          Quantity: 100
+        maxVol: 100
   - type: Tool
     speedModifier: 2
     useSound:
