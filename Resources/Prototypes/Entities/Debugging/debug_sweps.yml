@@ -129,3 +129,29 @@
     damage:
       types:
         Blunt: 200
+
+- type: entity
+  name: Structura stick 200dmg
+  parent: MeleeDebugGib
+  id: StructuralDebug200
+  components:
+  - type: Tag
+    tags:
+    - Debug
+  - type: MeleeWeapon
+    damage:
+      types:
+        Structural: 200
+
+- type: entity
+  name: Structura stick  2000dmg
+  parent: MeleeDebugGib
+  id: StructuralDebug2000
+  components:
+  - type: Tag
+    tags:
+    - Debug
+  - type: MeleeWeapon
+    damage:
+      types:
+        Structural: 2000

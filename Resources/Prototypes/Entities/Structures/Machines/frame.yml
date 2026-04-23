@@ -37,7 +37,7 @@
         machine_board: !type:Container
         machine_parts: !type:Container
     - type: Damageable
-      damageContainer: Inorganic
+      damageContainer: StructuralInorganic
       damageModifierSet: Metallic
     - type: Destructible
       thresholds:
@@ -92,7 +92,7 @@
         - machine_board
         - machine_parts
     - type: Damageable
-      damageContainer: Inorganic
+      damageContainer: StructuralInorganic
       damageModifierSet: Metallic
     - type: Destructible
       thresholds:
@@ -141,7 +141,7 @@
       graph: Machine
       node: destroyedMachineFrame
     - type: Damageable
-      damageContainer: Inorganic
+      damageContainer: StructuralInorganic
       damageModifierSet: Metallic
     - type: Destructible
       thresholds:
@@ -151,9 +151,9 @@
         behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
-            SheetSteel1:
-              min: 1
-              max: 3
+            ScrapCircuit1:
+              min: 4
+              max: 6
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite

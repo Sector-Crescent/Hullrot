@@ -374,6 +374,67 @@
 
 - type: entity
   parent: BaseTurretShipgun
+  id: WeaponTurretBreakersaw
+  suffix: Medium Laser
+  name: 350cc 'Breaker' Burst Laser
+  description: A modified medium high energy weapon designed to destroy halls for salvaging.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi
+    drawdepth: Mobs
+    layers:
+    - state: absolution
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      # TODO: Construction graph
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Gun
+    fireOnDropChance: 0
+    projectileSpeed: 20
+    burstFireRate: 20 #6.67 effective RPS
+    burstCooldown: 1
+    shotsPerBurst: 20
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    angleDecay: 0
+    minAngle: 0.1
+    maxAngle: 0.25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
+      params:
+        variation: 0.12
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.125
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        pitch: 1.5
+        variation: 0.08
+  - type: BasicEntityAmmoProvider
+    proto: BulletBreaker
+    capacity: 120
+    count: 120
+  - type: ApcPowerReceiver
+    powerLoad: 4000
+  - type: HardpointAnchorableOnly
+    class: Energy
+    size: Medium
+
+- type: entity
+  parent: BaseTurretShipgun
   id: WeaponTurretAbsolutionNavy
   suffix: Medium Laser, Navy
   name: Navy 350cc 'Absolution' Burst Laser

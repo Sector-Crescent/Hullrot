@@ -72,8 +72,19 @@
   - StoreCategorySAWGuns
 
 - type: listing
+  id: StoreListing350cc
+  name: 350cc 'Breaker' Burst Laser
+  description: An optimized high energy weapon designed to destroy hull for medium ballistic hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Laser/absolution.rsi, state: absolution}
+  productEntity: BaseWeaponTurretBreakerFlatpack
+  cost:
+    ScrapSAW: 45
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
   id: StoreListing90mmcannon
-  name: 90mm 'Resolute' tri-barreled repeater cannon flatpack (DO NOT WORK, SORRY)
+  name: 90mm 'Resolute' tri-barreled repeater cannon flatpack
   description: A large machine gun for large hardpoints.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi, state: repeater }
   productEntity: WeaponTurretLargeMachinegunFlatpack

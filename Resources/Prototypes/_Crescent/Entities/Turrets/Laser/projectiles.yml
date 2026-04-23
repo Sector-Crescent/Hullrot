@@ -146,6 +146,33 @@
       - state: laser
 
 - type: entity
+  id: BulletBreaker
+  name: focused hardlight bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectilePhasePrevent
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Structural: 500
+  - type: ProjectileIFF
+    visualType: Circle
+    color: Red
+  - type: PointLight
+    radius: 3.5
+    color: blue
+    energy: 0.5
+  - type: TimedDespawn
+    lifetime: 4 #800m
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
+    layers:
+    - state: laser
+
+- type: entity
   id: BulletDamnation
   name: heavy hardlight bolt
   parent: BaseBulletTrigger

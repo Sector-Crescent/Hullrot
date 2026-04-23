@@ -5,6 +5,7 @@
     Slash: 0.5
     Piercing: 0.7
     Shock: 1.2
+    Structural: 1.0
   flatReductions:
     Blunt: 5
     Heat: 5
@@ -69,6 +70,7 @@
     Blunt: 2
     Piercing: 0.2
     Shock: 0.6
+    Structural: 2
   flatReductions:
     Piercing: 10
 
@@ -81,6 +83,7 @@
     Piercing: 0.7
     Shock: 2
     Heat: 3
+    Structural: 1
 
 # Like metallic, but without flat reduction so it can be damaged with fists.
 - type: damageModifierSet
@@ -90,6 +93,7 @@
     Slash: 0.5
     Piercing: 0.7
     Shock: 1.2
+    Structural: 1
 
 # Like metallic but very strong to resist most all basic tools and weapons.
 - type: damageModifierSet
@@ -99,6 +103,7 @@
     Slash: 0.5
     Piercing: 0.7
     Shock: 1.2
+    Structural: 1
   flatReductions:
     Blunt: 10
     Slash: 10
@@ -113,6 +118,7 @@
     Piercing: 2.0
     Heat: 0.5
     Shock: 0
+    Structural: 1
   flatReductions:
     Blunt: 5
 
@@ -124,6 +130,7 @@
     Piercing: 1.0
     Heat: 0.8
     Shock: 0 #glass is an insulator!
+    Structural: 1
   flatReductions:
     Slash: 5
     Piercing: 5
@@ -153,6 +160,7 @@
     Slash: 2.0
     Piercing: 1.0
     Heat: 2.0
+    Structural: 1
   flatReductions:
     Blunt: 5
 

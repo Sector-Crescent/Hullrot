@@ -39,7 +39,7 @@
           sprite: Structures/Machines/computers.rsi
           state: generic_keys
     - type: Damageable
-      damageContainer: Inorganic
+      damageContainer: StructuralInorganic
       damageModifierSet: Electronic
     - type: Destructible
       thresholds:
@@ -49,12 +49,9 @@
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
-                ScrapPlasma:
-                  min: 1
-                  max: 1
-                SteelScrap1:
-                  min: 1
-                  max: 1
+                ScrapCircuit1:
+                  min: 4
+                  max: 6
             - !type:PlaySoundBehavior
               sound:
                 collection: GlassBreak
