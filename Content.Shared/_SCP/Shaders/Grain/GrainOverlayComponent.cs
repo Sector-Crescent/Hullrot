@@ -14,7 +14,7 @@ public sealed partial class GrainOverlayComponent : Component, IShaderStrength
     /// Максимальные и минимальные значения базовой силы шейдера зернистости.
     /// Эти пороги используются для настроек клиента и позволяет выбрать доступный диапазон
     /// </summary>
-    public static readonly MinMaxExtended BaseStrengthLimit = new (70, 140);
+    public static readonly MinMaxExtended BaseStrengthLimit = new (200, 400);
 
     /// <inheritdoc/>
     [ViewVariables]

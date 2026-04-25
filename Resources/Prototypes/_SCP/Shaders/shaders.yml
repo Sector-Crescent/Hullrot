@@ -1,14 +1,4 @@
 - type: shader
-  id: BlinkingEffect
-  kind: source
-  path: "/Textures/_Scp/Shaders/blinking_effect.swsl"
-
-- type: shader
-  id: Hide
-  kind: source
-  path: "/Textures/_Scp/Shaders/hide.swsl"
-
-- type: shader
   id: CRT_VHS
   kind: source
   path: "/Textures/_Scp/Shaders/crt_vhs.swsl"
@@ -26,49 +16,12 @@
   path: "/Textures/_Scp/Shaders/vignette.swsl"
 
 - type: shader
-  id: Warping
-  kind: source
-  path: "/Textures/_Scp/Shaders/warping.swsl"
-
-- type: shader
-  id: Portal
-  kind: source
-  path: "/Textures/_Scp/Shaders/portal.swsl"
-
-- type: shader
   id: HighlightWave
   kind: source
   path: "/Textures/_Scp/Shaders/highlight_wave.swsl"
-
-- type: shader
-  id: Viewcone
-  kind: source
-  path: "/Textures/_Scp/Shaders/viewcone.swsl"
 
 - type: shader
   id: LightingOverlay
   kind: source
   path: "/Textures/_Scp/Shaders/light.swsl"
 
-- type: shader
-  id: Scp096Rage
-  kind: source
-  path: "/Textures/_Scp/Shaders/scp096_rage.swsl"
-
-- type: shader
-  id: Scp096Static
-  kind: source
-  path: "/Textures/_Scp/Shaders/scp096_static.swsl"
-  params:
-    abber: 0.0
-    strength: 0.6
-    settings_scale: 1.0
-
-- type: shader
-  id: Scp096WithoutFace
-  kind: source
-  path: "/Textures/_Scp/Shaders/scp096_static.swsl"
-  params:
-    abber: 0.0015
-    strength: 0.85
-    settings_scale: 1.0

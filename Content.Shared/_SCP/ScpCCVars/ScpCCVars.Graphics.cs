@@ -19,7 +19,7 @@ public sealed partial class ScpCCVars
     /// Сила шейдера зернистости
     /// </summary>
     public static readonly CVarDef<int> GrainStrength =
-        CVarDef.Create("shader.grain_strength", 70, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("shader.grain_strength", 200, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// Выключен ли шейдер SinCity?
