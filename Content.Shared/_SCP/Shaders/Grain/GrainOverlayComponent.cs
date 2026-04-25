@@ -18,10 +18,13 @@ public sealed partial class GrainOverlayComponent : Component, IShaderStrength
 
     /// <inheritdoc/>
     [ViewVariables]
+    private float _baseStrength;
+
+    [ViewVariables]
     public float BaseStrength
     {
-        get;
-        set => field = Math.Clamp(value, BaseStrengthLimit.Min, BaseStrengthLimit.Max);
+        get => _baseStrength;
+        set => _baseStrength = Math.Clamp(value, BaseStrengthLimit.Min, BaseStrengthLimit.Max);
     }
 
     /// <inheritdoc/>

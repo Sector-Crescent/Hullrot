@@ -20,13 +20,15 @@ public sealed partial class SinCityOverlayComponent : Component, IShaderStrength
     /// </summary>
     public static readonly MinMaxExtended BaseStrengthLimit = new (50, 150);
 
+    private float _baseStrength = DefaultBaseStrength;
+
     /// <inheritdoc/>
     [ViewVariables]
     public float BaseStrength
     {
-        get;
-        set => field = Math.Clamp(value, BaseStrengthLimit.Min, BaseStrengthLimit.Max);
-    } = DefaultBaseStrength;
+        get => _baseStrength;
+        set => _baseStrength = Math.Clamp(value, BaseStrengthLimit.Min, BaseStrengthLimit.Max);
+    }
 
     /// <inheritdoc/>
     [AutoNetworkedField, ViewVariables]
