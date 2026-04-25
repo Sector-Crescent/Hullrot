@@ -1,0 +1,17 @@
+﻿- type: entity
+  id: ScpEffectNightVision
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    color: "#D6E4FF"
+    energy: 0.8
+    radius: 20
+    softness: 20
+
+- type: entity
+  id: ScpEffectNightVisionScp939
+  parent: ScpEffectNightVision
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    color: "#ff5a5a"

@@ -1,0 +1,31 @@
+﻿uniform sampler2D SCREEN_TEXTURE;
+
+// Скорость движения волны.
+const highp float waveSpeed = 4.0;
+
+// Сколько волн появляется на спрайте одновременно (частота).
+const highp float waveFrequency = 1.0;
+
+// Степень, применяемая к волне. Контролирует резкость/ширину подсветки.
+const highp float waveSharpness = 5.0;
+
+// Цвет волны подсветки.
+const lowp vec3 highlightColor = vec3(1.0, 0.2, 0.2);
+
+// Насколько сильно цвет подсветки добавляется к базовому цвету.
+const highp float highlightIntensity = 0.8;
+
+void fragment() {
+    highp vec4 baseColor = texture(SCREEN_TEXTURE, UV);
+
+    if (baseColor.a < 0.01) {
+        COLOR = baseColor;
+        return;
+    }
+
+    highp float wave = (sin(UV.y * waveFrequency - TIME * waveSpeed) + 1.0) / 2.0;
+    highp float band = pow(wave, waveSharpness);
+    highp vec3 finalColor = baseColor.rgb + (highlightColor * band * highlightIntensity);
+
+    COLOR = vec4(finalColor, baseColor.a);
+}

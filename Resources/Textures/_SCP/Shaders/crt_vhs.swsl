@@ -1,0 +1,69 @@
+﻿const lowp float SCANLINES_OPACITY = 0.9;
+const lowp float SCANLINES_WIDTH = 0.8;
+const lowp float GRILLE_OPACITY = 0.3;
+const lowp vec2 RESOLUTION = vec2(640.0, 480.0);
+const bool PIXELATE = true;
+
+const lowp float NOISE_OPACITY = 0.4;
+const lowp float NOISE_SPEED = 5.0;
+const lowp float STATIC_NOISE_INTENSITY = 0.02;
+const lowp float ABERRATION = 0.02;
+const lowp float BRIGHTNESS = 1.0;
+
+const lowp float WARP_AMOUNT = 1.0;
+const lowp float VIGNETTE_INTENSITY = 0.2;
+const lowp float VIGNETTE_OPACITY = 7.0;
+
+uniform sampler2D SCREEN_TEXTURE;
+const lowp float PI = 3.14159265359;
+
+lowp float rand(lowp vec2 co) {
+    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+lowp vec2 warp(lowp vec2 uv) {
+    lowp vec2 delta = uv - 0.5;
+    lowp float delta2 = dot(delta, delta);
+    lowp float delta4 = delta2 * delta2;
+    lowp float delta_offset = delta4 * WARP_AMOUNT;
+    return uv + delta * delta_offset;
+}
+
+lowp float vignette(lowp vec2 uv) {
+    uv *= 1.0 - uv.xy;
+    lowp float v = uv.x * uv.y * 15.0;
+    return pow(v, VIGNETTE_INTENSITY * VIGNETTE_OPACITY);
+}
+
+lowp float scanlines(lowp vec2 uv) {
+    lowp float lines = abs(sin(uv.y * RESOLUTION.y * PI * SCANLINES_WIDTH));
+    return 1.0 - lines * SCANLINES_OPACITY;
+}
+
+lowp float grille(lowp vec2 uv) {
+    lowp float dots = abs(sin(uv.x * RESOLUTION.x * PI * 0.7));
+    return 1.0 - dots * GRILLE_OPACITY;
+}
+
+void fragment() {
+    lowp vec2 uv = warp(UV);
+    lowp vec2 text_uv = PIXELATE ? ceil(uv * RESOLUTION) / RESOLUTION : uv;
+
+    lowp vec2 aberration_offset = vec2(ABERRATION * 0.1, 0.0);
+
+    lowp vec4 color_center = texture(SCREEN_TEXTURE, text_uv);
+    lowp vec4 color_left = texture(SCREEN_TEXTURE, text_uv - aberration_offset);
+    lowp vec4 color_right = texture(SCREEN_TEXTURE, text_uv + aberration_offset);
+
+    lowp vec4 text = vec4(color_right.r, color_left.g, color_center.b, color_center.a);
+
+    lowp float static_noise = rand(uv + vec2(TIME * NOISE_SPEED, 0.0)) * STATIC_NOISE_INTENSITY;
+    text.rgb += vec3(static_noise) * NOISE_OPACITY;
+
+    text.rgb *= scanlines(uv);
+    text.rgb *= grille(uv);
+    text.rgb *= vignette(uv);
+    text.rgb *= BRIGHTNESS;
+
+    COLOR = text;
+}

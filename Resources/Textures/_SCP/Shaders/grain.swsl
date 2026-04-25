@@ -1,0 +1,29 @@
+﻿/*
+* File: grain.swsl
+* Author: rhailrake
+* Description: Shader for adding a grain effect to the screen.
+* License: MIT.
+*/
+// Modified by ThereDrD
+
+light_mode unshaded;
+
+uniform sampler2D SCREEN_TEXTURE;
+uniform lowp float strength;
+
+mediump float hash12(mediump vec2 p) {
+    p = fract(p * vec2(443.897, 397.297));
+    p += dot(p, p + 19.19);
+    return fract(p.x * p.y);
+}
+
+void fragment()
+{
+    mediump vec4 color = texture(SCREEN_TEXTURE, UV);
+
+    mediump float grain = hash12(UV * 10.1 + fract(TIME * vec2(1.137, 0.373))) - 0.5;
+
+    color *= (1.0 - grain * (strength / 100.0));
+
+    COLOR = color;
+}

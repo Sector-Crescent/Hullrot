@@ -1,0 +1,12 @@
+﻿light_mode unshaded;
+
+uniform sampler2D SCREEN_TEXTURE;
+uniform highp float visibility; // number between 0 and 1
+
+void fragment() {
+
+    highp vec4 sprite = zTexture(UV);
+
+    highp float alphaThreshold = step(0.01, sprite.a);
+    COLOR = vec4(sprite.rgb, visibility * alphaThreshold);
+}

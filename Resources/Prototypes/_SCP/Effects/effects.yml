@@ -1,0 +1,14 @@
+﻿- type: entity
+  id: ScpBlindnessEffect
+  name: blindness effect
+  suffix: 7 seconds
+  components:
+  - type: Transform
+  - type: TriggerOnSpawn
+  - type: BlindOnTrigger
+    time: 7
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+    predicted: true
+  - type: TimedDespawn
+    lifetime: 1

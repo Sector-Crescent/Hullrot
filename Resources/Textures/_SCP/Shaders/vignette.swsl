@@ -1,0 +1,21 @@
+﻿uniform sampler2D SCREEN_TEXTURE;
+uniform lowp vec4 vignette_color;
+
+uniform highp float effect_overall_strength;
+
+const highp float inner_radius = 0.01;
+const highp float outer_radius = 1.0;
+const highp float BASE_VIGNETTE_STRENGTH = 0.014;
+const highp float BASE_DITHER_STRENGTH = 0.002;
+
+void fragment() {
+    highp float dist = distance(UV, vec2(0.5));
+
+    highp float actual_vignette_strength = BASE_VIGNETTE_STRENGTH * effect_overall_strength;
+    highp float actual_dither_strength = BASE_DITHER_STRENGTH * effect_overall_strength;
+
+    highp float vignette = smoothstep(inner_radius, outer_radius, dist) * actual_vignette_strength;
+    highp float dither = fract(sin(dot(UV, vec2(12.9898, 78.233))) * 43758.5453123) * actual_dither_strength;
+
+    COLOR = vec4(vignette_color.rgb, vignette + dither);
+}
