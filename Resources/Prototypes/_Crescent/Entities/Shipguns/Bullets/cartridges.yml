@@ -18,6 +18,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+  - type: SelfDeleteInSpace # related to some chicanery
+    retryDelay: 5
 
 #mortar cartridge
 

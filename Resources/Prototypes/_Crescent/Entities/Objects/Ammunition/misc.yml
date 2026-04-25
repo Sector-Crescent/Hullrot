@@ -62,3 +62,41 @@
     - type: Tag
       tags:
         - HideContextMenu
+
+- type: entity
+  id: BulletCausticPus
+  name: pus globule
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Caustic: 18
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Projectiles/xeno_toxic.rsi
+      layers:
+        - state: xeno_toxic
+    - type: Ammo
+      muzzleFlash: null
+
+- type: entity
+  id: BulletCausticPusSpread
+  name: pus globule
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Caustic: 8
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Projectiles/xeno_toxic.rsi
+      layers:
+        - state: xeno_toxic
+    - type: Ammo
+      muzzleFlash: null
+    - type: ProjectileSpread
+      proto: BulletCausticPusSpread
+      count: 5
+      spread: 15

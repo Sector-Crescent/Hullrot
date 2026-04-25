@@ -1,0 +1,243 @@
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Low Odds, No Elites
+  id: FleshbeastPossibleSpawnLowNoElite
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.33
+#      rarePrototypes:
+#       - MobCrescentFleshbeastRunnerElite
+#       - MobCrescentFleshbeastSpitterElite
+#       - MobCrescentFleshbeastTankElite
+#      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Low Odds
+  id: FleshbeastPossibleSpawnLow
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.33
+      rarePrototypes:
+        - MobCrescentFleshbeastRunnerElite
+        - MobCrescentFleshbeastSpitterElite
+        - MobCrescentFleshbeastTankElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Medium Odds, No Elites
+  id: FleshbeastPossibleSpawnMediumNoElite
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.50
+#     rarePrototypes:
+#       - MobCrescentFleshbeastRunnerElite
+#       - MobCrescentFleshbeastSpitterElite
+#       - MobCrescentFleshbeastTankElite
+#     rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Medium Odds
+  id: FleshbeastPossibleSpawnMedium
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.50
+      rarePrototypes:
+        - MobCrescentFleshbeastRunnerElite
+        - MobCrescentFleshbeastSpitterElite
+        - MobCrescentFleshbeastTankElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: High Odds, No Elites
+  id: FleshbeastPossibleSpawnHighNoElite
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.80
+#     rarePrototypes:
+#       - MobCrescentFleshbeastRunnerElite
+#       - MobCrescentFleshbeastSpitterElite
+#       - MobCrescentFleshbeastTankElite
+#     rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: High Odds
+  id: FleshbeastPossibleSpawnHigh
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      chance: 0.80
+      rarePrototypes:
+        - MobCrescentFleshbeastRunnerElite
+        - MobCrescentFleshbeastSpitterElite
+        - MobCrescentFleshbeastTankElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Guaranteed, No Elites
+  id: FleshbeastRandomSpawnerNoElite
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+#     rarePrototypes:
+#       - MobCrescentFleshbeastRunnerElite
+#       - MobCrescentFleshbeastSpitterElite
+#       - MobCrescentFleshbeastTankElite
+#     rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Random Spawner
+  suffix: Guaranteed
+  id: FleshbeastRandomSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+          state: icon
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+        - MobCrescentFleshbeastSpitter
+        - MobCrescentFleshbeastTank
+      rarePrototypes:
+        - MobCrescentFleshbeastRunnerElite
+        - MobCrescentFleshbeastSpitterElite
+        - MobCrescentFleshbeastTankElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Runner Spawner
+  id: FleshbeastRunnerSpawn
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Mobs/Hostiles/Fogbeasts/fleshbeast.rsi
+          state: runner
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastRunner
+      rarePrototypes:
+        - MobCrescentFleshbeastRunnerElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Spitter Spawner
+  id: FleshbeastSpitterSpawn
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Mobs/Hostiles/Fogbeasts/fleshbeast.rsi
+          state: spitter
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastSpitter
+      rarePrototypes:
+        - MobCrescentFleshbeastSpitterElite
+      rareChance: 0.12
+
+- type: entity
+  name: Fleshbeast Tank Spawner
+  id: FleshbeastTankSpawn
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: _Crescent/Mobs/Hostiles/Fogbeasts/fleshbeast.rsi
+          state: tank
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+        - MobCrescentFleshbeastTank
+      rarePrototypes:
+        - MobCrescentFleshbeastTankElite
+      rareChance: 0.12

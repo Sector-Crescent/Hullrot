@@ -25,3 +25,17 @@
       - id: CrescentWirecutter
       - id: CrescentWelder
       - id: CrescentMultitool
+
+- type: entity
+  id: ClothingBeltSalvageWebbingCrescentFilled
+  parent: ClothingBeltSalvageWebbing
+  suffix: Crescent, Engineering
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrescentCrowbar
+      - id: CrescentWrench
+      - id: CrescentScrewdriver
+      - id: CrescentWirecutter
+      - id: CrescentWelder
+      - id: CrescentMultitool

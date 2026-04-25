@@ -765,3 +765,28 @@
       - HG13M2MiniHandgrenade
       - SHIHG3TearGasHandgrenade
       - GrenadeSHIHG17Smart
+
+- type: entity
+  name: Rupturing Pus Nodule
+  description: Oh... Oh no...
+  parent: GrenadeBase
+  id: FleshbeastDeathrattleGasBomb
+  components:
+  - type: TriggerOnSpawn
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Grenades/fleshbeast_pus_bomb.rsi
+  - type: SmokeOnTrigger
+    duration: 13
+    spreadAmount: 40
+    solution:
+      reagents:
+      - ReagentId: FleshbeastAcid
+        Quantity: 60
+  - type: SoundOnTrigger
+    sound: /Audio/_Crescent/Weapons/Grenades/smoke10s.ogg
+  - type: DeleteOnTrigger
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: SmokeGrenadeSFX

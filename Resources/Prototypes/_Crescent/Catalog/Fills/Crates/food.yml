@@ -12,3 +12,48 @@
       amount: 20
     - id: DrinkWaterBottleFull
       amount: 10
+
+#DSM RATION
+- type: entity
+  id: CrateFoodRationDSM
+  parent: CratePlastic
+  name: Imperial Army/Navy Ration Case
+  description: A case of 12 Imperial produced rations, ready to eat right out of the pouches. Contents may vary. Also contains 12 bottles of water, convenient!
+  components:
+  - type: StorageFill
+    contents:
+    - id: DsmRationPack
+      amount: 12
+    - id: DrinkWaterBottleFull
+      amount: 12
+
+#NCWL RATION
+- type: entity
+  id: CrateFoodRationNCWL
+  parent: CratePlastic
+  name: Worker's Homeguard Ration Case
+  description: A case of 8 Homeguard rations, produced in one of the biodomes in Malpais. Contents may vary. Also contains 8 bottles of water, convenient!
+  components: 
+  - type: StorageFill
+    contents:
+    - id: NcwlRationPack
+      amount: 8
+    - id: DrinkWaterBottleFull
+      amount: 8
+
+
+#GENERIC RATION
+- type: entity
+  id: CrateFoodRationGeneric
+  parent: CratePlastic
+  name: Aftermarket Ration Case
+  description: A plastic crate, containing a variety of rations. The top of the crate has a piece of tape on it, which has, "FOOD + WATER!!", scrawled on it with permanent marker. You hope these aren't expired, or worse.
+  components:
+  - type: StorageFill
+    contents:
+    - id: DsmRationPack
+      amount: 5
+    - id: NcwlRationPack
+      amount: 5
+    - id: DrinkWaterBottleFull
+      amount: 10

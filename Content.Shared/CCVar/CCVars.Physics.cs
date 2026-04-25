@@ -11,10 +11,10 @@ public sealed partial class CCVars
         CVarDef.Create("physics.relative_movement", true, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> TileFrictionModifier =
-        CVarDef.Create("physics.tile_friction", 40.0f, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("physics.tile_friction", 60.0f, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> StopSpeed =
-        CVarDef.Create("physics.stop_speed", 0.1f, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("physics.stop_speed", 0.3f, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     Whether mobs can push objects like lockers.

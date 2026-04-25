@@ -20,9 +20,10 @@
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.2
-    clickPartDamageMultiplier: 1.25
-    lightRangeModifier: 1.15
-    maxTargets: 4
+    clickPartDamageMultiplier: 1
+    lightRangeModifier: 1
+    maxTargets: 1
+    angle: 45
   - type: Reflect
     reflectProb: .75
     spread: 75
@@ -87,6 +88,28 @@
     state: icon
   - type: Item
     sprite: _Crescent/Objects/Weapons/Melee/machete.rsi
+  - type: MeleeWeapon
+    attackRate: 0.85
+    wideAnimationRotation: -135
+    heavyDamageBaseModifier: 1
+    heavyStaminaCost: 8
+    heavyRateModifier: 1
+    clickPartDamageMultiplier: 1
+    lightRangeModifier: 1.25
+    maxTargets: 1
+    range: 1
+    damage:
+      types:
+        Slash: 34
+    angle: 80
+  - type: DamageOtherOnHit
+    staminaCost: 5
+  - type: EmbeddableProjectile
+  - type: EmbedPassiveDamage
+  - type: ThrowingAngle
+    angle: 225
+  - type: DisarmMalus
+
 
 - type: entity
   name: noble's rapier
@@ -104,14 +127,13 @@
     attackRate: 1.15
     damage:
       types:
-        Slash: 18
-        Piercing: 22
+        Piercing: 50
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.13
-    clickPartDamageMultiplier: 1.5
+    clickPartDamageMultiplier: 1
     lightRangeModifier: 1.15
-    maxTargets: 3
+    maxTargets: 1
     angle: 0.1
     animation: WeaponArcThrust
     soundHit:
@@ -151,19 +173,17 @@
     range: 1.4
     damage:
       types:
-        Slash: 36
+        Slash: 45
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 8
     heavyRateModifier: 1.15
     clickPartDamageMultiplier: 1.75
     lightRangeModifier: 1.15
-    maxTargets: 4
+    maxTargets: 2
+    angle: 60
     animation: WeaponArcThrust
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
-  - type: Reflect
-    reflectProb: .1
-    spread: 90
   - type: Item
     size: Normal
     shape:
@@ -229,7 +249,8 @@
     clickPartDamageMultiplier: 1.25
     lightRangeModifier: 1.2
     bluntStaminaDamageFactor: 1.25
-    maxTargets: 2
+    maxTargets: 1
+    angle: 30
     soundHit:
       collection: MetalThud
   - type: DamageOtherOnHit
@@ -276,17 +297,18 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -90
-    range: 1.25
+    range: 1.5
     attackRate: 1
     damage:
       types:
-        Slash: 36
+        Slash: 45
     heavyDamageBaseModifier: 1
-    heavyStaminaCost: 10
+    heavyStaminaCost: 5
     heavyRateModifier: 1.15
-    clickPartDamageMultiplier: 1.5
+    clickPartDamageMultiplier: 2
     lightRangeModifier: 1.2
-    maxTargets: 3
+    maxTargets: 2
+    angle: 60
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: ThrowingAngle
@@ -324,6 +346,8 @@
   - type: MeleeWeapon
     wideAnimationRotation: -90
     attackRate: 0.75
+    range: 1.5
+    maxTargets: 1
     damage:
       types:
         Slash: 42 #Direct counter to vibro and has same damage as the double esword
@@ -370,7 +394,7 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: 90
-    attackRate: 1
+    attackRate: .8
     range: 1.4
     damage:
       types:
@@ -378,9 +402,10 @@
     heavyDamageBaseModifier: 1
     heavyStaminaCost: 10
     heavyRateModifier: 1.25
-    clickPartDamageMultiplier: 1.5
+    clickPartDamageMultiplier: 2
     lightRangeModifier: 1.15
     maxTargets: 3
+    angle: 90
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
@@ -414,7 +439,7 @@
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: -45
-    range: 1.4
+    range: 1
     attackRate: 1
     damage:
       types:
@@ -426,7 +451,8 @@
     heavyRateModifier: 1.2
     clickPartDamageMultiplier: 1.25
     lightRangeModifier: 1.15
-    maxTargets: 3
+    maxTargets: 1
+    angle: 45
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
   - type: LandAtCursor
@@ -472,31 +498,21 @@
     range: 2
     damage:
       types:
-        Slash: 15 # es heist das ZWEI hander, hanz # LARP
+        Slash: 75 # es heist das ZWEI hander, hanz # LARP
     heavyDamageBaseModifier: 0.8
-    heavyStaminaCost: 20
+    heavyStaminaCost: 45
     heavyRateModifier: 1.167 # 1.75 attack rate with 1.5 base
     clickPartDamageMultiplier: 1.2 # Any higher and it oblitorates limbs
-    maxTargets: 3
+    maxTargets: 5
     angle: 100
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Slash: 55
-        Piercing: 20
-    staminaCost: 50
   - type: ThrowingAngle
     angle: 225
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
   - type: EmbedPassiveDamage
   - type: Wieldable
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Slash: 75
   - type: Item
     size: Ginormous
   - type: Clothing
@@ -512,8 +528,6 @@
   - type: Prying
   - type: UseDelay
     delay: 1
-  - type: Scalpel
-    speed: 0.3
   - type: BoneSaw
     speed: 0.5
   - type: SurgeryTool

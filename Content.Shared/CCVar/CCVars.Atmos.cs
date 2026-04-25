@@ -132,7 +132,7 @@ public sealed partial class CCVars
     ///     Atmos tickrate in TPS. Atmos processing will happen every 1/TPS seconds.
     /// </summary>
     public static readonly CVarDef<float> AtmosTickRate =
-        CVarDef.Create("atmos.tickrate", 10f, CVar.SERVERONLY);
+        CVarDef.Create("atmos.tickrate", 5f, CVar.SERVERONLY);
 
     /// <summary>
     ///     Scale factor for how fast things happen in our atmosphere

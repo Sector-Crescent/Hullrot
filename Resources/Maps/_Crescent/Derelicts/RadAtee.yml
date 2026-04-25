@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 260.2.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/04/2025 21:15:05
-  entityCount: 852
+  time: 04/23/2026 02:13:04
+  entityCount: 856
 maps: []
 grids:
 - 1
@@ -163,6 +163,10 @@ entities:
             785: 1,3
             838: 0,-7
             846: 0,-2
+            918: 0,1
+            927: 1,3
+            980: 0,-7
+            988: 0,-2
         - node:
             zIndex: 1
             angle: -3.141592653589793 rad
@@ -191,6 +195,10 @@ entities:
             835: 0,-8
             841: 0,-5
             852: 1,-10
+            915: 0,0
+            977: 0,-8
+            983: 0,-5
+            994: 1,-10
         - node:
             zIndex: 1
             angle: -1.5707963267948966 rad
@@ -213,6 +221,9 @@ entities:
             788: 2,0
             863: 2,-10
             871: 2,-5
+            930: 2,0
+            1005: 2,-10
+            1013: 2,-5
         - node:
             zIndex: 1
             id: FloorTechMaintDirectionalCorner
@@ -234,6 +245,9 @@ entities:
             793: 2,3
             868: 2,-7
             876: 2,-2
+            935: 2,3
+            1010: 2,-7
+            1018: 2,-2
         - node:
             angle: -4.71238898038469 rad
             id: FloorTechMaintDirectionalEdge
@@ -306,6 +320,18 @@ entities:
             845: 0,-2
             851: 1,-10
             853: 1,-9
+            914: 0,0
+            917: 0,1
+            924: 1,2
+            926: 1,3
+            976: 0,-8
+            979: 0,-7
+            982: 0,-5
+            984: 0,-4
+            985: 0,-3
+            987: 0,-2
+            993: 1,-10
+            995: 1,-9
         - node:
             angle: -3.141592653589793 rad
             id: FloorTechMaintDirectionalEdge
@@ -361,6 +387,15 @@ entities:
             856: 1,-5
             861: 2,-10
             869: 2,-5
+            913: 0,0
+            922: 1,0
+            928: 2,0
+            975: 0,-8
+            981: 0,-5
+            992: 1,-10
+            998: 1,-5
+            1003: 2,-10
+            1011: 2,-5
         - node:
             angle: -1.5707963267948966 rad
             id: FloorTechMaintDirectionalEdge
@@ -433,6 +468,18 @@ entities:
             872: 2,-4
             873: 2,-3
             874: 2,-2
+            929: 2,0
+            931: 2,1
+            932: 2,2
+            933: 2,3
+            1004: 2,-10
+            1006: 2,-9
+            1007: 2,-8
+            1008: 2,-7
+            1012: 2,-5
+            1014: 2,-4
+            1015: 2,-3
+            1016: 2,-2
         - node:
             id: FloorTechMaintDirectionalEdge
           decals:
@@ -487,6 +534,15 @@ entities:
             857: 1,-2
             867: 2,-7
             875: 2,-2
+            916: 0,1
+            925: 1,3
+            934: 2,3
+            978: 0,-7
+            986: 0,-2
+            997: 1,-7
+            999: 1,-2
+            1009: 2,-7
+            1017: 2,-2
         - node:
             zIndex: 1
             angle: -4.71238898038469 rad
@@ -497,6 +553,7 @@ entities:
             454: 1,1
             605: 1,1
             781: 1,1
+            923: 1,1
         - node:
             zIndex: 1
             angle: -3.141592653589793 rad
@@ -508,6 +565,7 @@ entities:
             515: 1,-8
             672: 1,-8
             854: 1,-8
+            996: 1,-8
         - node:
             zIndex: 1
             id: LatticeCornerNE
@@ -548,6 +606,12 @@ entities:
             832: -1,-12
             849: 1,-13
             860: 2,-14
+            953: -3,-8
+            958: -3,-6
+            971: -3,-1
+            974: -1,-12
+            991: 1,-13
+            1002: 2,-14
         - node:
             zIndex: 1
             id: LatticeCornerNW
@@ -588,6 +652,12 @@ entities:
             888: 11,-8
             893: 11,-6
             906: 11,-1
+            1021: 6,-14
+            1024: 7,-13
+            1027: 9,-12
+            1030: 11,-8
+            1035: 11,-6
+            1048: 11,-1
         - node:
             zIndex: 1
             id: LatticeCornerSE
@@ -626,6 +696,12 @@ entities:
             827: -3,-1
             909: -3,1
             912: -1,4
+            921: 0,5
+            941: 5,5
+            956: -3,-6
+            969: -3,-1
+            1051: -3,1
+            1054: -1,4
         - node:
             zIndex: 1
             id: LatticeCornerSW
@@ -664,6 +740,12 @@ entities:
             808: 11,1
             892: 11,-6
             905: 11,-1
+            938: 3,5
+            944: 8,5
+            947: 9,4
+            950: 11,1
+            1034: 11,-6
+            1047: 11,-1
         - node:
             id: LatticeEdgeE
           decals:
@@ -725,6 +807,16 @@ entities:
             858: 2,-14
             908: -3,1
             911: -1,4
+            920: 0,5
+            940: 5,5
+            951: -3,-8
+            955: -3,-6
+            968: -3,-1
+            972: -1,-12
+            989: 1,-13
+            1000: 2,-14
+            1050: -3,1
+            1053: -1,4
         - node:
             id: LatticeEdgeN
           decals:
@@ -848,6 +940,26 @@ entities:
             899: 11,-3
             901: 11,-2
             903: 11,-1
+            952: -3,-8
+            957: -3,-6
+            960: -3,-5
+            962: -3,-4
+            964: -3,-3
+            966: -3,-2
+            970: -3,-1
+            973: -1,-12
+            990: 1,-13
+            1001: 2,-14
+            1019: 6,-14
+            1022: 7,-13
+            1025: 9,-12
+            1028: 11,-8
+            1032: 11,-6
+            1037: 11,-5
+            1039: 11,-4
+            1041: 11,-3
+            1043: 11,-2
+            1045: 11,-1
         - node:
             id: LatticeEdgeS
           decals:
@@ -967,6 +1079,26 @@ entities:
             902: 11,-1
             907: -3,1
             910: -1,4
+            919: 0,5
+            936: 3,5
+            939: 5,5
+            942: 8,5
+            945: 9,4
+            948: 11,1
+            954: -3,-6
+            959: -3,-5
+            961: -3,-4
+            963: -3,-3
+            965: -3,-2
+            967: -3,-1
+            1031: 11,-6
+            1036: 11,-5
+            1038: 11,-4
+            1040: 11,-3
+            1042: 11,-2
+            1044: 11,-1
+            1049: -3,1
+            1052: -1,4
         - node:
             id: LatticeEdgeW
           decals:
@@ -1028,6 +1160,16 @@ entities:
             887: 11,-8
             891: 11,-6
             904: 11,-1
+            937: 3,5
+            943: 8,5
+            946: 9,4
+            949: 11,1
+            1020: 6,-14
+            1023: 7,-13
+            1026: 9,-12
+            1029: 11,-8
+            1033: 11,-6
+            1046: 11,-1
         - node:
             color: '#FFFFFFFF'
             id: TechN
@@ -1114,81 +1256,61 @@ entities:
       data:
         tiles:
           0,0:
-            0: 61183
-          -1,0:
-            1: 32832
-            2: 32
-          0,1:
-            2: 144
-          -1,1:
-            2: 8
+            0: 61179
           0,-1:
-            0: 36863
+            0: 65535
+          -1,0:
+            0: 32832
+            1: 32
+          0,1:
+            1: 144
+          -1,1:
+            1: 8
           1,0:
-            0: 23005
-          1,1:
-            2: 32
-            0: 12
+            0: 23004
           1,-1:
-            0: 36319
+            0: 40413
+          1,1:
+            1: 32
+            0: 12
           2,0:
-            0: 17
-            1: 8256
-            2: 128
+            0: 8273
+            1: 128
           2,1:
-            2: 18
+            1: 18
           2,-1:
-            1: 16384
-            2: 34952
-            0: 273
+            0: 16657
+            1: 34952
           -1,-2:
-            2: 8706
-            1: 1028
+            1: 8706
+            0: 1028
           -1,-1:
-            2: 8738
-            1: 16384
+            1: 8738
+            0: 16384
           -1,-3:
-            2: 8
-            1: 2048
+            1: 8
+            0: 2048
           0,-3:
-            1: 3
-            0: 61064
+            0: 61067
           0,-2:
-            0: 63743
+            0: 62207
           0,-4:
-            2: 9216
+            1: 9216
             0: 34816
           1,-4:
             0: 12800
-            2: 33792
+            1: 33792
           1,-3:
-            0: 56595
-            1: 8
+            0: 56603
           1,-2:
             0: 23645
           2,-3:
-            1: 513
-            2: 2
+            0: 513
+            1: 2
           2,-2:
-            0: 257
-            1: 1028
-            2: 34824
+            0: 1285
+            1: 34824
         uniqueMixes:
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.824879
-          - 82.10312
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -4123,6 +4245,30 @@ entities:
     - type: Transform
       pos: 4.5,-7.5
       parent: 1
+- proto: CrescentMultitool
+  entities:
+  - uid: 543
+    components:
+    - type: Transform
+      parent: 542
+    - type: Physics
+      canCollide: False
+- proto: CrescentScrewdriver
+  entities:
+  - uid: 544
+    components:
+    - type: Transform
+      parent: 542
+    - type: Physics
+      canCollide: False
+- proto: CrescentWrench
+  entities:
+  - uid: 848
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 7.6638527,-9.594784
+      parent: 1
 - proto: DecorFloorSkeleton
   entities:
   - uid: 555
@@ -4196,6 +4342,30 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-5.5
+      parent: 1
+- proto: FleshbeastPossibleSpawnLow
+  entities:
+  - uid: 855
+    components:
+    - type: Transform
+      pos: 4.5,-12.5
+      parent: 1
+  - uid: 856
+    components:
+    - type: Transform
+      pos: 2.5,2.5
+      parent: 1
+- proto: FleshbeastRandomSpawner
+  entities:
+  - uid: 853
+    components:
+    - type: Transform
+      pos: 6.5,-5.5
+      parent: 1
+  - uid: 854
+    components:
+    - type: Transform
+      pos: 7.5,-1.5
       parent: 1
 - proto: FloorDrain
   entities:
@@ -4975,14 +5145,6 @@ entities:
     - type: Transform
       pos: 1.5,-1.5
       parent: 1
-- proto: CrescentMultitool
-  entities:
-  - uid: 543
-    components:
-    - type: Transform
-      parent: 542
-    - type: Physics
-      canCollide: False
 - proto: N14FenceChainGate
   entities:
   - uid: 667
@@ -4991,7 +5153,7 @@ entities:
       pos: 3.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -842.9726
+      secondsUntilStateChange: -983.5062
       state: Opening
 - proto: N14RugMatWelcome
   entities:
@@ -5293,14 +5455,6 @@ entities:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
-- proto: CrescentScrewdriver
-  entities:
-  - uid: 544
-    components:
-    - type: Transform
-      parent: 542
-    - type: Physics
-      canCollide: False
 - proto: Shower
   entities:
   - uid: 715
@@ -6094,14 +6248,6 @@ entities:
     components:
     - type: Transform
       pos: 8.5,-4.5
-      parent: 1
-- proto: CrescentWrench
-  entities:
-  - uid: 848
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.6638527,-9.594784
       parent: 1
 - proto: YellowBarrelFull
   entities:

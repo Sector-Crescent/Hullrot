@@ -1,0 +1,267 @@
+- type: entity
+  parent: [ SimpleMobBase, MobCombat ]
+  id: BaseMobCrescentFleshbeastElite
+  name: Flesh Beast
+  abstract: true
+  components:
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Tool
+    speedModifier: 1.75
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Physics
+    bodyType: KinematicController
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Flesh
+    - FootstepSound
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Crescent/Mobs/Hostiles/Fogbeasts/fleshbeastelite.rsi
+  - type: MovementAlwaysTouching
+  - type: MovementIgnoreGravity
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 4
+    weightlessAcceleration: 20
+    weightlessFriction: 20
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      350: Dead
+  - type: Bloodstream
+    bloodMaxVolume: 200
+  - type: CombatMode
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: -150
+    currentTemperature: 310.15
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0 #per second, scales with pressure and other constants.
+  - type: Internals
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Psionic
+    removable: false
+    roller: false
+    assayFeedback:
+      - flesh-golem-feedback
+  - type: Fauna # Lavaland Change
+
+- type: entity
+  parent: BaseMobCrescentFleshbeastElite
+  id: MobCrescentFleshbeastRunnerElite
+  suffix: Elite, Widower
+  description: A mass of frenetically writhing limbs that seem covered in some form of chemical secretion.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: runner2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepWood
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 12
+  - type: Stamina
+    critThreshold: 385
+  - type: MeleeWeapon
+    attackRate: 0.5
+    range: 1.5
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh2.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 6
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: CarpoToxin
+          Quantity: 50
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_dies.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastMeatChunk:
+            min: 2
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMobCrescentFleshbeastElite
+  id: MobCrescentFleshbeastSpitterElite
+  suffix: Elite, Burster
+  description: A towering wretch of meat and undulating pustules that seem ready to burst at any moment.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: spitter2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSnake
+  - type: Stamina
+    critThreshold: 315
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+  - type: BasicEntityAmmoProvider
+    proto: BulletCausticPusSpread
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_dies.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastDeathrattleGasBomb:
+            min: 1
+            max: 1
+          FleshbeastMeatChunk:
+            min: 2
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMobCrescentFleshbeastElite
+  id: MobCrescentFleshbeastTankElite
+  suffix: Elite, Scourer
+  description: A hulking figure of muscle adorned with an armblade of sharpened bone.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: tank2
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.75
+    baseSprintSpeed: 3
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepHard
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      800: Dead
+  - type: Stamina
+    critThreshold: 960
+  - type: MeleeWeapon
+    attackRate: 3
+    range: 1.5
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    animation: WeaponArcClaw
+    clickPartDamageMultiplier: 2.6 # should one-tap limbs only if the target is unarmored
+    damage:
+      types:
+        Slash: 40
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 1350
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_dies.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastMeatChunk:
+            min: 2
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

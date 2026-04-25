@@ -44,7 +44,7 @@
   parent: ClothingHeadHelmetBasic
   id: ClothingHeadHelmetNCWLRiot
   name: 2B5P Riot Helmet
-  description: A variation of the standard 2B5 helmet, with the brim removed, and a plastic face visor added. The helmet retains most of its protective ability, but the visor will really only protect you from a brick. 
+  description: A variation of the standard 2B5 helmet, with the brim removed, and a plastic face visor added. The helmet retains most of its protective ability, but the visor will really only protect you from a brick.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/NCWL/Head/ncwlhelmetriot.rsi
@@ -85,7 +85,7 @@
     sprite: _Crescent/Clothing/NCWL/Head/infanteermedsuithelmet.rsi
   - type: PointLight
     radius: 6
-    color: "#ffffff"
+    color: "#ffffed"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -114,7 +114,7 @@
     sprite: _Crescent/Clothing/NCWL/Head/salvagehardsuithelmet.rsi
   - type: PointLight
     radius: 6
-    color: "#ffffff"
+    color: "#ffffed"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -144,7 +144,7 @@
     sprite: _Crescent/Clothing/NCWL/Head/infantryhelm.rsi
   - type: PointLight
     radius: 6
-    color: "#e86d3c"
+    color: "#ffffed"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -163,7 +163,7 @@
   id: ClothingHeadHelmetHardsuitNCWLPetya
   categories: [ HideSpawnMenu ]
   name: 2B29 Helmet
-  description: The helmet to the 2B29 hardsuit. Features an incredibly basic HUD that essentially serves zero purpose. Protects the head from impacts and projectiles. 
+  description: The helmet to the 2B29 hardsuit. Features an incredibly basic HUD that essentially serves zero purpose. Protects the head from impacts and projectiles.
   components:
   - type: BreathMask
   - type: Sprite
@@ -172,7 +172,7 @@
     sprite: _Crescent/Clothing/NCWL/Head/commieheavy.rsi
   - type: PointLight
     radius: 6
-    color: "#e86d3c"
+    color: "#ffffed"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -191,7 +191,7 @@
     sprite: _Crescent/Clothing/NCWL/Head/ncwljuggernauthelm.rsi
   - type: PointLight
     radius: 6
-    color: "#e86d3c"
+    color: "#ffffed"
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000

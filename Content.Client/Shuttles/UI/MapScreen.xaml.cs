@@ -159,7 +159,7 @@ public sealed partial class MapScreen : BoxContainer
     {
         if (value)
         {
-            MapFTLButton.Disabled = false;
+            MapFTLButton.Disabled = true;
         }
         else
         {

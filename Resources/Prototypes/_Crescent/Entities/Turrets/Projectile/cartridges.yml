@@ -20,6 +20,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 #screamer
 - type: entity
@@ -43,6 +45,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 # - type: entity
 #   id: Cartridge20mmFrag
@@ -110,6 +114,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 100
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 # - type: entity
 #   id: Cartridge120mmFlak
@@ -176,7 +182,8 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
-
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 - type: entity
   id: 88mmCorpusSpread
@@ -213,6 +220,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 250
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 #35mm
 - type: entity
@@ -236,6 +245,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 # - type: entity
 #   id: Cartridge35mmHE
@@ -304,6 +315,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 # - type: entity
 #   id: Cartridge50mmHE
@@ -373,6 +386,8 @@
   - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 1
+  - type: SelfDeleteInSpace
+    retryDelay: 5
 
 # - type: entity
 #   id: Cartridge90mmAP

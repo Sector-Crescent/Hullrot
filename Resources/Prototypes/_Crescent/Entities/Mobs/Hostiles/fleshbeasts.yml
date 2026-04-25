@@ -1,0 +1,261 @@
+- type: entity
+  parent: [ SimpleMobBase, MobCombat ]
+  id: BaseMobCrescentFleshbeast
+  name: Flesh Beast
+  abstract: true
+  components:
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Tool
+    speedModifier: 1.25
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Physics
+    bodyType: KinematicController
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Flesh
+    - FootstepSound
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Crescent/Mobs/Hostiles/Fogbeasts/fleshbeast.rsi
+  - type: MovementAlwaysTouching
+  - type: MovementIgnoreGravity
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.75
+    baseSprintSpeed: 3
+    weightlessAcceleration: 20
+    weightlessFriction: 20
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Bloodstream
+    bloodMaxVolume: 200
+  - type: CombatMode
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: -150
+    currentTemperature: 310.15
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0 #per second, scales with pressure and other constants.
+  - type: Internals
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Psionic
+    removable: false
+    roller: false
+    assayFeedback:
+      - flesh-golem-feedback
+  - type: Fauna # Lavaland Change
+
+- type: entity
+  parent: BaseMobCrescentFleshbeast
+  id: MobCrescentFleshbeastRunner
+  suffix: Runner
+  description: A hyperactive and skittering amalgam of flesh.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: runner
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepWood
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 8
+  - type: Stamina
+    critThreshold: 300
+  - type: MeleeWeapon
+    attackRate: 0.5
+    range: 3
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 10
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_attack1.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastMeatChunk:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMobCrescentFleshbeast
+  id: MobCrescentFleshbeastSpitter
+  suffix: Spitter
+  description: A gangling and pus-laden host of flesh.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: spitter
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSnake
+  - type: Stamina
+    critThreshold: 200
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+  - type: BasicEntityAmmoProvider
+    proto: BulletCausticPus
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_attack1.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastMeatChunk:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMobCrescentFleshbeast
+  id: MobCrescentFleshbeastTank
+  suffix: Tank
+  description: A swollen and brutal lump of flesh.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: tank
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepHard
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Dead
+  - type: Stamina
+    critThreshold: 1000
+  - type: MeleeWeapon
+    attackRate: 2
+    range: 3
+    soundHit:
+      path: /Audio/_Crescent/Weapons/Jackhammerhit01.ogg
+    animation: WeaponArcClaw
+    clickPartDamageMultiplier: 2 # respectable chunk of limb damage without going crazy with it
+    damage:
+      types:
+        Blunt: 25
+  - type: MeleeThrowOnHit
+    speed: 30
+    lifetime: 0.2
+  - type: KnockdownOnHit
+    duration: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 1350
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/demon_attack1.ogg
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          FleshbeastMeatChunk:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -1,0 +1,30 @@
+- type: entity
+  name: Flesh Chunk
+  parent: FoodBase
+  id: FleshbeastMeatChunk
+  description: A chunk of flesh left from a slain beast, serves as a trophy for the mad or food for the truly desperate.
+  components:
+    - type: Food
+    - type: Sprite
+      sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+      state: icon
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 22
+          reagents:
+          - ReagentId: Nutriment
+            Quantity: 20
+          - ReagentId: GastroToxin
+            Quantity: 2
+    - type: FlavorProfile
+      flavors:
+        - bitter
+        - meaty
+    - type: Item
+      sprite: _Crescent/Objects/Consumables/Food/fleshbeastmeatchunk.rsi
+      size: Small
+    - type: Tag
+      tags:
+        - Raw
+        - Meat
