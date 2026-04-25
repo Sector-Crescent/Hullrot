@@ -98,7 +98,7 @@
     - type: Gun
       fireOnDropChance: 0
       fireRate: 10
-      projectileSpeed: 160
+      projectileSpeed: 110
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -156,46 +156,46 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: Gun
-      fireOnDropChance: 0
-      fireRate: 6
-      projectileSpeed: 140
-      angleDecay: 1
-      minAngle: 1.5
-      maxAngle: 3
-      angleIncrease: 0.25
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          startingItem: Magazine20mm
-          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - Magazine20mm
-        gun_chamber:
-          name: Chamber
-          startingItem: Cartridge20mm
-          priority: 1
-          whitelist:
-            tags:
-              - Cartridge20mm
-    - type: ApcPowerReceiver
-      powerLoad: 2000
-    - type: HardpointAnchorableOnly
-      class: Ballistic
-      size: Small
-    - type: MagazineAmmoProvider
+    # - type: ContainerContainer
+    #   containers:
+    #     ballistic-ammo: !type:Container
+    #       ents: []
+    # - type: Gun
+    #   fireOnDropChance: 0
+    #   fireRate: 6
+    #   projectileSpeed: 140
+    #   angleDecay: 1
+    #   minAngle: 1.5
+    #   maxAngle: 3
+    #   angleIncrease: 0.25
+    #   selectedMode: FullAuto
+    #   availableModes:
+    #     - FullAuto
+    #   soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
+    # - type: ItemSlots
+    #   slots:
+    #     gun_magazine:
+    #       name: Magazine
+    #       startingItem: Magazine20mm
+    #       insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+    #       ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+    #       priority: 2
+    #       whitelist:
+    #         tags:
+    #           - Magazine20mm
+    #     gun_chamber:
+    #       name: Chamber
+    #       startingItem: Cartridge20mm
+    #       priority: 1
+    #       whitelist:
+    #         tags:
+    #           - Cartridge20mm
+    # - type: ApcPowerReceiver
+    #   powerLoad: 2000
+    # - type: HardpointAnchorableOnly
+    #   class: Ballistic
+    #   size: Small
+    # - type: MagazineAmmoProvider
 
 - type: entity
   parent: BaseTurretShipgun
@@ -227,7 +227,7 @@
     - type: Gun
       fireOnDropChance: 0
       fireRate: 18
-      projectileSpeed: 140
+      projectileSpeed: 100
       angleDecay: 0.75
       minAngle: 1.5
       maxAngle: 2.5
@@ -291,10 +291,10 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 140
+      projectileSpeed: 100
       burstFireRate: 20
       shotsPerBurst: 2
-      burstCooldown: 0.15
+      burstCooldown: 0.20
       selectedMode: Burst
       availableModes:
         - Burst
@@ -331,7 +331,7 @@
       size: Small
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretMediumMachinegun
   id: WeaponTurretMediumMachinegunNCWL
   suffix: Machinegun, Small Ballistics
   name: Homeguard 35mm 'Talon' Autocannon
@@ -355,46 +355,46 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: MagazineAmmoProvider
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 107
-      fireRate: 8
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      angleDecay: 1
-      minAngle: 2
-      maxAngle: 4.5
-      angleIncrease: 0.5
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          startingItem: Magazine35mm
-          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - Magazine35mm
-        gun_chamber:
-          name: Chamber
-          startingItem: CartridgeVulcanStandard
-          priority: 1
-          whitelist:
-            tags:
-              - Cartridge35mm
-    - type: ApcPowerReceiver
-      powerLoad: 2500
-    - type: HardpointAnchorableOnly
-      class: Ballistic
-      size: Small
+    # - type: MagazineAmmoProvider
+    # - type: Gun
+    #   fireOnDropChance: 0
+    #   projectileSpeed: 107
+    #   fireRate: 8
+    #   selectedMode: FullAuto
+    #   availableModes:
+    #     - FullAuto
+    #   angleDecay: 1
+    #   minAngle: 2
+    #   maxAngle: 4.5
+    #   angleIncrease: 0.5
+    #   soundGunshot: /Audio/Weapons/Guns/Gunshots/vulcan.ogg
+    # - type: ContainerContainer
+    #   containers:
+    #     ballistic-ammo: !type:Container
+    #       ents: []
+    # - type: ItemSlots
+    #   slots:
+    #     gun_magazine:
+    #       name: Magazine
+    #       startingItem: Magazine35mm
+    #       insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+    #       ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+    #       priority: 2
+    #       whitelist:
+    #         tags:
+    #           - Magazine35mm
+    #     gun_chamber:
+    #       name: Chamber
+    #       startingItem: CartridgeVulcanStandard
+    #       priority: 1
+    #       whitelist:
+    #         tags:
+    #           - Cartridge35mm
+    # - type: ApcPowerReceiver
+    #   powerLoad: 2500
+    # - type: HardpointAnchorableOnly
+    #   class: Ballistic
+    #   size: Small
 
 #artillery 50mm
 
@@ -426,7 +426,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 125
+      projectileSpeed: 95
       fireRate: 4
       selectedMode: FullAuto
       availableModes:
@@ -466,7 +466,7 @@
 
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretSmallArtillery
   id: WeaponTurretSmallArtilleryNCWL
   suffix: Artillery, Small Ballistics, NCWL
   name: Homeguard 50mm 'Bastion' Heavy Autocannon
@@ -491,45 +491,45 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 140
-      fireRate: 4
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-      angleDecay: 0.5
-      minAngle: 1
-      maxAngle: 2
-      angleIncrease: 0.25
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ContainerContainer
-      containers:
-        ballistic-ammo: !type:Container
-          ents: []
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          #startingItem: Magazine50mm
-          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - Magazine50mm
-        gun_chamber:
-          name: Chamber
-          startingItem: Cartridge50mm
-          priority: 1
-          whitelist:
-            tags:
-              - Cartridge50mm
-    - type: ApcPowerReceiver
-      powerLoad: 3000
-    - type: HardpointAnchorableOnly
-      class: Ballistic
-      size: Medium
+    # - type: Gun
+    #   fireOnDropChance: 0
+    #   projectileSpeed: 140
+    #   fireRate: 4
+    #   selectedMode: FullAuto
+    #   availableModes:
+    #     - FullAuto
+    #   angleDecay: 0.5
+    #   minAngle: 1
+    #   maxAngle: 2
+    #   angleIncrease: 0.25
+    #   soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+    # - type: ContainerContainer
+    #   containers:
+    #     ballistic-ammo: !type:Container
+    #       ents: []
+    # - type: ItemSlots
+    #   slots:
+    #     gun_magazine:
+    #       name: Magazine
+    #       #startingItem: Magazine50mm
+    #       insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+    #       ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+    #       priority: 2
+    #       whitelist:
+    #         tags:
+    #           - Magazine50mm
+    #     gun_chamber:
+    #       name: Chamber
+    #       startingItem: Cartridge50mm
+    #       priority: 1
+    #       whitelist:
+    #         tags:
+    #           - Cartridge50mm
+    # - type: ApcPowerReceiver
+    #   powerLoad: 3000
+    # - type: HardpointAnchorableOnly
+    #   class: Ballistic
+    #   size: Medium
 
 # 120mm
 
@@ -563,8 +563,8 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 150
-      fireRate: 0.3
+      projectileSpeed: 90
+      fireRate: 0.6
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -574,12 +574,11 @@
       angleIncrease: 0.4
       soundGunshot: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
     - type: BallisticAmmoProvider
+      fillWithDoAfter: false
       soundInsert:
         path: /Audio/Weapons/Guns/UnionfallWeapons/amr_close_1.ogg
-      fillWithDoAfter: true
-      fillDelay: 1.5
       cycleable: true
-      capacity: 4
+      capacity: 6
       proto: Cartridge120mm
       whitelist:
         tags:
@@ -595,7 +594,7 @@
 - type: entity
   parent: BaseTurretShipgun
   id: WeaponTurretLargeMachinegun
-  suffix: Machinegun, Large Ballistics
+  suffix: Machinegun, Large Ballistics #Not yet! Dont use!
   name: 90mm 'Resolute' Assault Battery
   description: Three heavy cannons mounted together to form a formitable battery. Capable of dealing with any target that dares to stand on the wrong side of its fire. This version fires in rapid 3 round bursts. Its only drawback is its hunger for ammo.
   components:
@@ -619,7 +618,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 150
+      projectileSpeed: 90
       burstFireRate: 8
       burstCooldown: 2
       selectedMode: Burst
@@ -677,31 +676,31 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalGlassBreak
-    - type: ApcPowerReceiver
-      powerLoad: 800
-    - type: Gun
-      fireOnDropChance: 0
-      projectileSpeed: 150
-      fireRate: 1.5
-      angleDecay: 0.3
-      minAngle: 0.75
-      maxAngle: 3
-      angleIncrease: 0.5
-      selectedMode: FullAuto
-      availableModes:
-        - FullAuto
-    - type: Sprite
-      sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi
-      drawdepth: Mobs
-      layers:
-        - state: ncwl-repeater
+    # - type: ApcPowerReceiver
+    #   powerLoad: 800
+    # - type: Gun
+    #   fireOnDropChance: 0
+    #   projectileSpeed: 150
+    #   fireRate: 1.5
+    #   angleDecay: 0.3
+    #   minAngle: 0.75
+    #   maxAngle: 3
+    #   angleIncrease: 0.5
+    #   selectedMode: FullAuto
+    #   availableModes:
+    #     - FullAuto
+    # - type: Sprite
+    #   sprite: _Crescent/Objects/Turrets/Projectile/repeater.rsi
+    #   drawdepth: Mobs
+    #   layers:
+    #     - state: ncwl-repeater
 
 # 300mm
 
 - type: entity
   parent: BaseTurretShipgun
   id: WeaponTurretLargeArtillery
-  suffix: Artillery, Large Ballistics
+  suffix: Artillery, Large Ballistics #Not yet!
   name: 300mm 'Leviathan' Siege Battery
   description: The largest conventional cannon found in Taypan. There really isnt much more to say about such a glorious piece of heavy weaponry.
   components:
@@ -729,7 +728,7 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 250
+      projectileSpeed: 80
       fireRate: 0.2
       selectedMode: SemiAuto
       availableModes:
@@ -770,7 +769,7 @@
         - state: ncwl-howitzer
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 250
+      projectileSpeed: 80
       fireRate: 0.25
       angleDecay: 0.05
       minAngle: 0.4
@@ -832,7 +831,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 120
+      projectileSpeed: 80
       fireRate: 1.5
       selectedMode: FullAuto
       availableModes:

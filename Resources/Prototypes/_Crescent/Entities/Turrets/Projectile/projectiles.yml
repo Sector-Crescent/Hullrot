@@ -49,7 +49,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3 #848
+    lifetime: 7.7 #850
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -114,7 +114,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 7 #980
+    lifetime: 9.8 #980
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -181,7 +181,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 12 #1500
+    lifetime: 15.8 #1500
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/pdtcasing.rsi
     layers:
@@ -261,7 +261,7 @@
 
 - type: entity
   id: Bullet90mmHE
-  name: 90mm High Explosive shell
+  name: 90mm High Explosive shell #not using this yet
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
@@ -376,7 +376,7 @@
         Structural: 950
         Piercing: 300
   - type: TimedDespawn
-    lifetime: 13.3 #1995
+    lifetime: 22.2 #1995
   - type: Sprite
     sprite: _NF/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -384,7 +384,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 400
+    maxIntensity: 800
     intensitySlope: 200
     totalIntensity: 5000
     maxTileBreak: 5

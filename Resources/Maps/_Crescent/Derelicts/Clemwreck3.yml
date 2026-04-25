@@ -4353,47 +4353,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.5,-5.5
       parent: 1
-- proto: Firelock
-  entities:
-  - uid: 699
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,-7.5
-      parent: 1
-  - uid: 700
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,-7.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -2745.8508
-      state: Closing
-  - uid: 701
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,-7.5
-      parent: 1
-  - uid: 702
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,-4.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -2753.184
-      state: Closing
-  - uid: 703
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,-4.5
-      parent: 1
-    - type: Door
-      secondsUntilStateChange: -2752.7507
-      state: Closing
 - proto: FleshbeastPossibleSpawnLow
   entities:
   - uid: 1061

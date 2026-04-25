@@ -15,7 +15,7 @@
         Structural: 200
         Blunt: 50
   - type: TimedDespawn
-    lifetime: 10 #1500m
+    lifetime: 10.7 #1500m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/shortbow.rsi
     layers:
@@ -23,10 +23,10 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 50
-    intensitySlope: 25
-    totalIntensity: 500
-    maxTileBreak: 2
+    maxIntensity: 250
+    intensitySlope: 100
+    totalIntensity: 2000
+    maxTileBreak: 1
   - type: PointLight
     radius: 3.5
     color: orange
@@ -154,7 +154,7 @@
         Structural: 250
         Blunt: 100
   - type: TimedDespawn
-    lifetime: 25 #2500
+    lifetime: 20
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/azimuth.rsi
     layers:
@@ -162,9 +162,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 200
-    intensitySlope: 100
-    totalIntensity: 1500
+    maxIntensity: 400
+    intensitySlope: 190
+    totalIntensity: 3000
     maxTileBreak: 4
   - type: PointLight
     radius: 3.5
@@ -193,11 +193,12 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 150
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
+  - type: IgnoresHullrotShields
 
 # - type: entity
 #   id: AzimuthRocketProjectileGorlex
@@ -302,10 +303,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 600
+        Structural: 500
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 41.6 #2496
+    lifetime: 45.4 #2496
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/arbalest.rsi
     layers:
@@ -313,9 +314,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 350
-    intensitySlope: 1000
-    totalIntensity: 4000
+    maxIntensity: 400
+    intensitySlope: 50
+    totalIntensity: 4500
     maxTileBreak: 8
   - type: PointLight
     radius: 3.5
@@ -356,7 +357,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
-  - type: IgnoresHullrotShields
+  # - type: IgnoresHullrotShields
 
 # - type: entity
 #   id: ArbalestRocketProjectileNCWL
@@ -514,7 +515,7 @@
         Structural: 1000
         Blunt: 200
   - type: TimedDespawn
-    lifetime: 66.6 #3996
+    lifetime: 80 #3996
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/gargoyle.rsi
     layers:
@@ -522,9 +523,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 1000
+    maxIntensity: 650
     intensitySlope: 200
-    totalIntensity: 3500
+    totalIntensity: 6000
     maxTileBreak: 10
   - type: PointLight
     radius: 3.5
@@ -565,7 +566,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
-  - type: IgnoresHullrotShields
+  # - type: IgnoresHullrotShields
 
 # - type: entity
 #   id: ProjectileGargoyleNCWL
@@ -651,10 +652,10 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 2000
+        Structural: 1250
         Blunt: 500
   - type: TimedDespawn
-    lifetime: 83.3 #4998
+    lifetime: 111.1 #4998
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/catapult.rsi
     layers:
@@ -662,8 +663,8 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    maxIntensity: 2000
-    intensitySlope: 500
+    maxIntensity: 650
+    intensitySlope: 50
     totalIntensity: 6000
     maxTileBreak: 32
   - type: PointLight
@@ -705,7 +706,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:ExplodeBehavior
-  - type: IgnoresHullrotShields
+  # - type: IgnoresHullrotShields
 
 #pila
 

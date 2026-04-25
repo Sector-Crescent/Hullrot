@@ -19,11 +19,11 @@
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 20
-        Slash: 20
-        Piercing: 25
-        Heat: 15
-        Caustic: 25
+        Blunt: 2
+        Slash: 2
+        Heat: 2
+        Cold: 2
+        Caustic: 2
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -33,7 +33,7 @@
     price: 750
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitFishbed
   name: NMS-21 'FISHBED' combat hardsuit
   description: Designed by Northrop-Martin for mercenary use and heavily modified by Taypani owners.
@@ -53,9 +53,11 @@
     armorRepair: SteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 36
+        Blunt: 6
+        Slash: 6
+        Heat: 2
+        Cold: 2
+        Caustic: 2
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1

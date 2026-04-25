@@ -126,7 +126,7 @@
       size: Medium
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretCurse
   id: WeaponTurretCurseNavy
   suffix: Medium Energy, Navy
   name: Navy 300w 'Mandate' EMP Projector
@@ -231,7 +231,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
+      projectileSpeed: 105
       burstFireRate: 20
       burstCooldown: .2
       shotsPerBurst: 3
@@ -263,7 +263,7 @@
       size: Small
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretRetribution
   id: WeaponTurretRetributionNavy
   suffix: Small Laser, Navy
   name: Navy 200cc 'Solaris' Pulse Laser
@@ -337,13 +337,12 @@
                 collection: MetalGlassBreak
     - type: ContainerContainer
       containers:
-        ballistic-ammo: !type:Container
-          ents: []
+        gun_magazine: !type:ContainerSlot
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 200
+      projectileSpeed: 110
       burstFireRate: 20 #6.67 effective RPS
-      burstCooldown: 1
+      burstCooldown: 1.05
       shotsPerBurst: 10
       selectedMode: Burst
       availableModes:
@@ -355,17 +354,17 @@
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
           variation: 0.12
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.6
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.5
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: BulletAbsolution
-      capacity: 50
-      count: 50
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: PowerCageGlare
+          insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+          whitelist:
+            tags:
+              - GlareCell
+    - type: MagazineAmmoProvider
     - type: ApcPowerReceiver
       powerLoad: 4000
     - type: HardpointAnchorableOnly
@@ -373,7 +372,7 @@
       size: Medium
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretAbsolution
   id: WeaponTurretAbsolutionNavy
   suffix: Medium Laser, Navy
   name: Navy 350cc 'Absolution' Burst Laser
@@ -446,7 +445,7 @@
       size: Large
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: WeaponTurretDamnation
   id: WeaponTurretDamnationNavy
   suffix: Large Energy, Navy
   name: Navy 600cc 'Dominus' Carronade

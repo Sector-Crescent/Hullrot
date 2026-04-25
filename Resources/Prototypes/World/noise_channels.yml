@@ -6,8 +6,8 @@
   clippingRanges:
     - 0.4, 0.6
   clippedValue: 1.658 # magic number for chunk size.
-  inputMultiplier: 6 # Makes density hopefully low noise in the local area while still being interesting at scale.
-  outputMultiplier: 50.0 # We scale density up significantly for more human-friendly numbers.
+  inputMultiplier: 18 # Makes density hopefully low noise in the local area while still being interesting at scale.
+  outputMultiplier: 150.0 # We scale density up significantly for more human-friendly numbers.
   minimum: 45.0
 
 - type: noiseChannel

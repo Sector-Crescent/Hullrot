@@ -39,6 +39,10 @@
     availableModes:
     - SemiAuto
     - FullAuto
+    angleIncrease: 15
+    angleDecay: 90
+    maxAngle: 90
+    minAngle: 1
     fireRate: 12
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
@@ -72,6 +76,10 @@
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
   - type: Gun
+    angleIncrease: 15
+    angleDecay: 90
+    maxAngle: 90
+    minAngle: 1
     fireRate: 15
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg

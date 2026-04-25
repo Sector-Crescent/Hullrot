@@ -13,14 +13,14 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Structural: 250
-        Radiation: 80
+        Structural: 150
+        Radiation: 4
   - type: PointLight
     radius: 3.5
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #1000
+    lifetime: 11.8 #1000
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -43,7 +43,7 @@
     damage:
       types:
         Structural: 230
-        Radiation: 120
+        Radiation: 20
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -56,7 +56,7 @@
     color: orange
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 11.8
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:

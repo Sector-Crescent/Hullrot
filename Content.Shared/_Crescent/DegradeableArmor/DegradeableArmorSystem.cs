@@ -150,7 +150,7 @@ public sealed class DegradeableArmorSystem : EntitySystem
     {
         if (component.armorHealth <= 0)
             return;
-        var armorDamage = 0f;
+        //var armorDamage = 0f;
 
 
         var damageDictionary = args.Args.Damage.DamageDict;
@@ -190,11 +190,11 @@ public sealed class DegradeableArmorSystem : EntitySystem
             }
 
             trueReduction = Math.Clamp(trueReduction - args.Args.HullrotArmorPen, 0f, (float) value);
-            armorDamage += (float) value * component.armorDamageCoefficients[type];
+            //armorDamage += (float) value * component.armorDamageCoefficients[type];
             //Logger.Error($"Damage adjusted for type {type}, old {value}, new {Math.Max(0f, (float) value - trueReduction)}  Armor damage {armorDamage}. Armor Health {component.armorHealth}. Stamina damage {trueReduction * component.staminaConversions[type]}");
             damageDictionary[type] = Math.Max(0f, (float) value - trueReduction);
         }
-        component.armorHealth = Math.Max(0, component.armorHealth - armorDamage);
+        //component.armorHealth = Math.Max(0, component.armorHealth - armorDamage);
         Dirty(uid, component);
     }
 

@@ -112,7 +112,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 5.9 #1062
+    lifetime: 10.1 #1062
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -130,7 +130,7 @@
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 125
+        Heat: 110
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -139,7 +139,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10 #2000m
+    lifetime: 18.2 #2000m
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:

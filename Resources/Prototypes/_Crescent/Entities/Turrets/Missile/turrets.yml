@@ -31,7 +31,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
+      projectileSpeed: 75
       fireRate: 2
       selectedMode: FullAuto
       availableModes:
@@ -97,8 +97,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 2
+      projectileSpeed: 60
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -189,7 +189,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 55
       fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
@@ -210,7 +210,7 @@
       size: Medium
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: BaseWeaponTurretArbalest
   id: BaseWeaponTurretArbalestTFSC
   suffix: ShipGun
   name: Gorlex 95mm 'Ballista' Medium Missile System
@@ -223,7 +223,7 @@
         - state: arbalest-tfsc
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: BaseWeaponTurretArbalest
   id: BaseWeaponTurretArbalestNCWL
   suffix: ShipGun
   name: Homeguard 95mm 'Warden' Medium Missile System
@@ -286,7 +286,7 @@
       zeroVisible: true
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 50
       fireRate: 0.1
       selectedMode: FullAuto
       availableModes:
@@ -307,7 +307,7 @@
       size: Medium
 
 - type: entity
-  parent: BaseTurretShipgun
+  parent: BaseWeaponTurretGargoyleTorpedo
   id: BaseWeaponTurretGargoyleTorpedoNCWL
   suffix: Heavy Missile
   name: Homeguard 240mm 'Gargoyle' Torpedo Launcher
@@ -370,7 +370,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 45
       fireRate: 0.1
       selectedMode: FullAuto
       availableModes:

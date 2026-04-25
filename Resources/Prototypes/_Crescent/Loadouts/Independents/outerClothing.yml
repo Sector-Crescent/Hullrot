@@ -13,19 +13,6 @@
         - Vagrant
 
 - type: loadout
-  id: LoadoutOuterArmorVagrantHardsuitCenobite
-  category: Outer
-  cost: 8
-  items:
-    - ClothingOuterHardsuitCenobite
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterJobRequirement
-      jobs:
-        - Vagrant
-
-- type: loadout
   id: LoadoutOuterArmorVagrantFishbedSilver
   category: Outer
   cost: 8
@@ -72,32 +59,6 @@
   cost: 8
   items:
     - ClothingOuterHardsuitFishbedNLF
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterJobRequirement
-      jobs:
-        - Vagrant
-
-- type: loadout
-  id: LoadoutOuterArmorVagrantCenobiteVerdant
-  category: Outer
-  cost: 8
-  items:
-    - ClothingOuterHardsuitCenobiteVerdant
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterJobRequirement
-      jobs:
-        - Vagrant
-
-- type: loadout
-  id: LoadoutOuterArmorVagrantCenobiteRed
-  category: Outer
-  cost: 8
-  items:
-    - ClothingOuterHardsuitCenobiteRed
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter

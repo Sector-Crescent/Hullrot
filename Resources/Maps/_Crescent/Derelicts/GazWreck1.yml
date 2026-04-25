@@ -1875,30 +1875,6 @@ entities:
     - type: Transform
       pos: -3.5,2.5
       parent: 1
-- proto: Firelock
-  entities:
-  - uid: 247
-    components:
-    - type: Transform
-      pos: 1.5,0.5
-      parent: 1
-  - uid: 248
-    components:
-    - type: Transform
-      pos: -2.5,1.5
-      parent: 1
-  - uid: 249
-    components:
-    - type: Transform
-      pos: 11.5,0.5
-      parent: 1
-- proto: FirelockFrame
-  entities:
-  - uid: 250
-    components:
-    - type: Transform
-      pos: -2.5,-0.5
-      parent: 1
 - proto: FleshbeastPossibleSpawnLow
   entities:
   - uid: 405

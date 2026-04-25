@@ -444,3 +444,28 @@
 #       tags:
 #         - Cartridge90mm
 #     proto: null
+
+# Glare Power Cage
+- type: entity
+  id: PowerCageGlare
+  parent: BaseItem
+  name: Power Cage - Glare
+  description: A rechargeable power cage, configured for use as as a power source for 'Glare' ship-laser weaponry and its variants. 
+  components:
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Crescent/Objects/Specific/hardlinebattery.rsi
+    state: battery
+  - type: Battery
+    maxCharge: 5000 #12 units
+    startingCharge: 5000
+  - type: Riggable
+  - type: PowerCell
+  - type: Tag
+    tags:
+      - GlareCell
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletAbsolution
+    fireCost: 100

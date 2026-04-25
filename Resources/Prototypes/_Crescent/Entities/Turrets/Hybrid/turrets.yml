@@ -30,7 +30,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
+      projectileSpeed: 80
       fireRate: 8
       selectedMode: FullAuto
       availableModes:
@@ -44,7 +44,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: .33
+      rechargeCooldown: .5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -92,7 +92,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
+      projectileSpeed: 45
       fireRate: 4
       selectedMode: FullAuto
       availableModes:

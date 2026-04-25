@@ -8,8 +8,8 @@
     sprite: _Crescent/Clothing/Empire/Face/adjutantmask.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Face/adjutantmask.rsi
-  - type: EyeProtection
-    protectionTime: 5
+#  - type: EyeProtection
+#    protectionTime: 5
 
 - type: entity
   parent: ClothingMaskBase
@@ -21,8 +21,8 @@
     sprite: _Crescent/Clothing/Empire/Face/governormask.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/Face/governormask.rsi
-  - type: EyeProtection
-    protectionTime: 5
+#  - type: EyeProtection
+#    protectionTime: 5
   - type: ReverseEngineering # Sector Crescent
     recipes:
       - ClothingMaskImperialGovernorMask
