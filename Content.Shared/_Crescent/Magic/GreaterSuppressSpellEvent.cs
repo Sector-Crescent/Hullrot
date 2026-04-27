@@ -2,7 +2,8 @@ using Content.Shared.Actions;
 using Content.Shared.Chat;
 using Robust.Shared.Audio;
 using Content.Shared.Magic;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Damage;
 
 namespace Content.Shared._Crescent.Magic;

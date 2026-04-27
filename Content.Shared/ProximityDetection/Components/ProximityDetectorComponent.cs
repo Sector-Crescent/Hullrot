@@ -1,4 +1,5 @@
-﻿using Content.Shared.FixedPoint;
+﻿using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.ProximityDetection.Systems;
 using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;

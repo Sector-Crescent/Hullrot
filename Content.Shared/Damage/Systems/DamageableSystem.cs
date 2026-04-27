@@ -2,7 +2,8 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Inventory;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;

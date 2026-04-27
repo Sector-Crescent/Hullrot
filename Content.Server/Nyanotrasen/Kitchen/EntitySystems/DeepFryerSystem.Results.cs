@@ -9,7 +9,8 @@ using Content.Server.Paper;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Mobs.Components;
 using Content.Shared.NPC;
 using Content.Shared.Nutrition.Components;

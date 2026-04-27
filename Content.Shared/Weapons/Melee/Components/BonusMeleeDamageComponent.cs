@@ -1,5 +1,6 @@
 ﻿using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.GameStates;
 

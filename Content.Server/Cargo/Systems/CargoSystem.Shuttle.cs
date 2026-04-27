@@ -49,7 +49,7 @@ public sealed partial class CargoSystem
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         SubscribeLocalEvent<StationInitializedEvent>(OnStationInitialize);
 
-        Subs.CVar(_cfgManager, CCVars.GridFill, SetGridFill);
+        Subs.CVar(_cfg, CCVars.GridFill, SetGridFill);
     }
 
     private void SetGridFill(bool obj)
@@ -356,7 +356,7 @@ public sealed partial class CargoSystem
         if (!HasComp<StationCargoOrderDatabaseComponent>(args.Station)) // No cargo, L
             return;
 
-        if (_cfgManager.GetCVar(CCVars.GridFill) && _cfg.GetCVar(CargoCVars.CreateCargoMap))
+        if (_cfg.GetCVar(CCVars.GridFill) && _cfg.GetCVar(CargoCVars.CreateCargoMap))
             SetupTradePost();
     }
 

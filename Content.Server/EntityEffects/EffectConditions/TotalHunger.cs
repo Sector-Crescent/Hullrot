@@ -1,6 +1,7 @@
 using Content.Shared.EntityEffects;
 using Content.Shared.Nutrition.Components;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
+
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.EntityEffects.EffectConditions;
