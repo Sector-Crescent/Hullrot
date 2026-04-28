@@ -6,7 +6,7 @@
   components:
   - type: ArmorPlateHolder
   - type: Storage
-    maxItemSize: Normal
+    maxItemSize: Large
     grid:
     - 0,0,3,3
   - type: ContainerContainer
@@ -54,7 +54,7 @@
   components:
   - type: ArmorPlateHolder
   - type: Storage
-    maxItemSize: Normal
+    maxItemSize: Large
     grid:
     - 0,0,3,3
   - type: ContainerContainer
@@ -72,10 +72,44 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
 
+- type: entity
+  name: Debug Armor Insert
+  parent: BaseItem
+  id: baseArmorInsert
+  description: "A compact armor plate made out of raw shitcodium .Its heavy upon the soul."
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/wrench_drop.ogg
+  - type: Sprite
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    state: steel
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,2
+    sprite: _Crescent/Clothing/armorSprites.rsi
+    storedSprite:
+      sprite: _Crescent/Clothing/armorSprites.rsi
+      state: steel
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 12
+    soundHit:
+      collection: MetalThud
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500
+  - type: StaticPrice
+    price: 750
+
 #Hardsuit inserts - First generation
 #Hardened steel
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateSteelInsertHardsuit
   name: Compact Steel Insert
   description: A compacted version of the regular steel ballistic inserts seen in most infantry combat. While it can still withstand several hits, its durability and general protectiveness is lacking, however it fits in most hardsuits, allowing for spaceworthy ballistic protection.
@@ -83,10 +117,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: steel
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 60
     walkSpeedModifier: 0.95
@@ -117,7 +147,7 @@
 
 # Basic ceramic plate
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateCeramicInsertBasicHardsuit
   name: Compact Alumina Insert
   description: A compact armor insert, using a similar construction method to the full sized alumina inserts. This one uses fewer layers, and has smaller dimensions. This makes it incredibly fragile, but it can still fully absorb a few projectiles, which will save your life.
@@ -125,10 +155,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: ceramic
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 140
     walkSpeedModifier: 1
@@ -160,7 +186,7 @@
 # Hardsuit inserts - Second generation
 # Tempered plasteel
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlatePlasteelInsertHardsuit
   name: Compact Plasteel Insert
   description: A highly advanced plate insert, made out of tempered plasteel and aramid fibres. Despite being small in size, the incredibly durable material allows for relatively high projectile protection, allowing for those in hardsuits to fare reasonably well against firearms.
@@ -168,10 +194,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: plasteel
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 150
     walkSpeedModifier: 0.92
@@ -202,7 +224,7 @@
 
 # Advanced ceramic
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateCeramicInsertAdvancedHardsuit
   name: Compact Boron Carbide Insert
   description: An advanced armor insert, made of numerous boron carbide tiles, adhered to a polymer backing by a hard glue. Boron carbide allows the same protection as alumina, while also being lighter and more durable. The cost of this durability, is that getting shot will knock you on your ass. This one is significantly smaller than the regular ones.
@@ -210,10 +232,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: PCK
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,2,2
   - type: ArmorPlateItem
     maxDurability: 150
     walkSpeedModifier: 1
@@ -245,7 +263,7 @@
 # Infantry inserts - First generation
 # Hardened steel
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateSteelInsert
   name: Steel Insert
   description: An incredibly basic armor plate, designed to be inserted into a vest or carrier. This one uses a core of hardened steel, adhered to a composite backing. This will withstand several impacts to the same spot, at the cost of minor spalling.
@@ -253,10 +271,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: steel
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 100
     walkSpeedModifier: 0.9
@@ -287,7 +301,7 @@
 
 # Stabproof Plate
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateKevlarInsert
   name: Stabproof Insert
   description: A fairly thin "plate", made out of several dozen layers of aramid fibres. While it is specifically designed to defend against melee weapons, the aramid fibres are able to partially defend against some smaller bullets.
@@ -295,10 +309,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: plastic
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 200
     walkSpeedModifier: 1
@@ -327,7 +337,7 @@
 
 # Basic Ceramic Plate
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateCeramicInsertBasic
   name: Alumina Insert
   description: An armor insert, comprised of several dozen Alumina hextiles, held to a plastic backer by a polymer glue, and wrapped in aramid fibres. Rather than stopping a bullet with hardness, the ceramic tiles are designed to shatter when hit, fully absorbing the force of the round. While this plate will completely absorb damage from a projectile, it breaks much faster.
@@ -335,10 +345,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: ceramic
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 250
     walkSpeedModifier: 0.9
@@ -370,7 +376,7 @@
 # Infantry Inserts - Second Generation
 # Tempered plasteel
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlatePlasteelInsert
   name: Plasteel Insert
   description: An advanced trauma plate built out of a solid sheet of plasteel. While the plasteel construction only provides slightly better protection that regular steel, it is significantly more durable, and can withstand many impacts. Consumers report that sustained impacts are likely to severely impair balance.
@@ -378,10 +384,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: plasteel
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 300
     walkSpeedModifier: 0.85
@@ -412,7 +414,7 @@
 
 # Advanced ceramic plate
 - type: entity
-  parent: BaseItem
+  parent: baseArmorInsert
   id: ArmorPlateCeramicInsertAdvanced
   name: Boron Carbide Insert
   description: An advanced armor insert, made of numerous boron carbide tiles, adhered to a polymer backing by a hard glue. Boron carbide allows the same protection as alumina, while also being lighter and more durable. The cost of this durability, is that getting shot will knock you on your ass.
@@ -420,10 +422,6 @@
   - type: Sprite
     sprite: _Crescent/Clothing/armorSprites.rsi
     state: PCK
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,3,3
   - type: ArmorPlateItem
     maxDurability: 350
     walkSpeedModifier: 1

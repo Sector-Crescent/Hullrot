@@ -41,7 +41,7 @@
       - ClothingOuterHardsuitClarizianWorker
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitInspector
   name: mk. IV 'ORATEUR' combat hardsuit
   description: A modular combat hardsuit for the Advocati Compliance Corps. Bears the colors of the Kaiserin's administration.
@@ -61,11 +61,11 @@
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 25
-        Slash: 25
-        Piercing: 50
-        Heat: 25
-        Caustic: 25
+        Blunt: 8
+        Slash: 8
+        Piercing: 4
+        Heat: 6
+        Caustic: 6
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -745,11 +745,8 @@
     armorRepair: PlasteelPlate
     initialModifiers:
       flatReductions:
-        Blunt: 10
-        Slash: 20
-        Piercing: 20
-        Heat: 20
-        Caustic: 25
+        Heat: 8
+        Caustic: 8
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
