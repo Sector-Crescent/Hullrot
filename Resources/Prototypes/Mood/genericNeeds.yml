@@ -1,43 +1,43 @@
-﻿# Hunger
+# Hunger
 - type: moodEffect
   id: HungerOverfed
-  moodChange: 10
+  moodChange: 15
   category: "Hunger"
 
 - type: moodEffect
   id: HungerOkay
-  moodChange: 7
+  moodChange: 10
   category: "Hunger"
 
 - type: moodEffect
   id: HungerPeckish
-  moodChange: -3
+  moodChange: -5
   category: "Hunger"
 
 - type: moodEffect
   id: HungerStarving
-  moodChange: -7
+  moodChange: -10
   category: "Hunger"
 
 # Thirst
 - type: moodEffect
   id: ThirstOverHydrated
-  moodChange: 10
+  moodChange: 15
   category: "Thirst"
 
 - type: moodEffect
   id: ThirstOkay
-  moodChange: 7
+  moodChange: 10
   category: "Thirst"
 
 - type: moodEffect
   id: ThirstThirsty
-  moodChange: -3
+  moodChange: -5
   category: "Thirst"
 
 - type: moodEffect
   id: ThirstParched
-  moodChange: -7
+  moodChange: -10
   category: "Thirst"
 
 # Health

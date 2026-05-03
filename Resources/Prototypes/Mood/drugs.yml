@@ -30,18 +30,23 @@
 # Non-Addictive Drugs
 - type: moodEffect
   id: EthanolBenefit
-  moodChange: 3
+  moodChange: 10
   timeout: 300 #5 minutes
 
 - type: moodEffect
   id: SpaceDrugsBenefit
-  moodChange: 7
+  moodChange: 10
   timeout: 300 #5 minutes
 
 - type: moodEffect
   id: StrongStimulant
-  moodChange: 10
+  moodChange: 20
   timeout: 300 #5 minutes
+
+- type: moodEffect
+  id: StimulantWithdrawal
+  moodChange: -7 #No timeout
+  category: "StimulantAddiction"
 
 # Floor Juice
 - type: moodEffect
