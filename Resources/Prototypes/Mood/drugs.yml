@@ -41,11 +41,13 @@
 - type: moodEffect
   id: StrongStimulant
   moodChange: 20
-  timeout: 300 #5 minutes
+  timeout: 50
+  moodletOnEnd: StimulantWithdrawal
 
 - type: moodEffect
   id: StimulantWithdrawal
-  moodChange: -7 #No timeout
+  moodChange: -20 #No timeout
+  timeout: 300
   category: "StimulantAddiction"
 
 # Floor Juice
@@ -191,3 +193,8 @@
   id: TastyEffect
   moodChange: 3
   timeout: 1800 #30 minutes
+
+- type: moodEffect
+  id: RationEffect
+  moodChange: -5
+  timeout: 300 #5 minutes
