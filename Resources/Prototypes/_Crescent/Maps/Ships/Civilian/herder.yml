@@ -1,0 +1,37 @@
+# Author Info
+# Discord: @Rubeebee
+
+- type: vessel
+  id: Herder
+  name: Herder
+  description: |
+    Converted from a civilian cargo ship, the Herder is made into a drone carrier/battleship, without excelling in either field. It's cargo bays scrapped in order to make room for it's hangars.
+    LOADOUT: 2x 20mm 'Screamer' light autocannons, 1x 48mm 'Shortbow' Short Range Missle Launcher
+    MINIMUM CREW: 1x Pilot, 1x Gunner/Drone Operator
+  price: 35000
+  category: Small
+  group: Scrap
+  path: /Maps/_Crescent/Shuttles/Civilian/herder.yml
+
+- type: gameMap
+  id: Herder
+  mapName: 'Herder'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/herder.yml
+  minPlayers: 0
+  stations:
+    Herder:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: carrier
+        - type: StationNameSetup
+          mapNameTemplate: 'Herder {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-carrier
+        - type: VesselDescription
+          description: Rickety, hulls haphazardly welded on. It's just like home.

@@ -57,7 +57,7 @@
       tags:
         - Cartridge35mm
     proto: Cartridge35mm
-    capacity: 150
+    capacity: 100
     soundRack:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:
@@ -335,7 +335,7 @@
 - type: entity
   id: MagazineResolute
   name: 90mm APHE clip
-  description: Three 5 round clips bundled together for with the mighty Resolute autocannon. Contains Armor-Piercing High Explosive shells that are effective against most targets.
+  description: Three 15 round clips bundled together for with the mighty Resolute autocannon. Contains Armor-Piercing High Explosive shells that are effective against most targets.
   parent: BaseItem
   components:
   - type: MultiHandedItem
@@ -450,7 +450,7 @@
   id: PowerCageGlare
   parent: BaseItem
   name: Power Cage - Glare
-  description: A rechargeable power cage, configured for use as as a power source for 'Glare' ship-laser weaponry and its variants. 
+  description: A rechargeable power cage, configured for use as as a power source for 'Glare' ship-laser weaponry and its variants.
   components:
   - type: Item
     size: Ginormous

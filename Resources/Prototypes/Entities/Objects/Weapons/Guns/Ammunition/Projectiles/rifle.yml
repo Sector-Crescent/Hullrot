@@ -4,6 +4,10 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -17,6 +21,10 @@
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -28,6 +36,10 @@
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -39,6 +51,10 @@
   name: bullet (7.62x51mm dragon's breath)
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -51,6 +67,10 @@
   name: bullet (7.62x51mm AP-DU)
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -64,6 +84,10 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -76,6 +100,10 @@
   categories: [ HideSpawnMenu ]
   parent: BulletRifleShrapnel
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ProjectileSpread
     proto: BulletRifleShrapnel
     count: 4

@@ -1,0 +1,37 @@
+# Author Info
+# Discord: @Rubeebee
+
+- type: vessel
+  id: Stain
+  name: Stain
+  description: |
+    A cheap and disposable drone, made from the cheapest parts found in taypan.
+    LOADOUT: 1x 200cc 'Retribution' Laser gun
+    MINIMUM CREW: N/A
+  price: 5000
+  category: Small
+  group: Scrap
+  path: /Maps/_Crescent/Shuttles/Civilian/stain.yml
+
+- type: gameMap
+  id: Stain
+  mapName: 'Stain'
+  mapPath: /Maps/_Crescent/Shuttles/Civilian/stain.yml
+  minPlayers: 0
+  stations:
+    Stain:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: player_drone
+        - type: StationNameSetup
+          mapNameTemplate: 'Stain {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-gunship
+        - type: VesselDescription
+          description: Named Stain, because that'll what it'll be in any combat situation.

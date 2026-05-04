@@ -30,8 +30,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 20
+      projectileSpeed: 300
+      fireRate: 10
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -98,7 +98,7 @@
     - type: Gun
       fireOnDropChance: 0
       fireRate: 10
-      projectileSpeed: 110
+      projectileSpeed: 280
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -227,7 +227,7 @@
     - type: Gun
       fireOnDropChance: 0
       fireRate: 18
-      projectileSpeed: 100
+      projectileSpeed: 280
       angleDecay: 0.75
       minAngle: 1.5
       maxAngle: 2.5
@@ -291,7 +291,7 @@
     - type: MagazineAmmoProvider
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 100
+      projectileSpeed: 250
       burstFireRate: 20
       shotsPerBurst: 2
       burstCooldown: 0.20
@@ -426,7 +426,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 95
+      projectileSpeed: 220
       fireRate: 4
       selectedMode: FullAuto
       availableModes:
@@ -563,7 +563,7 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 200
       fireRate: 0.6
       selectedMode: FullAuto
       availableModes:
@@ -618,7 +618,7 @@
                 collection: MetalGlassBreak
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 160
       burstFireRate: 8
       burstCooldown: 2
       selectedMode: Burst
@@ -728,11 +728,13 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 0.2
-      selectedMode: SemiAuto
+      projectileSpeed: 160
+      burstFireRate: 3
+      shotsPerBurst: 2
+      burstCooldown: 8
+      selectedMode: Burst
       availableModes:
-        - SemiAuto
+        - Burst
       angleDecay: 0.05
       minAngle: 0.4
       maxAngle: 1.5
@@ -741,8 +743,7 @@
     - type: BallisticAmmoProvider
       soundInsert:
         path: /Audio/Weapons/Guns/UnionfallWeapons/amr_close_1.ogg
-      fillWithDoAfter: true
-      fillDelay: 5
+      fillWithDoAfter: false
       cycleable: true
       capacity: 2
       proto: Cartridge300mm
@@ -831,8 +832,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
-      fireRate: 1.5
+      projectileSpeed: 200
+      fireRate: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -842,7 +843,7 @@
       slots:
         gun_magazine:
           name: Magazine
-          #startingItem: MagazineFlak - on being rebuilt from destruction this gives it free ammo
+          startingItem: MagazineCorpus  #on being rebuilt from destruction this gives it free ammo, but tf CARES
           insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
           priority: 2
@@ -851,7 +852,7 @@
               - CorpusBox
         gun_chamber:
           name: Chamber
-          startingItem: FlakCartridge
+          startingItem: CorpusCartridge
           priority: 1
           whitelist:
             tags:

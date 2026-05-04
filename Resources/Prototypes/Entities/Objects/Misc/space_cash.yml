@@ -44,6 +44,10 @@
     layerFunction: Threshold
   - type: StackLayerThreshold
     thresholds: [1, 10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 250000, 500000, 750000, 1000000, 2000000, 5000000, 10000000, 25000000, 50000000, 75000000]
+  - type: UserInterface
+    interfaces:
+      enum.StackCustomSplitUiKey.Key:
+        type: StackCustomSplitBoundUserInterface
   - type: Sprite
     sprite: Objects/Economy/cash.rsi
     state: cash

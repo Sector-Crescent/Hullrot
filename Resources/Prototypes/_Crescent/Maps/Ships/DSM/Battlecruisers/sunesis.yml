@@ -1,0 +1,30 @@
+- type: vessel
+  id: Sunesis
+  name: DSM Sunesis
+  description: |
+    Originally deployed as a mobile base of operations for Imperial Scribes, the Sunesis has undergone extensive wartime refits. Its stealth systems and civilian modules have been largely stripped to support a twin 300mm subnuclear battery, transforming it into a fast but fragile battlecruiser. It retains its mobility, but now serves as a high-risk strike platform, capable of crippling larger vessels if it can close the distance.
+  price: 170000
+  category: Large
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/Battlecruisers/sunesis.yml
+
+- type: gameMap
+  id: Sunesis
+  mapName: 'DSM Sunesis'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/Battlecruisers/sunesis.yml
+  minPlayers: 0
+  stations:
+    Sunesis:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: battlecruiser
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Sunesis {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-salvage

@@ -1,0 +1,32 @@
+- type: vessel
+  id: Ibis
+  name: DSM Ibis
+  description: |
+    A heavy fighter equipped with an errant shield emitter, designed for ranging and harassment missions.
+    LOADOUT: 2x 20mm Rotary Cannons
+    MINIMUM CREW: 1x Pilot
+  price: 25000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/Fighters/ibis.yml
+
+- type: gameMap
+  id: Ibis
+  mapName: 'DSM Ibis'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/Fighters/ibis.yml
+  minPlayers: 0
+  stations:
+    Ibis:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: fighter
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Ibis {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-fighter

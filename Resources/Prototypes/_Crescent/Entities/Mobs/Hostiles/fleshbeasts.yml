@@ -123,7 +123,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 160
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -228,8 +228,8 @@
       types:
         Blunt: 25
   - type: MeleeThrowOnHit
-    speed: 30
-    lifetime: 0.2
+    speed: 8
+    lifetime: 0.4
   - type: KnockdownOnHit
     duration: 1
   - type: Fixtures
@@ -247,7 +247,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 575
       behaviors:
       - !type:PlaySoundBehavior
         sound:

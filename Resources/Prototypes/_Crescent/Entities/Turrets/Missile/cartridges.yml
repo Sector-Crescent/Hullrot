@@ -1,4 +1,28 @@
 - type: entity
+  id: Cartridge30mmRocket
+  name: 30mm Missile
+  description: Luckily not armed. You think.
+  parent: MissileBaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgePila
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: PilaRocketProjectile
+  - type: Sprite
+    sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/shortbow.rsi
+    layers:
+    - state: shortbow
+      map: ["enum.AmmoVisualLayers.Base"]
+      scale: 0.86, 0.86 # small difference to visually differentiate but not mixel *too* hard
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 145
+
+- type: entity
   id: Cartridge48mmRocket
   name: 48mm Missile
   description: Luckily not armed. You think.

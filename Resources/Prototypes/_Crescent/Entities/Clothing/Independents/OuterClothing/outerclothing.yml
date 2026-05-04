@@ -13,17 +13,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.9
-  - type: DegradeableArmor
-    armorMaxHealth: 500
-    armorType: Metallic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 2
-        Slash: 2
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Heat: 0.65
+        Cold: 0.65
+        Caustic: 0.65
+        Radiation: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -47,17 +45,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 100
-    armorType: Plastic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 6
-        Slash: 6
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1

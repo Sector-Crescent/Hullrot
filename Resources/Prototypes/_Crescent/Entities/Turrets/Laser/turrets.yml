@@ -170,8 +170,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 180
-      fireRate: 20
+      projectileSpeed: 330
+      fireRate: 10
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -231,7 +231,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 105
+      projectileSpeed: 300
       burstFireRate: 20
       burstCooldown: .2
       shotsPerBurst: 3
@@ -340,7 +340,7 @@
         gun_magazine: !type:ContainerSlot
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 110
+      projectileSpeed: 250
       burstFireRate: 20 #6.67 effective RPS
       burstCooldown: 1.05
       shotsPerBurst: 10

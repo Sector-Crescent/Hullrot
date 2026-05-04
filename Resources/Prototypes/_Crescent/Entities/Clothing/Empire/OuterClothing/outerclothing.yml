@@ -15,17 +15,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 2
-        Slash: 2
-        Heat: 8
-        Cold: 8
-        Caustic: 8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Heat: 0.6
+        Cold: 0.6
+        Caustic: 0.6
+        Radiation: 0.4
   - type: ClothingSpeedModifier
     walkModifier: 0.97
     sprintModifier: 0.97
@@ -41,7 +39,7 @@
       - ClothingOuterHardsuitClarizianWorker
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemableHigh, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitInspector
   name: mk. IV 'ORATEUR' combat hardsuit
   description: A modular combat hardsuit for the Advocati Compliance Corps. Bears the colors of the Kaiserin's administration.
@@ -55,17 +53,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 25
-        Slash: 25
-        Piercing: 50
-        Heat: 25
-        Caustic: 25
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.8
+        Cold: 0.8
+        Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -126,17 +121,14 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/archmaester.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/OuterClothing/archmaester.rsi
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: DuraThread
-    initialModifiers:
-      flatReductions:
-        Blunt: 4
-        Slash: 4
-        Heat: 6
-        Cold: 6
-        Caustic: 6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: StaticPrice
     price: 500
   - type: ClothingAddFaction
@@ -205,17 +197,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 7
-        Slash: 7
-        Heat: 7
-        Cold: 7
-        Caustic: 7
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Heat: 0.7
+        Cold: 0.7
+        Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -247,17 +236,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.8
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 5
-        Slash: 5
-        Heat: 5
-        Cold: 5
-        Caustic: 5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.8
+        Cold: 0.8
+        Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -296,17 +282,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 6
-        Slash: 6
-        Heat: 6
-        Cold: 6
-        Caustic: 6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Heat: 0.7
+        Cold: 0.7
+        Caustic: 0.7
+        Radiation: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.97
     sprintModifier: 0.97
@@ -322,6 +306,19 @@
       - ClothingOuterHardsuitImperialKnight
       - ClothingOuterHardsuitImperialSoldier
       - ClothingOuterHardsuitImperialWorker
+
+- type: entity
+  parent: ClothingOuterHardsuitImperialSoldier
+  id: ClothingOuterHardsuitImperialBanneret
+  name: MECS Typ 1 'SABRE' Modified Hardsuit
+  description: A variation of the MECS Typ1 hardsuit designed to distinguish minor nobility on the battlefield. It's outfitted with pauldrons and a skirt, with some tasteful gold plating.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatebanneret.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/Empire/OuterClothing/mandatebanneret.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitImperialBanneret
 
 - type: entity
   parent: ClothingOuterHardsuitImperialSoldier
@@ -357,17 +354,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 8
-        Slash: 8
-        Heat: 8
-        Cold: 8
-        Caustic: 8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Heat: 0.75
+        Cold: 0.75
+        Caustic: 0.75
   - type: ClothingSpeedModifier #mildly better than other jugsuits, but far worse protection than a T2
     walkModifier: 0.6
     sprintModifier: 0.6
@@ -411,17 +405,14 @@
         fontSize: 15
         color: "#ff2106"
         requireDetailRange: true
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: AllowSuitStorage
@@ -486,17 +477,14 @@
         fontSize: 15
         color: "#ff2106"
         requireDetailRange: true
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: NTPolymer
-    initialModifiers:
-      flatReductions:
-        Blunt: 12
-        Slash: 12
-        Heat: 4
-        Cold: 4
-        Caustic: 4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Heat: 0.8
+        Cold: 0.8
+        Caustic: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.80
   - type: StaticPrice
@@ -525,17 +513,14 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateadjutant.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateadjutant.rsi
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: DuraThread
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: StaticPrice
     price: 1500
   - type: ClothingAddFaction
@@ -551,17 +536,14 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/advocatus.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/OuterClothing/advocatus.rsi
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: DuraThread
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: StaticPrice
     price: 1500
   - type: ClothingAddFaction
@@ -577,17 +559,14 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateminister.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandateminister.rsi
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: DuraThread
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: StaticPrice
     price: 1500
   - type: ClothingAddFaction
@@ -603,17 +582,14 @@
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandategovernor.rsi
   - type: Clothing
     sprite: _Crescent/Clothing/Empire/OuterClothing/mandategovernor.rsi
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: NTPolymer
-    initialModifiers:
-      flatReductions:
-        Blunt: 12
-        Slash: 12
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: StaticPrice
     price: 2000
   - type: ClothingAddFaction
@@ -698,17 +674,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 500
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.8
+        Cold: 0.8
+        Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -739,17 +712,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 500
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 20
-        Piercing: 20
-        Heat: 20
-        Caustic: 25
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.6
+        Cold: 0.6
+        Caustic: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1

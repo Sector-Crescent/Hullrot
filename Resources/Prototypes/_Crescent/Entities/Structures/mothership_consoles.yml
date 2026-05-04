@@ -6,9 +6,11 @@
   - type: ShipyardListing
     shuttles:
     - Vanguard
+    - Krechet
+    - Zorniy
     - Lodka
-    - Hind
-    - Vasinya
+    # - Hind
+    # - Vasinya
     - Psoglav
 
 - type: entity
@@ -59,9 +61,9 @@
     - Ibis
     - Impel
     - Covetor
-    - Gnosis
-    - Praxis
-    - Praetorian
+    # - Gnosis
+    # - Praxis
+    # - Praetorian
 
 - type: entity
   id: NemesisMothershipComputer
@@ -121,7 +123,7 @@
   - type: ShipyardListing
     shuttles:
     - buffalo
-    - gazpachov
+    - mako
     - Chanchu
     - Nazaar
 
@@ -132,7 +134,7 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Velator
+    # - Velator
     - Taipan
     - Wreck
     - Spriggan
@@ -308,3 +310,12 @@
   - type: ShipyardListing
     shuttles:
     - Peasant
+
+- type: entity
+  id: HerderMothershipComputer
+  parent: BaseMothershipComputer
+  name: herder internal shipyard
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Stain

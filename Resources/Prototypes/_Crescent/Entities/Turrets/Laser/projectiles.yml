@@ -36,6 +36,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -67,12 +70,15 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 4
+        Heat: 40
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -81,7 +87,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 3 #540
+    lifetime: 2.36
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -98,12 +104,15 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
     damage:
       types:
-        Heat: 71
+        Heat: 90
   - type: ProjectileIFF
     visualType: Circle
     color: Red
@@ -112,7 +121,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 10.1 #1062
+    lifetime: 3.167
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -125,6 +134,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true
@@ -139,7 +151,7 @@
     color: blue
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 18.2 #2000m
+    lifetime: 8
   - type: Sprite
     sprite: _Crescent/Objects/Turrets/Ammunition/Projectiles/lasers.rsi
     layers:
@@ -152,6 +164,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ShipWeaponProjectile
   - type: Projectile
     ignoreWeaponGrid: true

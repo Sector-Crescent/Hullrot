@@ -1,0 +1,29 @@
+- type: vessel
+  id: onryo
+  name: SHI Onryo
+  description: A CorpSec light corvette tailored to escort duty for SHI mining and merchant vessels.
+  price: 45000
+  category: Medium
+  group: None
+  path: /Maps/_Crescent/Shuttles/SHI/onryo.yml
+
+- type: gameMap
+  id: onryo
+  mapName: 'SHI Onryo'
+  mapPath: /Maps/_Crescent/Shuttles/SHI/onryo.yml
+  minPlayers: 0
+  stations:
+    onryo:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Onryo {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-patrol

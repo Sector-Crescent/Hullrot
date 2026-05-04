@@ -19,6 +19,7 @@ public sealed class ShipShieldOverlay : Overlay
     private readonly FixtureSystem _fixture;
     private readonly SharedPhysicsSystem _physics;
     private readonly ShaderInstance _unshadedShader;
+    private readonly List<DrawVertexUV2D> _verts = new(128);
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
 
     public ShipShieldOverlay(IEntityManager entityManager, IPrototypeManager prototypeManager, IResourceCache resourceCache)
@@ -50,21 +51,18 @@ public sealed class ShipShieldOverlay : Overlay
 
             var fixture = _fixture.GetFixtureOrNull(uid, "shield", fixtures);
 
-            if (fixture == null || fixture.Shape is not ChainShape)
+            if (fixture is not { Shape: ChainShape chain })
                 continue;
-
-            var chain = (ChainShape) fixture.Shape;
 
             var texture = _resourceCache.GetTexture("/Textures/_Crescent/ShipShields/shieldtex.png");
 
-            DrawShield(handle, uid, chain, xform, texture);
+            DrawShield(handle, uid, chain, xform, texture, _verts);
+            _verts.Clear();
         }
     }
 
-    private void DrawShield(DrawingHandleWorld handle, EntityUid uid, ChainShape chain, TransformComponent xform, Texture tex)
+    private void DrawShield(DrawingHandleWorld handle, EntityUid uid, ChainShape chain, TransformComponent xform, Texture tex, List<DrawVertexUV2D> verts)
     {
-        List<DrawVertexUV2D> verts = new List<DrawVertexUV2D>();
-
         // The vertices of this fixture are defined relative to local position,
         // so we'll have to add them to this and then use the matrix to put them back in world position.
         var localPos = xform.LocalPosition;

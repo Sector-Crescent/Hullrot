@@ -109,17 +109,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 750
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 2
-        Slash: 2
-        Heat: 8
-        Cold: 8
-        Caustic: 8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.6
+        Cold: 0.6
+        Caustic: 0.6
+        Radiation: 0.4
   - type: ClothingSpeedModifier
     walkModifier: 0.97
     sprintModifier: 0.97
@@ -152,17 +150,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 900
-    armorType: Ceramic
-    armorRepair: NTCeramic
-    initialModifiers:
-      flatReductions:
-        Blunt: 6
-        Slash: 6
-        Heat: 6
-        Cold: 6
-        Caustic: 6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Heat: 0.7
+        Cold: 0.7
+        Caustic: 0.7
+        Radiation: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -227,17 +223,15 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.4
-  - type: DegradeableArmor
-    armorMaxHealth: 2000
-    armorType: Ceramic
-    armorRepair: NTCeramic
-    initialModifiers:
-      flatReductions:
-        Blunt: 8
-        Slash: 8
-        Heat: 8
-        Cold: 8
-        Caustic: 8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Heat: 0.6
+        Cold: 0.6
+        Caustic: 0.6
+        Radiation: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.6
@@ -264,7 +258,7 @@
       - ClothingOuterHardsuitHighsecIndependent
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, StreeCredRedeemable, ClothingArmorInsertHardsuit]
+  parent: [ClothingOuterArmorBasic, StreeCredRedeemable]
   id: ClothingOuterHardsuitSHISpeedsuit
   name: Shinohara Corporation SVBT-2XB "RAIKU" Combat Operations Hardsuit
   description: An experimental remodel of the original SVBT-2 hardsuit, which rips out most of the armor, in exchange for fitting an exo-skeleton, that drastically reduces the weight of the suit, and allows the user to move around incredibly quietly.
@@ -288,17 +282,15 @@
     reduction: 0.75
   - type: ExplosionResistance
     damageCoefficient: 1
-  - type: DegradeableArmor
-    armorMaxHealth: 500
-    armorType: Ceramic
-    armorRepair: NTCeramic
-    initialModifiers:
-      flatReductions:
-        Blunt: 5
-        Slash: 5
-        Heat: 5
-        Cold: 5
-        Caustic: 5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.8
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     sprintModifier: 1.3
   - type: FootstepModifier
@@ -335,17 +327,14 @@
         fontSize: 15
         color: "#ff2106"
         requireDetailRange: true
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: PlasteelEncasedKevlar
-    initialModifiers:
-      flatReductions:
-        Blunt: 10
-        Slash: 10
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0
@@ -376,17 +365,14 @@
         fontSize: 15
         color: "#ff2106"
         requireDetailRange: true
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: PlasteelEncasedKevlar
-    initialModifiers:
-      flatReductions:
-        Blunt: 6
-        Slash: 6
-        Heat: 2
-        Cold: 2
-        Caustic: 2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.95
+        Cold: 0.95
+        Caustic: 0.95
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0
@@ -419,17 +405,14 @@
         fontSize: 15
         color: "#ff2106"
         requireDetailRange: true
-  - type: DegradeableArmor
-    armorMaxHealth: 1000
-    armorType: Metallic
-    armorRepair: NTPolymer
-    initialModifiers:
-      flatReductions:
-        Blunt: 12
-        Slash: 12
-        Heat: 4
-        Cold: 4
-        Caustic: 4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Heat: 0.8
+        Cold: 0.8
+        Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 1.0

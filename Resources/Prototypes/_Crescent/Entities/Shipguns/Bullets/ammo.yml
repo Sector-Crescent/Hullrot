@@ -470,3 +470,63 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRocketHighYield
+
+# 30mm Rocket Magazines
+
+- type: entity
+  id: BaseMagazineRocket30mm
+  name: 30mm rocket magazine
+  description: A 6-round magazine capable of holding 30mm rockets. Fits in some launchers.
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - MagazineRocket30mm
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Rocket30mm
+    capacity: 6
+    soundRack:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        variation: 0.05
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+      params:
+        variation: 0.05
+  - type: Item
+    size: Large
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineRocket30mmEmpty
+  name: 30mm rocket magazine
+  parent: BaseMagazineRocket30mm
+  components:
+  - type: BallisticAmmoProvider
+
+- type: entity
+  id: MagazineRocket30mmLowYield
+  name: 30mm rocket magazine
+  suffix: (low yield)
+  parent: BaseMagazineRocket30mm
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge30mmRocket

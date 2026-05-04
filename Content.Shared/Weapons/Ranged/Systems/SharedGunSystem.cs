@@ -50,6 +50,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Robust.Shared.Spawners;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -1028,6 +1029,9 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         cartridge.Spent = spent;
         Appearance.SetData(uid, AmmoVisuals.Spent, spent);
+
+        if (spent && !cartridge.DeleteOnSpawn)
+            EnsureComp<TimedDespawnComponent>(uid).Lifetime = 30f;
     }
 
     /// <summary>

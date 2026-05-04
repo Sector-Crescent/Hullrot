@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -21,6 +22,7 @@ using Robust.Shared.Threading;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using static Content.Shared.Decals.DecalGridComponent;
+using ChunkIndicesEnumerator = Robust.Shared.Map.Enumerators.ChunkIndicesEnumerator;
 
 namespace Content.Server.Decals
 {
@@ -35,6 +37,7 @@ namespace Content.Server.Decals
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+        [Dependency] private readonly SharedTransformSystem _transform = default!;
 
         private readonly Dictionary<NetEntity, HashSet<Vector2i>> _dirtyChunks = new();
         private readonly Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> _previousSentChunks = new();
@@ -44,14 +47,13 @@ namespace Content.Server.Decals
         private UpdatePlayerJob _updateJob;
         private List<ICommonSession> _sessions = new();
 
-        // If this ever gets parallelised then you'll want to increase the pooled count.
-        private ObjectPool<HashSet<Vector2i>> _chunkIndexPool =
-            new DefaultObjectPool<HashSet<Vector2i>>(
-                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(), 64);
+        private static readonly ThreadLocal<ObjectPool<HashSet<Vector2i>>> ChunkIndexPool =
+            new(() => new DefaultObjectPool<HashSet<Vector2i>>(
+                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(), 64));
 
-        private ObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>> _chunkViewerPool =
-            new DefaultObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>>(
-                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(), 64);
+        private static readonly ThreadLocal<ObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>>> ChunkViewerPool =
+            new(() => new DefaultObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>>(
+                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(), 64));
 
         public override void Initialize()
         {
@@ -88,7 +90,7 @@ namespace Content.Server.Decals
                 playerData.Clear();
             }
 
-            var query = EntityQueryEnumerator<DecalGridComponent, MetaDataComponent>();
+            var query = AllEntityQuery<DecalGridComponent, MetaDataComponent>();
             while (query.MoveNext(out var uid, out var grid, out var meta))
             {
                 grid.ForceTick = _timing.CurTick;
@@ -158,18 +160,22 @@ namespace Content.Server.Decals
 
         private void OnTileChanged(ref TileChangedEvent args)
         {
+            if (!TryComp(args.Entity, out DecalGridComponent? grid))
+                return;
+
+            var toDelete = new HashSet<uint>();
+
             foreach (var change in args.Changes)
             {
                 if (!change.NewTile.IsSpace(_tileDefMan))
-                    return;
-
-                if (!TryComp(args.Entity, out DecalGridComponent? grid))
-                    return;
+                    continue;
 
                 var indices = GetChunkIndices(change.GridIndices);
-                var toDelete = new HashSet<uint>();
+
                 if (!grid.ChunkCollection.ChunkCollection.TryGetValue(indices, out var chunk))
-                    return;
+                    continue;
+
+                toDelete.Clear();
 
                 foreach (var (uid, decal) in chunk.Decals)
                 {
@@ -181,7 +187,7 @@ namespace Content.Server.Decals
                 }
 
                 if (toDelete.Count == 0)
-                    return;
+                    continue;
 
                 foreach (var decalId in toDelete)
                 {
@@ -251,7 +257,7 @@ namespace Content.Server.Decals
             if (!coordinates.IsValid(EntityManager))
                 return;
 
-            var gridId = coordinates.GetGridUid(EntityManager);
+            var gridId = _transform.GetGrid(coordinates);
 
             if (gridId == null)
                 return;
@@ -298,10 +304,10 @@ namespace Content.Server.Decals
             if (!PrototypeManager.HasIndex<DecalPrototype>(decal.Id))
                 return false;
 
-            var gridId = coordinates.GetGridUid(EntityManager);
+            var gridId = _transform.GetGrid(coordinates);
             if (!TryComp(gridId, out MapGridComponent? grid))
                 return false;
-            // hullrot edit , let directionals bypass the space verificaton! SPCR 2025
+
             if (_mapSystem.GetTileRef(gridId.Value, grid, coordinates).IsSpace(_tileDefMan) && !decal.Directional)
                 return false;
 
@@ -337,6 +343,33 @@ namespace Content.Server.Decals
                 if (validDelegate == null || validDelegate(decal))
                 {
                     decalIds.Add((uid, decal));
+                }
+            }
+
+            return decalIds;
+        }
+
+        public HashSet<(uint Index, Decal Decal)> GetDecalsIntersecting(EntityUid gridUid, Box2 bounds, DecalGridComponent? component = null)
+        {
+            var decalIds = new HashSet<(uint, Decal)>();
+            var chunkCollection = ChunkCollection(gridUid, component);
+
+            if (chunkCollection == null)
+                return decalIds;
+
+            var chunks = new ChunkIndicesEnumerator(bounds, ChunkSize);
+
+            while (chunks.MoveNext(out var chunkOrigin))
+            {
+                if (!chunkCollection.TryGetValue(chunkOrigin.Value, out var chunk))
+                    continue;
+
+                foreach (var (id, decal) in chunk.Decals)
+                {
+                    if (!bounds.Contains(decal.Coordinates))
+                        continue;
+
+                    decalIds.Add((id, decal));
                 }
             }
 
@@ -432,9 +465,12 @@ namespace Content.Server.Decals
 
         public void UpdatePlayer(ICommonSession player)
         {
-            var chunksInRange = _chunking.GetChunksForSession(player, ChunkSize, _chunkIndexPool, _chunkViewerPool);
-            var staleChunks = _chunkViewerPool.Get();
+            var indexPool = ChunkIndexPool.Value!;
+            var viewerPool = ChunkViewerPool.Value!;
+            var chunksInRange = _chunking.GetChunksForSession(player, ChunkSize, indexPool, viewerPool);
+            var staleChunks = viewerPool.Get();
             var previouslySent = _previousSentChunks[player];
+            var previouslySentRemoveBuffer = new List<NetEntity>();
 
             // Get any chunks not in range anymore
             // Then, remove them from previousSentChunks (for stuff like grids out of range)
@@ -445,25 +481,12 @@ namespace Content.Server.Decals
                 // Mark the whole grid as stale and flag for removal.
                 if (!chunksInRange.TryGetValue(netGrid, out var chunks))
                 {
-                    previouslySent.Remove(netGrid);
-
-                    // Was the grid deleted?
-                    if (TryGetEntity(netGrid, out var gridId) && HasComp<MapGridComponent>(gridId.Value))
-                    {
-                        // no -> add it to the list of stale chunks
-                        staleChunks[netGrid] = oldIndices;
-                    }
-                    else
-                    {
-                        // If the grid was deleted then don't worry about telling the client to delete the chunk.
-                        oldIndices.Clear();
-                        _chunkIndexPool.Return(oldIndices);
-                    }
+                    previouslySentRemoveBuffer.Add(netGrid);
 
                     continue;
                 }
 
-                var elmo = _chunkIndexPool.Get();
+                var elmo = indexPool.Get();
 
                 // Get individual stale chunks.
                 foreach (var chunk in oldIndices)
@@ -476,17 +499,36 @@ namespace Content.Server.Decals
 
                 if (elmo.Count == 0)
                 {
-                    _chunkIndexPool.Return(elmo);
+                    indexPool.Return(elmo);
                     continue;
                 }
 
                 staleChunks.Add(netGrid, elmo);
             }
 
-            var updatedChunks = _chunkViewerPool.Get();
+            foreach (var netGrid in previouslySentRemoveBuffer)
+            {
+                if (!previouslySent.Remove(netGrid, out var oldIndices))
+                    continue;
+
+                // Was the grid deleted?
+                if (TryGetEntity(netGrid, out var gridId) && HasComp<MapGridComponent>(gridId.Value))
+                {
+                    // no -> add it to the list of stale chunks
+                    staleChunks[netGrid] = oldIndices;
+                }
+                else
+                {
+                    // If the grid was deleted then don't worry about telling the client to delete the chunk.
+                    oldIndices.Clear();
+                    indexPool.Return(oldIndices);
+                }
+            }
+
+            var updatedChunks = viewerPool.Get();
             foreach (var (netGrid, gridChunks) in chunksInRange)
             {
-                var newChunks = _chunkIndexPool.Get();
+                var newChunks = indexPool.Get();
                 _dirtyChunks.TryGetValue(netGrid, out var dirtyChunks);
 
                 if (!previouslySent.TryGetValue(netGrid, out var previousChunks))
@@ -500,13 +542,13 @@ namespace Content.Server.Decals
                     }
 
                     previousChunks.Clear();
-                    _chunkIndexPool.Return(previousChunks);
+                    indexPool.Return(previousChunks);
                 }
 
                 previouslySent[netGrid] = gridChunks;
 
                 if (newChunks.Count == 0)
-                    _chunkIndexPool.Return(newChunks);
+                    indexPool.Return(newChunks);
                 else
                     updatedChunks[netGrid] = newChunks;
             }
@@ -517,14 +559,16 @@ namespace Content.Server.Decals
 
         private void ReturnToPool(Dictionary<NetEntity, HashSet<Vector2i>> chunks)
         {
+            var indexPool = ChunkIndexPool.Value!;
+            var viewerPool = ChunkViewerPool.Value!;
             foreach (var (_, previous) in chunks)
             {
                 previous.Clear();
-                _chunkIndexPool.Return(previous);
+                indexPool.Return(previous);
             }
 
             chunks.Clear();
-            _chunkViewerPool.Return(chunks);
+            viewerPool.Return(chunks);
         }
 
         private void SendChunkUpdates(

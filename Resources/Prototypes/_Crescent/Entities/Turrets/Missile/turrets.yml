@@ -31,7 +31,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
+      projectileSpeed: 120
       fireRate: 2
       selectedMode: FullAuto
       availableModes:
@@ -97,7 +97,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 60
+      projectileSpeed: 150
       fireRate: 1
       selectedMode: FullAuto
       availableModes:
@@ -189,7 +189,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 55
+      projectileSpeed: 80
       fireRate: 0.2
       selectedMode: FullAuto
       availableModes:
@@ -370,7 +370,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 45
+      projectileSpeed: 40
       fireRate: 0.1
       selectedMode: FullAuto
       availableModes:
@@ -423,23 +423,20 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 80
+      projectileSpeed: 140
       fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
-    - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
-      rechargeSound:
-        path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-        params:
-          pitch: 1.2
-          variation: 0.08
-    - type: BasicEntityAmmoProvider
-      proto: PilaRocketProjectile
+    - type: BallisticAmmoProvider
+      cycleable: false
       capacity: 12
-      count: 12
+      fillWithDoAfter: false
+      proto: Cartridge30mmRocket
+      whitelist:
+        tags:
+        - CartridgePila
     - type: ApcPowerReceiver
       powerLoad: 1000
     - type: HardpointAnchorableOnly

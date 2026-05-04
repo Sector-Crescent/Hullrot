@@ -683,6 +683,24 @@
     ShipComponents: 6000
     ShipHull: 7000
 
+- type: latheRecipe
+  id: MakoLPC
+  result: ShipVoucherMako
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1000
+    ShipComponents: 2000
+    ShipHull: 1500
+
+- type: latheRecipe
+  id: OnryoLPC
+  result: ShipVoucherOnryo
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 2500
+    ShipComponents: 3000
+    ShipHull: 3500
+
 # MARK: Flatpacks
 
 - type: latheRecipe

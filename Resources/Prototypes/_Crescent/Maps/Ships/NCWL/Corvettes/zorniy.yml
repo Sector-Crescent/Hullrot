@@ -1,0 +1,31 @@
+
+
+- type: vessel
+  id: Zorniy
+  name: NCWL Zorniy
+  description: A light communard bomber.
+  price: 25000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/Corvettes/zorniy.yml
+
+- type: gameMap
+  id: Zorniy
+  mapName: 'NCWL Zorniy'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/Corvettes/zorniy.yml
+  minPlayers: 0
+  stations:
+    Zorniy:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Zorniy {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+

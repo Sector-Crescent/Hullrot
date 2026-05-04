@@ -1,0 +1,29 @@
+- type: vessel
+  id: mako
+  name: SHI Mako
+  description: The SHI Mako is a premium mining ship tailored to outperform various similar craft in the civilian market.
+  price: 34500
+  category: Small
+  group: Civilian
+  path: /Maps/_Crescent/Shuttles/SHI/mako.yml
+
+- type: gameMap
+  id: mako
+  mapName: 'SHI Mako'
+  mapPath: /Maps/_Crescent/Shuttles/SHI/mako.yml
+  minPlayers: 0
+  stations:
+    mako:
+      stationProto: StandardCrescentCivilianVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: miner
+        - type: StationNameSetup
+          mapNameTemplate: 'SHI Mako {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-mining

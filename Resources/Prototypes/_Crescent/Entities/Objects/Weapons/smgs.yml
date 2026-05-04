@@ -3,7 +3,7 @@
   name: NCWL DS3 Militant 9x39mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
   id: WeaponSubMachineGunMilitant
-  description: A 9x39 submachinegun designed for the NCWL internal police, comes with a huge supressor that makes it a pain in the ass to holster.
+  description: A 9x39 compact rifle, designed to be used by special forces units, and internal police. The integral suppressor makes the rifle a bitch to holster, but the silence is worth it.
   components:
   - type: Item
     shape:
@@ -39,11 +39,7 @@
     availableModes:
     - SemiAuto
     - FullAuto
-    angleIncrease: 15
-    angleDecay: 90
-    maxAngle: 90
-    minAngle: 1
-    fireRate: 12
+    fireRate: 7
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
       params:
@@ -64,7 +60,7 @@
   name: NCWL DS1 Watchdog 9x19mm
   parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
   id: WeaponSubMachineGunNCWLWatchdog
-  description: A light submachinegun of communard design. Union Foundries makes these for the common grunt, and the cheap materials probably reflect that.
+  description: A light, easily procurable sub machine gun, produced by the NCWL for Homeguard troops. The complete lack of stock does not breed much faith in the accuracy of this firearm.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
@@ -153,7 +149,7 @@
   name: NCWL DS2 Liberator .327
   parent: [BaseWeaponSubMachineGun, StreeCredRedeemable]
   id: WeaponSubMachineGunBloodhound
-  description: Manufactured for internal use by the Homeguard, the second entry of the Union Foundries focuses primarily on stopping power while sacrificing speed and agility.
+  description: A robust sub machine gun, chambered in a magnum caliber, and issued to lighter armed boarding troops. Beware, the frame of the firearm does not provide much control over the kick of the monsterous .327 cartridge.
   components:
     - type: Sprite
       sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi

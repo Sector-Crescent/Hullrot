@@ -435,13 +435,22 @@
     ShipHull: 4000
 
 - type: latheRecipe
+  id: ZorniyLPC
+  result: ShipVoucherZorniy
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 1500
+    ShipComponents: 4500
+    ShipHull: 2000
+
+- type: latheRecipe
   id: KrechetLPC
   result: ShipVoucherKrechet
   completetime: 1
   materials:
-    StarshipEngineComponents: 1500
+    StarshipEngineComponents: 1000
     ShipComponents: 1500
-    ShipHull: 1000
+    ShipHull: 500
 
 - type: latheRecipe
   id: IvarodLPC
@@ -462,6 +471,24 @@
     ShipHull: 6000
 
 - type: latheRecipe
+  id: StraznikLPC
+  result: ShipVoucherStraznik
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 2000
+    ShipComponents: 5000
+    ShipHull: 6000
+
+- type: latheRecipe
+  id: PsoglavLPC
+  result: ShipVoucherPsoglav
+  completetime: 1
+  materials:
+    StarshipEngineComponents: 4000
+    ShipComponents: 3000
+    ShipHull: 5000
+
+- type: latheRecipe
   id: GargutLPC
   result: ShipVoucherGargut
   completetime: 1
@@ -480,13 +507,13 @@
     ShipHull: 13000
 
 - type: latheRecipe
-  id: SunderLPC
-  result: ShipVoucherSunder
+  id: ListerLPC
+  result: ShipVoucherLister
   completetime: 1
   materials:
     StarshipEngineComponents: 5000
     ShipComponents: 6000
-    ShipHull: 11000
+    ShipHull: 6000
 
 - type: latheRecipe
   id: BogatyrLPC

@@ -4,18 +4,18 @@
   result: Cartridge40mmFrag
   completetime: 1
   materials:
-    MediumGaugeCasing: 10
-    Gunpowder: 25
+    # MediumGaugeCasing: 10
+    # Gunpowder: 25
     Steel: 10
-    BallisticSteel: 20
+    # BallisticSteel: 20
 
 - type: latheRecipe
   id: Cartridge40mmCan
   result: Cartridge40mmCan
   completetime: 1
   materials:
-    MediumGaugeCasing: 10
-    Gunpowder: 30
+    # MediumGaugeCasing: 10
+    # Gunpowder: 30
     Steel: 30
 
 - type: latheRecipe
@@ -23,8 +23,8 @@
   result: Cartridge40mmHEDP
   completetime: 2
   materials:
-    MediumGaugeCasing: 10
-    OrdnanceCompound: 25
+    # MediumGaugeCasing: 10
+    # OrdnanceCompound: 25
     Tungsten: 15
     Steel: 5
 
@@ -33,28 +33,32 @@
   result: Cartridge40mmSmoke
   completetime: 1
   materials:
-    MediumGaugeCasing: 10
-    Gunpowder: 30
-    RawSulfur: 25
+    # MediumGaugeCasing: 10
+    # Gunpowder: 30
+    # RawSulfur: 25
+    Steel: 30
+    Plasma: 30
 
 - type: latheRecipe
   id: Cartridge40mmThermobaric
   result: Cartridge40mmThermobaric
   completetime: 2
   materials:
-    MediumGaugeCasing: 10
-    OrdnanceCompound: 50
+    # MediumGaugeCasing: 10
+    # OrdnanceCompound: 50
     Steel: 10
+    Plasma: 30
 
 - type: latheRecipe
   id: Cartridge40mmEMP
   result: Cartridge40mmEMP
   completetime: 2
   materials:
-    MediumGaugeCasing: 10
-    OrdnanceCompound: 20
+    # MediumGaugeCasing: 10
+    # OrdnanceCompound: 20
     Steel: 5
     Copper: 20
+    Plasma: 30
 
 # 48mm
 - type: latheRecipe
@@ -63,9 +67,10 @@
   completetime: 2
   category: Missiles
   materials:
-    MediumGaugeCasing: 20
-    OrdnanceCompound: 50
+    # MediumGaugeCasing: 20
+    # OrdnanceCompound: 50
     Steel: 20
+    Plasma: 10
 
 # - type: latheRecipe
 #   id: Cartridge48mmRocketGorlex
@@ -84,10 +89,10 @@
   completetime: 3
   category: Missiles
   materials:
-    MediumGaugeCasing: 35
-    OrdnanceCompound: 60
+    # MediumGaugeCasing: 35
+    # OrdnanceCompound: 60
     Steel: 40
-
+    Plasma: 20
 # - type: latheRecipe  #need to work on factional variant recipes
 #   id: Cartridge60mmRocketGorlex
 #   result: Cartridge60mmRocketGorlex
@@ -124,18 +129,19 @@
   result: CartridgeRPG7Heat
   completetime: 4
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 60
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 60
     Tungsten: 40
     Steel: 10
+    Plasma: 10
 
 - type: latheRecipe
   id: CartridgeRPG7Tandem
   result: CartridgeRPG7Tandem
   completetime: 5
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 50
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 50
     Steel: 10
     Tungsten: 60
 
@@ -144,29 +150,32 @@
   result: CartridgeRPG7Thermobaric
   completetime: 4
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 80
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 80
     Steel: 5
+    Plasma: 30
 
 - type: latheRecipe
   id: CartridgeRPG7Emp
   result: CartridgeRPG7Emp
   completetime: 6
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 40
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 40
     Steel: 5
     Copper: 40
+    Plasma: 30
 
 - type: latheRecipe
   id: CartridgeRPG7Frag
   result: CartridgeRPG7Frag
   completetime: 6
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 40
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 40
     Steel: 10
-    BallisticSteel: 40
+    # BallisticSteel: 40
+    Plasma: 30
 
 # 80mm / RPG-2 Rockets
 - type: latheRecipe
@@ -174,19 +183,21 @@
   result: CartridgeRPG2Heat
   completetime: 5
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 40
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 40
     Tungsten: 30
     Steel: 10
+    Plasma: 30
 
 - type: latheRecipe
   id: CartridgeRPG2Frag
   result: CartridgeRPG2Frag
   completetime: 5
   materials:
-    MediumGaugeCasing: 50
-    OrdnanceCompound: 60
+    # MediumGaugeCasing: 50
+    # OrdnanceCompound: 60
     Steel: 40
+    Plasma: 30
 
 # 95mm
 - type: latheRecipe
@@ -195,9 +206,10 @@
   completetime: 6
   category: Missiles
   materials:
-    MediumGaugeCasing: 60
-    OrdnanceCompound: 60
+    # MediumGaugeCasing: 60
+    # OrdnanceCompound: 60
     Steel: 40
+    Plasma: 30
 
 # - type: latheRecipe
 #   id: Cartridge95mmRocketNCWL
@@ -226,9 +238,10 @@
   completetime: 8
   category: Missiles
   materials:
-    CompositeCasing: 20
-    OrdnanceCompound: 120
+    # CompositeCasing: 20
+    # OrdnanceCompound: 120
     Steel: 80
+    Plasma: 30
 
 # - type: latheRecipe
 #   id: Cartridge240mmRocketNCWL
@@ -248,8 +261,9 @@
   completetime: 12
   category: Missiles
   materials:
-    CompositeCasing: 40
-    OrdnanceCompound: 180
+    # CompositeCasing: 40
+    # OrdnanceCompound: 180
     Steel: 100
+    Plasma: 30
 
 #to do look at missile casing costs

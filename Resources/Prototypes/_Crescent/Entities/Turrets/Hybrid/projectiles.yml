@@ -5,7 +5,10 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectilePhasePrevent # still do not remove
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7" #you have no idea how hard it was to see the previous IFF color
@@ -20,7 +23,7 @@
     color: purple
     energy: 0.5
   - type: TimedDespawn
-    lifetime: 11.8 #1000
+    lifetime: 4.2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -34,6 +37,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7"
@@ -69,6 +75,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: ProjectileIFF
     visualType: Circle
     color: "#ea86f7"

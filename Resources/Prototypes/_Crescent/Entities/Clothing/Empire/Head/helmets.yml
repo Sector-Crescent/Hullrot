@@ -244,6 +244,17 @@
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitImperialSoldier
+  id: ClothingHeadHelmetHardsuitImperialBanneret
+  categories: [ HideSpawnMenu ]
+  name: imperial banneret hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/Empire/Head/mandatebanneret.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/Empire/Head/mandatebanneret.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitImperialSoldier
   id: ClothingHeadHelmetHardsuitImperialCoronet
   categories: [ HideSpawnMenu ]
   name: imperial coronet hardsuit helmet

@@ -41,6 +41,10 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -69,6 +73,10 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -97,6 +105,10 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -126,6 +138,10 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -162,6 +178,10 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -212,7 +232,7 @@
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Interact/mag_drop.ogg
 
-#---------- 6x24mm Railgun (Charge) ----------  
+#---------- 6x24mm Railgun (Charge) ----------
 - type: entity
   id: Magazine6x24mmCharge
   name: "25-round magazine (6x24mm Charge)"
@@ -221,7 +241,7 @@
   - type: BallisticAmmoProvider
     proto: Cartridge6x24mmCharge
 
-#---------- 6x24mm Railgun (Concentrated) ----------  
+#---------- 6x24mm Railgun (Concentrated) ----------
 - type: entity
   id: Magazine6x24mmConcentrated
   name: "25-round magazine (6x24mm Concentrated)"
@@ -230,7 +250,7 @@
   - type: BallisticAmmoProvider
     proto: Cartridge6x24mmConcentrated
 
-#---------- 6x24mm Railgun (Ion) ----------  
+#---------- 6x24mm Railgun (Ion) ----------
 - type: entity
   id: Magazine6x24mmIon
   name: "25-round magazine (6x24mm Ion)"
@@ -239,7 +259,7 @@
   - type: BallisticAmmoProvider
     proto: Cartridge6x24mmIon
 
-#---------- 6x24mm Railgun (Incendiary) ----------  
+#---------- 6x24mm Railgun (Incendiary) ----------
 - type: entity
   id: Magazine6x24mmIncendiary
   name: "25-round magazine (6x24mm Incendiary)"
@@ -247,8 +267,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge6x24mmIncendiary
-      
-#---------- 6x24mm Railgun (Shock) ----------  
+
+#---------- 6x24mm Railgun (Shock) ----------
 - type: entity
   id: Magazine6x24mmShock
   name: "25-round magazine (6x24mm Shock)"

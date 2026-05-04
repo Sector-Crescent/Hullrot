@@ -524,6 +524,23 @@
 
 - type: entity
   parent: BaseItem
+  id: ShipVoucherZorniy
+  name: NCWL 'Zorniy' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a communard Zorniy-class light fighter pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Zorniy
+
+- type: entity
+  parent: BaseItem
   id: ShipVoucherMolot
   name: NCWL 'Molot' pattern LPC fabprint disk
   description: An LPC fabprint disk loaded with a communard Molot-class shielded bomber pattern. Has to be redeemed at a shipyard console.
@@ -653,9 +670,9 @@
 
 - type: entity
   parent: BaseItem
-  id: ShipVoucherSunder
-  name: NCWL 'Sunder' pattern LPC fabprint disk
-  description: An LPC fabprint disk loaded with a communard Sunder-class energy cruiser pattern. Has to be redeemed at a shipyard console.
+  id: ShipVoucherLister
+  name: NCWL 'Lister' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a communard Lister-class battlecruiser pattern. Has to be redeemed at a shipyard console.
   components:
   - type: Item
     size: Small
@@ -666,10 +683,10 @@
   - type: StaticPrice
     price: 2500 #normally this'd be 75% from the ship price but having a t3 cruiser lpc sell for 50k is absurd
   - type: ShipVoucher
-    ship: Sunder
+    ship: Lister
   - type: ReverseEngineering # SectorCrescent
     recipes:
-      - SunderLPC
+      - ListerLPC
 
 #T3 END
 
@@ -857,6 +874,46 @@
   - type: ReverseEngineering # SectorCrescent
     recipes:
       - FujinLPC
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherOnryo
+  name: CSEC 'Onryo' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a CorpSec Onryo-class corvette pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: onryo
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - OnryoLPC
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherMako
+  name: CSEC 'Mako' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with a CorpSec Mako-class mining shuttle pattern. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: mako
+  - type: ReverseEngineering # SectorCrescent
+    recipes:
+      - MakoLPC
 
 #ncsp
 
@@ -2215,3 +2272,39 @@
     price: 2500
   - type: ShipVoucher
     ship: Lungspot
+
+# Scrapyard Ships
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherHerder
+  name: Scrapyard 'Herder' pattern LPC fabprint disk
+  description: A hacked and burned LPC disk containing the 'Herder' converted cargo ship.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 10000
+  - type: ShipVoucher
+    ship: Herder
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherAnthead
+  name: Scrapyard 'Anthead' pattern LPC fabprint disk
+  description: A hacked and burned LPC disk containing the 'Anthead' scrap ship.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Anthead

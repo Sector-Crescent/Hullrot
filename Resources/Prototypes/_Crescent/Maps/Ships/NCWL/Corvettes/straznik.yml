@@ -1,0 +1,31 @@
+# Author Info
+# Discord: @lokamatoka
+
+- type: vessel
+  id: Straznik
+  name: NCWL Straznik
+  description: A light communard corvette that leverages a largebore 120mm cannon and a thin, evasive profile to provide fire support for ships brawling to its front.
+  price: 50000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/Corvettes/straznik.yml
+
+- type: gameMap
+  id: Straznik
+  mapName: 'NCWL Straznik'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/Corvettes/straznik.yml
+  minPlayers: 0
+  stations:
+    Straznik:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Straznik {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
