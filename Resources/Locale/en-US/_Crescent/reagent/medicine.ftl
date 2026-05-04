@@ -15,3 +15,6 @@ reagent-desc-bloodeye = A chemical cocktail of combat drugs known to invoke viol
 
 reagent-name-jv201 = JV-201
 reagent-desc-jv201 = A versatile lubricant gel. It will increase the efficiency of living tissue, even if against organic will. Sourced from Carthage Industries.
+
+reagent-name-scop = Scop
+reagent-desc-scop = A disgusting mixture of "nutrients", the texture is similar to blended bone and sand.
