@@ -44,11 +44,19 @@ trait-name-Biomancer = Biomancer
 trait-description-Biomancer =
     Every night, I have a strange but specific dream. I see myself in an operating room, one me standing over another, in a coma.
     This version of me that is awake whispers unintelligable words that refuse to leave my brain, like it was something I've said all my life.
-    The comatose version of me wakes up. (you are not telepathic, nor can you obtain most powers, but you are able to learn healing word, psionic regeneration, and revivify)
+    The comatose version of me wakes up.
 
 trait-name-Pyromancer = Pyromancer
 trait-description-Pyromancer =
     For years, my sleep had been restless. every time I tried to sleep, it was always too hot, and it felt like something was trying to shine a light in my closed eyes.
     Then, I had a strange dream. an unrelenting flame in the middle of a frozen forest, refusing to give out and die. I get closer to the fire as the cold got more and more intense.
     The cold worsened until my only option was to step into the fire. It did not burn me, but instead surrounded me like it was clothing, protecting me from the relentless cold.
-    The flame was my shield. (you are not telepathic, nor can you obtain most powers, but you can learn flame flare and can unlock other pyrokinetic abilities)
+    The flame was my shield.
+
+trait-name-PsionicHunter = Psion Hunter
+trait-description-PsionHunter =
+    Test
+
+trait-name-AstralThief = Astral Thief
+trait-description-AstralThief =
+    Test

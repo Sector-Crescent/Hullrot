@@ -1,26 +1,26 @@
-- type: trait
-  id: LatentPsychic
-  category: Psionics
-  points: -4
-  functions:
-    - !type:TraitAddComponent
-      components:
-        - type: Psionic
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: TraitsCasterType
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Borg
-        - MedicalBorg
-        - Chaplain
-        - Prisoner
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - Moth
+#- type: trait
+#  id: LatentPsychic
+#  category: Psionics
+#  points: -4
+#  functions:
+#    - !type:TraitAddComponent
+#      components:
+#        - type: Psionic
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: TraitsCasterType
+#    - !type:CharacterJobRequirement
+#      inverted: true
+#      jobs:
+#        - Borg
+#        - MedicalBorg
+#        - Chaplain
+#        - Prisoner
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterSpeciesRequirement
+#          species:
+#            - Moth
 
 - type: trait
   id: PsionicInsulation
@@ -48,86 +48,86 @@
             - IPC
             - Oni
 
-- type: trait
-  id: PsychoHistorian
-  category: Psionics
-  points: -4
-  functions:
-    - !type:TraitAddComponent
-      components:
-        - type: Psionic
-          baselinePowerCost: 75
-          nextPowerCost: 75
-          removable: false
-          powerPool: PsychoHistorianPowerPool
-    - !type:TraitAddPsionics
-      psionicPowers:
-        - TelepathyPower
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: TraitsCasterType
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Borg
-        - MedicalBorg
-        - Chaplain
-        - Prisoner
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - Moth
+#- type: trait
+#  id: PsychoHistorian
+#  category: Psionics
+#  points: -4
+#  functions:
+#    - !type:TraitAddComponent
+#      components:
+#        - type: Psionic
+#          baselinePowerCost: 75
+#          nextPowerCost: 75
+#          removable: false
+#          powerPool: PsychoHistorianPowerPool
+#    - !type:TraitAddPsionics
+#      psionicPowers:
+#        - TelepathyPower
+#  requirements:
+#   - !type:CharacterItemGroupRequirement
+#      group: TraitsCasterType
+#    - !type:CharacterJobRequirement
+#      inverted: true
+#      jobs:
+#        - Borg
+#        - MedicalBorg
+#        - Chaplain
+#        - Prisoner
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterSpeciesRequirement
+#          species:
+#            - Moth
 
 
-- type: trait
-  id: Biomancer
-  category: Psionics
-  points: -4
-  functions:
-    - !type:TraitAddComponent
-      components:
-        - type: Psionic
-          powerPool: BiomancerPowerPool
-    - !type:TraitAddPsionics
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: TraitsCasterType
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Borg
-        - MedicalBorg
-        - Chaplain
-        - Prisoner
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - Moth
+#- type: trait
+#  id: Biomancer
+#  category: Psionics
+#  points: -4
+#  functions:
+#    - !type:TraitAddComponent
+#      components:
+#        - type: Psionic
+#          powerPool: BiomancerPowerPool
+#    - !type:TraitAddPsionics
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#     group: TraitsCasterType
+#    - !type:CharacterJobRequirement
+#      inverted: true
+#      jobs:
+#        - Borg
+#        - MedicalBorg
+#        - Chaplain
+#        - Prisoner
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterSpeciesRequirement
+#          species:
+#            - Moth
 
-- type: trait
-  id: Pyromancer
-  category: Psionics
-  points: -4
-  functions:
-    - !type:TraitAddComponent
-      components:
-        - type: Psionic
-          powerPool: PyromancerPowerPool
-    - !type:TraitAddPsionics
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: TraitsCasterType
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - Borg
-        - MedicalBorg
-        - Chaplain
-        - Prisoner
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          species:
-            - Moth
+#- type: trait
+#  id: Pyromancer
+#  category: Psionics
+#  points: -4
+# functions:
+#    - !type:TraitAddComponent
+#      components:
+#        - type: Psionic
+#          powerPool: PyromancerPowerPool
+#    - !type:TraitAddPsionics
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: TraitsCasterType
+#   - !type:CharacterJobRequirement
+#      inverted: true
+#     jobs:
+#        - Borg
+#        - MedicalBorg
+#        - Chaplain
+#        - Prisoner
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterSpeciesRequirement
+#          species:
+#            - Moth

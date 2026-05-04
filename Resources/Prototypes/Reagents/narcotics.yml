@@ -288,12 +288,12 @@
         type: Add
         time: 5
         refresh: false
-      - !type:ChemRerollPsionic #Nyano - Summary: lets the imbiber become psionic.
-        bonusMultiplier: 2
-        conditions:
-        - !type:ReagentThreshold
-          reagent: SpaceDrugs
-          min: 15
+#      - !type:ChemRerollPsionic #Nyano - Summary: lets the imbiber become psionic.
+#        bonusMultiplier: 2
+#        conditions:
+#        - !type:ReagentThreshold
+#          reagent: SpaceDrugs
+#          min: 15
       - !type:ChemAddMoodlet
         moodPrototype: SpaceDrugsBenefit
 

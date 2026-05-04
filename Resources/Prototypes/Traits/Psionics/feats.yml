@@ -1,37 +1,37 @@
-- type: trait
-  id: HighPotential
-  category: Psionics
-  points: -10
-  requirements:
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterTraitRequirement
-          traits:
-            - LatentPsychic
-            - PsychoHistorian
-            - Biomancer
-            - Pyromancer
-    - !type:CharacterLogicOrRequirement
-      requirements:
-        - !type:CharacterSpeciesRequirement
-          inverted: true
-          species:
-            - IPC
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Oni
-        - Voidborn
-  functions:
-    - !type:TraitReplaceComponent
-      components:
-        - type: PotentiaModifier
-          potentiaMultiplier: 1.5
+#- type: trait
+#  id: HighPotential
+#  category: Psionics
+#  points: -4
+#  requirements:
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterTraitRequirement
+#          traits:
+#            - LatentPsychic
+#            - PsychoHistorian
+#            - Biomancer
+#            - Pyromancer
+#    - !type:CharacterLogicOrRequirement
+#      requirements:
+#        - !type:CharacterSpeciesRequirement
+#          inverted: true
+#          species:
+#            - IPC
+#    - !type:CharacterSpeciesRequirement
+#      inverted: true
+#      species:
+#        - Oni
+#        - Voidborn
+#  functions:
+#    - !type:TraitReplaceComponent
+#      components:
+#        - type: PotentiaModifier
+#          potentiaMultiplier: 1.5
 
 - type: trait
   id: PowerOverwhelming
   category: Psionics
-  points: -10
+  points: -4
   requirements:
     - !type:CharacterLogicOrRequirement
       requirements:
@@ -41,6 +41,8 @@
             - PsychoHistorian
             - Biomancer
             - Pyromancer
+            - Elementalist
+            - AstralThief
     - !type:CharacterLogicOrRequirement
       requirements:
         - !type:CharacterSpeciesRequirement

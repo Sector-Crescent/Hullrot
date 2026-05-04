@@ -34,7 +34,7 @@ public sealed partial class EtherealComponent : Component
     ///     How much stamina damage does the user take each second they are in the dark realm?
     /// </summary>
     [DataField]
-    public float StaminaPerSecond = 1;
+    public float StaminaPerSecond = 10;
 
     [DataField]
     public float StaminaDamageOnFlash = 200f;

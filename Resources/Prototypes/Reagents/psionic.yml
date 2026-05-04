@@ -19,10 +19,10 @@
       #     "psionic-regeneration-essence-breath"
       #   ]
       #   probability: 0.15
-      - !type:SatiateThirst
-        factor: -3
-      - !type:SatiateHunger
-        factor: -3
+#      - !type:SatiateThirst
+#        factor: -3
+#      - !type:SatiateHunger
+#        factor: -3
       - !type:ModifyBleedAmount
         amount: -1
       - !type:ModifyBloodLevel
@@ -80,12 +80,12 @@
         type: Add
         time: 5
         refresh: false
-      - !type:ChemRerollPsionic
-        bonusMultiplier: 4
-        conditions:
-        - !type:ReagentThreshold
-          reagent: LotophagoiOil
-          min: 20
+#      - !type:ChemRerollPsionic
+#        bonusMultiplier: 4
+#        conditions:
+#        - !type:ReagentThreshold
+#          reagent: LotophagoiOil
+#          min: 20
       - !type:GenericStatusEffect
         key: Stutter
         component: ScrambledAccent

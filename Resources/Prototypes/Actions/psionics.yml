@@ -301,7 +301,7 @@
   components:
     - type: InstantAction
       icon: { sprite: Interface/Actions/voidborn_icons.rsi, state: darkswap }
-      useDelay: 10
+      useDelay: 8
       checkCanInteract: false
       event: !type:DarkSwapActionEvent
 

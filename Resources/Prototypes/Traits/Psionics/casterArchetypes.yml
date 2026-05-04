@@ -1,0 +1,210 @@
+- type: trait
+  id: PsionicHunter
+  category: Psionics
+  points: -4
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+        - type: Eye
+          visMask:
+            - PsionicInvisibility
+            - Normal
+            - Ethereal
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - PsychognomyPower
+        - MetapsionicPower
+        - AssayPower
+        - DispelPower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
+
+- type: trait
+  id: Pyromancer
+  category: Psionics
+  points: -8
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+        - type: EyeProtection
+        - type: FlashImmunity
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+        - PyrokineticFlare
+        - SummonImpPower
+        - PyrokinesisPower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
+
+- type: trait
+  id: AstralThief
+  category: Psionics
+  points: -8
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          roller: false
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+        - ShadeskipPower
+        - DarkSwapPower
+        - AnoigoPower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
+
+- type: trait
+  id: Biomancer
+  category: Psionics
+  points: -8
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+        - PsionicRegenerationPower
+        - HealingWordPower
+        - RevivifyPower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
+
+- type: trait
+  id: Elementalist
+  category: Psionics
+  points: -6
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+        - NoosphericZapPower
+        - TelekineticPulsePower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
+
+- type: trait
+  id: PsychoHistorian
+  category: Psionics
+  points: -8
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+          baselinePowerCost: 2000
+          nextPowerCost: 2000
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+        - XenoglossyPower
+        - PsychognomyPower
+        - TelegnosisPower
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsCasterType
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Chaplain
+        - Prisoner
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+            - Oni
