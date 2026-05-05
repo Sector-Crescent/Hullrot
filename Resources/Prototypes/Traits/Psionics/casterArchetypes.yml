@@ -40,7 +40,7 @@
 - type: trait
   id: Pyromancer
   category: Psionics
-  points: -8
+  points: -10
   functions:
     - !type:TraitAddComponent
       components:
@@ -72,11 +72,15 @@
           species:
             - IPC
             - Oni
+        - !type:CharacterTraitRequirement
+          inverted: true
+          traits:
+            - Photophobia
 
 - type: trait
   id: AstralThief
   category: Psionics
-  points: -8
+  points: -10
   functions:
     - !type:TraitAddComponent
       components:
@@ -111,7 +115,7 @@
 - type: trait
   id: Biomancer
   category: Psionics
-  points: -8
+  points: -10
   functions:
     - !type:TraitAddComponent
       components:
@@ -145,7 +149,7 @@
 - type: trait
   id: Elementalist
   category: Psionics
-  points: -6
+  points: -10
   functions:
     - !type:TraitAddComponent
       components:
@@ -178,7 +182,7 @@
 - type: trait
   id: PsychoHistorian
   category: Psionics
-  points: -8
+  points: -10
   functions:
     - !type:TraitAddComponent
       components:
