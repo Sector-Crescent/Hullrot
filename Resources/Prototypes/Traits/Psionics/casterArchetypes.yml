@@ -6,13 +6,9 @@
     - !type:TraitAddComponent
       components:
         - type: Psionic
+          roller: false
           baselinePowerCost: 2000
           nextPowerCost: 2000
-        - type: Eye
-          visMask:
-            - PsionicInvisibility
-            - Normal
-            - Ethereal
     - !type:TraitAddPsionics
       psionicPowers:
         - PsychognomyPower
@@ -45,6 +41,7 @@
     - !type:TraitAddComponent
       components:
         - type: Psionic
+          roller: false
           baselinePowerCost: 2000
           nextPowerCost: 2000
         - type: EyeProtection
@@ -120,6 +117,7 @@
     - !type:TraitAddComponent
       components:
         - type: Psionic
+          roller: false
           baselinePowerCost: 2000
           nextPowerCost: 2000
     - !type:TraitAddPsionics
@@ -154,6 +152,7 @@
     - !type:TraitAddComponent
       components:
         - type: Psionic
+          roller: false
           baselinePowerCost: 2000
           nextPowerCost: 2000
     - !type:TraitAddPsionics
@@ -187,6 +186,7 @@
     - !type:TraitAddComponent
       components:
         - type: Psionic
+          roller: false
           baselinePowerCost: 2000
           nextPowerCost: 2000
     - !type:TraitAddPsionics
