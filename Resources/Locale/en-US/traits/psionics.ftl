@@ -19,26 +19,15 @@ trait-name-Elementalist = Elementalist
 trait-description-Elementalist =
     'Elementalists' are a rare and modern form of Psion, noted for their potential for bombastic feats of "Kinesis".
     So rare were these individuals, that at one point in time they were known by titles such as Sorcerer, or Magician, if they weren't a charlatan that is.
-    As an Elementalist, your talent for developing new powers is severely limited.
-    Yet despite this tradeoff, your powers are more exclusively the realm of flashy and dangerous. You will never generate any powers known as "Mentalics".
+    Yet despite this tradeoff, your powers are more exclusively the realm of flashy and dangerous.
     You are almost certainly going to be hunted. Let others know what you can do at the peril of your very soul.
-
-    - You can never "roll" new powers. The powers you buy at character creation are all you will ever have.
-    - Your available powers are strictly limited to "Kinetics".
-    - You will never be Telepathic.
 
 trait-name-PsychoHistorian = Psycho-Historian
 trait-description-PsychoHistorian =
     Psycho-Historians are a fairly common and well-studied branch of psionic users, whose powers are documented in the public domain
     as far back as the 1970s on Earth. Mythological accounts of such individuals can also be traced back thousands of years. Today,
     Psycho-Historians make up the overwhelming bulk of the Epistemics Cult's awakened members. Your powers are generally regarded as "Safe", as they
-    exclusively interact from one mind to another without need of interacting with extra-planar forces. However, you will never be able
-    to learn any powers known as "Kinesis".
-
-    - Your powers are developed at a significantly faster rate than other psychics.
-    - Your available powers are strictly limited to "Mentalics"
-    - You are automatically considered Telepathic.
-
+    exclusively interact from one mind to another without need of interacting with extra-planar forces.
 
 trait-name-Biomancer = Biomancer
 trait-description-Biomancer =
@@ -53,10 +42,13 @@ trait-description-Pyromancer =
     The cold worsened until my only option was to step into the fire. It did not burn me, but instead surrounded me like it was clothing, protecting me from the relentless cold.
     The flame was my shield.
 
+    - You are immune to welding and flashes.
+
 trait-name-PsionicHunter = Psion Hunter
-trait-description-PsionHunter =
-    Test
+trait-description-PsionicHunter =
+    I thought I was crazy. I've been hearing voices, day or night, they never stop. My sleep is troubled, my focus eroded. I must silence them.
 
 trait-name-AstralThief = Astral Thief
 trait-description-AstralThief =
-    Test
+    I've always been good at blending in, standing in the back of a crowd unnoticed, getting into places I don't belong. But recently, something has felt off,
+    they look straight at me and walk past. I am no longer there.
