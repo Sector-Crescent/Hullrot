@@ -153,7 +153,8 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
 
         var chunk = Comp<WorldChunkComponent>(args.Chunk);
         var densityChannel = component.DensityNoiseChannel;
-        var density = _noiseIndex.Evaluate(uid, densityChannel, chunk.Coordinates + new Vector2(0.5f, 0.5f));
+        var density = _noiseIndex.Evaluate(uid, densityChannel, chunk.Coordinates + new Vector2(0.5f, 0.5f))
+                      * component.DensityMultiplier;
         if (density == 0)
             return;
 
@@ -170,6 +171,12 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
         }
 
         points ??= GeneratePointsInChunk(args.Chunk, density, chunk.Coordinates, chunk.Map);
+
+        if (component.MaxDebrisPerChunk is { } maxDebris && points.Count > maxDebris)
+        {
+            _random.Shuffle(points);
+            points = points.Take(maxDebris).ToList();
+        }
 
         var safetyBounds = Box2.UnitCentered.Enlarged(component.SafetyZoneRadius);
         var failures = 0; // Avoid severe log spam.
@@ -221,12 +228,12 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
 
             // Debug: Log every prototype selected for placement
             _sawmill.Debug($"[DebrisPlacer] Selected debris prototype '{debrisFeatureEv.DebrisProto}' for placement at {coords} (chunk {args.Chunk})");
-            
+
             // Check if the proto is a gameMap prototype
             // If the selected prototype is a gameMap, load it as a new grid instead of spawning as an entity.
             Content.Server.Maps.GameMapPrototype? gameMapProto = null;
             var isGameMap = false;
-            
+
             if (debrisFeatureEv.DebrisProto is { } mapProtoId)
             {
                 try
@@ -247,20 +254,20 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
                 var mapPath = gameMapProto.MapPath;
                 bool handled = false;
                 _sawmill.Debug($"[DebrisPlacer] Calling TryLoadGrid with path '{mapPath}' for '{debrisFeatureEv.DebrisProto}'");
-                
+
                 // Load as grid instead of map - wreck files contain grids, not maps
                 var mapId = Comp<MapComponent>(chunk.Map).MapId;
-                
+
                 // Calculate the offset from map origin (0,0) to the desired coordinates
                 // This ensures the grid spawns directly at the target location instead of at 0,0
                 var offset = coords.Position;
-                
+
                 var loadedGrid = _mapLoader.TryLoadGrid(mapId, mapPath, out var gridUid, offset: offset);
-                
+
                 if (loadedGrid && gridUid != null)
                 {
                     _sawmill.Debug($"[DebrisPlacer] Grid '{mapPath}' loaded successfully at {coords}. Grid: {gridUid}");
-                    
+
                     var grid = gridUid.Value;
                     component.OwnedDebris.Add(point, grid);
 
@@ -275,7 +282,7 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
                 {
                     _sawmill.Debug($"[DebrisPlacer] Failed to load grid '{mapPath}' for '{debrisFeatureEv.DebrisProto}'");
                 }
-                
+
                 // If not handled, increment failures for error reporting.
                 if (!handled)
                 {

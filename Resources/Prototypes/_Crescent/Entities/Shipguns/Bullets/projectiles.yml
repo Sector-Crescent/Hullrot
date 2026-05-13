@@ -1138,39 +1138,7 @@
     layers:
       - state: icon
 
-#needler projectile
 
-- type: entity
-  id: NeedlerBase
-  name: shell
-  parent: BaseBulletTrigger
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ShipWeaponProjectile
-  - type: Projectile
-    ignoreWeaponGrid: true
-    damage:
-      types:
-        Piercing: 500
-        Structural: 500
-  - type: TimedDespawn
-    lifetime: 20
-  - type: Sprite
-    sprite: _Crescent/Objects/ShuttleWeapons/needler.rsi
-    layers:
-      - state: base-projectile
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 1500
-    intensitySlope: 500
-    totalIntensity: 1500
-    maxTileBreak: 5
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
-  - type: ProjectileIFF
 
 #pilum projectile
 

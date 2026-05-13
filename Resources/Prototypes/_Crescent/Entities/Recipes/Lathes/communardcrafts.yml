@@ -602,11 +602,19 @@
     Plasma: 250
     NanotrasenElectronics: 1500
 
-#- type: latheRecipe
-#  id: NCWLRGD55M13
-#  result: RGD55M13Hendgrenade
-#  completetime: 2
-# materials:
-#   Plasma: 500
-#    Steel: 100
+- type: latheRecipe
+  id: RGD55M13Handgrenade
+  result: RGD55M13Handgrenade
+  completetime: 2
+  materials:
+   Plasma: 400
+   Steel: 100
 
+- type: latheRecipe
+  id: ZaryiaFlashbangHandgrenade
+  result: ZaryiaFlashbangHandgrenade
+  completetime: 2
+  materials:
+   Plastic: 100
+   Plasma: 50
+   Steel: 150

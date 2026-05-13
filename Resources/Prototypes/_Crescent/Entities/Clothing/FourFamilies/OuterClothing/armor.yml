@@ -1,7 +1,7 @@
 #hardsuits
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitDraugr
   name: DRAUGR mk.I pressurized combat exosuit
   description: A combat hardsuit of antiquated make. Tribal fetishes adorn the dented breastplate. Used by many Pacters belonging to the Al'Seik family.
@@ -15,15 +15,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor # I am completely winging this. This is complete dogshit. Thankfully, 'abysmal dogshit' is all that's being asked of me.
-    armorMaxHealth: 100
-    armorType: Plastic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 36
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -39,7 +38,7 @@
       - ClothingOuterHardsuitThukker
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitArabet
   name: prophet's pressurized hardsuit
   description: An unusual hardsuit constructed of sleek plasteel, gilded with tribal patterns. The shoulderplates bear the mark of the Arabet family of the Pact.
@@ -53,15 +52,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 100
-    armorType: Plastic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 36
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -71,7 +69,7 @@
     price: 1000
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitIzdari
   name: izdari beltrunner's armored hardsuit
   description: A modified version of an antiquated atmospheric techinican's hardsuit. Around three generations out of date. Attributed commonly to the Izdari family.
@@ -85,15 +83,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 100
-    armorType: Plastic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 36
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -109,7 +106,7 @@
       - ClothingOuterHardsuitDraugr
 
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitThukker
   name: thukker combat engineer's hardsuit
   description: A modified mining hardsuit adorned with the livery of the Thukker family of the Pact. Features bulky lead shielding against radiation.
@@ -123,15 +120,14 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 100
-    armorType: Plastic
-    armorRepair: SteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 36
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Caustic: 0.9
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1

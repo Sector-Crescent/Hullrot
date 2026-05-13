@@ -7,11 +7,34 @@
     HorizontalExpand="True"
     VerticalExpand="True"
     MinSize="465 225">
-    <PanelContainer Name="ChatWindowPanel" Access="Public" HorizontalExpand="True" VerticalExpand="True"
-                    StyleClasses="StyleNano.StyleClassChatPanel">
-        <BoxContainer Orientation="Vertical" SeparationOverride="4" HorizontalExpand="True" VerticalExpand="True">
-            <OutputPanel Name="Contents" HorizontalExpand="True" VerticalExpand="True" Margin="8 8 8 4" />
-            <controls:ChatInputBox HorizontalExpand="True" Name="ChatInput" Access="Public" Margin="2"/>
+
+    <PanelContainer Name="ChatWindowPanel"
+                    Access="Public"
+                    HorizontalExpand="True"
+                    VerticalExpand="True">
+        <PanelContainer.PanelOverride>
+            <graphics:StyleBoxFlat BackgroundColor="#120A0AE6"
+                                   BorderColor="#7A6135"
+                                   BorderThickness="2"
+                                   ContentMarginLeftOverride="4"
+                                   ContentMarginRightOverride="4"
+                                   ContentMarginTopOverride="4"
+                                   ContentMarginBottomOverride="4" />
+        </PanelContainer.PanelOverride>
+
+        <BoxContainer Orientation="Vertical"
+                      SeparationOverride="4"
+                      HorizontalExpand="True"
+                      VerticalExpand="True">
+            <OutputPanel Name="Contents"
+                         HorizontalExpand="True"
+                         VerticalExpand="True"
+                         Margin="8 8 8 4" />
+
+            <controls:ChatInputBox HorizontalExpand="True"
+                                   Name="ChatInput"
+                                   Access="Public"
+                                   Margin="2"/>
         </BoxContainer>
     </PanelContainer>
 </widgets:ChatBox>

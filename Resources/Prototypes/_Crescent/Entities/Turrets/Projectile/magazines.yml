@@ -131,92 +131,28 @@
     zeroVisible: false
   - type: Appearance
 
-# - type: entity
-#   id: Magazine50mmHE
-#   name: 50mm High Explosive drum
-#   description: A munitions drum designed for 50mm repeater cannons. This one contains High Explosive projectiles. Effective against light targets and infantry.
-#   parent: BaseItem
-#   components:
-#   - type: Tag
-#     tags:
-#     - Magazine50mm
-#   - type: BallisticAmmoProvider
-#     mayTransfer: true
-#     whitelist:
-#       tags:
-#         - Cartridge50mmHE
-#     proto: Bullet50mmHE
-#     capacity: 120
-#     soundRack:
-#       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-#       params:
-#         variation: 0.05
-#     soundInsert:
-#       path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-#       params:
-#         variation: 0.05
-#   - type: Item
-#     size: Large
-#   - type: ContainerContainer
-#     containers:
-#       ballistic-ammo: !type:Container
-#   - type: Sprite
-#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-#     layers:
-#     - state: base-gyrostable
-#       map: ["enum.GunVisualLayers.Base"]
-#     - state: mag-1
-#       map: ["enum.GunVisualLayers.Mag"]
-#     scale: 0.9, 0.9
-#   - type: MagazineVisuals
-#     magState: mag
-#     steps: 2
-#     zeroVisible: false
-#   - type: Appearance
+#needler ammo
 
-# - type: entity
-#   id: Magazine50mmSAPHE
-#   name: 50mm SAPHE drum
-#   description: A munitions drum designed for 50mm cannons. Contains Semi-Armor Piercing High Explosive projectiles. Effective against most targets.
-#   parent: BaseItem
-#   components:
-#   - type: Tag
-#     tags:
-#     - Magazine50mm
-#   - type: BallisticAmmoProvider
-#     mayTransfer: true
-#     whitelist:
-#       tags:
-#         - Cartridge50mmSAPHE
-#     proto: Bullet50mmSAPHE
-#     capacity: 120
-#     soundRack:
-#       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
-#       params:
-#         variation: 0.05
-#     soundInsert:
-#       path: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
-#       params:
-#         variation: 0.05
-#   - type: Item
-#     size: Large
-#   - type: ContainerContainer
-#     containers:
-#       ballistic-ammo: !type:Container
-#   - type: Sprite
-#     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
-#     layers:
-#     - state: base-plasma
-#       map: ["enum.GunVisualLayers.Base"]
-#     - state: mag-1
-#       map: ["enum.GunVisualLayers.Mag"]
-#     scale: 0.9, 0.9
-#   - type: MagazineVisuals
-#     magState: mag
-#     steps: 2
-#     zeroVisible: false
-#   - type: Appearance
-
+- type: entity
+  id: MagazineNeedler
+  name: "60mm 'Needler' heavygun magazine"
+  parent: BaseItem
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - NeedlerMag
+    proto: Needler
+    capacity: 300
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: _Crescent/Ammunition/needler.rsi
+    state: base
+  - type: Tag
+    tags:
+      - NeedlerMag
 
 #screamer
 

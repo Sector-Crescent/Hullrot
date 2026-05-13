@@ -1124,8 +1124,6 @@ entities:
       parent: 1
     - type: Physics
       canCollide: False
-- proto: AAAHardpointSmallMissile
-  entities:
   - uid: 4
     components:
     - type: Transform
@@ -2194,13 +2192,6 @@ entities:
       - 156
       - 5
       - 157
-- proto: FishNuker
-  entities:
-  - uid: 250
-    components:
-    - type: Transform
-      pos: 4.503296,-5.5234737
-      parent: 1
 - proto: FloorDrain
   entities:
   - uid: 166

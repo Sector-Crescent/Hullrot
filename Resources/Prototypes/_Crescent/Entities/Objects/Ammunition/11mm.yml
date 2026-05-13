@@ -51,7 +51,7 @@
 - type: entity
   id: BulletHeavyPistol
   name: bullet (11mm PSTF)
-  parent: BaseBullet
+  parent: BaseBulletPhasePrevented
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent

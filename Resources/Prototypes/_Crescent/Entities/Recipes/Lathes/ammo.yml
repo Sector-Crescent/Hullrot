@@ -268,6 +268,7 @@
   id: Needler60
   result: MagazineNeedler
   completetime: 2
+  category: AutocannonAmmo
   materials:
     Steel: 1500
     Uranium: 200
@@ -373,6 +374,7 @@
   id: Screamer20mmRegularRecipe
   result: Magazine20mm
   completetime: 2
+  category: AutocannonAmmo
   materials:
     Steel: 1500
 
@@ -381,6 +383,7 @@
   id: Scout35mmRegularRecipe
   result: Magazine35mm
   completetime: 2
+  category: AutocannonAmmo
   materials:
     Steel: 2000
 
@@ -399,6 +402,7 @@
   id: Striker50mmRegularRecipe
   result: Magazine50mm
   completetime: 2
+  category: AutocannonAmmo
   materials:
     Steel: 3000
     Plasma: 500
@@ -408,6 +412,7 @@
   id: 88mmFlakRegularRecipe
   result: MagazineCorpus
   completetime: 2
+  category: ArtilleryAmmo
   materials:
     Steel: 5000
     Uranium: 500
@@ -417,6 +422,7 @@
   id: Resolute90mmRegularRecipe
   result: MagazineResolute
   completetime: 2
+  category: ArtilleryAmmo
   materials:
     Steel: 4000
     Uranium: 500
@@ -445,6 +451,7 @@
   id: Anvil120mmRegularRecipe
   result: Cartridge120mm
   completetime: 2
+  category: ArtilleryAmmo
   materials:
     Steel: 1000
     Uranium: 500
@@ -455,6 +462,7 @@
   id: Leviathan300mmRecipe
   result: Cartridge300mm
   completetime: 2
+  category: ArtilleryAmmo
   materials:
     Steel: 3000
     Uranium: 1500
@@ -467,24 +475,45 @@
   id: Shortbow48mmRegularRecipe
   result: Cartridge48mmRocket
   completetime: 2
+  category: Missiles
   materials:
     Steel: 500
     Plasma: 200
+
+- type: latheRecipe
+  id: Shortbow48mmMagazineRecipe
+  result: Magazine48mmRocket
+  completetime: 2
+  category: Missiles
+  materials:
+    Steel: 3000
+    Plasma: 1200
 
 #60mm Azimuth Ammo
 - type: latheRecipe
   id: Azimuth60mmRegularRecipe
   result: Cartridge60mmRocket
   completetime: 2
+  category: Missiles
   materials:
     Steel: 1000
     Plasma: 500
+
+- type: latheRecipe
+  id: Azimuth60mmMagazineRecipe
+  result: Magazine60mm
+  completetime: 2
+  category: Missiles
+  materials:
+    Steel: 6000
+    Plasma: 3000
 
 #95mm Arbalest Ammo
 - type: latheRecipe
   id: Arbalest95mmRegularRecipe
   result: Cartridge95mmRocket
   completetime: 2
+  category: Missiles
   materials:
     Steel: 1500
     Plasma: 1000
@@ -494,15 +523,18 @@
   id: Gargoyle240mmRegularRecipe
   result: Cartridge240mmRocket
   completetime: 2
+  category: Missiles
   materials:
     Steel: 2000
     Plasma: 2000
+
 
 #330mm Catapult Ammo
 - type: latheRecipe
   id: Catapult330mmRegularRecipe
   result: Cartridge330mmRocket
   completetime: 2
+  category: Missiles
   materials:
     Steel: 2000
     Plasma: 2000

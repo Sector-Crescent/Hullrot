@@ -347,29 +347,6 @@
     sprite: _Crescent/Objects/ShuttleWeapons/swarmclip.rsi
     state: base
 
-#needler ammo
-
-- type: entity
-  id: MagazineNeedler
-  name: "60mm 'Needler' heavygun magazine"
-  parent: BaseItem
-  components:
-  - type: BallisticAmmoProvider
-    mayTransfer: true
-    whitelist:
-      tags:
-        - NeedlerMag
-    proto: Needler
-    capacity: 20
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: _Crescent/Ammunition/needler.rsi
-    state: base
-  - type: Tag
-    tags:
-      - NeedlerMag
-
 #swarmer ammo
 
 - type: entity

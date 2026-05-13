@@ -4,6 +4,7 @@
     xmlns:maths="clr-namespace:Robust.Shared.Maths;assembly=Robust.Shared.Maths"
     xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:vote="clr-namespace:Content.Client.Voting.UI"
     xmlns:style="clr-namespace:Content.Client.Stylesheets"
     xmlns:lobbyUi="clr-namespace:Content.Client.Lobby.UI"
@@ -20,8 +21,18 @@
                 <Control Name="DefaultState" VerticalExpand="True">
                     <BoxContainer Name="TopLeft" Orientation="Vertical">
                         <!-- Left Top Panel -->
-                        <PanelContainer StyleClasses="AngleRect" HorizontalAlignment="Left" Name="LeftSideTop"
+                        <PanelContainer HorizontalAlignment="Left"
+                                        Name="LeftSideTop"
                                         VerticalAlignment="Top">
+                            <PanelContainer.PanelOverride>
+                                <graphics:StyleBoxFlat BackgroundColor="#120A0AE6"
+                                                    BorderColor="#7A6135"
+                                                    BorderThickness="2"
+                                                    ContentMarginLeftOverride="6"
+                                                    ContentMarginRightOverride="6"
+                                                    ContentMarginTopOverride="6"
+                                                    ContentMarginBottomOverride="6" />
+                            </PanelContainer.PanelOverride>
                             <BoxContainer Orientation="Vertical" HorizontalAlignment="Center" MaxWidth="800">
                                 <info:LinkBanner Name="LinkBanner" VerticalExpand="false" HorizontalAlignment="Center"
                                                  Margin="3 3 3 3" />
@@ -55,10 +66,28 @@
                     <!-- Left Bot Panel -->
                     <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" SeparationOverride="4">
                         <info:DevInfoBanner Name="DevInfoBanner" VerticalExpand="false" Margin="3 3 3 3" />
-                        <PanelContainer StyleClasses="AngleRect">
+                        <PanelContainer Name="LobbySongPanel">
+                        <PanelContainer.PanelOverride>
+                            <graphics:StyleBoxFlat BackgroundColor="#120A0AE6"
+                                                BorderColor="#7A6135"
+                                                BorderThickness="2"
+                                                ContentMarginLeftOverride="4"
+                                                ContentMarginRightOverride="4"
+                                                ContentMarginTopOverride="2"
+                                                ContentMarginBottomOverride="2" />
+                        </PanelContainer.PanelOverride>
                             <RichTextLabel Name="LobbySong" Access="Public" HorizontalAlignment="Center" />
                         </PanelContainer>
-                        <PanelContainer StyleClasses="AngleRect">
+                        <PanelContainer Name="LobbyBackgroundPanel">
+                            <PanelContainer.PanelOverride>
+                                <graphics:StyleBoxFlat BackgroundColor="#120A0AE6"
+                                                    BorderColor="#7A6135"
+                                                    BorderThickness="2"
+                                                    ContentMarginLeftOverride="4"
+                                                    ContentMarginRightOverride="4"
+                                                    ContentMarginTopOverride="2"
+                                                    ContentMarginBottomOverride="2" />
+                            </PanelContainer.PanelOverride>
                             <RichTextLabel Name="LobbyBackground" Access="Public" HorizontalAlignment="Center" />
                         </PanelContainer>
                     </BoxContainer>
@@ -68,8 +97,19 @@
                 <Control Access="Public" Visible="False" Name="CharacterSetupState" VerticalExpand="True" />
             </BoxContainer>
             <!-- Right Panel -->
-            <PanelContainer Name="RightSide" StyleClasses="AngleRect" HorizontalAlignment="Right" VerticalExpand="True"
+            <PanelContainer Name="RightSide"
+                            HorizontalAlignment="Right"
+                            VerticalExpand="True"
                             VerticalAlignment="Stretch">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#120A0AE6"
+                                        BorderColor="#7A6135"
+                                        BorderThickness="2"
+                                        ContentMarginLeftOverride="8"
+                                        ContentMarginRightOverride="8"
+                                        ContentMarginTopOverride="8"
+                                        ContentMarginBottomOverride="8" />
+                </PanelContainer.PanelOverride>
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <!-- Top row -->
                     <BoxContainer Orientation="Horizontal" MinSize="0 40" Name="HeaderContainer" Access="Public"

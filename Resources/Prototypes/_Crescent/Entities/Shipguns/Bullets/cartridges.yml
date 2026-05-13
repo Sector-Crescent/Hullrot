@@ -441,30 +441,6 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
 
-#needler cartridge
-
-- type: entity
-  id: Needler
-  name: 60mm needler shell
-  parent: BaseItem
-  description: A high-explosive cannon shell for ship weapons.
-  components:
-  - type: Item
-    size: Normal
-  - type: Tag
-    tags:
-      - NeedlerShell
-  - type: CartridgeAmmo
-    proto: NeedlerBase
-    deleteOnSpawn: true
-  - type: Sprite
-    sprite: _Crescent/Objects/ShuttleWeapons/needler.rsi
-    layers:
-    - state: base
-      map: ["enum.AmmoVisualLayers.Base"]
-  - type: Appearance
-  - type: SpentAmmoVisuals
-
 #pilum cartridge
 
 - type: entity

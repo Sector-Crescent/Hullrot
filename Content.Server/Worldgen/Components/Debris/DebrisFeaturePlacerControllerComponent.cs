@@ -39,5 +39,11 @@ public sealed partial class DebrisFeaturePlacerControllerComponent : Component
     /// </summary>
     [DataField("densityNoiseChannel", customTypeSerializer: typeof(PrototypeIdSerializer<NoiseChannelPrototype>))]
     public string DensityNoiseChannel { get; private set; } = default!;
+
+    [DataField("densityMultiplier")]
+    public float DensityMultiplier = 1f;
+
+    [DataField("maxDebrisPerChunk")]
+    public int? MaxDebrisPerChunk = null;
 }
 

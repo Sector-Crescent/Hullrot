@@ -31,7 +31,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 600
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -76,9 +76,7 @@
 - type: weightedRandomEntity
   id: WallReinforcedScrapItemOutputs
   weights:
-    SteelScrap10: 2
     SteelScrap5: 1
-    SteelScrap16: 1
 
 #Capital
 - type: entity
@@ -113,6 +111,8 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: RCDDeconstructable
+    rcdScrappable: false
 
 # Plastitanium
 - type: entity
@@ -154,9 +154,7 @@
 - type: weightedRandomEntity
   id: PlastitaniumScrapItemOutputs
   weights:
-    TitaniumScrap10: 2
     TitaniumScrap6: 1
-    TitaniumScrap17: 1
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -237,7 +235,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 1750
+            damage: 1000
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -250,13 +248,7 @@
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
     - type: RCDDeconstructable
-      rcdScrappable: true
-      scrapResults:
-        - PlastitaniumScrapItemOutputs
-      deconstructable: false
-      cost: 6
-      delay: 3
-      fx: EffectRCDDeconstruct8
+      rcdScrappable: false
 
 - type: entity
   parent: WallHeavyPlastitanium

@@ -1,22 +1,47 @@
 
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                       MouseFilter="Stop"
                       MinWidth="200" MinHeight="150">
-    <PanelContainer StyleClasses="AngleRect" />
+    <PanelContainer>
+        <PanelContainer.PanelOverride>
+            <graphics:StyleBoxFlat BackgroundColor="#090505F2"
+                                   BorderColor="#A88B5E"
+                                   BorderThickness="2" />
+        </PanelContainer.PanelOverride>
+    </PanelContainer>
 
     <BoxContainer Orientation="Vertical">
         <Control>
-            <PanelContainer StyleClasses="WindowHeadingBackground" />
+            <PanelContainer>
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#120A0AF2"
+                                           BorderColor="#7A6135"
+                                           BorderThickness="0 0 0 2" />
+                </PanelContainer.PanelOverride>
+            </PanelContainer>
             <BoxContainer Margin="4 2 8 0" Orientation="Horizontal">
                 <Label Name="WindowTitle"
-                       HorizontalExpand="True" VAlign="Center" StyleClasses="FancyWindowTitle" />
-                <TextureButton Name="HelpButton" StyleClasses="windowHelpButton" VerticalAlignment="Center" Disabled="True" Visible="False" Access="Public" />
-                <TextureButton Name="CloseButton" StyleClasses="windowCloseButton"
+                       HorizontalExpand="True"
+                       VAlign="Center"
+                       StyleClasses="FancyWindowTitle" />
+                <TextureButton Name="HelpButton"
+                               StyleClasses="windowHelpButton"
+                               VerticalAlignment="Center"
+                               Disabled="True"
+                               Visible="False"
+                               Access="Public" />
+                <TextureButton Name="CloseButton"
+                               StyleClasses="windowCloseButton"
                                VerticalAlignment="Center" />
             </BoxContainer>
         </Control>
         <PanelContainer StyleClasses="LowDivider" />
-        <Control Access="Public" Name="ContentsContainer" Margin="0 2" RectClipContent="True" VerticalExpand="true" />
+        <Control Access="Public"
+                 Name="ContentsContainer"
+                 Margin="0 2"
+                 RectClipContent="True"
+                 VerticalExpand="true" />
     </BoxContainer>
 </controls:FancyWindow>

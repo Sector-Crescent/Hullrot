@@ -49,9 +49,8 @@ public sealed partial class AlternatingBGContainer : BoxContainer
     /// The list of colors to alternate between
     public List<Color> Colors = new()
     {
-        Color.FromHex("#25252A"),
-        // Color.FromHex("#202025"),
-        Color.FromHex("#1B1B1E"),
+        Color.FromHex("#120A0AE6"),
+        Color.FromHex("#1C1010E6"),
     };
 
 

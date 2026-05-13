@@ -402,6 +402,26 @@
     recipes:
       - MagnateLPC
 
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherHussar
+  name: DSM 'Hussar' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial 'Hussar' corvette. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 2500
+  - type: ShipVoucher
+    ship: Hussar
+  - type: ReverseEngineering # Sector Crescent
+    recipes:
+      - HussarLPC
+
 #ncwl
 
 #T0

@@ -1,8 +1,8 @@
 - type: entity
-  name: SHI-BA Wirecutter
+  name: SHI-UT Wirecutter
   parent: BaseItem
   id: CrescentWirecutter
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a wirecutter for cutting wires.
+  description: A UltaTek made wirecutter, used for cutting wires, steel rods and even fingers off hostages.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -26,6 +26,7 @@
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/wirecutter.rsi
     state: icon
+
   - type: MeleeWeapon
     wideAnimationRotation: 0
     range: 1
@@ -46,10 +47,12 @@
   - type: Tool
     qualities:
       - Cutting
+    speedModifier: 5
     useSound:
       path: /Audio/Items/wirecutter.ogg
   - type: Item
     sprite: _Crescent/Objects/Tools/New_Tools/wirecutter.rsi
+    size: Small
   - type: ToolTileCompatible
   - type: PhysicalComposition
     materialComposition:
@@ -69,10 +72,10 @@
         friction: 0.2
 
 - type: entity
-  name: SHI-BA Screwdriver
+  name: SHI-UT Screwdriver
   parent: BaseItem
   id: CrescentScrewdriver
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a screwdriver for screwing.
+  description: A UltaTek made screwdriver, it has the universally adapted phillips head.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -100,6 +103,7 @@
     storedSprite:
       sprite: _Crescent/Objects/Tools/New_Tools/screwdriver.rsi
       state: icon
+    size: Tiny
   - type: MeleeWeapon
     wideAnimationRotation: -135
     range: 1
@@ -157,10 +161,10 @@
         friction: 0.2
 
 - type: entity
-  name: SHI-BA Wrench
+  name: SHI-UT Adjustable wrench
   parent: BaseItem
   id: CrescentWrench
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a wrench for tightening bolts.
+  description: A UltaTek made adjustable wrench, used for tightening and losening bolts.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -235,12 +239,11 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
-
 - type: entity
-  name: SHI-BA Crowbar
+  name: SHI-UT Crowbar
   parent: BaseItem
   id: CrescentCrowbar
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a crowbar for prying.
+  description: A UltaTek made crowbar, used to pry open doors and crack open skulls.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -294,7 +297,7 @@
   - type: Tool
     qualities:
       - Prying
-    speedModifier: 2
+    speedModifier: 1.5
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: ToolTileCompatible
@@ -322,10 +325,10 @@
         friction: 0.2
 
 - type: entity
-  name: SHI-DK Halligan Bar
+  name: SHI-IRC Halligan bar
   parent: BaseItem
   id: CrescentHalliganBar
-  description: Released along side the Type-80 the SHI-DK Halligan Bar is often used by mercanaries and security personnel for its versatility in prying, breaching and general utility.
+  description: A Iron Ring Company made halligan bar, used by firefighting crews, mercenaries and sometimes vagrants trying to break their way into armories.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -349,8 +352,9 @@
     sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
     state: icon
   - type: Item
-    sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
-    size: Huge
+    size: Normal
+    shape:
+      - 0,0,1,3
     storedSprite:
       sprite: _Crescent/Objects/Tools/New_Tools/halligan.rsi
       state: icon
@@ -381,7 +385,7 @@
   - type: Tool
     qualities:
       - Prying
-    speedModifier: 2
+    speedModifier: 5
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: ToolTileCompatible
@@ -409,10 +413,10 @@
         friction: 0.2
 
 - type: entity
-  name: NCWL MPL-80 "Willy Jack"
+  name: WC Willytool
   parent: BaseItem
   id: CrescentWillyBar
-  description: Based off the SHI-DK Halligan bar the MPL-80 features a wrench and a more blunted hammer head. The MPL-80 earned the name "Willy Jack" after a Kommisar accidentally hit themselves in the groin with it during its reveal.
+  description: A WillyCo. breaching tool, its a overcomplicated sledge hammer with a added on spike and large wrench bit. Designed by Williamous W. IV. Its the only product to ever be designed and made by WillyCo. before its bankruptcy.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -470,7 +474,7 @@
     qualities:
       - Prying
       - Anchoring
-    speedModifier: 2
+    speedModifier: 5
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: ToolTileCompatible
@@ -499,10 +503,10 @@
 
 
 - type: entity
-  name: SHI-BA Multitool
+  name: SHI-UT Multitool
   parent: BaseItem
   id: CrescentMultitool
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Multitool for pulsing and linking wires.
+  description: A UltraTool made multitool, used by electricians all over the sector.
   components:
   - type: EmitSoundOnPickup
     sound: /Audio/SimpleStation14/Items/Handling/multitool_pickup.ogg
@@ -568,10 +572,10 @@
         friction: 0.2
 
 - type: entity
-  name: SHI-BA Network Configurator
+  name: SHI-UT Network configurator
   parent: BaseItem
   id: CrescentNetworkConfigurator
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Network Configurator for configuring and linking devices.
+  description: A UltraTool made network configurator, now mostly obsolete due to the multitool having the ability to configurate networks too.
   components:
     - type: EmitSoundOnLand
       sound:
@@ -616,13 +620,11 @@
           restitution: 0.3
           friction: 0.2
 
-#Power tools
-#Later on these should switch probably switch damage when changing the tool behavior.
 - type: entity
-  name: SHI-BA 2-in-1 Electric Drill
+  name: SHI-UT 2-in-1 Electric Drill
   parent: BaseItem
   id: CrescentPowerDrill
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a power drill for screwing and anchoring.
+  description: An UltraTek electric drill, comes with two drill bits stored in the handle.
   components:
   - type: Tag
     tags:
@@ -697,8 +699,8 @@
 - type: entity
   id: CrescentRCD
   parent: BaseItem
-  name: SHI-BA RCD
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Rapid Construction Device for quickly constructing structures. Requires compressed matter cartridges to function (sold separately).
+  name: SHI-UT RCD
+  description: A UltraTool made Rapid Construction, used for quickly constructing structures. Requires compressed matter cartridges to function.
   components:
   - type: RCD
     availablePrototypes:
@@ -762,8 +764,8 @@
 - type: entity
   id: CrescentRPD
   parent: CrescentRCD
-  name: SHI-BA RPDD
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Rapid Pipe Delivery Device for atmosphere related work. Requires compressed matter cartridges to function (sold separately).
+  name: SHI-UT RPDD
+  description: A UltraTool made Rapid Pipe Delivery Device, used for atmosphere related work. Requires compressed matter cartridges to function.
   components:
   - type: Tag
     tags:
@@ -794,7 +796,10 @@
     maxCharges: 50
     charges: 50
   - type: Item
-    size: Huge
+    size: Normal
+    shape:
+      - 0,0,3,1
+
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/RPD.rsi
   - type: PhysicalComposition
@@ -876,10 +881,10 @@
     - Deconstruct
 
 - type: entity
-  name: SHI-BA HandyMan
+  name: SHI-UT 3-in-1 Multipurpose tool
   parent: BaseItem
   id: CrescentHandyMan
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a multitool that includes a wirecutter, screwdriver and a knife.
+  description: An UltraTek multipurpose tool, it has a wire cutter, screwdriver and knife. Not as effecient as the full size tools.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
@@ -895,7 +900,7 @@
   - type: Tool
     qualities:
       - Screwing
-    speedModifier: 2
+    speedModifier: 1
     useSound:
       collection: Screwdriver
   - type: MeleeWeapon
@@ -935,7 +940,7 @@
           path: /Audio/Items/wirecutter.ogg
         changeSound:
           path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
-      - behavior: Cutting
+      - behavior: Slicing
         sprite:
           sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
           state: Handyman-knife
@@ -945,10 +950,10 @@
           path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
 #Other
 - type: entity
-  name: MPL-50 Shovel
+  name: SHI-UF Shovel
   parent: BaseItem
   id: CrescentShovel
-  description: A shovel with the NCWL's signature orange stripe painted on the handle.
+  description: A Union Foundries made shovel, used to dig holes and move dirt.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/shovel.rsi
@@ -996,10 +1001,10 @@
   - type: Shovel
 
 - type: entity
-  name: SHI-BA T-Ray scanner
+  name: SHI-UT T-Ray scanner
   parent: BaseItem
   id: CrescenttrayScanner
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This device is built to emit terahertz radiation to detect wires beneath walls and floors.
+  description: A UltraTool made T-Ray scanner, used to scan for wires, pipes, ducts under floor tiles. A warning label states that if used for periods longer than 4 hours UltraTool is not responcible for ARS or radiation burns.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/t-ray.rsi
@@ -1025,10 +1030,10 @@
     price: 60
 
 - type: entity
-  name: NCWL MPL-55 Pickaxe
+  name: SHI-UF Pickaxe
   parent: BaseItem
   id: CrescentPickaxe
-  description: A pickaxe with the NCWL's signature orange stripe painted on the handle.
+  description: A Union Foundries made pickaxe, used for breaking rocks, skulls.
   components:
   - type: Tag
     tags:
@@ -1074,10 +1079,10 @@
     price: 100
 
 - type: entity
-  name: NCWL Jaws Of Life
+  name: UF Jaws Of Life
   parent: BaseItem
   id: CrescentJawsOfLife
-  description: A device that prys open objects with its powered claws. Can also be used to cut certain materials.
+  description: A Union Foundries made jaws of life, used for prying and cutting metal.
   components:
   - type: Tag
     tags:
@@ -1094,7 +1099,7 @@
     useSound: /Audio/Items/jaws_pry.ogg
   - type: Prying
     pryPowered: true
-    speedModifier: 3
+    speedModifier: 5
     useSound: /Audio/Items/jaws_pry.ogg
   - type: ToolForcePowered
   - type: MultipleTool
@@ -1196,10 +1201,10 @@
 
 
 - type: entity
-  name: NCWL MPL-60 Breaching Saw
+  name: SHI-UF Angle grinder
   parent: BaseItem
-  id: CrescentBreachingSaw
-  description: A basic handheld table saw designed for shipbreaking. Incredibly effcient at cutting through walls and doors.
+  id: CrescentAngleGrinder
+  description: A Union Foundries made angle grinder, used to cut metal. There is a warning label on the side telling you to keep away from loose clothing.
   components:
   - type: EmitSoundOnPickup
     sound:
@@ -1247,6 +1252,7 @@
   - type: Tool
     qualities:
       - Cutting
+    speedModifier: 10
     useSound:
       path: /Audio/Items/drill_hit.ogg
   - type: Item
@@ -1288,8 +1294,8 @@
 - type: entity
   id: CrescentJackhammer
   parent: BaseItem
-  name: NCWL MPL-65 Jackhammer
-  description: An unnessecarily powerful jackhammer originally designed for shipbreaking, found more use with homeguard teams using it to breach into rooms quickly.
+  name: SHI-UF Jackhammer
+  description: A Union Foundries made jackhammer, used for breaking rocks and ribcages alike.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Tools/New_Tools/jackhammer.rsi
@@ -1323,10 +1329,10 @@
       - 0,0,3,3
 
 - type: entity
-  name: SHI-BA Welder
+  name: SHI-UT Hydrazine welder
   parent: BaseItem
   id: CrescentWelder
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a Welder. Shinohara reminds you that oculine and eye replacement cybernetics are sold at the nearest branch.
+  description: A UltraTool made hydrazine welder, used for welding and cutting metal.
   components:
   - type: EmitSoundOnPickup
     sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
@@ -1354,6 +1360,8 @@
           False: { visible: false }
   - type: Item
     size: Small
+    shape:
+      - 0,0,1,0
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -1471,10 +1479,10 @@
         friction: 0.2
 
 - type: entity
-  name: SHI-BA Mini Welder
+  name: SHI-BA Mini hydrazine welder
   parent: BaseItem
   id: CrescentMiniWelder
-  description: Part of the Shinoharas latest civilian tools line, Basic Assembly. This tool is a mini welder, half the fuel capacity of the standard model. Shinohara reminds you that oculine and eye replacement cybernetics are sold at the nearest branch.
+  description: A UltraTool made mini hydrazine welder, used for welding and cutting metal, has half the capacity and weld times of its bigger brother.
   components:
   - type: EmitSoundOnPickup
     sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
@@ -1504,7 +1512,6 @@
     size: Small
     shape:
     - 0,0,1,0
-    - 0,1,0,1
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -1573,7 +1580,7 @@
           Quantity: 100
         maxVol: 100
   - type: Tool
-    speedModifier: 2
+    speedModifier: 1
     useSound:
       collection: Welder
     qualities: Welding
@@ -1623,10 +1630,10 @@
 
 
 - type: entity
-  name: NCWL MPL-95 Large Welder
+  name: UF Large oxy-boric welding unit
   parent: BaseItem
   id: CrescentLargeWelder
-  description: A large welder hooked up to two 250u welding fuel tanks. The writing on the tanks remind you that any damage to the eyes are to be reported to a superior. Burns hotter then the average welder.
+  description: A Union Foundries made oxy-boric welding unit, used for industrial grade welding and cutting. Uses oxygen-boratic mix instead of hydrazine due to achive higher flame tempatures.
   components:
   - type: EmitSoundOnPickup
     sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
@@ -1771,10 +1778,10 @@
         friction: 0.2
 
 - type: entity
-  name: NCWL MPL-90 Blowtorch
+  name: UF Oxy-boric blowtorch
   parent: BaseItem
   id: CrescentBlowtorch
-  description: A blowtorch attached to a 250u welding fuel tank. The writing on the tanks remind you that any damage to the eyes are to be reported to a superior. Burns hotter then the average welder.
+  description: A Union Foundries made oxy-boric blowtorch, quite compact but its flame burns at a lower but higher then average temperature to perserve fuel.
   components:
   - type: EmitSoundOnPickup
     sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
@@ -1803,7 +1810,7 @@
   - type: Item
     size: Normal
     shape:
-      - 0,0,1,3
+      - 0,0,0,2
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -1872,7 +1879,7 @@
           Quantity: 250
         maxVol: 250
   - type: Tool
-    speedModifier: 5
+    speedModifier: 3
     useSound:
       collection: Welder
     qualities: Welding

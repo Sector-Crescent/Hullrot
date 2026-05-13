@@ -127,11 +127,42 @@
     layers:
       - state: base-projectile
 
+#60mm Needler
+- type: entity
+  id: NeedlerBase
+  name: shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ShipWeaponProjectile
+  - type: Projectile
+    ignoreWeaponGrid: true
+    damage:
+      types:
+        Piercing: 100
+        Structural: 150
+  - type: TimedDespawn
+    lifetime: 11.1
+  - type: Sprite
+    sprite: _Crescent/Objects/ShuttleWeapons/needler.rsi
+    layers:
+      - state: base-projectile
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: ProjectileIFF
+  - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
+
+
 #Resolute DONTUSE
 
 - type: entity
   id: Bullet90mmHE
-  name: 90mm High Explosive shell #not using this yet
+  name: 90mm High Explosive shell
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:

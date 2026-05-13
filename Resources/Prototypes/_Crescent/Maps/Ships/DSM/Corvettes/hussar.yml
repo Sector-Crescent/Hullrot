@@ -1,0 +1,32 @@
+- type: vessel
+  id: Hussar
+  name: DSM Hussar
+  description: |
+    An imperial hunter-killer corvette designed for heavier escort duties against scores of enemy fighter-craft.
+  price: 40000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/DSM/Corvettes/hussar.yml
+
+- type: gameMap
+  id: Hussar
+  mapName: 'DSM Hussar'
+  mapPath: /Maps/_Crescent/Shuttles/DSM/Corvettes/hussar.yml
+  minPlayers: 0
+  stations:
+    Hussar:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: corvette
+        - type: StationNameSetup
+          mapNameTemplate: 'DSM Hussar {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-assault-corvette
+        - type: VesselDescription
+          description: Treat them as chaff to the scythe, such that they might serve unto others as an example of the Kaiser's will...

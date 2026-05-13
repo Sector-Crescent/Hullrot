@@ -73,7 +73,7 @@
 - type: entity
   id: Bullet12mm
   name: bullet (12mm auto)
-  parent: BaseBullet
+  parent: BaseBulletPhasePrevented
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectilePhasePrevent

@@ -3911,10 +3911,6 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Hammerhead
-    - type: VesselIcon
-      iffIcon:
-        sprite: _Crescent/ShipIcons/ifficons.rsi
-        state: large_industrial
     - type: SelfDeleteGrid
 - proto: AAAHardpointFixed
   entities:
@@ -7913,13 +7909,6 @@ entities:
     components:
     - type: Transform
       pos: 4.911683,26.388613
-      parent: 1
-- proto: DVSmartFridgeMedical
-  entities:
-  - uid: 1062
-    components:
-    - type: Transform
-      pos: 2.5,24.5
       parent: 1
 - proto: FaxMachineShip
   entities:

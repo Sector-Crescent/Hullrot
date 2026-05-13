@@ -30,7 +30,9 @@
         </LayoutContainer>
         <PanelContainer HorizontalExpand="True" MinWidth="300">
             <PanelContainer.PanelOverride>
-                <graphics:StyleBoxFlat BackgroundColor="#2B2C3B" />
+                <graphics:StyleBoxFlat BackgroundColor="#120A0A"
+                       BorderColor="#7A6135"
+                       BorderThickness="2" />
             </PanelContainer.PanelOverride>
 
             <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="10" Margin="10">
