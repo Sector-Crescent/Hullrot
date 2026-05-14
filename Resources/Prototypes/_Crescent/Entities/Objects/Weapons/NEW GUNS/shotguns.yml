@@ -1,0 +1,129 @@
+- type: entity
+  name: NCWL TSD-87 12g
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponShotgunTSD87
+  description: The TSD-87 is a unique shotgun, utilizing a reversed pump action, and chambered in 12 gauge. while the action is a little akward to get used to, it fires buckshot and slugs like any shotgun.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TSD-87.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TSD-87.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,3,1
+  - type: Gun
+    shotgunSpreadMultiplier: 1.25
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_2/shotgun_gunshot_1.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: false
+    proto: CrescentCartridge_12Ga
+  - type: ItemSlots
+
+- type: entity
+  name: DSM SPS-110 12g
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponShotgunSPS110
+  description: The SPS-110 is a recent design from Count Olywir's team in Domain, designed to be cheap to produce and supply. Even so, Olywir could not help but overengineer the damned thing, spiking its cost in materials.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/SPS-110.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/SPS-110.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,3,1
+  - type: Gun
+    shotgunSpreadMultiplier: 1.25
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_2/shotgun_gunshot_1.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: false
+    proto: CrescentCartridge_12Ga
+  - type: ItemSlots
+
+- type: entity
+  name: SHI TYPE-80 12g
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponShotgunType80
+  description: The Type-80 is Shinohara's answer to the requests for a tactical, semi automatic, 12 guage shotgun. Cheap, effective, stable, the Type-80 does it all.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TYPE-80.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TYPE-80.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TYPE-80.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: GunRequiresWield 
+  - type: Gun
+    damageModifier: 1.25
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_1/shotgun_gunshot_3.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+    fireOnDropChance: 0.3
+    shotgunSpreadMultiplier: 1.25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: true
+    proto: CrescentCartridge_12Ga
+  - type: Wieldable
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: Execution
+  - type: MeleeWeapon
+    attackRate: 1.4
+    damage:
+      types:
+        Blunt: 10
+    bluntStaminaDamageFactor: 1.3333
+    swapKeys: true
+    disableHeavy: true
+    animation: WeaponArcThrust
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MetalThud
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 2.5
+  - type: DamageOtherOnHit
+    staminaCost: 9.5
