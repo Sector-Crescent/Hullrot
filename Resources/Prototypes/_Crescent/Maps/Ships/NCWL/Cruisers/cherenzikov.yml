@@ -1,0 +1,32 @@
+# Author Info
+# Discord: originally @fleshangel, later remade by @white_bastion
+
+- type: vessel
+  id: Cherenzikov
+  name: NCWL Cherenzikov
+  description: A civilian cargo freighter converted to a freighter-gunship.
+  price: 58000
+  category: Large
+  group: None
+  path: /Maps/_Crescent/Shuttles/NCWL/Cruisers/cherenzikov.yml
+
+- type: gameMap
+  id: Cherenzikov
+  mapName: 'NCWL Cherenzikov'
+  mapPath: /Maps/_Crescent/Shuttles/NCWL/Cruisers/cherenzikov.yml
+  minPlayers: 0
+  stations:
+    Cherenzikov:
+      stationProto: StandardCrescentVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: cruiser
+        - type: StationNameSetup
+          mapNameTemplate: 'NCWL Cherenzikov {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-frigate
