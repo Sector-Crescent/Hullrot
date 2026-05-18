@@ -118,6 +118,8 @@
   - ClothingOuterHardsuitHighsec
   - ClothingOuterHardsuitHighsecUA
   - ClothingOuterHardsuitHighsecIndependent
+  - ClothingOuterHardsuitMetrocop
+  - ClothingOuterHardsuitCombine
 
 - type: technology
   id: ShinoharaDisposableGuns
@@ -278,6 +280,7 @@
   recipeUnlocks:
   - WeaponPistolSmartpistolSHI
   - WeaponShotgunEnforcer
+  - WeaponPistolZodum
   - WeaponRifleLecterSHI
   - WeaponLightMachineGunL6
   - WeaponSniperHristov
@@ -477,6 +480,19 @@
   - WeaponShotgunSpas
   - WeaponRifleM90GrenadeLauncher
   - WeaponSubMachineGunWt550Hullrot
+
+- type: technology
+  id: ShinoharaNTPulseguns
+  name: research-technology-shinohara-pulseguns
+  icon:
+    sprite: _Crescent/Objects/Weapons/Guns/sr3.rsi
+    state: icon
+  discipline: Corporate
+  tier: 3
+  cost: 6000
+  recipeUnlocks:
+  - WeaponSpecialPulseRifle
+  - WeaponSpecialPulseAMR
 
 - type: technology
   id: ShinoharaWeaponCase

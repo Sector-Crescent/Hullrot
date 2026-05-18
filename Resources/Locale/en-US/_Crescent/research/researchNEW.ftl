@@ -188,3 +188,4 @@ research-technology-shinohara-oldntballistics = Old NT Gun Schematics
 research-technology-shinohara-ntartillery = NT Artillery Patent
 research-technology-shinohara-weaponcase = Shinohara Storage Standards
 research-technology-shinohara-grenades = Shinohara Grenade Patterns
+research-technology-shinohara-pulseguns = Shinohara Pulse Weaponry

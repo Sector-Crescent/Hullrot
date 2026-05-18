@@ -1,10 +1,10 @@
 #hardsuits
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitMetrocop
   name: SHI-WTI CMP-1 "Metropolis" security softsuit
-  description: A softsuit padded with durathread soft plates. very effective against low-power rounds and buckshot but weak against rifle rounds. Commony used by peace enforcers in mega cities.
+  description: A softsuit padded with durathread soft plates. More mobile then standard combat hardsuits, but offers very little protection outside of the carrier plate. Commonly used by the Patent Protection Force. #changed desc to memory hole mega gliess
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
@@ -12,25 +12,27 @@
     equipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/puton.ogg
     unequipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/takeoff.ogg
     sprite: _Crescent/Clothing/SHI/OuterClothing/metrocop.rsi
+  - type: ExtendDescription #having a carrier plate makes the CMP-1 a viable choice even with the RAIKU suit in play.
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.8
-  - type: DegradeableArmor
-    armorMaxHealth: 2000 # this is its gimick that its got high health but shit protection
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 15
-        Slash: 15
-        Piercing: 35
-        Heat: 15
-        Caustic: 15
+  - type: Armor #changed it from degradeable armor to work with the armor insert system, check to make sure the values fit your balance.
+    modifiers:
+      coefficients:
+        Blunt: 0.95 #personally stats should be lower to match description but tweak it as you wish.
+        Slash: 0.95
+        Heat: 0.9
+        Cold: 0.9
   - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.95
+    walkModifier: 0.97
+    sprintModifier: 0.97
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMetrocop
   - type: ClothingAddFaction
@@ -46,10 +48,10 @@
         volume: -7 # dawg this shit loud and i cant be bothered to make it quieter
 
 - type: entity
-  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable]
+  parent: [ClothingOuterHardsuitBase, StreeCredRedeemable, ClothingArmorInsertHardsuit]
   id: ClothingOuterHardsuitCombine
   name: SHI-WTI OTA-3 "Combine" combat hardsuit
-  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, lacks protection but makes it up in its durability. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments.
+  description: A nearly fully durathread combat hardsuit developed by Wu-Tan Industries, trading some of the mobility for extra protection alongside the carrier plate. Has glow up strips on the shoulders to prevent frendly fire in dark enviroments.
   components:
   - type: Sprite
     sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi
@@ -57,24 +59,27 @@
     equipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/puton.ogg
     unequipSound: /Audio/_Crescent/Items/Clothing/CombineSuit/takeoff.ogg
     sprite: _Crescent/Clothing/SHI/OuterClothing/combine.rsi
+  - type: ExtendDescription
+    descriptionList:
+      - description: This is a carrier vest, it will only provide mediocre protection on its own. Put an armor insert into it to fully utilize it.
+        fontSize: 15
+        color: "#ff2106"
+        requireDetailRange: true
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
-  - type: DegradeableArmor
-    armorMaxHealth: 1000 # armor stats same as CMM patrol suit
-    armorType: Metallic
-    armorRepair: PlasteelPlate
-    initialModifiers:
-      flatReductions:
-        Blunt: 20
-        Slash: 20
-        Piercing: 60
-        Heat: 15
-        Caustic: 15
+  - type: Armor #again, changed from degradeable armor to fit with the armor instert system, just make sure to take a look at the values to make sure they seem balanced.
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.6
+        Cold: 0.6
+        Caustic: 0.6
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
+    walkModifier: 0.85 #speed should be changed, this should be either on the same level as SBVT-2 or slower.
     sprintModifier: 0.85
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombine
