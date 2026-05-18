@@ -5,6 +5,9 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     layers:
       - state: base

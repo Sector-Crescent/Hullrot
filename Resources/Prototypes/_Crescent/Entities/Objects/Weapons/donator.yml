@@ -5,6 +5,9 @@
   id: WeaponPistolZodum
   description: A custom hand-cannon from the SHI development team that was never meant to be released. Chambered in heavy 12.7x99mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/zodum.rsi
     layers:
@@ -67,6 +70,9 @@
   id: PorodschokDonator
   description: A high-end communard assault rifle, manufactured in small numbers for liquidator forces. These rifles are built with pristine rifling, and the bakelite furniture comes in light grey instead of the standard brown.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/porodshok.rsi
     layers:
@@ -212,6 +218,9 @@
   suffix: Spawn case instead unless youre feeling generous
   description: A heavy, unwieldly and too big to put in a bag what more could you ask not to have. has a toggle lock just like the P05 Brenner, Reloaded using 27mmR stripper clips or loose rounds.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Item
     sprite: _Crescent/Objects/Weapons/Guns/kingpin.rsi
     size: Ginormous
@@ -436,6 +445,9 @@
   id: WeaponLauncherHammerhead
   description: A fancy heat-seeking rocket launcher. Stamped with the Shinohara Heavy Industries logo.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/hammerhead.rsi
     layers:
@@ -535,6 +547,9 @@
   id: WeaponDonorRevolverMadrugad
   description: An ornate percussion revolver, hand-crafted to have once served a Hunter Montagne in the Great Hunt, now pilfered from their cold hands so it may serve yours.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/madrugad.rsi
   - type: Item
@@ -593,6 +608,9 @@
   parent: [WeaponAntimaterielDSMLeveller, StreeCredRedeemableLow]
   id: WeaponAntimaterielCourroux
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: GunRequiresWield
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/corrux.rsi
@@ -928,6 +946,9 @@
   id: WeaponSubMachineGunMorningStar
   description: Handcrafted modification by Libitina of the legendary WT50. With a sapphire coating on the outside and a ruby heart on the right side. Death has never been so rich or so sweet with this weapon.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/sweet_morningstar.rsi
     layers:

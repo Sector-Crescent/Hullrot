@@ -4,6 +4,9 @@
   id: WeaponLauncherGM94
   description: An NCWL grenade launcher based on ancient schematics.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/gm94.rsi
     layers:
@@ -45,6 +48,9 @@
   id: WeaponLauncherMilkor
   description: A large grenade launcher designed by Shinora. For when you need to make hell rain on the enemy.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/milkor.rsi
   - type: Clothing
@@ -110,6 +116,9 @@
   id: WeaponLauncherDisposableRocket
   description: A single-shot, throwaway rocket launcher designed by Shinora for combating mechs in the field. Fits compactly in a backpack but takes time to ready when needed.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/disposablerpg.rsi
     layers:
@@ -154,6 +163,9 @@
   id: WeaponLauncherCommando
   description: A four-shot, throwaway rocket launcher designed by Pang Tai Arms for obliterating any infantry and damaging mechs
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/commando.rsi
     layers:
@@ -196,6 +208,9 @@
   id: WeaponLauncherM320
   description: A cheap and light single-shot grenade launcher, designed by Olywir Armaments.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/m320.rsi
     layers:
@@ -252,6 +267,9 @@
   id: WeaponLauncherGustav
   description: A ruggid, breach-loaded recoiless rifle. Suitable for a variety of large targets.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/gustav.rsi
     layers:
@@ -299,6 +317,9 @@
   id: WeaponLauncherSmallRocket
   description: The lesser known predecessor. A rocket launcher often seen in the hands of terrorists and informal militias.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/rpg2.rsi
     layers:
@@ -344,6 +365,9 @@
   id: WeaponLauncherRocket
   description: An iconic weapon of war. A rocket launcher often seen in the hands of terrorists and informal militias.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/rpg7.rsi
     layers:
@@ -389,6 +413,9 @@
   id: WeaponLauncherChinaLake
   description: A pump action grenade launcher manufactured by Pang Tai Arms.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/chinalake.rsi
     layers:

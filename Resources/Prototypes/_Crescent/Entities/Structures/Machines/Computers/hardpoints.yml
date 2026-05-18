@@ -1,6 +1,6 @@
 - type: entity
   id: BaseHardpoint
-  parent: BaseMachinePowered
+  parent: BaseMachineUnwrenchable
   name: Hardpoint
   abstract: true
   components:
@@ -22,8 +22,6 @@
           collection: MetalGlassBreak
   - type: Repairable
     doAfterDelay: 8
-  - type: Anchorable
-    delay: 10
   - type: PointLight
     enabled: false
     castShadows: false
@@ -39,6 +37,64 @@
     range: 20
     class: Ballistic
     size: Small
+  - type: Fixtures
+    fixtures:
+      fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          # very not dense to make it easy to pull
+          density: 600
+          mask:
+          - SmallMobMask
+          layer:
+          - MachineLayer
+  - type: CollideOnAnchor
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  id: BaseHardpointAnchorable
+  parent: BaseMachinePowered
+  name: Hardpoint
+  suffix: Movable
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Crescent/Structures/hardpoints.rsi
+    state: Small
+  - type: Transform
+    noRot: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: Repairable
+    doAfterDelay: 8
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 3
+    energy: 2
+    softness: 0.9
+    color: "#4d3009"
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 5000
+  - type: Appearance
+  - type: Hardpoint
+    range: 20
+    class: Ballistic
+    size: Small
+  - type: Anchorable
+    delay: 10
   - type: Fixtures
     fixtures:
       fix1:
@@ -72,6 +128,22 @@
     state: Small
 
 - type: entity
+  id: AAAHardpointSmallBallisticAnchorable
+  parent: BaseHardpointAnchorable
+  name: Hardpoint Small/Ballistic
+  suffix: Movable
+  components:
+  - type: Hardpoint
+    range: 20
+    class: Ballistic
+    size: Small
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: Sprite
+    sprite: _Crescent/Structures/hardpoints.rsi
+    state: Small
+
+- type: entity
   id: AAAHardpointSmallEnergy
   parent: BaseHardpoint
   name: Hardpoint Small/Energy
@@ -87,9 +159,41 @@
     state: Small
 
 - type: entity
+  id: AAAHardpointSmallEnergyAnchorable
+  parent: BaseHardpointAnchorable
+  name: Hardpoint Small/Energy
+  suffix: Movable
+  components:
+  - type: Hardpoint
+    range: 20
+    class: Energy
+    size: Small
+  - type: ApcPowerReceiver
+    powerLoad: 1500
+  - type: Sprite
+    sprite: _Crescent/Structures/hardpoints.rsi
+    state: Small
+
+- type: entity
   id: AAAHardpointSmallMissile
   parent: BaseHardpoint
   name: Hardpoint Small/Missile
+  components:
+  - type: Hardpoint
+    range: 20
+    class: Missile
+    size: Small
+  - type: ApcPowerReceiver
+    powerLoad: 50
+  - type: Sprite
+    sprite: _Crescent/Structures/hardpoints.rsi
+    state: Small
+
+- type: entity
+  id: AAAHardpointSmallMissileAnchorable
+  parent: BaseHardpointAnchorable
+  name: Hardpoint Small/Missile
+  suffix: Movable
   components:
   - type: Hardpoint
     range: 20
@@ -232,9 +336,51 @@
   - type: ExtensionCableReceiver
 
 - type: entity
+  id: AAAHardpointFixedAnchorable
+  parent: BaseHardpointAnchorable
+  name: Hardpoint Fixed/Universal
+  suffix: Movable
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Large
+  - type: HardpointFixedMount
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: large
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+      - SpaceArtilleryFire
+  - type: Rotatable
+  - type: ExtensionCableReceiver
+
+- type: entity
   id: AAAHardpointFixedSmall
   parent: AAAHardpointFixed
   name: Hardpoint Fixed/Small
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Small
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: small
+
+- type: entity
+  id: AAAHardpointFixedSmallAnchorable
+  parent: AAAHardpointFixedAnchorable
+  name: Hardpoint Fixed/Small
+  suffix: Movable
   components:
   - type: Hardpoint
     range: 15
@@ -261,6 +407,21 @@
     sprite: _Crescent/Structures/fixedHardpoint.rsi
     state: medium
 
+- type: entity
+  id: AAAHardpointFixedMediumAnchorable
+  parent: AAAHardpointFixedAnchorable
+  name: Hardpoint Fixed/Medium
+  suffix: Movable
+  components:
+  - type: Hardpoint
+    range: 15
+    class: Universal
+    size: Medium
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Sprite
+    sprite: _Crescent/Structures/fixedHardpoint.rsi
+    state: medium
 
 - type: entity
   id: AAAHardpointFixedLarge

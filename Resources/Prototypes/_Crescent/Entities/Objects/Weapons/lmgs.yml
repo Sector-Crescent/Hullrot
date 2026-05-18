@@ -4,6 +4,9 @@
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: A compact LMG designed sacrificing damage for size. Made by Cyberdawn for Cyberdawn.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/compakt.rsi
     layers:
@@ -72,6 +75,9 @@
   parent: BaseItem
   description: A C 54 SAW for use by cyborgs. Creates 5.56 rifle ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Gun
     minAngle: 5
     maxAngle: 25
@@ -114,6 +120,9 @@
   parent: [BaseItem, StreeCredRedeemable]
   description: An old Point Defense turret, ripped off its mount, and modified to fire from the hip. Neither the enemy, nor your shoulder will survive this thing.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Clothing
     sprite: _Crescent/Objects/Weapons/Guns/conscript.rsi
     quickEquip: false
@@ -211,6 +220,9 @@
   parent: BaseWeaponLightMachineGun
   description: A bulky machinegun made from ancient schematics. Chambered in 7.62x51mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Gun
     minAngle: 25
     maxAngle: 60
@@ -267,6 +279,9 @@
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: A Imperial LMG with a quick 6 shot burst, chambered in 5.56x45mm Imperial.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/dominion.rsi
     layers:
@@ -328,6 +343,9 @@
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: The Großes Maschinengewehr. A long and bulky machinegun made from ancient schematics. Notorious for its high RPM. Chambered in 7.62x51mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/mg42.rsi
     layers:
@@ -381,6 +399,9 @@
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: The Neo Großes Maschinengewehr. A machinegun revived from ancient schematics and modified for modern combat. Notorious for its high RPM. Chambered in 7.62x51mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/koneruusu.rsi
     layers:
@@ -447,6 +468,9 @@
   parent: [BaseWeaponLightMachineGun, StreeCredRedeemable]
   description: The next generation weapon system light machine gun produced by Kane & Knox. Packaged with a suppressor. Chambered in 7.62x51mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/xm250.rsi
     layers:

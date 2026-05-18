@@ -227,7 +227,7 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
             }
 
             // Debug: Log every prototype selected for placement
-            _sawmill.Debug($"[DebrisPlacer] Selected debris prototype '{debrisFeatureEv.DebrisProto}' for placement at {coords} (chunk {args.Chunk})");
+            // _sawmill.Debug($"[DebrisPlacer] Selected debris prototype '{debrisFeatureEv.DebrisProto}' for placement at {coords} (chunk {args.Chunk})");
 
             // Check if the proto is a gameMap prototype
             // If the selected prototype is a gameMap, load it as a new grid instead of spawning as an entity.
@@ -305,7 +305,7 @@ public sealed class DebrisFeaturePlacerSystem : BaseWorldSystem
             ownedEnt.LastKey = point;
         }
 
-        if (failures > 0)
+        if (failures > 10)
             _sawmill.Error($"Failed to place {failures} debris at chunk {args.Chunk} at coords {args.Coords}");
     }
 

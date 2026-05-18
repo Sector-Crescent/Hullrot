@@ -111,7 +111,7 @@
     damageCoefficient: 0.1
 
 - type: entity
-  parent: ClothingBeltSecurityWebbing
+  parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
   id: ClothingBeltNfsdWebbing
   name: nfsd webbing
   description: A tactical assault webbing.

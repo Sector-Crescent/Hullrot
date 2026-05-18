@@ -5,6 +5,9 @@
   description: Spray and pray
   abstract: true
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
   - type: Wieldable
     unwieldOnUse: false

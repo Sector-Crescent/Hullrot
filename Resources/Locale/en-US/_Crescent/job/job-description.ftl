@@ -6,13 +6,12 @@ job-description-nt-utility-ipc = Load ammunition and upkeep nanotrasen ships. Co
 # ncwl
 
 job-description-ncwl-faction-leader = Lead the League from the external end. Maintain relations or war plans with other factions. Manage the Homeguard. Don't die.
-job-description-ncwl-kommissar = Lead the League from the internal end. Make sure Unions do their jobs. Execute traitors.
-job-description-ncwl-mvd-officer = Be the visible hand of the Central Committee. Lead your small team and follow the Kommissar's orders.
-job-description-ncwl-mvd-grunt = Be the visible hand of the Central Committee. Follow the Kommissar and obey his orders.
+job-description-ncwl-kommissar = Be the brain of the Communist Party's will. Keep the proletarian masses in line, and order around your small MVD detachment.
+job-description-ncwl-mvd-grunt = Be the hand of the Chengridz Communist Party. Ensure the proletariat are cohesive. 
 job-description-ncwl-fleetkapitan = Command the mass of Partisans. Listen to the Major. Maintain battlefield cohesion.
 job-description-ncwl-partisan = Defend the League. Listen to your Unionkapitan. Do what you're told.
 job-description-ncwl-industry-taskmaster = Ensure materials are being refined into trade goods and ammo. Organize fleet maintenance.
-job-description-ncwl-industry-artificer = Listen to the Starshina. Gather resources for the League. Do repairs and shipmods.
+job-description-ncwl-industry-artificer = Listen to the Overseer. Gather resources for the League. Do repairs and shipmods.
 job-description-ncwl-medical-director = Keep the League alive and healthy. Coordinate research. Order cybernetics and new drugs.
 job-description-ncwl-medical-doctor = Keep the Workers and the Homeguard alive. Assist the Homeguard on missions. Make drugs, save those lost in space.
 job-description-ncwl-worker-overboss = Organize salvage and mining. Make sure workers are working. Keep resources flowing to the League Industrial Complex. Organize trade routes.

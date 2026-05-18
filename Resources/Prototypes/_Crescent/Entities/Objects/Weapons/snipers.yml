@@ -4,6 +4,9 @@
   id: WeaponSniperHristov
   description: A barely portable anti-materiel rifle, equipped with a long range scope. Fires the large 15.2×169mm round.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/hristov.rsi
     layers:
@@ -70,6 +73,9 @@
   id: WeaponSniperImperator
   description: A imperial anti-materiel rifle. Fires the large 15.2×169mm round.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/imperator.rsi
     layers:
@@ -135,6 +141,9 @@
   id: WeaponSniperMolot
   description: A robust yet cheap anti-materiel rifle, designed in Chengridz. Excels at punching walls down, but works on people too.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/molot.rsi
     layers:
@@ -200,6 +209,9 @@
   id: WeaponSniperAK60
   description: A unlicensed .60 version of a AK. Its a less simple than a AK-74 but pack a massive 15.2x169mm Pounch.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/ak60.rsi
     layers:
@@ -265,6 +277,9 @@
   id: WeaponSniperSpear
   description: A high-end AMR by Pang Tai Arms, capable of firing significantly faster than its competitors.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/spear.rsi
     layers:

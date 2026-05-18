@@ -5,6 +5,9 @@
   id: WeaponSubMachineGunMilitant
   description: A 9x39 compact rifle, designed to be used by special forces units, and internal police. The integral suppressor makes the rifle a bitch to holster, but the silence is worth it.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Item
     shape:
     - 0,0,5,1
@@ -62,6 +65,9 @@
   id: WeaponSubMachineGunNCWLWatchdog
   description: A light, easily procurable sub machine gun, produced by the NCWL for Homeguard troops. The complete lack of stock does not breed much faith in the accuracy of this firearm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
     layers:
@@ -96,6 +102,9 @@
   id: WeaponSubMachineGunNCWLPartisanHullrot
   description: A rugged, deregulated SMG favoured by partisans and infiltrators simple, ruthless, and cheap to produce from scavenged parts.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/surplus_ncwl_smg.rsi
     layers:
@@ -151,6 +160,9 @@
   id: WeaponSubMachineGunBloodhound
   description: A robust sub machine gun, chambered in a magnum caliber, and issued to lighter armed boarding troops. Beware, the frame of the firearm does not provide much control over the kick of the monsterous .327 cartridge.
   components:
+    - type: ParticleOnGunShot # EN start
+      effect: MuzzleSmoke
+      inheritAngle: true # EN end
     - type: Sprite
       sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi
       layers:
@@ -204,6 +216,9 @@
   id: WeaponSubMachineGunC20rHullrot
   description: A slick submachinegun produced by Olywir Armaments for the Imperial Navy. Mostly used by pointmen and naval personnel.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/talon.rsi
     layers:
@@ -262,6 +277,9 @@
   id: WeaponSubMachineGunDSMArbiterHullrot
   description: A stripped-down Imperial SMG made for mass production. Features and components requiring skilled machining have been removed to allow manufacture by lesser domains.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/surplus_dsm_smg.rsi
     layers:
@@ -318,6 +336,9 @@
   id: WeaponSubMachineGunMP49
   description: Shinohara's attempt at copying the vintage NanoTrasen MP5 and outsourcing it to the open market. Seen as an inferior model at first, most mercs and solos have taken a liking to this cheaper alternative.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 600
   - type: Sprite
@@ -349,6 +370,9 @@
   id: WeaponSubMachineGunSabre
   description: A cheap submachine gun that cuts corners and features to deliver a reliable enough product, but hey, at least it comes with a free suppressor . Chambered in 6mm PSTF.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 1250
   - type: Sprite
@@ -406,6 +430,9 @@
   id: WeaponSubMachineGunWt550Hullrot
   description: A light Terran-originating submachine gun with a top-mounted magazine. Chamberd in 11mm PSTF.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/wt550.rsi
     layers:
@@ -466,6 +493,9 @@
   id: WeaponSubMachineGunCorsair
   description: A compact 11 mm submachine gun made by Cyberdawn. Commonly called the C-20R, though Cyberdawn recently tried to force the nickname Corsair on it.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/corsair.rsi
     layers:
@@ -525,6 +555,9 @@
   id: WeaponSubMachineGunAtreidesHullrot
   description: A rapid-fire submachinegun developed by the Shipfitters Union. Eats through ammo like a starving elephant.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/atreides.rsi
     layers:
@@ -552,6 +585,9 @@
   parent: BaseItem
   description: A C20 SMG for use by cyborgs. Creates 11 mm Pistol ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Gun
     minAngle: 15
     maxAngle: 25
@@ -593,6 +629,9 @@
   id: WeaponSubMachineGunPTAVektor
   description: A cheap, open-bolt copy of the Vector. Unlike the real vector this one doesnt have the signature Super V recoil mitigation system. Chambered in small 6mm rounds.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
     layers:
@@ -643,6 +682,9 @@
   id: WeaponSubMachineGunGhost
   description: A internally supressed supressed SMG, chambered in 12mm Smart.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: GunRequiresWield
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/ghost.rsi
@@ -689,6 +731,9 @@
   id: WeaponSubMachineGunCheshyre
   description: A heavy operator's SMG developed by Pang Tai Arms. Sold to independent contractors and security forces everywhere.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 1250
   - type: Sprite
@@ -738,6 +783,9 @@
   id: WeaponSubMachineGunDroz
   description: A fast very firing bullpup submachine gun. Manufactured by Pang Tai Arms and outsourced to mercenary factors in the area. Suffers from immense recoil due to it's caliber.
   components:
+    - type: ParticleOnGunShot # EN start
+      effect: MuzzleSmoke
+      inheritAngle: true # EN end
     - type: Sprite
       sprite: _Crescent/Objects/Weapons/Guns/drozd.rsi
       layers:
@@ -794,6 +842,9 @@
   id: WeaponSubMachineGunBeetle
   description: A crude but compact weapon often manufactured in frontier systems. Usually ends up in the hands of conscripted militias or soldiers receiving armory budget cuts.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 1000
   - type: Sprite
@@ -854,6 +905,9 @@
   id: WeaponSubMachineGunMP40
   description: The Kleines Maschinengewehr 40. An antique light SMG of a past conflict. Chambered in 9x19mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 800
   - type: Sprite
@@ -902,6 +956,9 @@
   id: WeaponSubMachineGunKebyt
   description: The Neo Kleines Maschinengewehr. Derived fom an older design and revitalized for swift subjugation. Chambered in 9x19mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 800
   - type: Sprite
@@ -951,6 +1008,9 @@
   id: WeaponSubMachineGunMP5
   description: A light Terran submachinegun originating from the now-defunct NanoTrasen Industries. Seen as a superior alternative to most light SMGs on the market and often used by elite militias everywhere.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: StaticPrice
     price: 800
   - type: Sprite

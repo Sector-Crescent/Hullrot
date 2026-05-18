@@ -435,128 +435,6 @@
 
 - type: entity
   parent: BaseFlatpack
-  id: MediumEnergyHardpointFlatpack
-  name: medium energy hardpoint flatpack
-  description:  Parts used to build a medium energy hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointMediumEnergy
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-
-- type: entity
-  parent: BaseFlatpack
-  id: LargeBallisticHardpointFlatpack
-  name: large ballistic hardpoint flatpack
-  description:  Parts used to build a large ballistic hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointLargeBallistic
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - LargeBallisticHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: LargeMissileHardpointFlatpack
-  name: large ballistic hardpoint flatpack
-  description:  Parts used to build a large missile hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointLargeMissile
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - LargeMissileHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: SmallBallisticHardpointFlatpack
-  name: small ballistic hardpoint flatpack
-  description:  Parts used to build a small ballistic hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointSmallBallistic
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - SmallBallisticHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: SmallMissileHardpointFlatpack
-  name: small missile hardpoint flatpack
-  description:  Parts used to build a small missile hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointSmallMissile
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - SmallMissileHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: MediumBallisticHardpointFlatpack
-  name: medium ballistic hardpoint flatpack
-  description:  Parts used to build a medium ballistic hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointMediumBallistic
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - MediumBallisticHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
-  id: MediumMissileHardpointFlatpack
-  name: medium missile hardpoint flatpack
-  description:  Parts used to build a medium Missile hardpoint.
-  components:
-  - type: Flatpack
-    entity: AAAardpointMediumMissile
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 1500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - MediumMissileHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
   id: CarrionFlatpack
   name: IEE m-V30 'Carrion' exosuit construction kit
   description:  Parts used to build an Imperial worker's mech. Activate with a multitool to deploy.
@@ -869,24 +747,6 @@
 
 - type: entity
   parent: BaseFlatpack
-  id: FixedHardpointFlatpack
-  name: fixedpoint system building kit
-  description: Parts used to build a fixed shuttle weapon hardpoint. Activate with a multitool to deploy.
-  components:
-  - type: Flatpack
-    entity: AAAHardpointFixed
-  - type: Sprite
-    layers:
-    - state: ame-part
-  - type: StaticPrice
-    price: 500
-  - type: ReverseEngineering # Sector Crescent
-    difficulty: 2
-    recipes:
-      - FixedHardpointFlatpack
-
-- type: entity
-  parent: BaseFlatpack
   id: ShieldEmitterSmallFlatpack
   name: NT-280 deflector flatpack
   description: Parts used to build a small shield generator. Activate with a multitool to deploy.
@@ -1032,8 +892,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretSmallArtilleryFlatpack
-  name: 50mm 'Striker' light autocannon Flatpack
-  description: Parts used to build a 50mm 'Striker' light autocannon. Activate with a multitool to deploy.
+  name: 50mm 'Striker' heavy autocannon Flatpack
+  description: Parts used to build a 50mm 'Striker' heavy autocannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretSmallArtillery
@@ -1050,8 +910,8 @@
 - type: entity
   parent: BaseFlatpack
   id: WeaponTurretMediumMachinegunFlatpack
-  name: 35mm 'Scout' rotary cannon Flatpack
-  description: Parts used to build a 35mm 'Scout' rotary cannon. Activate with a multitool to deploy.
+  name: 35mm 'Scout' light autocannon Flatpack
+  description: Parts used to build a 35mm 'Scout' light autocannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretMediumMachinegun
@@ -1067,9 +927,27 @@
 
 - type: entity
   parent: BaseFlatpack
+  id: WeaponTurretMediumRotaryCannonFlatpack
+  name: 20mm 'Cleanser' rotary cannon Flatpack
+  description: Parts used to build a 20mm 'Cleanser' rotary cannon. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretSmallMachinegunSAW
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+  - type: ReverseEngineering # Sector Crescent
+    difficulty: 2
+    recipes:
+      - WeaponTurretSmallMachinegunFlatpack
+
+- type: entity
+  parent: BaseFlatpack
   id: WeaponTurretSmallMachinegunFlatpack
-  name: 20mm 'Screamer' light carbine repeater cannon Flatpack
-  description: Parts used to build a 20mm 'Screamer' light carbine repeater cannon. Activate with a multitool to deploy.
+  name: 20mm 'Screamer' rotary cannon Flatpack
+  description: Parts used to build a 20mm 'Screamer' rotary cannon. Activate with a multitool to deploy.
   components:
   - type: Flatpack
     entity: WeaponTurretSmallMachinegun
@@ -1330,6 +1208,78 @@
   components:
   - type: Flatpack
     entity: WeaponTurretMauler
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+# Movable Hardpoints!
+
+- type: entity
+  parent: BaseFlatpack
+  id: AAAHardpointSmallBallisticAnchorableFlatpack
+  name: Hardpoint Small/Ballistic Flatpack
+  description: Parts used to build a small turreted ballistic hardpoint. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallBallisticAnchorable
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: AAAHardpointSmallEnergyAnchorableFlatpack
+  name: Hardpoint Small/Energy Flatpack
+  description: Parts used to build a small turreted energy hardpoint. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallEnergyAnchorable
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: AAAHardpointSmallMissileAnchorableFlatpack
+  name: Hardpoint Small/Missile Flatpack
+  description: Parts used to build a small turreted missile hardpoint. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointSmallMissileAnchorable
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: AAAHardpointFixedSmallAnchorableFlatpack
+  name: Hardpoint Fixed/Small Flatpack
+  description: Parts used to build a small fixed universal hardpoint. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointFixedSmallAnchorable
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseFlatpack
+  id: AAAHardpointFixedMediumAnchorableFlatpack
+  name: Hardpoint Fixed/Medium Flatpack
+  description: Parts used to build a medium fixed universal hardpoint. Activate with a multitool to deploy.
+  components:
+  - type: Flatpack
+    entity: AAAHardpointFixedMediumAnchorable
   - type: Sprite
     layers:
     - state: ame-part

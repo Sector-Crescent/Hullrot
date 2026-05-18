@@ -20,7 +20,7 @@
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Mech
-    maxIntegrity: 225
+    maxIntegrity: 275
     baseState: carrion
     openState: carrion-open
     brokenState: carrion-broken
@@ -37,7 +37,7 @@
         Blunt: 40
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
-    baseSprintSpeed: 2.5
+    baseSprintSpeed: 4.5
     weightlessFriction: 0.4
     weightlessAcceleration: 0.1
     weightlessModifier: 8 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
@@ -141,9 +141,9 @@
 
 - type: entity
   id: MechNCWLLancer
-  parent: [ BaseMech, HybridScoutMech ]
+  parent: [ BaseMech, IndustrialMech ]
   name: HNF mk.I Lancer hybrid mechsuit
-  description: A light biped exosuit that can take both light weapon and some industrial modules. Developed by Pang Tai Arms under the codename Project Goldenstar, and adapted for the uses of the State by the Union Homeguard Naval Foundries some time after. The workhorse of the Homeguard Navy.
+  description: A light biped exosuit that can take industrial modules. Developed by Pang Tai Arms under the codename Project Goldenstar, and adapted for the uses of the State by the Union Homeguard Naval Foundries some time after. The workhorse of the Homeguard Navy.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -159,11 +159,11 @@
     footstepSoundCollection:
       path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Mech
-    maxIntegrity: 220
+    maxIntegrity: 275
     baseState: lancer
     openState: lancer-open
     brokenState: lancer-broken
-    mechToPilotDamageMultiplier: 0.25
+    mechToPilotDamageMultiplier: 0.5
     airtight: true
     pilotWhitelist:
       components:
@@ -173,13 +173,13 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 25
+        Blunt: 40
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2.7
-    baseSprintSpeed: 2.7
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 4.5
     weightlessFriction: 0.4
-    weightlessAcceleration: 0.2
-    weightlessModifier: 7.5 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
+    weightlessAcceleration: 0.1
+    weightlessModifier: 8 # 20ish ship speed - weightless speed is influenced by weightlessModifier and base(Walk/Sprint)Speed
   - type: CanMoveInAir
   - type: MovementAlwaysTouching
   - type: ProjectileIFF

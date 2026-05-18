@@ -4,6 +4,9 @@
   id: WeaponPistolAnsem
   description: A fancy 11mm auto pistol with elongated iron sights and a supressor. Made by Cyberdawn for Cyberdawn.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/ansem.rsi
     layers:
@@ -56,6 +59,9 @@
   id: WeaponPistolLiquidator
   description: An integrally suppressed 11mm pistol, commonly used in ethical contract termination procedures. Incredibly quiet, the only sound anyone might hear is the manual cycling of the action.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/liquidator.rsi
     layers:
@@ -102,6 +108,9 @@
   id: WeaponPistolComrade
   description: A cheap, mass-produced pistol produced for the common communard. Chambered in 9x19mm PSTF.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/comrade.rsi
     layers:
@@ -128,6 +137,9 @@
   id: WeaponPistolHKUSP
   description: A cheap, mass-produced pistol originally produced from antiquated NanoTrasen designs.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/lockwell.rsi
     layers:
@@ -151,6 +163,9 @@
   name: NCSP DE-7 Deagle .327
   description: A Desert eagle milled out of pure gold, as if a steel one wasnt heavy enough. A true sidearm of a warlord. Chambered in .327 Imperial.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/deagle.rsi
     layers:
@@ -228,6 +243,9 @@
   id: WeaponPistolT91
   description: A hefy semi-automatic handgun, designed to be much better at breaking armor than the T-18. Ironically chambered in .327 Imperial.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/quasar.rsi
     layers:
@@ -279,6 +297,9 @@
   id: WeaponPistolHimehabu
   description: A domestic firearm produced for the Shinoahara internal market. Often seen in the hands of CSEC operatives - and sometimes independent mercenaries. Chambered in 9x19mm PSTF.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/himehabu.rsi
     layers:
@@ -302,6 +323,9 @@
   id: WeaponPistolComplianceImperial
   description: A standard-issue Imperial sidearm with a laser-engraved "OLYWIR ARMAMENTS" print. Full of useless flair and polish, yet performs the same as other firearms on the market. Chambered in 9x19mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/compliance.rsi
     layers:
@@ -329,6 +353,9 @@
   id: WeaponPistolSmartpistol
   description: A robust little thing from the SHI development team. Chambered in custom-made 12mm depleted uranium-tip rounds - packs a punch and is capable of full auto. Chambered in heavy 12mm.
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Guns/shinobi.rsi
     layers:
@@ -390,6 +417,9 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: ParticleOnGunShot # EN start
+    effect: MuzzleSmoke
+    inheritAngle: true # EN end
   - type: Sprite
     layers:
       - state: base

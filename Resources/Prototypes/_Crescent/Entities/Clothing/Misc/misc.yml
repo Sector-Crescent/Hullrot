@@ -24,8 +24,6 @@
       transmitFrequencyId: SurveillanceCamera
     - type: SurveillanceCamera
       networkSet: true
-      nameSet: True
-      id: Bodycam
     - type: Eye
     - type: WirelessNetworkConnection
       range: 100000 # Modify this to change the range, make sure to change the range of the respective router to be the same
@@ -35,6 +33,12 @@
         - SurveillanceCamera
         - RadioSpeaker
         - SurveillanceCameraMonitor
+    - type: UserInterface
+      interfaces:
+        enum.SurveillanceCameraSetupUiKey.Camera:
+          type: SurveillanceCameraSetupBoundUi
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
     - type: ActiveListener
       range: 6
     - type: ClothingGrantComponent

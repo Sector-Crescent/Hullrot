@@ -29,9 +29,9 @@
 
 - type: listing
   id: StoreListing20mmcannon
-  name: 20mm 'Screamer' light carbine repeater cannon flatpack
-  description: An repeater cannon for small ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Turrets/Projectile/machinegun.rsi, state: machinegun }
+  name: 20mm 'Screamer' rotarycannon flatpack
+  description: A rotary cannon for small ballistic hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/minigun.rsi, state: minigun }
   productEntity: WeaponTurretSmallMachinegunFlatpack
   cost:
     ScrapSAW: 15
@@ -40,9 +40,9 @@
 
 - type: listing
   id: StoreListingscoutcannon
-  name: 35mm 'Scout' rotary cannon flatpack
-  description: An rotary cannon for small ballistic hardpoint.
-  icon: { sprite: _Crescent/Objects/Turrets/Projectile/minigun.rsi, state: minigun }
+  name: 35mm 'Scout' autocannon flatpack
+  description: An autocannon for small ballistic hardpoints.
+  icon: { sprite: _Crescent/Objects/Turrets/Projectile/machinegun.rsi, state: machinegun }
   productEntity: WeaponTurretMediumMachinegunFlatpack
   cost:
     ScrapSAW: 20
@@ -50,9 +50,20 @@
   - StoreCategorySAWGuns
 
 - type: listing
+  id: StoreListing20mmSAWcannon
+  name: 20mm 'Cleanser' rotary cannon flatpack
+  description: A bonafide SAW original and favorite of scrappers sector-wide, overtuned and oversized to the point of requiring a medium hardpoint to house it.
+  icon: { sprite: _Crescent/Objects/ShuttleWeapons/gatling.rsi, state: space_artillery }
+  productEntity: WeaponTurretMediumRotaryCannonFlatpack
+  cost:
+    ScrapSAW: 30
+  categories:
+  - StoreCategorySAWGuns
+
+- type: listing
   id: StoreListing50mmautocannon
   name: 50mm 'Striker' light autocannon flatpack
-  description: An artillery for medium ballistic hardpoint.
+  description: A heavy autocannon for medium ballistic hardpoints.
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/autocannon.rsi, state: autocannon }
   productEntity: WeaponTurretSmallArtilleryFlatpack
   cost:
@@ -63,7 +74,7 @@
 - type: listing
   id: StoreListing120mmcannon
   name: 120mm 'Anvil' mono-barreled artillery cannon flatpack
-  description: A artillery for medium ballistic hardpoints
+  description: An artillery piece for medium ballistic hardpoints
   icon: { sprite: _Crescent/Objects/Turrets/Projectile/medium_auto.rsi, state: medium_auto}
   productEntity: WeaponTurretMediumArtilleryFlatpack
   cost:
@@ -219,68 +230,68 @@
   - StoreCategorySAWshipmods
 
 - type: listing
-  id: StoreListingSAWHardpointMissileLarge
-  name: Salvaged large missile hardpoint
-  description: A large missile hardpoint fit for turrets.
-  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Large }
-  productEntity: LargeMissileHardpointFlatpack
+  id: StoreListingSAWScrapMagnet
+  name: SHI baromagnetic scrap magnet array
+  description: A modified ore magnet array, tailored by SAW to pick up sources of ever-valuable scrap.
+  icon: { sprite: /Textures/Structures/Storage/orebox.rsi, state: magnet}
+  productEntity: ScrapMagnetFlatpack
   cost:
-    ScrapSAW: 44
+    ScrapSAW: 50
   categories:
   - StoreCategorySAWshipmods
 
 - type: listing
-  id: StoreListingSAWHardpointBallisticLarge
-  name: Salvaged large ballistic hardpoint
-  description: A large ballistic hardpoint fit for turrets.
-  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Large }
-  productEntity: LargeBallisticHardpointFlatpack
-  cost:
-    ScrapSAW: 44
-  categories:
-  - StoreCategorySAWshipmods
-
-- type: listing
-  id: StoreListingSAWHardpointMissileMedium
-  name: Salvaged medium missile hardpoint
-  description: A medium missile hardpoint fit for turrets.
+  id: StoreListingSAWHardpointFixedMedium
+  name: Salvaged Fixed/Medium hardpoint
+  description: A medium fixed hardpoint fit for turrets. It's sometimes said that NOT mounting 'Cleansers' upon these brings bad luck.
   icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Medium }
-  productEntity: MediumMissileHardpointFlatpack
+  productEntity: AAAHardpointFixedMediumAnchorableFlatpack
   cost:
-    ScrapSAW: 21
-  categories:
-  - StoreCategorySAWshipmods
-
-- type: listing
-  id: StoreListingSAWHardpointBallisticMedium
-  name: Salvaged medium ballistic hardpoint
-  description: A medium ballistic hardpoint fit for turrets.
-  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Medium }
-  productEntity: MediumBallisticHardpointFlatpack
-  cost:
-    ScrapSAW: 21
-  categories:
-  - StoreCategorySAWshipmods
-
-- type: listing
-  id: StoreListingSAWHardpointMissileSmall
-  name: Salvaged small missile hardpoint
-  description: A small missile hardpoint fit for lower-caliber ship weapons.
-  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
-  productEntity: SmallMissileHardpointFlatpack
-  cost:
-    ScrapSAW: 12
+    ScrapSAW: 24
   categories:
   - StoreCategorySAWshipmods
 
 - type: listing
   id: StoreListingSAWHardpointBallisticSmall
-  name: Salvaged small ballistic hardpoint
-  description: A small ballistic hardpoint fit for low-caliber ship weapons such as point-defenses.
+  name: Salvaged Ballistic/Small hardpoint
+  description: A small ballistic hardpoint fit for lower-caliber ship weapons.
   icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
-  productEntity: SmallBallisticHardpointFlatpack
+  productEntity: AAAHardpointSmallBallisticAnchorableFlatpack
   cost:
     ScrapSAW: 12
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWHardpointEnergySmall
+  name: Salvaged Energy/Small hardpoint
+  description: A small energy hardpoint fit for low-caliber ship weapons such as point-defenses.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
+  productEntity: AAAHardpointSmallEnergyAnchorableFlatpack
+  cost:
+    ScrapSAW: 12
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWHardpointMissileSmall
+  name: Salvaged Missile/Small hardpoint
+  description: A small missile hardpoint fit for low-caliber ship weapons such as anti-fighter guided systems.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
+  productEntity: AAAHardpointSmallMissileAnchorableFlatpack
+  cost:
+    ScrapSAW: 12
+  categories:
+  - StoreCategorySAWshipmods
+
+- type: listing
+  id: StoreListingSAWHardpointFixedSmall
+  name: Salvaged Fixed/Small hardpoint
+  description: A small fixed universal hardpoint fit for low-caliber ship weapons such as point-defenses, lacks gimballing.
+  icon: { sprite: _Crescent/Structures/hardpoints.rsi, state: Small }
+  productEntity: AAAHardpointFixedSmallAnchorableFlatpack
+  cost:
+    ScrapSAW: 8
   categories:
   - StoreCategorySAWshipmods
 
@@ -336,17 +347,6 @@
   productEntity: TinyFanFlatpack
   cost:
     ScrapSAW: 40
-  categories:
-  - StoreCategorySAWshipmods
-
-- type: listing
-  id: StoreListingSAWHardpoint
-  name: Salvaged fixed hardpoint
-  description: A true desire of every shipbreaker, provided for you from all the salvaged ships which were hauled to Dochenskaya over the years.
-  icon: { sprite: _Crescent/Structures/fixedHardpoint.rsi, state: large }
-  productEntity: FixedHardpointFlatpack
-  cost:
-    ScrapSAW: 30
   categories:
   - StoreCategorySAWshipmods
 

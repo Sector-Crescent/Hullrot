@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites provided by @WillyBillyGilly",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+          "name": "stamina6"
+        },
+        {
+          "name": "stamina5"
+        },
+        {
+          "name": "stamina4"
+        },
+        {
+          "name": "stamina3"
+        },
+        {
+          "name": "stamina2"
+        },
+        {
+          "name": "stamina1",
+          "delays": [
+            [
+              0.1,
+              0.1
+            ]
+          ]
+        },
+        {
+          "name": "stamina0",
+          "delays": [
+            [
+              0.1,
+              0.1
+            ]
+          ]
+        }
+      ]
+}

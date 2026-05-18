@@ -1,0 +1,36 @@
+- type: particleEffect
+  id: MuzzleSmoke
+  sprite:
+    sprite: _Stalker_EN/Particles/smoke.rsi
+    state: smoke
+  alphaOverLifetime:
+    - time: 0
+      value: 0.3
+    - time: 0.9
+      value: 0
+  sizeOverLifetime:
+    - time: 0
+      value: 0.6
+    - time: 0.9
+      value: 1.7
+  startColor: "#FFFFFF"
+  lifetime: 0.9
+  lifetimeVariance: 0
+  speed: 8
+  speedVariance: 6
+  particleSize: 0.8
+  sizeVariance: 0.2
+  stretchFactor: 0
+  maxCount: 5
+  burst: true
+  duration: 3
+  gravity: 0
+  drag: 4
+  spreadAngle: 15
+  emitAngle: 0
+  startRotationVariance: 180
+  rotationSpeed: 25
+  rotationSpeedVariance: 25
+  inheritVelocity: 1
+  shape:
+    type: point

@@ -25,72 +25,73 @@
     densityNoiseChannel: DensityGraveyard
     densityMultiplier: 18
     maxDebrisPerChunk: 1
+    randomCancelChance: 0.8
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:
     - id: ScrapDebrisSmall
-      prob: 1
+      prob: 0.5
     - id: ScrapDebrisMedium
-      prob: 1
+      prob: 0.5
     - id: ScrapDebrisLarge
-      prob: 1
+      prob: 0.5
     - id: GargutWreckFull
-      prob: 1
+      prob: 0.5
     - id: TriumWreck1
-      prob: 1
+      prob: 0.5
     - id: TriumWreck2
-      prob: 1
+      prob: 0.5
     - id: SuzWreck1
-      prob: 1
+      prob: 0.5
     - id: SuzWreck2
-      prob: 1
+      prob: 0.5
     - id: SuzWreck3
-      prob: 1
+      prob: 0.5
     - id: NemWreck1
-      prob: 1
+      prob: 0.5
     - id: NemWreck2
-      prob: 1
+      prob: 0.5
     - id: IvarWreck1
-      prob: 1
+      prob: 0.5
     - id: ClemWreck1
-      prob: 1
+      prob: 0.5
     - id: ClemWreck2
-      prob: 1
+      prob: 0.5
     - id: ClemWreck3
-      prob: 1
+      prob: 0.5
     - id: ExhumerGag
-      prob: 1
+      prob: 0.5
     - id: GazWreck1
-      prob: 1
+      prob: 0.5
     - id: GazWreck2
-      prob: 1
+      prob: 0.5
     - id: HamWreck1
-      prob: 1
+      prob: 0.5
     - id: HindWreck1
-      prob: 1
+      prob: 0.5
     - id: LodkWreck
-      prob: 1
+      prob: 0.5
     - id: PraxWreck1
-      prob: 1
+      prob: 0.5
     - id: QianWreck1
-      prob: 1
+      prob: 0.5
     - id: SternWreck1
-      prob: 1
+      prob: 0.5
     - id: WereGood
-      prob: 1
+      prob: 0.5
     - id: MoloWreck1
-      prob: 1
+      prob: 0.5
     - id: MusiWreck1
-      prob: 1
+      prob: 0.5
     - id: RadAtee
       prob: 0.1
     - id: CorvWreck1
-      prob: 1
+      prob: 0.5
     - id: CocWreck1
-      prob: 1
+      prob: 0.5
   - type: NoiseRangeCarver
     ranges:
-    - 0.4, 0.6
+    - 0.37, 0.63
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -180,6 +181,7 @@
   chunkComponents:
   - type: DebrisFeaturePlacerController
     densityNoiseChannel: DensityGraveyard
+    randomCancelChance: 0.8
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:
@@ -239,7 +241,7 @@
       prob: 1
   - type: NoiseRangeCarver
     ranges:
-    - 0.4, 0.6
+    - 0.37, 0.63
     noiseChannel: Carver
 
 - type: spaceBiome
@@ -253,6 +255,9 @@
   chunkComponents:
   - type: DebrisFeaturePlacerController
     densityNoiseChannel: DensityGraveyard
+    densityMultiplier: 18
+    maxDebrisPerChunk: 1
+    randomCancelChance: 0.8
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:
