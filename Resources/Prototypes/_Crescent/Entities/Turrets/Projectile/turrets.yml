@@ -792,7 +792,7 @@
 - type: entity
   parent: BaseTurretShipgun
   id: WeaponTurretLargeArtillery
-  suffix: Artillery, Large Ballistics #Not yet!
+  suffix: Artillery, Large Ballistics
   name: 300mm 'Leviathan' Siege Battery
   description: The largest conventional cannon found in Taypan. There really isnt much more to say about such a glorious piece of heavy weaponry.
   components:
@@ -820,7 +820,7 @@
         ballistic-ammo: !type:Container
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 160
+      projectileSpeed: 180
       burstFireRate: 3
       shotsPerBurst: 2
       burstCooldown: 8

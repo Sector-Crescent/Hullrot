@@ -255,6 +255,9 @@
   chunkComponents:
   - type: DebrisFeaturePlacerController
     densityNoiseChannel: DensityGraveyard
+    densityMultiplier: 18
+    maxDebrisPerChunk: 1
+    randomCancelChance: 0.8
   - type: NoiseDrivenDebrisSelector
     noiseChannel: WreckGraveyard
     debrisTable:

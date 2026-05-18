@@ -153,8 +153,8 @@
   description: A bulkier shield emitter reverse-engineered by SHI from ancient blueprints. Outputs a bubble shield of mediocre strength around a vessel but is prone to overheating after soaking too much damage.
   components:
   - type: ShipShieldEmitter
-    damageLimit: 2000
-    healPerSecond: 80
+    damageLimit: 9000
+    healPerSecond: 150
     damageExp: 1.0
     powerDraw: 12500
     unpoweredBonus: 2.5
@@ -195,7 +195,7 @@
   components:
   - type: ShipShieldEmitter
     damageLimit: 4500
-    healPerSecond: 50
+    healPerSecond: 100
     damageExp: 1.0
     powerDraw: 5000
     unpoweredBonus: 2.5
