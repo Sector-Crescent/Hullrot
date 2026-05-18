@@ -49,20 +49,20 @@
   name: NCWL SV-79 7.62x39mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
   id: WeaponRifleSV79
-  description: A unique bullpup design, produced by the Union Foundry in Chengridz. Designed with CQB in mind, the bullpup configuration allows for a long barrel in a stout package, at the cost of complicating the internal machinery. 
+  description: A unique bullpup design, produced by the Union Foundry in Chengridz. Designed with CQB in mind, the bullpup configuration allows for a long barrel in a stout package, at the cost of complicating the internal machinery.
   components:
   - type: Item
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79.rsi
   - type: Gun
     fireRate: 6.5
     soundGunshot:
@@ -98,7 +98,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
-    
+
 - type: entity
   name: DSM IPV-701 5.56x45mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
@@ -109,14 +109,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701.rsi
   - type: Gun
     fireRate: 6.5
     soundGunshot:
@@ -161,14 +161,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220.rsi
   - type: Gun
     fireRate: 4.5
     soundGunshot:
@@ -183,7 +183,7 @@
         priority: 2
         whitelist:
           tags:
-            - CrescentMagazine_556x45
+            - CrescentMagazine_762x51
       gun_chamber:
         name: Chamber
         startingItem: CrescentCartridge_762x51
@@ -202,7 +202,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
-    
+
 - type: entity
   name: SHI Type-518 5.56x45mm
   parent: [BaseWeaponRifle, StreeCredRedeemable]
@@ -213,14 +213,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518.rsi
   - type: Gun
     fireRate: 6.5
     selectedMode: FullAuto
@@ -261,7 +261,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 3000
-    
+
 - type: entity
   parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
   id: WeaponRifleSHIM919
@@ -273,9 +273,9 @@
   - type: StaticPrice
     price: 2000
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919.rsi
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919.rsi
   - type: Gun
     fireRate: 3
     projectileSpeed: 45
@@ -301,7 +301,7 @@
   description: A shitty, mass produced, fully 3d printed "rifle". Comes loaded, and physically cannot accept new rounds. Twist the key, and pull the trigger.
   components:
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/STK-A
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/STK-A.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -318,14 +318,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001.rsi
   - type: Gun
     fireRate: 6
     selectedMode: FullAuto
@@ -376,14 +376,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5.rsi
   - type: Gun
     fireRate: 6.5
     selectedMode: FullAuto
@@ -413,6 +413,305 @@
         whitelist:
           tags:
             - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: Sharps AX-8 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleTypeAX8
+  description: placeholder.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-8.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-8.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: Sharps AX-1 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleTypeAX1
+  description: placeholder.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-1.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-1.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: Sharps AX-7 .277
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleTypeAX7
+  description: placeholder.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-7.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-7.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_277
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_277
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_277
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: CZ OBJ-201 5.45x39
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleOBJ201
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/OBJ-201.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/OBJ-201.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_545x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_545x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_545x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_545x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: HDB 6P30 4.6x30
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifle6P30
+  description: russia slop
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/6P30.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/6P30.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_3.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_46x30
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_46x30
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_46x30
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_46x30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

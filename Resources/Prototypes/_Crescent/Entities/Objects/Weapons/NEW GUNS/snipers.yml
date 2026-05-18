@@ -1,0 +1,158 @@
+
+- type: entity
+  name: SHI SR-200
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponSniperSR200
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/SR-200.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/SR-200.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_376
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_376
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_376
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_376
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: Sharps APW-16 .376
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponSniperAPW16
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/APW-16.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/APW-16.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_376
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_376
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_376
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_376
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: NCWL BSV-95/1M
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponSniperBSV951M
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/BSV-951M.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/BSV-951M.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x54
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x54
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x54
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x54
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
