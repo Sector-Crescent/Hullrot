@@ -1,0 +1,174 @@
+
+# The actual rifles
+- type: entity
+  name: NCWL SV-79 7.62x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleSV79
+  description: A unique bullpup design, produced by the Union Foundry in Chengridz. Designed with CQB in mind, the bullpup configuration allows for a long barrel in a stout package, at the cost of complicating the internal machinery.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79.rsi
+  - type: Gun
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: CZ OBJ-201 5.45x39
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleOBJ201
+  description: There are over 550 million firearms in worldwide circulation. That's one firearm for every twelve people on the planet. The only question is, How do we arm the other 11?
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/OBJ-201.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/OBJ-201.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_545x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_545x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_545x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_545x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: HDB 6P30 4.6x30
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifle6P30
+  description: now where do i put all these lord of war quotes
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/6P30.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/6P30.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_3.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_46x30
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_46x30
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_46x30
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_46x30
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000

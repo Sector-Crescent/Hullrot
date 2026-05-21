@@ -1,0 +1,30 @@
+- type: entity
+  name: NCWL TSD-87 12ga
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: CrescentWeaponShotgunTSD87
+  description: The TSD-87 is a unique shotgun, utilizing a reversed pump action, and chambered in 12 gauge. while the action is a little akward to get used to, it fires buckshot and slugs like any shotgun.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TSD-87.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/TSD-87.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,3,1
+  - type: Gun
+    shotgunSpreadMultiplier: 1.25
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_2/shotgun_gunshot_1.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: false
+    proto: CrescentCartridge_12Ga
+  - type: ItemSlots

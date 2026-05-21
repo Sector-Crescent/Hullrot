@@ -1,0 +1,136 @@
+- type: entity
+  name: Sharps PAA-13c 12ga
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: CrescentWeaponShotgunPAA13c
+  description: placeholder
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-13c.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-13c.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-13c.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: GunRequiresWield
+  - type: Gun
+    damageModifier: 1.25
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_1/shotgun_gunshot_3.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+    fireOnDropChance: 0.3
+    shotgunSpreadMultiplier: 1.25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: true
+    proto: CrescentCartridge_12Ga
+  - type: Wieldable
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: Execution
+  - type: MeleeWeapon
+    attackRate: 1.4
+    damage:
+      types:
+        Blunt: 10
+    bluntStaminaDamageFactor: 1.3333
+    swapKeys: true
+    disableHeavy: true
+    animation: WeaponArcThrust
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MetalThud
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 2.5
+  - type: DamageOtherOnHit
+    staminaCost: 9.5
+
+- type: entity
+  name: Sharps PAA-12 12ga
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: CrescentWeaponShotgunPAA12
+  description: placeholder
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-12.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-12.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/PAA-12.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: GunRequiresWield
+  - type: Gun
+    damageModifier: 1.25
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/shotgun_1/shotgun_gunshot_3.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+    fireOnDropChance: 0.3
+    shotgunSpreadMultiplier: 1.25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: true
+    proto: CrescentCartridge_12Ga
+  - type: Wieldable
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: Execution
+  - type: MeleeWeapon
+    attackRate: 1.4
+    damage:
+      types:
+        Blunt: 10
+    bluntStaminaDamageFactor: 1.3333
+    swapKeys: true
+    disableHeavy: true
+    animation: WeaponArcThrust
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MetalThud
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 2.5
+  - type: DamageOtherOnHit
+    staminaCost: 9.5
+
