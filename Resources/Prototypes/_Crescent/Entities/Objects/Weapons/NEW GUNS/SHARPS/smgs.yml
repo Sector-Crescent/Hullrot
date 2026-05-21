@@ -1,0 +1,110 @@
+- type: entity
+  name: Sharps P-M25 .45
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGunPM25
+  description: A highly advanced subgun produced by Sharps Precision. The weapon is built around the "HYPER-P" recoil mitigation system, which takes up a large part of the front of the gun. The result is being able to fire .45 like it's 9x19.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/P-M25.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/P-M25.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 8
+    angleIncrease: 5
+    angleDecay: 10
+    maxAngle: 10
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_45
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_45
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+
+- type: entity
+  name: Sharps PAA-8 18.5ga
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGunPAA-8
+  description: placeholder
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/PAA-8.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/PAA-8.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 8
+    angleIncrease: 5
+    angleDecay: 10
+    maxAngle: 10
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentBoxMagazine_185Ga
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentBoxMagazine_185Ga
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_185Ga
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_185Ga
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
