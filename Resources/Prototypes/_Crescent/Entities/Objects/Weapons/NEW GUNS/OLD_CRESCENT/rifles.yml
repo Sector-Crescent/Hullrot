@@ -70,14 +70,14 @@
     shape:
     - 0,0,4,1
   - type: Sprite
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74U.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74u.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74U.rsi
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74u.rsi
   - type: ChamberMagazineAmmoProvider
     boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
     soundRack:
