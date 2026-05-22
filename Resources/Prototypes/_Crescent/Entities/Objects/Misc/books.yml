@@ -145,7 +145,7 @@
           factionID: "SRM"
 
 - type: entity
-  parent: BaseItem
+  parent: BookOfKane
   id: BookNCWLPartyDossier
   name: Party dossier
   description: A collection of quotes and texts that are the direct writings of renowned party members and propaganda departments.
@@ -162,15 +162,7 @@
       color: "#cc0000"
     - state: detail_rivets
   - type: BookOfKane
-  - type: UseDelay
-    delay: 2
-  - type: Appearance
-  - type: EmitSoundOnPickup
-    sound: /Audio/SimpleStation14/Items/Handling/book_pickup.ogg
-  - type: EmitSoundOnDrop
-    sound: /Audio/SimpleStation14/Items/Handling/book_drop.ogg
-  - type: EmitSoundOnLand
-    sound: /Audio/SimpleStation14/Items/Handling/book_drop.ogg
+    BookOfKaneDataset: NCWLPartySpeech
   - type: ExtendDescription
     descriptionList:
     - description: "NCWLparty-extendeddescription-NCWL"
