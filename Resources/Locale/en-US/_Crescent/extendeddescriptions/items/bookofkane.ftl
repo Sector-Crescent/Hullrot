@@ -4,3 +4,5 @@ bookofkane-extendeddescription-SHI = An affront to all values a corporate employ
 bookofkane-extendeddescription-TFSC = An old propaganda book filled with quotes. Looks old.
 bookofkane-extendeddescription-ATH = An affront to all values a diligent citizen should stand for! Nobody can see me read this!
 bookofkane-extendeddescription-SRM = An affront to all values a righteous follower of Romaine should stand for! Except VIOLENCE!
+
+NCWLparty-extendeddescription-NCWL = A collection of teachings from our wise party. Inspiring.
