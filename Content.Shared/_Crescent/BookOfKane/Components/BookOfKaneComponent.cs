@@ -8,5 +8,5 @@ namespace Content.Shared._Crescent.BookOfKane.Components;
 public sealed partial class BookOfKaneComponent : Component
 {
     [DataField]
-    public ProtoId<LocalizedDatasetPrototype>? BookOfKaneDataset = "BookOfKaneSpeech";
+    public ProtoId<LocalizedDatasetPrototype>? bookOfKaneDataset = "BookOfKaneSpeech";
 }

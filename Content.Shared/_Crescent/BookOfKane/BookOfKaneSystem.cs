@@ -1,7 +1,6 @@
 using Content.Shared.Chat;
 using Content.Shared.Interaction.Events;
 using Content.Shared._Crescent.BookOfKane.Components;
-using Content.Shared.Random.Helpers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -24,7 +23,7 @@ public sealed class BookOfKaneSystem : EntitySystem
 
     private void OnUseInHand(Entity<BookOfKaneComponent> ent, ref UseInHandEvent args)
     {
-        var datasetId = ent.Comp.BookOfKaneDataset;
+        var datasetId = ent.Comp.bookOfKaneDataset;
 
         if (datasetId == null)
             return;
