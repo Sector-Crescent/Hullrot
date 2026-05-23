@@ -1,7 +1,7 @@
 ﻿NCWLparty-speech-1 = Our union truly is the only free set of institutions in the whole Supercluster!
 NCWLparty-speech-2 = If a you do not speak up and volunteer to work and lead, the party will overlook you!
 NCWLparty-speech-3 = We die for the party of the people!
-NCWLparty-speech-4 = Nothing escapes Chengridz iron fist.
+NCWLparty-speech-4 = Nothing escapes Chengridz's iron fist.
 NCWLparty-speech-5 = We will bury the knights and torture the dissenters!
 NCWLparty-speech-6 = We will break Olywir's neck!
 NCWLparty-speech-7 = Their churches are our targets, their religion is their slavery!
@@ -11,7 +11,7 @@ NCWLparty-speech-10 = We pity the Admirals 'freemen', slaves despite their name!
 NCWLparty-speech-11 = The party commands, you enact!
 NCWLparty-speech-12 = Death to the small proprietors!
 NCWLparty-speech-13 = Taypan trembles by our might!
-NCWLparty-speech-14 = Chengridz' momentum will break all barriers!
+NCWLparty-speech-14 = Chengridz's momentum will break all barriers!
 NCWLparty-speech-15 = The Union marches through the supercluster!
 NCWLparty-speech-16 = Without the party we are nothing!
 NCWLparty-speech-17 = The party is the mechanism for proletarian class domination!
