@@ -1,0 +1,62 @@
+
+- type: entity
+  name: DSM TAsG-1900 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponLMGTASG1900
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/TASG-1900.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/TASG-1900.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/gunshot.ogg
+    soundEmpty:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentBoxMagazine_556x45
+        insertSound: /Audio/_Crescent/Weapons/Guns/MG42/bolt_close.ogg
+        ejectSound: /Audio/_Crescent/Weapons/Guns/MG42/bolt_open.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentBoxMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/rack.ogg
+    soundBoltOpened:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/bolt_open.ogg
+    soundBoltClosed:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/bolt_close.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+

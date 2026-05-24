@@ -1,0 +1,59 @@
+- type: entity
+  name: Sharps HSV-60a 7.62x51
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponLMGHSV60a
+  description: Can you bring me the gun of Rambo? Part One, Two, or Three? I've only seen Part One.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/HSV-60A.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/HSV-60A.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/rack.ogg
+    soundBoltOpened:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/bolt_open.ogg
+    soundBoltClosed:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/bolt_close.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentBoxMagazine_762x51
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentBoxMagazine_762x51
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x51
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+

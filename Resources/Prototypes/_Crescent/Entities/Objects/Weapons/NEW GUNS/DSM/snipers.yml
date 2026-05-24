@@ -1,0 +1,46 @@
+
+- type: entity
+  name: DSM LsPv-240 7.62x51mm
+  parent: [BaseWeaponSniper, StreeCredRedeemable]
+  id: WeaponSniperLsPv240
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/LSPV-240.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SNIPERS/LSPV-240.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/non_collection/amr.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_762x51
+    soundInsert:
+      collection: LeverReload
+    capacity: 8
+    autoCycle: true
+    proto: CrescentCartridge_762x51
+  - type: Wieldable
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+

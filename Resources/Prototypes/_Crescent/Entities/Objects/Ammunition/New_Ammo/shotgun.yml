@@ -12,7 +12,7 @@
     - Cartridge
     - CrescentCartridge_185Ga
   - type: CartridgeAmmo
-    proto: CrescentBullet_185Ga
+    proto: Crescent185gaPelletShotgunSpread
   - type: Sprite
     sprite: _Crescent/Objects/Weapons/Ammunition/New_Ammo/Casings/18.5Ga.rsi
     layers:
@@ -28,7 +28,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 1000 # i just hit the juckport
+        Piercing: 10 # i just hit the juckport
     harmorPenetration: 30
     stoppingPower: 4
 
@@ -95,7 +95,7 @@
     zeroVisible: false
 
 - type: entity
-  id: CrescentBoxMagazine185Ga
+  id: CrescentBoxMagazine_185Ga
   name: "20-round magazine (18.5Ga)"
   parent: CrescentBaseMagazine
   abstract: False
@@ -183,7 +183,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 1000 # i just hit the juckport
+        Piercing: 12 # i just hit the juckport
     harmorPenetration: 30
     stoppingPower: 4
 

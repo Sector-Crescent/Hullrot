@@ -1,0 +1,164 @@
+- type: entity
+  name: NCWL RLPP-181 7.62x25mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGunRLPP181
+  description: A light sub machine gun, designed by the Homeguard Committee, and intended to be used by boarding troops and naval personnel. The bulky stock actually provides decent control over the weapon, despite its firerate and caliber. Be careful, the polymer is known to get very hot after prolonged firing.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/RLPP-181.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/RLPP-181.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 10
+    angleIncrease: 5
+    angleDecay: 20
+    maxAngle: 20
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_762x25
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_762x25
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x25
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x25
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: HDB 6P54 9x19
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGun6P54
+  description: plaacingholer
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/6P54.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/6P54.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 8
+    angleIncrease: 5
+    angleDecay: 10
+    maxAngle: 10
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_9x19
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_9x19
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_9x19
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_9x19
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: HDB 6P55 4.6x30
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGun6P55
+  description: plaacingholer
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/6P55.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/6P55.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 8
+    angleIncrease: 5
+    angleDecay: 10
+    maxAngle: 10
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_46x30
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_46x30
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_46x30
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_46x30
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

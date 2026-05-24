@@ -1,0 +1,59 @@
+
+- type: entity
+  name: OLCRES SAIGA-12k 12ga
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponShotgunSaiga12k
+  description: placeholder
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/SAIGA-12k.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/SAIGA-12k.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    soundGunshot:
+      collection: Shotgun_2_Gunshots
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+    fireRate: 2
+    angleIncrease: 5
+    angleDecay: 10
+    maxAngle: 10
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_12Ga
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_12Ga
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_12Ga
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_12Ga
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

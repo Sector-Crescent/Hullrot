@@ -1,0 +1,202 @@
+# Single Use Rifle Base
+- type: entity
+  name: BaseRifleOneUse
+  parent: BaseItem
+  id: BaseRifleOneUse
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+    fireOnDropChance: .6
+  - type: StaticPrice
+    price: 100
+  - type: BallisticAmmoProvider
+    proto: CrescentCartridge_556x45
+    capacity: 20
+    cycleable: false
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+
+- type: entity
+  name: SHI Type-220 7.62x51mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleType220
+  description: Shinohara's flagship battle rifle design, built for mid to long range encounters. Chambered in the aging 7.62x51mm Imperial cartridge, the Type-220 makes sure whoever may be in your way, stops being in your way.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220.rsi
+  - type: Gun
+    fireRate: 4.5
+    soundGunshot:
+      collection: Dmr_1_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x51
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x51
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x51
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: SHI Type-518 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleType518
+  description: Shinohara's most modern assault rifle to date, the Type-518 is perfectly generic in every way, while still being a great tactical weapon. Comes with a two round burst, for more controlled groupings.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518.rsi
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: Pistol_2_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
+  id: CrescentWeaponRifleSHIM919
+  name: SHI-UA M919 5.56x45
+  description: An incredibly cheap "replica" lever action rifle, produced by the Shinohara subsidiary, United Arms. Yeah the action is tough, and yeah the polymer feels like shit, but it fires bullets doesn't it?
+  components:
+  - type: Item
+    size: Ginormous
+  - type: StaticPrice
+    price: 2000
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919.rsi
+  - type: Gun
+    fireRate: 3
+    projectileSpeed: 45
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/UnionfallWeapons/lever_fire.ogg
+  - type: BallisticAmmoProvider
+    soundInsert:
+      collection: LeverReload
+    capacity: 6
+    autoCycle: false
+    proto: CrescentCartridge_556x45
+    whitelist:
+      tags:
+      - CrescentCartridge_556x45
+
+- type: entity
+  name: Shinohara Budget-Tek STK-A 5.56x45mm
+  parent: BaseRifleOneUse
+  id: CrescentWeaponRifleStkA
+  description: A shitty, mass produced, fully 3d printed "rifle". Comes loaded, and physically cannot accept new rounds. Twist the key, and pull the trigger.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/STK-A.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: StaticPrice
+    price: 100

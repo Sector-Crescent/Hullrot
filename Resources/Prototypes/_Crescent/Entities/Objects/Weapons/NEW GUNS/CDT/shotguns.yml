@@ -1,0 +1,30 @@
+- type: entity
+  name: CDT CBGG-L 12ga
+  parent: [BaseWeaponShotgun, BaseGunWieldable, StreeCredRedeemable]
+  id: CrescentWeaponShotgunCBGG-L
+  description: what a silly gun
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/CBGG-L.rsi
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SHOTGUN/CBGG-L.rsi
+  - type: GunRequiresWield
+  - type: Item
+    shape:
+    - 0,0,3,1
+  - type: Gun
+    shotgunSpreadMultiplier: 1.25
+    fireRate: 3
+    soundGunshot:
+      collection: Shotgun_2_Gunshots
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CrescentCartridge_12Ga
+    capacity: 8
+    autoCycle: false
+    proto: CrescentCartridge_12Ga
+  - type: ItemSlots

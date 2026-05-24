@@ -1,0 +1,59 @@
+
+- type: entity
+  name: SHI MG-349 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponLMGMG349
+  description: placeholder
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/MG-349.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/LMG/MG-349.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentBoxMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentBoxMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/rack.ogg
+    soundBoltOpened:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/bolt_open.ogg
+    soundBoltClosed:
+      path: /Audio/_Crescent/Weapons/Guns/conscript/bolt_close.ogg

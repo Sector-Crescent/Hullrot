@@ -1,0 +1,247 @@
+- type: entity
+  name: OLCRES AK-74 5.45x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleAK74
+  description: Of all the weapons in the vast Soviet arsenal, nothing was more profitable than Avtomat Kalashnikova model of 1947, more commonly known as the AK-47, or Kalashnikov. It's the world's most popular assault rifle. A weapon all fighters love. An elegantly simple 9 pound amalgamation of forged steel and plywood. It doesn't break, jam, or overheat. It will shoot whether it's covered in mud or filled with sand. It's so easy, even a child can use it; and they do. The Soviets put the gun on a coin. Mozambique put it on their flag. Since the end of the Cold War, the Kalashnikov has become the Russian people's greatest export. After that comes vodka, caviar, and suicidal novelists. One thing is for sure, no one was lining up to buy their cars.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AK-74.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AK-74.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_545x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_545x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_545x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_545x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: OLCRES AKS-74U 5.45x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleAKS74U
+  description: did u know the last one was a reference haha didnt think so
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74u.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKS-74u.rsi
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_545x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_545x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_545x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_545x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: OLCRES AKMS 7.62x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleAKMS
+  description: sloppy slop slopy slooopppeer
+  components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKMS.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKMS.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: OLCRES AKMU 7.62x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: CrescentWeaponRifleAKMU
+  description: ran a driveby on da opp block wit muh TSFC Wolf ER-342
+  components:
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKMU.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AKMU.rsi
+  - type: Gun
+    fireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      collection: Lmg_2_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000

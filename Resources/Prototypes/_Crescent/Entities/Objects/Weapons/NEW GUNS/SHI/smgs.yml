@@ -1,0 +1,56 @@
+- type: entity
+  name: SHI Type-52 9x19mm
+  parent: [BaseWeaponSubMachineGun, StreeCredRedeemable ]
+  id: CrescentWeaponSubMachineGunType52
+  description: A compact, lightweight, and modular sub machine gun, produced by Shinohara Heavy Industries. The design is essentially ripped one for one from an Old Earth design, with a few modifications made to fit the SHI design doctrine. Perfectly middle of the road, shoots bullets and doesn't jam.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/TYPE-52.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/SMG/TYPE-52.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    fireRate: 10
+    angleIncrease: 5
+    angleDecay: 20
+    maxAngle: 20
+    minAngle: 1
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      collection: SMG_3_Gunshots
+    fireOnDropChance: 0.1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentSMGMagazine_9x19
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentSMGMagazine_9x19
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_9x19
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_9x19
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
