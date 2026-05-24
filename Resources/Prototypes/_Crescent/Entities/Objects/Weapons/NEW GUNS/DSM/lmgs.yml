@@ -20,14 +20,16 @@
   - type: Gun
     fireRate: 6
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      path: /Audio/_Crescent/Weapons/Guns/MG42/gunshot.ogg
+    soundEmpty:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/empty.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: CrescentBoxMagazine_556x45
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        insertSound: /Audio/_Crescent/Weapons/Guns/MG42/bolt_close.ogg
+        ejectSound: /Audio/_Crescent/Weapons/Guns/MG42/bolt_open.ogg
         priority: 2
         whitelist:
           tags:
@@ -39,6 +41,13 @@
         whitelist:
           tags:
             - CrescentCartridge_556x45
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/rack.ogg
+    soundBoltOpened:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/bolt_open.ogg
+    soundBoltClosed:
+      path: /Audio/_Crescent/Weapons/Guns/MG42/bolt_close.ogg
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

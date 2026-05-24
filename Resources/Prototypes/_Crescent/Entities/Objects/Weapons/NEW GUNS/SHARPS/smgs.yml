@@ -28,6 +28,8 @@
     availableModes:
     - SemiAuto
     - FullAuto
+    soundGunshot:
+      collection: SMG_2_Gunshots
     fireOnDropChance: 0.1
   - type: ItemSlots
     slots:
@@ -85,6 +87,8 @@
     - SemiAuto
     - FullAuto
     fireOnDropChance: 0.1
+    soundGunshot:
+      collection: SMG_1_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:

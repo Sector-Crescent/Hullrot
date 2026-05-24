@@ -65,7 +65,7 @@
   - type: Gun
     fireRate: 4.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Dmr_1_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -124,7 +124,7 @@
     burstFireRate: 10
     burstCooldown: 0.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Pistol_2_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:

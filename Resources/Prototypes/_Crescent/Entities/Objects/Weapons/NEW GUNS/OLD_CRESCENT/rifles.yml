@@ -25,7 +25,7 @@
     burstFireRate: 10
     burstCooldown: 0.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Lmg_2_Gunshots
   - type: ChamberMagazineAmmoProvider
     boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
     soundRack:
@@ -91,7 +91,7 @@
     burstFireRate: 10
     burstCooldown: 0.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Lmg_2_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -153,7 +153,7 @@
     burstFireRate: 10
     burstCooldown: 0.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Lmg_2_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -215,7 +215,7 @@
     burstFireRate: 10
     burstCooldown: 0.5
     soundGunshot:
-      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+      collection: Lmg_2_Gunshots
   - type: ItemSlots
     slots:
       gun_magazine:
