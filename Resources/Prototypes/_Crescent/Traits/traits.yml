@@ -1,85 +1,101 @@
-- type: trait
-  id: LowImperial
-  category: TraitsSpeechLanguages
-  points: -4
-  requirements:
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - Dockta
-        - Freespeak
-        - Kaishago
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - LowImperial
-      languagesUnderstood:
-        - LowImperial
+#- type: trait
+#  id: LowImperial
+#  category: TraitsSpeechLanguages
+#  points: -4
+#  requirements:
+#    - !type:CharacterTraitRequirement
+#      inverted: true
+#      traits:
+#        - Dockta
+#        - Freespeak
+#        - Kaishago
+#  functions:
+#    - !type:TraitModifyLanguages
+#      languagesSpoken:
+#        - LowImperial
+#      languagesUnderstood:
+#        - LowImperial
 
 #- type: trait
 #  id: HighImperial
 #  category: TraitsSpeechLanguages
-#  points: -6
+#  points: -4
+#  requirements:
+#   - !type:CharacterJobRequirement
+#     inverted: true
+#     jobs:
+#       - AdjutantDSM
+#       - AdvocatusDSM
+#       - ArchmaesterDSM
+#       - GovernorDSM
+#       - KnightDSM
+#       - RitterDSM
+#       - LaborDSM
+#       - CourtierDSM
+#       - TemplarDSM
+#       - WealthDSM
+#     functions:
+#       - !type:TraitModifyLanguages
+#       languagesSpoken:
+#         - HighImperial
+#       languagesUnderstood:
+#         - HighImperial
+
+#  - type: trait
+#    id: Dockta
+#    category: TraitsSpeechLanguages
+#    points: -4
+#    requirements:
+#       - !type:CharacterJobRequirement
+#         inverted: true
+#         jobs:
+#           - CommandantNCWL
+#           - WorkerOverbossNCWL
+#           - DirectorNCWL
+#           - FleetkapitanNCWL
+#           - KommissarNCWL
+#           - MVDGruntNCWL
+#          - MVDOfficerNCWL
+#           - IndustryTaskmasterNCWL
+#    functions:
+#      - !type:TraitModifyLanguages
+#       languagesSpoken:
+#           - Dockta
+#        languagesUnderstood:
+#           - Dockta
+
+#- type: trait
+#  id: Freespeak
+#  category: TraitsSpeechLanguages
+#  points: -4
+#  requirements:
+#    - !type:CharacterTraitRequirement
+#      inverted: true
+#      traits:
+#        - LowImperial
+#        - Dockta
+#        - Kaishago
 #  functions:
 #    - !type:TraitModifyLanguages
 #      languagesSpoken:
-#        - HighImperial
+#        - Freespeak
 #      languagesUnderstood:
-#        - HighImperial
+#        - Freespeak
 
-- type: trait
-  id: Dockta
-  category: TraitsSpeechLanguages
-  points: -4
-  requirements:
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - LowImperial
-        - Freespeak
-        - Kaishago
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Dockta
-      languagesUnderstood:
-        - Dockta
-
-- type: trait
-  id: Freespeak
-  category: TraitsSpeechLanguages
-  points: -4
-  requirements:
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - LowImperial
-        - Dockta
-        - Kaishago
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Freespeak
-      languagesUnderstood:
-        - Freespeak
-
-- type: trait
-  id: Kaishago
-  category: TraitsSpeechLanguages
-  points: -4
-  requirements:
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - LowImperial
-        - Dockta
-        - Freespeak
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Kaishago
-      languagesUnderstood:
-        - Kaishago
+  - type: trait
+    id: Kaishago
+    category: TraitsSpeechLanguages
+    points: -4
+    requirements:
+      - !type:FactionRequirement
+        inverted: true
+        factionID: "SHI"
+    functions:
+      - !type:TraitModifyLanguages
+        languagesSpoken:
+          - Kaishago
+        languagesUnderstood:
+          - Kaishago
 
 # - type: trait
 #   id: Clarizian
@@ -118,16 +134,16 @@
 #       languagesUnderstood:
 #         - OldTaypani
 
-- type: trait
-  id: American
-  category: TraitsSpeechLanguages
-  points: -2
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - American
-      languagesUnderstood:
-        - American
+#- type: trait
+#  id: American
+#  category: TraitsSpeechLanguages
+#  points: -2
+#  functions:
+#    - !type:TraitModifyLanguages
+#      languagesSpoken:
+#        - American
+#      languagesUnderstood:
+#        - American
 
 # example prototypes for round start cybernetics. name and description are set in /Resources/Locale/en-US/_Crescent/traits/traits.ftl
 # - type: trait

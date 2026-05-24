@@ -34,13 +34,9 @@
         faction: CD
       - type: LanguageAdder
         addSpoken:
-          - Freespeak
-          - SolCommon
-          - RobotTalk # one of the main facets of cybersun was AI so they probably understand it
+          - LowImperial
         addUnderstood:
-          - Freespeak
-          - SolCommon
-          - RobotTalk
+          - LowImperial
   access:
   - Command
   - Maintenance
