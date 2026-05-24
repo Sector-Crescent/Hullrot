@@ -7598,15 +7598,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterJacketInsulated
-  entities:
-  - uid: 899
-    components:
-    - type: Transform
-      parent: 897
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingShoesBootsCombat
   entities:
   - uid: 942
