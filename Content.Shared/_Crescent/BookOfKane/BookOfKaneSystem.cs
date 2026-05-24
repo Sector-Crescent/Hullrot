@@ -1,6 +1,8 @@
 using Content.Shared.Chat;
 using Content.Shared.Interaction.Events;
 using Content.Shared._Crescent.BookOfKane.Components;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 
 
 namespace Content.Shared._Crescent.BookOfKane;
@@ -8,32 +10,32 @@ namespace Content.Shared._Crescent.BookOfKane;
 
 public sealed class BookOfKaneSystem : EntitySystem
 {
-    private const string KaneSpeechBaseKey = "kane-speech-";
-
     [Dependency] private readonly SharedChatSystem _chat = default!;
-
-    private List<string> _speechLocalizationKeys = new();
+    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<BookOfKaneComponent, UseInHandEvent>(OnUseInHand);
-
-        var i = 1;
-        while (Loc.HasString($"{KaneSpeechBaseKey}{i}"))
-        {
-            _speechLocalizationKeys.Add($"{KaneSpeechBaseKey}{i}");
-            i++;
-        }
     }
 
     private void OnUseInHand(Entity<BookOfKaneComponent> ent, ref UseInHandEvent args)
     {
-        if (_speechLocalizationKeys == null || _speechLocalizationKeys.Count == 0)
+        var datasetId = ent.Comp.bookOfKaneDataset;
+
+        if (datasetId == null)
             return;
 
-        var message = _speechLocalizationKeys[System.Random.Shared.Next(_speechLocalizationKeys.Count)];
+        if (!_proto.TryIndex(datasetId.Value, out var dataset))
+            return;
+
+        if (dataset.Values.Count == 0)
+            return;
+
+        var message = _random.Pick(dataset.Values);
+
         _chat.TrySendInGameICMessage(
             args.User,
             Loc.GetString(message),
