@@ -10,24 +10,6 @@
   - UplinkAllies
 
 - type: listing
-  id: UplinkBionicSyrinxImplanter
-  name: uplink-bionic-syrinx-implanter-name
-  description: uplink-bionic-syrinx-implanter-desc
-  productEntity: BionicSyrinxImplanter
-  cost:
-    Telecrystal: 10
-  categories:
-  - UplinkImplants
-  conditions:
-  - !type:BuyerSpeciesCondition
-    whitelist:
-    - Harpy
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
-
-- type: listing
   id: UplinkDoorjack
   name: uplink-doorjack-name
   description: uplink-doorjack-desc

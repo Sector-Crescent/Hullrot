@@ -85,28 +85,12 @@
     implant: MofficTranslatorImplant
 
 - type: entity
-  id: ValyrianStandardTranslatorImplanter
-  parent: [ BaseTranslatorImplanter ]
-  name: valyrian standard translator implant
-  components:
-  - type: Implanter
-    implant: ValyrianStandardTranslatorImplant
-
-- type: entity
   id: AzazibaTranslatorImplanter
   parent: [ BaseTranslatorImplanter ]
   name: azaziba translator implant
   components:
   - type: Implanter
     implant: AzazibaTranslatorImplant
-
-- type: entity
-  id: ChittinTranslatorImplanter
-  parent: [ BaseTranslatorImplanter ]
-  name: chittin translator implant
-  components:
-  - type: Implanter
-    implant: ChittinTranslatorImplant
 
 - type: entity
   id: SiikMaasTranslatorImplanter

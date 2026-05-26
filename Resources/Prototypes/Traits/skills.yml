@@ -171,25 +171,6 @@
         - Felinid
         - Tajaran
 
-- type: trait
-  id: Singer
-  category: Auditory
-  points: -1
-  requirements:
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Harpy
-    - !type:CharacterTraitRequirement
-      inverted: true
-      traits:
-        - Muted
-  functions:
-    - !type:TraitAddComponent
-      components:
-        - type: Singer
-          proto: NormalSinger
-
 # - type: trait
 #   id: AnimalFriend
 #   category: Mental
