@@ -1,0 +1,78 @@
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT1Lead
+  name: Plantfall Team 1 Leader Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT1LeaderGear]
+
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT2Lead
+  name: Plantfall Team 2 Leader Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT2LeaderGear]
+
+
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT1SubLead
+  name: Plantfall Team 1 SubLeader Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT1SubLeaderGear]
+
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT2SubLead
+  name: Plantfall Team 2 Subleader Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT2SubLeaderGear]
+
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT1Member
+  name: Plantfall Team 1 Member Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT1MemberGear]
+
+- type: entity
+  categories:
+  parent: BaseMobHuman
+  id: BaseMobHumanPFReinforcementSpawnT2Member
+  name: Plantfall Team 2 Member Reinforcment
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - names_first_male
+      - names_last
+    - type: Loadout
+      prototypes: [PlanetfallT2MemberGear]

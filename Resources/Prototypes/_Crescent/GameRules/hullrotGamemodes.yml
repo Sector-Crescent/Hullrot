@@ -290,10 +290,6 @@
 
 - type: entity
   id: PlanetfallGameRule
-
-
-- type: entity
-  id: Unionfall
   parent: BaseGameRule
   categories: [ HideSpawnMenu ]
   components:
@@ -304,6 +300,7 @@
         posX: 0
         posY: 0
         IFFColor: White
+
 
 # - type: gamePreset
 #   id: Unionfall
