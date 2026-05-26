@@ -128,20 +128,6 @@
       components:
         - type: SkeletonAccent
 
-- type: trait
-  id: NormalVision
-  category: Visual
-  requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Harpy
-        - Vulpkanin
-  functions:
-    - !type:TraitRemoveComponent
-      components:
-        - type: UltraVision
-        - type: DogVision
-
 # - type: trait
 #   id: Saturnine
 #   category: Mental

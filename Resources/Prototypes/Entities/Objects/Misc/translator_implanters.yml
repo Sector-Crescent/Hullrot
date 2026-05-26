@@ -85,14 +85,6 @@
     implant: MofficTranslatorImplant
 
 - type: entity
-  id: ValyrianStandardTranslatorImplanter
-  parent: [ BaseTranslatorImplanter ]
-  name: valyrian standard translator implant
-  components:
-  - type: Implanter
-    implant: ValyrianStandardTranslatorImplant
-
-- type: entity
   id: AzazibaTranslatorImplanter
   parent: [ BaseTranslatorImplanter ]
   name: azaziba translator implant
