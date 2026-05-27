@@ -1,0 +1,426 @@
+# Single Use Rifle Base
+- type: entity
+  name: BaseRifleOneUse
+  parent: BaseItem
+  id: BaseRifleOneUse
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+    fireOnDropChance: .6
+  - type: StaticPrice
+    price: 100
+  - type: BallisticAmmoProvider
+    proto: CrescentCartridge_556x45
+    capacity: 20
+    cycleable: false
+  - type: EmitSoundOnPickup
+    sound: /Audio/_Crescent/Weapons/Interact/gun_pick.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/_Crescent/Weapons/Interact/gun_drop.ogg
+
+# The actual rifles
+- type: entity
+  name: NCWL SV-79 7.62x39mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleSV79
+  description: A unique bullpup design, produced by the Union Foundry in Chengridz. Designed with CQB in mind, the bullpup configuration allows for a long barrel in a stout package, at the cost of complicating the internal machinery. 
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/SV-79
+  - type: Gun
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null # means the bolt doesnt lock back like M16 pattern rifles, also means you need to cycle the gun after an empty mag
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x39
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_762x39
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x39
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x39
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+    
+- type: entity
+  name: DSM IPV-701 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleIPV701
+  description: The standard issue rifle used by the Imperial Army and Imperial Marine Corps. Designed after a somewhat unpopular firearm used hundreds and hundreds of years ago, and overengineered to hell and back. Fires bullets like any other gun does, but looks great.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/IPV-701
+  - type: Gun
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: SHI Type-220 7.62x51mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleType220
+  description: Shinohara's flagship battle rifle design, built for mid to long range encounters. Chambered in the aging 7.62x51mm Imperial cartridge, the Type-220 makes sure whoever may be in your way, stops being in your way.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-220
+  - type: Gun
+    fireRate: 4.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_762x51
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_762x51
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_762x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+    
+- type: entity
+  name: SHI Type-518 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleType518
+  description: Shinohara's most modern assault rifle to date, the Type-518 is perfectly generic in every way, while still being a great tactical weapon. Comes with a two round burst, for more controlled groupings.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/TYPE-518
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+    
+- type: entity
+  parent: [BaseWeaponSniper, BaseGunWieldable, StreeCredRedeemable]
+  id: WeaponRifleSHIM919
+  name: SHI-UA M919 5.56x45
+  description: An incredibly cheap "replica" lever action rifle, produced by the Shinohara subsidiary, United Arms. Yeah the action is tough, and yeah the polymer feels like shit, but it fires bullets doesn't it?
+  components:
+  - type: Item
+    size: Ginormous
+  - type: StaticPrice
+    price: 2000
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/M919
+  - type: Gun
+    fireRate: 3
+    projectileSpeed: 45
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/UnionfallWeapons/lever_fire.ogg
+  - type: BallisticAmmoProvider
+    soundInsert:
+      collection: LeverReload
+    capacity: 6
+    autoCycle: false
+    proto: CrescentCartridge_556x45
+    whitelist:
+      tags:
+      - CrescentCartridge_556x45
+
+- type: entity
+  name: Shinohara Budget-Tek STK-A 5.56x45mm
+  parent: BaseRifleOneUse
+  id: WeaponRifleStkA
+  description: A shitty, mass produced, fully 3d printed "rifle". Comes loaded, and physically cannot accept new rounds. Twist the key, and pull the trigger.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/STK-A
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  name: CDT C-2001 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleTypeC2001
+  description: The C-2001 is Cyberdawn Technology's anwser to the Type-518, and is one of their best sellers as of yet. A simple core, with an enormously overengineered polymer frame wrapped around it, the C-2001 was designed with ergonomics above all else, and it shows. Sporting a slightly lower firerate to stop the polymer from melting, the C-2001 is a solid rifle, if you can afford the steep cost.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/C-2001
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  name: Sharps AX-5 5.56x45mm
+  parent: [BaseWeaponRifle, StreeCredRedeemable]
+  id: WeaponRifleTypeAX5
+  description: The AX-5 is Sharps Precision's main assault rifle, and one of their oldest selling firearms. Being their first commercial product, the AX-5 is designed to be simple, yet reliable. Coming with a short barrel rather than a bullpup congifuration, the AX-5 does suffer in velocity slightly, but the integrated suppressor more than makes up for it.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/New_Guns/RIFLE/AX-5
+  - type: Gun
+    fireRate: 6.5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstFireRate: 10
+    burstCooldown: 0.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_3.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CrescentMagazine_556x45
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CrescentMagazine_556x45
+      gun_chamber:
+        name: Chamber
+        startingItem: CrescentCartridge_556x45
+        priority: 1
+        whitelist:
+          tags:
+            - CrescentCartridge_556x45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
