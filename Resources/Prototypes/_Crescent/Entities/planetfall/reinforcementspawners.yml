@@ -4,6 +4,13 @@
   id: BaseMobHumanPFReinforcementSpawnT1Lead
   name: Plantfall Team 1 Leader Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t1-lead-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
@@ -17,6 +24,13 @@
   id: BaseMobHumanPFReinforcementSpawnT2Lead
   name: Plantfall Team 2 Leader Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t2-lead-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
@@ -31,6 +45,13 @@
   id: BaseMobHumanPFReinforcementSpawnT1SubLead
   name: Plantfall Team 1 SubLeader Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t1-sublead-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
@@ -44,6 +65,13 @@
   id: BaseMobHumanPFReinforcementSpawnT2SubLead
   name: Plantfall Team 2 Subleader Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t2=sublead-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
@@ -57,6 +85,13 @@
   id: BaseMobHumanPFReinforcementSpawnT1Member
   name: Plantfall Team 1 Member Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t1-member-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
@@ -70,6 +105,13 @@
   id: BaseMobHumanPFReinforcementSpawnT2Member
   name: Plantfall Team 2 Member Reinforcment
   components:
+    - type: GhostRole
+      name: ghost-role-information-planetfall-t2-member-name
+      description: ghost-role-information-planetfall-description
+      rules: ghost-role-information-planetfall-rules
+      raffle:
+      settings: short
+    - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
       - names_first_male
