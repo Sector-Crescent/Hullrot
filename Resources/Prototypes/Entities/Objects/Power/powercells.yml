@@ -32,9 +32,9 @@
   - type: Appearance
   - type: PowerCellVisuals
   - type: Riggable
-  - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
-    fireCost: 50
+  - type: ProjectileBatteryAmmoProvider #HitscanBatteryAmmoProvider
+    proto: InfantryLasboltPistol #RedLaser
+    fireCost: 30 #original is 50
 
 - type: entity
   name: potato battery
