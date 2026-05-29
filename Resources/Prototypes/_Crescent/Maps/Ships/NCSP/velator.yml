@@ -1,12 +1,15 @@
 # Author Info
-# Discord: @fleshangel
+# Discord: @rubeebee (the original one was by aisha)
 #
 - type: vessel
   id: Velator
   name: CD Velator
-  description: A light Syndicate electronic warfare corvette with an onboard saboteur's armory.
-  price: 60000
-  category: Medium
+  description: |
+   A light Syndicate electronic warfare corvette with space for cargo and medicine. A versatile vessel for cyberdawn
+   LOADOUT: 2x 200cc 'Retribution' gatling lasers, 1x 300w 'Curse' ion bolt cannon
+   MINIMUM CREW: 1x Pilot
+  price: 30000
+  category: Small
   group: None
   path: /Maps/_Crescent/Shuttles/NCSP/velator.yml
 
@@ -30,3 +33,5 @@
             prefixCreator: '14'
         - type: VesselDesignation
           designation: vessel-designation-electronic
+        - type: VesselDescription
+          description: A design modified by cyberdawn, the Velator is the perfect versatile corvette for the corporation's needs.
