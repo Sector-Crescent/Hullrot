@@ -1,4 +1,4 @@
-#All of the MRE components that can spawn in the NCWL Ration Packs. 
+#All of the MRE components that can spawn in the NCWL Ration Packs.
 #Bases
 - type: entity
   abstract: true
@@ -6,7 +6,7 @@
   id: NcwlRationComponentBase
   name: NCWL Ration Can
   description: A ration can, manufactured by the NCWL
-  components: 
+  components:
   - type: SolutionContainerManager
     solutions:
       food:
@@ -14,13 +14,14 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 20
+        - ReagentId: Scop
+          Quantity: 5
   - type: Openable
     openableByHand: true
     sound:
       path: /Audio/Items/can_open3.ogg
   - type: Item
     size: Small
-
 - type: entity
   abstract: true
   parent: BaseItem
@@ -49,7 +50,7 @@
     - type: Food
       trash:
       - NcwlRationComponentTrashMoth
- 
+
 - type: entity
   name: Ration Can (Menu 2, Soy Protein Chunks, Beef Flavor)
   parent: NcwlRationComponentBase
@@ -67,7 +68,7 @@
     - type: Food
       trash:
       - NcwlRationComponentTrashSoybeef
-      
+
 - type: entity
   name: Ration Can (Menu 3, Lard with Protein)
   parent: NcwlRationComponentBase
@@ -86,7 +87,7 @@
     - type: Food
       trash:
       - NcwlRationComponentTrashLard
-      
+
 - type: entity
   name: Ration Can (Menu 4, Soy Balls in Sauce)
   parent: NcwlRationComponentBase
@@ -135,7 +136,7 @@
     sprite: _Crescent/Objects/Consumables/Food/ncwlrationmoth.rsi
     state: trash
   - type: Item
-  
+
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: FoodPacketTrash
@@ -146,7 +147,7 @@
     sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoybeef.rsi
     state: trash
   - type: Item
-  
+
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: FoodPacketTrash
@@ -157,7 +158,7 @@
     sprite: _Crescent/Objects/Consumables/Food/ncwlrationlard.rsi
     state: trash
   - type: Item
-  
+
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: FoodPacketTrash
@@ -168,7 +169,7 @@
     sprite: _Crescent/Objects/Consumables/Food/ncwlrationsoyballs.rsi
     state: trash
   - type: Item
-  
+
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: FoodPacketTrash

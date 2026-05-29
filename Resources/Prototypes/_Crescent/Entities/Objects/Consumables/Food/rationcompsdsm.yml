@@ -1,4 +1,4 @@
-#All of the MRE components that can spawn in the DSM Ration Packs. 
+#All of the MRE components that can spawn in the DSM Ration Packs.
 #Bases
 - type: entity
   parent: FoodBase
@@ -15,10 +15,12 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 40
+        - ReagentId: Scop
+          Quantity: 5
   - type: Item
     sprite: _Crescent/Objects/Consumables/Food/ration.rsi
     size: Small
-    
+
 - type: entity
   parent: FoodBase
   id: RationComponentBaseSide
@@ -34,15 +36,17 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 20
+        - ReagentId: Scop
+          Quantity: 5
   - type: Item
     sprite: _Crescent/Objects/Consumables/Food/ration.rsi
     size: Small
-#Mains    
+#Mains
 - type: entity
   name: Ration Component (Menu 1, Soy Patty, Beef Flavored)
   parent: RationComponentBaseMain
   id: RationComponentMainSoyBeef
-  description: A squishy rectangular "patty", made out of soy protein, and cheaply altered to taste like beef. 
+  description: A squishy rectangular "patty", made out of soy protein, and cheaply altered to taste like beef.
   components:
     - type: FlavorProfile
       flavors:
@@ -124,7 +128,7 @@
     - type: Food
       trash:
       - RationCompMainTrash
-      
+
 - type: entity
   name: Ration Component (Menu 6, Beans in Savory Sauce)
   parent: RationComponentBaseMain
@@ -147,7 +151,7 @@
   name: Ration Component (Side 1, Water Flavored Sustenance Bar)
   parent: RationComponentBaseSide
   id: RationComponentSideBrickWater
-  description: A brick of nutrients, made to taste like purified water. 
+  description: A brick of nutrients, made to taste like purified water.
   components:
     - type: FlavorProfile
       flavors:
@@ -165,7 +169,7 @@
   name: Ration Component (Side 2, Chocolate Flavored Sustenance Bar)
   parent: RationComponentBaseSide
   id: RationComponentSideBrickChocolate
-  description: A brick of nutrients, made to taste like chocolate. 
+  description: A brick of nutrients, made to taste like chocolate.
   components:
     - type: FlavorProfile
       flavors:

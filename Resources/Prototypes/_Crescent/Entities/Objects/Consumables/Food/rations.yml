@@ -3,7 +3,7 @@
   parent: BaseStorageItem
   id: DsmRationPack
   name: Imperial Army/Navy Ration Package
-  description: A standard, ready to eat, ration pack utilized by the Imperial Army and Navy. These contain one meal worth of food, and have an essentially infinite shelf life. 
+  description: A standard, ready to eat, ration pack utilized by the Imperial Army and Navy. These contain one meal worth of food, and have an essentially infinite shelf life.
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Consumables/Food/ration.rsi
@@ -40,12 +40,12 @@
       orGroup: side2
     - id: RationComponentSideBrickVanilla
       orGroup: side2
-      
+
 - type: entity
   parent: BaseStorageItem
   id: NcwlRationPack
   name: NCWL Homeguard Ration
-  description: A cobbled together ration pack in use by the NCWL Homeguard. Contains two meals (Two cans, two PSBs) 
+  description: A cobbled together ration pack in use by the NCWL Homeguard. Contains two meals (Two cans, two PSBs)
   components:
   - type: Sprite
     sprite: _Crescent/Objects/Consumables/Food/ration.rsi

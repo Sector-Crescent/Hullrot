@@ -8,6 +8,12 @@
   timeout: 6
 
 - type: moodEffect
+  id: BeingPet
+  moodChange: -20
+  timeout: 120
+  category: PositiveInteraction
+
+- type: moodEffect
   id: OnFire
   moodChange: -10
   timeout: 600

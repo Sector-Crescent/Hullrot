@@ -16,6 +16,8 @@
             Poison: 1.5
     Narcotic:
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       - !type:ChemVomit
         probability: 0.05
         conditions:
@@ -68,6 +70,7 @@
         time: 15
         refresh: false
 
+
 - type: reagent
   id: Exile
   name: reagent-name-exile
@@ -89,6 +92,8 @@
             Burn: -2
     Narcotic:
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       - !type:AdjustTemperature
         conditions:
         - !type:ReagentThreshold
@@ -129,6 +134,8 @@
     Medicine:
       metabolismRate: 5
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       - !type:HealthChange
         damage:
           groups:
@@ -156,6 +163,8 @@
   metabolisms:
     Medicine:
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       - !type:HealthChange
         damage:
           groups:
@@ -185,6 +194,8 @@
     Medicine:
       metabolismRate: 1
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       - !type:HealthChange
         damage:
           groups:
@@ -201,7 +212,7 @@
         - !type:ReagentThreshold
             min: 35
         amount: 50000
-        
+
 - type: reagent
   id: JV201
   name: reagent-name-jv201
@@ -215,13 +226,15 @@
     Medicine:
       metabolismRate: 0.5
       effects:
+      - !type:ChemAddMoodlet
+        moodPrototype: StrongStimulant
       # While ≥ 5u: It sets chem contribution
       - !type:ChemApplyCritModifier
         value: 99
         conditions:
         - !type:ReagentThreshold
           min: 1
-      # While < 5u: It sets chem contribution to 0 
+      # While < 5u: It sets chem contribution to 0
       - !type:ChemApplyCritModifier
         value: 0
         conditions:

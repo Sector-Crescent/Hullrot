@@ -34,19 +34,19 @@ public sealed partial class MoodComponent : Component
     ///     The lowest point that low morale can multiply our movement speed by. Lowering speed follows a linear curve, rather than geometric.
     /// </summary>
     [DataField]
-    public float MinimumSpeedModifier = 0.75f;
+    public float MinimumSpeedModifier = 0.85f;
 
     /// <summary>
     ///     The maximum amount that high morale can multiply our movement speed by. This follows a significantly slower geometric sequence.
     /// </summary>
     [DataField]
-    public float MaximumSpeedModifier = 1.15f;
+    public float MaximumSpeedModifier = 1.25f;
 
     [DataField]
-    public float IncreaseCritThreshold = 1.2f;
+    public float IncreaseCritThreshold = 1.35f;
 
     [DataField]
-    public float DecreaseCritThreshold = 0.9f;
+    public float DecreaseCritThreshold = 0.85f;
 
     [ViewVariables(VVAccess.ReadOnly)]
     public FixedPoint2 CritThresholdBeforeModify;
@@ -59,13 +59,13 @@ public sealed partial class MoodComponent : Component
     {
         { MoodThreshold.Perfect, 100f },
         { MoodThreshold.Exceptional, 80f },
-        { MoodThreshold.Great, 70f },
-        { MoodThreshold.Good, 60f },
-        { MoodThreshold.Neutral, 50f },
-        { MoodThreshold.Meh, 40f },
-        { MoodThreshold.Bad, 30f },
-        { MoodThreshold.Terrible, 20f },
-        { MoodThreshold.Horrible, 10f },
+        { MoodThreshold.Great, 60f },
+        { MoodThreshold.Good, 50f },
+        { MoodThreshold.Neutral, 35f },
+        { MoodThreshold.Meh, 30f },
+        { MoodThreshold.Bad, 20f },
+        { MoodThreshold.Terrible, 10f },
+        { MoodThreshold.Horrible, 5f },
         { MoodThreshold.Dead, 0f }
     };
 
